@@ -44,6 +44,24 @@ pancreas 数据作为非扰动发育转变对照，训练条件为 Alpha/Beta，
 
 Pancreas validation 的 Epsilon 出现了轻微正向 residual cosine，但只有一个条件，不能构成稳定机制证据。它提示真正转变系统中可能存在局部动态残差，但仍需要时间留出或独立数据复现。
 
+## 加入扰动条件后的对照
+
+为了区分“velocity 被 z 吸收”和“velocity 只是没有加入条件 c”这两个解释，进一步用冻结的 ESM2 条件嵌入拟合 `(z, c) → v`。条件嵌入只来自训练/验证输入条件表，不使用目标表达。
+
+| predictor | train R² | validation R² | validation residual RMS |
+|---|---:|---:|---:|
+| `z → v` | 0.89256 | 0.89042 | 0.47821 |
+| `(z,c) → v` | 0.89228 | 0.89202 | 0.47470 |
+
+`(z,c)` 只带来约 0.0016 的 validation R² 增加。四个 held-out TF 的 residual cosine（`(z,c) → v`）为：
+
+- LIN28A：−0.0251
+- NANOG：−0.0364
+- POU5F1：−0.0205
+- ZIC3：−0.0955
+
+因此当前结果不支持“GFG 失败只是因为 velocity encoder 没有看到条件 c”这一解释。条件输入对 GFG 输出的额外解释很小，且去除 `(z,c)` 可解释部分后的方向仍未呈现稳定正向目标对齐。
+
 ## 机制解释
 
 目前结果支持以下排序：
