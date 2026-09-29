@@ -1,0 +1,11 @@
+version: 1
+research_status: exploratory_quality_audit_not_G1
+release: data/renge/processed_release_v1
+fold: outputs/veloroute_real_pipeline_20260912_v2/fold
+days: [4, 5]
+roles: [train]
+thinning_probability: 0.5
+thinning_seeds: [0, 1, 2]
+minimum_cells_per_guide_day: 10
+phase_portrait_genes: 6
+confirmation: sealed

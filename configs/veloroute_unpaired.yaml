@@ -1,0 +1,17 @@
+model:
+  hidden_dim: 256
+  router_hidden_dim: 256
+  time_hidden_dim: 128
+  residual_blocks: 3
+  expert_rank: 32
+  n_experts: 2
+  top_k: 2
+  use_velocity: true
+steps: 600
+warmup_steps: 150
+batch_size: 64
+learning_rate: 0.0001
+lambda_dynamic: 0.0
+velocity_arm: real
+cpu_threads: 2
+device: cpu

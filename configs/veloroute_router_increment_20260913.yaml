@@ -1,0 +1,42 @@
+version: 1
+research_status: exploratory_not_preregistered
+fold: outputs/veloroute_real_pipeline_20260912_v2/fold
+conditions: data/renge/conditions/esm2_3b_v1/conditions.npz
+validation_conditions: [LIN28A, NANOG, POU5F1, ZIC3]
+seeds: [0, 1, 2]
+arms:
+  - {name: static_single, experts: 1, velocity: static, pair_dynamic: 0.0}
+  - {name: static_router, experts: 2, velocity: static, pair_dynamic: 0.0}
+  - {name: velocity_router, experts: 2, velocity: real, pair_dynamic: 0.0}
+  - {name: shuffled_router, experts: 2, velocity: shuffled, pair_dynamic: 0.0}
+  - {name: velocity_single_coupling, experts: 1, velocity: real, pair_dynamic: 0.1}
+model:
+  hidden_dim: 256
+  router_hidden_dim: 256
+  time_hidden_dim: 128
+  residual_blocks: 3
+  expert_rank: 32
+  use_velocity: true
+steps: 600
+warmup_steps: 150
+batch_size: 64
+learning_rate: 0.0001
+device: cuda
+cpu_threads: 4
+baselines: [identity, training_global_mean_shift]
+comparisons:
+  - [velocity_router, static_router]
+  - [velocity_router, shuffled_router]
+  - [static_router, static_single]
+  - [velocity_router, velocity_single_coupling]
+  - [velocity_router, identity]
+  - [velocity_router, training_global_mean_shift]
+n_bootstrap: 10000
+bootstrap_seed: 20260913
+familywise_alpha: 0.05
+confirmation: sealed
+limits:
+  - All learned arms use the same backbone and condition information. K1/K2 parameter difference is explicitly reported.
+  - Three K2 arms use identical velocity-free field training; only router input differs.
+  - Single-field pair-direction coupling is a separate mechanism, not a perfectly matched router-only intervention.
+  - No hyperparameter search or effect-based early stopping in this run.

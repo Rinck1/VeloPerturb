@@ -1,0 +1,6 @@
+seed: 20260912
+n_genes: 2000
+n_components: 50
+target_sum: 10000.0
+upper_quantile: 0.8
+minimum_u_cells: 10

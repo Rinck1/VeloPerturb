@@ -1,0 +1,57 @@
+version: 1
+architecture: veloroute_full_v1
+model:
+  state_dim: 50
+  esm_dim: 2560
+  representation_dim: 64
+  condition_dim: 256
+  encoder_hidden: 256
+  hidden_dim: 768
+  router_hidden_dim: 256
+  time_hidden_dim: 128
+  residual_blocks: 6
+  expert_rank: 64
+  max_experts: 8
+  initial_active: 1
+  top_k: 2
+  attention_heads: 8
+  attention_head_dim: 64
+  reference_neighbors: 30
+  prune_patience: 3
+  minimum_mode_usage: 0.01
+  delta_u_given_s: 0.0 # Fixed neutral engineering constant; never filled from validation gains.
+  support_start: 4.0 # Actual ER-short training support, not the unprocessed day2/day3 plan.
+  support_end: 5.0
+  use_state_encoder: true
+  use_dynamics: true
+  use_intrinsic: true
+  use_gate: true
+  use_noise: true
+  use_adaptive_modes: true
+training:
+  stage_a_steps: 1000
+  stage_b_steps: 2000
+  stage_c_steps: 12000
+  batch_size: 64
+  e_interval: 300
+  teacher_lag: 3
+  activation_interval: 300
+  reference_interval: 1000
+  usage_interval: 1000
+  corruption_interval: 4
+  checkpoint_interval: 2000
+  learning_rate: 0.0001
+  encoder_learning_rate: 0.00005
+  gate_learning_rate: 0.001
+  lambda_dynamic: 0.1
+  lambda_field: 0.01
+  teacher_weight: 0.1
+  sinkhorn_epsilon: 0.1
+  mode_temperature: 0.5
+  sinkhorn_iterations: 300
+  time_start: 4.0
+  time_end: 5.0
+  mask_ratio: 0.3
+  seed: 0
+device: cuda
+cpu_threads: 4

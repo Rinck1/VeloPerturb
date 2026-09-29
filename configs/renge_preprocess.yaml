@@ -1,0 +1,53 @@
+version: 1
+days: [4, 5]
+run_manifest: outputs/veloroute_phase0/renge_structural_20260912/run_manifest.csv
+guide_manifest: outputs/veloroute_phase0/renge_structural_20260912/guide_manifest.csv
+condition_reservation: outputs/veloroute_condition_reservation_20260912/condition_split.csv
+published_root: /data/dataset/perturbation_v1/renge_2023
+raw_root: data/renge/raw
+sra_bin: tools/sratoolkit.3.4.1-ubuntu64/bin
+quant_bin: tools/rna-quant/bin
+af_home: tools/af-home
+reference_root: data/renge/reference/gencode32
+reference_fasta: GRCh38.primary_assembly.genome.fa.gz
+reference_gtf: gencode.v32.primary_assembly.annotation.gtf.gz
+reference_download_jobs:
+  - outputs/veloroute_preprocess_setup/fetch_reference_fasta/status.json
+  - outputs/veloroute_preprocess_setup/fetch_reference_annotation/status.json
+  - outputs/veloroute_preprocess_setup/fetch_reference_checksums/status.json
+reference_release: GENCODE_v32_primary_assembly_GRCh38
+index_output: data/renge/reference/gencode32/splici_r91
+quant_output: data/renge/quant
+processed_output: data/renge/processed
+threads: 16
+extract_threads: 8
+minimum_free_gib_before_extract: 80
+timeout_seconds: 14400
+read_length: 91
+barcode_read_index: 2
+cdna_read_index: 3
+geometry: '1{b[16]u[10]x:}2{r:}'
+expected_orientation: rc
+layout_audit_records: 1000000
+minimum_barcode_match: 0.5
+minimum_barcode_offset_ratio: 20
+cell_selection: published_observed_barcode_cohort_not_de_novo_empty_drop_calling
+ambiguous_policy: retain_separate_S_U_A_and_expression_S_plus_A
+guide_call:
+  method: conservative_published_feature_umi_dominance_v1
+  minimum_top_umi: 3
+  minimum_top_fraction: 0.8
+  minimum_top_runner_ratio: 5.0
+  # Computational QC labels, not verified infection or editing truth.
+  formal_validation_approved: false
+qc:
+  minimum_expression_umi: 500
+  minimum_detected_genes: 200
+  minimum_unspliced_umi: 20
+  maximum_mito_fraction: 0.2
+  # These are technical screening defaults, not G1 success criteria.
+  formal_validation_approved: false
+sources:
+  reference: https://www.gencodegenes.org/human/release_32.html
+  orientation: https://simpleaf.readthedocs.io/en/latest/chemistry-command.html
+  usa_layout: https://combine-lab.github.io/alevin-fry-tutorials/2021/improving-txome-specificity/

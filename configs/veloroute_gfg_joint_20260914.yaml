@@ -1,0 +1,95 @@
+version: 1
+research_status: exploratory_GFG_joint_development
+gfg_source: /data/yuchang/GFG
+gfg_checkpoint: /data/yuchang/GFG/results/mousebrain_graphbatch_directed_v1_seed0/final.pth
+checkpoint_selection: first_fixed_seed_zero_no_checkpoint_search
+fold: outputs/veloroute_real_pipeline_20260912_v2/fold
+source_counts: data/renge/processed_release_v1/day4/day4.h5ad
+conditions: data/renge/conditions/esm2_3b_v1/conditions.npz
+confirmation: sealed
+model:
+  dynamics_backend: gfg
+  joint_dynamics: true
+  gfg_genes: 2000
+  gfg_hidden: [256, 512, 512, 256]
+  gfg_gene_dim: 8
+  gfg_codes: 32
+  state_dim: 50
+  esm_dim: 2560
+  representation_dim: 64
+  condition_dim: 256
+  encoder_hidden: 256
+  hidden_dim: 768
+  router_hidden_dim: 256
+  time_hidden_dim: 128
+  residual_blocks: 6
+  expert_rank: 64
+  max_experts: 8
+  initial_active: 1
+  top_k: 2
+  attention_heads: 8
+  attention_head_dim: 64
+  reference_neighbors: 30
+  support_start: 4.0
+  support_end: 5.0
+training:
+  stage_a_steps: 300
+  stage_b_steps: 2000
+  stage_c_steps: 12000
+  batch_size: 8
+  e_interval: 300
+  teacher_lag: 3
+  activation_interval: 300
+  reference_interval: 2000
+  usage_interval: 2000
+  corruption_interval: 4
+  checkpoint_interval: 2000
+  learning_rate: 0.0001
+  encoder_learning_rate: 0.00001
+  gate_learning_rate: 0.001
+  lambda_dynamic: 0.1
+  lambda_field: 0.01
+  gfg_native_weight: 0.1
+  sinkhorn_iterations: 500
+  time_start: 4.0
+  time_end: 5.0
+  seed: 0
+pilot:
+  seeds: [0, 1, 2]
+  stage_a_steps: 100
+  stage_b_steps: 300
+  stage_c_steps: 400
+  arms: [static, gfg_frozen, gfg_joint, gfg_joint_shuffled]
+  final_full_entry: engineering_checks_pass_and_pilot_complete
+  scientific_claim_entry: real_exceeds_static_and_shuffled_on_prespecified_distribution_and_structure_metrics
+multimodality:
+  training_only: true
+  axes: [local_pc1, local_pc2, effect_direction]
+  splits: 10
+  minimum_cells_per_half: 20
+  bic_gain_minimum: 10.0
+  ashman_separation_minimum: 2.0
+  minimum_component_fraction: 0.1
+  minimum_split_support: 0.8
+  null_simulations: 20
+  seed: 20260914
+  status: exploratory_candidate_screen_not_formal_D4
+synthetic:
+  seeds: [0, 1, 2]
+  train_prevalences: [0.2, 0.4, 0.6, 0.8]
+  test_prevalences: [0.1, 0.3, 0.7, 0.9]
+  cells_per_group: 96
+  systems: [same_S_velocity_branch, position_branch, no_increment]
+  supervision: unpaired_group_distributions_truth_modes_evaluation_only
+  steps: 300
+  minimum_branch_ratio_error_gain: 0.1
+  maximum_static_control_degradation: 0.05
+device: cuda
+cpu_threads: 4
+limits:
+  - GFG consumes gene-level U/S; perturbation condition is never an encoder input.
+  - Task gradients reach GFG through actual decoder-JVP velocity; native reconstruction/VQ/ODE terms remain active.
+  - Checkpoint is local MouseBrain pretraining, not a verified foundation-model release.
+  - No expression-only neighbor smoothing is applied to source U; it could erase hidden-state information.
+  - Signed orientation and preprocessing changes cannot be chosen using development effects.
+  - All four pilot arms run before development targets are evaluated; final confirmation remains sealed.

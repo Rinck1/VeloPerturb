@@ -1,0 +1,13 @@
+.venv/
+.venv-gpu/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+tools/
+data/
+outputs/
+sshash_tmp/
+*.h5ad
+*.log
+

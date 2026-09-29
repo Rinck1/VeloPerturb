@@ -1,0 +1,21 @@
+version: 1
+date: 2026-09-12
+project: VeloRoute
+stage: phase0_structural_audit
+data_root: /data/dataset/perturbation_v1/renge_2023
+reference_repository: /home/yuchang/veloFM
+audit_python: /home/yuchang/miniconda3/envs/scdfm/bin/python
+purpose: read_only_structural_qc_not_a_scientific_diagnostic
+days: [2, 3, 4, 5]
+expected_geo_samples: 8
+expected_runs: 16
+expected_guide_features: 50
+guide_assignment: disabled
+cell_filtering: disabled
+condition_response_statistics: disabled
+hvg_pca_velocity_fitting: disabled
+model_training: forbidden_before_G1_GO
+preregistration_status: not_frozen
+final_test_status: not_assigned_no_response_evaluation_performed
+seed: null
+outputs_overwrite: forbidden

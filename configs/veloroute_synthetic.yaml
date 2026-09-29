@@ -1,0 +1,21 @@
+version: 1
+kind: synthetic
+purpose: paired_truth_engineering_acceptance_not_G1
+seeds: [0, 1, 2]
+systems: [single_no_increment, bimodal_position, bimodal_velocity, single_endpoint_path_velocity]
+train_cells: 1024
+test_cells: 512
+batch_size: 128
+expert_steps: 350
+router_steps: 200
+learning_rate: 0.002
+hidden_dim: 48
+max_step_days: 0.125
+cpu_threads: 2
+acceptance:
+  hidden_state_router_accuracy_minimum: 0.95
+  hidden_state_advantage_minimum: 0.25
+  position_static_router_accuracy_minimum: 0.90
+  no_increment_velocity_invariance_atol: 0.000001
+warning: toy_truth_modes_and_paths_are_available_only_for_synthetic_training
+

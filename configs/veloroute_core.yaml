@@ -1,0 +1,28 @@
+version: 1
+stage: model_engineering
+authorization: user_2026_09_12_explicitly_allows_router_expert_implementation_before_G1
+real_data_training: requires_G1_GO_and_frozen_protocol
+model:
+  state_dim: 50
+  velocity_dim: 50
+  condition_dim: 256
+  hidden_dim: 256
+  router_hidden_dim: 256
+  time_hidden_dim: 128
+  residual_blocks: 3
+  expert_rank: 32
+  n_experts: 2
+  top_k: 2
+  use_velocity: true
+integration:
+  solver: rk4
+  source_day: 4
+  target_day: 5
+  max_step_days: 0.25
+velocity_scope: router_input_and_optional_training_mode_cost
+velocity_estimator: external_train_only_frozen_artifact_not_yet_fitted
+condition_scope: router_and_expert_field_only
+intrinsic_velocity_field: disabled
+reliability_gate: not_implemented
+EM_teacher: not_implemented
+mode_semantics: statistical_response_component_not_verified_cell_fate

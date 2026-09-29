@@ -1,0 +1,28 @@
+version: 1
+status: one_exploratory_followup_after_GFG_pilot_no_confirmatory_claim
+reason: training_source_router_sensitivity_weak_and_EM_labels_near_uniform
+initialization: same_seed_static_pilot_checkpoint_for_all_three_arms_no_score_selection
+frozen: [state_encoder, condition_encoder, backbone, experts, PCA]
+trainable: [router, actual_GFG_decoder_JVP]
+supervision: exact_mixture_energy_distance_to_unpaired_training_target_cells
+individual_fate_labels: forbidden
+arms: [static, gfg_joint, gfg_joint_shuffled]
+seeds: [0, 1, 2]
+steps: 600
+source_batch: 8
+target_batch: 64
+router_lr: 0.001
+gfg_lr: 0.00001
+native_weight: 0.1
+shuffle: input_U_within_condition_depth_local_S_blocks
+evaluation:
+  scope: all_four_development_TFs
+  freeze_all_predictions_before_targets: true
+  metrics: [exact_mixture_energy, log_variance_error, condition_centered_gene_mean_mse]
+  diagnostic_metric: sampled_energy_same_random_numbers
+  confidence: 0.9916666666666667 # Bonferroni 0.05 / six primary comparisons.
+  bootstrap: 10000
+  bootstrap_seed: 20260914
+  increment_requires: real_exceeds_static_and_U_shuffle_distribution_and_structure
+  subsequent_tuning: forbidden_without_new_external_anchor
+confirmation: sealed

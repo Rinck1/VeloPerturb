@@ -1,0 +1,114 @@
+version: 1
+project: VeloRoute_Kang
+frozen_before_expression_analysis: true
+root: /data/yuchang/veloroute_kang_20260914
+published_root: /data/dataset/perturbation_v1/kang_2018
+task: Kang_ctrl_to_IFNB_donor_holdout
+preprocessing:
+  reference_fasta: data/renge/reference/gencode32/GRCh38.primary_assembly.genome.fa.gz
+  reference_gtf: data/renge/reference/gencode32/gencode.v32.primary_assembly.annotation.gtf.gz
+  expected_orientation: fw
+  barcode_geometry: '1{b[14]u[10]}2{r:}'
+  cDNA_length: 98
+time_semantics: counterfactual_transport_coordinate_not_observed_cell_trajectory
+donors: ['101', '1015', '1016', '1039', '107', '1244', '1256', '1488']
+split:
+  method: eight_fold_leave_one_donor_out
+  hyperparameter_selection: none_fixed_budget
+  outcome_release: after_all_registered_predictions_are_hash_frozen
+  fit_scope: seven_training_donors_only
+  test_input: heldout_donor_control_S_U_only
+cell_types:
+  primary: CD14+ Monocytes
+  secondary: [CD4 T cells, B cells, CD8 T cells, NK cells, FCGR3A+ Monocytes]
+  excluded_low_power: [Dendritic cells, Megakaryocytes, NA]
+  minimum_cells_per_donor_side: 80
+  multimodality_never_pool_cell_types: true
+qc:
+  singlets_only: true
+  minimum_expression_umis: 500
+  minimum_detected_genes: 200
+  minimum_source_unspliced_umis: 20
+  maximum_mitochondrial_fraction: 0.2
+  no_target_velocity_inputs: true
+representation:
+  selected_genes: 2000
+  pca_components: 50
+  target_sum: 10000
+  seed: 20260914
+  feature_selection: training_spliced_only
+  condition_token: identical_fixed_IFNB_token_for_every_donor_and_type
+  donor_type_used_for_batch_strata_only: true
+multimodality:
+  training_only: true
+  axes: [effect_direction, local_pc1, local_pc2]
+  splits: 10
+  minimum_cells_per_half: 40
+  bic_gain_minimum: 10.0
+  ashman_separation_minimum: 2.0
+  minimum_component_fraction: 0.1
+  minimum_split_support: 0.8
+  minimum_training_donor_support_fraction: 0.5
+  null_simulations: 100
+  seed: 20260914
+  status: replicated_density_screen_not_formal_FDR_D4
+experiments:
+  seeds: [0, 1, 2]
+  simple_baselines: [identity, training_celltype_mean_shift, training_celltype_target_resample]
+  neural_arms: [static_K1, static_router, gfg_joint_router, gfg_joint_shuffled_U, gfg_frozen_router, raw_SU_router]
+  followups: [common_geometry_router_isolation, full_GFG_EM_gate, gate_corruption, K1_vs_K2_vs_K8]
+  external_baselines: [CellOT_official, CellFlow_time_matched, scDFM]
+  external_baseline_rule: separate_verified_adapters_not_renamed_internal_models
+  primary_metrics: [energy_distance, mode_proportion_error]
+  secondary_metrics: [within_mode_energy, log_variance_error, centered_response_error]
+  success_requires: [real_better_than_static_router, real_better_than_shuffled_U, genuine_within_type_modes, distribution_and_mode_metrics_agree]
+  gfg_vs_raw_SU: required_for_claiming_velocity_specificity_beyond_second_modality
+  inference_unit: donor_after_seed_averaging_not_cells_or_cell_types
+  bootstrap_repetitions: 10000
+  primary_family_confidence: 0.9875
+  all_type_noninferiority_margin_relative: 0.02
+  negative_results: preserve_all_arms_do_not_tune_on_outer_test
+training:
+  gfg_checkpoint: /data/yuchang/GFG/results/mousebrain_graphbatch_directed_v1_seed0/final.pth
+  gfg_checkpoint_sha256: a9d9fa39063312230e4ba64309e9264ba3c2cb7ac549f04544b366df57c1340b
+  model_width: 256
+  residual_blocks: 3
+  fixed_experts: 2
+  geometry_stage_a_steps: 100
+  geometry_stage_b_steps: 500
+  geometry_stage_c_steps: 1000
+  router_steps: 1000
+  source_batch: 8
+  target_batch: 128
+  router_lr: 0.001
+  gfg_lr: 0.00001
+  native_weight: 0.1
+  primary_router_supervision: exact_unpaired_mixture_energy_with_common_static_geometry
+  full_stage_a_steps: 300
+  full_stage_b_steps: 2000
+  full_stage_c_steps: 12000
+  selection: fixed_budget_no_outer_test_early_stopping
+resources:
+  allowed_physical_gpus: [0, 1, 2, 3]
+  reserved_physical_gpus: [4, 5, 6, 7]
+  raw_download_workers_per_library: 4
+  quant_threads_per_library: 8
+  shared_data_readonly: true
+  large_outputs_on_data_disk: true
+raw:
+  - condition: ctrl
+    sample: GSM2560248
+    accession: SRR5398238
+    filename: 2.1.bam
+    bytes: 23764981452
+    md5: 6e7105aeb8b7a6ceaf2d3e94dd1e0c42
+    url: https://ftp.sra.ebi.ac.uk/vol1/run/SRR539/SRR5398238/bam/2.1.bam
+    ncbi_url: https://sra-pub-src-1.s3.amazonaws.com/SRR5398238/2.1.bam.1
+  - condition: stim
+    sample: GSM2560249
+    accession: SRR5398239
+    filename: 2.2.bam
+    bytes: 22787097572
+    md5: 7750299eb8da64068936474030c03985
+    url: https://ftp.sra.ebi.ac.uk/vol1/run/SRR539/SRR5398239/bam/2.2.bam
+    ncbi_url: https://sra-pub-src-1.s3.amazonaws.com/SRR5398239/2.2.bam.1

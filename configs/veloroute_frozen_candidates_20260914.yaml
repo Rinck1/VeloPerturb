@@ -1,0 +1,38 @@
+version: 1
+research_status: exploratory_not_preregistered
+motivation: training_only_audit_found_nearly_uniform_EM_labels_and_weak_expert_separation
+fold: outputs/veloroute_real_pipeline_20260912_v2/fold
+conditions: data/renge/conditions/esm2_3b_v1/conditions.npz
+validation_conditions: [LIN28A, NANOG, POU5F1, ZIC3]
+seeds: [0, 1, 2]
+arms: [static, real, shuffled, uniform]
+model:
+  hidden_dim: 256
+  router_hidden_dim: 256
+  time_hidden_dim: 128
+  residual_blocks: 3
+  expert_rank: 32
+  n_experts: 2
+  top_k: 2
+  use_velocity: true
+candidate_steps: 600
+router_steps: 600
+training_OT_samples_per_condition: 128
+candidate_labels: training_OT_displacement_kmeans_after_training_condition_mean_removal
+batch_size: 64
+learning_rate: 0.0001
+lambda_dynamic: 0.1
+temperature: 0.5
+epsilon: 0.1
+sinkhorn_iterations: 500
+n_bootstrap: 10000
+bootstrap_seed: 20260914
+familywise_alpha: 0.05
+device: cuda
+cpu_threads: 4
+limits:
+  - A single fixed exploratory follow-up, no hyperparameter search or selection of best candidate.
+  - Candidate labels are statistical residual-displacement clusters, not independently observed cell fates.
+  - Experts are exactly shared and frozen across all four arms; real/shuffled velocity affects both router input and its directional teaching cost.
+  - The repeatedly viewed four-TF development set is not an independent confirmation set.
+confirmation: sealed

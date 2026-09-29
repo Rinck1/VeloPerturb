@@ -1,0 +1,21 @@
+version: 1
+task: ER-short
+status: draft_not_frozen
+condition_reservation_manifest: outputs/veloroute_condition_reservation_20260912/condition_split.csv
+metric: energy_distance_v_statistic
+seeds: [0, 1, 2]
+minimum_useful_gain: null
+noninferiority_margin: null
+effect_margin_rationale: null
+split_manifest: null
+data_provenance: null
+velocity_provenance: null
+probe_config: null
+readiness:
+  su_qc_passed: false
+  guide_calls_validated: false
+  fit_scope_audited: false
+  velocity_transform_frozen: false
+  confirmation_conditions_reserved: true
+  probe_budget_fixed: false
+  permutation_protocol_fixed: false

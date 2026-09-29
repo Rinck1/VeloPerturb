@@ -1,0 +1,15 @@
+version: 1
+source_counts: data/renge/processed_release_v1/day4/day4.h5ad
+target_counts: data/renge/processed_release_v1/day5/day5.h5ad
+conditions: data/renge/conditions/esm2_3b_v1/conditions.npz
+latent_config: configs/veloroute_latent.yaml
+model_config: configs/veloroute_unpaired.yaml
+draft_protocol: configs/veloroute_g1.draft.yaml
+frozen_protocol: null
+g1_decision: null
+frozen_fold: null # Formal continuation must reuse the exact approved fold used for G1.
+wait_seconds: 10800
+seeds: [0, 1, 2]
+arms: [static, real, shuffled]
+# Absence of a frozen G1-GO stops at an explicit review handoff, never bypasses it.
+formal_training_requires_G1: true

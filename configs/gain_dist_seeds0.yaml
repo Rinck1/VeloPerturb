@@ -1,0 +1,29 @@
+version: 1
+research_status: exploratory_gain_screen_not_preregistered
+authorization: user_requested_velocity_gain_screen_20260915
+seeds: [0, 1, 2]
+probe: packaged_SU_OT_ridge_empirical_residual_v1
+arms: [A0, A1, A2, A3, B1, B2, B3]
+training_cells_per_condition: 128
+ridge_alpha: 10.0
+fit_mode: distribution_matching
+velocity_smoothing_k: 10
+dist_steps: 2000
+dist_lr: 0.01
+dist_batch: 128
+condition_projection_dim: 64
+condition_projection_seed: 2000
+ot_epsilon: 0.1
+permutation_block_size: 10
+n_bootstrap: 10000
+bootstrap_seed: 1000
+familywise_alpha: 0.05
+confirmation: sealed
+formal_G1: not_run
+n_genes: 2000
+n_components: 50
+seed: 20260915
+limitations:
+  - Packaged S/U are upstream-processed; not a substitute for raw auditing.
+  - Exploratory probe on public benchmarks; not G1-GO and not a real-perturbation claim.
+  - Condition embeddings are declared one-hot, unlike the frozen ER-short protocol.

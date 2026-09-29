@@ -1,0 +1,23 @@
+version: 1
+research_status: exploratory_not_preregistered
+authorization: user_requested_velocity_and_router_increment_analysis_20260913
+seeds: [0, 1, 2]
+probe: expression_OT_paired_ridge_empirical_residual_v1
+validation_conditions: [LIN28A, NANOG, POU5F1, ZIC3]
+arms: [A0, A1, A2, A3, B1, B2, B3]
+training_cells_per_condition: 128
+ridge_alpha: 10.0
+condition_projection_dim: 64
+condition_projection_seed: 20260912
+ot_epsilon: 0.1
+permutation_block_size: 10
+n_bootstrap: 10000
+bootstrap_seed: 20260912
+familywise_alpha: 0.05
+confirmation: sealed
+formal_G1: not_run
+limitations:
+  - Guide calls and velocity kinetic quality are computational screening only.
+  - Four validation TFs are four independent condition units; seeds are not extra conditions.
+  - Expression OT ridge probes are not an information upper bound.
+  - Positive confidence bounds against zero do not establish practical usefulness or G1-GO.

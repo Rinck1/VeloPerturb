@@ -1,0 +1,57 @@
+version: 1
+research_status: exploratory_not_preregistered_G1_NOT_RUN
+confirmation: sealed
+gfg:
+  family: corrected_original_GFG_dual_encoder_decoder_JVP
+  source_root: /home/yuchang/GFG_velocity_foundation_mousebrain_v1
+  checkpoint: /home/yuchang/GFG_velocity_foundation_mousebrain_v1/experiments/foundation_pilot_20260830/gpu7_kinetic_pretrain/pretrain_final.pt
+  pretrain_accessions: /data/dataset/Velocyto_pretrain_v1/manifests/train_accessions.txt
+  mode: joint_trainable
+  allow_random_fallback: false
+  use_vq: false # Preserve the actual checkpoint architecture.
+fold: outputs/veloroute_real_pipeline_20260912_v2/fold
+conditions: data/renge/conditions/esm2_3b_v1/conditions.npz
+counts_source: data/renge/processed_release_v1/day4/day4.h5ad
+counts_target: data/renge/processed_release_v1/day5/day5.h5ad
+seeds: [0, 1, 2]
+training_structure:
+  split_seed: 20260914
+  bootstrap_seed: 20260914
+  discovery_fraction: 0.5
+  minimum_cells_per_half: 30
+  candidate_dimensions: 10
+  projection: discovery_GMM2_mean_difference_in_fixed_training_PCA
+  gmm_n_init: 5
+  gmm_covariance: tied
+  minimum_component_mass: 0.1
+  minimum_standardized_separation: 1.5
+  minimum_bic_improvement: 10.0
+  bootstrap_repetitions: 199
+  fdr_alpha: 0.05
+  minimum_guide_cells: 10
+  limits:
+    - A rejection of a single Gaussian alone is not evidence of multimodality.
+    - Positive density-mode count plus held-out-cell stability and guide replication are required for a candidate screen.
+    - Counts are training-TF-only and do not establish true individual fates or an audited bifurcation.
+synthetic:
+  seed_list: [0, 1, 2]
+  train_mixtures: [0.35, 0.5, 0.65]
+  test_mixtures: [0.2, 0.5, 0.8]
+  systems: [single_no_increment, position_modes, velocity_modes_fixed_mix, velocity_modes_shifted_mix]
+  train_cells_per_population: 256
+  test_cells_per_population: 512
+  experts: 2
+  expert_steps: 300
+  router_steps: 300
+  learning_rate: 0.001
+  batch_size: 64
+  mode_temperature: 0.5
+  lambda_dynamic: 1.0
+  arms: [static, real_velocity, shuffled_velocity, uniform]
+  minimum_shifted_mix_gain: 0.02
+  expected_negative_control: no_claimed_velocity_benefit_when_static_state_determines_mode
+full_training:
+  automatic_start: false
+  requires: [gfg_numerical_and_gradient_pass, nonoracle_synthetic_pass, real_development_velocity_increment]
+device: cuda
+cpu_threads: 4

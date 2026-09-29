@@ -1,0 +1,90 @@
+version: 1
+base_protocol: configs/veloroute_kang_20260914.yaml
+scope: fixed_followups_no_selection_on_primary_outer_results
+execution_order:
+  policy: mainline_first_20260914_user_request
+  stages: [full_GFG_EM_gate, common_geometry_router_controls, remaining_full_ablations]
+  external_baselines_are_dependencies: false
+full_variants:
+  - name: full_GFG_EM_gate
+    arm: gfg_joint
+    experts: 8
+    adaptive: true
+    gate: true
+    intrinsic: true
+  - name: full_GFG_shuffled_U
+    arm: gfg_joint_shuffled
+    experts: 8
+    adaptive: true
+    gate: true
+    intrinsic: true
+  - name: full_static_matched
+    arm: static
+    experts: 8
+    adaptive: true
+    gate: false
+    intrinsic: false
+    force_gate: 1.0
+  - name: full_GFG_K1
+    arm: gfg_joint
+    experts: 1
+    adaptive: false
+    gate: true
+    intrinsic: true
+  - name: full_GFG_K2
+    arm: gfg_joint
+    experts: 2
+    adaptive: false
+    gate: true
+    intrinsic: true
+  - name: full_GFG_K8
+    arm: gfg_joint
+    experts: 8
+    adaptive: false
+    gate: true
+    intrinsic: true
+  - name: full_GFG_no_gate
+    arm: gfg_joint
+    experts: 8
+    adaptive: true
+    gate: false
+    intrinsic: true
+    force_gate: 1.0
+cellot:
+  execution: reuse_existing_only
+  training_enabled: false
+  source_acquisition_enabled: false
+  reason: user_confirmed_CellOT_already_reproduced_20260914
+  execution_owner: other_collaborator_per_user
+  existing_results_path: null
+  audit_status: awaiting_existing_artifact_location
+  comparison_requires: [donor_splits, cell_type_cohort, preprocessing_and_gene_space, metrics, provenance]
+  incompatible_results: report_separately_do_not_retrain_automatically
+cellflow:
+  iterations: 12000
+  batch_size: 128
+  hidden_dims: [768, 768, 768]
+  decoder_dims: [768, 768, 768]
+  time_encoder_dims: [128, 128]
+  time_freqs: 64
+  condition_embedding_dim: 256
+  learning_rate: 0.0001
+  backend: jax_cpu_private_dependency_overlay
+  input_space: same_frozen_PCA50
+  early_stopping: none
+scdfm:
+  iterations: 12000
+  batch_size: 16
+  d_model: 512
+  layers: 4
+  gene_batch: 1000
+  learning_rate: 0.00005
+  mmd_weight: 0.5
+  graph_topk: 30
+  graph_negative_edges: true
+  graph_fit: training_source_and_target_spliced_only
+  input_space: same_training_selected_2000_genes_native_gene_model_not_PCA_tokens
+  evaluation_space: common_frozen_PCA50
+  inference_batch: 8
+  inference_rk4_step: 0.25
+  early_stopping: none

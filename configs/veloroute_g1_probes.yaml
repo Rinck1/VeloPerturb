@@ -1,0 +1,21 @@
+version: 1
+probe: expression_OT_paired_ridge_empirical_residual_v1
+status: fixed_design_pending_formal_data_and_effect_margin_review
+validation_conditions: [LIN28A, NANOG, POU5F1, ZIC3]
+arms: [A0, A1, A2, A3, B1, B2, B3]
+training_cells_per_condition: 128
+ridge_alpha: 10.0
+condition_projection_dim: 64
+condition_projection_seed: 20260912
+ot_epsilon: 0.1
+permutation_block_size: 10
+n_bootstrap: 10000
+bootstrap_seed: 20260912
+familywise_alpha: 0.05
+limitations:
+  - Fixed expression-OT pseudo-pairs can miss increments requiring a different coupling or richer predictor.
+  - A negative probe is not an information-theoretic upper bound or proof against every velocity router.
+  - B0 shares A0; B2 training U-predictions are cross-fitted.
+  - Permutations are within condition and fixed log2 depth strata, in source-PC1-sorted local blocks.
+  - Numerical gate success yields REVIEW_REQUIRED, not automatic G1-GO.
+  - Future validation outcomes are read only after all predictions are saved and hashed.

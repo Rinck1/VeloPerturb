@@ -1,0 +1,5 @@
+# Added only in the project-private .venv; NumPy 1.x remains pinned separately.
+anndata==0.10.9
+pandas==2.2.3
+h5py==3.12.1
+scikit-learn==1.6.1

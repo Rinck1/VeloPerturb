@@ -1,0 +1,30 @@
+version: 1
+status: supplementary_user_requested_after_CellFlow_results_before_VeloRoute_outer_evaluation
+does_not_replace_registered_primary_metrics: true
+evaluation_components: 20
+evaluation_seed: 20260914
+evaluation_fit_scope: training_donor_source_and_target_logspliced_only
+gene_space: actual_fold_selected_genes_not_fabricated_4634_gene_outputs
+normalization: log1p_10000_times_S_over_all_gene_S_library
+clip_negative_decoded_expression: true
+sampling_seeds: [0, 1, 2, 3, 4]
+max_samples: 2000
+minimum_balanced_cells: 50
+prdc_k: 5
+mmd_bandwidth_reference_limit: 512
+peak_sampling_seeds: [0]
+peak_axes: 5
+peaks:
+  grid_size: 1024
+  prominence_fraction: 0.05
+  match_bandwidths: 1.0
+  valley_height_fraction: 0.5
+  rare_mass_threshold: 0.1
+  min_cells: 50
+  min_mode_cells: 10
+aggregation: sampling_mean_then_equal_donor_within_type_then_equal_registered_type_per_training_seed
+partial_type_macro: report_separately_with_eligible_counts_never_as_all_six_types
+missing_value: null_never_zero
+external_baseline_manifest: /home/yuchang/caixujia/data/kang/finetune_v1/manifest.json
+baseline_metric_source_sha256: 6fb77c34a865ff032e935cf6af3289bbadd71eaf310ddb532d8c3ed6fb142e28
+baseline_evaluation_source_sha256: 169c7950e89cc4e6e46e42f944cb26b800699ed2c0978f633675a3d0f6d3dc2f
