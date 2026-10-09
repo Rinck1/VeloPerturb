@@ -137,6 +137,8 @@ def run_dataset(name, s_mat, u_mat, rng, top_hvg, result, clone_labels=None):
     z_b = PCA(50, svd_solver='randomized', random_state=0).fit_transform(np.asarray(snb.todense(), dtype=np.float32))
     eps_a = knn_residual(np.asarray(una.todense(), dtype=np.float32), z_a)
     eps_b = knn_residual(np.asarray(unb.todense(), dtype=np.float32), z_b)
+    epsS_a = knn_residual(np.asarray(sna.todense(), dtype=np.float32), z_a)
+    epsS_b = knn_residual(np.asarray(snb.todense(), dtype=np.float32), z_b)
     pca = PCA(20, svd_solver='randomized', random_state=0).fit(eps_a)
     sa, sb = pca.transform(eps_a), pca.transform(eps_b)
     r_sb = spearman_brown(permodule_corr(sa, sb))
@@ -172,33 +174,41 @@ def run_dataset(name, s_mat, u_mat, rng, top_hvg, result, clone_labels=None):
             icc_epsU_max=float(np.max(np.abs(icu))), icc_epsS_max=float(np.max(np.abs(ics))),
             U_not_special=bool(abs(np.max(np.abs(icu)) - np.max(np.abs(ics))) < 0.02))
 
-        # kappa test: strip the S-shared (clone-identity) component out of eps_U.
-        # kappa_g = eps_U,g - b_g*eps_S,g with b_g fit on cell-half 1, kappa on half 2.
-        n_ = len(epsU)
-        rc = np.random.default_rng(1)
-        pc = rc.permutation(n_)
-        fit, ev = pc[:n_ // 2], pc[n_ // 2:]
-        denom_fit = (epsS[fit] ** 2).sum(0) + 1e-12
-        b = (epsU[fit] * epsS[fit]).sum(0) / denom_fit
-        kappa = epsU[ev] - epsS[ev] * b
+        # kappa test with INSTRUMENTAL-VARIABLE b_g to avoid regression dilution.
+        # b_g = cov(epsU_B, epsS_A) / cov(epsS_B, epsS_A); A/B are independent
+        # count-split halves, so Poisson noise does not attenuate b_g.
+        num = (eps_b * epsS_a).mean(0) - eps_b.mean(0) * epsS_a.mean(0)
+        den = (epsS_b * epsS_a).mean(0) - epsS_b.mean(0) * epsS_a.mean(0)
+        b_iv = np.where(np.abs(den) > 1e-12, num / den, 0.0)
+        # full-gene residuals (same gene set as the half-based b_iv) for kappa
+        zfull = PCA(50, svd_solver='randomized', random_state=0).fit_transform(sf)
+        epsUf = knn_residual(uf, zfull)
+        epsSf = knn_residual(sf, zfull)
+        b_ols = (epsUf * epsSf).sum(0) / ((epsSf ** 2).sum(0) + 1e-12)
+        kappa = epsUf - epsSf * b_iv
         pcaK = PCA(20, svd_solver='randomized', random_state=0).fit(kappa)
         k_m = pcaK.transform(kappa)
-        lab_ev = clone_labels[ev]
-        valid_ev = lab_ev >= 0
-        vals_ev, counts_ev = np.unique(lab_ev[valid_ev], return_counts=True)
-        mv = np.isin(lab_ev, vals_ev[counts_ev >= 2])
-        kk, kl, zz = k_m[mv], lab_ev[mv], zprime[ev][mv]
-        pcaU2 = PCA(20, svd_solver='randomized', random_state=0).fit(epsU[ev])
-        um = pcaU2.transform(epsU[ev])[mv]
-        ms_k = icc_maxstat_null(kk, kl, zz, n_perm=1000, seed=0)
-        ms_u2 = icc_maxstat_null(um, kl, zz, n_perm=1000, seed=0)
+        lab_all = clone_labels
+        valid = lab_all >= 0
+        vals, counts = np.unique(lab_all[valid], return_counts=True)
+        multi = np.isin(lab_all, vals[counts >= 2])
+        lab, zz = lab_all[multi], zprime[multi]
+        ms_k = icc_maxstat_null(k_m[multi], lab, zz, n_perm=1000, seed=0)
+        # technical-covariate control on kappa
+        ufrac = np.asarray(u_sel.sum(1)).ravel() / np.maximum(np.asarray((u_sel + s_sel).sum(1)).ravel(), 1)
+        ltot = np.log1p(np.asarray((u_sel + s_sel).sum(1)).ravel())
+        Xc = np.column_stack([ufrac, ltot, np.ones(len(ufrac))])[multi]
+        kappa_c = k_m[multi] - Xc @ np.linalg.lstsq(Xc, k_m[multi], rcond=None)[0]
+        ms_kc = icc_maxstat_null(kappa_c, lab, zz, n_perm=1000, seed=0)
         result[name]['kappa_test'] = dict(
-            note='kappa = epsU - b*epsS (S-shared component removed)',
-            b_median=float(np.median(b)),
+            note='kappa = epsU - b_iv*epsS (IV b from count-split halves)',
+            b_ols_median=float(np.median(b_ols)), b_iv_median=float(np.median(b_iv)),
             kappa_obs=ms_k['obs_max'], kappa_null95=ms_k['null95'],
             kappa_p=ms_k['p_value'], kappa_passes=ms_k['passes'],
-            epsU_samehalf_obs=ms_u2['obs_max'], epsU_samehalf_p=ms_u2['p_value'])
-        log(f'{name}: KAPPA obs={ms_k["obs_max"]:.4f} null95={ms_k["null95"]:.4f} p={ms_k["p_value"]:.3f} pass={ms_k["passes"]} | epsU samehalf p={ms_u2["p_value"]:.3f}')
+            kappa_after_cov_obs=ms_kc['obs_max'], kappa_after_cov_null95=ms_kc['null95'],
+            kappa_after_cov_p=ms_kc['p_value'], kappa_after_cov_passes=ms_kc['passes'])
+        log(f'{name}: KAPPA(IV) obs={ms_k["obs_max"]:.4f} null95={ms_k["null95"]:.4f} p={ms_k["p_value"]:.3f} '
+            f'pass={ms_k["passes"]} | after-cov p={ms_kc["p_value"]:.3f} | b_iv_med={np.median(b_iv):.3f} b_ols_med={np.median(b_ols):.3f}')
 
     if clone_labels is not None:
         valid = clone_labels >= 0
