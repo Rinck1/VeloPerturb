@@ -235,7 +235,21 @@ def main():
         run_dataset('merlin315', mats[0].tocsr(), mats[1].tocsr(), rng, args.top_hvg, result, clone_labels=labels)
     if 'merlin310' in wanted:
         rows, genes, mats, meta = load_usa(mr / 'quant_merlin310' / 'af_quant')
-        run_dataset('merlin310', mats[0].tocsr(), mats[1].tocsr(), rng, args.top_hvg, result)
+        pos = {bc: i for i, bc in enumerate(rows)}
+        clone_map, labels = {}, np.full(len(rows), -1, dtype=np.int64)
+        cpath = mr / 'clones' / 'SRR33960310' / 'cell_clone_assignments.csv'
+        if cpath.exists():
+            with cpath.open() as fh:
+                for row in csv.DictReader(fh):
+                    j = pos.get(row['cell_barcode'])
+                    if j is None:
+                        continue
+                    cb = row['clone_barcode']
+                    if cb not in clone_map:
+                        clone_map[cb] = len(clone_map)
+                    labels[j] = clone_map[cb]
+        run_dataset('merlin310', mats[0].tocsr(), mats[1].tocsr(), rng, args.top_hvg, result,
+                    clone_labels=labels if clone_map else None)
     if 'renge_day4' in wanted:
         import anndata as ad
         a = ad.read_h5ad('data/renge/processed_release_v1/day4/day4.h5ad')

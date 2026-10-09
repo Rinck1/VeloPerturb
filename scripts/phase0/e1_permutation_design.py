@@ -46,6 +46,30 @@ def cross_permute(v, source, block=8, seed=0):
     return np.asarray(v)[order].copy()
 
 
+def z_kmeans_permute(v, z, conditions, per_cluster=6, seed=0, cross=False):
+    """Bijective permutation within KMeans clusters in the FULL z space.
+
+    Preserves p(v|z) far better than PC1-sorted blocks because matching uses all
+    z dimensions. within: clusters are condition-restricted; cross: global.
+    """
+    from sklearn.cluster import KMeans
+    rng = np.random.default_rng(seed)
+    n = len(z)
+    order = np.arange(n)
+    groups = [np.arange(n)] if cross else [np.flatnonzero(np.asarray(conditions) == c)
+                                           for c in sorted(set(conditions))]
+    for g in groups:
+        if len(g) < 2:
+            continue
+        k = max(1, len(g) // per_cluster)
+        lab = KMeans(n_clusters=min(k, len(g)), n_init=3, random_state=seed).fit_predict(z[g])
+        for c in np.unique(lab):
+            idx = g[lab == c]
+            if len(idx) > 1:
+                order[idx] = idx[rng.permutation(len(idx))]
+    return np.asarray(v)[order].copy()
+
+
 def cv_z_to_v_r2(z, v, seed=0):
     pred = np.zeros_like(v)
     for tr, te in KFold(5, shuffle=True, random_state=seed).split(z):
@@ -97,7 +121,10 @@ def main():
     ap.add_argument('--fold', default='outputs/veloroute_real_pipeline_20260912_v2/fold')
     ap.add_argument('--conditions', default='data/renge/conditions/esm2_3b_v1/conditions.npz')
     ap.add_argument('--block', type=int, default=8)
+    ap.add_argument('--perm-method', default='kmeans', choices=['kmeans', 'local'])
     ap.add_argument('--seeds', default='0,1,2')
+    ap.add_argument('--velocity-file', default=None, help='npz with train__<label> and validation__<label> velocities')
+    ap.add_argument('--velocity-label', default='GFG_joint')
     ap.add_argument('--output', default='outputs/w1_e1_permutation_design.json')
     args = ap.parse_args()
     fold = Path(args.fold)
@@ -105,6 +132,12 @@ def main():
     train_target, _ = load_pack(fold / 'train_target.npz', expected_side='target')
     val, _ = load_pack(fold / 'validation_source.npz', expected_side='source')
     val_target, _ = load_pack(fold / 'validation_target.npz', expected_side='target')
+    if args.velocity_file:
+        vd = np.load(args.velocity_file, allow_pickle=True)
+        V = {'train': vd[f'train__{args.velocity_label}'].astype(np.float32),
+             'validation': vd[f'validation__{args.velocity_label}'].astype(np.float32)}
+    else:
+        V = {'train': train['velocity'], 'validation': val['velocity']}
     with np.load(args.conditions, allow_pickle=False) as data:
         cond_names = [str(c) for c in data['conditions']]
         embeddings = np.asarray(data['embeddings'], dtype=np.float32)
@@ -113,10 +146,21 @@ def main():
     disp_train = nn_displacement(train, train_target)
     seeds = [int(s) for s in args.seeds.split(',')]
 
+    def within_perm(v, src, seed):
+        if args.perm_method == 'kmeans':
+            return z_kmeans_permute(v, src['z'], src['conditions'], per_cluster=args.block, seed=seed, cross=False)
+        return permute_local(v, src, seed=seed, neighbors=args.block)[0]
+
+    def cross_perm(v, src, seed):
+        if args.perm_method == 'kmeans':
+            return z_kmeans_permute(v, src['z'], src['conditions'], per_cluster=args.block, seed=seed, cross=True)
+        return cross_permute(v, src, block=args.block, seed=seed)
+
     # premise check on the training set (cross-fitted z->v R2)
-    prem = dict(unpermuted_ztov_r2=cv_z_to_v_r2(train['z'], train['velocity']))
-    prem['within_permuted_ztov_r2'] = [cv_z_to_v_r2(train['z'], permute_local(train['velocity'], train, seed=s, neighbors=args.block)[0]) for s in seeds]
-    prem['cross_permuted_ztov_r2'] = [cv_z_to_v_r2(train['z'], cross_permute(train['velocity'], train, block=args.block, seed=s)) for s in seeds]
+    prem = dict(velocity_label=args.velocity_label, perm_method=args.perm_method,
+                unpermuted_ztov_r2=cv_z_to_v_r2(train['z'], V['train']))
+    prem['within_permuted_ztov_r2'] = [cv_z_to_v_r2(train['z'], within_perm(V['train'], train, s)) for s in seeds]
+    prem['cross_permuted_ztov_r2'] = [cv_z_to_v_r2(train['z'], cross_perm(V['train'], train, s)) for s in seeds]
 
     def ec(src):
         return np.vstack([cond_lookup[str(c)] for c in src['conditions']])
@@ -143,7 +187,7 @@ def main():
     # baseline model comparison on validation conditions (real v)
     baseline = {}
     for model in ('z', 'z_ec', 'z_v', 'z_v_ec'):
-        pred = fit_predict(model, train, train['velocity'], val, val['velocity'])
+        pred = fit_predict(model, train, V['train'], val, V['validation'])
         errs = {}
         for c in sorted(set(val['conditions'])):
             a = val['conditions'] == c
@@ -161,11 +205,11 @@ def main():
         for metric in ('energy', 'pseudobulk_mse'):
             gw, gc = [], []
             for s in seeds:
-                real_pred = fit_predict('z_v', train, train['velocity'], src, src['velocity'])
-                within_v = permute_local(src['velocity'], src, seed=s, neighbors=args.block)[0]
-                cross_v = cross_permute(src['velocity'], src, block=args.block, seed=s)
-                wpred = fit_predict('z_v', train, train['velocity'], src, within_v)
-                cpred = fit_predict('z_v', train, train['velocity'], src, cross_v)
+                real_pred = fit_predict('z_v', train, V['train'], src, V[role])
+                within_v = within_perm(V[role], src, s)
+                cross_v = cross_perm(V[role], src, s)
+                wpred = fit_predict('z_v', train, V['train'], src, within_v)
+                cpred = fit_predict('z_v', train, V['train'], src, cross_v)
                 real = errors_by_condition(src, tgt, real_pred)
                 wi = errors_by_condition(src, tgt, wpred)
                 cr = errors_by_condition(src, tgt, cpred)
