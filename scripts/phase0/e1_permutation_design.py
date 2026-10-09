@@ -70,6 +70,29 @@ def z_kmeans_permute(v, z, conditions, per_cluster=6, seed=0, cross=False):
     return np.asarray(v)[order].copy()
 
 
+def crossfit_fhat(z, v, seed=0):
+    pred = np.zeros_like(v)
+    for tr, te in KFold(5, shuffle=True, random_state=seed).split(z):
+        pred[te] = Ridge(alpha=1.).fit(z[tr], v[tr]).predict(z[te])
+    return pred
+
+
+def residual_permute(v, z, conditions, seed=0, cross=False):
+    """Freedman-Lane: v* = f_hat(z) + permuted residuals. E[v|z] preserved by
+    construction, so the premise R2(z->v*) ~= R2(z->v) holds."""
+    rng = np.random.default_rng(seed)
+    f = crossfit_fhat(z, v, seed=seed)
+    r = v - f
+    rp = r.copy()
+    if cross:
+        rp = r[rng.permutation(len(r))]
+    else:
+        for c in sorted(set(conditions)):
+            idx = np.flatnonzero(np.asarray(conditions) == c)
+            rp[idx] = r[rng.permutation(idx)]
+    return f + rp
+
+
 def cv_z_to_v_r2(z, v, seed=0):
     pred = np.zeros_like(v)
     for tr, te in KFold(5, shuffle=True, random_state=seed).split(z):
@@ -121,7 +144,7 @@ def main():
     ap.add_argument('--fold', default='outputs/veloroute_real_pipeline_20260912_v2/fold')
     ap.add_argument('--conditions', default='data/renge/conditions/esm2_3b_v1/conditions.npz')
     ap.add_argument('--block', type=int, default=8)
-    ap.add_argument('--perm-method', default='kmeans', choices=['kmeans', 'local'])
+    ap.add_argument('--perm-method', default='residual', choices=['residual', 'kmeans', 'local'])
     ap.add_argument('--seeds', default='0,1,2')
     ap.add_argument('--velocity-file', default=None, help='npz with train__<label> and validation__<label> velocities')
     ap.add_argument('--velocity-label', default='GFG_joint')
@@ -147,11 +170,15 @@ def main():
     seeds = [int(s) for s in args.seeds.split(',')]
 
     def within_perm(v, src, seed):
+        if args.perm_method == 'residual':
+            return residual_permute(v, src['z'], src['conditions'], seed=seed, cross=False)
         if args.perm_method == 'kmeans':
             return z_kmeans_permute(v, src['z'], src['conditions'], per_cluster=args.block, seed=seed, cross=False)
         return permute_local(v, src, seed=seed, neighbors=args.block)[0]
 
     def cross_perm(v, src, seed):
+        if args.perm_method == 'residual':
+            return residual_permute(v, src['z'], src['conditions'], seed=seed, cross=True)
         if args.perm_method == 'kmeans':
             return z_kmeans_permute(v, src['z'], src['conditions'], per_cluster=args.block, seed=seed, cross=True)
         return cross_permute(v, src, block=args.block, seed=seed)

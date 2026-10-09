@@ -172,6 +172,34 @@ def run_dataset(name, s_mat, u_mat, rng, top_hvg, result, clone_labels=None):
             icc_epsU_max=float(np.max(np.abs(icu))), icc_epsS_max=float(np.max(np.abs(ics))),
             U_not_special=bool(abs(np.max(np.abs(icu)) - np.max(np.abs(ics))) < 0.02))
 
+        # kappa test: strip the S-shared (clone-identity) component out of eps_U.
+        # kappa_g = eps_U,g - b_g*eps_S,g with b_g fit on cell-half 1, kappa on half 2.
+        n_ = len(epsU)
+        rc = np.random.default_rng(1)
+        pc = rc.permutation(n_)
+        fit, ev = pc[:n_ // 2], pc[n_ // 2:]
+        denom_fit = (epsS[fit] ** 2).sum(0) + 1e-12
+        b = (epsU[fit] * epsS[fit]).sum(0) / denom_fit
+        kappa = epsU[ev] - epsS[ev] * b
+        pcaK = PCA(20, svd_solver='randomized', random_state=0).fit(kappa)
+        k_m = pcaK.transform(kappa)
+        lab_ev = clone_labels[ev]
+        valid_ev = lab_ev >= 0
+        vals_ev, counts_ev = np.unique(lab_ev[valid_ev], return_counts=True)
+        mv = np.isin(lab_ev, vals_ev[counts_ev >= 2])
+        kk, kl, zz = k_m[mv], lab_ev[mv], zprime[ev][mv]
+        pcaU2 = PCA(20, svd_solver='randomized', random_state=0).fit(epsU[ev])
+        um = pcaU2.transform(epsU[ev])[mv]
+        ms_k = icc_maxstat_null(kk, kl, zz, n_perm=1000, seed=0)
+        ms_u2 = icc_maxstat_null(um, kl, zz, n_perm=1000, seed=0)
+        result[name]['kappa_test'] = dict(
+            note='kappa = epsU - b*epsS (S-shared component removed)',
+            b_median=float(np.median(b)),
+            kappa_obs=ms_k['obs_max'], kappa_null95=ms_k['null95'],
+            kappa_p=ms_k['p_value'], kappa_passes=ms_k['passes'],
+            epsU_samehalf_obs=ms_u2['obs_max'], epsU_samehalf_p=ms_u2['p_value'])
+        log(f'{name}: KAPPA obs={ms_k["obs_max"]:.4f} null95={ms_k["null95"]:.4f} p={ms_k["p_value"]:.3f} pass={ms_k["passes"]} | epsU samehalf p={ms_u2["p_value"]:.3f}')
+
     if clone_labels is not None:
         valid = clone_labels >= 0
         vals = np.unique(clone_labels[valid]); _, counts = np.unique(clone_labels[valid], return_counts=True)
