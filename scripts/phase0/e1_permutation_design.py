@@ -1,16 +1,17 @@
-"""E1: permutation-design empirical test (RENGE).
+"""E1: permutation-design empirical test (RENGE), corrected.
 
-Spec: ridge regression from (z, v) predicts the day5 displacement (pseudo-bulk).
-Two zero-designs for v:
-  * within-condition z-matched permutation -> velocity-specific gain must be ~0
-    (validates the project's null-design theorem);
-  * cross-condition z-matched permutation -> condition field destroyed; the real
-    arm should retain a positive population-level gain.
+Permutation (both variants are proper bijections, no self-sampling):
+  * within-condition: permute_local (within condition, depth bin, z-sorted blocks
+    of ``block`` cells, cyclic roll);
+  * cross-condition: same z-sorted depth-block roll but pooling all conditions.
 
+Premise check: after permutation, the cross-fitted z->v R2 must stay ~= the
+unpermuted value (permutation must preserve p(v|z)).
+
+Models (ridge on training conditions, endpoint z + predicted displacement):
+  [z], [z,e_c], [z,v], [z,v,e_c].
 Gain = error(permuted v) - error(real v); positive favours real velocity.
-Condition bootstrap CIs. Two endpoints retained:
-  * ridge: fit [z,v]->NN-barycenter displacement on training conditions;
-  * raw  : z + scale*v with training-only robust scale.
+Condition bootstrap CIs over 4 validation conditions; repeated over seeds.
 """
 import argparse
 import json
@@ -20,39 +21,36 @@ from pathlib import Path
 import numpy as np
 from scipy.spatial.distance import cdist
 from sklearn.linear_model import Ridge
+from sklearn.model_selection import KFold
 from sklearn.neighbors import NearestNeighbors
 
 sys.path.insert(0, '/home/yuchang/wangjiaxuan/src')
 from veloroute.latent import load_pack
+from veloroute.probes import permute_local
+from veloroute.velocity_diagnostics import centered_velocity_r2
 
 MIN_CELLS = 20
 
 
-def z_matched_permute(v, z, conditions, k=10, seed=0, cross=False):
+def cross_permute(v, source, block=8, seed=0):
     rng = np.random.default_rng(seed)
-    out = np.array(v, copy=True)
-    pool = np.arange(len(z))
-    for c in sorted(set(conditions)):
-        m = np.flatnonzero(np.asarray(conditions) == c)
-        if len(m) < 2:
-            continue
-        cand = pool if cross else m
-        zc = z[cand]
-        nn = NearestNeighbors(n_neighbors=min(k, len(cand))).fit(zc)
-        idx = nn.kneighbors(z[m], return_distance=False)
-        for i in range(len(m)):
-            out[m[i]] = v[cand[idx[i][rng.integers(len(idx[i]))]]]
-    return out
+    order = np.arange(len(v))
+    depth = np.floor(np.log2(np.maximum(source['depth'], 1))).astype(int)
+    for db in np.unique(depth):
+        group = np.flatnonzero(depth == db)
+        group = group[np.argsort(source['z'][group, 0], kind='stable')]
+        for start in range(0, len(group), block):
+            blk = group[start:start + block]
+            if len(blk) > 1:
+                order[blk] = np.roll(blk, int(rng.integers(1, len(blk))))
+    return np.asarray(v)[order].copy()
 
 
-def robust_scale(v, displacement, conditions):
-    ratios = []
-    for c in sorted(set(conditions)):
-        m = np.asarray(conditions) == c
-        vm, dm = v[m].mean(0), displacement[m].mean(0)
-        if np.linalg.norm(vm) > 1e-10:
-            ratios.append(np.linalg.norm(dm) / np.linalg.norm(vm))
-    return float(np.median(ratios)) if ratios else 1.0
+def cv_z_to_v_r2(z, v, seed=0):
+    pred = np.zeros_like(v)
+    for tr, te in KFold(5, shuffle=True, random_state=seed).split(z):
+        pred[te] = Ridge(alpha=1.).fit(z[tr], v[tr]).predict(z[te])
+    return float(centered_velocity_r2(v, pred))
 
 
 def nn_displacement(source, target, neighbors=10):
@@ -97,49 +95,90 @@ def bootstrap_gain(gains, seed=20260923, n=10000):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--fold', default='outputs/veloroute_real_pipeline_20260912_v2/fold')
+    ap.add_argument('--conditions', default='data/renge/conditions/esm2_3b_v1/conditions.npz')
+    ap.add_argument('--block', type=int, default=8)
+    ap.add_argument('--seeds', default='0,1,2')
     ap.add_argument('--output', default='outputs/w1_e1_permutation_design.json')
-    ap.add_argument('--seed', type=int, default=0)
     args = ap.parse_args()
     fold = Path(args.fold)
     train, _ = load_pack(fold / 'train_source.npz', expected_side='source')
     train_target, _ = load_pack(fold / 'train_target.npz', expected_side='target')
     val, _ = load_pack(fold / 'validation_source.npz', expected_side='source')
     val_target, _ = load_pack(fold / 'validation_target.npz', expected_side='target')
+    with np.load(args.conditions, allow_pickle=False) as data:
+        cond_names = [str(c) for c in data['conditions']]
+        embeddings = np.asarray(data['embeddings'], dtype=np.float32)
+    cond_lookup = {c: embeddings[i] for i, c in enumerate(cond_names)}
 
     disp_train = nn_displacement(train, train_target)
-    scale = robust_scale(train['velocity'], disp_train, train['conditions'])
-    ridge = Ridge(alpha=1.).fit(np.concatenate([train['z'], train['velocity']], 1), disp_train)
+    seeds = [int(s) for s in args.seeds.split(',')]
 
-    def ridge_disp(zv):
-        return ridge.predict(zv)
+    # premise check on the training set (cross-fitted z->v R2)
+    prem = dict(unpermuted_ztov_r2=cv_z_to_v_r2(train['z'], train['velocity']))
+    prem['within_permuted_ztov_r2'] = [cv_z_to_v_r2(train['z'], permute_local(train['velocity'], train, seed=s, neighbors=args.block)[0]) for s in seeds]
+    prem['cross_permuted_ztov_r2'] = [cv_z_to_v_r2(train['z'], cross_permute(train['velocity'], train, block=args.block, seed=s)) for s in seeds]
 
-    def raw_disp(z, v):
-        return scale * v
+    def ec(src):
+        return np.vstack([cond_lookup[str(c)] for c in src['conditions']])
 
-    result = dict(tag='E1', fold=str(fold), scale=scale)
+    def endpoint(model, src, v):
+        z = src['z']; c = ec(src)
+        if model == 'z':
+            x = z
+        elif model == 'z_ec':
+            x = np.concatenate([z, c], 1)
+        elif model == 'z_v':
+            x = np.concatenate([z, v], 1)
+        else:
+            x = np.concatenate([z, v, c], 1)
+        return model, x
+
+    def fit_predict(model, tr_src, tr_v, eval_src, eval_v):
+        _, xtr = endpoint(model, tr_src, tr_v)
+        r = Ridge(alpha=1.).fit(xtr, disp_train)
+        _, xe = endpoint(model, eval_src, eval_v)
+        return r.predict(xe)
+
+    result = dict(tag='E1', fold=str(fold), block=args.block, seeds=seeds, premise=prem)
+    # baseline model comparison on validation conditions (real v)
+    baseline = {}
+    for model in ('z', 'z_ec', 'z_v', 'z_v_ec'):
+        pred = fit_predict(model, train, train['velocity'], val, val['velocity'])
+        errs = {}
+        for c in sorted(set(val['conditions'])):
+            a = val['conditions'] == c
+            b = val_target['conditions'] == c
+            if int(a.sum()) < MIN_CELLS or int(b.sum()) < MIN_CELLS:
+                continue
+            ep = val['z'][a] + pred[a]
+            y = val_target['z'][b]
+            errs[str(c)] = dict(energy=energy(ep, y), pseudobulk_mse=float(np.square(ep.mean(0) - y.mean(0)).mean()))
+        baseline[model] = {k: float(np.mean([e[k] for e in errs.values()])) for k in ('energy', 'pseudobulk_mse')}
+    result['validation_baselines'] = baseline
+
+    # permutation tests with real-arm ridge [z,v]
     for role, src, tgt in [('train', train, train_target), ('validation', val, val_target)]:
-        real_v = src['velocity']
-        within_v = z_matched_permute(real_v, src['z'], src['conditions'], k=10, seed=args.seed, cross=False)
-        cross_v = z_matched_permute(real_v, src['z'], src['conditions'], k=10, seed=args.seed, cross=True)
-        for model, disp_fn in [('ridge', ridge_disp), ('raw', raw_disp)]:
-            def endpoint(vv):
-                return disp_fn(np.concatenate([src['z'], vv], 1)) if model == 'ridge' else disp_fn(src['z'], vv)
-            real = errors_by_condition(src, tgt, endpoint(real_v))
-            within = errors_by_condition(src, tgt, endpoint(within_v))
-            cross = errors_by_condition(src, tgt, endpoint(cross_v))
-            for metric in ('energy', 'pseudobulk_mse'):
-                common = sorted(set(real) & set(within) & set(cross))
-                g_within = [within[c][metric] - real[c][metric] for c in common]
-                g_cross = [cross[c][metric] - real[c][metric] for c in common]
-                mw, lw, hw = bootstrap_gain(g_within)
-                mc, lc, hc = bootstrap_gain(g_cross)
-                result[f'{role}_{model}_{metric}'] = dict(
-                    n_conditions=len(common),
-                    within_gain=mw, within_ci=[lw, hw], within_crosses_zero=bool(lw <= 0 <= hw),
-                    cross_gain=mc, cross_ci=[lc, hc], cross_crosses_zero=bool(lc <= 0 <= hc))
-    out = Path(args.output)
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(result, indent=2))
+        for metric in ('energy', 'pseudobulk_mse'):
+            gw, gc = [], []
+            for s in seeds:
+                real_pred = fit_predict('z_v', train, train['velocity'], src, src['velocity'])
+                within_v = permute_local(src['velocity'], src, seed=s, neighbors=args.block)[0]
+                cross_v = cross_permute(src['velocity'], src, block=args.block, seed=s)
+                wpred = fit_predict('z_v', train, train['velocity'], src, within_v)
+                cpred = fit_predict('z_v', train, train['velocity'], src, cross_v)
+                real = errors_by_condition(src, tgt, real_pred)
+                wi = errors_by_condition(src, tgt, wpred)
+                cr = errors_by_condition(src, tgt, cpred)
+                common = sorted(set(real) & set(wi) & set(cr))
+                gw.append(np.mean([wi[c][metric] - real[c][metric] for c in common]))
+                gc.append(np.mean([cr[c][metric] - real[c][metric] for c in common]))
+            mw, lw, hw = bootstrap_gain(gw, seed=20260923)
+            mc, lc, hc = bootstrap_gain(gc, seed=20260923)
+            result[f'{role}_{metric}'] = dict(
+                n_seeds=len(seeds), seed_mean_within=float(np.mean(gw)),
+                within_gain=mw, within_ci=[lw, hw], within_crosses_zero=bool(lw <= 0 <= hw),
+                cross_gain=mc, cross_ci=[lc, hc], cross_crosses_zero=bool(lc <= 0 <= hc))
+    Path(args.output).write_text(json.dumps(result, indent=2))
     print(json.dumps(result, indent=2))
 
 

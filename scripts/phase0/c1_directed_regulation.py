@@ -1,14 +1,16 @@
-"""C1: RENGE directed-regulation quick test.
+"""C1 (v2): RENGE directed-regulation quick test, corrected.
 
-Only control cells (CTRL/AAVS1, day4+day5). Build metacells (~30 cells) from S.
-Transcription-rate proxy alpha_g = metacell U. Fit, per target gene g, a ridge
-    alpha_g ~ S_r  (directed matrix W)   and   S_g ~ S_r (co-expression C),
-regulators r = 23 TFs + top-500 HVGs.
+Fixes vs v1:
+  * regulators are ONLY the 23 TFs (p=23), fit on single control cells (n~788),
+    not 523 regulators on 26 metacells;
+  * marginal regression coefficients cov(alpha_g, S_r)/var(S_r) replace
+    underdetermined multivariate ridge;
+  * DeltaS_r fixed to -1 (CRISPR knockdown mRNA sign is unreliable);
+  * directed vs co-expression correlations are disattenuated by each predictor's
+    split-half reliability.
 
-For each TF r: observed effect Delta_r = log pseudo-bulk(KO r day5) - control day5.
-Predictions W[:,r]*DeltaS_r and C[:,r]*DeltaS_r. Metric: Pearson over top-200 DEGs
-(excluding r). Directed beats co-expression in >=15/23 TFs and paired Wilcoxon
-p<0.05 -> directional signal.
+Metric: per TF, Pearson(pred, observed effect) over top-200 DEGs (excluding r).
+Directed beats co-expression in >=15/23 TFs and paired Wilcoxon p<0.05.
 """
 import argparse
 import json
@@ -18,9 +20,6 @@ from pathlib import Path
 import numpy as np
 import anndata as ad
 from scipy import sparse
-from sklearn.cluster import KMeans
-from sklearn.decomposition import PCA
-from sklearn.linear_model import Ridge
 from scipy.stats import wilcoxon
 
 sys.path.insert(0, '/home/yuchang/wangjiaxuan/src')
@@ -43,12 +42,22 @@ def normalize(mat, target=10000.0):
     return out
 
 
+def marginal_coef(alpha, s):
+    """alpha, s: (n_cells, n_genes). Returns cov(alpha_g, s_r)/var(s_r) per (g,r)."""
+    ac = alpha - alpha.mean(0, keepdims=True)
+    sc = s - s.mean(0, keepdims=True)
+    denom = (sc ** 2).sum(0) + 1e-12
+    return (ac.T @ sc) / denom[None, :]
+
+
+def spear_brown(r):
+    r = np.clip(r, -0.999, 0.999)
+    return 2 * r / (1 + r)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--n-hvg', type=int, default=2000)
-    ap.add_argument('--n-reg-hvg', type=int, default=500)
-    ap.add_argument('--n-metacells', type=int, default=30)
-    ap.add_argument('--alpha', type=float, default=5.0)
     ap.add_argument('--top-deg', type=int, default=200)
     ap.add_argument('--output', default='outputs/w1_c1_directed_regulation.json')
     args = ap.parse_args()
@@ -61,95 +70,90 @@ def main():
     def ctrl_mask(a):
         return a.obs['condition'].isin(CONTROLS).to_numpy()
 
-    def sel(a, mask):
-        return sparse.csr_matrix(a.layers['spliced'])[mask], sparse.csr_matrix(a.layers['unspliced'])[mask]
-
-    c4s, c4u = sel(d4, ctrl_mask(d4))
-    c5s, c5u = sel(d5, ctrl_mask(d5))
+    c4s = sparse.csr_matrix(d4.layers['spliced'])[ctrl_mask(d4)]
+    c4u = sparse.csr_matrix(d4.layers['unspliced'])[ctrl_mask(d4)]
+    c5s = sparse.csr_matrix(d5.layers['spliced'])[ctrl_mask(d5)]
+    c5u = sparse.csr_matrix(d5.layers['unspliced'])[ctrl_mask(d5)]
     cs = sparse.vstack([c4s, c5s]).tocsr()
     cu = sparse.vstack([c4u, c5u]).tocsr()
-    log(f'control cells: day4={c4s.shape[0]} day5={c5s.shape[0]} total={cs.shape[0]}')
+    n = cs.shape[0]
+    log(f'control cells: {int(ctrl_mask(d4).sum())}+{int(ctrl_mask(d5).sum())}={n}')
 
-    # HVG on control S
+    # target genes = top HVG union TFs
     logs = normalize(cs)
     dense = np.asarray(logs.todense(), dtype=np.float32)
     var = dense.var(0)
     expressed = np.asarray((cs > 0).sum(0)).ravel() >= 10
     var[~expressed] = -1
-    hvg_idx = np.sort(np.argsort(-var)[:args.n_hvg])
-    hvg_names = genes[hvg_idx]
+    hvg = list(np.argsort(-var)[:args.n_hvg])
+    tf_idx = {t: int(np.flatnonzero(genes == t)[0]) for t in TFS if (genes == t).any()}
+    target = np.array(sorted(set(hvg) | set(tf_idx.values())))
+    reg_pos = {t: int(np.flatnonzero(target == i)[0]) for t, i in tf_idx.items()}
+    log(f'target genes={len(target)} TFs found={len(tf_idx)}')
 
-    # regulators = 23 TF + top reg HVG (excluding those already TF)
-    tf_idx = [int(np.flatnonzero(genes == t)[0]) for t in TFS if (genes == t).any()]
-    tf_names = [genes[i] for i in tf_idx]
-    reg_extra = [i for i in hvg_idx if genes[i] not in set(tf_names)][:args.n_reg_hvg]
-    reg_idx = np.array(tf_idx + reg_extra)
-    reg_names = genes[reg_idx]
-    log(f'TF found={len(tf_idx)}/{len(TFS)} regulators={len(reg_idx)}')
+    Sn = np.asarray(normalize(cs)[:, target].todense(), dtype=np.float32)
+    Un = np.asarray(normalize(cu)[:, target].todense(), dtype=np.float32)
+    reg_target_cols = np.array([reg_pos[t] for t in tf_idx])
+    tf_list = list(tf_idx)
+    reg_col_of_tf = {t: k for k, t in enumerate(tf_list)}
+    S_reg = Sn[:, reg_target_cols]
 
-    # metacells
-    Sn = np.asarray(normalize(cs).todense(), dtype=np.float32)
-    Un = np.asarray(normalize(cu).todense(), dtype=np.float32)
-    z = PCA(n_components=30, svd_solver='randomized', random_state=0).fit_transform(Sn)
-    km = KMeans(n_clusters=min(args.n_metacells, len(z) // 5), n_init=5, random_state=0).fit(z)
-    labels = km.labels_
-    Smc = np.vstack([Sn[labels == k].mean(0) for k in range(km.n_clusters)])
-    Umc = np.vstack([Un[labels == k].mean(0) for k in range(km.n_clusters)])
-    log(f'metacells={km.n_clusters} shape Smc={Smc.shape}')
+    W = marginal_coef(Un, S_reg)      # (ngenes, nreg): alpha=U predicts
+    C = marginal_coef(Sn, S_reg)      # (ngenes, nreg): S co-expression
 
-    Sreg = Smc[:, reg_idx]               # (mc, nreg)
-    W = np.zeros((args.n_hvg, len(reg_idx)), dtype=np.float32)
-    C = np.zeros((args.n_hvg, len(reg_idx)), dtype=np.float32)
-    for j, g in enumerate(hvg_idx):
-        W[j] = Ridge(alpha=args.alpha).fit(Sreg, Umc[:, g]).coef_
-        C[j] = Ridge(alpha=args.alpha).fit(Sreg, Smc[:, g]).coef_
-    log('W/C fitted')
+    # split-half reliability of each coefficient column
+    rng = np.random.default_rng(0)
+    perm = rng.permutation(n); h1, h2 = perm[:n // 2], perm[n // 2:]
+    W1 = marginal_coef(Un[h1], S_reg[h1]); W2 = marginal_coef(Un[h2], S_reg[h2])
+    C1 = marginal_coef(Sn[h1], S_reg[h1]); C2 = marginal_coef(Sn[h2], S_reg[h2])
+    def col_rel(A, B):
+        A = A - A.mean(0, keepdims=True); B = B - B.mean(0, keepdims=True)
+        num = (A * B).sum(0); den = np.sqrt((A ** 2).sum(0) * (B ** 2).sum(0)) + 1e-12
+        return spear_brown(num / den)
+    rel_W = col_rel(W1, W2)
+    rel_C = col_rel(C1, C2)
 
-    # observed day5 KO vs control pseudo-bulk (all genes, normalized log)
     d5n = np.asarray(normalize(sparse.csr_matrix(d5.layers['spliced'])).todense(), dtype=np.float32)
-    d5un = np.asarray(normalize(sparse.csr_matrix(d5.layers['unspliced'])).todense(), dtype=np.float32)
-    ctrl5 = (d5.obs['condition'].isin(CONTROLS)).to_numpy()
+    ctrl5 = ctrl_mask(d5)
     ctrl_mean = d5n[ctrl5].mean(0)
-    reg_col = {name: k for k, name in enumerate(reg_names)}
 
     rows = []
-    for r in tf_names:
+    for r, ti in tf_idx.items():
+        if r not in reg_pos:
+            continue
         ko = (d5.obs['condition'] == r).to_numpy()
-        if int(ko.sum()) < 20 or r not in reg_col:
+        if int(ko.sum()) < 20:
             continue
         delta = d5n[ko].mean(0) - ctrl_mean
-        k = reg_col[r]
-        dS_r = float(delta[int(np.flatnonzero(genes == r)[0])])
-        pred_dir = W[:, k] * dS_r
-        pred_cov = C[:, k] * dS_r
-        true_on_hvg = delta[hvg_idx]
-        top = np.argsort(-np.abs(true_on_hvg))[:args.top_deg]
-        top = top[hvg_names[top] != r]
+        true = delta[target]
+        j = reg_col_of_tf[r]
+        pred_dir = -W[:, j]
+        pred_cov = -C[:, j]
+        top = np.argsort(-np.abs(true))[:args.top_deg]
+        top = top[target[top] != ti]
         def pearson(p):
-            x, y = p[top], true_on_hvg[top]
+            x, y = p[top], true[top]
             x = x - x.mean(); y = y - y.mean()
             den = np.sqrt((x ** 2).sum() * (y ** 2).sum()) + 1e-12
             return float((x * y).sum() / den)
-        rows.append(dict(tf=r, deltaS=dS_r, n_ko=int(ko.sum()),
-                         pearson_directed=pearson(pred_dir), pearson_coexpr=pearson(pred_cov)))
-        log(f'  {r:8s} n={int(ko.sum()):4d} dS={dS_r:+.2f} dir={rows[-1]["pearson_directed"]:+.3f} cov={rows[-1]["pearson_coexpr"]:+.3f}')
-
-    if len(rows) >= 5:
-        dd = np.array([x['pearson_directed'] for x in rows])
-        cc = np.array([x['pearson_coexpr'] for x in rows])
-        wins = int((dd > cc).sum())
-        try:
-            stat, p = wilcoxon(dd, cc)
-            p = float(p)
-        except Exception:
-            p = 1.0
-    else:
-        wins, p = 0, 1.0
-    result = dict(tag='C1', n_tfs=len(rows), directed_wins=wins,
-                  wilcoxon_p=p, passes=bool(wins >= 15 and p < 0.05),
-                  mean_directed=float(np.mean([x['pearson_directed'] for x in rows])) if rows else None,
-                  mean_coexpr=float(np.mean([x['pearson_coexpr'] for x in rows])) if rows else None,
-                  rows=rows)
+        raw_d, raw_c = pearson(pred_dir), pearson(pred_cov)
+        corr_d = raw_d / np.sqrt(max(rel_W[j], 1e-3))
+        corr_c = raw_c / np.sqrt(max(rel_C[j], 1e-3))
+        rows.append(dict(tf=r, n_ko=int(ko.sum()), rel_W=float(rel_W[j]), rel_C=float(rel_C[j]),
+                         raw_directed=raw_d, raw_coexpr=raw_c,
+                         pearson_directed=float(corr_d), pearson_coexpr=float(corr_c)))
+        log(f'  {r:8s} n={int(ko.sum()):4d} relW={rel_W[j]:+.2f} relC={rel_C[j]:+.2f} '
+            f'dir={corr_d:+.3f} cov={corr_c:+.3f}')
+    dd = np.array([x['pearson_directed'] for x in rows]); cc = np.array([x['pearson_coexpr'] for x in rows])
+    wins = int((dd > cc).sum())
+    try:
+        p = float(wilcoxon(dd, cc).pvalue)
+    except Exception:
+        p = 1.0
+    result = dict(tag='C1v2', n_tfs=len(rows), directed_wins=wins, wilcoxon_p=p,
+                  passes=bool(wins >= 15 and p < 0.05),
+                  mean_directed=float(dd.mean()) if len(dd) else None,
+                  mean_coexpr=float(cc.mean()) if len(cc) else None, rows=rows)
     Path(args.output).write_text(json.dumps(result, indent=2))
     print(json.dumps(result, indent=2))
 

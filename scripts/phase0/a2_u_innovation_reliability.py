@@ -1,19 +1,16 @@
-"""A2: U-innovation reliability + clone ICC (master switch).
+"""A2 (v2): U-innovation reliability + clone ICC, with reviewer controls.
 
-Question: is a single cell's U deviation a repeatable signal or count noise?
-If repeatable, is it shared across cells of the same clone?
+Fixes vs v1:
+  * clone-ICC null uses the max |ICC| over all modules per permutation
+    (selection-bias-corrected), not a single pre-picked module;
+  * S-residual control: same pipeline on log1p(S) predicted from a z' built on
+    the other half of genes -> if ICC(eps_S) ~ ICC(eps_U), U is not special;
+  * technical-covariate control: regress U/(U+S) and log total UMI out of module
+    scores, then recompute reliability and ICC;
+  * chromosome proxy: top-loading gene indices of the best module are tested for
+    genomic clustering (copy-number signature).
 
-Method (per dataset):
-  1. Binomial count-split integer S/U (p=0.5) -> halves A,B.
-  2. Each half: z = PCA-50 of log1p normalized S; E[U|z] via k=30 kNN regression;
-     eps = log1p(U) - E[U|z] (no smoothing).
-  3. Module scores: top-20 PCs fit on eps_A, projected onto both halves.
-  4. Reliability: per-module corr(score_A, score_B) across cells, Spearman-Brown.
-  5. Clone ICC (MeRLin): clones with >=2 cells; null shuffles clone labels within
-     z deciles preserving within-stratum clone-size multiset.
-
-Judgement: corrected reliability >= 0.2 AND ICC lower CI > null 95th pct -> continue.
-           reliability < 0.1 -> stop all per-cell claims.
+Premise: count-split removes only Poisson noise; repeatable != dynamical.
 """
 import argparse
 import csv
@@ -30,8 +27,8 @@ from sklearn.decomposition import PCA
 from sklearn.neighbors import NearestNeighbors
 
 
-def log(msg):
-    print(f'[A2] {msg}', flush=True)
+def log(m):
+    print(f'[A2] {m}', flush=True)
 
 
 def count_split(mat, rng):
@@ -50,34 +47,24 @@ def normalize_log(mat, target=10000.0):
     return out
 
 
-def select_genes(s, u, top_hvg=2000, min_frac=0.005):
+def select_genes(s, top_hvg=2000, min_frac=0.005):
     n = s.shape[0]
     expressed = np.asarray((s > 0).sum(0)).ravel() >= max(10, min_frac * n)
-    logs = s.astype(np.float32).copy()
-    logs.data = np.log1p(logs.data)
+    logs = s.astype(np.float32).copy(); logs.data = np.log1p(logs.data)
     mean = np.asarray(logs.mean(0)).ravel()
-    sq = np.asarray(logs.power(2).mean(0)).ravel()
-    var = sq - mean ** 2
+    var = np.asarray(logs.power(2).mean(0)).ravel() - mean ** 2
     var[~expressed] = -1
-    order = np.argsort(-var)
-    return np.sort(order[:min(top_hvg, int(expressed.sum()))])
+    return np.sort(np.argsort(-var)[:min(top_hvg, int(expressed.sum()))])
 
 
-def knn_innovation(u_log, z, k=30):
+def knn_residual(target_log, z, k=30):
     n = len(z)
     nn = NearestNeighbors(n_neighbors=min(k + 1, n)).fit(z)
     idx = nn.kneighbors(z, return_distance=False)[:, 1:]
     kk = idx.shape[1]
     rows = np.repeat(np.arange(n), kk)
     W = sparse.csr_matrix((np.full(n * kk, 1.0 / kk), (rows, idx.ravel())), shape=(n, n))
-    u = np.asarray(u_log.todense(), dtype=np.float32)
-    pred = W @ u
-    return (u - pred).astype(np.float32)
-
-
-def module_pca(eps_a, eps_b, n_components=20):
-    pca = PCA(n_components=n_components, svd_solver='randomized', random_state=0)
-    return pca.fit_transform(eps_a), pca.transform(eps_b)
+    return (target_log - W @ target_log).astype(np.float32)
 
 
 def spearman_brown(r):
@@ -86,8 +73,7 @@ def spearman_brown(r):
 
 
 def permodule_corr(sa, sb):
-    sa = sa - sa.mean(0, keepdims=True)
-    sb = sb - sb.mean(0, keepdims=True)
+    sa = sa - sa.mean(0, keepdims=True); sb = sb - sb.mean(0, keepdims=True)
     num = (sa * sb).sum(0)
     den = np.sqrt((sa ** 2).sum(0) * (sb ** 2).sum(0)) + 1e-12
     return num / den
@@ -96,8 +82,7 @@ def permodule_corr(sa, sb):
 def icc(scores, labels):
     labels = np.asarray(labels)
     uniq, inv, counts = np.unique(labels, return_inverse=True, return_counts=True)
-    n = len(scores)
-    kk = len(uniq)
+    n, kk = len(scores), len(uniq)
     if n <= kk:
         return 0.0
     sums = np.bincount(inv, weights=scores)
@@ -111,88 +96,120 @@ def icc(scores, labels):
     return float((ms_between - ms_within) / denom) if denom > 1e-12 else 0.0
 
 
-def icc_bootstrap(scores, labels, n_boot=200, seed=0):
-    rng = np.random.default_rng(seed)
-    groups = np.unique(labels)
-    out = []
-    for _ in range(n_boot):
-        pick = rng.choice(groups, size=len(groups), replace=True)
-        idx = np.concatenate([np.flatnonzero(labels == g) for g in pick])
-        out.append(icc(scores[idx], labels[idx]))
-    return float(np.percentile(out, 2.5))
-
-
-def icc_null(scores, labels, z, n_perm=1000, seed=0):
+def icc_maxstat_null(scores_all, labels, z, n_perm=1000, seed=0):
+    """scores_all: (n_cells, n_modules). Null distribution of max|ICC|."""
     rng = np.random.default_rng(seed)
     qs = np.quantile(z[:, 0], np.linspace(0, 1, 11)[1:-1])
     dec = np.digitize(z[:, 0], qs)
     labels = np.asarray(labels)
-    out = []
+    obs = np.array([icc(scores_all[:, j], labels) for j in range(scores_all.shape[1])])
+    obs_max = float(np.max(np.abs(obs)))
+    null_max = []
     for _ in range(n_perm):
         perm = labels.copy()
         for d in np.unique(dec):
             md = np.flatnonzero(dec == d)
             perm[md] = labels[rng.permutation(md)]
-        out.append(icc(scores, perm))
-    out = np.asarray(out)
-    return float(np.percentile(out, 95)), float((1 + (out >= icc(scores, labels)).sum()) / (n_perm + 1))
+        vals = [abs(icc(scores_all[:, j], perm)) for j in range(scores_all.shape[1])]
+        null_max.append(max(vals))
+    null_max = np.asarray(null_max)
+    return dict(obs_per_module=obs.tolist(), obs_max=obs_max,
+                null95=float(np.percentile(null_max, 95)),
+                p_value=float((1 + (null_max >= obs_max).sum()) / (n_perm + 1)),
+                passes=bool(obs_max > np.percentile(null_max, 95)))
 
 
 def run_dataset(name, s_mat, u_mat, rng, top_hvg, result, clone_labels=None):
-    log(f'{name}: raw S nnz={s_mat.nnz} U nnz={u_mat.nnz}')
+    log(f'{name}: S nnz={s_mat.nnz} U nnz={u_mat.nnz}')
     tot = np.asarray((s_mat + u_mat).sum(1)).ravel()
     keep = tot >= 100
     s_mat, u_mat = s_mat[keep].tocsr(), u_mat[keep].tocsr()
     if clone_labels is not None:
         clone_labels = np.asarray(clone_labels)[keep]
-    log(f'{name}: {int(keep.sum())} cells pass total>=100')
-    sel = select_genes(s_mat, u_mat, top_hvg=top_hvg)
+    log(f'{name}: {int(keep.sum())} cells >=100')
+    sel = select_genes(s_mat, top_hvg=top_hvg)
     s_sel, u_sel = s_mat[:, sel].tocsr(), u_mat[:, sel].tocsr()
     s_a, s_b = count_split(s_sel, rng)
     u_a, u_b = count_split(u_sel, rng)
-    z_a = PCA(n_components=50, svd_solver='randomized', random_state=0).fit_transform(
-        np.asarray(normalize_log(s_a).todense(), dtype=np.float32))
-    z_b = PCA(n_components=50, svd_solver='randomized', random_state=0).fit_transform(
-        np.asarray(normalize_log(s_b).todense(), dtype=np.float32))
-    eps_a = knn_innovation(normalize_log(u_a), z_a, k=30)
-    eps_b = knn_innovation(normalize_log(u_b), z_b, k=30)
-    sa, sb = module_pca(eps_a, eps_b, n_components=20)
-    r = permodule_corr(sa, sb)
-    r_sb = spearman_brown(r)
-    result[name] = dict(
-        n_cells=int(keep.sum()), n_genes=int(len(sel)),
-        module_reliability_raw=[float(x) for x in r],
-        module_reliability_spearman_brown=[float(x) for x in r_sb],
-        median_reliability_sb=float(np.median(r_sb)),
-        max_reliability_sb=float(np.max(r_sb)),
-        frac_modules_reliability_ge_0p2=float((r_sb >= 0.2).mean()),
-    )
-    log(f'{name}: median SB reliability={np.median(r_sb):.3f} max={np.max(r_sb):.3f}')
+    sna, snb = normalize_log(s_a), normalize_log(s_b)
+    una, unb = normalize_log(u_a), normalize_log(u_b)
+    z_a = PCA(50, svd_solver='randomized', random_state=0).fit_transform(np.asarray(sna.todense(), dtype=np.float32))
+    z_b = PCA(50, svd_solver='randomized', random_state=0).fit_transform(np.asarray(snb.todense(), dtype=np.float32))
+    eps_a = knn_residual(np.asarray(una.todense(), dtype=np.float32), z_a)
+    eps_b = knn_residual(np.asarray(unb.todense(), dtype=np.float32), z_b)
+    pca = PCA(20, svd_solver='randomized', random_state=0).fit(eps_a)
+    sa, sb = pca.transform(eps_a), pca.transform(eps_b)
+    r_sb = spearman_brown(permodule_corr(sa, sb))
+    result[name] = dict(n_cells=int(keep.sum()), n_genes=int(len(sel)),
+                        median_reliability_sb=float(np.median(r_sb)), max_reliability_sb=float(np.max(r_sb)),
+                        frac_modules_reliability_ge_0p2=float((r_sb >= 0.2).mean()))
+
+    # ---- S-residual control (gene half split; z' from other half) ----
+    nt = len(sel)
+    idxA, idxB = np.arange(0, nt, 2), np.arange(1, nt, 2)
+    sf = np.asarray(normalize_log(s_sel).todense(), dtype=np.float32)
+    uf = np.asarray(normalize_log(u_sel).todense(), dtype=np.float32)
+    zprime = PCA(50, svd_solver='randomized', random_state=0).fit_transform(sf[:, idxB])
+    epsS = knn_residual(sf[:, idxA], zprime)
+    epsU = knn_residual(uf[:, idxA], zprime)
+    pcaS = PCA(20, svd_solver='randomized', random_state=0).fit(epsS)
+    pcaU = PCA(20, svd_solver='randomized', random_state=0).fit(epsU)
+    result[name]['S_residual_control'] = dict(
+        note='eps_S vs eps_U, both on gene-half A with z-prime from gene-half B',
+        epsU_module_var=[float(v) for v in pcaU.explained_variance_],
+        epsS_module_var=[float(v) for v in pcaS.explained_variance_])
     if clone_labels is not None:
         valid = clone_labels >= 0
-        vals = np.unique(clone_labels[valid])
-        _, counts = np.unique(clone_labels[valid], return_counts=True)
-        multi_vals = vals[counts >= 2]
-        multi = np.isin(clone_labels, multi_vals)
-        log(f'{name}: clone cells(>=2)={int(multi.sum())} clones={len(multi_vals)}')
-        iccs = [icc(sa[multi, j], clone_labels[multi]) for j in range(sa.shape[1])]
-        result[name]['clone_icc_all_modules'] = [float(v) for v in iccs]
-        result[name]['clone_icc_median'] = float(np.median(iccs))
-        best = int(np.argmax(np.abs(iccs)))
-        sc = sa[multi, best]
+        vals = np.unique(clone_labels[valid]); _, counts = np.unique(clone_labels[valid], return_counts=True)
+        multi = np.isin(clone_labels, vals[counts >= 2])
         lab = clone_labels[multi]
-        null95, pval = icc_null(sc, lab, z_a[multi], n_perm=1000, seed=0)
-        z_ctrl = icc(z_a[multi, 0], lab)
-        z_null95, z_pval = icc_null(z_a[multi, 0], lab, z_a[multi], n_perm=200, seed=1)
-        result[name]['clone_icc'] = dict(
-            best_module=int(best), observed=float(icc(sc, lab)),
-            null95=null95, p_value=pval, passes=bool(icc(sc, lab) > null95),
-            z_control_observed=float(z_ctrl), z_control_null95=z_null95, z_control_p=z_pval)
+        su = pcaU.transform(epsU)[multi]
+        ss = pcaS.transform(epsS)[multi]
+        icu = np.array([icc(su[:, j], lab) for j in range(su.shape[1])])
+        ics = np.array([icc(ss[:, j], lab) for j in range(ss.shape[1])])
+        result[name]['S_residual_control'].update(
+            icc_epsU_median=float(np.median(icu)), icc_epsS_median=float(np.median(ics)),
+            icc_epsU_max=float(np.max(np.abs(icu))), icc_epsS_max=float(np.max(np.abs(ics))),
+            U_not_special=bool(abs(np.max(np.abs(icu)) - np.max(np.abs(ics))) < 0.02))
+
+    if clone_labels is not None:
+        valid = clone_labels >= 0
+        vals = np.unique(clone_labels[valid]); _, counts = np.unique(clone_labels[valid], return_counts=True)
+        multi = np.isin(clone_labels, vals[counts >= 2])
+        lab = clone_labels[multi]
+        sa_m = sa[multi]
+        log(f'{name}: clone multi cells={int(multi.sum())} clones={len(vals[counts>=2])}')
+
+        # main ICC with max-statistic null
+        ms = icc_maxstat_null(sa_m, lab, z_a[multi], n_perm=1000, seed=0)
+        result[name]['clone_icc_maxstat'] = ms
+        log(f'{name}: ICC max-stat obs={ms["obs_max"]:.4f} null95={ms["null95"]:.4f} p={ms["p_value"]:.4f} pass={ms["passes"]}')
+
+        # technical-covariate control: regress U/(U+S) and log total out of module scores
+        ufrac = np.asarray(u_sel.sum(1)).ravel() / np.maximum(np.asarray((u_sel + s_sel).sum(1)).ravel(), 1)
+        ltot = np.log1p(np.asarray((u_sel + s_sel).sum(1)).ravel())
+        Xc = np.column_stack([ufrac, ltot, np.ones(len(ufrac))])[multi]
+        proj = Xc @ np.linalg.lstsq(Xc, sa_m, rcond=None)[0]
+        sa_corr = sa_m - proj
+        ms_corr = icc_maxstat_null(sa_corr, lab, z_a[multi], n_perm=300, seed=0)
+        result[name]['clone_icc_after_covariates'] = ms_corr
+        log(f'{name}: ICC after covariates obs={ms_corr["obs_max"]:.4f} null95={ms_corr["null95"]:.4f} pass={ms_corr["passes"]}')
+
+        # chromosome proxy: top-loading gene indices of best module
+        best = int(np.argmax(np.abs(ms['obs_per_module'])))
+        load = pca.components_[best]
+        top_idx = np.argsort(-np.abs(load))[:100]
+        span = int(top_idx.max() - top_idx.min())
+        expected_span = 100 / len(sel) * len(sel)
+        result[name]['best_module_index_clustering'] = dict(
+            best_module=best, top_index_min=int(top_idx.min()), top_index_max=int(top_idx.max()),
+            span=int(span), expected_span_uniform=float(len(sel) * (1 - 1 / 100)),
+            clustered=bool(span < 0.3 * len(sel)))
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--datasets', default='merlin315,renge_day4')
+    ap.add_argument('--datasets', default='merlin315,merlin310,renge_day4')
     ap.add_argument('--merlin-root', default='/data/yuchang/veloroute_ucheck_20260915')
     ap.add_argument('--top-hvg', type=int, default=2000)
     ap.add_argument('--seed', type=int, default=0)
@@ -201,11 +218,9 @@ def main():
     rng = np.random.default_rng(args.seed)
     mr = Path(args.merlin_root)
     result = dict(tag='A2', datasets=args.datasets, top_hvg=args.top_hvg)
-    wanted = set(args.datasets.split(','))
-
+    wanted = args.datasets.split(',')
     if 'merlin315' in wanted:
         rows, genes, mats, meta = load_usa(mr / 'quant_merlin315' / 'af_quant')
-        s, u = mats[0].tocsr(), mats[1].tocsr()
         pos = {bc: i for i, bc in enumerate(rows)}
         clone_map, labels = {}, np.full(len(rows), -1, dtype=np.int64)
         with (mr / 'clones' / 'SRR33960315' / 'cell_clone_assignments.csv').open() as fh:
@@ -217,22 +232,16 @@ def main():
                 if cb not in clone_map:
                     clone_map[cb] = len(clone_map)
                 labels[j] = clone_map[cb]
-        run_dataset('merlin315', s, u, rng, args.top_hvg, result, clone_labels=labels)
-
+        run_dataset('merlin315', mats[0].tocsr(), mats[1].tocsr(), rng, args.top_hvg, result, clone_labels=labels)
     if 'merlin310' in wanted:
         rows, genes, mats, meta = load_usa(mr / 'quant_merlin310' / 'af_quant')
         run_dataset('merlin310', mats[0].tocsr(), mats[1].tocsr(), rng, args.top_hvg, result)
-
     if 'renge_day4' in wanted:
         import anndata as ad
         a = ad.read_h5ad('data/renge/processed_release_v1/day4/day4.h5ad')
-        s = sparse.csr_matrix(a.layers['spliced'])
-        u = sparse.csr_matrix(a.layers['unspliced'])
-        run_dataset('renge_day4', s, u, rng, args.top_hvg, result)
-
-    out = Path(args.output)
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(result, indent=2))
+        run_dataset('renge_day4', sparse.csr_matrix(a.layers['spliced']), sparse.csr_matrix(a.layers['unspliced']),
+                    rng, args.top_hvg, result)
+    Path(args.output).write_text(json.dumps(result, indent=2))
     print(json.dumps(result, indent=2))
 
 

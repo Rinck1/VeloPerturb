@@ -84,9 +84,22 @@ def main():
     u_raw, s_raw = values[:, :ng], values[:, ng:]
     s_norm, u_norm = normalized_counts(s_raw, u_raw, transform.target_sum)
     gamma = fit_gamma_tail(s_norm, u_norm)
-    v_kin_gene = np.where(gamma > 0, u_norm - s_norm * gamma, 0.0)
+    supported = gamma > 0
+    v_kin_gene = np.where(supported, u_norm - s_norm * gamma, 0.0)
     v_kin = (v_kin_gene @ transform.components.T) / transform.velocity_scale
     v_kin = v_kin[ix]
+    # Controls for the "GFG reads U/S dynamics" claim: the -gamma*s term is fully
+    # state-determined. Local U shuffle (within condition/depth, z-sorted blocks)
+    # keeps that term but breaks any genuine U signal.
+    from veloroute.probes import permute_local
+    u_shuf, _ = permute_local(u_norm, source_full, seed=args.seed, neighbors=10)
+    v_kin_shuf_gene = np.where(supported, u_shuf - s_norm * gamma, 0.0)
+    v_kin_shuf = (v_kin_shuf_gene @ transform.components.T) / transform.velocity_scale
+    v_kin_shuf = v_kin_shuf[ix]
+    v_neg_gs = ((-s_norm * gamma) @ transform.components.T) / transform.velocity_scale
+    v_neg_gs = v_neg_gs[ix]
+    v_u_only = ((np.where(supported, u_norm, 0.0)) @ transform.components.T) / transform.velocity_scale
+    v_u_only = v_u_only[ix]
 
     # ---- mean-shift m from z ----
     nn = NearestNeighbors(n_neighbors=min(20, len(z))).fit(z)
@@ -128,18 +141,27 @@ def main():
     cos_gfg_m = cos_rows(v_gfg, m)
     cos_gfg_kin = cos_rows(v_gfg, v_kin)
     cos_kin_m = cos_rows(v_kin, m)
+    cos_gfg_kin_shuf = cos_rows(v_gfg, v_kin_shuf)
+    cos_gfg_neg_gs = cos_rows(v_gfg, v_neg_gs)
+    cos_gfg_u_only = cos_rows(v_gfg, v_u_only)
 
     def stat(a):
         return dict(median=float(np.median(a)), q25=float(np.percentile(a, 25)),
                     q75=float(np.percentile(a, 75)), mean=float(a.mean()))
 
     gap = float(np.median(cos_gfg_m) - np.median(cos_gfg_kin))
+    u_specific = float(np.median(cos_gfg_kin) - np.median(cos_gfg_kin_shuf))
     result = dict(tag='A1', fold=str(fold), n_cells=int(len(ix)),
                   cos_vGFG_meanshift=stat(cos_gfg_m),
                   cos_vGFG_vkin=stat(cos_gfg_kin),
                   cos_vkin_meanshift=stat(cos_kin_m),
+                  cos_vGFG_vkin_Ushuffled=stat(cos_gfg_kin_shuf),
+                  cos_vGFG_neg_gamma_s=stat(cos_gfg_neg_gs),
+                  cos_vGFG_U_only=stat(cos_gfg_u_only),
                   gap_gfg_m_minus_gfg_kin=gap,
                   N4_holds=bool(gap >= 0.2),
+                  U_specific_gap_gfg_kin_minus_Ushuf=u_specific,
+                  GFG_reads_U_gap=bool(u_specific >= 0.1),
                   norm_vgfg=float(np.sqrt((v_gfg**2).mean())),
                   norm_vkin=float(np.sqrt((v_kin**2).mean())))
     out = Path(args.output)
