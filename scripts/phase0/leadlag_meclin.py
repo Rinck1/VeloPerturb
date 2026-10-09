@@ -1,12 +1,15 @@
-"""Lead-lag test: does Day0 unspliced innovation predict Day21 spliced change,
-clone by clone? (MeRLin 310 Day0 -> 308 Day21)
+"""Lead-lag test (corrected): does Day0 unspliced innovation predict Day21 spliced
+level, clone by clone, after removing the same-day coupling?
 
-Dynamics => U leads S. For each shared clone:
-  kappa0_c = mean (within-clone) kappa = eps_U - b_iv*eps_S at Day0 (310)
-  dS_c     = mean log1p(norm S) Day21 (308) - Day0 (310)
-Per module (DTP program gene sets + whole selected set), clone-level Pearson
-across module genes; observed = mean over clones; null shuffles clone
-correspondence (Day0 kappa of clone i paired with Day21 dS of clone j).
+Design (per Rinck):
+  * count-split Day0 (310) into halves A/B; kappa0 from half A, S0 from half B;
+  * Day21 S21 from 308;
+  * per gene, partial correlation of S21 with kappa0 controlling for S0 (across
+    clones), aggregated per module;
+  * null permutes ONLY the Day21 clone rows (S0 stays bound to kappa0);
+  * controls: replace kappa0 by eps_S(A); report corr(kappa0, -S0);
+  * only clones with >= min_cells Day0 cells.
+Positive only if significant AND clearly stronger than the eps_S control.
 """
 import argparse
 import csv
@@ -60,30 +63,14 @@ def load_clones(path):
     return m
 
 
-def prep(name, s_mat, u_mat, clone_map, rng, sel):
-    rows = np.array(list(clone_map), dtype=object)
-    # align cells: keep those with total>=100
-    tot = np.asarray((s_mat + u_mat).sum(1)).ravel()
-    keep = tot >= 100
-    s, u = s_mat[keep].tocsr(), u_mat[keep].tocsr()
-    snf = normalize_log(s)
-    unf = normalize_log(u)
-    z = PCA(50, svd_solver='randomized', random_state=0).fit_transform(np.asarray(snf.todense(), dtype=np.float32))
-    epsU = knn_residual(np.asarray(unf.todense(), dtype=np.float32), z)
-    epsS = knn_residual(np.asarray(snf.todense(), dtype=np.float32), z)
-    # IV b from count-split halves
-    s_a, s_b = count_split(s, rng); u_a, u_b = count_split(u, rng)
-    z_a = PCA(50, svd_solver='randomized', random_state=0).fit_transform(np.asarray(normalize_log(s_a).todense(), dtype=np.float32))
-    z_b = PCA(50, svd_solver='randomized', random_state=0).fit_transform(np.asarray(normalize_log(s_b).todense(), dtype=np.float32))
-    eU_b = knn_residual(np.asarray(normalize_log(u_b).todense(), dtype=np.float32), z_b)
-    eS_a = knn_residual(np.asarray(normalize_log(s_a).todense(), dtype=np.float32), z_a)
-    eS_b = knn_residual(np.asarray(normalize_log(s_b).todense(), dtype=np.float32), z_b)
-    num = (eU_b * eS_a).mean(0) - eU_b.mean(0) * eS_a.mean(0)
-    den = (eS_b * eS_a).mean(0) - eS_b.mean(0) * eS_a.mean(0)
-    b_iv = np.where(np.abs(den) > 1e-12, num / den, 0.0)
-    kappa = epsU - epsS * b_iv
-    log(f'{name}: cells={keep.sum()} b_iv_med={np.median(b_iv):.3f}')
-    return keep, snf, kappa, rows
+def clone_means(mat, labels, keep_ids):
+    """Return dict clone -> mean row for clones in keep_ids."""
+    out = {}
+    for c in keep_ids:
+        m = np.flatnonzero(labels == c)
+        if len(m):
+            out[c] = np.asarray(mat[m].todense()).mean(0) if sparse.issparse(mat[m]) else mat[m].mean(0)
+    return out
 
 
 def main():
@@ -92,6 +79,7 @@ def main():
     ap.add_argument('--day0', default='310')
     ap.add_argument('--day21', default='308')
     ap.add_argument('--top-hvg', type=int, default=2000)
+    ap.add_argument('--min-cells', type=int, default=3)
     ap.add_argument('--n-perm', type=int, default=1000)
     ap.add_argument('--output', default='outputs/w1_leadlag_meclin.json')
     args = ap.parse_args()
@@ -105,17 +93,14 @@ def main():
     r0, genes0, s0, u0 = load_run(args.day0)
     r21, genes21, s21, u21 = load_run(args.day21)
     assert genes0 == genes21
-    ng = len(genes0)
-    # gene symbol map
     name_map = {}
     with (root / f'quant_merlin{args.day0}' / 'af_quant' / 'gene_id_to_name.tsv').open() as fh:
         for line in fh:
-            parts = line.rstrip('\n').split('\t')
-            if len(parts) >= 2:
-                name_map[parts[0]] = parts[1]
+            p = line.rstrip('\n').split('\t')
+            if len(p) >= 2:
+                name_map[p[0]] = p[1]
     symbols = np.array([name_map.get(g, '') for g in genes0])
 
-    # select genes: HVG on combined S
     combs = sparse.vstack([s0, s21]).tocsr()
     tot = np.asarray(combs.sum(1)).ravel(); keepc = tot >= 100
     logs = normalize_log(combs[keepc]).astype(np.float32)
@@ -125,81 +110,112 @@ def main():
     sel = np.sort(np.argsort(-var)[:args.top_hvg])
     log(f'selected {len(sel)} genes')
 
+    s0 = s0[:, sel].tocsr(); u0 = u0[:, sel].tocsr(); s21 = s21[:, sel].tocsr()
+    # drop cells with too few counts
+    keep0 = np.asarray((s0 + u0).sum(1)).ravel() >= 100
+    keep21 = np.asarray(s21.sum(1)).ravel() >= 50
+    s0, u0, r0 = s0[keep0], u0[keep0], np.array(r0)[keep0]
+    s21, r21 = s21[keep21], np.array(r21)[keep21]
+
     cmap0 = load_clones(root / f'clones/SRR33960{args.day0}' / 'cell_clone_assignments.csv')
     cmap21 = load_clones(root / f'clones/SRR33960{args.day21}' / 'cell_clone_assignments.csv')
-    shared = sorted(set(cmap0.values()) & set(cmap21.values()))
-    log(f'shared clones={len(shared)}')
+    lab0 = np.array([cmap0.get(b, '') for b in r0], dtype=object)
+    lab21 = np.array([cmap21.get(b, '') for b in r21], dtype=object)
 
-    # per-cell labels aligned: build clone index arrays for the raw quant rows
-    lab0 = np.array([cmap0.get(bc, '') for bc in r0], dtype=object)
-    lab21 = np.array([cmap21.get(bc, '') for bc in r21], dtype=object)
+    # Day0 count-split; kappa0 from half A, S0 from half B
+    s0a, s0b = count_split(s0, rng); u0a, u0b = count_split(u0, rng)
+    za = PCA(50, svd_solver='randomized', random_state=0).fit_transform(np.asarray(normalize_log(s0a).todense(), dtype=np.float32))
+    zb = PCA(50, svd_solver='randomized', random_state=0).fit_transform(np.asarray(normalize_log(s0b).todense(), dtype=np.float32))
+    eUa = knn_residual(np.asarray(normalize_log(u0a).todense(), dtype=np.float32), za)
+    eSa = knn_residual(np.asarray(normalize_log(s0a).todense(), dtype=np.float32), za)
+    eUb = knn_residual(np.asarray(normalize_log(u0b).todense(), dtype=np.float32), zb)
+    eSb = knn_residual(np.asarray(normalize_log(s0b).todense(), dtype=np.float32), zb)
+    # IV b (cross-half), kappa0 and epsS control from half A
+    num = (eUb * eSa).mean(0) - eUb.mean(0) * eSa.mean(0)
+    den = (eSb * eSa).mean(0) - eSb.mean(0) * eSa.mean(0)
+    b_iv = np.where(np.abs(den) > 1e-12, num / den, 0.0)
+    kappa0_cell = eUa - eSa * b_iv
+    S0_cell = np.asarray(normalize_log(s0b).todense(), dtype=np.float32)
+    epsS0_cell = eSa
+    S21_cell = np.asarray(normalize_log(s21).todense(), dtype=np.float32)
+    log(f'b_iv_med={np.median(b_iv):.4f}')
 
-    # subset to selected genes before prep to save memory
-    s0, u0 = s0[:, sel].tocsr(), u0[:, sel].tocsr()
-    s21, u21 = s21[:, sel].tocsr(), u21[:, sel].tocsr()
-    keep0, S0, K0, _ = prep(args.day0, s0, u0, cmap0, rng, sel)
-    keep21, S21, K21, _ = prep(args.day21, s21, u21, cmap21, rng, sel)
-    lab0 = lab0[keep0]; lab21 = lab21[keep21]
+    # clone-level means; only shared clones with >= min_cells on both days
+    shared = set(cmap0.values()) & set(cmap21.values())
+    def sel_clones(lab, minc):
+        vals, counts = np.unique(lab[lab != ''], return_counts=True)
+        return set(vals[counts >= minc])
+    c0 = sel_clones(lab0, args.min_cells); c21 = sel_clones(lab21, 1)
+    use = sorted(shared & c0 & c21)
+    log(f'shared={len(shared)} usable(>= {args.min_cells} day0 cells)={len(use)}')
 
-    # clone-mean kappa (Day0) and S (both days)
-    k0_mean, S0_mean, S21_mean = {}, {}, {}
-    for c in shared:
-        m0 = np.flatnonzero(lab0 == c)
-        m21 = np.flatnonzero(lab21 == c)
-        if len(m0) == 0 or len(m21) == 0:
-            continue
-        k0_mean[c] = K0[m0].mean(0)
-        S0_mean[c] = np.asarray(S0[m0].todense()).mean(0)
-        S21_mean[c] = np.asarray(S21[m21].todense()).mean(0)
-    cl = [c for c in shared if c in k0_mean]
-    Kmat = np.vstack([k0_mean[c] for c in cl])           # clones x genes
-    dSmat = np.vstack([S21_mean[c] - S0_mean[c] for c in cl])
-    log(f'clones used={len(cl)} Kmat={Kmat.shape}')
+    def clmean(cell, lab):
+        out = {}
+        for c in use:
+            m = np.flatnonzero(lab == c)
+            if len(m):
+                out[c] = cell[m].mean(0)
+        return np.vstack([out[c] for c in use])
+    K0 = clmean(kappa0_cell, lab0)      # clones x genes (Day0, half A)
+    ES0 = clmean(epsS0_cell, lab0)      # eps_S half A control
+    S0 = clmean(S0_cell, lab0)          # S0 half B
+    S21 = clmean(S21_cell, lab21)       # Day21
 
-    # center per gene across clones (focus on clone-specific patterns)
-    Kc = Kmat - np.nanmean(Kmat, 0, keepdims=True)
-    dSc = dSmat - np.nanmean(dSmat, 0, keepdims=True)
-
-    # modules: DTP programs + whole set
-    prog_path = root / 'merlin_programs.json'
+    # modules
     modules = {'ALL': np.ones(len(sel), bool)}
-    if prog_path.exists():
-        progs = json.loads(prog_path.read_text())['signatures']
-        sym2idx = {s: i for i, s in enumerate(symbols[sel])}
-        for k, p in progs.items():
-            gs = p.get('genes', p) if isinstance(p, dict) else p
-            gs = [str(g).replace('*', '').strip() for g in gs]
-            idx = np.array([sym2idx[g] for g in gs if g in sym2idx])
-            if len(idx) >= 5:
-                modules[k] = np.isin(np.arange(len(sel)), idx)
+    progs = json.loads((root / 'merlin_programs.json').read_text())['signatures']
+    sym2idx = {s: i for i, s in enumerate(symbols[sel])}
+    for k, p in progs.items():
+        gs = [str(g).replace('*', '').strip() for g in (p.get('genes', p) if isinstance(p, dict) else p)]
+        idx = np.array([sym2idx[g] for g in gs if g in sym2idx])
+        if len(idx) >= 5:
+            modules[k] = np.isin(np.arange(len(sel)), idx)
 
-    def module_corr(K, dS, mask):
-        x = K[:, mask]; y = dS[:, mask]
-        x = x - x.mean(1, keepdims=True); y = y - y.mean(1, keepdims=True)
-        num = (x * y).sum(1)
-        den = np.sqrt((x ** 2).sum(1) * (y ** 2).sum(1)) + 1e-12
-        return num / den
+    def partial_corr_stat(Y, X, C):
+        """mean over genes of partial corr(Y, X | C), across clones."""
+        vals = []
+        for g in range(Y.shape[1]):
+            y, x, c = Y[:, g], X[:, g], C[:, g]
+            if np.std(y) < 1e-9 or np.std(x) < 1e-9:
+                continue
+            # residualize y and x on c
+            def resid(a):
+                cc = c - c.mean()
+                den = (cc ** 2).sum()
+                if den < 1e-12:
+                    return a - a.mean()
+                return a - a.mean() - (cc * (a - a.mean())).sum() / den * cc
+            ry, rx = resid(y), resid(x)
+            if np.std(ry) < 1e-9 or np.std(rx) < 1e-9:
+                continue
+            vals.append(float(np.corrcoef(ry, rx)[0, 1]))
+        return (float(np.mean(vals)) if vals else 0.0), len(vals)
 
     out = {}
     for mname, mask in modules.items():
         if mask.sum() < 5:
             continue
-        obs = module_corr(Kc, dSc, mask)
-        obs_mean = float(np.mean(obs))
-        # null: shuffle clone correspondence
+        gidx = np.flatnonzero(mask)
+        obs, ng = partial_corr_stat(S21[:, gidx], K0[:, gidx], S0[:, gidx])
+        ctrl, _ = partial_corr_stat(S21[:, gidx], ES0[:, gidx], S0[:, gidx])
+        coupling = float(np.mean([np.corrcoef(K0[:, g], -S0[:, g])[0, 1]
+                                  for g in gidx if np.std(K0[:, g]) > 1e-9 and np.std(S0[:, g]) > 1e-9]))
         rng2 = np.random.default_rng(0)
         null = []
         for _ in range(args.n_perm):
-            perm = rng2.permutation(len(cl))
-            null.append(float(np.mean(module_corr(Kc, dSc[perm], mask))))
+            perm = rng2.permutation(len(use))
+            null.append(partial_corr_stat(S21[perm][:, gidx], K0[:, gidx], S0[:, gidx])[0])
         null = np.array(null)
-        out[mname] = dict(n_genes=int(mask.sum()), n_clones=len(cl),
-                          obs_mean_corr=obs_mean, null_mean=float(null.mean()),
+        out[mname] = dict(n_genes=ng, n_clones=len(use),
+                          obs_partial_corr=obs, epsS_control=ctrl,
+                          corr_kappa_negS0=coupling,
                           null95=float(np.percentile(null, 95)),
-                          p_value=float((1 + (null >= obs_mean).sum()) / (args.n_perm + 1)),
-                          passes=bool(obs_mean > np.percentile(null, 95)))
-        log(f'  {mname}: n={int(mask.sum())} obs={obs_mean:.4f} null95={out[mname]["null95"]:.4f} p={out[mname]["p_value"]:.3f} pass={out[mname]["passes"]}')
-    result = dict(tag='LEADLAG', day0=args.day0, day21=args.day21, n_shared_clones=len(cl), modules=out)
+                          p_value=float((1 + (null >= obs).sum()) / (args.n_perm + 1)),
+                          passes=bool(obs > np.percentile(null, 95) and obs > ctrl))
+        log(f'  {mname}: n={ng} obs={obs:+.4f} epsS_ctrl={ctrl:+.4f} corr(K,-S0)={coupling:+.3f} '
+            f'null95={out[mname]["null95"]:+.4f} p={out[mname]["p_value"]:.3f} pass={out[mname]["passes"]}')
+    result = dict(tag='LEADLAG_v2', day0=args.day0, day21=args.day21, min_cells=args.min_cells,
+                  n_clones=len(use), modules=out)
     Path(args.output).write_text(json.dumps(result, indent=2))
     print(json.dumps(result, indent=2))
 
