@@ -37,4 +37,4 @@ GFG 使用冻结 checkpoint `a9d9fa39063312230e4ba64309e9264ba3c2cb7ac549f04544b
 
 ## 下一步
 
-不进入 full router/专家网络主线训练，不打开 confirmation 进行追逐式调参。保留该 fold 和 probe 作为负对照；若要继续 MeRLin，优先完成 SRR33960309 的量化并做独立技术复本一致性/敏感性审计，然后预注册一个不依赖表达派生程序的 endpoint。当前项目的 router 破局证据仍需来自真正有动态任务增量的数据，而不是继续扩大 K 或 EM。
+不进入 full router/专家网络主线训练，不打开 confirmation 进行追逐式调参。309 的 SRA/FASTQ 已完成，当前正在提取其 clone barcode；完成后做 308↔309 技术复本一致性/敏感性审计。若复本审计仍不提供动态增量，再预注册一个不依赖表达派生程序的 endpoint。当前项目的 router 破局证据仍需来自真正有动态任务增量的数据，而不是继续扩大 K 或 EM。
