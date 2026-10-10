@@ -75,10 +75,13 @@ class GFGv2Core(nn.Module):
         self.log_beta.requires_grad_(False)
         self.log_theta_u = nn.Parameter(torch.zeros(genes))
         self.log_theta_s = nn.Parameter(torch.zeros(genes))
+        # velocity head: network-produced kinetic velocity from (u, s, u-innovation)
+        self.vel_head = nn.Linear(3, 1)
 
     def forward(self, u, s, u_mean, u_std, s_mean, s_std, u_innov, gamma_ss, *, track=False):
         build = torch.is_grad_enabled()
         un, sn = (u - u_mean) / u_std, (s - s_mean) / s_std
+        inn = u_innov / u_std
         xs = torch.stack((un, sn), -1)
         zs, ls = self.manifold_codebook(self.manifold_encoder(xs))
         fs = zs.reshape(-1, zs.shape[-1])
@@ -88,15 +91,18 @@ class GFGv2Core(nn.Module):
         theta_u = F.softplus(self.log_theta_u) + 1e-2
         theta_s = F.softplus(self.log_theta_s) + 1e-2
         recon_nb = -(nb_logprob(u, mu, theta_u).mean() + nb_logprob(s, ms, theta_s).mean())
-        # kinetic velocity, NO JVP: v_s = beta_g * u - gamma_g * s
-        beta, gamma = self.log_beta.exp(), self.log_gamma.exp()
-        vs = beta * u - gamma * s
+        # network-produced velocity, constrained by the kinetic relation
+        xv = torch.stack((un, sn, inn), -1)
+        vs = self.vel_head(xv).squeeze(-1)                 # raw-space ds/dt
         vu = torch.zeros_like(vs)
-        # anchor per-gene ratio gamma/beta to the data steady state (u/s)
+        beta, gamma = self.log_beta.exp(), self.log_gamma.exp()
+        kin_target = beta * u - gamma * s
+        dyn_loss = ((vs - kin_target) / (1.0 + s)).square().mean()
         anchor = ((self.log_gamma - self.log_beta) - gamma_ss.log()).square().mean()
-        native = recon_nb + ls + 50.0 * anchor
-        out = dict(native=native, recon_nb=recon_nb.detach(), anchor=anchor.detach(),
-                   vs=vs, vu=vu, mu=mu.detach(), ms=ms.detach(), beta=beta, gamma=gamma)
+        native = recon_nb + ls + 20.0 * dyn_loss + 50.0 * anchor
+        out = dict(native=native, recon_nb=recon_nb.detach(), dyn_loss=dyn_loss.detach(),
+                   anchor=anchor.detach(), vs=vs, vu=vu, mu=mu.detach(), ms=ms.detach(),
+                   beta=beta, gamma=gamma)
         return out if build else {k: v.detach() for k, v in out.items()}
 
 
@@ -138,24 +144,20 @@ class GFGv2(nn.Module):
 
 
 def unit_tests(genes=64, cells=32, dim=8, codes=8, hidden=(64, 64), seed=0):
-    """No-JVP design: velocity is kinetic v = beta*u - gamma*s.
-    Checks: (1) velocity equals beta*u-gamma*s; (2) locally shuffling U changes direction."""
+    """Network-produced velocity (velocity head). Checks: (1) vs shape/finite;
+    (2) locally shuffling U changes direction."""
     torch.manual_seed(seed)
     model = GFGv2(genes, state_dim=10, dim=dim, codes=codes, hidden=hidden)
     gene_us = torch.rand(cells, 2 * genes) * 5
     model.prepare(gene_us, torch.randn(10, genes))
     out, v = model(gene_us)
-    u, s = gene_us.chunk(2, -1)
-    beta = model.core.log_beta.exp(); gamma = model.core.log_gamma.exp()
-    vs_ref = beta * u - gamma * s
-    kin_err = float((out['vs'] - vs_ref).abs().max())
-    # U-shuffle changes direction
+    shape_ok = tuple(out['vs'].shape) == (cells, genes) and bool(torch.isfinite(out['vs']).all())
     order = torch.randperm(cells)
     gene_us_p = gene_us.clone(); gene_us_p[:, :genes] = gene_us[order, :genes]
     _, v1 = model(gene_us_p)
     cos = float(F.cosine_similarity(v, v1, dim=1).median())
-    return dict(kinetic_vs_max_abs_err=kin_err, kinetic_ok=bool(kin_err < 1e-4),
-                u_shuffle_cos_median=cos, u_shuffle_changes_direction=bool(cos < 0.9))
+    return dict(vs_shape_ok=shape_ok, u_shuffle_cos_median=cos,
+                u_shuffle_changes_direction=bool(cos < 0.9))
 
 
 def main():
