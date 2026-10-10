@@ -60,16 +60,18 @@ def nb_logprob(count, mean, theta):
 
 
 class GFGv2Core(nn.Module):
-    def __init__(self, genes, dim=8, codes=32, hidden=(256, 512, 512, 256)):
+    def __init__(self, genes, dim=8, codes=32, hidden=(256, 512, 512, 256), shared_rates=False):
         super().__init__()
         self.genes = genes
+        self.shared_rates = shared_rates
         self.manifold_encoder = GFGv2Encoder(dim, hidden, in_ch=2)
         self.velocity_encoder = GFGv2Encoder(dim, hidden, in_ch=3)  # u, s, u-innovation
         self.manifold_codebook = GFGCodebook(codes, dim)
         self.velocity_codebook = GFGCodebook(codes, dim)
         self.decoder = GFGBaseDecoder(dim, hidden)
-        self.log_beta = nn.Parameter(torch.zeros(genes))
-        self.log_gamma = nn.Parameter(torch.zeros(genes))
+        rshape = (1,) if shared_rates else (genes,)
+        self.log_beta = nn.Parameter(torch.zeros(*rshape))
+        self.log_gamma = nn.Parameter(torch.zeros(*rshape))
         self.log_theta_u = nn.Parameter(torch.zeros(genes))
         self.log_theta_s = nn.Parameter(torch.zeros(genes))
 
@@ -109,10 +111,10 @@ class GFGv2Core(nn.Module):
 
 
 class GFGv2(nn.Module):
-    def __init__(self, genes, state_dim=50, dim=8, codes=32, hidden=(256, 512, 512, 256)):
+    def __init__(self, genes, state_dim=50, dim=8, codes=32, hidden=(256, 512, 512, 256), shared_rates=False):
         super().__init__()
         self.genes = genes
-        self.core = GFGv2Core(genes, dim, codes, hidden)
+        self.core = GFGv2Core(genes, dim, codes, hidden, shared_rates=shared_rates)
         for name in ('u_mean', 's_mean'):
             self.register_buffer(name, torch.zeros(genes))
         for name in ('u_std', 's_std'):
@@ -185,6 +187,7 @@ def main():
     ap.add_argument('--codes', type=int, default=32)
     ap.add_argument('--seed', type=int, default=0)
     ap.add_argument('--device', default='cuda')
+    ap.add_argument('--shared-rates', action='store_true')
     ap.add_argument('--output', default='outputs/w2_gfg_v2_unit.json')
     args = ap.parse_args()
     if args.mode == 'unit-test':
@@ -209,7 +212,7 @@ def main():
     gene_us = torch.tensor(np.concatenate([un, sn], 1))
     z = PCA(50, svd_solver='randomized', random_state=0).fit_transform(np.log1p(sn))
     comp = torch.tensor(PCA(50, svd_solver='randomized', random_state=0).fit(sn).components_)
-    model = GFGv2(args.genes, state_dim=50, dim=args.dim, codes=args.codes)
+    model = GFGv2(args.genes, state_dim=50, dim=args.dim, codes=args.codes, shared_rates=args.shared_rates)
     device = torch.device(args.device if (args.device == 'cuda' and torch.cuda.is_available()) else 'cpu')
     model = model.to(device)
     model.prepare(gene_us.to(device), comp.to(device))

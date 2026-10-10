@@ -39,19 +39,37 @@
 
 ## 结论与待办
 
-- **主要目标达成**：GFG v2 **确实读 U**（U 打乱 cos 0.687，远低于当前 GFG 的 0.9998；count-split 稳定 0.98）。这解决了 A1/T2 暴露的"GFG 不读 U"能力缺陷。
-- **未达标**：accept2——v2 的速度方向尚未与稳态 v_kin 对齐（两者都接近 0/负）。可能原因：
-  1. 训练步数/数据不足（仅 pancreas 3000 步，未含 MouseBrain）；
-  2. 速度定义为 vs/(1+s)@comp.T，与 v_kin=(u−γs)@comp.T 的投影口径不同；
-  3. β_g、γ_g 只是"共享速率"约束，JVP 切向投影方向未必落在 u−γs 上。
-- 按 D2 规则，未全过 → 下游仍应用 v_kin；但 v2 的能力补齐是 C 线/动力学先验的前置。
+- **主要目标达成**：GFG v2 **确实读 U**（U 打乱 cos 0.56–0.69，远低于当前 GFG 的 0.9998；count-split 稳定 0.98）。解决了 A1/T2 暴露的"GFG 不读 U"能力缺陷。
+- **未达标**：accept2——v2 的速度方向尚未与稳态 v_kin 对齐（cos≈−0.09）。
+
+### 根因：动力学损失在 free-rate 下不可识别（重要）
+
+进一步诊断（shared β,γ 重训）：
+
+| 量 | 值 |
+|---|---:|
+| corr(vs, β·u − γ·s)（per-gene） | 0.995 |
+| cos(v, fitted_kin=βu−γs) | 0.693 |
+| **cos(fitted_kin, v_kin)** | **−0.033** |
+| **模型 shared γ/β** | **1.338** |
+| **数据稳态 γ_ss（u/s）中位** | **0.008** |
+
+**问题**：`v_s` 是 decoder 沿 velocity-codebook 方向的 JVP 切向，**不是生物的 dS/dt**。损失 `‖v_s − (β·u − γ·s)‖²` 对任意 `v_s` 都能找到 β,γ 拟合（u,s 每基因张成二维），所以 β,γ 反映的是 JVP 方向，不是稳态。shared 情形下拟合出的 γ/β=1.34 与真实 0.008 相差 100+ 倍。**因此 accept2 在当前规格下无法可靠通过——这是设计层面的可识别性缺陷，不是训练不足。**
+
+### 建议的修正（需 Rinck 确认口径）
+
+1. 把 β_g、γ_g **约束到数据稳态**（复用 `FrozenSplicingTransform.gamma` / 尾部分位回归），只学一个全局时间尺度；
+2. 或让 velocity codebook 直接以 **U 创新项 u−E[u|s]** 为切向目标（而非自由 JVP）；
+3. 或在损失里加 **cos(v_s, u−γ_ss·s)** 对齐项。
+
+在此之前，按 D2 规则，下游仍应用 v_kin；v2 的能力补齐（读 U）已成立，可作为 C 线/动力学先验的前置。
 
 ## 命令
 
 ```bash
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 .venv-gpu/bin/python scripts/phase0/w2_gfg_v2.py --mode unit-test
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 .venv-gpu/bin/python scripts/phase0/w2_gfg_v2.py --mode train --steps 3000 --batch 64
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 .venv-gpu/bin/python scripts/phase0/w2_gfg_v2.py --mode accept
+CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 .venv-gpu/bin/python scripts/phase0/w2_gfg_v2.py --mode train --steps 3000 --batch 64 [--shared-rates]
+CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 .venv-gpu/bin/python scripts/phase0/w2_gfg_v2.py --mode accept [--shared-rates]
 ```
 
 产物：`outputs/w2_gfg_v2_unit.json`、`outputs/w2_gfg_v2_accept.json`、`outputs/w2_gfg_v2_pancreas.pt`。
