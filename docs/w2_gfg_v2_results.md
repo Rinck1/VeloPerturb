@@ -51,3 +51,31 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 .venv-gpu/bin/python scripts
 ```
 
 产物：`outputs/w2_gfg_v2_unit.json`、`outputs/w2_gfg_v2_accept.json`、`outputs/w2_gfg_v2_pancreas.pt`。
+
+---
+
+## 下游增量实验：GFG v2 速度在 RENGE 上有没有用
+
+数据：**RENGE day4→day5（留出 TF）**（项目主扰动任务）。在 RENGE 训练源 U/S 上重训 GFG v2（fold 2000 基因，4000 步），三臂端点模型 ridge 预测 day5 位移（static / gfg_v2 / shuffled），另加 v_kin 参照。指标 pseudobulk MSE、energy；条件 bootstrap。
+
+| 臂 | pseudobulk MSE | energy |
+|---|---:|---:|
+| static（无速度） | 0.2285 | 2.1545 |
+| gfg_v2 | 0.2287 | **2.1343** |
+| shuffled | 0.2288 | 2.1382 |
+| v_kin（解析） | **0.2275** | 2.1422 |
+
+| 比较 | 指标 | 增益 [95% CI] | 跨零？ |
+|---|---|---:|---|
+| gfg_v2 vs static | pseudobulk | −0.00022 [−0.00035, −0.00010] | 否（**略负**） |
+| **gfg_v2 vs shuffled** | pseudobulk | +0.00008 [−0.00026, +0.00042] | **是** |
+| gfg_v2 vs static | energy | +0.0202 [+0.0125, +0.0280] | 否（正，但见下） |
+| **gfg_v2 vs shuffled** | energy | +0.0039 [−0.0047, +0.0086] | **是** |
+
+**结论**：
+- **gfg_v2 vs shuffled 两个指标都跨零 → 没有速度特异性增量**。GFG v2 的速度与打乱速度不可区分。
+- gfg_v2 vs static 的 energy 正增益（+0.020）是**分散度效应**（energy 奖励分散度），vs shuffled 后消失 —— 与此前 +0.022 的解读一致。
+- v_kin 的 pseudobulk 略优于 gfg_v2（0.2275 vs 0.2287），两者都与 shuffled 无异。
+
+**综合判断**：GFG v2 修好了"读 U"的能力（D2 3/3），**但下游没有正增量**——与 T1（MeRLin 灵敏阴性）、T3（ΔU 信度 0.06）一致。**工具合格 ≠ 假设成立**：U 里没有可用的额外命运信息，换一个能读 U 的提取器也不会凭空产生增益。
+
