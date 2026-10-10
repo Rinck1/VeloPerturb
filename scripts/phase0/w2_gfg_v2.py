@@ -65,48 +65,38 @@ class GFGv2Core(nn.Module):
         self.genes = genes
         self.shared_rates = shared_rates
         self.manifold_encoder = GFGv2Encoder(dim, hidden, in_ch=2)
-        self.velocity_encoder = GFGv2Encoder(dim, hidden, in_ch=3)  # u, s, u-innovation
         self.manifold_codebook = GFGCodebook(codes, dim)
-        self.velocity_codebook = GFGCodebook(codes, dim)
         self.decoder = GFGBaseDecoder(dim, hidden)
         rshape = (1,) if shared_rates else (genes,)
         self.log_beta = nn.Parameter(torch.zeros(*rshape))
         self.log_gamma = nn.Parameter(torch.zeros(*rshape))
+        # beta fixed to 1 (global time scale is arbitrary); only gamma is learned,
+        # anchored to the data steady-state ratio gamma/beta = mean(u)/mean(s).
+        self.log_beta.requires_grad_(False)
         self.log_theta_u = nn.Parameter(torch.zeros(genes))
         self.log_theta_s = nn.Parameter(torch.zeros(genes))
 
-    def forward(self, u, s, u_mean, u_std, s_mean, s_std, u_innov, *, track=False):
+    def forward(self, u, s, u_mean, u_std, s_mean, s_std, u_innov, gamma_ss, *, track=False):
         build = torch.is_grad_enabled()
-        with torch.enable_grad():
-            un, sn = (u - u_mean) / u_std, (s - s_mean) / s_std
-            inn = u_innov / u_std
-            xs = torch.stack((un, sn), -1)
-            xv = torch.stack((un, sn, inn), -1)
-            zs, ls = self.manifold_codebook(self.manifold_encoder(xs))
-            zv, lv = self.velocity_codebook(self.velocity_encoder(xv))
-            fs, fv = zs.reshape(-1, zs.shape[-1]), zv.reshape(-1, zv.shape[-1])
-            recon, vel = torch.autograd.functional.jvp(
-                self.decoder.net, (fs,), (fv,), create_graph=build)
-            recon, vel = recon.reshape(*u.shape, 2), vel.reshape(*u.shape, 2)
-            mu = F.softplus(recon[..., 0]) * u_std + u_mean
-            ms = F.softplus(recon[..., 1]) * s_std + s_mean
-            vs = vel[..., 1] * s_std            # raw-space ds/dt (tangent projection)
-            vu = vel[..., 0] * u_std
-            theta_u = F.softplus(self.log_theta_u) + 1e-2
-            theta_s = F.softplus(self.log_theta_s) + 1e-2
-            recon_nb = -(nb_logprob(u, mu, theta_u).mean() + nb_logprob(s, ms, theta_s).mean())
-            beta, gamma = self.log_beta.exp(), self.log_gamma.exp()
-            dyn_res = vs - (beta * u - gamma * s)
-            w = 1.0 / (1.0 + u + s)
-            dyn_loss = (w * dyn_res.square()).mean()
-            native = recon_nb + 20.0 * dyn_loss + ls + lv
-        out = dict(native=native, recon_nb=recon_nb.detach(), dyn_loss=dyn_loss.detach(),
-                   vs=vs, vu=vu, mu=mu.detach(), ms=ms.detach())
-        if track:
-            with torch.no_grad():
-                p = (-(zv - zv.mean(0)).square().sum(-1) if False else None)
-                out['code_usage_manifold'] = (ls.detach() - torch.tensor(len(self.manifold_codebook.embedding)).log())
-                out['code_usage_velocity'] = (lv.detach() - torch.tensor(len(self.velocity_codebook.embedding)).log())
+        un, sn = (u - u_mean) / u_std, (s - s_mean) / s_std
+        xs = torch.stack((un, sn), -1)
+        zs, ls = self.manifold_codebook(self.manifold_encoder(xs))
+        fs = zs.reshape(-1, zs.shape[-1])
+        recon = self.decoder.net(fs).reshape(*u.shape, 2)
+        mu = F.softplus(recon[..., 0]) * u_std + u_mean
+        ms = F.softplus(recon[..., 1]) * s_std + s_mean
+        theta_u = F.softplus(self.log_theta_u) + 1e-2
+        theta_s = F.softplus(self.log_theta_s) + 1e-2
+        recon_nb = -(nb_logprob(u, mu, theta_u).mean() + nb_logprob(s, ms, theta_s).mean())
+        # kinetic velocity, NO JVP: v_s = beta_g * u - gamma_g * s
+        beta, gamma = self.log_beta.exp(), self.log_gamma.exp()
+        vs = beta * u - gamma * s
+        vu = torch.zeros_like(vs)
+        # anchor per-gene ratio gamma/beta to the data steady state (u/s)
+        anchor = ((self.log_gamma - self.log_beta) - gamma_ss.log()).square().mean()
+        native = recon_nb + ls + 50.0 * anchor
+        out = dict(native=native, recon_nb=recon_nb.detach(), anchor=anchor.detach(),
+                   vs=vs, vu=vu, mu=mu.detach(), ms=ms.detach(), beta=beta, gamma=gamma)
         return out if build else {k: v.detach() for k, v in out.items()}
 
 
@@ -119,6 +109,7 @@ class GFGv2(nn.Module):
             self.register_buffer(name, torch.zeros(genes))
         for name in ('u_std', 's_std'):
             self.register_buffer(name, torch.ones(genes))
+        self.register_buffer('gamma_ss', torch.ones(genes))
         self.register_buffer('components', torch.zeros(state_dim, genes))
         self.register_buffer('velocity_scale', torch.ones(()))
 
@@ -127,6 +118,8 @@ class GFGv2(nn.Module):
         u, s = gene_us.chunk(2, -1)
         self.u_mean.copy_(u.mean(0)); self.u_std.copy_(u.std(0, unbiased=False).clamp_min(1e-3))
         self.s_mean.copy_(s.mean(0)); self.s_std.copy_(s.std(0, unbiased=False).clamp_min(1e-3))
+        ratio = (u.mean(0) / s.mean(0).clamp_min(1e-3)).clamp_min(1e-4)
+        self.gamma_ss.copy_(ratio)
         self.components.copy_(components)
         proj = (s @ components.T)
         self.velocity_scale.copy_(proj.square().mean().sqrt().clamp_min(1e-6))
@@ -139,40 +132,29 @@ class GFGv2(nn.Module):
     def forward(self, gene_us):
         u, s = gene_us.chunk(2, -1)
         innov = self.innovation(u, s)
-        out = self.core(u, s, self.u_mean, self.u_std, self.s_mean, self.s_std, innov)
+        out = self.core(u, s, self.u_mean, self.u_std, self.s_mean, self.s_std, innov, self.gamma_ss)
         v = (out['vs'] / (1 + s)) @ self.components.T / self.velocity_scale.clamp_min(1e-8)
         return out, v
 
 
 def unit_tests(genes=64, cells=32, dim=8, codes=8, hidden=(64, 64), seed=0):
+    """No-JVP design: velocity is kinetic v = beta*u - gamma*s.
+    Checks: (1) velocity equals beta*u-gamma*s; (2) locally shuffling U changes direction."""
     torch.manual_seed(seed)
     model = GFGv2(genes, state_dim=10, dim=dim, codes=codes, hidden=hidden)
     gene_us = torch.rand(cells, 2 * genes) * 5
     model.prepare(gene_us, torch.randn(10, genes))
+    out, v = model(gene_us)
     u, s = gene_us.chunk(2, -1)
-    innov = model.innovation(u, s)
-    # 1) JVP equals finite difference of the decoder along zv
-    core = model.core
-    un, sn = (u - model.u_mean) / model.u_std, (s - model.s_mean) / model.s_std
-    xs = torch.stack((un, sn), -1); xv = torch.stack((un, sn, innov / model.u_std), -1)
-    with torch.no_grad():
-        zs, _ = core.manifold_codebook(core.manifold_encoder(xs))
-        zv, _ = core.velocity_codebook(core.velocity_encoder(xv))
-    fs, fv = zs.reshape(-1, zs.shape[-1]), zv.reshape(-1, zv.shape[-1])
-    dec = core.decoder.net
-    _, jvp_v = torch.autograd.functional.jvp(dec, (fs,), (fv,), create_graph=False)
-    eps = 1e-4
-    fd = (dec(fs + eps * fv) - dec(fs - eps * fv)) / (2 * eps)
-    jvp_err = float((jvp_v - fd).abs().max())
-
-    # 2) locally shuffling U must change direction
-    out0, v0 = model(gene_us)
+    beta = model.core.log_beta.exp(); gamma = model.core.log_gamma.exp()
+    vs_ref = beta * u - gamma * s
+    kin_err = float((out['vs'] - vs_ref).abs().max())
+    # U-shuffle changes direction
     order = torch.randperm(cells)
-    gene_us_p = gene_us.clone()
-    gene_us_p[:, :genes] = gene_us[order, :genes]
+    gene_us_p = gene_us.clone(); gene_us_p[:, :genes] = gene_us[order, :genes]
     _, v1 = model(gene_us_p)
-    cos = float(F.cosine_similarity(v0, v1, dim=1).median())
-    return dict(jvp_max_abs_err=jvp_err, jvp_ok=bool(jvp_err < 1e-3),
+    cos = float(F.cosine_similarity(v, v1, dim=1).median())
+    return dict(kinetic_vs_max_abs_err=kin_err, kinetic_ok=bool(kin_err < 1e-4),
                 u_shuffle_cos_median=cos, u_shuffle_changes_direction=bool(cos < 0.9))
 
 
@@ -228,7 +210,7 @@ def main():
             opt.zero_grad(); out['native'].backward(); opt.step()
             losses.append(float(out['native']))
             if (step + 1) % 200 == 0:
-                print(f'step {step+1} native={np.mean(losses[-200:]):.4f} recon={float(out["recon_nb"]):.3f} dyn={float(out["dyn_loss"]):.4f}', flush=True)
+                print(f'step {step+1} native={np.mean(losses[-200:]):.4f} recon={float(out["recon_nb"]):.3f} anchor={float(out["anchor"]):.4f}', flush=True)
         torch.save(model.state_dict(), 'outputs/w2_gfg_v2_pancreas.pt')
         print(json.dumps(dict(steps=args.steps, final_native=float(np.mean(losses[-100:])), runtime=time.time() - t0)))
     elif args.mode == 'accept':
