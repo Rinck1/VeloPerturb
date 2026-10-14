@@ -1,0 +1,18 @@
+{
+  "version": "w3_preflight_v1",
+  "seed": 20261014,
+  "replicates": 400,
+  "units_per_replicate": 240,
+  "conditional_bootstrap_simulations": 499,
+  "alpha": 0.05,
+  "null_scenarios": ["linear_null", "heteroscedastic_null"],
+  "positive_scenarios": ["sparse_increment", "mixed_sign_increment"],
+  "null_wilson95_upper_max": 0.10,
+  "power_wilson95_lower_min": 0.80,
+  "iv_replicates": 200,
+  "iv_genes_per_replicate": 2000,
+  "iv_extra_coefficient": 0.5,
+  "iv_mean_coefficient_error_max": 0.06,
+  "iv_self_control_mean_abs_max": 0.06,
+  "interpretation": "synthetic_calibration_only_not_velocity_biological_evidence"
+}
