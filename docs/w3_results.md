@@ -1,5 +1,28 @@
 # W3 结果与执行记录
 
+## 2026-10-14 追加：短时预测 + GFG v2 速度估计器（RENGE day4→day5）
+
+按用户指示：不用原生 GFG，把 GFG v2 作为速度估计器，主攻短时预测。脚本 `scripts/phase0/w3_shorttime_gfgv2.py`（新增，未改 `src/`），输出 `outputs/w3_shorttime_gfgv2_renge.json`。
+
+设置：统一几何 `LogStateProjection`（log1p S PCA）；估计器 `FrozenInnovationControl`（冻结 innovation 斜率、源侧 scope，在 RENGE day4 训练 4000 步，final native 1.69）；U-only 局部打乱用 `local_u_control`（mutual-kNN 配对、S 固定、深度匹配、移动率 0.688、深度比 1.000）；三臂 ridge（同预算）；留出 TF 的 pseudobulk/energy + 条件 bootstrap。
+
+| 臂 | pseudobulk MSE | energy |
+|---|---:|---:|
+| static（z） | 0.5093 | 2.3788 |
+| gfg_v2 | 0.5105 | 2.3666 |
+| shuffled（U-only） | 0.5121 | 2.3627 |
+
+| 比较 | 指标 | 增益 [95% CI] | 跨零？ |
+|---|---|---:|---|
+| gfg_v2 vs static | pseudobulk | −0.00119 [−0.00277, −0.00028] | 否（**略负**） |
+| **gfg_v2 vs shuffled** | pseudobulk | +0.00162 [−0.00170, +0.00660] | **是** |
+| gfg_v2 vs static | energy | +0.01216 [+0.00379, +0.02662] | 否 |
+| **gfg_v2 vs shuffled** | energy | −0.00389 [−0.01014, +0.00268] | **是** |
+
+**结论**：在修正后的 GFG v2 + 正确 U-only 控制下，短时预测**仍无速度特异性增量**（两指标 vs shuffled 都跨零；vs static 的 energy 正增益是分散度效应）。与 W2 下游、T1、T3、W3-6c 一致。
+
+**注**：只 4 个留出条件，条件 bootstrap 功效有限；未做条件 score test（单位不足）。若要把短时线做到最有说服力，应扩到更多条件（如 MeRLin 多条件）或改用 6c 的两阶段 IV 并加强工具变量。
+
 ## 2026 年 10 月 14 日
 
 执行依据：[修订计划](../PLANS/w3_execution_amendment_20261014.md)，科学判断见 [代码审查](velocity_code_review_20261014.md)。
