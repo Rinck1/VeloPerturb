@@ -1,0 +1,23 @@
+{
+  "version": "w3_7_native_target_retrain_v1",
+  "native_root": "/data/yuchang/GFG_graphbatch_directed_v1",
+  "isolated_scvelo": "tools/w3-scvelo",
+  "scvelo_version": "0.3.3",
+  "artifact_root": "/data/yuchang/veloroute_w3_20261014/native_gfg",
+  "reservation": "outputs/veloroute_condition_reservation_20260912/condition_split.csv",
+  "renge_source": "data/renge/processed_release_v1/day4/day4.h5ad",
+  "merlin_root": "/data/yuchang/veloroute_ucheck_20260915",
+  "merlin_source_split": "outputs/w3_6a_source_screen_20261014_v1/frozen_source_directions_00.npz",
+  "minimum_source_s_counts": 100,
+  "count_split_seed": 0,
+  "preprocess_seed": 0,
+  "top_genes": 2000,
+  "training_seeds": [0, 1, 2],
+  "control_seed": 20261014,
+  "local_neighbors": 30,
+  "variants": ["V0_real", "V3_local_U", "V4_global_U", "V7_zero_U"],
+  "training": "native Config defaults: 10 epochs, batch 128, all seven losses, native root fallback and graph batches",
+  "gene_selection_adaptation": "Pass n_top_genes=2000 to native preprocessing; train.py uses None whereas Config declares 2000. Report this adaptation explicitly.",
+  "graph": "Native preprocessing requested neighbors=20; moments defaults may expand to 30. Record actual graph and moment parameters. Freeze S graph and all normalizers across U variants.",
+  "scope": "training-source U sensitivity; downstream heldout prediction requires separate frozen source transform; no biological gain claim from sensitivity alone"
+}

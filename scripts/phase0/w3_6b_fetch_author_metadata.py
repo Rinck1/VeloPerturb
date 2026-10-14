@@ -44,38 +44,38 @@ def metadata_slot(parsed, rdata):
     raise ValueError('No top-level meta.data slot: inspect the author object before adapting')
 
 
-def download(path, status):
+def download(path, status, *, url=URL, expected_bytes=EXPECTED_BYTES):
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists():
-        if path.stat().st_size != EXPECTED_BYTES:
+        if path.stat().st_size != expected_bytes:
             raise ValueError('Existing final artifact has unexpected size; preserving it')
         return
     part = path.with_suffix(path.suffix + '.part')
     offset = part.stat().st_size if part.exists() else 0
-    if offset > EXPECTED_BYTES:
+    if offset > expected_bytes:
         raise ValueError('Partial artifact exceeds expected file length')
-    if shutil.disk_usage(path.parent).free < EXPECTED_BYTES - offset + (1 << 30):
+    if shutil.disk_usage(path.parent).free < expected_bytes - offset + (1 << 30):
         raise ValueError('Need download size plus 1 GiB headroom on data volume')
     for attempt in range(3):
         offset = part.stat().st_size if part.exists() else 0
-        if offset == EXPECTED_BYTES:
+        if offset == expected_bytes:
             part.rename(path); return
         headers = {'User-Agent': 'VeloPerturb-research-metadata/1.0'}
         if offset:
             headers['Range'] = f'bytes={offset}-'
         try:
-            with urlopen(Request(URL, headers=headers), timeout=45) as response:
+            with urlopen(Request(url, headers=headers), timeout=45) as response:
                 if offset and (response.status != 206 or not response.headers.get('Content-Range', '').startswith(f'bytes {offset}-')):
                     raise ValueError('Server did not honor exact resume range; partial file preserved')
                 if not offset and response.status != 200:
                     raise ValueError('Unexpected initial download response')
                 with part.open('ab' if offset else 'xb') as stream:
                     while block := response.read(8 << 20):
-                        if offset + len(block) > EXPECTED_BYTES:
+                        if offset + len(block) > expected_bytes:
                             raise ValueError('Remote file exceeds recorded GEO file size')
                         stream.write(block); offset += len(block)
-                        save_json(status, dict(status='downloading', bytes=offset, expected_bytes=EXPECTED_BYTES))
-            if offset != EXPECTED_BYTES:
+                        save_json(status, dict(status='downloading', bytes=offset, expected_bytes=expected_bytes))
+            if offset != expected_bytes:
                 raise OSError('Incomplete download')
             part.rename(path); return
         except (OSError, TimeoutError):
