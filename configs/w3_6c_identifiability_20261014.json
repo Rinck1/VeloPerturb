@@ -1,0 +1,23 @@
+{
+  "version": "w3_6c_identifiability_v1",
+  "day4": "data/renge/processed_release_v1/day4/day4.h5ad",
+  "day5": "data/renge/processed_release_v1/day5/day5.h5ad",
+  "reservation": "outputs/veloroute_condition_reservation_20260912/condition_split.csv",
+  "expected_train_conditions": 14,
+  "allowed_roles": ["train", "control"],
+  "genes": 2000,
+  "response_genes": 200,
+  "minimum_cells_per_condition": 20,
+  "minimum_gene_detection_in_D": 10,
+  "count_parts": 4,
+  "seeds": [0, 1, 2],
+  "primary_seed": 0,
+  "condition_bootstrap_repetitions": 10000,
+  "self_control_equivalence_margin": 0.10,
+  "nominal_first_stage_f_min": 10.0,
+  "calibration_directory": "outputs/w3_preflight_20261014_v1",
+  "scope": "training_conditions_only_IV_identifiability_audit_not_final_velocity_increment_test",
+  "normalization": "within_modality_full_gene_pseudobulk_log1p_CPM10000; relative_not_absolute_rates",
+  "gene_selection": "independent_D_counts_only; A_U, B_S and C_S are IV inputs",
+  "inference": "condition_bootstrap_descriptive_conditional_on_observed_shared_controls; no_gene_iid_p_values"
+}
