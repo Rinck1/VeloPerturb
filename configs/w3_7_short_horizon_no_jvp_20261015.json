@@ -1,0 +1,18 @@
+{
+  "version": "w3_7_R1_no_jvp_short_horizon_v1",
+  "fold": "outputs/veloroute_real_pipeline_20260912_v2/fold",
+  "gene_input_root": "outputs/veloroute_gfg_inputs_20260914",
+  "reservation": "outputs/veloroute_condition_reservation_20260912/condition_split.csv",
+  "artifact_root": "/data/yuchang/veloroute_w3_20261014/short_horizon_no_jvp",
+  "seeds": [0, 1, 2],
+  "training_steps": 4000,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "ridge_alpha": 10.0,
+  "local_shuffle_neighbors": 10,
+  "bootstrap_repetitions": 10000,
+  "primary_metric": "heldout_TF_day4_to_day5_group_mean_squared_error_in_training_S_PCA50",
+  "arms": ["S_only", "target_retrained_no_JVP_velocity", "same_model_U_shuffled", "target_retrained_kinetic_reference"],
+  "model": "FrozenInnovationControl, a target-fold trained no-JVP velocity head with beta=1 and training-only gamma/innovation",
+  "claim_scope": "heldout_condition_short_horizon_population_mean_prediction; not single-cell fate; validation target opened only after all source-only predictions are hash-frozen"
+}
