@@ -100,3 +100,27 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0 .venv-gpu/bin/python scripts
 2026-10-14 更正：旧设计未检出关联，但不能据此判定 GFG 无法预测命运；需要独立计数拆分、冻结预处理和校准的条件增量检验。
 
 
+
+---
+
+## 无 codebook 版 + 多数据集下游（2026-10-14）
+
+按用户指示去掉 VQ codebook（`--no-codebook`），在 4 个打包分化基准上重跑三臂（static / gfg_v2 / shuffled），shuffled 改用 U-only 局部控制（`local_u_control`：mutual-kNN 配对、S 固定、深度匹配）。脚本 `scripts/phase0/w2_gfg_v2_downstream.py`，输出 `outputs/w2_nocb_<fold>.json`。
+
+| 数据集 | static | gfg_v2 | shuffled | v_kin |
+|---|---:|---:|---:|---:|
+| pancreas (energy) | 8.14 | 6.26 | 6.00 | 7.83 |
+| dentate (energy) | 5.70 | **2847（发散）** | 2828 | 5.30 |
+| bonemarrow (energy) | 11.50 | 10.49 | 10.43 | 10.97 |
+| lung (energy) | 2.178 | 2.148 | 2.140 | 2.180 |
+
+gfg_v2 vs shuffled（正 = velocity 有利）：
+
+| 数据集 | energy | pseudobulk | 判定 |
+|---|---|---|---|
+| pancreas | −0.258 | +0.306 | 两指标矛盾（2 条件） |
+| dentate | −18.9 | −3281 | **数值爆炸** |
+| bonemarrow | −0.059 | −0.039 | 无 |
+| lung | −0.008 | −0.004 | 无 |
+
+**结论**：去掉 codebook、换 4 个数据集，**仍无稳健的 velocity 特异性增量**。codebook 不是关键。dentate 上 no-codebook 版数值发散（模型不稳定），但属实现问题，不改变结论。

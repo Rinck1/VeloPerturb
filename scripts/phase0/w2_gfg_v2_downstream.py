@@ -22,6 +22,8 @@ sys.path.insert(0, '/home/yuchang/wangjiaxuan/src')
 from veloroute.gfg_experiments import read_gene_input
 from veloroute.latent import FrozenSplicingTransform, load_pack, normalized_counts
 from veloroute.probes import permute_local
+sys.path.insert(0, '/home/yuchang/wangjiaxuan/scripts/phase0')
+from w3_validation import local_u_control
 from sklearn.linear_model import Ridge
 from sklearn.neighbors import NearestNeighbors
 from scipy.spatial.distance import cdist
@@ -72,6 +74,7 @@ def main():
     ap.add_argument('--batch', type=int, default=64)
     ap.add_argument('--seed', type=int, default=0)
     ap.add_argument('--device', default='cuda')
+    ap.add_argument('--no-codebook', action='store_true')
     ap.add_argument('--output', default='outputs/w2_gfg_v2_downstream_renge.json')
     args = ap.parse_args()
     t0 = time.time()
@@ -91,7 +94,7 @@ def main():
 
     gu_tr = torch.tensor(vtr_vals, dtype=torch.float32)
     gu_va = torch.tensor(vva_vals, dtype=torch.float32)
-    model = g2.GFGv2(ngenes, state_dim=comp.shape[0], dim=8, codes=32).to(device)
+    model = g2.GFGv2(ngenes, state_dim=comp.shape[0], dim=8, codes=32, no_codebook=args.no_codebook).to(device)
     model.prepare(gu_tr.to(device), comp.to(device))
     torch.manual_seed(args.seed)
     opt = torch.optim.Adam(model.parameters(), lr=1e-3)
@@ -123,9 +126,9 @@ def main():
         return (np.where(gam > 0, u - s * gam, 0.0) @ transform.components.T) / transform.velocity_scale
     vk_tr = vkin(vtr_vals.astype(np.float64)); vk_va = vkin(vva_vals.astype(np.float64))
     # shuffled: shuffle U within condition/depth/z blocks, recompute GFG v2
-    shuf_tr = permute_local(gu_tr.numpy(), train, seed=args.seed, neighbors=10)[0]
-    shuf_va = permute_local(gu_va.numpy(), val, seed=args.seed, neighbors=10)[0]
-    v_sh_tr = predict_v(torch.tensor(shuf_tr)); v_sh_va = predict_v(torch.tensor(shuf_va))
+    shuf_tr, _, _ = local_u_control(vtr_vals.astype(np.float64), train['z'], train['conditions'], seed=args.seed, neighbors=10)
+    shuf_va, _, _ = local_u_control(vva_vals.astype(np.float64), val['z'], val['conditions'], seed=args.seed, neighbors=10)
+    v_sh_tr = predict_v(torch.tensor(shuf_tr, dtype=torch.float32)); v_sh_va = predict_v(torch.tensor(shuf_va, dtype=torch.float32))
 
     disp = nn_displacement(train, train_t)
 

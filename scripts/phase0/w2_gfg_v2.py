@@ -60,12 +60,13 @@ def nb_logprob(count, mean, theta):
 
 
 class GFGv2Core(nn.Module):
-    def __init__(self, genes, dim=8, codes=32, hidden=(256, 512, 512, 256), shared_rates=False):
+    def __init__(self, genes, dim=8, codes=32, hidden=(256, 512, 512, 256), shared_rates=False, no_codebook=False):
         super().__init__()
         self.genes = genes
         self.shared_rates = shared_rates
+        self.no_codebook = no_codebook
         self.manifold_encoder = GFGv2Encoder(dim, hidden, in_ch=2)
-        self.manifold_codebook = GFGCodebook(codes, dim)
+        self.manifold_codebook = None if no_codebook else GFGCodebook(codes, dim)
         self.decoder = GFGBaseDecoder(dim, hidden)
         rshape = (1,) if shared_rates else (genes,)
         self.log_beta = nn.Parameter(torch.zeros(*rshape))
@@ -83,7 +84,11 @@ class GFGv2Core(nn.Module):
         un, sn = (u - u_mean) / u_std, (s - s_mean) / s_std
         inn = u_innov / u_std
         xs = torch.stack((un, sn), -1)
-        zs, ls = self.manifold_codebook(self.manifold_encoder(xs))
+        enc = self.manifold_encoder(xs)
+        if self.manifold_codebook is None:
+            zs, ls = enc, enc.new_zeros(())
+        else:
+            zs, ls = self.manifold_codebook(enc)
         fs = zs.reshape(-1, zs.shape[-1])
         recon = self.decoder.net(fs).reshape(*u.shape, 2)
         mu = F.softplus(recon[..., 0]) * u_std + u_mean
@@ -107,10 +112,10 @@ class GFGv2Core(nn.Module):
 
 
 class GFGv2(nn.Module):
-    def __init__(self, genes, state_dim=50, dim=8, codes=32, hidden=(256, 512, 512, 256), shared_rates=False):
+    def __init__(self, genes, state_dim=50, dim=8, codes=32, hidden=(256, 512, 512, 256), shared_rates=False, no_codebook=False):
         super().__init__()
         self.genes = genes
-        self.core = GFGv2Core(genes, dim, codes, hidden, shared_rates=shared_rates)
+        self.core = GFGv2Core(genes, dim, codes, hidden, shared_rates=shared_rates, no_codebook=no_codebook)
         for name in ('u_mean', 's_mean'):
             self.register_buffer(name, torch.zeros(genes))
         for name in ('u_std', 's_std'):
@@ -172,6 +177,7 @@ def main():
     ap.add_argument('--seed', type=int, default=0)
     ap.add_argument('--device', default='cuda')
     ap.add_argument('--shared-rates', action='store_true')
+    ap.add_argument('--no-codebook', action='store_true')
     ap.add_argument('--output', default='outputs/w2_gfg_v2_unit.json')
     args = ap.parse_args()
     if args.mode == 'unit-test':
@@ -196,7 +202,7 @@ def main():
     gene_us = torch.tensor(np.concatenate([un, sn], 1))
     z = PCA(50, svd_solver='randomized', random_state=0).fit_transform(np.log1p(sn))
     comp = torch.tensor(PCA(50, svd_solver='randomized', random_state=0).fit(sn).components_)
-    model = GFGv2(args.genes, state_dim=50, dim=args.dim, codes=args.codes, shared_rates=args.shared_rates)
+    model = GFGv2(args.genes, state_dim=50, dim=args.dim, codes=args.codes, shared_rates=args.shared_rates, no_codebook=args.no_codebook)
     device = torch.device(args.device if (args.device == 'cuda' and torch.cuda.is_available()) else 'cpu')
     model = model.to(device)
     model.prepare(gene_us.to(device), comp.to(device))
