@@ -8,7 +8,7 @@
 
 - **W8长训已全部完成。** K4 velocity能量12000/24000/36000步为0.613433/0.609668/0.606211；K8/12000更好，为0.603696，相对同预算static改善3.043%、相对全局平移4.953%，与W7网格最优static相比仍低1.999%。因此新容量实验统一K8，不再把K4推荐视为最终结论。见 `docs/w8_router_longtrain_results.md`、`outputs/w8_scifate2_router_longtrain_v1/report/`。旧W8 GPU作业全部正常结束。
 
-- **W9严格审计已通过17项CPU测试，GPU实测后正式四卡开训。** 约18.52M实际可训练的短时残差容量版，不恢复旧GFG/JVP/EM/ODE。修正原mini-batch中心化与推理不同、训练经验V-statistic有限batch偏差：改完整源群体可微中心化＋源抽样U-statistic；小K8/76,248参数按相同新目标一起跑。小/大×static/velocity×3seed共12次训练，12000步，保存1000/4000/12000。审计详见 `PLANS/w9_large_model_mathematical_audit.md`，代码 `scripts/phase0/w9_population_router.py`、`w9_large_training.py`。实际GPU状态以新产物为准。
+- **W9审计通过并已在四卡正式训练。** 17项CPU测试＋45步真实CUDA通过，约18.52M全部可训练的短时残差容量版，不恢复旧GFG/JVP/EM/ODE。完整源群体可微中心化＋源抽样U-statistic；小K8/76,248参数按相同新目标一起跑，不能用旧小版归因容量。小/大×static/velocity×3seed共12次训练，12000步，保存1000/4000/12000与最新Adam/RNG。GPU实测约0.0203秒/步、峰值张量显存1.14GB，均值误差2.07e−6；正式四卡首轮step600–1000已确认非零梯度、均值误差1e−6。GPU0有无关既有作业并行未终止，4–7未用。新根 `outputs/w9_scifate2_large_audited_v1/`，日志 `outputs/w9_scifate2_large_jobs_v1/`。审计报告 `docs/w9_large_model_audit.md`；尚无大版性能结论。
 
 - **W7预测视野先完成**：冻结W6 K4/4000步模型，不重训，六个5/10/15h窗口的velocity router均优于静态router；固定05h起点分别改善1.039%/1.136%/0.818%，15h仍为正，尚未观察到消失边界。该旧4000步配置的10/15h起点仍未超过全局平移。见 `docs/w7_router_horizon_results.md`、`outputs/w7_scifate2_router_horizons_v1/`。容量扩展也已完成，与本组预测分开报告。
 
