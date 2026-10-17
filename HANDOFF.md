@@ -14,7 +14,8 @@
 - `PLANS/w4_shorttime_prereg.md` 已于提交 **896e99755faf95ca3544a4dceefe92946098bf78** 冻结；正式锁在 `outputs/w4_protocol_lock_v1/protocol_lock.json`。正式 **32 折已全部预测并评估**：H1 未通过，vel_pool vs static 为 TF 等权增益 0.70%，CI [−0.005%,1.448%]，p=0.0583；vs Uswap 也未通过。H7 直接 U vs static 为 **1.82%**，CI [0.99%,2.73%]，p=0.000504，说明相对当前 S-PCA 基线有 U 特征增量，但不是 velocity/router 阳性。16 TF 纯合成完整设计校准已完成：三个相关设定的正例检出200/200，零情形误报1%/0.5%/1%，仅为预设低维模拟，不是实际 RENGE 的功效。
 - scNT-seq **已完成分钟级首轮**：在 `659d76e2063a0daae9ce77de4d7005f420dc267d` 冻结协议/配置；0分钟拟合源变换，15→30校准，测试30→60/60→120。velocity 非负尺度归零，主描述判据未通过。后验基线场中心化后 pooled 方向cos为 +0.379/+0.329，仅是探索线索；2000 HVG中1025个尾部γ为0（291个基线完全无U，734个U仅出现在尾部之外）。见 `docs/w5_scntseq_results.md`、`outputs/w5_scntseq_evaluation_v1/`、`outputs/w5_scntseq_direction_audit_v1/`。该系列全部时点已读，后续改版只能称探索。W4+W5共61项测试通过。
 - **scNT-seq 修复v2已完成**（用户要求解决问题）：代码/固定配置提交 `42f3958`，67臂全部跑完。预定候选用群体正则γ、扣基线、双列正则读出和有限视野；相对identity在30→60/60→120分别改善 **8.04%/9.32%**，相对S-only状态读出额外改善4.10%/5.99%。γ零值从1025→0，但291基因为先验支持，不是实测速率；主要性能收益来自扣基线和有限视野，旧γ对应模型略好。更强机制对照中非线性S-only较差，U驱动项不减γS略好，仅保留U总量的对照平均MSE也很强，故**净velocity和逐基因U特异性仍未建立**。见 `docs/w5_scntseq_repair_results.md`、`outputs/w5_scntseq_repair_evaluation_v2/`、`outputs/w5_scntseq_repair_mechanism_v2/`。全套68项测试通过；v1/RENGE H1均未改变，v2不是独立确认。
-- sci-fate total/new 已下载并对齐，缺基因级 S/U，生物学效应仍未读取；MIX-seq raw 尚未核实。详见 `docs/w4_external_data_audit.md`。
+- **U总量/组成归因已完成**：固定设计 `ded2048`，20臂全部报告。原pooling固定U总量后降幅从8.04%/9.32%降至4.17%/6.37%；去当前组成则13.71%/1.32%，阶段作用不同。等细胞聚合完整字段仍改善11.10%/4.20%，不完全依赖深文库权重；基线组成+基线总量（不读当前U）也改善7.47%/2.57%，说明更强非线性S对照必需。净velocity特异性仍未建立。见 `docs/w5_scntseq_U_attribution_results.md`；相关测试71项通过。
+- sci-fate total/new 已下载并对齐，缺基因级 S/U，生物学效应仍未读取；MIX-seq raw 尚未核实。新增 **sci-FATE2 GSE236512**，官方已有1.31GB S/U发布文件、三个日级重复和第四条小时级系列；本轮已启动技术落地，不训练模型，真实时间标签05h等与GEO名义D3.2等须对齐。下载job为 `outputs/w5_scifate2_download_job_v1/`；兼容读取验收job为 `outputs/w5_scifate2_inspection_job_v2/`，最终技术摘要等 `outputs/w5_scifate2_technical_v2/summary.json`；初版元数据import错误及衔接说明见 `docs/w5_scifate2_data_audit.md`。目前全套74项测试通过；历史数据审计见 `docs/w4_external_data_audit.md`。
 - MeRLin Day0 已有源侧数据审查（247 克隆、3785 细胞），不能再写“等待取得 Day0”。但 Day0→Day21 构成预测仍受源目标克隆映射/小类样本不足限制；原五类协议不是现成可运行的短时任务。
 - 只用物理 GPU0–3；当前线性预测/数据处理以 CPU 为主。新 W4 代码在 `scripts/phase0/w4_*.py`，不修改旧 `src/` 或覆盖旧结果。
 
@@ -44,7 +45,7 @@
 | 核心设计 | static / vel_pool / vel_pool_Uswap 为 H1 三臂，另有 vel_mean / direct_U_pool / pseudo_S |
 | 当前观察 | 正式 H1 未通过；H7 直接 U 相对当前静态有 1.82% TF 等权增益；开发 2.3% 不是正式成功 |
 | 机制线索 | 原生 GFG 输出方向对 U 较不敏感；直接 U 与解析速度的下游贡献需分开验证 |
-| 下一步 | v2已有探索性预测改善；优先分离U总量/深度与基因组成、做独立系列复现。净速度特异性未建立，不急着启用router |
+| 下一步 | U总量/组成/文库权重归因已跑完；取得sci-FATE2真S/U并核对时间/重复，带强S-only和U驱动对照做独立复制，不在旧两区间追分；router暂关 |
 
 ---
 

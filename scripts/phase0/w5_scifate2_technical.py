@@ -30,7 +30,8 @@ def bounded_copy(source, target, *, limit, deadline, progress=None):
 
 def inspect_schema(path):
     import h5py
-    from anndata.io import read_elem
+    # Same compatible reader as w4_shorttime in the pinned AnnData environment.
+    from anndata._io.specs import read_elem
     with h5py.File(path,'r') as handle:
         obs,var = read_elem(handle['obs']),read_elem(handle['var'])
         expected = (len(obs),len(var))
@@ -53,6 +54,48 @@ def inspect_schema(path):
         biological_effects_read=False,ready_for_model_training=False,
         nominal_times_require_protocol_and_author_metadata_reconciliation=True)
     return result,cohorts
+
+
+def inspect_existing(config_path,output):
+    """Retry a metadata-only stage without replacing a CRC-verified download."""
+    config = json.loads(Path(config_path).read_text())
+    if config['prediction_or_response_analysis'] or config['kind'] != 'scifate2_public_SU_technical_only':
+        raise ValueError('Technical-only contract required')
+    compressed = (ROOT/config['data_root']/config['filename']).resolve()
+    expanded = compressed.with_suffix('')
+    if not compressed.is_relative_to(ROOT/'data/scifate2') or not expanded.is_file():
+        raise ValueError('An explicit existing sci-FATE2 release is required')
+    if compressed.stat().st_size != config['expected_bytes'] or expanded.stat().st_size > config['maximum_expanded_bytes']:
+        raise ValueError('Existing release exceeds registered bounds')
+    run = Artifacts(output,seed=None,inputs=[Path(config_path),Path(__file__),compressed,expanded])
+    schema,cohorts = inspect_schema(expanded)
+    if cohorts is not None:cohorts.to_csv(run.directory/'technical_cohorts.csv',index=False)
+    result = dict(status='S_U_SCHEMA_METADATA_READY_COUNTS_UNCHECKED',**schema,
+        compressed_path=str(compressed),compressed_bytes=compressed.stat().st_size,
+        compressed_sha256=sha256(compressed),data_path=str(expanded),
+        data_bytes=expanded.stat().st_size,data_sha256=sha256(expanded),
+        existing_release_used_readonly=True)
+    run.json('summary.json',result)
+    (run.directory/'RESULTS.md').write_text('# sci-FATE2 S/U technical metadata\n\n'
+        'Existing release inspected read-only; no expression effects computed.\n\n'+json.dumps(result,indent=2)+'\n')
+    run.json('status.json',dict(status='complete'))
+    print(json.dumps(result),flush=True)
+
+
+def wait_for_acquisition(job,timeout):
+    job = (ROOT/job).resolve()
+    if not job.is_relative_to(ROOT/'outputs') or not (job/'job.json').is_file():
+        raise ValueError('An existing project acquisition job is required')
+    command = json.loads((job/'job.json').read_text())['command']
+    if len(command) < 2 or Path(command[1]).resolve() != Path(__file__).resolve():
+        raise ValueError('Not a sci-FATE2 technical acquisition job')
+    deadline = time.monotonic()+timeout
+    while time.monotonic() < deadline:
+        path = job/'status.json'
+        if path.exists() and json.loads(path.read_text())['status'] in ('complete','failed'):
+            return
+        time.sleep(15)
+    raise TimeoutError('Acquisition has not reached a terminal status')
 
 
 def acquire(config_path,output):
@@ -122,4 +165,11 @@ def acquire(config_path,output):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser();parser.add_argument('--config',default='configs/w5_scifate2_technical_v1.json')
-    parser.add_argument('--output',required=True);args = parser.parse_args();acquire(args.config,args.output)
+    parser.add_argument('--output',required=True);parser.add_argument('--inspect-only',action='store_true')
+    parser.add_argument('--after-job',help='Wait for this existing acquisition job before read-only inspection')
+    args = parser.parse_args()
+    if args.after_job:
+        if not args.inspect_only:parser.error('--after-job is for metadata-only inspection')
+        wait_for_acquisition(args.after_job,7200)
+    if args.inspect_only:inspect_existing(args.config,args.output)
+    else:acquire(args.config,args.output)

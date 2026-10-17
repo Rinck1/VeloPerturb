@@ -84,4 +84,4 @@
 - [67臂完整结果](../outputs/w5_scntseq_repair_evaluation_v2/RESULTS.md)、[全部指标](../outputs/w5_scntseq_repair_evaluation_v2/metrics.csv)、[机制对照](../outputs/w5_scntseq_repair_mechanism_v2/RESULTS.md)。
 - 全部 W4/W5 测试 **68/68** 通过，记录 `outputs/w5_all_verification_v4/pytest.xml`。
 - 模型、参数、预测、估计支持度及代码快照均保存本地，未向 GitHub 上传本次研究产物。
-- 下一步优先验证 U总量/测序深度与基因组成各自的贡献，以及独立时间系列上的复现；不在已观察的两个区间继续调超参追高分。
+- 后续20臂U总量/组成/文库权重归因已完成：见 `w5_scntseq_U_attribution_results.md`。收益有明显阶段依赖，强非线性S对照可以解释部分，不能简单归为净velocity。下一步转独立时间系列复现，不在已观察的两个区间继续调超参追高分。

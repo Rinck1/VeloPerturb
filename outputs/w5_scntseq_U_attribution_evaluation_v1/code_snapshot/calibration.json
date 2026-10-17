@@ -1,0 +1,431 @@
+{
+  "git_commit": "ded2048e8717d2db745f19e1ae01211d544889b0",
+  "seed": 20261017,
+  "command": [
+    "scripts/phase0/w5_scntseq_U_attribution.py",
+    "predict",
+    "--output",
+    "outputs/w5_scntseq_U_attribution_predictions_v1"
+  ],
+  "data_hashes": {
+    "configs/w5_scntseq_U_attribution_v1.json": "50c1bcd496d22dc16cef827b58ced6783fb993cbde328f554fb9724132e4a922",
+    "/home/yuchang/wangjiaxuan/PLANS/w5_scntseq_U_attribution_v1.md": "a3b7d4f3b6e73d153f0f40a26ccc5b2eb01fa13515daa28045de73a2f26012a5",
+    "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_geo_labeling_dynamo_su_exact.h5ad": "208cc0b266d5a6d5bfbb18834f9f153402a7a3c93aaa9c9e4c27e29c96cefbd1",
+    "/home/yuchang/wangjiaxuan/outputs/w5_scntseq_predictions_v1/source_transform.npz": "0191a128e13c188bdd67cce62326e9a3b9d9c54f239169b824a48b3cc3139b4b",
+    "/home/yuchang/wangjiaxuan/outputs/w5_scntseq_repair_predictions_v2/prediction_manifest.json": "d617030bf4431ebdfe9ecdca99561b5050974190b7c7b76584c4db3ecfc49efb",
+    "/home/yuchang/wangjiaxuan/outputs/w5_scntseq_repair_predictions_v2/gamma_estimates.npz": "0953cbde69d68ff3e86f3fb333713140a18f7f7e78b33776848ac52892a67dc9",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_U_attribution.py": "d6aa41f978f2329a3282dcc645e245ae6ebc58f62eb6a5e41c2ff06039da3c68",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_repair.py": "b0eaeaf6ad5ea00b83beb0e65136ca6af6e93b4c90035c6774d585aa6d97d525",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_minutes.py": "4f2ee06232d6ba90d95339c18a7b7a092c3093068b7900ffbf45e2e343d4a807",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 3.0779466666281223,
+  "interval": [
+    15,
+    30
+  ],
+  "models": {
+    "depth_weighted__composition_current__total_current__velocity": {
+      "aggregation": "depth_weighted",
+      "composition": "current",
+      "total": "current",
+      "field": "velocity"
+    },
+    "depth_weighted__composition_current__total_current__U_derivative": {
+      "aggregation": "depth_weighted",
+      "composition": "current",
+      "total": "current",
+      "field": "U_derivative"
+    },
+    "depth_weighted__composition_current__total_baseline__velocity": {
+      "aggregation": "depth_weighted",
+      "composition": "current",
+      "total": "baseline",
+      "field": "velocity"
+    },
+    "depth_weighted__composition_current__total_baseline__U_derivative": {
+      "aggregation": "depth_weighted",
+      "composition": "current",
+      "total": "baseline",
+      "field": "U_derivative"
+    },
+    "depth_weighted__composition_baseline__total_current__velocity": {
+      "aggregation": "depth_weighted",
+      "composition": "baseline",
+      "total": "current",
+      "field": "velocity"
+    },
+    "depth_weighted__composition_baseline__total_current__U_derivative": {
+      "aggregation": "depth_weighted",
+      "composition": "baseline",
+      "total": "current",
+      "field": "U_derivative"
+    },
+    "depth_weighted__composition_baseline__total_baseline__velocity": {
+      "aggregation": "depth_weighted",
+      "composition": "baseline",
+      "total": "baseline",
+      "field": "velocity"
+    },
+    "depth_weighted__composition_baseline__total_baseline__U_derivative": {
+      "aggregation": "depth_weighted",
+      "composition": "baseline",
+      "total": "baseline",
+      "field": "U_derivative"
+    },
+    "equal_cell__composition_current__total_current__velocity": {
+      "aggregation": "equal_cell",
+      "composition": "current",
+      "total": "current",
+      "field": "velocity"
+    },
+    "equal_cell__composition_current__total_current__U_derivative": {
+      "aggregation": "equal_cell",
+      "composition": "current",
+      "total": "current",
+      "field": "U_derivative"
+    },
+    "equal_cell__composition_current__total_baseline__velocity": {
+      "aggregation": "equal_cell",
+      "composition": "current",
+      "total": "baseline",
+      "field": "velocity"
+    },
+    "equal_cell__composition_current__total_baseline__U_derivative": {
+      "aggregation": "equal_cell",
+      "composition": "current",
+      "total": "baseline",
+      "field": "U_derivative"
+    },
+    "equal_cell__composition_baseline__total_current__velocity": {
+      "aggregation": "equal_cell",
+      "composition": "baseline",
+      "total": "current",
+      "field": "velocity"
+    },
+    "equal_cell__composition_baseline__total_current__U_derivative": {
+      "aggregation": "equal_cell",
+      "composition": "baseline",
+      "total": "current",
+      "field": "U_derivative"
+    },
+    "equal_cell__composition_baseline__total_baseline__velocity": {
+      "aggregation": "equal_cell",
+      "composition": "baseline",
+      "total": "baseline",
+      "field": "velocity"
+    },
+    "equal_cell__composition_baseline__total_baseline__U_derivative": {
+      "aggregation": "equal_cell",
+      "composition": "baseline",
+      "total": "baseline",
+      "field": "U_derivative"
+    },
+    "depth_weighted__S_kinetic": {
+      "aggregation": "depth_weighted",
+      "composition": "baseline",
+      "total": "baseline",
+      "field": "S_kinetic"
+    },
+    "equal_cell__S_kinetic": {
+      "aggregation": "equal_cell",
+      "composition": "baseline",
+      "total": "baseline",
+      "field": "S_kinetic"
+    }
+  },
+  "fits": {
+    "depth_weighted__composition_current__total_current__velocity": {
+      "coefficients": [
+        -0.006506924093048319,
+        0.03850334725352838
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.23820782854257955
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "depth_weighted__composition_current__total_current__U_derivative": {
+      "coefficients": [
+        -0.006693346472881205,
+        0.05171405145242505
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.2022088689807193
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "depth_weighted__composition_current__total_baseline__velocity": {
+      "coefficients": [
+        -0.006885273786163474,
+        0.015026445609738929
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.2241992378043131
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "depth_weighted__composition_current__total_baseline__U_derivative": {
+      "coefficients": [
+        -0.006993120486528532,
+        0.018723927549499347
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.1931010004477402
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "depth_weighted__composition_baseline__total_current__velocity": {
+      "coefficients": [
+        -0.0050879148848293615,
+        0.06091978063730078
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.2163146858720373
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "depth_weighted__composition_baseline__total_current__U_derivative": {
+      "coefficients": [
+        -0.004631019151525289,
+        0.09651346017168454
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.1700156975653551
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "depth_weighted__composition_baseline__total_baseline__velocity": {
+      "coefficients": [
+        -0.006035250752795286,
+        0.039075265203982405
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.183754978590999
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "depth_weighted__composition_baseline__total_baseline__U_derivative": {
+      "coefficients": [
+        -0.00582277177733137,
+        0.06699896244095212
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.13681389321733584
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "equal_cell__composition_current__total_current__velocity": {
+      "coefficients": [
+        -0.005768342799240093,
+        0.08665568402520289
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.20176820897071504
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "equal_cell__composition_current__total_current__U_derivative": {
+      "coefficients": [
+        -0.0059798159362331295,
+        0.11552778726710364
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.16795008563268693
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "equal_cell__composition_current__total_baseline__velocity": {
+      "coefficients": [
+        -0.006877403929541945,
+        0.037099351683105165
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.18508329402916798
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "equal_cell__composition_current__total_baseline__U_derivative": {
+      "coefficients": [
+        -0.007085257315964188,
+        0.041239638274397174
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.15816309446424487
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "equal_cell__composition_baseline__total_current__velocity": {
+      "coefficients": [
+        -0.003952276716911946,
+        0.0974866912598551
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.2063937042407566
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "equal_cell__composition_baseline__total_current__U_derivative": {
+      "coefficients": [
+        -0.003334930659128837,
+        0.14172037066391718
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.1661556658786725
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "equal_cell__composition_baseline__total_baseline__velocity": {
+      "coefficients": [
+        -0.005641229007040421,
+        0.06730032088458085
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.15998827018663112
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "equal_cell__composition_baseline__total_baseline__U_derivative": {
+      "coefficients": [
+        -0.005441449993619242,
+        0.1063687723642258
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.11746478612684855
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "depth_weighted__S_kinetic": {
+      "coefficients": [
+        -0.006764522890797603,
+        0.027070879806366813
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.047492819165894054
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "equal_cell__S_kinetic": {
+      "coefficients": [
+        -0.006220655211928959,
+        0.13806680551346065
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.04291063711640799
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    }
+  }
+}

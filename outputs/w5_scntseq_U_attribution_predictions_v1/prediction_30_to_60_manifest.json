@@ -1,0 +1,30 @@
+{
+  "git_commit": "ded2048e8717d2db745f19e1ae01211d544889b0",
+  "seed": 20261017,
+  "command": [
+    "scripts/phase0/w5_scntseq_U_attribution.py",
+    "predict",
+    "--output",
+    "outputs/w5_scntseq_U_attribution_predictions_v1"
+  ],
+  "data_hashes": {
+    "configs/w5_scntseq_U_attribution_v1.json": "50c1bcd496d22dc16cef827b58ced6783fb993cbde328f554fb9724132e4a922",
+    "/home/yuchang/wangjiaxuan/PLANS/w5_scntseq_U_attribution_v1.md": "a3b7d4f3b6e73d153f0f40a26ccc5b2eb01fa13515daa28045de73a2f26012a5",
+    "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_geo_labeling_dynamo_su_exact.h5ad": "208cc0b266d5a6d5bfbb18834f9f153402a7a3c93aaa9c9e4c27e29c96cefbd1",
+    "/home/yuchang/wangjiaxuan/outputs/w5_scntseq_predictions_v1/source_transform.npz": "0191a128e13c188bdd67cce62326e9a3b9d9c54f239169b824a48b3cc3139b4b",
+    "/home/yuchang/wangjiaxuan/outputs/w5_scntseq_repair_predictions_v2/prediction_manifest.json": "d617030bf4431ebdfe9ecdca99561b5050974190b7c7b76584c4db3ecfc49efb",
+    "/home/yuchang/wangjiaxuan/outputs/w5_scntseq_repair_predictions_v2/gamma_estimates.npz": "0953cbde69d68ff3e86f3fb333713140a18f7f7e78b33776848ac52892a67dc9",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_U_attribution.py": "d6aa41f978f2329a3282dcc645e245ae6ebc58f62eb6a5e41c2ff06039da3c68",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_repair.py": "b0eaeaf6ad5ea00b83beb0e65136ca6af6e93b4c90035c6774d585aa6d97d525",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_minutes.py": "4f2ee06232d6ba90d95339c18a7b7a092c3093068b7900ffbf45e2e343d4a807",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 3.082563638687134,
+  "status": "INTERVAL_PREDICTION_FROZEN",
+  "future_target_used": false,
+  "prediction_sha256": "801f6892dac2f9b4fa3a09ebe6d28b971158c43f0267455d3ffd9259f10c5ce0"
+}

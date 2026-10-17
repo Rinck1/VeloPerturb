@@ -11,6 +11,7 @@ from scipy import sparse
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts/phase0'))
 from w5_scifate2_technical import bounded_copy,inspect_schema
+from w5_scifate2_technical import inspect_existing
 
 
 def test_download_copy_enforces_byte_and_time_bounds():
@@ -33,3 +34,11 @@ def test_technical_schema_requires_actual_SU_and_only_groups_metadata(tmp_path):
     del data.layers['unspliced'];data.layers['new'] = data.X.copy()
     path2 = tmp_path/'new_not_U.h5ad';data.write_h5ad(path2)
     with pytest.raises(ValueError):inspect_schema(path2)
+
+
+def test_existing_inspection_does_not_accept_a_different_modality_contract(tmp_path):
+    import json
+    path = tmp_path/'contract.json'
+    path.write_text(json.dumps(dict(prediction_or_response_analysis=True,kind='scifate2_public_SU_technical_only')))
+    with pytest.raises(ValueError):inspect_existing(path,tmp_path/'unused')
+    assert not (tmp_path/'unused').exists()

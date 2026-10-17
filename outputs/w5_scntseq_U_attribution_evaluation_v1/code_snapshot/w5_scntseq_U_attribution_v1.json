@@ -1,0 +1,17 @@
+{
+  "kind": "exploratory_scntseq_U_factorial_attribution",
+  "repair_predictions": "outputs/w5_scntseq_repair_predictions_v2",
+  "protocol_path": "PLANS/w5_scntseq_U_attribution_v1.md",
+  "aggregations": ["depth_weighted", "equal_cell"],
+  "compositions": ["current", "baseline"],
+  "totals": ["current", "baseline"],
+  "fields": ["velocity", "U_derivative"],
+  "calibration_interval": [15, 30],
+  "test_intervals": [[30, 60], [60, 120]],
+  "readout_ridge": 1.0,
+  "time_kernel": "decay",
+  "seed": 20261017,
+  "previously_scored_series": true,
+  "router_enabled": false,
+  "gfg_jvp_enabled": false
+}
