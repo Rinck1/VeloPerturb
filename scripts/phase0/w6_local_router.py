@@ -81,7 +81,7 @@ class LocalResponseRouter(nn.Module):
         return positions,q,raw
 
 
-def fit_local(groups,normalization,config,*,arm,seed,device,progress=None):
+def fit_local(groups,normalization,config,*,arm,seed,device,progress=None,checkpoint=None):
     model = LocalResponseRouter(**normalization,config=config,arm=arm,seed=seed).to(device)
     optimizer = torch.optim.AdamW(model.parameters(),lr=config['learning_rate'],weight_decay=config['weight_decay'])
     tensors = [{key:torch.as_tensor(group[key],dtype=torch.float32,device=device)
@@ -105,6 +105,8 @@ def fit_local(groups,normalization,config,*,arm,seed,device,progress=None):
                 route_entropy=float(entropy.detach()),mode_usage=usage.detach().cpu().tolist())
             history.append(row)
             if progress:progress(row)
+        if checkpoint and step+1 in config.get('checkpoint_steps',[]):
+            checkpoint(step+1,model)
     model.eval()
     return model,dict(history=history,parameters=sum(p.numel() for p in model.parameters()),
         arm=arm,modes=model.modes,preserved_mean=True,velocity_consumers=['router'] if arm == 'velocity_router' else [])
