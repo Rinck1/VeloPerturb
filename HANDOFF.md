@@ -6,6 +6,7 @@
 
 ## 当前主线：W4/W5 短时群体预测（2026-10-17）
 
+- **最新扩大结果：局部velocity＋router/专家已训练并评估完成。** 实现提交 `3414a19`，sci-FATE2上三版本×三seed（4000步），静态/velocity router同为52,876参数。冻结W5解析均值，专家仅调整零均值的分布结构；velocity router能量距离相对静态router平均降低 **1.154%**，各段 **1.039%/1.010%/1.650%**，相对全局平移平均降低2.971%，但后两段仍不及全局平移且方差偏小。原均值MSE0.136601保持，最大锚偏差6.78e−8。四专家每组均使用，最小使用率6.72%。见 `docs/w6_local_router_results.md`、`outputs/w6_local_router_scifate2_evaluation_v1/`。本轮已实际接回router，不再写“当前router未启用”；下一步可扩到RENGE多TF条件。
 - **最新用户优先级：减少追加防御性归因，已有提升后直接扩大训练。** no-JVP速度头已接入未来表达任务联训，RENGE三版本×三seed完成：joint相对同训练static改善2.304%，仍未超过原解析参考。**sci-FATE2三版本×三seed也全部完成**：r1–3的15个日级转移训练→r4三段5小时预测，解析速度版平均MSE相对static降低 **11.615%**（各段−0.922%、+34.492%、+7.555%），joint降低11.563%，暂不替代解析版。新数据68,866×24,967；scope为跨重复/时间间隔群体预测，不是未见扰动。见 `PLANS/w5_joint_kinetics_expansion.md`、`docs/w5_joint_kinetics_results.md`、`outputs/w5_joint_kinetics_scifate2_evaluation_v1/summary.json`。下一版以解析速度为底座扩大局部群体；不再因追加归因网格停工，原结果不回改。
 - 主任务已转为源群体 S/U 预测下一时间点状态均值。状态用严格 S 的 source-only log-PCA；动力学主估计器为双尾 OLS 的 `U−γS`，用解析 log-PCA 导数投影，当前主线不使用原版 GFG decoder JVP。
 - 2026-10-17 架构决定已获用户批准：解析速度六臂为主，轻量 no-JVP 动力学学习头为升级；router/专家**保留代码，暂不启用当前主线**，须先检验局部群体动力学与分布结构增量。首版源侧降噪头已实现并在 GPU0 完成三 seed 的 day4→5 开发训练，速度头改善 1.73%，不及解析版 2.30%，暂不替换主复制。见 `PLANS/w5_w8_roadmap_20261017.md` 第 0.1 节；路由适配/任务联训尚未执行，旧 `src/` 未改。
@@ -41,12 +42,12 @@
 | 项目名 | VeloRoute |
 | 仓库 | `/home/yuchang/wangjiaxuan` |
 | 核心问题 | 群体 U/S 动力学特征是否提高短时状态均值预测？ |
-| 方法 | 当前 S-only log-PCA + 解析群体动力学 + 等预算 ridge；后续轻量 no-JVP 学习头，router 保留为分阶段扩展 |
+| 方法 | source-only PCA50＋解析群体/邻域动力学；冻结群体均值预测＋零均值局部专家，velocity进入router，未配对分布能量损失 |
 | 主要数据 | RENGE 时间序列；sci-fate / scNT-seq 外部模态调研；MeRLin/Kang 等为历史机制与边界数据 |
 | 核心设计 | static / vel_pool / vel_pool_Uswap 为 H1 三臂，另有 vel_mean / direct_U_pool / pseudo_S |
-| 当前观察 | 原RENGE H1未通过；scNT修复有探索改善；新增sci-FATE2三seed跨重复5小时预测中解析速度相对static平均降MSE11.615%，后两段改善、首段略差；joint未进一步增益 |
+| 当前观察 | 原RENGE H1未通过；scNT修复有探索改善；sci-FATE2均值MSE相对static降11.615%；新增局部velocity router能量距离相对静态router降1.154%，三个区间均改善，均值收益保留 |
 | 机制线索 | 原生 GFG 输出方向对 U 较不敏感；直接 U 与解析速度的下游贡献需分开验证 |
-| 下一步 | 扩大训练已完成两数据三seed；以解析速度底座推进局部群体预测，后续接router；不再追加大归因网格作为停工门，保留固定基线 |
+| 下一步 | 局部群体/router已完成一轮真实训练；保留解析均值底座，扩大到RENGE多TF扰动与局部结构适配，不追加归因网格作为停工门 |
 
 ---
 
