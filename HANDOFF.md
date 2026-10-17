@@ -6,6 +6,8 @@
 
 ## 当前主线：W4/W5 短时群体预测（2026-10-17）
 
+- **W7预测视野先完成**：冻结W6 K4/4000步模型，不重训，六个5/10/15h窗口的velocity router均优于静态router；固定05h起点分别改善1.039%/1.136%/0.818%，15h仍为正，尚未观察到消失边界。10/15h起点仍未超过全局平移。见 `docs/w7_router_horizon_results.md`、`outputs/w7_scifate2_router_horizons_v1/`。容量扩展四卡已启动，与本组预测分开报告。
+
 - **用户决定继续扩大sci-FATE2，而不是现在切换数据。W7扩容设计已实现。** 一个router、K个响应专家，K=1/2/4/8/16/32；K4骨干宽64/128/256/512；所有项保存1000/4000步，K4宽128延长至12000步。共9配置、51次训练，三seed、静态/velocity配对；冻结W5均值、W6特征和评估样本，GPU0–3。分块精确能量避免大K显存膨胀，训练/评估/汇总最小端到端测试与W6共8项通过。设计见 `PLANS/w7_scifate2_router_scaling.md`；新产物根 `outputs/w7_scifate2_router_scaling_v1/`，以实际worker状态为准，尚不写成已完成或有扩容增益。
 
 - **最新扩大结果：局部velocity＋router/专家已训练并评估完成。** 实现提交 `3414a19`，sci-FATE2上三版本×三seed（4000步），静态/velocity router同为52,876参数。冻结W5解析均值，专家仅调整零均值的分布结构；velocity router能量距离相对静态router平均降低 **1.154%**，各段 **1.039%/1.010%/1.650%**，相对全局平移平均降低2.971%，但后两段仍不及全局平移且方差偏小。原均值MSE0.136601保持，最大锚偏差6.78e−8。四专家每组均使用，最小使用率6.72%。见 `docs/w6_local_router_results.md`、`outputs/w6_local_router_scifate2_evaluation_v1/`。本轮已实际接回router，不再写“当前router未启用”；下一步可扩到RENGE多TF条件。
