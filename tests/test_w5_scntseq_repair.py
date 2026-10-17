@@ -49,6 +49,18 @@ def test_baseline_field_centering_is_zero_at_baseline():
         np.testing.assert_array_equal(v,np.zeros(2))
 
 
+def test_mechanism_decomposition_adds_to_centered_velocity():
+    from w5_scntseq_repair_mechanism import components
+    base = dict(pool_s=np.array([.3,.6]),pool_u=np.array([.2,.4]),
+        normalized_pool_s=np.array([1.,2.]),normalized_pool_u=np.array([.4,1.2]),full_U_to_S=.5)
+    source = dict(pool_s=np.array([.4,.7]),pool_u=np.array([.3,.6]),
+        normalized_pool_s=np.array([2.,3.]),normalized_pool_u=np.array([.9,2.4]),full_U_to_S=.6)
+    gamma = np.array([.2,.4])
+    values = components(source,base,gamma,np.eye(2))
+    expected = (source['pool_u']-gamma*source['pool_s'])-(base['pool_u']-gamma*base['pool_s'])
+    np.testing.assert_allclose(values['S_kinetic']+values['U_derivative'],expected)
+
+
 def test_repair_sufficient_statistics_match_original_velocity(fixture):
     repo,config_path,commit,_ = fixture
     config,_,data = minutes.verify_config(config_path,commit,repo=repo)

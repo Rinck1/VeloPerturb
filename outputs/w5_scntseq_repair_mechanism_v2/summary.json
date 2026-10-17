@@ -1,0 +1,110 @@
+{
+  "git_commit": "42f3958c9fa4fe683d5b059dcd4129abb92ecb65",
+  "seed": 20261017,
+  "command": [
+    "scripts/phase0/w5_scntseq_repair_mechanism.py",
+    "--output",
+    "outputs/w5_scntseq_repair_mechanism_v2"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_repair_mechanism.py": "971dc7a61b8d2e77f72aca0be7fd91d9fecfe35236eec973516b252e1800dd69",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_repair.py": "b0eaeaf6ad5ea00b83beb0e65136ca6af6e93b4c90035c6774d585aa6d97d525",
+    "/home/yuchang/wangjiaxuan/configs/w5_scntseq_repair_v2.json": "b49d83c4d2954ac7b7043fdddf64bdbc81aebf10723f2590bc524c2113d28a27",
+    "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_geo_labeling_dynamo_su_exact.h5ad": "208cc0b266d5a6d5bfbb18834f9f153402a7a3c93aaa9c9e4c27e29c96cefbd1",
+    "/home/yuchang/wangjiaxuan/outputs/w5_scntseq_predictions_v1/source_transform.npz": "0191a128e13c188bdd67cce62326e9a3b9d9c54f239169b824a48b3cc3139b4b",
+    "outputs/w5_scntseq_repair_predictions_v2/prediction_manifest.json": "d617030bf4431ebdfe9ecdca99561b5050974190b7c7b76584c4db3ecfc49efb",
+    "outputs/w5_scntseq_repair_predictions_v2/gamma_estimates.npz": "0953cbde69d68ff3e86f3fb333713140a18f7f7e78b33776848ac52892a67dc9",
+    "outputs/w5_scntseq_repair_predictions_v2/predictions.npz": "2ba86b959399e5e62247d1e0902b91533d3749796939235ea067e73ff3fc1688"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "51c9a5c27abde441c17f673e46c257f56210a0f59c47d24d7a7f153fc2cb63c4",
+  "runtime_seconds": 5.051469728350639,
+  "status": "EXPLORATORY_REPAIR_MECHANISM_COMPLETE",
+  "exploratory": true,
+  "original_grid_changed": false,
+  "independent_confirmation": false,
+  "matched_parameters": 2,
+  "candidate_beats_control_mean": {
+    "S_kinetic": true,
+    "U_derivative": false,
+    "U_total_only": false
+  },
+  "candidate_beats_control_both": {
+    "S_kinetic": true,
+    "U_derivative": false,
+    "U_total_only": false
+  },
+  "mse_by_interval": {
+    "candidate": [
+      0.5325883197976305,
+      0.08536329800028165
+    ],
+    "S_kinetic": [
+      0.5516418157881829,
+      0.09069525540626629
+    ],
+    "U_derivative": [
+      0.5319137951034068,
+      0.08404818051876366
+    ],
+    "U_total_only": [
+      0.4997283638019186,
+      0.09289419063452042
+    ]
+  },
+  "calibration_interval": [
+    15,
+    30
+  ],
+  "readouts": {
+    "S_kinetic": {
+      "coefficients": [
+        -0.006764522890797603,
+        0.027070879806366813
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.047492819165894054
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "U_derivative": {
+      "coefficients": [
+        -0.006693346472881205,
+        0.05171405145242505
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.2022088689807193
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "U_total_only": {
+      "coefficients": [
+        -0.005087914884829368,
+        0.06091978063730059
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.21631468587203737
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    }
+  },
+  "U_total_control_uses_current_total_U_but_not_current_U_gene_composition": true
+}
