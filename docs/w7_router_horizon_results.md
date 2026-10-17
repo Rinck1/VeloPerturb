@@ -30,4 +30,4 @@
 - 实现：`scripts/phase0/w7_router_horizons.py`。
 - 全部冻结候选与指标：`outputs/w7_scifate2_router_horizons_v1/`。
 - 六窗口完整能量、均值MSE、方差比：`metrics.csv`；配对改善：`comparisons.csv`。
-- 只使用CPU，未占额外GPU；四张授权GPU继续运行51次容量扩展训练。
+- 本组只使用CPU，未占额外GPU；同期51次容量扩展训练随后也已完成，详见 `docs/w7_router_scaling_results.md`。

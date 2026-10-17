@@ -6,9 +6,9 @@
 
 ## 当前主线：W4/W5 短时群体预测（2026-10-17）
 
-- **W7预测视野先完成**：冻结W6 K4/4000步模型，不重训，六个5/10/15h窗口的velocity router均优于静态router；固定05h起点分别改善1.039%/1.136%/0.818%，15h仍为正，尚未观察到消失边界。10/15h起点仍未超过全局平移。见 `docs/w7_router_horizon_results.md`、`outputs/w7_scifate2_router_horizons_v1/`。容量扩展四卡已启动，与本组预测分开报告。
+- **W7预测视野先完成**：冻结W6 K4/4000步模型，不重训，六个5/10/15h窗口的velocity router均优于静态router；固定05h起点分别改善1.039%/1.136%/0.818%，15h仍为正，尚未观察到消失边界。该旧4000步配置的10/15h起点仍未超过全局平移。见 `docs/w7_router_horizon_results.md`、`outputs/w7_scifate2_router_horizons_v1/`。容量扩展也已完成，与本组预测分开报告。
 
-- **用户决定继续扩大sci-FATE2，而不是现在切换数据。W7扩容设计已实现。** 一个router、K个响应专家，K=1/2/4/8/16/32；K4骨干宽64/128/256/512；所有项保存1000/4000步，K4宽128延长至12000步。共9配置、51次训练，三seed、静态/velocity配对；冻结W5均值、W6特征和评估样本，GPU0–3。分块精确能量避免大K显存膨胀，训练/评估/汇总最小端到端测试与W6共8项通过。设计见 `PLANS/w7_scifate2_router_scaling.md`；新产物根 `outputs/w7_scifate2_router_scaling_v1/`，以实际worker状态为准，尚不写成已完成或有扩容增益。
+- **W7容量扩展全部完成：9配置、51次训练、36组检查点评估。** K=1/2/4/8/16/32，宽64/128/256/512，1000/4000步及基准K4延长至12000步。数值最好K32/4000能量0.613326，但推荐K4/宽128/12000步，0.613433，差仅0.0174%、参数少75.6%。推荐项相对同预算static改善1.391%、相对全局平移改善3.420%，三段均略胜全局平移；对静态第一段不胜，后两段改善3.362%/5.513%。若static也网格择优，推荐项仍改善0.419%。均值不变，K收益非单调，训练至12000步尚未饱和。8项必要测试通过，四卡、汇总、绘图均结束。详见 `docs/w7_router_scaling_results.md`；新产物根 `outputs/w7_scifate2_router_scaling_v1/`。若继续，优先K4/24000–36000步，不全面加大K。
 
 - **最新扩大结果：局部velocity＋router/专家已训练并评估完成。** 实现提交 `3414a19`，sci-FATE2上三版本×三seed（4000步），静态/velocity router同为52,876参数。冻结W5解析均值，专家仅调整零均值的分布结构；velocity router能量距离相对静态router平均降低 **1.154%**，各段 **1.039%/1.010%/1.650%**，相对全局平移平均降低2.971%，但后两段仍不及全局平移且方差偏小。原均值MSE0.136601保持，最大锚偏差6.78e−8。四专家每组均使用，最小使用率6.72%。见 `docs/w6_local_router_results.md`、`outputs/w6_local_router_scifate2_evaluation_v1/`。本轮已实际接回router，不再写“当前router未启用”；下一步可扩到RENGE多TF条件。
 - **最新用户优先级：减少追加防御性归因，已有提升后直接扩大训练。** no-JVP速度头已接入未来表达任务联训，RENGE三版本×三seed完成：joint相对同训练static改善2.304%，仍未超过原解析参考。**sci-FATE2三版本×三seed也全部完成**：r1–3的15个日级转移训练→r4三段5小时预测，解析速度版平均MSE相对static降低 **11.615%**（各段−0.922%、+34.492%、+7.555%），joint降低11.563%，暂不替代解析版。新数据68,866×24,967；scope为跨重复/时间间隔群体预测，不是未见扰动。见 `PLANS/w5_joint_kinetics_expansion.md`、`docs/w5_joint_kinetics_results.md`、`outputs/w5_joint_kinetics_scifate2_evaluation_v1/summary.json`。下一版以解析速度为底座扩大局部群体；不再因追加归因网格停工，原结果不回改。
