@@ -1,0 +1,23 @@
+{
+  "kind": "same_series_router_long_training_development",
+  "pack": "outputs/w6_local_router_scifate2_pack_v1",
+  "reference_evaluation": "outputs/w6_local_router_scifate2_evaluation_v1",
+  "seeds": [0, 1, 2],
+  "expert_counts": [4, 8],
+  "backbone_widths": [128],
+  "baseline_experts": 4,
+  "baseline_width": 128,
+  "steps": 12000,
+  "checkpoint_steps": [4000, 12000],
+  "long_steps": 36000,
+  "long_checkpoint_steps": [12000, 24000, 36000],
+  "arms": ["static_router", "velocity_router"],
+  "workers": 4,
+  "energy_block_size": 1024,
+  "saturation_relative_improvement": 0.002,
+  "saturation_consecutive_doublings": 2,
+  "r4_used_for_optimizer": false,
+  "interpretation": "one_router_K_response_experts_not_lineage_fates",
+  "training_continuation": "deterministic_replay_from_same_seed_to_preserve_Adam_trajectory_not_weights_only_restart",
+  "previous_study": "outputs/w7_scifate2_router_scaling_v1"
+}
