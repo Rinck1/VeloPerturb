@@ -1,0 +1,35 @@
+{
+  "git_commit": "58f1954bd3cb54f83e1979a8d896efb28da8d0c3",
+  "seed": 20261017,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_synthetic.py",
+    "--output",
+    "outputs/w4_synthetic_calibration_v2",
+    "--replicates",
+    "200"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_synthetic.py": "616e69e274a8cb0831663d224ca27c79a114e386c634248f54c6bd9b6091331c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "159c53835c68d3b19745ad6b3404c253fc78bc4f3459ea22bb86a4e9ebfda505",
+  "runtime_seconds": 76.61628092825413,
+  "status": "complete",
+  "replicates_per_kind": 200,
+  "detection_rates": {
+    "positive": 1.0,
+    "null": 0.005,
+    "S_determined_stress": 0.005
+  },
+  "positive_detected": true,
+  "null_false_positive_within_10_percent": true,
+  "stress_is_not_exact_randomization": true,
+  "fixture": "40_training_24_independent_test_populations",
+  "RENGE_power_estimate": false,
+  "independent_future_cells": true,
+  "strict_observed_S_determined_stress": true,
+  "csv_sha256": "f546004949e0d179935b625a5d0683b17a709c6d12772f0f9154d646ff2d4637"
+}
