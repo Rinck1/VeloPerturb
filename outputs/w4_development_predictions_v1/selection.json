@@ -1,0 +1,493 @@
+{
+  "git_commit": "58f1954bd3cb54f83e1979a8d896efb28da8d0c3",
+  "seed": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py",
+    "predict-development",
+    "--output",
+    "outputs/w4_development_predictions_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "29f10bc0424db28f6636cdc6824027c371d1e25fa55b78538cbc8bbfba1119e8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "data/renge/processed_release_v1/day4/day4.h5ad": "449d3a3f21f9c76aeb6af25cc820ce3f151614f5f1b1e84fa70932888ac6a89e",
+    "data/renge/processed_release_v1/day5/day5.h5ad": "389dc67a5c6df74dad19f0a25b78c55a9a26c232fd5a4fb078e83ef04623ee94",
+    "data/renge/conditions/esm2_3b_v1/conditions.npz": "951d4ecafdec552de1e1532c9dd79f686fdc065af9c8822c2a54a2142996155e"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "f468cbde76af881f8af701a24d587c43a61e2749d35d6d4eda3f33644377dc7d",
+  "runtime_seconds": 32.306024711579084,
+  "selections": {
+    "0": {
+      "static": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.7974608602604087,
+          2.783658114214052,
+          2.6766430175119544,
+          2.366004122108889,
+          1.9159821300052322
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "vel_pool": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.2985717438092665,
+          2.2973318482763223,
+          2.2861547384802243,
+          2.2155145996436114,
+          1.8937101946904473
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "vel_mean": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.3516926490009977,
+          2.350766920514757,
+          2.3416798002649197,
+          2.263280462793275,
+          1.904488839932721
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "vel_pool_Uswap": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.293320402754753,
+          2.292236285118969,
+          2.281988171696712,
+          2.2065811444954706,
+          1.8818198761259464
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "pseudo_S": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.6688538795899968,
+          2.6627740886958153,
+          2.6088653336167122,
+          2.355598880194146,
+          1.9054918306907214
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "direct_U_pool": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.3209812089098394,
+          2.3193516034713793,
+          2.3045964179619562,
+          2.2168687336444157,
+          1.8862823837954201
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      }
+    },
+    "1": {
+      "static": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.7974608602604087,
+          2.783658114214052,
+          2.6766430175119544,
+          2.366004122108889,
+          1.9159821300052322
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "vel_pool": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.2985717438092665,
+          2.2973318482763223,
+          2.2861547384802243,
+          2.2155145996436114,
+          1.8937101946904473
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "vel_mean": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.3516926490009977,
+          2.350766920514757,
+          2.3416798002649197,
+          2.263280462793275,
+          1.904488839932721
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "vel_pool_Uswap": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.293320402754753,
+          2.292236285118969,
+          2.281988171696712,
+          2.2065811444954706,
+          1.8818198761259464
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "pseudo_S": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.6688538795899968,
+          2.6627740886958153,
+          2.6088653336167122,
+          2.355598880194146,
+          1.9054918306907214
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "direct_U_pool": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.3209812089098394,
+          2.3193516034713793,
+          2.3045964179619562,
+          2.2168687336444157,
+          1.8862823837954201
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      }
+    },
+    "2": {
+      "static": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.7974608602604087,
+          2.783658114214052,
+          2.6766430175119544,
+          2.366004122108889,
+          1.9159821300052322
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "vel_pool": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.2985717438092665,
+          2.2973318482763223,
+          2.2861547384802243,
+          2.2155145996436114,
+          1.8937101946904473
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "vel_mean": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.3516926490009977,
+          2.350766920514757,
+          2.3416798002649197,
+          2.263280462793275,
+          1.904488839932721
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "vel_pool_Uswap": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.293320402754753,
+          2.292236285118969,
+          2.281988171696712,
+          2.2065811444954706,
+          1.8818198761259464
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "pseudo_S": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.6688538795899968,
+          2.6627740886958153,
+          2.6088653336167122,
+          2.355598880194146,
+          1.9054918306907214
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "direct_U_pool": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.3209812089098394,
+          2.3193516034713793,
+          2.3045964179619562,
+          2.2168687336444157,
+          1.8862823837954201
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      }
+    },
+    "3": {
+      "static": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.7974608602604087,
+          2.783658114214052,
+          2.6766430175119544,
+          2.366004122108889,
+          1.9159821300052322
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "vel_pool": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.2985717438092665,
+          2.2973318482763223,
+          2.2861547384802243,
+          2.2155145996436114,
+          1.8937101946904473
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "vel_mean": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.3516926490009977,
+          2.350766920514757,
+          2.3416798002649197,
+          2.263280462793275,
+          1.904488839932721
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "vel_pool_Uswap": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.293320402754753,
+          2.292236285118969,
+          2.281988171696712,
+          2.2065811444954706,
+          1.8818198761259464
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "pseudo_S": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.6688538795899968,
+          2.6627740886958153,
+          2.6088653336167122,
+          2.355598880194146,
+          1.9054918306907214
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      },
+      "direct_U_pool": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          2.3209812089098394,
+          2.3193516034713793,
+          2.3045964179619562,
+          2.2168687336444157,
+          1.8862823837954201
+        ],
+        "inner_units": 14,
+        "scaler_scope": "refitted_on_each_inner_training_subset"
+      }
+    }
+  }
+}

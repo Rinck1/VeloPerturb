@@ -1,0 +1,773 @@
+{
+  "git_commit": "58f1954bd3cb54f83e1979a8d896efb28da8d0c3",
+  "seed": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py",
+    "predict-development",
+    "--output",
+    "outputs/w4_development_predictions_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "29f10bc0424db28f6636cdc6824027c371d1e25fa55b78538cbc8bbfba1119e8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "data/renge/processed_release_v1/day4/day4.h5ad": "449d3a3f21f9c76aeb6af25cc820ce3f151614f5f1b1e84fa70932888ac6a89e",
+    "data/renge/processed_release_v1/day5/day5.h5ad": "389dc67a5c6df74dad19f0a25b78c55a9a26c232fd5a4fb078e83ef04623ee94",
+    "data/renge/conditions/esm2_3b_v1/conditions.npz": "951d4ecafdec552de1e1532c9dd79f686fdc065af9c8822c2a54a2142996155e"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "f468cbde76af881f8af701a24d587c43a61e2749d35d6d4eda3f33644377dc7d",
+  "runtime_seconds": 32.30653889477253,
+  "swaps": {
+    "0": {
+      "train": [
+        {
+          "recipient": "AAVS1",
+          "donor": "ZNF398",
+          "distance": 1.4720995441383997,
+          "recipient_u_total": 36597.0,
+          "donor_u_total": 41026.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "CTRL",
+          "donor": "ID1",
+          "distance": 0.7112884384521866,
+          "recipient_u_total": 247914.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ETS2",
+          "donor": "ID1",
+          "distance": 0.7868768702484508,
+          "recipient_u_total": 304369.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "FOXH1",
+          "donor": "ETS2",
+          "distance": 0.8087426931904593,
+          "recipient_u_total": 263620.0,
+          "donor_u_total": 304369.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ID1",
+          "donor": "CTRL",
+          "distance": 0.7112884384521866,
+          "recipient_u_total": 390228.0,
+          "donor_u_total": 247914.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "JARID2",
+          "donor": "NR5A2",
+          "distance": 1.0665774986476493,
+          "recipient_u_total": 108731.0,
+          "donor_u_total": 149088.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "MYC",
+          "donor": "MYCN",
+          "distance": 2.360585303360788,
+          "recipient_u_total": 55845.0,
+          "donor_u_total": 214296.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "MYCN",
+          "donor": "CTRL",
+          "distance": 0.8599242625034336,
+          "recipient_u_total": 214296.0,
+          "donor_u_total": 247914.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "NR5A2",
+          "donor": "ID1",
+          "distance": 0.9013494138744483,
+          "recipient_u_total": 149088.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "RUNX1T1",
+          "donor": "SOX2",
+          "distance": 4.005661230186293,
+          "recipient_u_total": 141038.0,
+          "donor_u_total": 48228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SOX2",
+          "donor": "NR5A2",
+          "distance": 2.9173641093059848,
+          "recipient_u_total": 48228.0,
+          "donor_u_total": 149088.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "VENTX",
+          "donor": "ETS2",
+          "distance": 1.2278064249017175,
+          "recipient_u_total": 38309.0,
+          "donor_u_total": 304369.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZIC2",
+          "donor": "ZNF90",
+          "distance": 2.3386675628004494,
+          "recipient_u_total": 37520.0,
+          "donor_u_total": 45321.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZNF398",
+          "donor": "AAVS1",
+          "distance": 1.4720995441383997,
+          "recipient_u_total": 41026.0,
+          "donor_u_total": 36597.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZNF649",
+          "donor": "CTRL",
+          "distance": 0.7611574852746728,
+          "recipient_u_total": 69058.0,
+          "donor_u_total": 247914.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZNF90",
+          "donor": "ZNF649",
+          "distance": 0.9352015491888226,
+          "recipient_u_total": 45321.0,
+          "donor_u_total": 69058.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ],
+      "development_source": [
+        {
+          "recipient": "LIN28A",
+          "donor": "ID1",
+          "distance": 0.7626886564126634,
+          "recipient_u_total": 248977.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "NANOG",
+          "donor": "NR5A2",
+          "distance": 1.2645335579529955,
+          "recipient_u_total": 193617.0,
+          "donor_u_total": 149088.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "POU5F1",
+          "donor": "SOX2",
+          "distance": 3.3967316681480355,
+          "recipient_u_total": 279137.0,
+          "donor_u_total": 48228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZIC3",
+          "donor": "MYCN",
+          "distance": 1.197691446675999,
+          "recipient_u_total": 67168.0,
+          "donor_u_total": 214296.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ]
+    },
+    "1": {
+      "train": [
+        {
+          "recipient": "AAVS1",
+          "donor": "ZNF398",
+          "distance": 1.4720995441383997,
+          "recipient_u_total": 36597.0,
+          "donor_u_total": 41026.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "CTRL",
+          "donor": "ID1",
+          "distance": 0.7112884384521866,
+          "recipient_u_total": 247914.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ETS2",
+          "donor": "ID1",
+          "distance": 0.7868768702484508,
+          "recipient_u_total": 304369.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "FOXH1",
+          "donor": "ETS2",
+          "distance": 0.8087426931904593,
+          "recipient_u_total": 263620.0,
+          "donor_u_total": 304369.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ID1",
+          "donor": "CTRL",
+          "distance": 0.7112884384521866,
+          "recipient_u_total": 390228.0,
+          "donor_u_total": 247914.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "JARID2",
+          "donor": "NR5A2",
+          "distance": 1.0665774986476493,
+          "recipient_u_total": 108731.0,
+          "donor_u_total": 149088.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "MYC",
+          "donor": "MYCN",
+          "distance": 2.360585303360788,
+          "recipient_u_total": 55845.0,
+          "donor_u_total": 214296.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "MYCN",
+          "donor": "CTRL",
+          "distance": 0.8599242625034336,
+          "recipient_u_total": 214296.0,
+          "donor_u_total": 247914.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "NR5A2",
+          "donor": "ID1",
+          "distance": 0.9013494138744483,
+          "recipient_u_total": 149088.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "RUNX1T1",
+          "donor": "SOX2",
+          "distance": 4.005661230186293,
+          "recipient_u_total": 141038.0,
+          "donor_u_total": 48228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SOX2",
+          "donor": "NR5A2",
+          "distance": 2.9173641093059848,
+          "recipient_u_total": 48228.0,
+          "donor_u_total": 149088.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "VENTX",
+          "donor": "ETS2",
+          "distance": 1.2278064249017175,
+          "recipient_u_total": 38309.0,
+          "donor_u_total": 304369.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZIC2",
+          "donor": "ZNF90",
+          "distance": 2.3386675628004494,
+          "recipient_u_total": 37520.0,
+          "donor_u_total": 45321.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZNF398",
+          "donor": "AAVS1",
+          "distance": 1.4720995441383997,
+          "recipient_u_total": 41026.0,
+          "donor_u_total": 36597.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZNF649",
+          "donor": "CTRL",
+          "distance": 0.7611574852746728,
+          "recipient_u_total": 69058.0,
+          "donor_u_total": 247914.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZNF90",
+          "donor": "ZNF649",
+          "distance": 0.9352015491888226,
+          "recipient_u_total": 45321.0,
+          "donor_u_total": 69058.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ],
+      "development_source": [
+        {
+          "recipient": "LIN28A",
+          "donor": "ID1",
+          "distance": 0.7626886564126634,
+          "recipient_u_total": 248977.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "NANOG",
+          "donor": "NR5A2",
+          "distance": 1.2645335579529955,
+          "recipient_u_total": 193617.0,
+          "donor_u_total": 149088.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "POU5F1",
+          "donor": "SOX2",
+          "distance": 3.3967316681480355,
+          "recipient_u_total": 279137.0,
+          "donor_u_total": 48228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZIC3",
+          "donor": "MYCN",
+          "distance": 1.197691446675999,
+          "recipient_u_total": 67168.0,
+          "donor_u_total": 214296.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ]
+    },
+    "2": {
+      "train": [
+        {
+          "recipient": "AAVS1",
+          "donor": "ZNF398",
+          "distance": 1.4720995441383997,
+          "recipient_u_total": 36597.0,
+          "donor_u_total": 41026.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "CTRL",
+          "donor": "ID1",
+          "distance": 0.7112884384521866,
+          "recipient_u_total": 247914.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ETS2",
+          "donor": "ID1",
+          "distance": 0.7868768702484508,
+          "recipient_u_total": 304369.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "FOXH1",
+          "donor": "ETS2",
+          "distance": 0.8087426931904593,
+          "recipient_u_total": 263620.0,
+          "donor_u_total": 304369.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ID1",
+          "donor": "CTRL",
+          "distance": 0.7112884384521866,
+          "recipient_u_total": 390228.0,
+          "donor_u_total": 247914.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "JARID2",
+          "donor": "NR5A2",
+          "distance": 1.0665774986476493,
+          "recipient_u_total": 108731.0,
+          "donor_u_total": 149088.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "MYC",
+          "donor": "MYCN",
+          "distance": 2.360585303360788,
+          "recipient_u_total": 55845.0,
+          "donor_u_total": 214296.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "MYCN",
+          "donor": "CTRL",
+          "distance": 0.8599242625034336,
+          "recipient_u_total": 214296.0,
+          "donor_u_total": 247914.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "NR5A2",
+          "donor": "ID1",
+          "distance": 0.9013494138744483,
+          "recipient_u_total": 149088.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "RUNX1T1",
+          "donor": "SOX2",
+          "distance": 4.005661230186293,
+          "recipient_u_total": 141038.0,
+          "donor_u_total": 48228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SOX2",
+          "donor": "NR5A2",
+          "distance": 2.9173641093059848,
+          "recipient_u_total": 48228.0,
+          "donor_u_total": 149088.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "VENTX",
+          "donor": "ETS2",
+          "distance": 1.2278064249017175,
+          "recipient_u_total": 38309.0,
+          "donor_u_total": 304369.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZIC2",
+          "donor": "ZNF90",
+          "distance": 2.3386675628004494,
+          "recipient_u_total": 37520.0,
+          "donor_u_total": 45321.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZNF398",
+          "donor": "AAVS1",
+          "distance": 1.4720995441383997,
+          "recipient_u_total": 41026.0,
+          "donor_u_total": 36597.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZNF649",
+          "donor": "CTRL",
+          "distance": 0.7611574852746728,
+          "recipient_u_total": 69058.0,
+          "donor_u_total": 247914.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZNF90",
+          "donor": "ZNF649",
+          "distance": 0.9352015491888226,
+          "recipient_u_total": 45321.0,
+          "donor_u_total": 69058.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ],
+      "development_source": [
+        {
+          "recipient": "LIN28A",
+          "donor": "ID1",
+          "distance": 0.7626886564126634,
+          "recipient_u_total": 248977.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "NANOG",
+          "donor": "NR5A2",
+          "distance": 1.2645335579529955,
+          "recipient_u_total": 193617.0,
+          "donor_u_total": 149088.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "POU5F1",
+          "donor": "SOX2",
+          "distance": 3.3967316681480355,
+          "recipient_u_total": 279137.0,
+          "donor_u_total": 48228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZIC3",
+          "donor": "MYCN",
+          "distance": 1.197691446675999,
+          "recipient_u_total": 67168.0,
+          "donor_u_total": 214296.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ]
+    },
+    "3": {
+      "train": [
+        {
+          "recipient": "AAVS1",
+          "donor": "ZNF398",
+          "distance": 1.4720995441383997,
+          "recipient_u_total": 36597.0,
+          "donor_u_total": 41026.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "CTRL",
+          "donor": "ID1",
+          "distance": 0.7112884384521866,
+          "recipient_u_total": 247914.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ETS2",
+          "donor": "ID1",
+          "distance": 0.7868768702484508,
+          "recipient_u_total": 304369.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "FOXH1",
+          "donor": "ETS2",
+          "distance": 0.8087426931904593,
+          "recipient_u_total": 263620.0,
+          "donor_u_total": 304369.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ID1",
+          "donor": "CTRL",
+          "distance": 0.7112884384521866,
+          "recipient_u_total": 390228.0,
+          "donor_u_total": 247914.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "JARID2",
+          "donor": "NR5A2",
+          "distance": 1.0665774986476493,
+          "recipient_u_total": 108731.0,
+          "donor_u_total": 149088.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "MYC",
+          "donor": "MYCN",
+          "distance": 2.360585303360788,
+          "recipient_u_total": 55845.0,
+          "donor_u_total": 214296.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "MYCN",
+          "donor": "CTRL",
+          "distance": 0.8599242625034336,
+          "recipient_u_total": 214296.0,
+          "donor_u_total": 247914.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "NR5A2",
+          "donor": "ID1",
+          "distance": 0.9013494138744483,
+          "recipient_u_total": 149088.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "RUNX1T1",
+          "donor": "SOX2",
+          "distance": 4.005661230186293,
+          "recipient_u_total": 141038.0,
+          "donor_u_total": 48228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SOX2",
+          "donor": "NR5A2",
+          "distance": 2.9173641093059848,
+          "recipient_u_total": 48228.0,
+          "donor_u_total": 149088.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "VENTX",
+          "donor": "ETS2",
+          "distance": 1.2278064249017175,
+          "recipient_u_total": 38309.0,
+          "donor_u_total": 304369.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZIC2",
+          "donor": "ZNF90",
+          "distance": 2.3386675628004494,
+          "recipient_u_total": 37520.0,
+          "donor_u_total": 45321.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZNF398",
+          "donor": "AAVS1",
+          "distance": 1.4720995441383997,
+          "recipient_u_total": 41026.0,
+          "donor_u_total": 36597.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZNF649",
+          "donor": "CTRL",
+          "distance": 0.7611574852746728,
+          "recipient_u_total": 69058.0,
+          "donor_u_total": 247914.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZNF90",
+          "donor": "ZNF649",
+          "distance": 0.9352015491888226,
+          "recipient_u_total": 45321.0,
+          "donor_u_total": 69058.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ],
+      "development_source": [
+        {
+          "recipient": "LIN28A",
+          "donor": "ID1",
+          "distance": 0.7626886564126634,
+          "recipient_u_total": 248977.0,
+          "donor_u_total": 390228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "NANOG",
+          "donor": "NR5A2",
+          "distance": 1.2645335579529955,
+          "recipient_u_total": 193617.0,
+          "donor_u_total": 149088.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "POU5F1",
+          "donor": "SOX2",
+          "distance": 3.3967316681480355,
+          "recipient_u_total": 279137.0,
+          "donor_u_total": 48228.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "ZIC3",
+          "donor": "MYCN",
+          "distance": 1.197691446675999,
+          "recipient_u_total": 67168.0,
+          "donor_u_total": 214296.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ]
+    }
+  }
+}
