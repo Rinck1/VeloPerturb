@@ -1,0 +1,57 @@
+{
+  "git_commit": "73a9badcc0c09c74c5a7f38b6f77828cae51e749",
+  "seed": null,
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv/bin/python",
+    "scripts/phase0/w4_external_data_scntseq.py",
+    "--output",
+    "outputs/w4_external_scntseq_qc_v1"
+  ],
+  "parameters": {
+    "manifest": "configs/w4_external_data_scntseq_files.csv",
+    "data_root": "/data/yuchang/veloroute_w4/scntseq",
+    "output": "outputs/w4_external_scntseq_qc_v1"
+  },
+  "biological_analysis_performed": false,
+  "preregistration_status": "DRAFT_SEALED",
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_external_data_scntseq.py": "eddf3802febda03b5d397e432655dba3a1e8311e09fef0eedd32b5f4a05d1f3e",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_external_data_scifate.py": "8de91cbf5a6ec7938e769649bc183a25864ba38dd4dcefa164b9c0749347ad05",
+    "configs/w4_external_data_scntseq_files.csv": "d71d10f06c6c6571b33d8bf49098cf637977e20705ff107b07f10a929fff9481",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512669_Neu-Kcl-0min_C.txt.gz": "6e0f4ffef4e6c2081a0d9ce644a009f4bbe0df3e020d9ba03905ac1aab94d661",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512669_Neu-Kcl-0min_T.txt.gz": "0a61b655e15274712b888a97096704f8926a64f944d5375132fb03f37e7888aa",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512670_Neu-Kcl-15min_C.txt.gz": "fe7568623e9a678769ffd68b756f0c924f96c72e45c9d425431650c56dc7481f",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512670_Neu-Kcl-15min_T.txt.gz": "1a745e6d9552013f3a0d3a2c90e81e2a9a4483646f424412833520e537ccb19d",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512671_Neu-Kcl-30min_C.txt.gz": "e1a122f0be9806fe44ac40126e948ab0d26e33e491597cca5233003b239c4f1e",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512671_Neu-Kcl-30min_T.txt.gz": "76adf6e4b7638f2333735106a281734c6a9f7c0242bded5f87e037877b06f09b",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512672_Neu-Kcl-60min_C.txt.gz": "3586c2cceb4afceea066403464a736e7398d12ba1073459aba54050f87d75e70",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512672_Neu-Kcl-60min_T.txt.gz": "aac2431da7b99fc3ec0f94c65a2324fe525a749a6d564da257fc9e2bbdc9b467",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512673_Neu-Kcl-120min_C.txt.gz": "c769a6aba8ed3099cff17bf15f16d12b60f10a0bf9bf36a872cbbf2ee7d22bf6",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512673_Neu-Kcl-120min_T.txt.gz": "88e7715c39171efac678123422cce726fe33d14d63db04ebf1237f504d7f7965"
+  },
+  "status": "LABELING_READY_GENE_SU_MISSING",
+  "cells": 25000,
+  "genes": 37661,
+  "downloaded_bytes": 49779872,
+  "times_minutes": [
+    0,
+    15,
+    30,
+    60,
+    120
+  ],
+  "gene_layers": [
+    "new",
+    "old",
+    "total"
+  ],
+  "missing_gene_layers": [
+    "spliced",
+    "unspliced"
+  ],
+  "population_filter": "None; all GEO published barcodes retained, no response-based selection.",
+  "raw_reads_downloaded": false,
+  "processed_path": "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_neuron_new_old_total_only.h5ad",
+  "processed_sha256": "f033ccfd61d767c6bf40ca613adb4174bd1c2f1af8f8c048a4d2c05b2646020a",
+  "runtime_seconds": 279.25226005911827
+}

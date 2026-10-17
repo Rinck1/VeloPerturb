@@ -1,0 +1,6 @@
+sample,time_minutes,cells,genes,new_old_barcode_match_fraction,new_old_gene_match_fraction,new_old_same_cell_order,new_old_same_gene_order,total_count_median,new_count_median,old_count_median,total_zero_cells
+GSM4512669,0,3000,37661,1.0,1.0,True,True,1446.0,224.5,1206.5,0
+GSM4512670,15,5000,37661,1.0,1.0,True,True,1677.0,247.0,1435.0,0
+GSM4512671,30,5000,37661,1.0,1.0,True,True,1589.0,249.0,1340.0,0
+GSM4512672,60,7000,37661,1.0,1.0,True,True,1521.0,170.0,1355.0,0
+GSM4512673,120,5000,37661,1.0,1.0,True,True,906.0,75.0,814.5,0

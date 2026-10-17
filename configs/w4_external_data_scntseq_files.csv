@@ -1,0 +1,11 @@
+dataset,sample,time_minutes,role,filename,expected_bytes,url
+scntseq,GSM4512669,0,new,GSM4512669_Neu-Kcl-0min_C.txt.gz,2110605,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512669/suppl/GSM4512669_Neu-Kcl-0min_C.txt.gz
+scntseq,GSM4512669,0,old,GSM4512669_Neu-Kcl-0min_T.txt.gz,4525428,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512669/suppl/GSM4512669_Neu-Kcl-0min_T.txt.gz
+scntseq,GSM4512670,15,new,GSM4512670_Neu-Kcl-15min_C.txt.gz,3252260,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512670/suppl/GSM4512670_Neu-Kcl-15min_C.txt.gz
+scntseq,GSM4512670,15,old,GSM4512670_Neu-Kcl-15min_T.txt.gz,7810923,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512670/suppl/GSM4512670_Neu-Kcl-15min_T.txt.gz
+scntseq,GSM4512671,30,new,GSM4512671_Neu-Kcl-30min_C.txt.gz,3187732,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512671/suppl/GSM4512671_Neu-Kcl-30min_C.txt.gz
+scntseq,GSM4512671,30,old,GSM4512671_Neu-Kcl-30min_T.txt.gz,7490242,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512671/suppl/GSM4512671_Neu-Kcl-30min_T.txt.gz
+scntseq,GSM4512672,60,new,GSM4512672_Neu-Kcl-60min_C.txt.gz,3452032,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512672/suppl/GSM4512672_Neu-Kcl-60min_C.txt.gz
+scntseq,GSM4512672,60,old,GSM4512672_Neu-Kcl-60min_T.txt.gz,10243653,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512672/suppl/GSM4512672_Neu-Kcl-60min_T.txt.gz
+scntseq,GSM4512673,120,new,GSM4512673_Neu-Kcl-120min_C.txt.gz,1785533,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512673/suppl/GSM4512673_Neu-Kcl-120min_C.txt.gz
+scntseq,GSM4512673,120,old,GSM4512673_Neu-Kcl-120min_T.txt.gz,5921464,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512673/suppl/GSM4512673_Neu-Kcl-120min_T.txt.gz

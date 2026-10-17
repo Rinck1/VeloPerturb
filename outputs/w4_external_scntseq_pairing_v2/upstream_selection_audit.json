@@ -1,0 +1,20 @@
+{
+  "status": "SOURCE_CODE_PROVENANCE_ONLY_NO_BIOLOGICAL_ANALYSIS",
+  "retrieved_date": "2026-10-17",
+  "source_url": "https://raw.githubusercontent.com/wulabupenn/scNT-seq/master/notebook_for_figures/neuron_revision_figures.ipynb",
+  "source_bytes": 231476,
+  "source_sha256": "e5417dfbe1f3c4b3d113eb0900d65cb153e310bb7a7ad04c6d878b393515ecc9",
+  "source_cells_read_outputs_not_used": true,
+  "construction_cell_zero_based": 4,
+  "construction_input_prefix": "0411_Ex_",
+  "construction_input_modalities": ["Spliced", "Unspliced"],
+  "save_cell_zero_based": 6,
+  "saved_file_basename": "neuron_splicing_4_11.h5ad",
+  "later_filter_cell_zero_based": 13,
+  "later_author_filters": ["Ex cluster label", "more than 1900 detected genes"],
+  "our_additional_filters_applied": false,
+  "exact_upstream_Ex_assignment_and_QC_reconstructed": false,
+  "interpretation": "Official S/U release was built from Ex-named author inputs, not demonstrated to be the unselected whole cortical cohort.",
+  "paired_h5ad_modified": false,
+  "paired_h5ad_sha256": "208cc0b266d5a6d5bfbb18834f9f153402a7a3c93aaa9c9e4c27e29c96cefbd1"
+}

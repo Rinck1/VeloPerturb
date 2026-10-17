@@ -1,0 +1,144 @@
+{
+  "parameters": {
+    "geo": "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_neuron_new_old_total_only.h5ad",
+    "splicing": "/data/yuchang/veloroute_w4/scntseq/dynamo_official/neuron_splicing_4_11.h5ad",
+    "historical_labeling": "/data/yuchang/veloroute_w4/scntseq/dynamo_official/neuron_labeling.h5ad",
+    "processed": "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_geo_labeling_dynamo_su_exact.h5ad",
+    "output": "outputs/w4_external_scntseq_pairing_v2"
+  },
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv/bin/python",
+    "scripts/phase0/w4_external_data_scntseq_align.py",
+    "--output",
+    "outputs/w4_external_scntseq_pairing_v2"
+  ],
+  "seed": null,
+  "git_commit": "73a9badcc0c09c74c5a7f38b6f77828cae51e749",
+  "biological_analysis_performed": false,
+  "prediction_or_velocity_fit_performed": false,
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_external_data_scntseq_align.py": "3957aba4fa6a95399f28bae09eb1c1f8e5feaf10e715bf17344ba929be01cf63",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_external_data_scifate.py": "8de91cbf5a6ec7938e769649bc183a25864ba38dd4dcefa164b9c0749347ad05",
+    "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_neuron_new_old_total_only.h5ad": "f033ccfd61d767c6bf40ca613adb4174bd1c2f1af8f8c048a4d2c05b2646020a",
+    "/data/yuchang/veloroute_w4/scntseq/dynamo_official/neuron_splicing_4_11.h5ad": "96a700e14b01a009bcf19c41bd93c93f3e467a178f81548f18c6073d5b3623f0",
+    "/data/yuchang/veloroute_w4/scntseq/dynamo_official/neuron_labeling.h5ad": "2cd8b5bf6d2acee4870279d3c57468396bc21ba05e98468548031c97f76dad24"
+  },
+  "status": "TECHNICAL_SU_LABELING_PAIRING_READY_SCIENTIFIC_PROTOCOL_SEALED",
+  "cells": 13476,
+  "genes": 37007,
+  "geo_cells": 25000,
+  "geo_genes": 37661,
+  "splicing_cells": 13476,
+  "splicing_genes": 44021,
+  "splicing_barcode_coverage": 1.0,
+  "geo_barcode_coverage": 0.53904,
+  "exact_time_conflicts": 0,
+  "duplicate_cell_keys": 0,
+  "duplicate_gene_keys": 0,
+  "discarded_geo_only_genes": 654,
+  "discarded_splicing_only_genes": 7014,
+  "original_layer_qc": {
+    "spliced": {
+      "shape": [
+        13476,
+        44021
+      ],
+      "dtype": "float64",
+      "nnz": 19957441,
+      "noninteger_nonzero_entries": 0,
+      "negative_entries": 0,
+      "nonfinite_entries": 0,
+      "max_entry": 231.0
+    },
+    "unspliced": {
+      "shape": [
+        13476,
+        44021
+      ],
+      "dtype": "float64",
+      "nnz": 5773917,
+      "noninteger_nonzero_entries": 0,
+      "negative_entries": 0,
+      "nonfinite_entries": 0,
+      "max_entry": 1466.0
+    },
+    "geo_new": {
+      "shape": [
+        25000,
+        37661
+      ],
+      "dtype": "int32",
+      "nnz": 5789611,
+      "noninteger_nonzero_entries": 0,
+      "negative_entries": 0,
+      "nonfinite_entries": 0,
+      "max_entry": 80.0
+    },
+    "geo_old": {
+      "shape": [
+        25000,
+        37661
+      ],
+      "dtype": "int32",
+      "nnz": 26389749,
+      "noninteger_nonzero_entries": 0,
+      "negative_entries": 0,
+      "nonfinite_entries": 0,
+      "max_entry": 787.0
+    },
+    "geo_total": {
+      "shape": [
+        25000,
+        37661
+      ],
+      "dtype": "int32",
+      "nnz": 30111335,
+      "noninteger_nonzero_entries": 0,
+      "negative_entries": 0,
+      "nonfinite_entries": 0,
+      "max_entry": 787.0
+    }
+  },
+  "historical_labeling_audit": {
+    "cells": 3060,
+    "genes": 24078,
+    "exact_splicing_cell_overlap": 3060,
+    "exact_splicing_gene_overlap": 23918,
+    "layers": {
+      "new": {
+        "shape": [
+          3060,
+          24078
+        ],
+        "dtype": "float32",
+        "nnz": 1853696,
+        "noninteger_nonzero_entries": 1853078,
+        "negative_entries": 0,
+        "nonfinite_entries": 0,
+        "max_entry": 164.2622528076172
+      },
+      "total": {
+        "shape": [
+          3060,
+          24078
+        ],
+        "dtype": "float32",
+        "nnz": 7843397,
+        "noninteger_nonzero_entries": 7840021,
+        "negative_entries": 0,
+        "nonfinite_entries": 0,
+        "max_entry": 298.746337890625
+      }
+    },
+    "biological_fields_not_read": [
+      "cell_type",
+      "activity_genes"
+    ],
+    "used_in_paired_release": false
+  },
+  "geo_total_vs_spliced_plus_unspliced_nonidentical_matrix_entries": 10314416,
+  "counts_definition_caution": "Different quantification pipelines; total is NOT defined as S + U.",
+  "processed_path": "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_geo_labeling_dynamo_su_exact.h5ad",
+  "processed_sha256": "208cc0b266d5a6d5bfbb18834f9f153402a7a3c93aaa9c9e4c27e29c96cefbd1",
+  "runtime_seconds": 19.306626323610544
+}

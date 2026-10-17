@@ -1,0 +1,155 @@
+{
+  "git_commit": "73a9badcc0c09c74c5a7f38b6f77828cae51e749",
+  "seed": null,
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv/bin/python",
+    "scripts/phase0/w4_external_data_scntseq.py",
+    "--output",
+    "outputs/w4_external_scntseq_qc_v1"
+  ],
+  "parameters": {
+    "manifest": "configs/w4_external_data_scntseq_files.csv",
+    "data_root": "/data/yuchang/veloroute_w4/scntseq",
+    "output": "outputs/w4_external_scntseq_qc_v1"
+  },
+  "biological_analysis_performed": false,
+  "preregistration_status": "DRAFT_SEALED",
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_external_data_scntseq.py": "eddf3802febda03b5d397e432655dba3a1e8311e09fef0eedd32b5f4a05d1f3e",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_external_data_scifate.py": "8de91cbf5a6ec7938e769649bc183a25864ba38dd4dcefa164b9c0749347ad05",
+    "configs/w4_external_data_scntseq_files.csv": "d71d10f06c6c6571b33d8bf49098cf637977e20705ff107b07f10a929fff9481",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512669_Neu-Kcl-0min_C.txt.gz": "6e0f4ffef4e6c2081a0d9ce644a009f4bbe0df3e020d9ba03905ac1aab94d661",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512669_Neu-Kcl-0min_T.txt.gz": "0a61b655e15274712b888a97096704f8926a64f944d5375132fb03f37e7888aa",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512670_Neu-Kcl-15min_C.txt.gz": "fe7568623e9a678769ffd68b756f0c924f96c72e45c9d425431650c56dc7481f",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512670_Neu-Kcl-15min_T.txt.gz": "1a745e6d9552013f3a0d3a2c90e81e2a9a4483646f424412833520e537ccb19d",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512671_Neu-Kcl-30min_C.txt.gz": "e1a122f0be9806fe44ac40126e948ab0d26e33e491597cca5233003b239c4f1e",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512671_Neu-Kcl-30min_T.txt.gz": "76adf6e4b7638f2333735106a281734c6a9f7c0242bded5f87e037877b06f09b",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512672_Neu-Kcl-60min_C.txt.gz": "3586c2cceb4afceea066403464a736e7398d12ba1073459aba54050f87d75e70",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512672_Neu-Kcl-60min_T.txt.gz": "aac2431da7b99fc3ec0f94c65a2324fe525a749a6d564da257fc9e2bbdc9b467",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512673_Neu-Kcl-120min_C.txt.gz": "c769a6aba8ed3099cff17bf15f16d12b60f10a0bf9bf36a872cbbf2ee7d22bf6",
+    "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512673_Neu-Kcl-120min_T.txt.gz": "88e7715c39171efac678123422cce726fe33d14d63db04ebf1237f504d7f7965"
+  },
+  "files": [
+    {
+      "dataset": "scntseq",
+      "sample": "GSM4512669",
+      "time_minutes": "0",
+      "role": "new",
+      "filename": "GSM4512669_Neu-Kcl-0min_C.txt.gz",
+      "expected_bytes": "2110605",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512669/suppl/GSM4512669_Neu-Kcl-0min_C.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512669_Neu-Kcl-0min_C.txt.gz",
+      "bytes": 2110605,
+      "sha256": "6e0f4ffef4e6c2081a0d9ce644a009f4bbe0df3e020d9ba03905ac1aab94d661"
+    },
+    {
+      "dataset": "scntseq",
+      "sample": "GSM4512669",
+      "time_minutes": "0",
+      "role": "old",
+      "filename": "GSM4512669_Neu-Kcl-0min_T.txt.gz",
+      "expected_bytes": "4525428",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512669/suppl/GSM4512669_Neu-Kcl-0min_T.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512669_Neu-Kcl-0min_T.txt.gz",
+      "bytes": 4525428,
+      "sha256": "0a61b655e15274712b888a97096704f8926a64f944d5375132fb03f37e7888aa"
+    },
+    {
+      "dataset": "scntseq",
+      "sample": "GSM4512670",
+      "time_minutes": "15",
+      "role": "new",
+      "filename": "GSM4512670_Neu-Kcl-15min_C.txt.gz",
+      "expected_bytes": "3252260",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512670/suppl/GSM4512670_Neu-Kcl-15min_C.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512670_Neu-Kcl-15min_C.txt.gz",
+      "bytes": 3252260,
+      "sha256": "fe7568623e9a678769ffd68b756f0c924f96c72e45c9d425431650c56dc7481f"
+    },
+    {
+      "dataset": "scntseq",
+      "sample": "GSM4512670",
+      "time_minutes": "15",
+      "role": "old",
+      "filename": "GSM4512670_Neu-Kcl-15min_T.txt.gz",
+      "expected_bytes": "7810923",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512670/suppl/GSM4512670_Neu-Kcl-15min_T.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512670_Neu-Kcl-15min_T.txt.gz",
+      "bytes": 7810923,
+      "sha256": "1a745e6d9552013f3a0d3a2c90e81e2a9a4483646f424412833520e537ccb19d"
+    },
+    {
+      "dataset": "scntseq",
+      "sample": "GSM4512671",
+      "time_minutes": "30",
+      "role": "new",
+      "filename": "GSM4512671_Neu-Kcl-30min_C.txt.gz",
+      "expected_bytes": "3187732",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512671/suppl/GSM4512671_Neu-Kcl-30min_C.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512671_Neu-Kcl-30min_C.txt.gz",
+      "bytes": 3187732,
+      "sha256": "e1a122f0be9806fe44ac40126e948ab0d26e33e491597cca5233003b239c4f1e"
+    },
+    {
+      "dataset": "scntseq",
+      "sample": "GSM4512671",
+      "time_minutes": "30",
+      "role": "old",
+      "filename": "GSM4512671_Neu-Kcl-30min_T.txt.gz",
+      "expected_bytes": "7490242",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512671/suppl/GSM4512671_Neu-Kcl-30min_T.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512671_Neu-Kcl-30min_T.txt.gz",
+      "bytes": 7490242,
+      "sha256": "76adf6e4b7638f2333735106a281734c6a9f7c0242bded5f87e037877b06f09b"
+    },
+    {
+      "dataset": "scntseq",
+      "sample": "GSM4512672",
+      "time_minutes": "60",
+      "role": "new",
+      "filename": "GSM4512672_Neu-Kcl-60min_C.txt.gz",
+      "expected_bytes": "3452032",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512672/suppl/GSM4512672_Neu-Kcl-60min_C.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512672_Neu-Kcl-60min_C.txt.gz",
+      "bytes": 3452032,
+      "sha256": "3586c2cceb4afceea066403464a736e7398d12ba1073459aba54050f87d75e70"
+    },
+    {
+      "dataset": "scntseq",
+      "sample": "GSM4512672",
+      "time_minutes": "60",
+      "role": "old",
+      "filename": "GSM4512672_Neu-Kcl-60min_T.txt.gz",
+      "expected_bytes": "10243653",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512672/suppl/GSM4512672_Neu-Kcl-60min_T.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512672_Neu-Kcl-60min_T.txt.gz",
+      "bytes": 10243653,
+      "sha256": "aac2431da7b99fc3ec0f94c65a2324fe525a749a6d564da257fc9e2bbdc9b467"
+    },
+    {
+      "dataset": "scntseq",
+      "sample": "GSM4512673",
+      "time_minutes": "120",
+      "role": "new",
+      "filename": "GSM4512673_Neu-Kcl-120min_C.txt.gz",
+      "expected_bytes": "1785533",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512673/suppl/GSM4512673_Neu-Kcl-120min_C.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512673_Neu-Kcl-120min_C.txt.gz",
+      "bytes": 1785533,
+      "sha256": "c769a6aba8ed3099cff17bf15f16d12b60f10a0bf9bf36a872cbbf2ee7d22bf6"
+    },
+    {
+      "dataset": "scntseq",
+      "sample": "GSM4512673",
+      "time_minutes": "120",
+      "role": "old",
+      "filename": "GSM4512673_Neu-Kcl-120min_T.txt.gz",
+      "expected_bytes": "5921464",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4512nnn/GSM4512673/suppl/GSM4512673_Neu-Kcl-120min_T.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scntseq/raw/GSM4512673_Neu-Kcl-120min_T.txt.gz",
+      "bytes": 5921464,
+      "sha256": "88e7715c39171efac678123422cce726fe33d14d63db04ebf1237f504d7f7965"
+    }
+  ],
+  "runtime_seconds": 31.46106256917119
+}

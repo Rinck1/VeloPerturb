@@ -1,0 +1,46 @@
+{
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv/bin/python",
+    "scripts/phase0/w4_external_data_dynamo.py",
+    "--output",
+    "outputs/w4_external_dynamo_schema_v2"
+  ],
+  "parameters": {
+    "manifest": "configs/w4_external_data_dynamo_files.csv",
+    "data_root": "/data/yuchang/veloroute_w4/scntseq/dynamo_official",
+    "output": "outputs/w4_external_dynamo_schema_v2"
+  },
+  "seed": null,
+  "git_commit": "73a9badcc0c09c74c5a7f38b6f77828cae51e749",
+  "biological_analysis_performed": false,
+  "prediction_or_velocity_fit_performed": false,
+  "data_hashes": {
+    "configs/w4_external_data_dynamo_files.csv": "addced5e8828ba2bad0cdd446a0c69fd411f0c885b890420dad203bac5d33b10",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_external_data_dynamo.py": "27146e80acc52599288f0cdd84bfb303a7e7f6ec1c7d08fc740e47b96663e444",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_external_data_scifate.py": "8de91cbf5a6ec7938e769649bc183a25864ba38dd4dcefa164b9c0749347ad05",
+    "/data/yuchang/veloroute_w4/scntseq/dynamo_official/neuron_splicing_4_11.h5ad": "96a700e14b01a009bcf19c41bd93c93f3e467a178f81548f18c6073d5b3623f0",
+    "/data/yuchang/veloroute_w4/scntseq/dynamo_official/neuron_labeling.h5ad": "2cd8b5bf6d2acee4870279d3c57468396bc21ba05e98468548031c97f76dad24"
+  },
+  "files": [
+    {
+      "role": "splicing",
+      "filename": "neuron_splicing_4_11.h5ad",
+      "expected_bytes": "474450248",
+      "url": "https://www.dropbox.com/s/g1afqdcsczgyj2m/neuron_splicing_4_11.h5ad?dl=1",
+      "official_source": "https://raw.githubusercontent.com/aristoteleo/dynamo-release/368dc55e63dc5bbd100d16c566cc5206c0307658/dynamo/sample_data.py",
+      "path": "/data/yuchang/veloroute_w4/scntseq/dynamo_official/neuron_splicing_4_11.h5ad",
+      "bytes": 474450248,
+      "sha256": "96a700e14b01a009bcf19c41bd93c93f3e467a178f81548f18c6073d5b3623f0"
+    },
+    {
+      "role": "labeling",
+      "filename": "neuron_labeling.h5ad",
+      "expected_bytes": "142934894",
+      "url": "https://www.dropbox.com/s/lk9cl63yd28mfuq/neuron_labeling.h5ad?dl=1",
+      "official_source": "https://raw.githubusercontent.com/aristoteleo/dynamo-release/368dc55e63dc5bbd100d16c566cc5206c0307658/dynamo/sample_data.py",
+      "path": "/data/yuchang/veloroute_w4/scntseq/dynamo_official/neuron_labeling.h5ad",
+      "bytes": 142934894,
+      "sha256": "2cd8b5bf6d2acee4870279d3c57468396bc21ba05e98468548031c97f76dad24"
+    }
+  ]
+}

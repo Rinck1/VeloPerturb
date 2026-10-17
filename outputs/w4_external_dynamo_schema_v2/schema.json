@@ -1,0 +1,168 @@
+{
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv/bin/python",
+    "scripts/phase0/w4_external_data_dynamo.py",
+    "--output",
+    "outputs/w4_external_dynamo_schema_v2"
+  ],
+  "parameters": {
+    "manifest": "configs/w4_external_data_dynamo_files.csv",
+    "data_root": "/data/yuchang/veloroute_w4/scntseq/dynamo_official",
+    "output": "outputs/w4_external_dynamo_schema_v2"
+  },
+  "seed": null,
+  "git_commit": "73a9badcc0c09c74c5a7f38b6f77828cae51e749",
+  "biological_analysis_performed": false,
+  "prediction_or_velocity_fit_performed": false,
+  "data_hashes": {
+    "configs/w4_external_data_dynamo_files.csv": "addced5e8828ba2bad0cdd446a0c69fd411f0c885b890420dad203bac5d33b10",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_external_data_dynamo.py": "27146e80acc52599288f0cdd84bfb303a7e7f6ec1c7d08fc740e47b96663e444",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_external_data_scifate.py": "8de91cbf5a6ec7938e769649bc183a25864ba38dd4dcefa164b9c0749347ad05",
+    "/data/yuchang/veloroute_w4/scntseq/dynamo_official/neuron_splicing_4_11.h5ad": "96a700e14b01a009bcf19c41bd93c93f3e467a178f81548f18c6073d5b3623f0",
+    "/data/yuchang/veloroute_w4/scntseq/dynamo_official/neuron_labeling.h5ad": "2cd8b5bf6d2acee4870279d3c57468396bc21ba05e98468548031c97f76dad24"
+  },
+  "status": "OFFICIAL_HISTORICAL_H5AD_DOWNLOADED_SCHEMA_ONLY",
+  "files": {
+    "splicing": {
+      "root_keys": [
+        "X",
+        "layers",
+        "obs",
+        "var"
+      ],
+      "X": {
+        "kind": "group",
+        "children": [
+          "data",
+          "indices",
+          "indptr"
+        ],
+        "matrix_shape": [
+          13476,
+          44021
+        ]
+      },
+      "obs": {
+        "kind": "group",
+        "children": [
+          "_index",
+          "cellname"
+        ],
+        "matrix_shape": null
+      },
+      "var": {
+        "kind": "group",
+        "children": [
+          "_index",
+          "gene_short_name"
+        ],
+        "matrix_shape": null
+      },
+      "layers": {
+        "spliced": {
+          "kind": "group",
+          "children": [
+            "data",
+            "indices",
+            "indptr"
+          ],
+          "matrix_shape": [
+            13476,
+            44021
+          ]
+        },
+        "unspliced": {
+          "kind": "group",
+          "children": [
+            "data",
+            "indices",
+            "indptr"
+          ],
+          "matrix_shape": [
+            13476,
+            44021
+          ]
+        }
+      },
+      "uns_keys_not_read": [],
+      "obsm_keys_not_read": []
+    },
+    "labeling": {
+      "root_keys": [
+        "X",
+        "layers",
+        "obs",
+        "obsm",
+        "obsp",
+        "uns",
+        "var",
+        "varm",
+        "varp"
+      ],
+      "X": {
+        "kind": "group",
+        "children": [
+          "data",
+          "indices",
+          "indptr"
+        ],
+        "matrix_shape": [
+          3060,
+          24078
+        ]
+      },
+      "obs": {
+        "kind": "group",
+        "children": [
+          "4sU",
+          "cell_name",
+          "cell_type",
+          "index",
+          "time",
+          "treatment"
+        ],
+        "matrix_shape": null
+      },
+      "var": {
+        "kind": "group",
+        "children": [
+          "activity_genes",
+          "gene_short_name",
+          "index"
+        ],
+        "matrix_shape": null
+      },
+      "layers": {
+        "new": {
+          "kind": "group",
+          "children": [
+            "data",
+            "indices",
+            "indptr"
+          ],
+          "matrix_shape": [
+            3060,
+            24078
+          ]
+        },
+        "total": {
+          "kind": "group",
+          "children": [
+            "data",
+            "indices",
+            "indptr"
+          ],
+          "matrix_shape": [
+            3060,
+            24078
+          ]
+        }
+      },
+      "uns_keys_not_read": [],
+      "obsm_keys_not_read": []
+    }
+  },
+  "downloaded_bytes": 617385142,
+  "historical_labeling_population": "Author-selected excitatory-neuron subset; not prospective QC selection.",
+  "runtime_seconds": 0.49171943590044975
+}
