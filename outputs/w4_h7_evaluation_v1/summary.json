@@ -1,0 +1,89 @@
+{
+  "git_commit": "1add892b9082413b1bc6fb14f6c9a11f5c9bbfd4",
+  "seed": 20261017,
+  "command": [
+    "scripts/phase0/w4_h7_report.py",
+    "--output",
+    "outputs/w4_h7_evaluation_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_h7_report.py": "fc323bbfe0965f00ddac20d4ea4b15694223fbe4a40b9157018a5c676e0f2f3a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "outputs/w4_h1_evaluation_v1/summary.json": "970753d6f6d1340d8c12d7e81a6aedc70a582320ddc2fcd67a6807eb2d43b5e4",
+    "outputs/w4_h1_evaluation_v1/TF_interval_errors.npz": "a033c085cf2050c0dacfd61f9d82df301f1ad533e5a43f501d9a28932615bbb4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 0.032407909631729126,
+  "status": "H7_AUXILIARY_REPORTED",
+  "n_TFs": 16,
+  "H1_supported": false,
+  "H1_success_rule_changed": false,
+  "comparisons": {
+    "direct_U_vs_static": {
+      "gain": 0.0182167653497766,
+      "ci_low": 0.00987739568081941,
+      "ci_high": 0.02728070738597124,
+      "wilcoxon_p": 0.0005035400390625,
+      "by_interval": [
+        0.023430926512254476,
+        0.013002604187298721
+      ],
+      "independent_TFs": 16,
+      "denominator_floors": 0,
+      "supported": true
+    },
+    "velocity_vs_direct_U": {
+      "gain": -0.011230805172886955,
+      "ci_low": -0.01628206167238478,
+      "ci_high": -0.0056552631462781005,
+      "wilcoxon_p": 0.998931884765625,
+      "by_interval": [
+        -0.01112059453187055,
+        -0.011341015813903359
+      ],
+      "independent_TFs": 16,
+      "denominator_floors": 0,
+      "supported": false
+    }
+  },
+  "interval_relative_gain_over_static": {
+    "static": [
+      0.0,
+      0.0
+    ],
+    "vel_pool": [
+      0.012310331980383933,
+      0.001661588373395361
+    ],
+    "vel_mean": [
+      0.014095050317805167,
+      0.0057691152449082005
+    ],
+    "vel_pool_Uswap": [
+      0.004902328176939324,
+      0.0027163459485923585
+    ],
+    "pseudo_S": [
+      0.017857491875485566,
+      0.00987169603524831
+    ],
+    "direct_U_pool": [
+      0.023430926512254476,
+      0.013002604187298721
+    ]
+  },
+  "intervals": [
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "inference_unit": "TF_after_interval_averaging",
+  "scope": "prespecified_auxiliary_no_new_model_or_subset"
+}

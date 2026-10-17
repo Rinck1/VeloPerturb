@@ -1,0 +1,133 @@
+{
+  "git_commit": "1add892b9082413b1bc6fb14f6c9a11f5c9bbfd4",
+  "seed": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_replication.py",
+    "evaluate",
+    "--protocol-lock",
+    "outputs/w4_protocol_lock_v1/protocol_lock.json",
+    "--output",
+    "outputs/w4_h1_evaluation_v1",
+    "--predictions",
+    "outputs/w4_h1_predictions_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_replication.py": "762e575ac6c654fc292581a6308243fc5b10bc164b8663ee63da6901f1d15cdd",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "/home/yuchang/wangjiaxuan/outputs/w4_protocol_lock_v1/protocol_lock.json": "8788a75da0f8ec5c86c936f4f4dbcb4333ce729f88d633bed28922aedbed0dfb",
+    "/home/yuchang/wangjiaxuan/outputs/w4_cohort_qc_v1/summary.json": "8e9414080b93f373de1ec9069cd94f520f3696afb9b6bd9b1db095c17166e115",
+    "/home/yuchang/wangjiaxuan/PLANS/w4_shorttime_prereg.md": "839028b6776642d37f53e4206871284fb8563dfc2e49a8eb9236180e45bad326",
+    "/home/yuchang/wangjiaxuan/outputs/w4_h1_predictions_v1/grid_manifest.json": "e9c67d69c802d80f8f3b7509c7eb2ea0df7293e84d4b511046fc4f0a938e0c87",
+    "/home/yuchang/wangjiaxuan/outputs/w4_h1_predictions_v1/freeze_receipt.json": "b87b3a3edb9265531fcd983d1e8a47bc47fcfdbb4a5b9d307af70af9ad85ae1a",
+    "/data/yuchang/veloroute_w4/renge/processed_release_v2/day2/day2.h5ad": "44b7cb454cb22d574c7630d4c9a3c865d612c68f407a27f2721d8ce85d666aa5",
+    "/data/yuchang/veloroute_w4/renge/processed_release_v2/day3/day3.h5ad": "3bf623c7dc09cbb03ec76c5cdb42a379b45cb28f9f9b83b8ca26507cf5b718a9",
+    "/home/yuchang/wangjiaxuan/data/renge/processed_release_v1/day4/day4.h5ad": "449d3a3f21f9c76aeb6af25cc820ce3f151614f5f1b1e84fa70932888ac6a89e",
+    "/home/yuchang/wangjiaxuan/data/renge/conditions/esm2_3b_v1/conditions.npz": "951d4ecafdec552de1e1532c9dd79f686fdc065af9c8822c2a54a2142996155e"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 11.92736255377531,
+  "status": "H1_REPLICATION_EVALUATED",
+  "kind": "formal_replication",
+  "H1_TFs": [
+    "ETS2",
+    "ETV4",
+    "FOXH1",
+    "ID1",
+    "JARID2",
+    "LIN28A",
+    "MYC",
+    "MYCN",
+    "NANOG",
+    "NR5A2",
+    "PDLIM1",
+    "POU5F1",
+    "PRDM14",
+    "RUNX1T1",
+    "TRIM24",
+    "TRIM25"
+  ],
+  "n_TFs": 16,
+  "intervals": [
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "arms": [
+    "static",
+    "vel_pool",
+    "vel_mean",
+    "vel_pool_Uswap",
+    "pseudo_S",
+    "direct_U_pool"
+  ],
+  "algorithm_seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "seeds_averaged_before_scoring": true,
+  "independent_inference_unit": "TF; paired intervals averaged within TF; seeds/cells are not independent units",
+  "primary_comparisons": {
+    "static": {
+      "gain": 0.0069859601768896456,
+      "ci_low": -4.8489859331748313e-05,
+      "ci_high": 0.014478452285054094,
+      "wilcoxon_p": 0.0583343505859375,
+      "by_interval": [
+        0.012310331980383933,
+        0.001661588373395361
+      ],
+      "independent_TFs": 16,
+      "denominator_floors": 0,
+      "supported": false
+    },
+    "vel_pool_Uswap": {
+      "gain": 0.0031766231141238032,
+      "ci_low": -0.00332921907330952,
+      "ci_high": 0.009279031361069503,
+      "wilcoxon_p": 0.1612548828125,
+      "by_interval": [
+        0.007408003803444609,
+        -0.0010547575751969995
+      ],
+      "independent_TFs": 16,
+      "denominator_floors": 0,
+      "supported": false
+    }
+  },
+  "H1_supported": false,
+  "mean_TF_interval_sse": {
+    "static": 1.218942494420531,
+    "vel_pool": 1.2075653688007926,
+    "vel_mean": 1.2039375657971612,
+    "vel_pool_Uswap": 1.2161979271566539,
+    "pseudo_S": 1.2041774722943734,
+    "direct_U_pool": 1.194836984950556
+  },
+  "mean_TF_relative_gain_over_static": {
+    "static": 0.0,
+    "vel_pool": 0.0069859601768896456,
+    "vel_mean": 0.009932082781356684,
+    "vel_pool_Uswap": 0.0038093370627658423,
+    "pseudo_S": 0.013864593955366936,
+    "direct_U_pool": 0.0182167653497766
+  },
+  "frozen_grid_sha256": "e9c67d69c802d80f8f3b7509c7eb2ea0df7293e84d4b511046fc4f0a938e0c87",
+  "protocol_lock_sha256": "8788a75da0f8ec5c86c936f4f4dbcb4333ce729f88d633bed28922aedbed0dfb",
+  "formal_biological_claim": true
+}

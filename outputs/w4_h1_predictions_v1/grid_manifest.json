@@ -1,0 +1,316 @@
+{
+  "git_commit": "896e99755faf95ca3544a4dceefe92946098bf78",
+  "seed": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_replication.py",
+    "predict",
+    "--protocol-lock",
+    "outputs/w4_protocol_lock_v1/protocol_lock.json",
+    "--output",
+    "outputs/w4_h1_predictions_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_replication.py": "762e575ac6c654fc292581a6308243fc5b10bc164b8663ee63da6901f1d15cdd",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "/home/yuchang/wangjiaxuan/outputs/w4_protocol_lock_v1/protocol_lock.json": "8788a75da0f8ec5c86c936f4f4dbcb4333ce729f88d633bed28922aedbed0dfb",
+    "/home/yuchang/wangjiaxuan/outputs/w4_cohort_qc_v1/summary.json": "8e9414080b93f373de1ec9069cd94f520f3696afb9b6bd9b1db095c17166e115",
+    "/home/yuchang/wangjiaxuan/PLANS/w4_shorttime_prereg.md": "839028b6776642d37f53e4206871284fb8563dfc2e49a8eb9236180e45bad326",
+    "/data/yuchang/veloroute_w4/renge/processed_release_v2/day2/day2.h5ad": "44b7cb454cb22d574c7630d4c9a3c865d612c68f407a27f2721d8ce85d666aa5",
+    "/data/yuchang/veloroute_w4/renge/processed_release_v2/day3/day3.h5ad": "3bf623c7dc09cbb03ec76c5cdb42a379b45cb28f9f9b83b8ca26507cf5b718a9",
+    "/home/yuchang/wangjiaxuan/data/renge/processed_release_v1/day4/day4.h5ad": "449d3a3f21f9c76aeb6af25cc820ce3f151614f5f1b1e84fa70932888ac6a89e",
+    "/home/yuchang/wangjiaxuan/data/renge/conditions/esm2_3b_v1/conditions.npz": "951d4ecafdec552de1e1532c9dd79f686fdc065af9c8822c2a54a2142996155e"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "4d5696fec943865c0f346f007ba28cc5a4d58c155ca10af4b2f3d077fdd1da36",
+  "runtime_seconds": 342.0080317109823,
+  "status": "H1_GRID_PREDICTIONS_FROZEN",
+  "kind": "formal_replication",
+  "protocol_lock_sha256": "8788a75da0f8ec5c86c936f4f4dbcb4333ce729f88d633bed28922aedbed0dfb",
+  "protocol_freeze_commit": "896e99755faf95ca3544a4dceefe92946098bf78",
+  "H1_TFs": [
+    "ETS2",
+    "ETV4",
+    "FOXH1",
+    "ID1",
+    "JARID2",
+    "LIN28A",
+    "MYC",
+    "MYCN",
+    "NANOG",
+    "NR5A2",
+    "PDLIM1",
+    "POU5F1",
+    "PRDM14",
+    "RUNX1T1",
+    "TRIM24",
+    "TRIM25"
+  ],
+  "intervals": [
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "arms": [
+    "static",
+    "vel_pool",
+    "vel_mean",
+    "vel_pool_Uswap",
+    "pseudo_S",
+    "direct_U_pool"
+  ],
+  "algorithm_seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "records": [
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "ETS2",
+      "directory": "day2_to_day3/fold_000",
+      "fold_manifest_sha256": "023515fbae934080ec567d53654fcfac97f99e00f8c9ca3be0a1c0e564135024"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "ETV4",
+      "directory": "day2_to_day3/fold_001",
+      "fold_manifest_sha256": "818a638f495d8389a81b40a0ae15b39506751137b66804d6229dd51f6caf1d6a"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "FOXH1",
+      "directory": "day2_to_day3/fold_002",
+      "fold_manifest_sha256": "3119eb67a342a3cd971aa25c770a06f39a91aed7b1ce245ba700f2634e252c22"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "ID1",
+      "directory": "day2_to_day3/fold_003",
+      "fold_manifest_sha256": "fa715c3304d725ddc32be515edb3be38e0f3e0bc1190b1ae2926d0ed491ceecf"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "JARID2",
+      "directory": "day2_to_day3/fold_004",
+      "fold_manifest_sha256": "817a1a29af7d7c10e5d71e8febde118663ed9791a78a1107574c55407d926f07"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "LIN28A",
+      "directory": "day2_to_day3/fold_005",
+      "fold_manifest_sha256": "1b8b298e9eb5ca3f5e3c2d06a7bec334d46a5a9dee8dfac5d908d8d5e4d359b1"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "MYC",
+      "directory": "day2_to_day3/fold_006",
+      "fold_manifest_sha256": "991afd2e3acf954c7814089a89a046692ab59c3019fddb5f277264130c89a786"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "MYCN",
+      "directory": "day2_to_day3/fold_007",
+      "fold_manifest_sha256": "0d24c002321418470c66d3b0dc588efd6af6b39c76b1a5b8cbe3f150406e75f3"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "NANOG",
+      "directory": "day2_to_day3/fold_008",
+      "fold_manifest_sha256": "9e801a74d4d793c71c390a27269916761c027c96e05bee9227de41e41f1a67bf"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "NR5A2",
+      "directory": "day2_to_day3/fold_009",
+      "fold_manifest_sha256": "e0e0571e369ca7b7a6b8551e166d5a23493e72b7741cd28d61d4e44b2da55ff4"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "PDLIM1",
+      "directory": "day2_to_day3/fold_010",
+      "fold_manifest_sha256": "75b6d4edc32ed187e5a87fae8706aa087d6e7619889aaf2a0d1ed17464633a34"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "POU5F1",
+      "directory": "day2_to_day3/fold_011",
+      "fold_manifest_sha256": "f28ccac3f09ebc7d9ca554a0f088970e6c2800e68d96afcb56ce5c07565184a2"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "PRDM14",
+      "directory": "day2_to_day3/fold_012",
+      "fold_manifest_sha256": "57f15f11defd14aaa7c276f65e04d826ea9a6258835925486fa69f4594193fa4"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "RUNX1T1",
+      "directory": "day2_to_day3/fold_013",
+      "fold_manifest_sha256": "f128bff7410cc2d9fd64f3b3080790f74020d4eb5934dddeec1badd9b42ec293"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "TRIM24",
+      "directory": "day2_to_day3/fold_014",
+      "fold_manifest_sha256": "6e5b983cb46d23bb274221bdca31898bbd24921422b036be8089f2b812a502ce"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "TRIM25",
+      "directory": "day2_to_day3/fold_015",
+      "fold_manifest_sha256": "00bec5314a6de6f51e62eb5edb0c2a956daf9ab8ee9b7754d3476c9f8c696b8a"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "ETS2",
+      "directory": "day3_to_day4/fold_000",
+      "fold_manifest_sha256": "c41a6e12e1f7d2263b73304a1585db11153241b24d44ddc1cd3c7ce349988738"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "ETV4",
+      "directory": "day3_to_day4/fold_001",
+      "fold_manifest_sha256": "5b57e7096c27dfe3788fef7fed4226bbf555ee9c3cbcb6a378668dcaa39a8568"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "FOXH1",
+      "directory": "day3_to_day4/fold_002",
+      "fold_manifest_sha256": "87dca181d871f1cad76a33fe26b020b06a64ec73d030ee9b0ad2052ffe91a6ea"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "ID1",
+      "directory": "day3_to_day4/fold_003",
+      "fold_manifest_sha256": "300abfef56575f3dfc7a1f04ca285bbc7b82e9ba27490f823f3faab26c421aa1"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "JARID2",
+      "directory": "day3_to_day4/fold_004",
+      "fold_manifest_sha256": "d30ed00d744e468536147e48cab40d04ca6e9f16414d85299d697ccfc63d7762"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "LIN28A",
+      "directory": "day3_to_day4/fold_005",
+      "fold_manifest_sha256": "1af0a15ad05d44568f6d3192d2023e7172ae187d575b93412cc5e627e1d8c159"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "MYC",
+      "directory": "day3_to_day4/fold_006",
+      "fold_manifest_sha256": "fb359e51a9a3614b88b5789de9727e2c6535d4bd8c43a261142305dccd4e4a25"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "MYCN",
+      "directory": "day3_to_day4/fold_007",
+      "fold_manifest_sha256": "63401f979a03dcf2a09ceb44483eabefdd5c0ebb48f92ef83cbb81f2eb64ff3c"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "NANOG",
+      "directory": "day3_to_day4/fold_008",
+      "fold_manifest_sha256": "f971d28d6102aea13faae15ee64d9200a0a381935c94fd088a85fbeb21b978d8"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "NR5A2",
+      "directory": "day3_to_day4/fold_009",
+      "fold_manifest_sha256": "16d4c0614976a0f95210800b33cc6ff0f097dd8649680290b1b4b6c8c79485e3"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "PDLIM1",
+      "directory": "day3_to_day4/fold_010",
+      "fold_manifest_sha256": "ed86591f9ac794119ec915911d3c1d1a2d0ca04d337184be763a5360f467d692"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "POU5F1",
+      "directory": "day3_to_day4/fold_011",
+      "fold_manifest_sha256": "0e40bb5aaa9e2d58c4851b1a28461569e227185830c31182d4063ef6f2b270a7"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "PRDM14",
+      "directory": "day3_to_day4/fold_012",
+      "fold_manifest_sha256": "5bd3c192cd8140264aabf5d683a2e5c32c1b619d72fda774f630ad888dde5d71"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "RUNX1T1",
+      "directory": "day3_to_day4/fold_013",
+      "fold_manifest_sha256": "d680d67742eae6e1157e3b44ae469af5952e5a8070889cea2cebd7e2800ec314"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "TRIM24",
+      "directory": "day3_to_day4/fold_014",
+      "fold_manifest_sha256": "8a9f79f42a2dd352d09510b922f3c816050f34536c6d85753b96cffd178cabc7"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "TRIM25",
+      "directory": "day3_to_day4/fold_015",
+      "fold_manifest_sha256": "debcacaa5246c20b866bf4f4afe61c1e9854a5f9ac18ab7f973885a46790cb60"
+    }
+  ],
+  "code_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_replication.py": "762e575ac6c654fc292581a6308243fc5b10bc164b8663ee63da6901f1d15cdd",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "complete_grid_size": 32,
+  "per_fold_heldout_future_expression_used": false,
+  "cross_fold_training_future_labels_are_legal": true
+}
