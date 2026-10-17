@@ -1,0 +1,68 @@
+{
+  "git_commit": "aad70286dcf44debd6b6410e84d653f573a32569",
+  "seed": null,
+  "command": [
+    "scripts/phase0/w5_scifate2_technical.py",
+    "--inspect-only",
+    "--output",
+    "outputs/w5_scifate2_technical_v3"
+  ],
+  "data_hashes": {
+    "configs/w5_scifate2_technical_v1.json": "c24b6276fdf26db8e5782a6da08d7e5c6f14e910274c4624764e6c3dfa33609c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scifate2_technical.py": "629ddc7a25bdd73cd9f0a167efe5bc3220082d2f392473d128bc6040d7d78d3f",
+    "/home/yuchang/wangjiaxuan/data/scifate2/raw/GSE236512_processed_data_splicing.h5ad.gz": "3da41a79d674427fefd08720e0b647a3c8c443b3031fcc08b6df8fd8275f1a2f",
+    "/home/yuchang/wangjiaxuan/data/scifate2/raw/GSE236512_processed_data_splicing.h5ad": "4269f26b5d53d436c692210d965233ed66f2d3d4a6ff0e1c0a6713b108816944"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "10840d04fdf8f03628d4161c6bf4c241a2a321671cc33f5148ae08fd940ee14f",
+  "runtime_seconds": 10.999722387641668,
+  "status": "S_U_SCHEMA_METADATA_READY_COUNTS_UNCHECKED",
+  "cells": 68866,
+  "genes": 24967,
+  "layers": {
+    "spliced": {
+      "shape": [
+        68866,
+        24967
+      ],
+      "encoding": "csr_matrix"
+    },
+    "unspliced": {
+      "shape": [
+        68866,
+        24967
+      ],
+      "encoding": "csr_matrix"
+    }
+  },
+  "obs_columns": [
+    "X_TC_alpha",
+    "total_TC_alpha",
+    "unspliced_TC_alpha",
+    "spliced_TC_alpha",
+    "p_e",
+    "p_c_TC",
+    "sample",
+    "timepoint",
+    "rep"
+  ],
+  "var_columns": [],
+  "cell_ids_unique": true,
+  "gene_ids_unique": true,
+  "grouping_columns": [
+    "rep",
+    "timepoint"
+  ],
+  "header_and_metadata_only": true,
+  "expression_count_values_checked": false,
+  "biological_effects_read": false,
+  "ready_for_model_training": false,
+  "nominal_times_require_protocol_and_author_metadata_reconciliation": true,
+  "compressed_path": "/home/yuchang/wangjiaxuan/data/scifate2/raw/GSE236512_processed_data_splicing.h5ad.gz",
+  "compressed_bytes": 1306780035,
+  "compressed_sha256": "3da41a79d674427fefd08720e0b647a3c8c443b3031fcc08b6df8fd8275f1a2f",
+  "data_path": "/home/yuchang/wangjiaxuan/data/scifate2/raw/GSE236512_processed_data_splicing.h5ad",
+  "data_bytes": 4505323176,
+  "data_sha256": "4269f26b5d53d436c692210d965233ed66f2d3d4a6ff0e1c0a6713b108816944",
+  "existing_release_used_readonly": true
+}

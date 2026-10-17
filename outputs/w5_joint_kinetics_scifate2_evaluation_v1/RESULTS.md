@@ -1,0 +1,67 @@
+# sci-FATE2 coarse-to-fine training
+
+{
+  "status": "SCIFATE2_COARSE_TO_FINE_TRAINING_COMPLETE",
+  "task": "train_r1_r2_r3_daily_transitions_predict_r4_five_hour_series",
+  "intervals_hours": [
+    [
+      5,
+      10
+    ],
+    [
+      10,
+      15
+    ],
+    [
+      15,
+      20
+    ]
+  ],
+  "mse_by_interval": {
+    "static_task": [
+      0.22628138025425082,
+      0.14108965316973301,
+      0.09628462803249364
+    ],
+    "analytic_task": [
+      0.2283677856192785,
+      0.09242457506471156,
+      0.08901067845831984
+    ],
+    "velocity_joint": [
+      0.2283430448778693,
+      0.09258715766507311,
+      0.08911297304497831
+    ],
+    "identity": [
+      0.2349311680430839,
+      0.14160724260640584,
+      0.1390719129067663
+    ]
+  },
+  "mean_mse": {
+    "static_task": 0.15455188715215915,
+    "analytic_task": 0.13660101304743663,
+    "velocity_joint": 0.1366810585293069,
+    "identity": 0.17187010785208534
+  },
+  "joint_gain_over_static": [
+    -0.00911106614827073,
+    0.3437707472872632,
+    0.0744839039633105
+  ],
+  "joint_gain_over_analytic": [
+    0.00010833726544279276,
+    -0.0017590840990906464,
+    -0.0011492394893537483
+  ],
+  "r4_used_for_fitting": false,
+  "biological_p_values": false,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "router_enabled": false,
+  "gfg_jvp_enabled": false
+}

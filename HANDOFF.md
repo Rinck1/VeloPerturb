@@ -6,6 +6,7 @@
 
 ## 当前主线：W4/W5 短时群体预测（2026-10-17）
 
+- **最新用户优先级：减少追加防御性归因，已有提升后直接扩大训练。** no-JVP速度头已接入未来表达任务联训，RENGE三版本×三seed完成：joint相对同训练static改善2.304%，仍未超过原解析参考。**sci-FATE2三版本×三seed也全部完成**：r1–3的15个日级转移训练→r4三段5小时预测，解析速度版平均MSE相对static降低 **11.615%**（各段−0.922%、+34.492%、+7.555%），joint降低11.563%，暂不替代解析版。新数据68,866×24,967；scope为跨重复/时间间隔群体预测，不是未见扰动。见 `PLANS/w5_joint_kinetics_expansion.md`、`docs/w5_joint_kinetics_results.md`、`outputs/w5_joint_kinetics_scifate2_evaluation_v1/summary.json`。下一版以解析速度为底座扩大局部群体；不再因追加归因网格停工，原结果不回改。
 - 主任务已转为源群体 S/U 预测下一时间点状态均值。状态用严格 S 的 source-only log-PCA；动力学主估计器为双尾 OLS 的 `U−γS`，用解析 log-PCA 导数投影，当前主线不使用原版 GFG decoder JVP。
 - 2026-10-17 架构决定已获用户批准：解析速度六臂为主，轻量 no-JVP 动力学学习头为升级；router/专家**保留代码，暂不启用当前主线**，须先检验局部群体动力学与分布结构增量。首版源侧降噪头已实现并在 GPU0 完成三 seed 的 day4→5 开发训练，速度头改善 1.73%，不及解析版 2.30%，暂不替换主复制。见 `PLANS/w5_w8_roadmap_20261017.md` 第 0.1 节；路由适配/任务联训尚未执行，旧 `src/` 未改。
 - 六臂核心与 day4→5 开发已跑通，全部 W4 测试 **57/57**（`outputs/w4_verification_v6/pytest.xml`），含新头完整开发链、目标行隔离及 H7 不修改 H1 的测试。开发四 TF 的群体速度平均 MSE 改善 2.30%，直接 U 改善 2.36%；这不是 day2→3/day3→4 的正式复制结果。
@@ -15,7 +16,7 @@
 - scNT-seq **已完成分钟级首轮**：在 `659d76e2063a0daae9ce77de4d7005f420dc267d` 冻结协议/配置；0分钟拟合源变换，15→30校准，测试30→60/60→120。velocity 非负尺度归零，主描述判据未通过。后验基线场中心化后 pooled 方向cos为 +0.379/+0.329，仅是探索线索；2000 HVG中1025个尾部γ为0（291个基线完全无U，734个U仅出现在尾部之外）。见 `docs/w5_scntseq_results.md`、`outputs/w5_scntseq_evaluation_v1/`、`outputs/w5_scntseq_direction_audit_v1/`。该系列全部时点已读，后续改版只能称探索。W4+W5共61项测试通过。
 - **scNT-seq 修复v2已完成**（用户要求解决问题）：代码/固定配置提交 `42f3958`，67臂全部跑完。预定候选用群体正则γ、扣基线、双列正则读出和有限视野；相对identity在30→60/60→120分别改善 **8.04%/9.32%**，相对S-only状态读出额外改善4.10%/5.99%。γ零值从1025→0，但291基因为先验支持，不是实测速率；主要性能收益来自扣基线和有限视野，旧γ对应模型略好。更强机制对照中非线性S-only较差，U驱动项不减γS略好，仅保留U总量的对照平均MSE也很强，故**净velocity和逐基因U特异性仍未建立**。见 `docs/w5_scntseq_repair_results.md`、`outputs/w5_scntseq_repair_evaluation_v2/`、`outputs/w5_scntseq_repair_mechanism_v2/`。全套68项测试通过；v1/RENGE H1均未改变，v2不是独立确认。
 - **U总量/组成归因已完成**：固定设计 `ded2048`，20臂全部报告。原pooling固定U总量后降幅从8.04%/9.32%降至4.17%/6.37%；去当前组成则13.71%/1.32%，阶段作用不同。等细胞聚合完整字段仍改善11.10%/4.20%，不完全依赖深文库权重；基线组成+基线总量（不读当前U）也改善7.47%/2.57%，说明更强非线性S对照必需。净velocity特异性仍未建立。见 `docs/w5_scntseq_U_attribution_results.md`；相关测试71项通过。
-- sci-fate total/new 已下载并对齐，缺基因级 S/U，生物学效应仍未读取；MIX-seq raw 尚未核实。新增 **sci-FATE2 GSE236512**，官方已有1.31GB S/U发布文件、三个日级重复和第四条小时级系列；本轮已启动技术落地，不训练模型，真实时间标签05h等与GEO名义D3.2等须对齐。下载job为 `outputs/w5_scifate2_download_job_v1/`；兼容读取验收job为 `outputs/w5_scifate2_inspection_job_v2/`，最终技术摘要等 `outputs/w5_scifate2_technical_v2/summary.json`；初版元数据import错误及衔接说明见 `docs/w5_scifate2_data_audit.md`。目前全套74项测试通过；历史数据审计见 `docs/w4_external_data_audit.md`。
+- sci-fate total/new 已下载并对齐，缺基因级 S/U；MIX-seq raw尚未核实。**sci-FATE2 GSE236512已完成真实S/U落地**，68,866×24,967，摘要为 `outputs/w5_scifate2_technical_v3/summary.json`，不是此前失败的v1/v2。原文件保留于 `data/scifate2/raw/`。实际小时标签05h/10h/15h/20h，本轮直接使用5小时间隔，不用GEO近似D3.2等推成4.8小时。已开始任务训练适配，不再写“仍等待下载”。
 - MeRLin Day0 已有源侧数据审查（247 克隆、3785 细胞），不能再写“等待取得 Day0”。但 Day0→Day21 构成预测仍受源目标克隆映射/小类样本不足限制；原五类协议不是现成可运行的短时任务。
 - 只用物理 GPU0–3；当前线性预测/数据处理以 CPU 为主。新 W4 代码在 `scripts/phase0/w4_*.py`，不修改旧 `src/` 或覆盖旧结果。
 
@@ -43,9 +44,9 @@
 | 方法 | 当前 S-only log-PCA + 解析群体动力学 + 等预算 ridge；后续轻量 no-JVP 学习头，router 保留为分阶段扩展 |
 | 主要数据 | RENGE 时间序列；sci-fate / scNT-seq 外部模态调研；MeRLin/Kang 等为历史机制与边界数据 |
 | 核心设计 | static / vel_pool / vel_pool_Uswap 为 H1 三臂，另有 vel_mean / direct_U_pool / pseudo_S |
-| 当前观察 | 正式 H1 未通过；H7 直接 U 相对当前静态有 1.82% TF 等权增益；开发 2.3% 不是正式成功 |
+| 当前观察 | 原RENGE H1未通过；scNT修复有探索改善；新增sci-FATE2三seed跨重复5小时预测中解析速度相对static平均降MSE11.615%，后两段改善、首段略差；joint未进一步增益 |
 | 机制线索 | 原生 GFG 输出方向对 U 较不敏感；直接 U 与解析速度的下游贡献需分开验证 |
-| 下一步 | U总量/组成/文库权重归因已跑完；取得sci-FATE2真S/U并核对时间/重复，带强S-only和U驱动对照做独立复制，不在旧两区间追分；router暂关 |
+| 下一步 | 扩大训练已完成两数据三seed；以解析速度底座推进局部群体预测，后续接router；不再追加大归因网格作为停工门，保留固定基线 |
 
 ---
 

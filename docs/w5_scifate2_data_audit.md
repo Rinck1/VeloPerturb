@@ -28,6 +28,12 @@ HEAD核实压缩大小 **1,306,780,035 bytes**，Last-Modified为2023-07-05；�
 
 ## 执行状态与剩余检查
 
+**最新实际状态：下载、解压、兼容读取均完成，最终摘要为 `outputs/w5_scifate2_technical_v3/summary.json`。** 原矩阵68,866×24,967，真实S/U两层，细胞和基因键唯一。解压后SHA256为 `4269f26b5d53d436c692210d965233ed66f2d3d4a6ff0e1c0a6713b108816944`。v2随后因HDF5的np.int64 shape无法JSON序列化失败，已修为Python int；无须重复下载。旧v1/v2状态保留作历史。
+
+用户已要求减少追加归因并直接扩大。已启动三重复日级训练→独立小时级系列的模型适配；使用实际05h/10h/15h/20h标签的5小时差，不依赖GEO取整日期。计划和结果见 `PLANS/w5_joint_kinetics_expansion.md`、`docs/w5_joint_kinetics_results.md`。以下原排队说明仅为获取过程记录。
+
+后续已完成真实训练：三版本×三seed，解析速度版在独立r4系列相对static平均降MSE11.615%，各段−0.922%、+34.492%、+7.555%。该科学结果另记 `outputs/w5_joint_kinetics_scifate2_evaluation_v1/`；本文件原技术审查不是科学成绩。
+
 下载已通过 CPU job 启动，记录 `outputs/w5_scifate2_download_job_v1/`。只检查 S/U 层头部、细胞/基因ID、rep/timepoint分组；实际完成以 `outputs/w5_scifate2_technical_v2/summary.json` 为准，不能把已启动下载写成已经可训练。
 
 执行者注意：初版后台进程已加载的 `anndata.io.read_elem` 不兼容当前环境；下载/解压不依赖它，但到元数据阶段会报导入错误。代码已改为项目既有的 `anndata._io.specs.read_elem`，并安排 `outputs/w5_scifate2_inspection_job_v2/` 等旧进程终止后只读验收已下载、CRC解压验证的文件。不要重复下载或覆盖完整文件。若下载本身失败，则后继作业也会明确失败，保留partial而不冒充完成。

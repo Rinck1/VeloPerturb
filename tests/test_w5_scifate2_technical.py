@@ -28,6 +28,8 @@ def test_technical_schema_requires_actual_SU_and_only_groups_metadata(tmp_path):
     data.layers['spliced'] = data.X.copy();data.layers['unspliced'] = data.X.copy()
     path = tmp_path/'paired.h5ad';data.write_h5ad(path)
     result,cohorts = inspect_schema(path)
+    import json
+    json.dumps(result,allow_nan=False)
     assert result['cells'] == 3 and result['gene_ids_unique']
     assert not result['expression_count_values_checked'] and not result['biological_effects_read']
     assert cohorts['cells'].sum() == 3

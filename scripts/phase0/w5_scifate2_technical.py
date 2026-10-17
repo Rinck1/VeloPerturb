@@ -39,7 +39,7 @@ def inspect_schema(path):
         for name,node in handle['layers'].items():
             encoding = node.attrs.get('encoding-type','array')
             shape = tuple(node.attrs['shape']) if isinstance(node,h5py.Group) else node.shape
-            layers[name] = dict(shape=list(shape),encoding=str(encoding))
+            layers[name] = dict(shape=[int(n) for n in shape],encoding=str(encoding))
             if shape != expected:raise ValueError('Layer shape disagrees with cell/gene metadata')
         missing = {'spliced','unspliced'}-set(layers)
         if missing:raise ValueError(f'Missing published raw modalities: {sorted(missing)}')
