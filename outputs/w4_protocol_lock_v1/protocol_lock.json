@@ -1,0 +1,96 @@
+{
+  "schema": "w4_h1_replication_lock_v1",
+  "kind": "formal_replication",
+  "freeze_commit": "896e99755faf95ca3544a4dceefe92946098bf78",
+  "protocol_path": "PLANS/w4_shorttime_prereg.md",
+  "protocol_file_sha256": "839028b6776642d37f53e4206871284fb8563dfc2e49a8eb9236180e45bad326",
+  "qc_manifest_path": "/home/yuchang/wangjiaxuan/outputs/w4_cohort_qc_v1/summary.json",
+  "QC_manifest_sha256": "8e9414080b93f373de1ec9069cd94f520f3696afb9b6bd9b1db095c17166e115",
+  "data_hashes": {
+    "day2": {
+      "path": "/data/yuchang/veloroute_w4/renge/processed_release_v2/day2/day2.h5ad",
+      "sha256": "44b7cb454cb22d574c7630d4c9a3c865d612c68f407a27f2721d8ce85d666aa5"
+    },
+    "day3": {
+      "path": "/data/yuchang/veloroute_w4/renge/processed_release_v2/day3/day3.h5ad",
+      "sha256": "3bf623c7dc09cbb03ec76c5cdb42a379b45cb28f9f9b83b8ca26507cf5b718a9"
+    },
+    "day4": {
+      "path": "/home/yuchang/wangjiaxuan/data/renge/processed_release_v1/day4/day4.h5ad",
+      "sha256": "449d3a3f21f9c76aeb6af25cc820ce3f151614f5f1b1e84fa70932888ac6a89e"
+    },
+    "embeddings": {
+      "path": "/home/yuchang/wangjiaxuan/data/renge/conditions/esm2_3b_v1/conditions.npz",
+      "sha256": "951d4ecafdec552de1e1532c9dd79f686fdc065af9c8822c2a54a2142996155e"
+    }
+  },
+  "H1_TFs": [
+    "ETS2",
+    "ETV4",
+    "FOXH1",
+    "ID1",
+    "JARID2",
+    "LIN28A",
+    "MYC",
+    "MYCN",
+    "NANOG",
+    "NR5A2",
+    "PDLIM1",
+    "POU5F1",
+    "PRDM14",
+    "RUNX1T1",
+    "TRIM24",
+    "TRIM25"
+  ],
+  "intervals": [
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "arms": [
+    "static",
+    "vel_pool",
+    "vel_mean",
+    "vel_pool_Uswap",
+    "pseudo_S",
+    "direct_U_pool"
+  ],
+  "preprocess": {
+    "n_hvg": 2000,
+    "dimensions": 50,
+    "clusters": 8,
+    "neighbors": 30
+  },
+  "statistics": {
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 20261017
+  },
+  "training_TF_scope": "H1_TFs_only",
+  "git_commit": "896e99755faf95ca3544a4dceefe92946098bf78",
+  "created_utc": "2026-10-17T03:42:04.312035+00:00",
+  "command": [
+    "scripts/phase0/w4_make_lock.py",
+    "--freeze-commit",
+    "896e99755faf95ca3544a4dceefe92946098bf78",
+    "--output",
+    "outputs/w4_protocol_lock_v1"
+  ],
+  "seed": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "runtime_seconds": 0.36150721833109856
+}

@@ -1,0 +1,135 @@
+{
+  "git_commit": "7dbcdec181dd21af26393bd5be8f4acf7240faeb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_learned_head.py",
+    "predict",
+    "--config",
+    "configs/w4_nojvp_head_development_v1.json",
+    "--output",
+    "outputs/w4_nojvp_head_predictions_v1",
+    "--device",
+    "cuda"
+  ],
+  "data_hashes": {
+    "configs/w4_nojvp_head_development_v1.json": "44a95a0fe46775222e6bc2a657d1df30c44f025a1908648c6e8bb6249caf901f",
+    "/home/yuchang/wangjiaxuan/outputs/w4_development_predictions_v1/prediction_manifest.json": "52022690ce9ca8f97c2b9311583df28906e484d063a406710e5a9d7888fe6013",
+    "/home/yuchang/wangjiaxuan/outputs/w4_development_predictions_v1/predictions.npz": "f8ea8c8c2d2aa810e5ee2bb99905c4bf40f2ef86ba2febd00a3a6e20965485a5",
+    "/home/yuchang/wangjiaxuan/outputs/w4_development_predictions_v1/transform_seed0.npz": "6b7985770406586dc1662b6f8842220ecec6d906929a57b8d554a84dc987902e",
+    "/home/yuchang/wangjiaxuan/data/renge/processed_release_v1/day4/day4.h5ad": "449d3a3f21f9c76aeb6af25cc820ce3f151614f5f1b1e84fa70932888ac6a89e",
+    "/home/yuchang/wangjiaxuan/data/renge/processed_release_v1/day5/day5.h5ad": "389dc67a5c6df74dad19f0a25b78c55a9a26c232fd5a4fb078e83ef04623ee94",
+    "/home/yuchang/wangjiaxuan/data/renge/conditions/esm2_3b_v1/conditions.npz": "951d4ecafdec552de1e1532c9dd79f686fdc065af9c8822c2a54a2142996155e",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_learned_head.py": "d5b8b13f4081ce563fdeacd6c5ef25e5847cc906c59828a8ae76bb2e02ac299c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_kinetic_head.py": "0d7365a05c78f55b81c058808a741f2fac3c0641d79b74f61288a41ca82cf79a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "4d5696fec943865c0f346f007ba28cc5a4d58c155ca10af4b2f3d077fdd1da36",
+  "runtime_seconds": 27.94817941635847,
+  "status": "PREDICTIONS_FROZEN",
+  "kind": "development",
+  "arms": [
+    "static",
+    "vel_pool",
+    "vel_mean",
+    "vel_pool_Uswap",
+    "pseudo_S",
+    "direct_U_pool",
+    "learned_velocity",
+    "learned_velocity_Uswap",
+    "learned_direct_U",
+    "learned_S_only"
+  ],
+  "learned_seeds": [
+    0,
+    1,
+    2
+  ],
+  "baseline_directory": "/home/yuchang/wangjiaxuan/outputs/w4_development_predictions_v1",
+  "source_path": "/home/yuchang/wangjiaxuan/data/renge/processed_release_v1/day4/day4.h5ad",
+  "target_path": "/home/yuchang/wangjiaxuan/data/renge/processed_release_v1/day5/day5.h5ad",
+  "source_transform": "/home/yuchang/wangjiaxuan/outputs/w4_development_predictions_v1/transform_seed0.npz",
+  "source_transform_sha256": "6b7985770406586dc1662b6f8842220ecec6d906929a57b8d554a84dc987902e",
+  "prediction_sha256": "4695ee39031bd7d301d506ac8347949063cdf0229a3594b2458d3cd638b7d9fb",
+  "checkpoints": {
+    "head_seed0_vel_pool.pt": "f0d33d5f7d9be7c938a3169e8e585747f268bb284f270b474c42d9ca304c3abd",
+    "head_seed0_direct_U_pool.pt": "080af5066e098be4504c308d5e7d6c8fa37014943d69fd48259a16b0592b1ffe",
+    "head_seed0_pooled_S.pt": "082a3fea18751f5a343005ba6233cf8cee99b52d7009b70ba388627c861ed269",
+    "head_seed1_vel_pool.pt": "2684ead68ad37da6241d7dd25db8942756e51d885048c7a282babe25f6fd1910",
+    "head_seed1_direct_U_pool.pt": "020427e6abd145d8180bc749e116955c70a536418cadc13aa0048d37568c3d4e",
+    "head_seed1_pooled_S.pt": "5fce07fd800df6d5a6c58fbdb951e69d60e04252f6c2f90843ab160bad6d78f2",
+    "head_seed2_vel_pool.pt": "4814f6720bbec06206355fefc876565cd4f237c0a4b30be07318cb534f5e0207",
+    "head_seed2_direct_U_pool.pt": "7b61f34f99e78d8c8ef3b67bace2ad562815419659514bfd9a778d3ab8c6091c",
+    "head_seed2_pooled_S.pt": "19d01fbd960042a3bd3fcbb23542c04ff4f4df3468457acf594086a482f32377"
+  },
+  "heldout_TFs": [
+    "LIN28A",
+    "NANOG",
+    "POU5F1",
+    "ZIC3"
+  ],
+  "training_TFs": [
+    "ETS2",
+    "FOXH1",
+    "ID1",
+    "JARID2",
+    "MYC",
+    "MYCN",
+    "NR5A2",
+    "RUNX1T1",
+    "SOX2",
+    "VENTX",
+    "ZIC2",
+    "ZNF398",
+    "ZNF649",
+    "ZNF90"
+  ],
+  "heldout_future_expression_read": false,
+  "head_future_supervision": false,
+  "head_training_scope": "outer_training_source_cells_only",
+  "head_conditions_input": false,
+  "router_enabled": false,
+  "primary_replication_changed": false,
+  "config": {
+    "kind": "development_only",
+    "baseline_predictions": "outputs/w4_development_predictions_v1",
+    "embeddings": "data/renge/conditions/esm2_3b_v1/conditions.npz",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "hidden": 16,
+    "maximum_relative_correction": 0.25,
+    "steps": 1000,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "anchor_weight": 0.1,
+    "training_partitions_per_condition": 32,
+    "diagnostic_partitions_per_condition": 8,
+    "features": [
+      "vel_pool",
+      "direct_U_pool",
+      "pooled_S"
+    ],
+    "arms": [
+      "learned_velocity",
+      "learned_velocity_Uswap",
+      "learned_direct_U",
+      "learned_S_only"
+    ],
+    "head_supervision": "symmetric_disjoint_source_cell_half_estimates",
+    "head_condition_input": false,
+    "head_future_supervision": false,
+    "router_enabled": false,
+    "primary_replication_changed": false
+  }
+}

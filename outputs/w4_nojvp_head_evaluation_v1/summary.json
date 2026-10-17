@@ -1,0 +1,75 @@
+{
+  "git_commit": "7dbcdec181dd21af26393bd5be8f4acf7240faeb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w4_learned_head.py",
+    "evaluate",
+    "--predictions",
+    "outputs/w4_nojvp_head_predictions_v1",
+    "--output",
+    "outputs/w4_nojvp_head_evaluation_v1"
+  ],
+  "data_hashes": {
+    "outputs/w4_nojvp_head_predictions_v1/prediction_manifest.json": "abbe54675eff69f2cb5b69ec51f5646c1ac96d9096cf2d5faa313711a14653ae",
+    "outputs/w4_nojvp_head_predictions_v1/predictions.npz": "4695ee39031bd7d301d506ac8347949063cdf0229a3594b2458d3cd638b7d9fb",
+    "outputs/w4_nojvp_head_predictions_v1/training.json": "2d2da734bea5b032b61c06fc6a7072c1ffda29f357aa5da31b6f463a01a73a45",
+    "/home/yuchang/wangjiaxuan/outputs/w4_development_predictions_v1/transform_seed0.npz": "6b7985770406586dc1662b6f8842220ecec6d906929a57b8d554a84dc987902e",
+    "/home/yuchang/wangjiaxuan/data/renge/processed_release_v1/day5/day5.h5ad": "389dc67a5c6df74dad19f0a25b78c55a9a26c232fd5a4fb078e83ef04623ee94",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_learned_head.py": "d5b8b13f4081ce563fdeacd6c5ef25e5847cc906c59828a8ae76bb2e02ac299c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_kinetic_head.py": "0d7365a05c78f55b81c058808a741f2fac3c0641d79b74f61288a41ca82cf79a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "baf5dcb224f238d7436f126f8bed76188ed6fcf25f33ab11f0d376985624e289",
+  "runtime_seconds": 1.1972893960773945,
+  "status": "NOJVP_HEAD_DEVELOPMENT_EVALUATED",
+  "kind": "development",
+  "mse": {
+    "static": 0.04931723579930698,
+    "vel_pool": 0.048185150984493566,
+    "vel_mean": 0.04887694370826023,
+    "vel_pool_Uswap": 0.05024460476489749,
+    "pseudo_S": 0.048817655324719225,
+    "direct_U_pool": 0.048152167939122664,
+    "learned_velocity": 0.04846624606409983,
+    "learned_velocity_Uswap": 0.04949827108138112,
+    "learned_direct_U": 0.0480944854756333,
+    "learned_S_only": 0.04882341397154426
+  },
+  "relative_gain_over_static": {
+    "static": 0.0,
+    "vel_pool": 0.02295515546370752,
+    "vel_mean": 0.008927752821315638,
+    "vel_pool_Uswap": -0.018804155394360977,
+    "pseudo_S": 0.010129936653805238,
+    "direct_U_pool": 0.023623948935935557,
+    "learned_velocity": 0.017255422397763565,
+    "learned_velocity_Uswap": -0.0036708318935563256,
+    "learned_direct_U": 0.024793569709575247,
+    "learned_S_only": 0.010013169224899254
+  },
+  "mean_TF_relative_gain": {
+    "static": 0.0,
+    "vel_pool": 0.03277038201363572,
+    "vel_mean": 0.013163471617805282,
+    "vel_pool_Uswap": -0.007786954265137343,
+    "pseudo_S": 0.015389094157887827,
+    "direct_U_pool": 0.028164522868071976,
+    "learned_velocity": 0.027307773786311707,
+    "learned_velocity_Uswap": 9.70805337117698e-05,
+    "learned_direct_U": 0.02803287848177373,
+    "learned_S_only": 0.016359257345020608
+  },
+  "learned_velocity_gain_over_analytic": -0.005833645300742596,
+  "no_formal_replication_claim": true,
+  "head_future_supervision": false,
+  "router_enabled": false,
+  "interpretation": "source-population feature denoising, not independent true-velocity validation"
+}

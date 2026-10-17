@@ -83,4 +83,10 @@ The four command/recovery regression tests passed. Both day2 guide runs then com
 
 A separate CPU queue, `outputs/w4_renge_cohort_wait_job_v1/`, waits for the day2 stage's **completed** provenance. It verifies the final H5AD hash, exports the small day2 evidence bundle to `outputs/w4_renge_day2_technical_evidence_v2/`, then invokes `w4_cohort_qc.py --output outputs/w4_cohort_qc_v1`. This uses only metadata and the fixed 50-cell eligibility threshold. It does not freeze the protocol or authorize/read response effects. If day2 fails, the waiter stops explicitly instead of using partial counts.
 
+## Day2 completed; technical cohort fixed
+
+The recovered day2 job and the technical-QC waiter have completed. Final day2 contains **4710 cells × 60668 genes**; 4381 cells pass technical QC and **2726** pass both technical QC and guide calling. Median S/U counts are **13588/968**, and median U/(S+U) is **0.0649181**. The file is `/data/yuchang/veloroute_w4/renge/processed_release_v2/day2/day2.h5ad`, SHA256 `44b7cb454cb22d574c7630d4c9a3c865d612c68f407a27f2721d8ce85d666aa5`; small evidence is in `outputs/w4_renge_day2_technical_evidence_v2/`.
+
+Technical-only `outputs/w4_cohort_qc_v1/` establishes **16 common TFs** for both H1 (days 2/3/4) and H2 (days 2/3/4/5), using the unchanged ≥50-cell criterion. The scientific protocol was subsequently frozen at `896e99755faf95ca3544a4dceefe92946098bf78`, with the count table included, before starting any replication prediction. This audit describes the technical stage; subsequent predictive analyses are tracked separately in `docs/w4_results.md`.
+
 Public sources: [GEO GSE213069](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE213069), [ENA PRJNA879051](https://www.ebi.ac.uk/ena/browser/view/PRJNA879051), [NCBI SRA public cloud data](https://www.ncbi.nlm.nih.gov/sra/docs/sra-cloud/). GEO's browser page returned a browser challenge in this session; live ENA metadata and NCBI-hosted SRA object headers were accessible.
