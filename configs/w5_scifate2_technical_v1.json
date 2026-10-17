@@ -1,0 +1,16 @@
+{
+  "kind": "scifate2_public_SU_technical_only",
+  "accession": "GSE236512",
+  "parent_accession": "GSE236520",
+  "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE236nnn/GSE236512/suppl/GSE236512_processed_data_splicing.h5ad.gz",
+  "expected_bytes": 1306780035,
+  "maximum_download_bytes": 1500000000,
+  "maximum_expanded_bytes": 8000000000,
+  "minimum_free_bytes": 4000000000,
+  "deadline_seconds": 7200,
+  "request_timeout_seconds": 30,
+  "data_root": "data/scifate2/raw",
+  "filename": "GSE236512_processed_data_splicing.h5ad.gz",
+  "required_layers": ["spliced", "unspliced"],
+  "prediction_or_response_analysis": false
+}
