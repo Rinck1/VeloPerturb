@@ -1,0 +1,172 @@
+{
+  "git_commit": "659d76e2063a0daae9ce77de4d7005f420dc267d",
+  "seed": 20261017,
+  "command": [
+    "scripts/phase0/w5_scntseq_direction_audit.py",
+    "--output",
+    "outputs/w5_scntseq_direction_audit_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_direction_audit.py": "a9d6cc89680d1c5ce036727df78d6980597fafa69558bb481e99bb57cd6f423b",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_minutes.py": "4f2ee06232d6ba90d95339c18a7b7a092c3093068b7900ffbf45e2e343d4a807",
+    "/home/yuchang/wangjiaxuan/configs/w5_scntseq_minutes_v1.json": "a14ae7e22f7d832099c15d4105ddeb5e818c4b65665f29d96cae912d995f2f26",
+    "/home/yuchang/wangjiaxuan/PLANS/w5_prereg_addendum.md": "1ac7eddcd9896d9bae9756ddc52204100bd32d46cc587c0a327cab0e54539c7d",
+    "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_geo_labeling_dynamo_su_exact.h5ad": "208cc0b266d5a6d5bfbb18834f9f153402a7a3c93aaa9c9e4c27e29c96cefbd1",
+    "outputs/w5_scntseq_predictions_v1/source_transform.npz": "0191a128e13c188bdd67cce62326e9a3b9d9c54f239169b824a48b3cc3139b4b",
+    "outputs/w5_scntseq_predictions_v1/prediction_manifest.json": "a971698a36d051e875648bab08bf8c676d7386a17a7fedfe434d9b4788265c80",
+    "outputs/w5_scntseq_predictions_v1/calibration.json": "788ca5eac4ae3a77cf125d57f7084be25435711af79efd59169a692678b884b5"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "747f2f02ea5519e6b83145769ca7cbee8ffcd00bce88ef70deb48a9f53d529ab",
+  "runtime_seconds": 5.079450327903032,
+  "status": "POSTHOC_MINUTE_DIRECTION_AUDIT_COMPLETE",
+  "exploratory": true,
+  "original_predictions_changed": false,
+  "oracle_results_are_deployable": false,
+  "gamma_zero_genes": 1025,
+  "total_HVGs": 2000,
+  "zero_gamma_reasons": {
+    "insufficient_positive_S": 0,
+    "zero_tail_cross_product": 1025,
+    "other_zero_fit": 0,
+    "U_never_observed_among_zero_gamma": 291
+  },
+  "velocity_directions": [
+    {
+      "source_minute": 15,
+      "target_minute": 30,
+      "feature": "vel_mean",
+      "interval_role": "calibration",
+      "exploratory_variant": false,
+      "feature_norm": 5.013210950775402,
+      "raw_direction_cosine": -0.43709079802426,
+      "retrospective_nonnegative_scale": 0.0,
+      "retrospective_1d_gain_ceiling": 0.0
+    },
+    {
+      "source_minute": 15,
+      "target_minute": 30,
+      "feature": "vel_pool",
+      "interval_role": "calibration",
+      "exploratory_variant": false,
+      "feature_norm": 2.019427740780066,
+      "raw_direction_cosine": -0.4187342893481278,
+      "retrospective_nonnegative_scale": 0.0,
+      "retrospective_1d_gain_ceiling": 0.0
+    },
+    {
+      "source_minute": 15,
+      "target_minute": 30,
+      "feature": "vel_mean_minus_baseline0",
+      "interval_role": "calibration",
+      "exploratory_variant": true,
+      "feature_norm": 0.3610869456468692,
+      "raw_direction_cosine": 0.3724850095879898,
+      "retrospective_nonnegative_scale": 0.17193256773159032,
+      "retrospective_1d_gain_ceiling": 0.13874508236776487
+    },
+    {
+      "source_minute": 15,
+      "target_minute": 30,
+      "feature": "vel_pool_minus_baseline0",
+      "interval_role": "calibration",
+      "exploratory_variant": true,
+      "feature_norm": 0.2086329601846249,
+      "raw_direction_cosine": 0.13424093325698502,
+      "retrospective_nonnegative_scale": 0.10724157411626273,
+      "retrospective_1d_gain_ceiling": 0.01802062816170631
+    },
+    {
+      "source_minute": 30,
+      "target_minute": 60,
+      "feature": "vel_mean",
+      "interval_role": "previously_scored_test",
+      "exploratory_variant": false,
+      "feature_norm": 5.224150125497064,
+      "raw_direction_cosine": -0.43527057472451225,
+      "retrospective_nonnegative_scale": 0.0,
+      "retrospective_1d_gain_ceiling": 0.0
+    },
+    {
+      "source_minute": 30,
+      "target_minute": 60,
+      "feature": "vel_pool",
+      "interval_role": "previously_scored_test",
+      "exploratory_variant": false,
+      "feature_norm": 1.9676234928114305,
+      "raw_direction_cosine": -0.43513086012994856,
+      "retrospective_nonnegative_scale": 0.0,
+      "retrospective_1d_gain_ceiling": 0.0
+    },
+    {
+      "source_minute": 30,
+      "target_minute": 60,
+      "feature": "vel_mean_minus_baseline0",
+      "interval_role": "previously_scored_test",
+      "exploratory_variant": true,
+      "feature_norm": 0.5145477778626754,
+      "raw_direction_cosine": 0.21203928302131472,
+      "retrospective_nonnegative_scale": 0.07391656060429279,
+      "retrospective_1d_gain_ceiling": 0.044960657544193205
+    },
+    {
+      "source_minute": 30,
+      "target_minute": 60,
+      "feature": "vel_pool_minus_baseline0",
+      "interval_role": "previously_scored_test",
+      "exploratory_variant": true,
+      "feature_norm": 0.3227279015349597,
+      "raw_direction_cosine": 0.37931889521029244,
+      "retrospective_nonnegative_scale": 0.21082353612732146,
+      "retrospective_1d_gain_ceiling": 0.1438828242635568
+    },
+    {
+      "source_minute": 60,
+      "target_minute": 120,
+      "feature": "vel_mean",
+      "interval_role": "previously_scored_test",
+      "exploratory_variant": false,
+      "feature_norm": 5.1755054455580805,
+      "raw_direction_cosine": 0.263416269201511,
+      "retrospective_nonnegative_scale": 0.0018403615041871699,
+      "retrospective_1d_gain_ceiling": 0.06938813088004292
+    },
+    {
+      "source_minute": 60,
+      "target_minute": 120,
+      "feature": "vel_pool",
+      "interval_role": "previously_scored_test",
+      "exploratory_variant": false,
+      "feature_norm": 2.183883978351432,
+      "raw_direction_cosine": 0.2819012276676014,
+      "retrospective_nonnegative_scale": 0.0046674612464454165,
+      "retrospective_1d_gain_ceiling": 0.07946830216050084
+    },
+    {
+      "source_minute": 60,
+      "target_minute": 120,
+      "feature": "vel_mean_minus_baseline0",
+      "interval_role": "previously_scored_test",
+      "exploratory_variant": true,
+      "feature_norm": 0.7918982461276431,
+      "raw_direction_cosine": 0.24859880288999742,
+      "retrospective_nonnegative_scale": 0.011351231152840308,
+      "retrospective_1d_gain_ceiling": 0.06180136479833979
+    },
+    {
+      "source_minute": 60,
+      "target_minute": 120,
+      "feature": "vel_pool_minus_baseline0",
+      "interval_role": "previously_scored_test",
+      "exploratory_variant": true,
+      "feature_norm": 0.2981420487710026,
+      "raw_direction_cosine": 0.329109195337725,
+      "retrospective_nonnegative_scale": 0.039914445549114955,
+      "retrospective_1d_gain_ceiling": 0.10831286245584482
+    }
+  ],
+  "baseline_field_norms": {
+    "vel_mean": 5.218895604273299,
+    "vel_pool": 2.0973590942641755
+  }
+}

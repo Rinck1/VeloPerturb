@@ -1,0 +1,77 @@
+{
+  "git_commit": "659d76e2063a0daae9ce77de4d7005f420dc267d",
+  "seed": 20261017,
+  "command": [
+    "scripts/phase0/w5_scntseq_minutes.py",
+    "predict",
+    "--freeze-commit",
+    "659d76e2063a0daae9ce77de4d7005f420dc267d",
+    "--output",
+    "outputs/w5_scntseq_predictions_v1"
+  ],
+  "data_hashes": {
+    "configs/w5_scntseq_minutes_v1.json": "a14ae7e22f7d832099c15d4105ddeb5e818c4b65665f29d96cae912d995f2f26",
+    "/home/yuchang/wangjiaxuan/PLANS/w5_prereg_addendum.md": "1ac7eddcd9896d9bae9756ddc52204100bd32d46cc587c0a327cab0e54539c7d",
+    "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_geo_labeling_dynamo_su_exact.h5ad": "208cc0b266d5a6d5bfbb18834f9f153402a7a3c93aaa9c9e4c27e29c96cefbd1",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_minutes.py": "4f2ee06232d6ba90d95339c18a7b7a092c3093068b7900ffbf45e2e343d4a807",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 6.183308590203524,
+  "status": "MINUTE_PREDICTIONS_FROZEN",
+  "kind": "scntseq_minutes_mechanistic_validation",
+  "config_path": "/home/yuchang/wangjiaxuan/configs/w5_scntseq_minutes_v1.json",
+  "freeze_commit": "659d76e2063a0daae9ce77de4d7005f420dc267d",
+  "protocol_sha256": "1ac7eddcd9896d9bae9756ddc52204100bd32d46cc587c0a327cab0e54539c7d",
+  "arms": [
+    "identity",
+    "past_S",
+    "past_S_calibrated",
+    "vel_mean",
+    "vel_pool",
+    "direct_U_raw",
+    "direct_U_delta0",
+    "new_raw",
+    "new_delta0"
+  ],
+  "intervals": [
+    [
+      30,
+      60
+    ],
+    [
+      60,
+      120
+    ]
+  ],
+  "prediction_sha256": "2f9854502470f22e90b0d5156be98d5ef912aadec7018d67b1721abf2ddaadd8",
+  "transform_sha256": "0191a128e13c188bdd67cce62326e9a3b9d9c54f239169b824a48b3cc3139b4b",
+  "calibration_sha256": "788ca5eac4ae3a77cf125d57f7084be25435711af79efd59169a692678b884b5",
+  "source_cells": {
+    "0": 1416,
+    "15": 2661,
+    "30": 2881,
+    "60": 4657
+  },
+  "per_interval_future_expression_used": false,
+  "scale_fit_minutes": [
+    15,
+    30
+  ],
+  "source_transform_fit_minutes": [
+    0
+  ],
+  "future_120_expression_read": false,
+  "source60_read_only_after_first_prediction_frozen": true,
+  "router_enabled": false,
+  "gfg_jvp_enabled": false,
+  "code_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_minutes.py": "4f2ee06232d6ba90d95339c18a7b7a092c3093068b7900ffbf45e2e343d4a807",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  }
+}

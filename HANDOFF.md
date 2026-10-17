@@ -4,15 +4,16 @@
 > 2026-09-21 代码审计更正：**真实 velocity 增量尚未建立，不能宣称状态外信息为零。** 分布训练、静态对照、验证折标准化及 R² 定义存在已确认 bug。旧 RENGE +0.022 和“99% 冗余”的机制归因待重算。详见 `outputs/veloroute_bug_audit_20260921/RESULTS.md`；该更正优先于下文历史解读。
 > 当前执行状态更新：2026-10-17。优先读下方 W4 节与 `docs/w4_results.md`；未更新的后续章节保留为 2026-09-21 历史归档，不能直接当作当前进度或主张。
 
-## 当前主线：W4 短时群体预测（2026-10-17）
+## 当前主线：W4/W5 短时群体预测（2026-10-17）
 
 - 主任务已转为源群体 S/U 预测下一时间点状态均值。状态用严格 S 的 source-only log-PCA；动力学主估计器为双尾 OLS 的 `U−γS`，用解析 log-PCA 导数投影，当前主线不使用原版 GFG decoder JVP。
 - 2026-10-17 架构决定已获用户批准：解析速度六臂为主，轻量 no-JVP 动力学学习头为升级；router/专家**保留代码，暂不启用当前主线**，须先检验局部群体动力学与分布结构增量。首版源侧降噪头已实现并在 GPU0 完成三 seed 的 day4→5 开发训练，速度头改善 1.73%，不及解析版 2.30%，暂不替换主复制。见 `PLANS/w5_w8_roadmap_20261017.md` 第 0.1 节；路由适配/任务联训尚未执行，旧 `src/` 未改。
 - 六臂核心与 day4→5 开发已跑通，全部 W4 测试 **57/57**（`outputs/w4_verification_v6/pytest.xml`），含新头完整开发链、目标行隔离及 H7 不修改 H1 的测试。开发四 TF 的群体速度平均 MSE 改善 2.30%，直接 U 改善 2.36%；这不是 day2→3/day3→4 的正式复制结果。
 - 原版 GFG 在 RENGE/MeRLin 的各三 seeds 目标域重训及 U 敏感性审计均已完成，见 `docs/w3_results.md` 的 W4-0 节。方向对 U 破坏不敏感不能推出所有 U 预测信息为零。
 - RENGE day4 同输入复现 S/U/A 全矩阵一致；day2/day3 均已完成。day2 为 4710×60668，2726 个细胞通过 guide+技术 QC，S/U 中位数为 13588/968。技术共同名单 H1/H2 均为 **16 TF**，见 `outputs/w4_cohort_qc_v1/summary.json`。
-- `PLANS/w4_shorttime_prereg.md` 已于提交 **896e99755faf95ca3544a4dceefe92946098bf78** 冻结；正式锁在 `outputs/w4_protocol_lock_v1/protocol_lock.json`。正式 **32 折已全部预测并评估**：H1 未通过，vel_pool vs static 为 TF 等权增益 0.70%，CI [−0.005%,1.448%]，p=0.0583；vs Uswap 也未通过。H7 直接 U vs static 为 **1.82%**，CI [0.99%,2.73%]，p=0.000504，说明相对当前 S-PCA 基线有 U 特征增量，但不是 velocity/router 阳性。正式输出 `outputs/w4_h1_evaluation_v1/`，辅助 `outputs/w4_h7_evaluation_v1/`。16 TF 纯合成设计校准仍在 `outputs/w4_h1_calibration_formal_v1/` 并行。
-- sci-fate total/new 已下载并对齐，缺基因级 S/U；scNT-seq 已配对 13476×37007 的 S/U/new/old/total，5 个时间点 0/15/30/60/120 分钟，时间冲突为零；外部效应仍封存。MIX-seq raw 尚未核实。详见 `docs/w4_external_data_audit.md`。
+- `PLANS/w4_shorttime_prereg.md` 已于提交 **896e99755faf95ca3544a4dceefe92946098bf78** 冻结；正式锁在 `outputs/w4_protocol_lock_v1/protocol_lock.json`。正式 **32 折已全部预测并评估**：H1 未通过，vel_pool vs static 为 TF 等权增益 0.70%，CI [−0.005%,1.448%]，p=0.0583；vs Uswap 也未通过。H7 直接 U vs static 为 **1.82%**，CI [0.99%,2.73%]，p=0.000504，说明相对当前 S-PCA 基线有 U 特征增量，但不是 velocity/router 阳性。16 TF 纯合成完整设计校准已完成：三个相关设定的正例检出200/200，零情形误报1%/0.5%/1%，仅为预设低维模拟，不是实际 RENGE 的功效。
+- scNT-seq **已完成分钟级首轮**：在 `659d76e2063a0daae9ce77de4d7005f420dc267d` 冻结协议/配置；0分钟拟合源变换，15→30校准，测试30→60/60→120。velocity 非负尺度归零，主描述判据未通过。后验基线场中心化后 pooled 方向cos为 +0.379/+0.329，仅是探索线索；2000 HVG中1025个尾部γ为0（291个基线完全无U，734个U仅出现在尾部之外）。见 `docs/w5_scntseq_results.md`、`outputs/w5_scntseq_evaluation_v1/`、`outputs/w5_scntseq_direction_audit_v1/`。该系列全部时点已读，后续改版只能称探索。W4+W5共61项测试通过。
+- sci-fate total/new 已下载并对齐，缺基因级 S/U，生物学效应仍未读取；MIX-seq raw 尚未核实。详见 `docs/w4_external_data_audit.md`。
 - MeRLin Day0 已有源侧数据审查（247 克隆、3785 细胞），不能再写“等待取得 Day0”。但 Day0→Day21 构成预测仍受源目标克隆映射/小类样本不足限制；原五类协议不是现成可运行的短时任务。
 - 只用物理 GPU0–3；当前线性预测/数据处理以 CPU 为主。新 W4 代码在 `scripts/phase0/w4_*.py`，不修改旧 `src/` 或覆盖旧结果。
 
@@ -42,7 +43,7 @@
 | 核心设计 | static / vel_pool / vel_pool_Uswap 为 H1 三臂，另有 vel_mean / direct_U_pool / pseudo_S |
 | 当前观察 | 正式 H1 未通过；H7 直接 U 相对当前静态有 1.82% TF 等权增益；开发 2.3% 不是正式成功 |
 | 机制线索 | 原生 GFG 输出方向对 U 较不敏感；直接 U 与解析速度的下游贡献需分开验证 |
-| 下一步 | 收齐设计校准，做速度构造不如直接 U 的归因与小时级验证；不加大 router 来替代未通过的 H1 |
+| 下一步 | 优先定位基线场偏置、稀疏尾部 γ 与尺度迁移；scNT-seq 后续是探索，独立确认需新系列；不加大 router 替代未通过的检验 |
 
 ---
 

@@ -1,6 +1,6 @@
 # W4-1 小时级外部数据：来源与技术落地审计
 
-日期：2026-10-17。范围：技术 QC；预注册仍为草案，未计算任何扰动效应、组间表达差异、PCA、速度或预测指标。
+日期：2026-10-17。本文主体记录技术 QC 阶段，当时未计算响应/速度/预测。后续 scNT-seq 分钟级协议已在 `659d76e2063a0daae9ce77de4d7005f420dc267d` 冻结并完成首轮科学分析，结果独立记录于 `docs/w5_scntseq_results.md`；不把技术审计当作预测成绩。
 
 ## 已完成：sci-fate total/new 原始矩阵落地
 
@@ -86,9 +86,9 @@ GEO labeling 管线先提取外显子和内含子 reads，再按 T→C 事件区
 
 此来源补充晚于配对文件生成，独立保存为 `outputs/w4_external_scntseq_pairing_v2/upstream_selection_audit.json`；未改写已冻结 h5ad 的计数或哈希。h5ad 内“上游选择尚未知”的简短说明应结合本补充解读：Ex 命名输入已核实，完整 Ex/QC 判据仍未知。
 
-### 下一阶段科学建议（尚未执行，另行冻结）
+### 技术落地时的科学建议（历史；现已另行冻结并执行首轮）
 
-该数据目前是最容易落地的分钟/小时级双模态外部候选，但本轮只完成技术 QC，尚未替换或冻结外部科学协议。
+以下建议形成于技术配对完成时；随后按 `PLANS/w5_prereg_addendum.md` 固定细则，已实际运行 30→60、60→120 分钟预测。首轮 velocity 未胜 identity；后验基线场中心化出现方向线索，不能替代首轮结果。完整数值见 `docs/w5_scntseq_results.md`。
 
 - 只有五个时间点，应优先做机制描述或 rolling-origin 预测；不训练高维转移矩阵，不把大量细胞/基因当独立实验重复。
 - 候选方案是在 0 min 基线估计 U/S 的 γ 后冻结；在当前 KCl 响应源时刻重新拟合稳态 γ，可能把群体反应吸收入基线。该选择需在看效应前写入协议。
@@ -113,7 +113,7 @@ MeRLin 的旧“缺 Day0”说法已经过期：最新 `docs/w3_results.md` 记�
 
 Kang 的设计依据为 [GSE96583](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96583)；文献中的响应异质性不等于我们已完成的多峰检验。PerturbSci-Kinetics 的主屏明确选择较长 CRISPRi 窗口以接近稳态；论文另有部分单基因 pulse-chase 验证，不能混同为完整 pooled screen 的多时点目标。[PerturbSci-Kinetics 原论文](https://www.nature.com/articles/s41587-023-01948-9)
 
-本次不新增这三套数据的训练或生物学分析。当前最实质的新进展是 scNT-seq 模态缺口被技术补齐；**不是 velocity 的预测阳性**。
+本次不新增这三套数据的训练或生物学分析。scNT-seq 的模态配对已进入独立分钟级分析；其首轮结果与后验诊断见 W5 报告，不是已建立 velocity 的预测阳性。
 
 ## 执行记录
 

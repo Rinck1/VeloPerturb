@@ -56,6 +56,15 @@ def test_nonnegative_scale_and_physical_duration():
         np.broadcast_to(1+60*feature, (len(minutes.ARMS),3)))
 
 
+def test_posthoc_oracle_is_only_a_directional_ceiling():
+    from w5_scntseq_direction_audit import oracle_direction
+    a = np.array([1.,0.]); b = np.array([1.,1.])
+    result = oracle_direction(a,b,30)
+    np.testing.assert_allclose(result['retrospective_1d_gain_ceiling'], .5)
+    np.testing.assert_allclose(result['retrospective_nonnegative_scale'], 1/30)
+    assert oracle_direction(a,-a,30)['retrospective_1d_gain_ceiling'] == 0
+
+
 def test_first_prediction_freezes_before_next_source_and_last_target_stays_sealed(fixture, tmp_path, monkeypatch):
     repo, config_path, commit, obs = fixture
     output = tmp_path/'predictions'

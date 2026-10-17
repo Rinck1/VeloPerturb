@@ -72,7 +72,7 @@ H7 使用同一冻结误差、无新模型/子集：直接 U vs static 为 1.82%
 
 正式结果：[H1](../outputs/w4_h1_evaluation_v1/RESULTS.md)、[全部 TF/时间段/臂 CSV](../outputs/w4_h1_evaluation_v1/metrics.csv)、[H7](../outputs/w4_h7_evaluation_v1/RESULTS.md)。
 
-`outputs/w4_h1_calibration_wait_job_v1/` 已在 QC 完成后启动 16 TF、200 repeats×2 情形×3 rho 的纯合成完整设计校准，输出 `outputs/w4_h1_calibration_formal_v1/`。校准与固定复制并行，按冻结前登记的说明不据其结果改阈值。
+`outputs/w4_h1_calibration_wait_job_v1/` 已完成 16 TF、200 repeats×2 情形×3 rho 的纯合成完整设计校准，输出 `outputs/w4_h1_calibration_formal_v1/`。rho=0/0.5/0.9 的正例均检出200/200；零情形误报分别2/200、1/200、2/200（1%、0.5%、1%）。这是固定低维模拟假设下的设计行为，不是 PCA50/HVG2000 下实际 RENGE 的功效；不改变 H1 未通过的结果。
 
 ## 新增：no-JVP 轻量学习头已完成三 seed 开发
 
@@ -121,9 +121,11 @@ MSE 为 PCA-50 的逐维平方误差、先 TF 等权平均；“平均 MSE 降�
 
 ## 接下来按顺序做
 
-1. 收齐纯合成的完整设计校准，报告功效/误报率假设，不回改已完成 H1 判据。
+1. 完整设计校准已收齐；保留低维模拟与实际数据功效的区别，不回改已完成 H1 判据。
 2. 写 W5 补充计划，区分动力学变换损失、S 表示容量和 U 本身的测量信息；不事后删 TF 或选择重跑的主模型。
 3. 优先补齐小时/分钟级外部数据的独立分析规格，再做速度与短时变化的验证；当前不为 RENGE 加大 router。
 4. 固定 day2 起点的跨度分析可作为已定义次要分析继续，但不替代 H1。
+
+后续进展：scNT-seq 分钟级首轮与基线场/γ 支持度诊断已完成，见 [W5 结果](w5_scntseq_results.md)。
 
 本轮数据和线性预测以 CPU 为主；GPU0–3 已获授权，待有需要 GPU 的学习头/消融再调度，GPU4–7 未使用。
