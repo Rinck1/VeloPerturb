@@ -1,0 +1,22 @@
+{
+  "kind": "exploratory_scntseq_estimator_repair",
+  "original_predictions": "outputs/w5_scntseq_predictions_v1",
+  "data_path": "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_geo_labeling_dynamo_su_exact.h5ad",
+  "data_sha256": "208cc0b266d5a6d5bfbb18834f9f153402a7a3c93aaa9c9e4c27e29c96cefbd1",
+  "seed": 20261017,
+  "prior_spliced_units": 1.0,
+  "readout_ridge": 1.0,
+  "calibration_interval": [15, 30],
+  "test_intervals": [[30, 60], [60, 120]],
+  "estimators": ["tail", "pooled_shrink"],
+  "aggregations": ["mean", "pool"],
+  "centerings": ["raw", "baseline0"],
+  "kernels": ["linear", "cap", "decay"],
+  "models": ["velocity", "state_velocity"],
+  "primary_candidate": "pooled_shrink__pool__baseline0__state_velocity__decay",
+  "primary_comparators": ["identity", "state_history__decay", "state_U__decay"],
+  "router_enabled": false,
+  "gfg_jvp_enabled": false,
+  "original_results_overwritten": false,
+  "previously_scored_series": true
+}
