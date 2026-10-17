@@ -1,0 +1,429 @@
+{
+  "started_utc": "2026-10-17T02:54:36.225504+00:00",
+  "status": "complete",
+  "stage": "W4_0_existing_native_GFG_CPU_reaudit",
+  "kind": "development",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv-gpu/bin/python",
+    "scripts/phase0/w4_native_gfg_audit.py",
+    "--output",
+    "outputs/w4_native_gfg_audit_v1"
+  ],
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "executable": "/home/yuchang/wangjiaxuan/.venv-gpu/bin/python",
+  "platform": "Linux-5.10.134-16.3.al8.x86_64-x86_64-with-glibc2.32",
+  "cuda_visible_devices": "",
+  "cuda_device_order": null,
+  "config_hash": "4d8d79965e54b4f7a0bf6958eb2dbc39c648efd83e085e9fbe0a36a76166a473",
+  "inputs": [
+    {
+      "path": "/home/yuchang/wangjiaxuan/configs/w3_7_native_gfg_20261014.json",
+      "sha256": "933575a45f92dd35603ccb5ecb9ecd5cbfa69c51d50379091a8c484b75e51488"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/scripts/phase0/w4_native_gfg_audit.py",
+      "sha256": "cd8373d14d04f7e4b49363b217b62f5c4d42d332c0d1cc8352eb6d360865b866"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/scripts/phase0/w3_7_native_train.py",
+      "sha256": "9e7bf883e05008f380a3e484810183538536922d808c76c3f09b8be82ba4f4d1"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/scripts/phase0/w3_validation.py",
+      "sha256": "95f6621340dc02f5fa5c75500c930fbe0a9a5cdebf790fbf40bf9b05ec301929"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/input_v1/ready.json",
+      "sha256": "2c5595271d0a4e92328cc89f39a9ff8f80f698384b8541f0a4be0e9165be1211"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/input_v1/train.h5ad",
+      "sha256": "5bb9207716778e82615a6d35e3846d985ce1c5349137c05439db0fd217406be8"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed0_v1/ready.json",
+      "sha256": "2012812775cd442da1a8032ca698af752f80aa42b77445d74a3c367c1fea691a"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed0_v1/final.pth",
+      "sha256": "63ba415fcbe69a176fdb12a6ee27b25adc9fbbb720c4d22ea1e9e7662d21745d"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed0_v1/normalization.npz",
+      "sha256": "9bf1665c1d162c858b38e18d40a9afe1edebb3a79a485344603f4159fb7b3c59"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed0_v1/train_source_velocities.npz",
+      "sha256": "5042999987582e266d2558949619cbb7507fc7bbbc1d50e3938018711eff1d51"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu0_20261014_v1/seed0/summary.json",
+      "sha256": "2012812775cd442da1a8032ca698af752f80aa42b77445d74a3c367c1fea691a"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu0_20261014_v1/seed0/U_sensitivity.csv",
+      "sha256": "736cec3eaf253fcf39c18319d5cb66a43f590d970a9f0de33de75e5cabf3931e"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu0_20261014_v1/seed0/controls.json",
+      "sha256": "76942c90cc380f1ce97fbc07be13ddff2e2f28ed07b9d348f2d98260c19c41b2"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu0_20261014_v1/seed0/provenance.json",
+      "sha256": "8a710afe09b0dd45ab825b26c3e23541a90e227b072a48e8a75d198bc4c37d04"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed1_v1/ready.json",
+      "sha256": "6e3eca8712bc8a9f02a4013f2f6ec26e6a683e659dfa62a4b5db433c172ac60a"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed1_v1/final.pth",
+      "sha256": "6788c2c9080cfd760ddbe7d882c082b50dab6ef85709053b8d2884ec82bb9347"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed1_v1/normalization.npz",
+      "sha256": "9bf1665c1d162c858b38e18d40a9afe1edebb3a79a485344603f4159fb7b3c59"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed1_v1/train_source_velocities.npz",
+      "sha256": "ca6c2be59bfeb21426aebf654aa09cd754f0ac4a79debaa2bc3805fc4208a95b"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu1_20261014_v1/seed1/summary.json",
+      "sha256": "6e3eca8712bc8a9f02a4013f2f6ec26e6a683e659dfa62a4b5db433c172ac60a"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu1_20261014_v1/seed1/U_sensitivity.csv",
+      "sha256": "fbb45d79ad77f11c9750edb167283bec8e8330c2c211aaee032f5bb65b726ccf"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu1_20261014_v1/seed1/controls.json",
+      "sha256": "76942c90cc380f1ce97fbc07be13ddff2e2f28ed07b9d348f2d98260c19c41b2"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu1_20261014_v1/seed1/provenance.json",
+      "sha256": "eede964137bccd96915d040d3230e591ea424af9c2b374a2d256a902d23f1774"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed2_v1/ready.json",
+      "sha256": "30dabf6ee3f99c5f97fef850690674c93a2248d368953bf6ed5a7d1463f9f8f8"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed2_v1/final.pth",
+      "sha256": "f0898db9f1c2589ace42c7552d2ac7f890d5fdc1e16b76677a587609b8490830"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed2_v1/normalization.npz",
+      "sha256": "9bf1665c1d162c858b38e18d40a9afe1edebb3a79a485344603f4159fb7b3c59"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed2_v1/train_source_velocities.npz",
+      "sha256": "500d551f3597c145bb5b9196c7086e6854aac0fe957635b9a429ed65c0d885ee"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu2_20261014_v1/seed2/summary.json",
+      "sha256": "30dabf6ee3f99c5f97fef850690674c93a2248d368953bf6ed5a7d1463f9f8f8"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu2_20261014_v1/seed2/U_sensitivity.csv",
+      "sha256": "5870b6a977ea3e8375f538759886e570549a98ada87016a238a072e48007008f"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu2_20261014_v1/seed2/controls.json",
+      "sha256": "76942c90cc380f1ce97fbc07be13ddff2e2f28ed07b9d348f2d98260c19c41b2"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu2_20261014_v1/seed2/provenance.json",
+      "sha256": "bf6009f0575e437317d9814919c198db816a73963112c13be21f0a63b8318bfd"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/input_v1/ready.json",
+      "sha256": "b2ea08796111cfbcbf06796d231b5f68a3ed60ff757187120099df4539f8b74b"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/input_v1/train.h5ad",
+      "sha256": "9b381561d406ee51e582d7e4a3a22fe3c3a7634cc4bf6ea7927953c6553e995a"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed0_v1/ready.json",
+      "sha256": "c1bad60affa77e5315eae92dd98b8601dc3282a10a02ca7da5cec436508db84b"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed0_v1/final.pth",
+      "sha256": "7a27ac05ee438df09fe9ddd674fa94a1d4c659438aa8295ad97104ef7b397eec"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed0_v1/normalization.npz",
+      "sha256": "805fcacf427474dc809654562397d37bb936cceaa653214ecaff6cb41a8c2150"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed0_v1/train_source_velocities.npz",
+      "sha256": "ce3df3804b9c8a6f3dd0a6abf637cf93ff47ae1b319e104e7c5997705c3f2a60"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed0/summary.json",
+      "sha256": "c1bad60affa77e5315eae92dd98b8601dc3282a10a02ca7da5cec436508db84b"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed0/U_sensitivity.csv",
+      "sha256": "99932754330afac4a21c33406f651bb124cccc7dad10f3f78485c07e16c0bbd4"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed0/controls.json",
+      "sha256": "1fd4219b5f3257930db5a7bd6eeff398b592a9277e16a524ec52d05f9f59f50f"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed0/provenance.json",
+      "sha256": "c6d6a9f55aa22b20348e975fc482cd0033a66cc6fddf2b90dcd6a46925d226fc"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed1_v1/ready.json",
+      "sha256": "d27c507d23db85ac1f6b815c94a6e264415da5a349697dd9b32d169d0332d7df"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed1_v1/final.pth",
+      "sha256": "58e3ecc3cf63811772089d052e9d09def1221d21f9546bdb146c1501e415eef6"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed1_v1/normalization.npz",
+      "sha256": "805fcacf427474dc809654562397d37bb936cceaa653214ecaff6cb41a8c2150"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed1_v1/train_source_velocities.npz",
+      "sha256": "e78da1ef19a1e178d4aef83b10c43126625e9c433f6aedaddef4a445440757e1"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed1/summary.json",
+      "sha256": "d27c507d23db85ac1f6b815c94a6e264415da5a349697dd9b32d169d0332d7df"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed1/U_sensitivity.csv",
+      "sha256": "ff9df56a190fbe97d154e7d3dfececdeb9f45d6aeb92010136d9f69cb6155043"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed1/controls.json",
+      "sha256": "1fd4219b5f3257930db5a7bd6eeff398b592a9277e16a524ec52d05f9f59f50f"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed1/provenance.json",
+      "sha256": "8151186873a889313751e71dbec7211e5bb971564570c2349497b1cef605087b"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed2_v1/ready.json",
+      "sha256": "8aae5a71912e9a3057b3a8121d10827a8b6080f0fa38e1bc656c3100578fa210"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed2_v1/final.pth",
+      "sha256": "ad451a1a314f3df0385fd05631b8fc3875e3c7ec680cd298adaecd3154dcbab5"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed2_v1/normalization.npz",
+      "sha256": "805fcacf427474dc809654562397d37bb936cceaa653214ecaff6cb41a8c2150"
+    },
+    {
+      "path": "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed2_v1/train_source_velocities.npz",
+      "sha256": "b69865fb812aa2e95d7167efd9be708e12162a063007be22d521870e2de1b196"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed2/summary.json",
+      "sha256": "8aae5a71912e9a3057b3a8121d10827a8b6080f0fa38e1bc656c3100578fa210"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed2/U_sensitivity.csv",
+      "sha256": "e4fbdf3aa4bb7004e5aed6f328d81fe54d8dec98189eb490cf047688a261aaae"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed2/controls.json",
+      "sha256": "1fd4219b5f3257930db5a7bd6eeff398b592a9277e16a524ec52d05f9f59f50f"
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed2/provenance.json",
+      "sha256": "9eff9a35c1a873b10bb0219e2cc3b877e6658dab5745de5b21ac131e1eae97d8"
+    }
+  ],
+  "code": {
+    "__init__.py": "bec2b5ee3a0541955d92eb20e8d90941254117c5fc710adaf6354415175aa54a",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "artifacts.py": "37e65c574fe8421f193475065c0a111f0c485bd274030d5774f3b21b4fdade0f",
+    "cli.py": "a1cabf9ee86d81f4b97f9f1124e2a8614f2dae93b6fd710bf3fc6f5cc7a1b09b",
+    "contracts.py": "2781403db226935b18d7d542462b955709c90c19dea11c428eab2f676945f7fe",
+    "coupling.py": "00147aaf64c3f01059faeb0f4a89c67839fc9b7c9a2975b7eead7255c3489a0e",
+    "download.py": "dbc6b66ea71d5c5b483390ab5476a01feaf656192ee23b1795ff7df644d1f5e6",
+    "experiments.py": "9461b3ab3a6528450c4c2287d10bb2f4d0e3c0cea84555c5674099c8d2a69303",
+    "frozen_candidates.py": "26869815f09f3a67db28b7d4d4cb3ad64520d2aa4931753020a8dfd7cae1b9d7",
+    "full_components.py": "aad8c7bae2182042ebc6fd4dd6b9e8fa7947acce0bbf405663ad58ec0a95840b",
+    "full_experiments.py": "4f22c8b233c68174d3777ed94e5bd45259649a6e49864d96b747715b770050cf",
+    "full_model.py": "685c9f81cd907bf81b881a65bbb6925a4e8df2431c7580d96616e6d9f840a7f4",
+    "full_smoke.py": "191a8969f600e8bf2b2bca4f7c260b730bebc94161d3095a9bcdb5ad344c8b97",
+    "full_training.py": "5e6115406d730ed87c7f288f700822e510292614d2427467bd47ab2dead7e9f3",
+    "gfg.py": "a3adcf6fdf13721cc02ceb4afbec877b1eefd5ed1bddfd76fb61639d21722fc8",
+    "gfg_direct_router.py": "ea571e2e07498cccdfb360edb51c8382b130eded89f7d8b20060d0710c92edc1",
+    "gfg_experiments.py": "b86c1c266920a8bc311dd2f3d2baed16069148c996e5fc4c5b856e39fb964f37",
+    "gfg_inputs.py": "37c8544b5d494ddcff69a03e95579e33ce52a038b7a29a0ad0d0c387eca8d6aa",
+    "gfg_resume.py": "a0acc9529667896ceb14a3ff947737afc45e6c5efdd609fdbe7e00f091e385c3",
+    "gfg_synthetic.py": "87b0d4c9bf53f3625cb5d9f242adb5358f4de35942c6ddaf391e67de1ed0538f",
+    "gpu_policy.py": "7c8480cc9b0470dd15fb18e8eea563268d4dcf23a0c66aa6d7657a0bd42cd46b",
+    "kang_cellot.py": "0057055673a10c9d31dd6d6fa7b136160040b0590699143e0c25a783b5969799",
+    "kang_data.py": "cb11c33f0a536b4f1aeccc4887f3ae551a154f13ff584831ffcfe604e9627e62",
+    "kang_evaluation.py": "8c9cf125bb4b5f812b69652e1f366ad8018bf9515be012c9b56bf2665ddfe28e",
+    "kang_experiments.py": "109e1e3ded63b512ccee7bb316643772d8c843c494beaa5ea8d7205e210e135f",
+    "kang_full.py": "600e222a0d258ab7285c63b9c6d332409a8dc8bf71728dfb4da1cc48971c21de",
+    "kang_scdfm.py": "95ee0efa0a4d9f7d5195ad1d93c40469a9031b3db8c1a9449f32c4f864c534cf",
+    "kang_schedule.py": "fc23e3df2ce170c1aec60b4b247d879978b8eab21da7082dffd3a18ffdc287df",
+    "kang_shared_metric_kernels.py": "2496fbec7588c057b855a031f9f24892fa642beb4a9a699fe0a44a8301435cdf",
+    "kang_shared_metrics.py": "5d85afa02084ecc36f853e2ca03f7fcaa91181c2b62b2e723a3d2b7156758c49",
+    "latent.py": "7d1bd83e558cef31c5db6484052b50001c81184a1f0b053029d9143143de85ec",
+    "metrics.py": "725037ca2fe11117ec9057ea99849c17fbfd6fcdbb4fc14e8cd6e2730d0c45fb",
+    "mixture_energy.py": "99010d8ef02437eef074410c70856d990339fdf8e20e7f992309b2bf3ba13dca",
+    "model.py": "10328cb1a4032ad3edbed71eb8ec3ad35e3600e8a3c522e16b3f0c71a7236fda",
+    "multimodal.py": "63ee49f1badf151bfd50a7a54733001fd855595fd821f70787feda8e44bbd486",
+    "pipeline_smoke.py": "a2a5b0cc50baecb0b8bcdac172f86044adbe8b11cf8bd570bd9da05c65507ba7",
+    "preprocess.py": "e5a94d380ca65c3792ac9fd404f824c5a28ecc96b76299e1bfec4dd2a297b65e",
+    "probes.py": "ef6706398aa3d4b59a454a47fb2821ee1dd94d5a46d084b8d539485fe380f946",
+    "protein_conditions.py": "da277724277408703e26073d955ba6c6de231bfc6400ba51eb98d6d745762d1a",
+    "protocol.py": "d59b3966a348c052bd697065930cebde6ea9d8eb7c189dd3ec09420602fb98e8",
+    "quality_audit.py": "b461b255917603f922790f3af24d706003a62e14b8b14f3d597a00cc7505c1fb",
+    "raw.py": "04eff44408ee4419194f6d3baec7c41c593d0ada3d5e2f2c09762c0b075810fa",
+    "router_increment.py": "c8d2cd31266dced4892c20e77762c5fca85c483077b2b2bc67c5793e5eb41aa5",
+    "smoke.py": "7effba5390193e8e03ca9a865524c6bb3e814b52bdc623b917301842ba35a611",
+    "splits.py": "aeacf2f93970a84b271572741306f05b2d972c03220788c224ce168588015f3f",
+    "synthetic.py": "83cac5e52156297597a65b4233c02af782dc9838daac224dbfb6d784b9646ba2",
+    "velocity_background.py": "1210ab508e9d6f1fd608fc9bdbc4303b074536e9089a09a0203ce0434ed6ee81",
+    "velocity_diagnostics.py": "8219578c83b80b16d7ef3352e57a4c64579c74da3202b9b3bd373769179d81e3",
+    "workflow.py": "dbe7ccad442cea01bef88504518ec8c847bab38bf9c87c2110ab74506b15f5fb"
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.14.1",
+    "PyYAML": "6.0.2",
+    "torch": "2.7.1",
+    "veloroute": "0.1.0",
+    "anndata": "0.10.9",
+    "pandas": "2.2.3",
+    "h5py": "3.12.1",
+    "scikit-learn": "1.6.1",
+    "fair-esm": null
+  },
+  "git_commit": "58f1954bd3cb54f83e1979a8d896efb28da8d0c3",
+  "control_seed": 20261014,
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/configs/w3_7_native_gfg_20261014.json": "933575a45f92dd35603ccb5ecb9ecd5cbfa69c51d50379091a8c484b75e51488",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_native_gfg_audit.py": "cd8373d14d04f7e4b49363b217b62f5c4d42d332c0d1cc8352eb6d360865b866",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w3_7_native_train.py": "9e7bf883e05008f380a3e484810183538536922d808c76c3f09b8be82ba4f4d1",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w3_validation.py": "95f6621340dc02f5fa5c75500c930fbe0a9a5cdebf790fbf40bf9b05ec301929",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/input_v1/ready.json": "2c5595271d0a4e92328cc89f39a9ff8f80f698384b8541f0a4be0e9165be1211",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/input_v1/train.h5ad": "5bb9207716778e82615a6d35e3846d985ce1c5349137c05439db0fd217406be8",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed0_v1/ready.json": "2012812775cd442da1a8032ca698af752f80aa42b77445d74a3c367c1fea691a",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed0_v1/final.pth": "63ba415fcbe69a176fdb12a6ee27b25adc9fbbb720c4d22ea1e9e7662d21745d",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed0_v1/normalization.npz": "9bf1665c1d162c858b38e18d40a9afe1edebb3a79a485344603f4159fb7b3c59",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed0_v1/train_source_velocities.npz": "5042999987582e266d2558949619cbb7507fc7bbbc1d50e3938018711eff1d51",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu0_20261014_v1/seed0/summary.json": "2012812775cd442da1a8032ca698af752f80aa42b77445d74a3c367c1fea691a",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu0_20261014_v1/seed0/U_sensitivity.csv": "736cec3eaf253fcf39c18319d5cb66a43f590d970a9f0de33de75e5cabf3931e",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu0_20261014_v1/seed0/controls.json": "76942c90cc380f1ce97fbc07be13ddff2e2f28ed07b9d348f2d98260c19c41b2",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu0_20261014_v1/seed0/provenance.json": "8a710afe09b0dd45ab825b26c3e23541a90e227b072a48e8a75d198bc4c37d04",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed1_v1/ready.json": "6e3eca8712bc8a9f02a4013f2f6ec26e6a683e659dfa62a4b5db433c172ac60a",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed1_v1/final.pth": "6788c2c9080cfd760ddbe7d882c082b50dab6ef85709053b8d2884ec82bb9347",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed1_v1/normalization.npz": "9bf1665c1d162c858b38e18d40a9afe1edebb3a79a485344603f4159fb7b3c59",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed1_v1/train_source_velocities.npz": "ca6c2be59bfeb21426aebf654aa09cd754f0ac4a79debaa2bc3805fc4208a95b",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu1_20261014_v1/seed1/summary.json": "6e3eca8712bc8a9f02a4013f2f6ec26e6a683e659dfa62a4b5db433c172ac60a",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu1_20261014_v1/seed1/U_sensitivity.csv": "fbb45d79ad77f11c9750edb167283bec8e8330c2c211aaee032f5bb65b726ccf",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu1_20261014_v1/seed1/controls.json": "76942c90cc380f1ce97fbc07be13ddff2e2f28ed07b9d348f2d98260c19c41b2",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu1_20261014_v1/seed1/provenance.json": "eede964137bccd96915d040d3230e591ea424af9c2b374a2d256a902d23f1774",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed2_v1/ready.json": "30dabf6ee3f99c5f97fef850690674c93a2248d368953bf6ed5a7d1463f9f8f8",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed2_v1/final.pth": "f0898db9f1c2589ace42c7552d2ac7f890d5fdc1e16b76677a587609b8490830",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed2_v1/normalization.npz": "9bf1665c1d162c858b38e18d40a9afe1edebb3a79a485344603f4159fb7b3c59",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/renge/seed2_v1/train_source_velocities.npz": "500d551f3597c145bb5b9196c7086e6854aac0fe957635b9a429ed65c0d885ee",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu2_20261014_v1/seed2/summary.json": "30dabf6ee3f99c5f97fef850690674c93a2248d368953bf6ed5a7d1463f9f8f8",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu2_20261014_v1/seed2/U_sensitivity.csv": "5870b6a977ea3e8375f538759886e570549a98ada87016a238a072e48007008f",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu2_20261014_v1/seed2/controls.json": "76942c90cc380f1ce97fbc07be13ddff2e2f28ed07b9d348f2d98260c19c41b2",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_renge_gpu2_20261014_v1/seed2/provenance.json": "bf6009f0575e437317d9814919c198db816a73963112c13be21f0a63b8318bfd",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/input_v1/ready.json": "b2ea08796111cfbcbf06796d231b5f68a3ed60ff757187120099df4539f8b74b",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/input_v1/train.h5ad": "9b381561d406ee51e582d7e4a3a22fe3c3a7634cc4bf6ea7927953c6553e995a",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed0_v1/ready.json": "c1bad60affa77e5315eae92dd98b8601dc3282a10a02ca7da5cec436508db84b",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed0_v1/final.pth": "7a27ac05ee438df09fe9ddd674fa94a1d4c659438aa8295ad97104ef7b397eec",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed0_v1/normalization.npz": "805fcacf427474dc809654562397d37bb936cceaa653214ecaff6cb41a8c2150",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed0_v1/train_source_velocities.npz": "ce3df3804b9c8a6f3dd0a6abf637cf93ff47ae1b319e104e7c5997705c3f2a60",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed0/summary.json": "c1bad60affa77e5315eae92dd98b8601dc3282a10a02ca7da5cec436508db84b",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed0/U_sensitivity.csv": "99932754330afac4a21c33406f651bb124cccc7dad10f3f78485c07e16c0bbd4",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed0/controls.json": "1fd4219b5f3257930db5a7bd6eeff398b592a9277e16a524ec52d05f9f59f50f",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed0/provenance.json": "c6d6a9f55aa22b20348e975fc482cd0033a66cc6fddf2b90dcd6a46925d226fc",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed1_v1/ready.json": "d27c507d23db85ac1f6b815c94a6e264415da5a349697dd9b32d169d0332d7df",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed1_v1/final.pth": "58e3ecc3cf63811772089d052e9d09def1221d21f9546bdb146c1501e415eef6",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed1_v1/normalization.npz": "805fcacf427474dc809654562397d37bb936cceaa653214ecaff6cb41a8c2150",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed1_v1/train_source_velocities.npz": "e78da1ef19a1e178d4aef83b10c43126625e9c433f6aedaddef4a445440757e1",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed1/summary.json": "d27c507d23db85ac1f6b815c94a6e264415da5a349697dd9b32d169d0332d7df",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed1/U_sensitivity.csv": "ff9df56a190fbe97d154e7d3dfececdeb9f45d6aeb92010136d9f69cb6155043",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed1/controls.json": "1fd4219b5f3257930db5a7bd6eeff398b592a9277e16a524ec52d05f9f59f50f",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed1/provenance.json": "8151186873a889313751e71dbec7211e5bb971564570c2349497b1cef605087b",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed2_v1/ready.json": "8aae5a71912e9a3057b3a8121d10827a8b6080f0fa38e1bc656c3100578fa210",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed2_v1/final.pth": "ad451a1a314f3df0385fd05631b8fc3875e3c7ec680cd298adaecd3154dcbab5",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed2_v1/normalization.npz": "805fcacf427474dc809654562397d37bb936cceaa653214ecaff6cb41a8c2150",
+    "/data/yuchang/veloroute_w3_20261014/native_gfg/merlin/seed2_v1/train_source_velocities.npz": "b69865fb812aa2e95d7167efd9be708e12162a063007be22d521870e2de1b196",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed2/summary.json": "8aae5a71912e9a3057b3a8121d10827a8b6080f0fa38e1bc656c3100578fa210",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed2/U_sensitivity.csv": "e4fbdf3aa4bb7004e5aed6f328d81fe54d8dec98189eb490cf047688a261aaae",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed2/controls.json": "1fd4219b5f3257930db5a7bd6eeff398b592a9277e16a524ec52d05f9f59f50f",
+    "/home/yuchang/wangjiaxuan/outputs/w3_7_native_merlin_gpu3_20261014_v1/seed2/provenance.json": "9eff9a35c1a873b10bb0219e2cc3b877e6658dab5745de5b21ac131e1eae97d8"
+  },
+  "runtime_seconds": 18.89872946217656,
+  "finished_utc": "2026-10-17T02:54:55.120696+00:00",
+  "outputs": {
+    "RESULTS.md": "fd4d3299720729f53c27ca9668026436115844459ec17bb6cb27ef75e4de3f42",
+    "code_snapshot/__init__.py": "bec2b5ee3a0541955d92eb20e8d90941254117c5fc710adaf6354415175aa54a",
+    "code_snapshot/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "code_snapshot/artifacts.py": "37e65c574fe8421f193475065c0a111f0c485bd274030d5774f3b21b4fdade0f",
+    "code_snapshot/cli.py": "a1cabf9ee86d81f4b97f9f1124e2a8614f2dae93b6fd710bf3fc6f5cc7a1b09b",
+    "code_snapshot/contracts.py": "2781403db226935b18d7d542462b955709c90c19dea11c428eab2f676945f7fe",
+    "code_snapshot/coupling.py": "00147aaf64c3f01059faeb0f4a89c67839fc9b7c9a2975b7eead7255c3489a0e",
+    "code_snapshot/download.py": "dbc6b66ea71d5c5b483390ab5476a01feaf656192ee23b1795ff7df644d1f5e6",
+    "code_snapshot/experiments.py": "9461b3ab3a6528450c4c2287d10bb2f4d0e3c0cea84555c5674099c8d2a69303",
+    "code_snapshot/frozen_candidates.py": "26869815f09f3a67db28b7d4d4cb3ad64520d2aa4931753020a8dfd7cae1b9d7",
+    "code_snapshot/full_components.py": "aad8c7bae2182042ebc6fd4dd6b9e8fa7947acce0bbf405663ad58ec0a95840b",
+    "code_snapshot/full_experiments.py": "4f22c8b233c68174d3777ed94e5bd45259649a6e49864d96b747715b770050cf",
+    "code_snapshot/full_model.py": "685c9f81cd907bf81b881a65bbb6925a4e8df2431c7580d96616e6d9f840a7f4",
+    "code_snapshot/full_smoke.py": "191a8969f600e8bf2b2bca4f7c260b730bebc94161d3095a9bcdb5ad344c8b97",
+    "code_snapshot/full_training.py": "5e6115406d730ed87c7f288f700822e510292614d2427467bd47ab2dead7e9f3",
+    "code_snapshot/gfg.py": "a3adcf6fdf13721cc02ceb4afbec877b1eefd5ed1bddfd76fb61639d21722fc8",
+    "code_snapshot/gfg_direct_router.py": "ea571e2e07498cccdfb360edb51c8382b130eded89f7d8b20060d0710c92edc1",
+    "code_snapshot/gfg_experiments.py": "b86c1c266920a8bc311dd2f3d2baed16069148c996e5fc4c5b856e39fb964f37",
+    "code_snapshot/gfg_inputs.py": "37c8544b5d494ddcff69a03e95579e33ce52a038b7a29a0ad0d0c387eca8d6aa",
+    "code_snapshot/gfg_resume.py": "a0acc9529667896ceb14a3ff947737afc45e6c5efdd609fdbe7e00f091e385c3",
+    "code_snapshot/gfg_synthetic.py": "87b0d4c9bf53f3625cb5d9f242adb5358f4de35942c6ddaf391e67de1ed0538f",
+    "code_snapshot/gpu_policy.py": "7c8480cc9b0470dd15fb18e8eea563268d4dcf23a0c66aa6d7657a0bd42cd46b",
+    "code_snapshot/kang_cellot.py": "0057055673a10c9d31dd6d6fa7b136160040b0590699143e0c25a783b5969799",
+    "code_snapshot/kang_data.py": "cb11c33f0a536b4f1aeccc4887f3ae551a154f13ff584831ffcfe604e9627e62",
+    "code_snapshot/kang_evaluation.py": "8c9cf125bb4b5f812b69652e1f366ad8018bf9515be012c9b56bf2665ddfe28e",
+    "code_snapshot/kang_experiments.py": "109e1e3ded63b512ccee7bb316643772d8c843c494beaa5ea8d7205e210e135f",
+    "code_snapshot/kang_full.py": "600e222a0d258ab7285c63b9c6d332409a8dc8bf71728dfb4da1cc48971c21de",
+    "code_snapshot/kang_scdfm.py": "95ee0efa0a4d9f7d5195ad1d93c40469a9031b3db8c1a9449f32c4f864c534cf",
+    "code_snapshot/kang_schedule.py": "fc23e3df2ce170c1aec60b4b247d879978b8eab21da7082dffd3a18ffdc287df",
+    "code_snapshot/kang_shared_metric_kernels.py": "2496fbec7588c057b855a031f9f24892fa642beb4a9a699fe0a44a8301435cdf",
+    "code_snapshot/kang_shared_metrics.py": "5d85afa02084ecc36f853e2ca03f7fcaa91181c2b62b2e723a3d2b7156758c49",
+    "code_snapshot/latent.py": "7d1bd83e558cef31c5db6484052b50001c81184a1f0b053029d9143143de85ec",
+    "code_snapshot/metrics.py": "725037ca2fe11117ec9057ea99849c17fbfd6fcdbb4fc14e8cd6e2730d0c45fb",
+    "code_snapshot/mixture_energy.py": "99010d8ef02437eef074410c70856d990339fdf8e20e7f992309b2bf3ba13dca",
+    "code_snapshot/model.py": "10328cb1a4032ad3edbed71eb8ec3ad35e3600e8a3c522e16b3f0c71a7236fda",
+    "code_snapshot/multimodal.py": "63ee49f1badf151bfd50a7a54733001fd855595fd821f70787feda8e44bbd486",
+    "code_snapshot/pipeline_smoke.py": "a2a5b0cc50baecb0b8bcdac172f86044adbe8b11cf8bd570bd9da05c65507ba7",
+    "code_snapshot/preprocess.py": "e5a94d380ca65c3792ac9fd404f824c5a28ecc96b76299e1bfec4dd2a297b65e",
+    "code_snapshot/probes.py": "ef6706398aa3d4b59a454a47fb2821ee1dd94d5a46d084b8d539485fe380f946",
+    "code_snapshot/protein_conditions.py": "da277724277408703e26073d955ba6c6de231bfc6400ba51eb98d6d745762d1a",
+    "code_snapshot/protocol.py": "d59b3966a348c052bd697065930cebde6ea9d8eb7c189dd3ec09420602fb98e8",
+    "code_snapshot/quality_audit.py": "b461b255917603f922790f3af24d706003a62e14b8b14f3d597a00cc7505c1fb",
+    "code_snapshot/raw.py": "04eff44408ee4419194f6d3baec7c41c593d0ada3d5e2f2c09762c0b075810fa",
+    "code_snapshot/router_increment.py": "c8d2cd31266dced4892c20e77762c5fca85c483077b2b2bc67c5793e5eb41aa5",
+    "code_snapshot/smoke.py": "7effba5390193e8e03ca9a865524c6bb3e814b52bdc623b917301842ba35a611",
+    "code_snapshot/splits.py": "aeacf2f93970a84b271572741306f05b2d972c03220788c224ce168588015f3f",
+    "code_snapshot/synthetic.py": "83cac5e52156297597a65b4233c02af782dc9838daac224dbfb6d784b9646ba2",
+    "code_snapshot/velocity_background.py": "1210ab508e9d6f1fd608fc9bdbc4303b074536e9089a09a0203ce0434ed6ee81",
+    "code_snapshot/velocity_diagnostics.py": "8219578c83b80b16d7ef3352e57a4c64579c74da3202b9b3bd373769179d81e3",
+    "code_snapshot/workflow.py": "dbe7ccad442cea01bef88504518ec8c847bab38bf9c87c2110ab74506b15f5fb",
+    "config.yaml": "a8aa131dc09b167b427d5108d7f47e1062a38d27dc3b35597dee4b71d93fed6b",
+    "metrics.csv": "88a4ba950b508f164c150842ea73b0fe93d8884de00ec06dfd0c4f7f84beaf33",
+    "summary.json": "64211f999adbb8b1907c46bf4fde2962e02720039f8600ee3c88816b4f103540"
+  }
+}
