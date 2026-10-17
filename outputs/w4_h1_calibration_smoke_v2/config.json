@@ -1,0 +1,70 @@
+{
+  "git_commit": "f3a2fd5058d21c2006127b6f6676a1dbc1c74d1e",
+  "seed": 20261017,
+  "command": [
+    "scripts/phase0/w4_h1_calibration.py",
+    "--output",
+    "outputs/w4_h1_calibration_smoke_v2",
+    "--mode",
+    "smoke",
+    "--n-tfs",
+    "8",
+    "--replicates",
+    "2",
+    "--rho-grid",
+    "0,0.5,0.9",
+    "--cells",
+    "12",
+    "--genes",
+    "12",
+    "--dimensions",
+    "6",
+    "--bootstrap",
+    "10000",
+    "--seed",
+    "20261017"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_h1_calibration.py": "10d902dc8503ec3378b7491ac4d9f9397d0bc49caeed585fc9e17d139e23b3b4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "38baa79b5e9bdad5ff7a1458d6e7238778b4e83d1fbe72d064d85664b7ff03cc",
+  "runtime_seconds": 0.005882110446691513,
+  "mode": "smoke",
+  "geometry": {
+    "n_tfs": 8,
+    "cells": 12,
+    "genes": 12,
+    "dimensions": 6,
+    "clusters": 4,
+    "embedding_dimensions": 8,
+    "library": 10000,
+    "innovation_amplitude": 0.4,
+    "response_strength": 0.5,
+    "cell_log_sd": 0.02
+  },
+  "rho_grid": [
+    0.0,
+    0.5,
+    0.9
+  ],
+  "replicates": 2,
+  "bootstrap": 10000,
+  "algorithm_seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "primary_arms": [
+    "static",
+    "vel_pool",
+    "vel_pool_Uswap"
+  ],
+  "prediction_cache": true,
+  "qc_manifest": null,
+  "formal_does_not_mean_empirical_RENGE_power": true
+}
