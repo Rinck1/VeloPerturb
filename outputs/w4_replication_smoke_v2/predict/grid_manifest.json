@@ -1,0 +1,149 @@
+{
+  "git_commit": "73a9badcc0c09c74c5a7f38b6f77828cae51e749",
+  "seed": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "command": [
+    "scripts/phase0/w4_replication.py",
+    "synthetic-smoke",
+    "--output",
+    "outputs/w4_replication_smoke_v2"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_replication.py": "762e575ac6c654fc292581a6308243fc5b10bc164b8663ee63da6901f1d15cdd",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/protocol_lock.json": "a323a7251370b4b05e1f7e39e768a774ecb2eeaa798f5bc717b1b8c0d767c21c",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/qc_manifest.json": "93bbef72dac1e16196282c1979421db782f53850614f4cb54b3b27a374c99c25",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/PLANS/w4_shorttime_prereg.md": "9f87d31079d280682ca64bd3125950da7c74367c474ce9e37f7d8d2e35155801",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/day2.h5ad": "d67b2fe089af9992c3d5350abd303e50e3793497505402b37a7959e93e094c0f",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/day3.h5ad": "093492073eca403b25383fac3cf518b807b165e944957d687512d92e0994c020",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/day4.h5ad": "c0d978050a49ea47aa209f1882fc26db65035643777565d1d36f4d73cb757623",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/embeddings.npz": "f5b83cf24ea8956fe32b6fc05be9a3936acbf777f6083660fc5fba20c060537e"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "66e6dd219930f4acafa8c57a036db8feda34abee32f3ffa583fb73340ce5c0a9",
+  "runtime_seconds": 0.5800931081175804,
+  "status": "H1_GRID_PREDICTIONS_FROZEN",
+  "kind": "synthetic_fixture",
+  "protocol_lock_sha256": "a323a7251370b4b05e1f7e39e768a774ecb2eeaa798f5bc717b1b8c0d767c21c",
+  "protocol_freeze_commit": "SYNTHETIC_ONLY_NO_GIT_FREEZE",
+  "H1_TFs": [
+    "SYNTH_TF0",
+    "SYNTH_TF1",
+    "SYNTH_TF2",
+    "SYNTH_TF3",
+    "SYNTH_TF4"
+  ],
+  "intervals": [
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "arms": [
+    "static",
+    "vel_pool",
+    "vel_mean",
+    "vel_pool_Uswap",
+    "pseudo_S",
+    "direct_U_pool"
+  ],
+  "algorithm_seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "records": [
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "SYNTH_TF0",
+      "directory": "day2_to_day3/fold_000",
+      "fold_manifest_sha256": "a52662c13397eb7f5a07170c3efe4f79e7b0aaa419c5288a84427d76a904b553"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "SYNTH_TF1",
+      "directory": "day2_to_day3/fold_001",
+      "fold_manifest_sha256": "01514e699aeb0ca874d0723bcc395729489a8cc9cb89fbc9244bce20117858bc"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "SYNTH_TF2",
+      "directory": "day2_to_day3/fold_002",
+      "fold_manifest_sha256": "2d6158e661074ed1ece2dd1ddfe7d4dc3a04ea00293087cb567728e0b1b7b6fa"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "SYNTH_TF3",
+      "directory": "day2_to_day3/fold_003",
+      "fold_manifest_sha256": "59d42e42b5c5fc76b78bcc0262a41ee93dd8420d1676317f9e5d548b67221b19"
+    },
+    {
+      "source_day": 2,
+      "target_day": 3,
+      "TF": "SYNTH_TF4",
+      "directory": "day2_to_day3/fold_004",
+      "fold_manifest_sha256": "2495a498403a65f764107014cdaa9061647263bd857cc76d2695e971a749c64d"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "SYNTH_TF0",
+      "directory": "day3_to_day4/fold_000",
+      "fold_manifest_sha256": "da91ec7ded9c1324b47d0498fa18480b7bbe6bb3e206b934a559b85fb72d4ec6"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "SYNTH_TF1",
+      "directory": "day3_to_day4/fold_001",
+      "fold_manifest_sha256": "600781217bca3b040d95619f3b7615a8f32662cc62ba4cd14553c801efc7a26f"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "SYNTH_TF2",
+      "directory": "day3_to_day4/fold_002",
+      "fold_manifest_sha256": "9f353e1b2cfddddd3021dfcb30b76b76c649f73cfde525c5d900a154a475d45b"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "SYNTH_TF3",
+      "directory": "day3_to_day4/fold_003",
+      "fold_manifest_sha256": "7a5369590e1a05114fa51d37ac75b8da48572ec0f156d968fb1cdacd75367cd3"
+    },
+    {
+      "source_day": 3,
+      "target_day": 4,
+      "TF": "SYNTH_TF4",
+      "directory": "day3_to_day4/fold_004",
+      "fold_manifest_sha256": "12dc280d64d96c9aeb83f7f53b9cedabe2f0db65e6c93f38ba24d46e71136306"
+    }
+  ],
+  "code_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_replication.py": "762e575ac6c654fc292581a6308243fc5b10bc164b8663ee63da6901f1d15cdd",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "complete_grid_size": 10,
+  "per_fold_heldout_future_expression_used": false,
+  "cross_fold_training_future_labels_are_legal": true
+}

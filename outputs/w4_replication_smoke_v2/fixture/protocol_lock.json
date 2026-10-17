@@ -1,0 +1,79 @@
+{
+  "schema": "w4_h1_replication_lock_v1",
+  "kind": "synthetic_fixture",
+  "freeze_commit": "SYNTHETIC_ONLY_NO_GIT_FREEZE",
+  "protocol_path": "PLANS/w4_shorttime_prereg.md",
+  "protocol_file_sha256": "9f87d31079d280682ca64bd3125950da7c74367c474ce9e37f7d8d2e35155801",
+  "qc_manifest_path": "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/qc_manifest.json",
+  "QC_manifest_sha256": "93bbef72dac1e16196282c1979421db782f53850614f4cb54b3b27a374c99c25",
+  "data_hashes": {
+    "day2": {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/day2.h5ad",
+      "sha256": "d67b2fe089af9992c3d5350abd303e50e3793497505402b37a7959e93e094c0f"
+    },
+    "day3": {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/day3.h5ad",
+      "sha256": "093492073eca403b25383fac3cf518b807b165e944957d687512d92e0994c020"
+    },
+    "day4": {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/day4.h5ad",
+      "sha256": "c0d978050a49ea47aa209f1882fc26db65035643777565d1d36f4d73cb757623"
+    },
+    "embeddings": {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/embeddings.npz",
+      "sha256": "f5b83cf24ea8956fe32b6fc05be9a3936acbf777f6083660fc5fba20c060537e"
+    }
+  },
+  "H1_TFs": [
+    "SYNTH_TF0",
+    "SYNTH_TF1",
+    "SYNTH_TF2",
+    "SYNTH_TF3",
+    "SYNTH_TF4"
+  ],
+  "intervals": [
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "arms": [
+    "static",
+    "vel_pool",
+    "vel_mean",
+    "vel_pool_Uswap",
+    "pseudo_S",
+    "direct_U_pool"
+  ],
+  "preprocess": {
+    "n_hvg": 8,
+    "dimensions": 3,
+    "clusters": 2,
+    "neighbors": 3
+  },
+  "statistics": {
+    "bootstrap_repetitions": 1000,
+    "bootstrap_seed": 20261017
+  },
+  "training_TF_scope": "H1_TFs_only",
+  "fixture_root": "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture",
+  "git_commit": "73a9badcc0c09c74c5a7f38b6f77828cae51e749",
+  "seed": 20261017,
+  "command": [
+    "scripts/phase0/w4_replication.py",
+    "synthetic-smoke",
+    "--output",
+    "outputs/w4_replication_smoke_v2"
+  ],
+  "runtime_seconds": 0.03656894713640213
+}

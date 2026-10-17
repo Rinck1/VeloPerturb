@@ -31,7 +31,7 @@
 - **GPU**：按 2026-10-14 授权，可同时使用物理 GPU 0–3；GPU 4–7 不用。启动前检查占用，不 kill 别人的进程。本任务以 CPU 为主。
 - **下载**：单个数据集总量超过 50 GB 前先问 Rinck。所有下载记录来源 URL、文件名、大小和 SHA256。原始数据放 `/data/yuchang/veloroute_w4/`，不放仓库。
 - **封存**（最重要）：
-  - **复制集**是 RENGE 的 day2→3 和 day3→4，以及 MIX-seq、sci-fate 的全部时间段。在预注册冻结（W4-2）之前，只允许做技术 QC：细胞数、U/S 计数分布、guide 分配率。**不允许**计算任何扰动效应、做任何跨条件比较、画按条件着色的降维图。
+  - **复制集**是 RENGE 的 day2→3 和 day3→4，以及 MIX-seq、sci-fate、备用 scNT-seq 的全部时间段。在各自科学协议冻结前，只允许做技术 QC：细胞数、U/S 计数分布、guide 分配率和模态/条形码对齐。**不允许**计算任何扰动效应、做任何跨条件比较、画按条件着色的降维图。W4-2 可先冻结 RENGE 主检验，外部数据的动力学参照和低维预测细则须另行补齐冻结；不能因为技术配对完成就提前读取外部响应。
   - **开发集**是 RENGE day4→5，只用于调试代码，结果只能写"开发"。
 - 每个 JSON 记录 `git_commit`、seed、命令行参数、数据哈希和耗时。
 - 每完成一项提交一项并推送到 `origin/master`，提交信息带任务编号。
@@ -87,10 +87,10 @@ W3 里原版 GFG 在 RENGE、MeRLin 上的重训已经准备好，但读 U 敏�
 ### W4-1c sci-fate（机制验证）
 
 - **来源**：Cao 等，Nat Biotechnol 2020（bioRxiv 10.1101/666081）。A549，地塞米松 0、2、4、6、8、10 小时；每个时间点收样前用 4sU 标记 2 小时；6,680 个细胞。
-- **核实 GEO 编号**：从论文 Data availability 读。候选是 GSE131351，**必须核实，不能直接用**。
+- **核实 GEO 编号**：2026-10-17 已从原论文与 GEO 核实为 GSE131351，A549 为 GSM3770930；技术来源/哈希见 `docs/w4_external_data_audit.md`。
 - **先看处理好的文件**：是否已有每个细胞的"新合成"和"总"计数矩阵。有则先作代谢标记读数来源；它们不是标准 U/S 或无误差的净速度，检测效率、标记窗、降解估计另行核实。
-- **U/S**：sci-RNA-seq 用随机引物加 oligo-dT，内含子读段多，可以算 U。处理好的文件里没有 U 时，用作者的 sci-fate 处理流程（Cao 实验室 GitHub）重新比对，并加内含子/外显子分开计数。先估大小，超过 50 GB 先问。
-- **输出**：`/data/yuchang/veloroute_w4/scifate/processed/scifate.h5ad`，包含 layers `spliced`、`unspliced`、`new`、`total` 和时间标签。
+- **U/S**：本 A549 实验的 GEO 方案明确为 anchored oligo-dT，原草案“随机引物加 oligo-dT”不适用于该样本。已获取的 processed 只有基因级 total/new 和细胞级 exon/intron 注释，不能由注释总数恢复基因级 U。先查作者公开 S/U 或可对齐镜像；完整 raw 190 runs 合计 116.28 GB，超过 50 GB 阈值，获准前不下载。若重处理，按作者流程核实参考与计数定义，单独恢复 exon/intron。
+- **输出**：现有 `/data/yuchang/veloroute_w4/scifate/processed/scifate_total_new_only.h5ad` 为 7404×43167 的原始 processed 细胞（论文 6680 是过滤后数量），仅含 `new`、`total`。取得并核验 S/U 后，才另建完整 `scifate.h5ad`，不补伪造层。
 
 ### W4-1d scNT-seq（sci-fate 的备选，低优先级）
 

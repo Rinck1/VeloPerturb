@@ -2,7 +2,20 @@
 
 > 用途：把本项目的背景、方法、全部实验数据、当前状态和下一步完整移交给新 agent。
 > 2026-09-21 代码审计更正：**真实 velocity 增量尚未建立，不能宣称状态外信息为零。** 分布训练、静态对照、验证折标准化及 R² 定义存在已确认 bug。旧 RENGE +0.022 和“99% 冗余”的机制归因待重算。详见 `outputs/veloroute_bug_audit_20260921/RESULTS.md`；该更正优先于下文历史解读。
-> 最后更新：2026-09-21。所有数字来自实际落盘产物，未做外推。
+> 当前执行状态更新：2026-10-17。优先读下方 W4 节与 `docs/w4_results.md`；未更新的后续章节保留为 2026-09-21 历史归档，不能直接当作当前进度或主张。
+
+## 当前主线：W4 短时群体预测（2026-10-17）
+
+- 主任务已转为源群体 S/U 预测下一时间点状态均值。状态用严格 S 的 source-only log-PCA；动力学主估计器为双尾 OLS 的 `U−γS`，用解析 log-PCA 导数投影，当前主线不使用原版 GFG decoder JVP。
+- 六臂核心与 day4→5 开发已跑通，W4 测试 48/48（`outputs/w4_verification_v2/pytest.xml`）。正式复制 predict/evaluate 和冻结锁生成入口均已实现。开发四 TF 的群体速度平均 MSE 改善 2.30%，直接 U 改善 2.36%；这不是 day2→3/day3→4 的正式复制结果。
+- 原版 GFG 在 RENGE/MeRLin 的各三 seeds 目标域重训及 U 敏感性审计均已完成，见 `docs/w3_results.md` 的 W4-0 节。方向对 U 破坏不敏感不能推出所有 U 预测信息为零。
+- RENGE day4 同输入复现 S/U/A 全矩阵一致；day3 已完成。day2 后台恢复作业为 `outputs/w4_renge_day2_job_v2/`，完成后由 `outputs/w4_renge_cohort_wait_job_v1/` 自动接技术 QC。以作业终态和 `outputs/w4_cohort_qc_v1/summary.json` 为准。
+- `PLANS/w4_shorttime_prereg.md` 当前仍为 DRAFT；复制集只允许技术 QC，不能在冻结前训练或评估响应。`outputs/w4_h1_calibration_wait_job_v1/` 已排队在技术 QC 后自动运行纯合成的正式设计校准。随后固定共同 TF、冻结协议并记录提交/锁，再运行正式复制。
+- sci-fate total/new 已下载并对齐，缺基因级 S/U；scNT-seq 已配对 13476×37007 的 S/U/new/old/total，5 个时间点 0/15/30/60/120 分钟，时间冲突为零；外部效应仍封存。MIX-seq raw 尚未核实。详见 `docs/w4_external_data_audit.md`。
+- MeRLin Day0 已有源侧数据审查（247 克隆、3785 细胞），不能再写“等待取得 Day0”。但 Day0→Day21 构成预测仍受源目标克隆映射/小类样本不足限制；原五类协议不是现成可运行的短时任务。
+- 只用物理 GPU0–3；当前线性预测/数据处理以 CPU 为主。新 W4 代码在 `scripts/phase0/w4_*.py`，不修改旧 `src/` 或覆盖旧结果。
+
+以下 9 月的架构、命运论断和待办仅为历史。遇冲突，以本节、W4 草案/冻结协议及最新实际产物为准。
 
 ---
 
@@ -22,13 +35,13 @@
 |---|---|
 | 项目名 | VeloRoute |
 | 仓库 | `/home/yuchang/wangjiaxuan` |
-| 核心问题 | velocity 能否让模型区分"同状态细胞走向不同命运"？ |
-| 方法 | 源侧 velocity 条件化 router + 共享骨干 + K≤8 低秩专家 + EM/门控 |
-| 主要数据 | RENGE、Kang、打包分化基准（pancreas/dentate/bonemarrow/lung）、MeRLin |
-| 核心设计 | 三臂对照：static（无速度）/ gfg_joint（真速度）/ gfg_joint_shuffled（打乱速度） |
-| 核心结论 | velocity vs 打乱 ≈ 零；velocity 价值 = 方向场先验，不是逐细胞信号 |
-| 根因 | 速度 99% 可由状态 z 确定性推出；独立创新项方向一致性 ≈ 0 |
-| 决定性未完成实验 | MeRLin 克隆命运跨时间检验（待 Day0 配对样本） |
+| 核心问题 | 群体 U/S 动力学特征是否提高短时状态均值预测？ |
+| 方法 | S-only log-PCA 状态 + 简单动力学特征 + 等预算 ridge；历史 router 留作归档 |
+| 主要数据 | RENGE 时间序列；sci-fate / scNT-seq 外部模态调研；MeRLin/Kang 等为历史机制与边界数据 |
+| 核心设计 | static / vel_pool / vel_pool_Uswap 为 H1 三臂，另有 vel_mean / direct_U_pool / pseudo_S |
+| 当前观察 | 开发集有约 2.3% 平均 MSE 改善；正式 H1 尚未检验 |
+| 机制线索 | 原生 GFG 输出方向对 U 较不敏感；直接 U 与解析速度的下游贡献需分开验证 |
+| 决定性未完成实验 | 共同 TF QC 后冻结协议，运行 day2→3 / day3→4 正式复制 |
 
 ---
 

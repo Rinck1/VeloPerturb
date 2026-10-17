@@ -1,0 +1,957 @@
+{
+  "git_commit": "73a9badcc0c09c74c5a7f38b6f77828cae51e749",
+  "seed": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "command": [
+    "scripts/phase0/w4_replication.py",
+    "synthetic-smoke",
+    "--output",
+    "outputs/w4_replication_smoke_v2"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_replication.py": "762e575ac6c654fc292581a6308243fc5b10bc164b8663ee63da6901f1d15cdd",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/protocol_lock.json": "a323a7251370b4b05e1f7e39e768a774ecb2eeaa798f5bc717b1b8c0d767c21c",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/qc_manifest.json": "93bbef72dac1e16196282c1979421db782f53850614f4cb54b3b27a374c99c25",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/PLANS/w4_shorttime_prereg.md": "9f87d31079d280682ca64bd3125950da7c74367c474ce9e37f7d8d2e35155801",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/day2.h5ad": "d67b2fe089af9992c3d5350abd303e50e3793497505402b37a7959e93e094c0f",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/day3.h5ad": "093492073eca403b25383fac3cf518b807b165e944957d687512d92e0994c020",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/day4.h5ad": "c0d978050a49ea47aa209f1882fc26db65035643777565d1d36f4d73cb757623",
+    "/home/yuchang/wangjiaxuan/outputs/w4_replication_smoke_v2/fixture/embeddings.npz": "f5b83cf24ea8956fe32b6fc05be9a3936acbf777f6083660fc5fba20c060537e"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "66e6dd219930f4acafa8c57a036db8feda34abee32f3ffa583fb73340ce5c0a9",
+  "runtime_seconds": 0.25179633870720863,
+  "status": "FOLD_PREDICTIONS_FROZEN",
+  "source_day": 2,
+  "target_day": 3,
+  "heldout_TF": "SYNTH_TF3",
+  "training_TFs": [
+    "SYNTH_TF0",
+    "SYNTH_TF1",
+    "SYNTH_TF2",
+    "SYNTH_TF4"
+  ],
+  "controls": [
+    "AAVS1",
+    "CTRL"
+  ],
+  "training_source_rows": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "heldout_source_rows": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "training_target_rows": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "training_source_ids": [
+    "day2:synth_day2_cell0",
+    "day2:synth_day2_cell1",
+    "day2:synth_day2_cell2",
+    "day2:synth_day2_cell3",
+    "day2:synth_day2_cell4",
+    "day2:synth_day2_cell5",
+    "day2:synth_day2_cell6",
+    "day2:synth_day2_cell7",
+    "day2:synth_day2_cell8",
+    "day2:synth_day2_cell9",
+    "day2:synth_day2_cell10",
+    "day2:synth_day2_cell11",
+    "day2:synth_day2_cell12",
+    "day2:synth_day2_cell13",
+    "day2:synth_day2_cell14",
+    "day2:synth_day2_cell15",
+    "day2:synth_day2_cell16",
+    "day2:synth_day2_cell17",
+    "day2:synth_day2_cell24",
+    "day2:synth_day2_cell25",
+    "day2:synth_day2_cell26",
+    "day2:synth_day2_cell27",
+    "day2:synth_day2_cell28",
+    "day2:synth_day2_cell29",
+    "day2:synth_day2_cell30",
+    "day2:synth_day2_cell31",
+    "day2:synth_day2_cell32",
+    "day2:synth_day2_cell33",
+    "day2:synth_day2_cell34",
+    "day2:synth_day2_cell35",
+    "day2:synth_day2_cell36",
+    "day2:synth_day2_cell37",
+    "day2:synth_day2_cell38",
+    "day2:synth_day2_cell39",
+    "day2:synth_day2_cell40",
+    "day2:synth_day2_cell41"
+  ],
+  "heldout_source_ids": [
+    "day2:synth_day2_cell18",
+    "day2:synth_day2_cell19",
+    "day2:synth_day2_cell20",
+    "day2:synth_day2_cell21",
+    "day2:synth_day2_cell22",
+    "day2:synth_day2_cell23"
+  ],
+  "heldout_future_expression_used": false,
+  "source_fit_uses_future": false,
+  "training_targets_used_for_response_ridge": true,
+  "geometry_seed_reuse": "deterministic PCA/gamma; separate kmeans per seed",
+  "actual_ridge_fits": 6,
+  "potential_seed_arm_fits": 24,
+  "prediction_sha256": "2783a68b1b57d98ad084b9e2e21fb2c80c7a2f6023e978c4384905c8bc363700",
+  "transform_sha256": {
+    "0": "a983595526bf7902a041f84e3004cb4df3b21d8d233a105838fe79a653ba61cf",
+    "1": "a364f7d99494fc3a782004777dc9cd701ef00f5f2a58e20fd60e1ab1056b1bb9",
+    "2": "787996ece693c3950021520396106d98bfc645f259379adf5c7c171436a68aab",
+    "3": "d76553a9bd4c2921afb2bab2a1de4eb9e3a9cc4719d4b65e9f86de3659461991"
+  },
+  "selections": {
+    "0": {
+      "static": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.27880226179116185,
+          0.22003358837896425,
+          0.11946015363694816,
+          0.1083161790055977,
+          0.11323437376067629
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": false
+      },
+      "vel_pool": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.31732238134637675,
+          0.25056127287538177,
+          0.12364364000488465,
+          0.10953500384050638,
+          0.11337251153960325
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": false
+      },
+      "vel_mean": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.30739545965394205,
+          0.24531365946037328,
+          0.12210759278210256,
+          0.10890883929919665,
+          0.11329441654748716
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": false
+      },
+      "vel_pool_Uswap": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.25659229876668205,
+          0.20435265195908092,
+          0.12132918415699658,
+          0.10969070256536219,
+          0.1133797011270201
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": false
+      },
+      "pseudo_S": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.19819646569452795,
+          0.19154052582554731,
+          0.15459628051860003,
+          0.11880625668863996,
+          0.11441989901469739
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": false
+      },
+      "direct_U_pool": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.2661090149145669,
+          0.22440603621210536,
+          0.12251419330323864,
+          0.10833887495815067,
+          0.11322679123988189
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": false
+      }
+    },
+    "1": {
+      "static": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.27880226179116185,
+          0.22003358837896425,
+          0.11946015363694816,
+          0.1083161790055977,
+          0.11323437376067629
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "vel_pool": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.31732238134637675,
+          0.25056127287538177,
+          0.12364364000488465,
+          0.10953500384050638,
+          0.11337251153960325
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "vel_mean": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.30739545965394205,
+          0.24531365946037328,
+          0.12210759278210256,
+          0.10890883929919665,
+          0.11329441654748716
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "vel_pool_Uswap": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.25659229876668205,
+          0.20435265195908092,
+          0.12132918415699658,
+          0.10969070256536219,
+          0.1133797011270201
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "pseudo_S": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.19819646569452795,
+          0.19154052582554731,
+          0.15459628051860003,
+          0.11880625668863996,
+          0.11441989901469739
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "direct_U_pool": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.2661090149145669,
+          0.22440603621210536,
+          0.12251419330323864,
+          0.10833887495815067,
+          0.11322679123988189
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      }
+    },
+    "2": {
+      "static": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.27880226179116185,
+          0.22003358837896425,
+          0.11946015363694816,
+          0.1083161790055977,
+          0.11323437376067629
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "vel_pool": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.31732238134637675,
+          0.25056127287538177,
+          0.12364364000488465,
+          0.10953500384050638,
+          0.11337251153960325
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "vel_mean": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.30739545965394205,
+          0.24531365946037328,
+          0.12210759278210256,
+          0.10890883929919665,
+          0.11329441654748716
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "vel_pool_Uswap": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.25659229876668205,
+          0.20435265195908092,
+          0.12132918415699658,
+          0.10969070256536219,
+          0.1133797011270201
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "pseudo_S": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.19819646569452795,
+          0.19154052582554731,
+          0.15459628051860003,
+          0.11880625668863996,
+          0.11441989901469739
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "direct_U_pool": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.2661090149145669,
+          0.22440603621210536,
+          0.12251419330323864,
+          0.10833887495815067,
+          0.11322679123988189
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      }
+    },
+    "3": {
+      "static": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.27880226179116185,
+          0.22003358837896425,
+          0.11946015363694816,
+          0.1083161790055977,
+          0.11323437376067629
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "vel_pool": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.31732238134637675,
+          0.25056127287538177,
+          0.12364364000488465,
+          0.10953500384050638,
+          0.11337251153960325
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "vel_mean": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.30739545965394205,
+          0.24531365946037328,
+          0.12210759278210256,
+          0.10890883929919665,
+          0.11329441654748716
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "vel_pool_Uswap": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.25659229876668205,
+          0.20435265195908092,
+          0.12132918415699658,
+          0.10969070256536219,
+          0.1133797011270201
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "pseudo_S": {
+        "alpha": 1000.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.19819646569452795,
+          0.19154052582554731,
+          0.15459628051860003,
+          0.11880625668863996,
+          0.11441989901469739
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      },
+      "direct_U_pool": {
+        "alpha": 100.0,
+        "grid": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "inner_TF_sse": [
+          0.2661090149145669,
+          0.22440603621210536,
+          0.12251419330323864,
+          0.10833887495815067,
+          0.11322679123988189
+        ],
+        "inner_units": 4,
+        "scaler_scope": "refitted_on_each_inner_training_subset",
+        "reused_identical_design": true
+      }
+    }
+  },
+  "U_swaps": {
+    "0": {
+      "train": [
+        {
+          "recipient": "AAVS1",
+          "donor": "SYNTH_TF1",
+          "distance": 1.1480504214120986,
+          "recipient_u_total": 1445.0,
+          "donor_u_total": 1391.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "CTRL",
+          "donor": "SYNTH_TF2",
+          "distance": 0.5458105279308841,
+          "recipient_u_total": 1464.0,
+          "donor_u_total": 1437.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF0",
+          "donor": "SYNTH_TF4",
+          "distance": 0.14532295470845338,
+          "recipient_u_total": 1541.0,
+          "donor_u_total": 1276.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF1",
+          "donor": "SYNTH_TF0",
+          "distance": 0.6132536430298001,
+          "recipient_u_total": 1391.0,
+          "donor_u_total": 1541.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF2",
+          "donor": "CTRL",
+          "distance": 0.5458105279308841,
+          "recipient_u_total": 1437.0,
+          "donor_u_total": 1464.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF4",
+          "donor": "SYNTH_TF0",
+          "distance": 0.14532295470845338,
+          "recipient_u_total": 1276.0,
+          "donor_u_total": 1541.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ],
+      "heldout_source": [
+        {
+          "recipient": "SYNTH_TF3",
+          "donor": "SYNTH_TF0",
+          "distance": 0.35910250834307084,
+          "recipient_u_total": 1260.0,
+          "donor_u_total": 1541.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ]
+    },
+    "1": {
+      "train": [
+        {
+          "recipient": "AAVS1",
+          "donor": "SYNTH_TF1",
+          "distance": 1.1480504214120986,
+          "recipient_u_total": 1445.0,
+          "donor_u_total": 1391.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "CTRL",
+          "donor": "SYNTH_TF2",
+          "distance": 0.5458105279308841,
+          "recipient_u_total": 1464.0,
+          "donor_u_total": 1437.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF0",
+          "donor": "SYNTH_TF4",
+          "distance": 0.14532295470845338,
+          "recipient_u_total": 1541.0,
+          "donor_u_total": 1276.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF1",
+          "donor": "SYNTH_TF0",
+          "distance": 0.6132536430298001,
+          "recipient_u_total": 1391.0,
+          "donor_u_total": 1541.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF2",
+          "donor": "CTRL",
+          "distance": 0.5458105279308841,
+          "recipient_u_total": 1437.0,
+          "donor_u_total": 1464.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF4",
+          "donor": "SYNTH_TF0",
+          "distance": 0.14532295470845338,
+          "recipient_u_total": 1276.0,
+          "donor_u_total": 1541.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ],
+      "heldout_source": [
+        {
+          "recipient": "SYNTH_TF3",
+          "donor": "SYNTH_TF0",
+          "distance": 0.35910250834307084,
+          "recipient_u_total": 1260.0,
+          "donor_u_total": 1541.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ]
+    },
+    "2": {
+      "train": [
+        {
+          "recipient": "AAVS1",
+          "donor": "SYNTH_TF1",
+          "distance": 1.1480504214120986,
+          "recipient_u_total": 1445.0,
+          "donor_u_total": 1391.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "CTRL",
+          "donor": "SYNTH_TF2",
+          "distance": 0.5458105279308841,
+          "recipient_u_total": 1464.0,
+          "donor_u_total": 1437.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF0",
+          "donor": "SYNTH_TF4",
+          "distance": 0.14532295470845338,
+          "recipient_u_total": 1541.0,
+          "donor_u_total": 1276.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF1",
+          "donor": "SYNTH_TF0",
+          "distance": 0.6132536430298001,
+          "recipient_u_total": 1391.0,
+          "donor_u_total": 1541.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF2",
+          "donor": "CTRL",
+          "distance": 0.5458105279308841,
+          "recipient_u_total": 1437.0,
+          "donor_u_total": 1464.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF4",
+          "donor": "SYNTH_TF0",
+          "distance": 0.14532295470845338,
+          "recipient_u_total": 1276.0,
+          "donor_u_total": 1541.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ],
+      "heldout_source": [
+        {
+          "recipient": "SYNTH_TF3",
+          "donor": "SYNTH_TF0",
+          "distance": 0.35910250834307084,
+          "recipient_u_total": 1260.0,
+          "donor_u_total": 1541.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ]
+    },
+    "3": {
+      "train": [
+        {
+          "recipient": "AAVS1",
+          "donor": "SYNTH_TF1",
+          "distance": 1.1480504214120986,
+          "recipient_u_total": 1445.0,
+          "donor_u_total": 1391.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "CTRL",
+          "donor": "SYNTH_TF2",
+          "distance": 0.5458105279308841,
+          "recipient_u_total": 1464.0,
+          "donor_u_total": 1437.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF0",
+          "donor": "SYNTH_TF4",
+          "distance": 0.14532295470845338,
+          "recipient_u_total": 1541.0,
+          "donor_u_total": 1276.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF1",
+          "donor": "SYNTH_TF0",
+          "distance": 0.6132536430298001,
+          "recipient_u_total": 1391.0,
+          "donor_u_total": 1541.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF2",
+          "donor": "CTRL",
+          "distance": 0.5458105279308841,
+          "recipient_u_total": 1437.0,
+          "donor_u_total": 1464.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        },
+        {
+          "recipient": "SYNTH_TF4",
+          "donor": "SYNTH_TF0",
+          "distance": 0.14532295470845338,
+          "recipient_u_total": 1276.0,
+          "donor_u_total": 1541.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ],
+      "heldout_source": [
+        {
+          "recipient": "SYNTH_TF3",
+          "donor": "SYNTH_TF0",
+          "distance": 0.35910250834307084,
+          "recipient_u_total": 1260.0,
+          "donor_u_total": 1541.0,
+          "zero_depth_recipient": false,
+          "ties": 1
+        }
+      ]
+    }
+  }
+}
