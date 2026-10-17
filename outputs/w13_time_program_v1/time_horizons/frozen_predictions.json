@@ -1,0 +1,486 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_frozen_horizons.py",
+    "--spec",
+    "outputs/w13_time_program_v1/time_horizon_spec.json",
+    "--output",
+    "outputs/w13_time_program_v1/time_horizons"
+  ],
+  "data_hashes": {
+    "outputs/w13_time_program_v1/time_horizon_spec.json": "ce6829d736cac5ccde9a03141c8137e40b7674e5303e19fb321ad6b8576550a9",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/source_samples.json": "9ed86405aba7aca6d4dc1ee2a7d9474b6b4e5ba66a297c817f78fc97ea3826e6",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_pack_v1/source_pack.npz": "f83322cd68223bb859fce70ea0f31751ebbfec559aaf60236c1f1e4c47c5a599",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_frozen_horizons.py": "e7dd24f0c52eabcf4632895d2c533ff7faf75df5d3bd2e55c12a80f91422b84a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_time_model.py": "e8d667eb15ee80f94808c0170ef757e8d30ea0e9e95dd395acc0d9a6fe5e9de6",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_horizons.py": "b65a084649c80f7da5881c5f1e618ede29edf8e0ffceb244339c02930e87a0e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "931c5aa8971a8ace656def8d191a2313705056dd3b871afafd58e58c237bb89c",
+  "runtime_seconds": 12.76225508376956,
+  "predictions": [
+    {
+      "model": "b1_endpoint36k",
+      "arm": "static_router",
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_static_router_5_to_10.npz",
+      "sha256": "3e3069ade746e09e215a022ab2cb0e40a69e989aab04460c998880b6739bb27f"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "static_router",
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_static_router_10_to_15.npz",
+      "sha256": "66d9bb17fed60fcd36a1732f0a3e49898f43253ece16a302a4646cda622d1c2d"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "static_router",
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_static_router_15_to_20.npz",
+      "sha256": "fe7ac12d666c4418d53bae6a30b119037e39e9ddfa0196b824e6e9c4188115ba"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "static_router",
+      "source_hour": 5,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_static_router_5_to_15.npz",
+      "sha256": "06de515620c086ab2111b37bbeae88c78d04108505ca091307f061a845f740c0"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "static_router",
+      "source_hour": 10,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_static_router_10_to_20.npz",
+      "sha256": "620f2029d48a53f59362ab89b7583dee8e624a46f211eac81f50fb203ae05b71"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "static_router",
+      "source_hour": 5,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_static_router_5_to_20.npz",
+      "sha256": "06b52eed609e400fa345da765abe681abfb9d5d47b6d851e123868118a8c08c8"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "velocity_router",
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_velocity_router_5_to_10.npz",
+      "sha256": "98306bba97c7409de32089ab8d2e3370c1b92a7fca6494d6ad02d23c10bcdd35"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "velocity_router",
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_velocity_router_10_to_15.npz",
+      "sha256": "03c1f08e8c0357dc13716aa983c33205c14966edab3afa5526a71a55c6844f73"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "velocity_router",
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_velocity_router_15_to_20.npz",
+      "sha256": "d361fc6da3847e7e9c3a9186a9eeedfc7a311a73560122cdd162f77049434ea8"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "velocity_router",
+      "source_hour": 5,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_velocity_router_5_to_15.npz",
+      "sha256": "e702a8bca718a1930639c42e7bc5c7f098718384e0ebb348b5903ef068ff633b"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "velocity_router",
+      "source_hour": 10,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_velocity_router_10_to_20.npz",
+      "sha256": "b83c6ad8ad03ed0d932d63a3acf3513d533ff1ea37b842dd934ec3dc7ee90f4b"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "velocity_router",
+      "source_hour": 5,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_velocity_router_5_to_20.npz",
+      "sha256": "661860af9d9681ce3f5c64978c7e55fa4bb99ef8083c856108c24e6eef944240"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_shuffled_velocity_router_5_to_10.npz",
+      "sha256": "7abe80afdaafd7a3f90231ecd9b671cc95afb7b18761b69961894ef3645b53c9"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_shuffled_velocity_router_10_to_15.npz",
+      "sha256": "477819ee24df683502c229014c6787ddd851994c597f123d8ec9ff3506bf48c1"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_shuffled_velocity_router_15_to_20.npz",
+      "sha256": "5a72e481ef3b3b69831d6716dc6f6785855d216d62644b1e47a27779baceb721"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 5,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_shuffled_velocity_router_5_to_15.npz",
+      "sha256": "82aa0339237674a950039a5559d46c485d2f7dd66ad8df2cd2bf9d7827ffab6a"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 10,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_shuffled_velocity_router_10_to_20.npz",
+      "sha256": "852988c2d400d33da015d34bd0d0d24a08102e3ac71f375570bfec368d685774"
+    },
+    {
+      "model": "b1_endpoint36k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 5,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/b1_endpoint36k_shuffled_velocity_router_5_to_20.npz",
+      "sha256": "3de8f76734ffe347db565f21be5f8497f500e0d1c62dd00d406deac4e24dfffd"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "static_router",
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_static_router_5_to_10.npz",
+      "sha256": "2ca59cea2cc532b5570e6e2681c076b3a1430c4e3b16472c02710b6aefe747da"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "static_router",
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_static_router_10_to_15.npz",
+      "sha256": "46d214929aba1904401f2cb8d23a5bbcfe92120fed2d083af7bf8ec6ba71c512"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "static_router",
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_static_router_15_to_20.npz",
+      "sha256": "b8cf744adaeb7e5432e2c025c1350950a18cb07aac02f7b3e721435ea5bbe35a"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "static_router",
+      "source_hour": 5,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_static_router_5_to_15.npz",
+      "sha256": "7b9e1b2dc1010110818c18f8e63d1a34a3ae5c01d8a6bb1c6a8da48cbc4c38b7"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "static_router",
+      "source_hour": 10,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_static_router_10_to_20.npz",
+      "sha256": "a88409a1ea5a97c85c0cc1e8c60224815282a2fef26fe5c8d78620fa750122be"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "static_router",
+      "source_hour": 5,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_static_router_5_to_20.npz",
+      "sha256": "30ce03f54d3e91d31da2bff76467371b6c138aa5047bbfe3b208227d1812680d"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "velocity_router",
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_velocity_router_5_to_10.npz",
+      "sha256": "ba498517f164153f2c157a533eac9536403b5f54c33924366c1a760f1eab42bc"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "velocity_router",
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_velocity_router_10_to_15.npz",
+      "sha256": "8b2bce093b4661934020089e19fb74f4ba4dfaa615648f6a398de90bd8dc1d89"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "velocity_router",
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_velocity_router_15_to_20.npz",
+      "sha256": "184afd72a11536327c3b4b454e79e754d376904ad4cb2ba155acf3ecec9987c8"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "velocity_router",
+      "source_hour": 5,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_velocity_router_5_to_15.npz",
+      "sha256": "fec144c4131e88004594302b154f6ce1c448ec6b3f7cf03da4c59c5a0f81e40d"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "velocity_router",
+      "source_hour": 10,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_velocity_router_10_to_20.npz",
+      "sha256": "0878aa3c96559c6777079d61997c919b0003e8c8101b0f29b59d5e258ee1c4c7"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "velocity_router",
+      "source_hour": 5,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_velocity_router_5_to_20.npz",
+      "sha256": "497c616399a32c30dcafdfa9893b9e9a3b616b0eaf5f4b8ae701ae1d04c9b7b9"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_shuffled_velocity_router_5_to_10.npz",
+      "sha256": "7d3a1d3e94b99ea6832a6936ccdfba49448d0d84768d2df1bb618bf8b89002f1"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_shuffled_velocity_router_10_to_15.npz",
+      "sha256": "e84809f957bef1cef117f2efc4a8efc8c593ea3ad340dcb3d88f69274e755ff5"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_shuffled_velocity_router_15_to_20.npz",
+      "sha256": "6c3918895acaa61638209b9e3784af42bb0c7f08aafb4a6d00f12204ff62d54d"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 5,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_shuffled_velocity_router_5_to_15.npz",
+      "sha256": "878a2a18734432b658f9b991e412da4d384c0fa1efb7ae3eb30050696f81f07a"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 10,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_shuffled_velocity_router_10_to_20.npz",
+      "sha256": "62796245ffe6160423cc4e97d523633d5b1d4650dc005a818f482e9e7eec2617"
+    },
+    {
+      "model": "endpoint_time_40k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 5,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/endpoint_time_40k_shuffled_velocity_router_5_to_20.npz",
+      "sha256": "5e59b7439f1024fbd07d8326d77d95a3d72bc50756ccc450a6feb8dbf2814e91"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "static_router",
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_static_router_5_to_10.npz",
+      "sha256": "12253564f53b748372f1c7107157fa7ffe85fa0d3a12623316cdb6042061e23f"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "static_router",
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_static_router_10_to_15.npz",
+      "sha256": "8451886696119e159787b2026342338317da78f162bb0cf571ad2cbbf36cf9ce"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "static_router",
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_static_router_15_to_20.npz",
+      "sha256": "e6274734af4e360ecbe2104f2aeefce91d05b48e57788b878cf8d65c1f2dc81f"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "static_router",
+      "source_hour": 5,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_static_router_5_to_15.npz",
+      "sha256": "8982e2bf2710b2a263a35919685936fce12bc3d35c548976955d698a0706b5f5"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "static_router",
+      "source_hour": 10,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_static_router_10_to_20.npz",
+      "sha256": "88cd48bf22a213a2bdd305bb419fd7323139bd8c90379d2b5ec58790d7557f5d"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "static_router",
+      "source_hour": 5,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_static_router_5_to_20.npz",
+      "sha256": "6f300f04cd16a0f7f420b604444a108e7d5bece570a4daf27342ecd081c2deb4"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "velocity_router",
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_velocity_router_5_to_10.npz",
+      "sha256": "63fd8d6e21e1f8a49248544454f46d9549197b300703f63e2576d6ebb324c970"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "velocity_router",
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_velocity_router_10_to_15.npz",
+      "sha256": "2205202c2cbda68fd0dd665d84b989f0a0ed9aeec6f37a88122b94be7bbdcf46"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "velocity_router",
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_velocity_router_15_to_20.npz",
+      "sha256": "093c01e4b89b23500e926689a5ff4097487ac6878d0f6a816ed93844da04fe62"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "velocity_router",
+      "source_hour": 5,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_velocity_router_5_to_15.npz",
+      "sha256": "8868d635ccfabb5133126eeea25b4c4045c1e53043bfd24d451ae83f00064aba"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "velocity_router",
+      "source_hour": 10,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_velocity_router_10_to_20.npz",
+      "sha256": "a0524450c5179cc5de36436107fa58d23367ff2a1d9874db07e27314e9cc6d8c"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "velocity_router",
+      "source_hour": 5,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_velocity_router_5_to_20.npz",
+      "sha256": "68d30e7b79c8f6f87f5957fb07656250c6cfa0668256967b59117eccab425722"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_shuffled_velocity_router_5_to_10.npz",
+      "sha256": "b25d8d3e9a4f9463409291bb34dbf258c0717330988d0e8f384b435454e4e476"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_shuffled_velocity_router_10_to_15.npz",
+      "sha256": "177f76d7e2f6cbf6c1f415127ed136e5a6e2c1579697d85f68469f447828541a"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_shuffled_velocity_router_15_to_20.npz",
+      "sha256": "61d345a9f31abae6e38ef3075ea2b4932e18e2a3818f1b0ac427fc4bfea251ea"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 5,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_shuffled_velocity_router_5_to_15.npz",
+      "sha256": "26658a77bcd4f8060a20880cddd9eb007e9296820d59d10fb2f30ec6ec2efa34"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 10,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_shuffled_velocity_router_10_to_20.npz",
+      "sha256": "20f3dcc18e7422b58bebe0ebf44cc10d6fb292a5761c6c08c0e6cf16849c893e"
+    },
+    {
+      "model": "ode_40k",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 5,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_horizons/ode_40k_shuffled_velocity_router_5_to_20.npz",
+      "sha256": "b3073bb1758f1609faf1c45818e1e8da8c529071873fb32c1e0a69f368082eab"
+    }
+  ],
+  "all_predictions_ready_before_evaluation": true,
+  "source_only_predictions": true,
+  "optimizer_steps": 0,
+  "mean_models": [
+    {
+      "seed": 0,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed0/analytic_task.pt",
+      "sha256": "bb9ca8fe86c49f97afcc0637ac492590c2294b7cfe2260530cc0b48088750ee8"
+    },
+    {
+      "seed": 1,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed1/analytic_task.pt",
+      "sha256": "1ecaf7c9eb45d027cf7c66fe9e03b104c50f0085ff14c055db435c0bf1422b41"
+    },
+    {
+      "seed": 2,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed2/analytic_task.pt",
+      "sha256": "25045424ae9ad5382d03168b0687fc71f31a8b6c62264e1592ede2f5684169f1"
+    }
+  ]
+}

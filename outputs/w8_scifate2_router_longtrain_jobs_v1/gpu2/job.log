@@ -1,0 +1,10 @@
+{"status": "SCALING_CHECKPOINT_READY", "setting": "k8_w128", "arm": "static_router", "seed": 2, "step": 4000, "training_seconds": 20.52205839008093, "peak_allocated_bytes": 140374016}
+{"status": "SCALING_CHECKPOINT_READY", "setting": "k8_w128", "arm": "static_router", "seed": 2, "step": 12000, "training_seconds": 57.27221416682005, "peak_allocated_bytes": 140374016}
+{"status": "SCALING_CHECKPOINT_READY", "setting": "k4_w128", "arm": "static_router", "seed": 0, "step": 12000, "training_seconds": 46.576857320964336, "peak_allocated_bytes": 120824832}
+{"status": "SCALING_CHECKPOINT_READY", "setting": "k4_w128", "arm": "static_router", "seed": 0, "step": 24000, "training_seconds": 90.92280319333076, "peak_allocated_bytes": 120824832}
+{"status": "SCALING_CHECKPOINT_READY", "setting": "k4_w128", "arm": "static_router", "seed": 0, "step": 36000, "training_seconds": 135.40687170997262, "peak_allocated_bytes": 120824832}
+{"status": "SCALING_CHECKPOINT_READY", "setting": "k4_w128", "arm": "static_router", "seed": 2, "step": 12000, "training_seconds": 44.162957061082125, "peak_allocated_bytes": 120824832}
+{"status": "SCALING_CHECKPOINT_READY", "setting": "k4_w128", "arm": "static_router", "seed": 2, "step": 24000, "training_seconds": 88.36932544782758, "peak_allocated_bytes": 120824832}
+{"status": "SCALING_CHECKPOINT_READY", "setting": "k4_w128", "arm": "static_router", "seed": 2, "step": 36000, "training_seconds": 132.92014891654253, "peak_allocated_bytes": 120824832}
+{"status": "SCALING_CASE_EVALUATED", "setting": "k4_w128", "experts": 4, "hidden": 128, "arm": "static_router", "step": 36000, "worker": 2, "energy_distance": 0.6173207076201237, "mean_mse": 0.13660101374298284, "absolute_log_variance_error": 0.21258682407025123, "covariance_relative_error": 0.5269280379601949}
+{"status": "SCALING_CASE_EVALUATED", "setting": "k8_w128", "experts": 8, "hidden": 128, "arm": "velocity_router", "step": 4000, "worker": 2, "energy_distance": 0.6151835790422897, "mean_mse": 0.1366010120334234, "absolute_log_variance_error": 0.17248169259330548, "covariance_relative_error": 0.5137034252192216}

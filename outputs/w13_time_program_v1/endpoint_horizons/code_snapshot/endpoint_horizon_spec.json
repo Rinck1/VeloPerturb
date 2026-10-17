@@ -1,0 +1,125 @@
+{
+  "reference_root": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1",
+  "models": [
+    {
+      "name": "b0_endpoint36k",
+      "kind": "endpoint",
+      "checkpoints": [
+        {
+          "arm": "static_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1_continuation/training/b0_w8_exact/static_router/seed0/model_step36000.pt",
+          "sha256": "80da204078911eeec3fec51c9edc823688b91773621cab043673c75e095b27fd"
+        },
+        {
+          "arm": "static_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1_continuation/training/b0_w8_exact/static_router/seed1/model_step36000.pt",
+          "sha256": "e3cca3a2af34102c41487c69de6f81bf3df53cfdd16a2bce445a0fd18a1a34aa"
+        },
+        {
+          "arm": "static_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1_continuation/training/b0_w8_exact/static_router/seed2/model_step36000.pt",
+          "sha256": "31550d3d571c8c4011ac86f32961cea179fae1747490b909f4a04bf22921ce4c"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1_continuation/training/b0_w8_exact/velocity_router/seed0/model_step36000.pt",
+          "sha256": "cd780399a221daa2950f2ac9bf2ec230060f6cae23a1836c0d529eaad47fbb66"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1_continuation/training/b0_w8_exact/velocity_router/seed1/model_step36000.pt",
+          "sha256": "39e306aac523acc11b2b365aa6611134be527860d142a9feaa8e9cd10080506e"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1_continuation/training/b0_w8_exact/velocity_router/seed2/model_step36000.pt",
+          "sha256": "31b4f6f95816b9b391fc08be317f1623f4ef4d6cc2a0a57aba49c379942b9b61"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1_continuation/training/b0_w8_exact/shuffled_velocity_router/seed0/model_step36000.pt",
+          "sha256": "5144d243d687a388b8dcfb06ee4a954574f32cbb1024a4eaeff3040f26583e48"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1_continuation/training/b0_w8_exact/shuffled_velocity_router/seed1/model_step36000.pt",
+          "sha256": "d2c4fe767040b316179d04d6301d31559c716276b31bcbf3c4d43028cc41f131"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1_continuation/training/b0_w8_exact/shuffled_velocity_router/seed2/model_step36000.pt",
+          "sha256": "e0ecca14ed879898b1b3e40e9ac00b761e25088557e4147cc97598a73d5497e0"
+        }
+      ]
+    },
+    {
+      "name": "b1_endpoint36k",
+      "kind": "endpoint",
+      "checkpoints": [
+        {
+          "arm": "static_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/static_router/seed0/model_step36000.pt",
+          "sha256": "8efa918c8ae045a4c738e4d9e4885bde981ce80fd9513e42a781375be964d69a"
+        },
+        {
+          "arm": "static_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/static_router/seed1/model_step36000.pt",
+          "sha256": "e77d30467cda0cb00fbde83eaf6527cd8b53ea6037ef8fc7389bed3835092698"
+        },
+        {
+          "arm": "static_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/static_router/seed2/model_step36000.pt",
+          "sha256": "ad2d0c4270fa0ec3f1d0485a7df2cc64a0850fdd4f65c9998b5553bb0be3fb6f"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/velocity_router/seed0/model_step36000.pt",
+          "sha256": "aff329f0c602afdb37b11e26caee4feccf3309b803deae43fd034733847e4dc8"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/velocity_router/seed1/model_step36000.pt",
+          "sha256": "89ea358742675792147fea7291c3f17af23e935611f399dc7281605079e114a5"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/velocity_router/seed2/model_step36000.pt",
+          "sha256": "851f7355dc5ad76c7e481f93915b73498ae236b8e512b59c4b3f17c6e4694c0a"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed0/model_step36000.pt",
+          "sha256": "b045e387559219f88a32881bd6584ec63a909a235ab689f3ea93f3ea139fdcb7"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed1/model_step36000.pt",
+          "sha256": "67786ab1d630a73f168f84c8d917a95740a5fe120171dcf676e5b115c48d1cf1"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed2/model_step36000.pt",
+          "sha256": "10a94dec7279c5e4d1198a702e01cbe7d46de7c7ad2e35059e748a66f57a1ad3"
+        }
+      ]
+    }
+  ]
+}

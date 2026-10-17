@@ -1,0 +1,22 @@
+{
+  "kind": "scntseq_minutes_mechanistic_validation",
+  "protocol_path": "PLANS/w5_prereg_addendum.md",
+  "data_path": "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_geo_labeling_dynamo_su_exact.h5ad",
+  "data_sha256": "208cc0b266d5a6d5bfbb18834f9f153402a7a3c93aaa9c9e4c27e29c96cefbd1",
+  "times": [0, 15, 30, 60, 120],
+  "calibration_interval": [15, 30],
+  "test_intervals": [[30, 60], [60, 120]],
+  "minimum_spliced_counts": 500,
+  "minimum_unspliced_counts": 20,
+  "n_hvg": 2000,
+  "dimensions": 50,
+  "clusters": 8,
+  "target_sum": 10000.0,
+  "seed": 20261017,
+  "scale_denominator_floor": 1e-12,
+  "arms": ["identity", "past_S", "past_S_calibrated", "vel_mean", "vel_pool", "direct_U_raw", "direct_U_delta0", "new_raw", "new_delta0"],
+  "primary_velocity_arm": "vel_mean",
+  "router_enabled": false,
+  "gfg_jvp_enabled": false,
+  "fit_scale_after_calibration": false
+}

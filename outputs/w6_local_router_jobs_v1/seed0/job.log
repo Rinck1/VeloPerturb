@@ -1,0 +1,3 @@
+{"status": "LOCAL_ARM_TRAINED", "arm": "k1", "seed": 0, "parameters": 28818}
+{"status": "LOCAL_ARM_TRAINED", "arm": "static_router", "seed": 0, "parameters": 52876}
+{"status": "LOCAL_ARM_TRAINED", "arm": "velocity_router", "seed": 0, "parameters": 52876}

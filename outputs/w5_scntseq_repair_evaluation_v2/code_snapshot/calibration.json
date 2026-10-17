@@ -1,0 +1,1376 @@
+{
+  "git_commit": "42f3958c9fa4fe683d5b059dcd4129abb92ecb65",
+  "seed": 20261017,
+  "command": [
+    "scripts/phase0/w5_scntseq_repair.py",
+    "predict",
+    "--output",
+    "outputs/w5_scntseq_repair_predictions_v2"
+  ],
+  "data_hashes": {
+    "configs/w5_scntseq_repair_v2.json": "b49d83c4d2954ac7b7043fdddf64bdbc81aebf10723f2590bc524c2113d28a27",
+    "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_geo_labeling_dynamo_su_exact.h5ad": "208cc0b266d5a6d5bfbb18834f9f153402a7a3c93aaa9c9e4c27e29c96cefbd1",
+    "/home/yuchang/wangjiaxuan/outputs/w5_scntseq_predictions_v1/source_transform.npz": "0191a128e13c188bdd67cce62326e9a3b9d9c54f239169b824a48b3cc3139b4b",
+    "/home/yuchang/wangjiaxuan/PLANS/w5_scntseq_repair_v2.md": "3e002fed57970953b1343788c9bd5f154103a4f07a7419cf93b11aaa4d3861fe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_repair.py": "b0eaeaf6ad5ea00b83beb0e65136ca6af6e93b4c90035c6774d585aa6d97d525",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_minutes.py": "4f2ee06232d6ba90d95339c18a7b7a092c3093068b7900ffbf45e2e343d4a807",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 3.0087298899888992,
+  "interval": [
+    15,
+    30
+  ],
+  "models": {
+    "identity": {
+      "kind": "identity"
+    },
+    "past_unit__linear": {
+      "kind": "past_unit",
+      "kernel": "linear"
+    },
+    "past_unit__cap": {
+      "kind": "past_unit",
+      "kernel": "cap"
+    },
+    "past_unit__decay": {
+      "kind": "past_unit",
+      "kernel": "decay"
+    },
+    "state__linear": {
+      "kind": "state",
+      "kernel": "linear"
+    },
+    "state__cap": {
+      "kind": "state",
+      "kernel": "cap"
+    },
+    "state__decay": {
+      "kind": "state",
+      "kernel": "decay"
+    },
+    "state_history__linear": {
+      "kind": "state_history",
+      "kernel": "linear"
+    },
+    "state_history__cap": {
+      "kind": "state_history",
+      "kernel": "cap"
+    },
+    "state_history__decay": {
+      "kind": "state_history",
+      "kernel": "decay"
+    },
+    "U__linear": {
+      "kind": "U",
+      "kernel": "linear"
+    },
+    "U__cap": {
+      "kind": "U",
+      "kernel": "cap"
+    },
+    "U__decay": {
+      "kind": "U",
+      "kernel": "decay"
+    },
+    "state_U__linear": {
+      "kind": "state_U",
+      "kernel": "linear"
+    },
+    "state_U__cap": {
+      "kind": "state_U",
+      "kernel": "cap"
+    },
+    "state_U__decay": {
+      "kind": "state_U",
+      "kernel": "decay"
+    },
+    "new__linear": {
+      "kind": "new",
+      "kernel": "linear"
+    },
+    "new__cap": {
+      "kind": "new",
+      "kernel": "cap"
+    },
+    "new__decay": {
+      "kind": "new",
+      "kernel": "decay"
+    },
+    "tail__mean__raw__velocity__linear": {
+      "kind": "velocity",
+      "estimator": "tail",
+      "aggregation": "mean",
+      "centering": "raw",
+      "kernel": "linear"
+    },
+    "tail__mean__raw__velocity__cap": {
+      "kind": "velocity",
+      "estimator": "tail",
+      "aggregation": "mean",
+      "centering": "raw",
+      "kernel": "cap"
+    },
+    "tail__mean__raw__velocity__decay": {
+      "kind": "velocity",
+      "estimator": "tail",
+      "aggregation": "mean",
+      "centering": "raw",
+      "kernel": "decay"
+    },
+    "tail__mean__raw__state_velocity__linear": {
+      "kind": "state_velocity",
+      "estimator": "tail",
+      "aggregation": "mean",
+      "centering": "raw",
+      "kernel": "linear"
+    },
+    "tail__mean__raw__state_velocity__cap": {
+      "kind": "state_velocity",
+      "estimator": "tail",
+      "aggregation": "mean",
+      "centering": "raw",
+      "kernel": "cap"
+    },
+    "tail__mean__raw__state_velocity__decay": {
+      "kind": "state_velocity",
+      "estimator": "tail",
+      "aggregation": "mean",
+      "centering": "raw",
+      "kernel": "decay"
+    },
+    "tail__mean__baseline0__velocity__linear": {
+      "kind": "velocity",
+      "estimator": "tail",
+      "aggregation": "mean",
+      "centering": "baseline0",
+      "kernel": "linear"
+    },
+    "tail__mean__baseline0__velocity__cap": {
+      "kind": "velocity",
+      "estimator": "tail",
+      "aggregation": "mean",
+      "centering": "baseline0",
+      "kernel": "cap"
+    },
+    "tail__mean__baseline0__velocity__decay": {
+      "kind": "velocity",
+      "estimator": "tail",
+      "aggregation": "mean",
+      "centering": "baseline0",
+      "kernel": "decay"
+    },
+    "tail__mean__baseline0__state_velocity__linear": {
+      "kind": "state_velocity",
+      "estimator": "tail",
+      "aggregation": "mean",
+      "centering": "baseline0",
+      "kernel": "linear"
+    },
+    "tail__mean__baseline0__state_velocity__cap": {
+      "kind": "state_velocity",
+      "estimator": "tail",
+      "aggregation": "mean",
+      "centering": "baseline0",
+      "kernel": "cap"
+    },
+    "tail__mean__baseline0__state_velocity__decay": {
+      "kind": "state_velocity",
+      "estimator": "tail",
+      "aggregation": "mean",
+      "centering": "baseline0",
+      "kernel": "decay"
+    },
+    "tail__pool__raw__velocity__linear": {
+      "kind": "velocity",
+      "estimator": "tail",
+      "aggregation": "pool",
+      "centering": "raw",
+      "kernel": "linear"
+    },
+    "tail__pool__raw__velocity__cap": {
+      "kind": "velocity",
+      "estimator": "tail",
+      "aggregation": "pool",
+      "centering": "raw",
+      "kernel": "cap"
+    },
+    "tail__pool__raw__velocity__decay": {
+      "kind": "velocity",
+      "estimator": "tail",
+      "aggregation": "pool",
+      "centering": "raw",
+      "kernel": "decay"
+    },
+    "tail__pool__raw__state_velocity__linear": {
+      "kind": "state_velocity",
+      "estimator": "tail",
+      "aggregation": "pool",
+      "centering": "raw",
+      "kernel": "linear"
+    },
+    "tail__pool__raw__state_velocity__cap": {
+      "kind": "state_velocity",
+      "estimator": "tail",
+      "aggregation": "pool",
+      "centering": "raw",
+      "kernel": "cap"
+    },
+    "tail__pool__raw__state_velocity__decay": {
+      "kind": "state_velocity",
+      "estimator": "tail",
+      "aggregation": "pool",
+      "centering": "raw",
+      "kernel": "decay"
+    },
+    "tail__pool__baseline0__velocity__linear": {
+      "kind": "velocity",
+      "estimator": "tail",
+      "aggregation": "pool",
+      "centering": "baseline0",
+      "kernel": "linear"
+    },
+    "tail__pool__baseline0__velocity__cap": {
+      "kind": "velocity",
+      "estimator": "tail",
+      "aggregation": "pool",
+      "centering": "baseline0",
+      "kernel": "cap"
+    },
+    "tail__pool__baseline0__velocity__decay": {
+      "kind": "velocity",
+      "estimator": "tail",
+      "aggregation": "pool",
+      "centering": "baseline0",
+      "kernel": "decay"
+    },
+    "tail__pool__baseline0__state_velocity__linear": {
+      "kind": "state_velocity",
+      "estimator": "tail",
+      "aggregation": "pool",
+      "centering": "baseline0",
+      "kernel": "linear"
+    },
+    "tail__pool__baseline0__state_velocity__cap": {
+      "kind": "state_velocity",
+      "estimator": "tail",
+      "aggregation": "pool",
+      "centering": "baseline0",
+      "kernel": "cap"
+    },
+    "tail__pool__baseline0__state_velocity__decay": {
+      "kind": "state_velocity",
+      "estimator": "tail",
+      "aggregation": "pool",
+      "centering": "baseline0",
+      "kernel": "decay"
+    },
+    "pooled_shrink__mean__raw__velocity__linear": {
+      "kind": "velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "mean",
+      "centering": "raw",
+      "kernel": "linear"
+    },
+    "pooled_shrink__mean__raw__velocity__cap": {
+      "kind": "velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "mean",
+      "centering": "raw",
+      "kernel": "cap"
+    },
+    "pooled_shrink__mean__raw__velocity__decay": {
+      "kind": "velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "mean",
+      "centering": "raw",
+      "kernel": "decay"
+    },
+    "pooled_shrink__mean__raw__state_velocity__linear": {
+      "kind": "state_velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "mean",
+      "centering": "raw",
+      "kernel": "linear"
+    },
+    "pooled_shrink__mean__raw__state_velocity__cap": {
+      "kind": "state_velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "mean",
+      "centering": "raw",
+      "kernel": "cap"
+    },
+    "pooled_shrink__mean__raw__state_velocity__decay": {
+      "kind": "state_velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "mean",
+      "centering": "raw",
+      "kernel": "decay"
+    },
+    "pooled_shrink__mean__baseline0__velocity__linear": {
+      "kind": "velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "mean",
+      "centering": "baseline0",
+      "kernel": "linear"
+    },
+    "pooled_shrink__mean__baseline0__velocity__cap": {
+      "kind": "velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "mean",
+      "centering": "baseline0",
+      "kernel": "cap"
+    },
+    "pooled_shrink__mean__baseline0__velocity__decay": {
+      "kind": "velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "mean",
+      "centering": "baseline0",
+      "kernel": "decay"
+    },
+    "pooled_shrink__mean__baseline0__state_velocity__linear": {
+      "kind": "state_velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "mean",
+      "centering": "baseline0",
+      "kernel": "linear"
+    },
+    "pooled_shrink__mean__baseline0__state_velocity__cap": {
+      "kind": "state_velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "mean",
+      "centering": "baseline0",
+      "kernel": "cap"
+    },
+    "pooled_shrink__mean__baseline0__state_velocity__decay": {
+      "kind": "state_velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "mean",
+      "centering": "baseline0",
+      "kernel": "decay"
+    },
+    "pooled_shrink__pool__raw__velocity__linear": {
+      "kind": "velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "pool",
+      "centering": "raw",
+      "kernel": "linear"
+    },
+    "pooled_shrink__pool__raw__velocity__cap": {
+      "kind": "velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "pool",
+      "centering": "raw",
+      "kernel": "cap"
+    },
+    "pooled_shrink__pool__raw__velocity__decay": {
+      "kind": "velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "pool",
+      "centering": "raw",
+      "kernel": "decay"
+    },
+    "pooled_shrink__pool__raw__state_velocity__linear": {
+      "kind": "state_velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "pool",
+      "centering": "raw",
+      "kernel": "linear"
+    },
+    "pooled_shrink__pool__raw__state_velocity__cap": {
+      "kind": "state_velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "pool",
+      "centering": "raw",
+      "kernel": "cap"
+    },
+    "pooled_shrink__pool__raw__state_velocity__decay": {
+      "kind": "state_velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "pool",
+      "centering": "raw",
+      "kernel": "decay"
+    },
+    "pooled_shrink__pool__baseline0__velocity__linear": {
+      "kind": "velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "pool",
+      "centering": "baseline0",
+      "kernel": "linear"
+    },
+    "pooled_shrink__pool__baseline0__velocity__cap": {
+      "kind": "velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "pool",
+      "centering": "baseline0",
+      "kernel": "cap"
+    },
+    "pooled_shrink__pool__baseline0__velocity__decay": {
+      "kind": "velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "pool",
+      "centering": "baseline0",
+      "kernel": "decay"
+    },
+    "pooled_shrink__pool__baseline0__state_velocity__linear": {
+      "kind": "state_velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "pool",
+      "centering": "baseline0",
+      "kernel": "linear"
+    },
+    "pooled_shrink__pool__baseline0__state_velocity__cap": {
+      "kind": "state_velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "pool",
+      "centering": "baseline0",
+      "kernel": "cap"
+    },
+    "pooled_shrink__pool__baseline0__state_velocity__decay": {
+      "kind": "state_velocity",
+      "estimator": "pooled_shrink",
+      "aggregation": "pool",
+      "centering": "baseline0",
+      "kernel": "decay"
+    }
+  },
+  "fits": {
+    "identity": {
+      "coefficients": [],
+      "parameter_count": 0
+    },
+    "past_unit__linear": {
+      "coefficients": [
+        1.0
+      ],
+      "parameter_count": 0
+    },
+    "past_unit__cap": {
+      "coefficients": [
+        1.0
+      ],
+      "parameter_count": 0
+    },
+    "past_unit__decay": {
+      "coefficients": [
+        1.0
+      ],
+      "parameter_count": 0
+    },
+    "state__linear": {
+      "coefficients": [
+        -0.006939869547241383
+      ],
+      "source_column_norms": [
+        1.8996134968801373
+      ],
+      "positive_columns": [
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "state__cap": {
+      "coefficients": [
+        -0.006939869547241383
+      ],
+      "source_column_norms": [
+        1.8996134968801373
+      ],
+      "positive_columns": [
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "state__decay": {
+      "coefficients": [
+        -0.006939869547241383
+      ],
+      "source_column_norms": [
+        1.8996134968801373
+      ],
+      "positive_columns": [
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "state_history__linear": {
+      "coefficients": [
+        -0.004626579698160925,
+        -0.06939869547241377
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.12664089979200913
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "state_history__cap": {
+      "coefficients": [
+        -0.004626579698160925,
+        -0.06939869547241377
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.12664089979200913
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "state_history__decay": {
+      "coefficients": [
+        -0.004626579698160925,
+        -0.06939869547241377
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.12664089979200913
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "U__linear": {
+      "coefficients": [
+        -0.027678285098346894
+      ],
+      "source_column_norms": [
+        0.34717948646276275
+      ],
+      "positive_columns": [
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "U__cap": {
+      "coefficients": [
+        -0.027678285098346894
+      ],
+      "source_column_norms": [
+        0.34717948646276275
+      ],
+      "positive_columns": [
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "U__decay": {
+      "coefficients": [
+        -0.027678285098346894
+      ],
+      "source_column_norms": [
+        0.34717948646276275
+      ],
+      "positive_columns": [
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "state_U__linear": {
+      "coefficients": [
+        -0.0059566822563300245,
+        -0.017862711348426187
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.3471794864627628
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "state_U__cap": {
+      "coefficients": [
+        -0.0059566822563300245,
+        -0.017862711348426187
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.3471794864627628
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "state_U__decay": {
+      "coefficients": [
+        -0.0059566822563300245,
+        -0.017862711348426187
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.3471794864627628
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "new__linear": {
+      "coefficients": [
+        0.034092158030228185
+      ],
+      "source_column_norms": [
+        1.880723659812346
+      ],
+      "positive_columns": [
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "new__cap": {
+      "coefficients": [
+        0.034092158030228185
+      ],
+      "source_column_norms": [
+        1.880723659812346
+      ],
+      "positive_columns": [
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "new__decay": {
+      "coefficients": [
+        0.034092158030228185
+      ],
+      "source_column_norms": [
+        1.880723659812346
+      ],
+      "positive_columns": [
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__mean__raw__velocity__linear": {
+      "coefficients": [
+        0.0
+      ],
+      "source_column_norms": [
+        5.013210950775396
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__mean__raw__velocity__cap": {
+      "coefficients": [
+        0.0
+      ],
+      "source_column_norms": [
+        5.013210950775396
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__mean__raw__velocity__decay": {
+      "coefficients": [
+        0.0
+      ],
+      "source_column_norms": [
+        5.013210950775396
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__mean__raw__state_velocity__linear": {
+      "coefficients": [
+        -0.006939869547241357,
+        0.0
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        5.013210950775395
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "tail__mean__raw__state_velocity__cap": {
+      "coefficients": [
+        -0.006939869547241357,
+        0.0
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        5.013210950775395
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "tail__mean__raw__state_velocity__decay": {
+      "coefficients": [
+        -0.006939869547241357,
+        0.0
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        5.013210950775395
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "tail__mean__baseline0__velocity__linear": {
+      "coefficients": [
+        0.08596628386579655
+      ],
+      "source_column_norms": [
+        0.3610869456468711
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__mean__baseline0__velocity__cap": {
+      "coefficients": [
+        0.08596628386579655
+      ],
+      "source_column_norms": [
+        0.3610869456468711
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__mean__baseline0__velocity__decay": {
+      "coefficients": [
+        0.08596628386579655
+      ],
+      "source_column_norms": [
+        0.3610869456468711
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__mean__baseline0__state_velocity__linear": {
+      "coefficients": [
+        -0.0034894219484256964,
+        0.08189749431021119
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.36108694564687116
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "tail__mean__baseline0__state_velocity__cap": {
+      "coefficients": [
+        -0.0034894219484256964,
+        0.08189749431021119
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.36108694564687116
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "tail__mean__baseline0__state_velocity__decay": {
+      "coefficients": [
+        -0.0034894219484256964,
+        0.08189749431021119
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.36108694564687116
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "tail__pool__raw__velocity__linear": {
+      "coefficients": [
+        0.0
+      ],
+      "source_column_norms": [
+        2.019427740780066
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__pool__raw__velocity__cap": {
+      "coefficients": [
+        0.0
+      ],
+      "source_column_norms": [
+        2.019427740780066
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__pool__raw__velocity__decay": {
+      "coefficients": [
+        0.0
+      ],
+      "source_column_norms": [
+        2.019427740780066
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__pool__raw__state_velocity__linear": {
+      "coefficients": [
+        -0.00693986954724139,
+        0.0
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        2.019427740780066
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "tail__pool__raw__state_velocity__cap": {
+      "coefficients": [
+        -0.00693986954724139,
+        0.0
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        2.019427740780066
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "tail__pool__raw__state_velocity__decay": {
+      "coefficients": [
+        -0.00693986954724139,
+        0.0
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        2.019427740780066
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "tail__pool__baseline0__velocity__linear": {
+      "coefficients": [
+        0.05362078705813156
+      ],
+      "source_column_norms": [
+        0.20863296018462468
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__pool__baseline0__velocity__cap": {
+      "coefficients": [
+        0.05362078705813156
+      ],
+      "source_column_norms": [
+        0.20863296018462468
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__pool__baseline0__velocity__decay": {
+      "coefficients": [
+        0.05362078705813156
+      ],
+      "source_column_norms": [
+        0.20863296018462468
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "tail__pool__baseline0__state_velocity__linear": {
+      "coefficients": [
+        -0.006632261598594651,
+        0.0502553493360495
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.20863296018462468
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "tail__pool__baseline0__state_velocity__cap": {
+      "coefficients": [
+        -0.006632261598594651,
+        0.0502553493360495
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.20863296018462468
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "tail__pool__baseline0__state_velocity__decay": {
+      "coefficients": [
+        -0.006632261598594651,
+        0.0502553493360495
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.20863296018462468
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "pooled_shrink__mean__raw__velocity__linear": {
+      "coefficients": [
+        0.0
+      ],
+      "source_column_norms": [
+        4.283882265249703
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "pooled_shrink__mean__raw__velocity__cap": {
+      "coefficients": [
+        0.0
+      ],
+      "source_column_norms": [
+        4.283882265249703
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "pooled_shrink__mean__raw__velocity__decay": {
+      "coefficients": [
+        0.0
+      ],
+      "source_column_norms": [
+        4.283882265249703
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "pooled_shrink__mean__raw__state_velocity__linear": {
+      "coefficients": [
+        -0.006939869547241372,
+        0.0
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        4.283882265249703
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "pooled_shrink__mean__raw__state_velocity__cap": {
+      "coefficients": [
+        -0.006939869547241372,
+        0.0
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        4.283882265249703
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "pooled_shrink__mean__raw__state_velocity__decay": {
+      "coefficients": [
+        -0.006939869547241372,
+        0.0
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        4.283882265249703
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "pooled_shrink__mean__baseline0__velocity__linear": {
+      "coefficients": [
+        0.08029289153114257
+      ],
+      "source_column_norms": [
+        0.39924612787558544
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "pooled_shrink__mean__baseline0__velocity__cap": {
+      "coefficients": [
+        0.08029289153114257
+      ],
+      "source_column_norms": [
+        0.39924612787558544
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "pooled_shrink__mean__baseline0__velocity__decay": {
+      "coefficients": [
+        0.08029289153114257
+      ],
+      "source_column_norms": [
+        0.39924612787558544
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "pooled_shrink__mean__baseline0__state_velocity__linear": {
+      "coefficients": [
+        -0.002877982252166722,
+        0.07684918792530747
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.39924612787558544
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "pooled_shrink__mean__baseline0__state_velocity__cap": {
+      "coefficients": [
+        -0.002877982252166722,
+        0.07684918792530747
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.39924612787558544
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "pooled_shrink__mean__baseline0__state_velocity__decay": {
+      "coefficients": [
+        -0.002877982252166722,
+        0.07684918792530747
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.39924612787558544
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "pooled_shrink__pool__raw__velocity__linear": {
+      "coefficients": [
+        0.0
+      ],
+      "source_column_norms": [
+        0.5108488620548409
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "pooled_shrink__pool__raw__velocity__cap": {
+      "coefficients": [
+        0.0
+      ],
+      "source_column_norms": [
+        0.5108488620548409
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "pooled_shrink__pool__raw__velocity__decay": {
+      "coefficients": [
+        0.0
+      ],
+      "source_column_norms": [
+        0.5108488620548409
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "pooled_shrink__pool__raw__state_velocity__linear": {
+      "coefficients": [
+        -0.006962734066519613,
+        0.00032653282212598863
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.5108488620548409
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "pooled_shrink__pool__raw__state_velocity__cap": {
+      "coefficients": [
+        -0.006962734066519613,
+        0.00032653282212598863
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.5108488620548409
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "pooled_shrink__pool__raw__state_velocity__decay": {
+      "coefficients": [
+        -0.006962734066519613,
+        0.00032653282212598863
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.5108488620548409
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "pooled_shrink__pool__baseline0__velocity__linear": {
+      "coefficients": [
+        0.04315630245543949
+      ],
+      "source_column_norms": [
+        0.2382078285425795
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "pooled_shrink__pool__baseline0__velocity__cap": {
+      "coefficients": [
+        0.04315630245543949
+      ],
+      "source_column_norms": [
+        0.2382078285425795
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "pooled_shrink__pool__baseline0__velocity__decay": {
+      "coefficients": [
+        0.04315630245543949
+      ],
+      "source_column_norms": [
+        0.2382078285425795
+      ],
+      "positive_columns": [
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 1
+    },
+    "pooled_shrink__pool__baseline0__state_velocity__linear": {
+      "coefficients": [
+        -0.006506924093048317,
+        0.03850334725352834
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.2382078285425795
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "pooled_shrink__pool__baseline0__state_velocity__cap": {
+      "coefficients": [
+        -0.006506924093048317,
+        0.03850334725352834
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.2382078285425795
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "pooled_shrink__pool__baseline0__state_velocity__decay": {
+      "coefficients": [
+        -0.006506924093048317,
+        0.03850334725352834
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.2382078285425795
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    }
+  },
+  "calibration_uses_future_test_targets": false,
+  "all_models_reported": true
+}

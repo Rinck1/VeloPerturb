@@ -1,0 +1,259 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w12_cohort_calibration.py",
+    "--root",
+    "outputs/w12_scifate2_privileged_router_v1",
+    "--output",
+    "outputs/w12_source_mass_calibration_v1"
+  ],
+  "data_hashes": {
+    "outputs/w12_scifate2_privileged_router_v1/study_manifest.json": "7f3c5ac616470ef7f6e0a6fd4451a662b169bf613c373f262f3856cbb2914823",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/normalization.npz": "8083197f8b75f616a2eae262b6f28f16b7868aa9a3e319b09885c3e9c512744d",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w12_cohort_calibration.py": "cda5535a7669efa8302a1b13338d8883a75db135f02042d3b5aaf3c419e49bb2",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/static_router/seed0/model_step4000.pt": "6c18d03c32c9c7caae0bf52cf67e8533584dee59a5cc95227635004b3573568e",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/static_router/seed1/model_step4000.pt": "3ce34eb0fded2726055d98ac2c5a50bbb376ce52e3ed88a918730afba8290518",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/static_router/seed2/model_step4000.pt": "b78bad1e68b8a1b16be8138c229945fb59d786aadd2a96b2cbb26c2a2ea500a4",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/velocity_router/seed0/model_step4000.pt": "3e9509bc2fb835ba1a755514c9710fcad7206ceb53261a33c99b150e94b02d54",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/velocity_router/seed1/model_step4000.pt": "cd2b6cfef84fe0e1bad71c5970c6b4fa94c7d276800a3dd5958de478f7f702b3",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/velocity_router/seed2/model_step4000.pt": "f01d75cc717cc7f28b15f6551d3f5dd7c4efd51c15979490c5c22170e65f4390",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/shuffled_velocity_router/seed0/model_step4000.pt": "528362d35bccace2f4373fa1e1987a30c6b8dbda903be982899ce6d903420744",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/shuffled_velocity_router/seed1/model_step4000.pt": "a61060d1f6c781d1f9350954aa0759c8c4be6e3635c56871a8082073d6f2e84d",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/shuffled_velocity_router/seed2/model_step4000.pt": "c69eb9b29714aa814c8c4f3dd8fd6dfe7fa51dff78cc14fb67f1ad1d6fb40786"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "9a72408fb79c9165e689862e779839a0eae3ddc2e5413b7e2fb6088be2d08575",
+  "runtime_seconds": 4.1709876768291,
+  "status": "SOURCE_CALIBRATED_PREDICTIONS_FROZEN",
+  "artifacts": [
+    {
+      "arm": "static_router",
+      "seed": 0,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/static_router_seed0_5_to_10.npz",
+      "sha256": "37dc05fc62311df37a0ceecce35b133173c89cd7ddd56562107f2545d24741e9"
+    },
+    {
+      "arm": "static_router",
+      "seed": 0,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/static_router_seed0_10_to_15.npz",
+      "sha256": "562808d277588a676d895351ba7019a38f5f336e6d1e77447aaca563c3e448d5"
+    },
+    {
+      "arm": "static_router",
+      "seed": 0,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/static_router_seed0_15_to_20.npz",
+      "sha256": "b67f1b89a919fafdbea10dbd709a4495596cdd87c37b451afde114e83090bc1e"
+    },
+    {
+      "arm": "static_router",
+      "seed": 1,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/static_router_seed1_5_to_10.npz",
+      "sha256": "151da768c835a757ecb8de056e77403646aeca18ad18e46504c3e2a1a7af888d"
+    },
+    {
+      "arm": "static_router",
+      "seed": 1,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/static_router_seed1_10_to_15.npz",
+      "sha256": "e24d036f6da9feb613601e92d97d1970dcf67a4161f3fc7ecbaf20b281a6dc81"
+    },
+    {
+      "arm": "static_router",
+      "seed": 1,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/static_router_seed1_15_to_20.npz",
+      "sha256": "74d7c0f8afe69385d71580a8230279c97010780c87dbdaca8df1ba180b4f9b82"
+    },
+    {
+      "arm": "static_router",
+      "seed": 2,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/static_router_seed2_5_to_10.npz",
+      "sha256": "c2dddaea98497ba1e7893ba0aaab53683b1a944e56449f8943868242921f1c97"
+    },
+    {
+      "arm": "static_router",
+      "seed": 2,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/static_router_seed2_10_to_15.npz",
+      "sha256": "29ef4f30a3053f9a2fa1845c1d3d8bb0cb9c960ec30537bd17a37e05272b3e8b"
+    },
+    {
+      "arm": "static_router",
+      "seed": 2,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/static_router_seed2_15_to_20.npz",
+      "sha256": "cbfaefdce7ea03a67fc1aaeb6818e233b6354c75b57a1e7c701946f612de4032"
+    },
+    {
+      "arm": "velocity_router",
+      "seed": 0,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/velocity_router_seed0_5_to_10.npz",
+      "sha256": "8828983fdcbfd2390c77fbddaa58b9ea03d28d2937aa07f858d6de12b2a21704"
+    },
+    {
+      "arm": "velocity_router",
+      "seed": 0,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/velocity_router_seed0_10_to_15.npz",
+      "sha256": "b79dfd30e5d39705b97615b2654209bee2aa14cab3c12c43f16217bf869440e3"
+    },
+    {
+      "arm": "velocity_router",
+      "seed": 0,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/velocity_router_seed0_15_to_20.npz",
+      "sha256": "4dfba727c658710941dee9fcf12c26dfdaf22cdb77e3e1eb8decfb234b7116f4"
+    },
+    {
+      "arm": "velocity_router",
+      "seed": 1,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/velocity_router_seed1_5_to_10.npz",
+      "sha256": "287dce253bbca5f4abf58d7734f506ef412aef37fda5722fe3b3d8c3bb8ccbc3"
+    },
+    {
+      "arm": "velocity_router",
+      "seed": 1,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/velocity_router_seed1_10_to_15.npz",
+      "sha256": "4dbecdc0634639e020c7ecf71262a9a026a81f0b8c915c044e534df3194b9531"
+    },
+    {
+      "arm": "velocity_router",
+      "seed": 1,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/velocity_router_seed1_15_to_20.npz",
+      "sha256": "a76c22efc751e5c8364933988e7f757ea3562be257956ccead9395c976325b77"
+    },
+    {
+      "arm": "velocity_router",
+      "seed": 2,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/velocity_router_seed2_5_to_10.npz",
+      "sha256": "59a02ed2ea12561d009f37cf89415087ea9fb63956c010cffcd59aa92216fa97"
+    },
+    {
+      "arm": "velocity_router",
+      "seed": 2,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/velocity_router_seed2_10_to_15.npz",
+      "sha256": "07f47d66bd5b90cd7f626965e8764fed6e969a88022f9fae28b5601d324e1f12"
+    },
+    {
+      "arm": "velocity_router",
+      "seed": 2,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/velocity_router_seed2_15_to_20.npz",
+      "sha256": "f9a79670ee73627427c71911635b689d65c1115d3c911fe46ecd26d6f96ac1f7"
+    },
+    {
+      "arm": "shuffled_velocity_router",
+      "seed": 0,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/shuffled_velocity_router_seed0_5_to_10.npz",
+      "sha256": "8d7a6979f1006f07705969159d9c32be064fefcb79f389aef53b9f9b8bf92873"
+    },
+    {
+      "arm": "shuffled_velocity_router",
+      "seed": 0,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/shuffled_velocity_router_seed0_10_to_15.npz",
+      "sha256": "b6ccf366f4123b146e755182379bc551c049db899d283e1999ff1fd4c4faab09"
+    },
+    {
+      "arm": "shuffled_velocity_router",
+      "seed": 0,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/shuffled_velocity_router_seed0_15_to_20.npz",
+      "sha256": "63ccd80208b7b8763210894ba89f9bca332461f43d72bf372fbcfc4f0c99ad54"
+    },
+    {
+      "arm": "shuffled_velocity_router",
+      "seed": 1,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/shuffled_velocity_router_seed1_5_to_10.npz",
+      "sha256": "2bde3379a90619e5d526f150cc4d1eabbf3be44d2435353c18cb78dacde4922c"
+    },
+    {
+      "arm": "shuffled_velocity_router",
+      "seed": 1,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/shuffled_velocity_router_seed1_10_to_15.npz",
+      "sha256": "ee06a3e7c94768da527b80735c92118d4273e66b250a53f234120b5e01b646d3"
+    },
+    {
+      "arm": "shuffled_velocity_router",
+      "seed": 1,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/shuffled_velocity_router_seed1_15_to_20.npz",
+      "sha256": "5fab9401125a32f0bf8c07765cde3ad774bb187d913a96ac585e0c6202f57e34"
+    },
+    {
+      "arm": "shuffled_velocity_router",
+      "seed": 2,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/shuffled_velocity_router_seed2_5_to_10.npz",
+      "sha256": "dd55b3dbe85f3e20e4983a589f04b6e351583e478e9d44f61ed641de8cb0162e"
+    },
+    {
+      "arm": "shuffled_velocity_router",
+      "seed": 2,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/shuffled_velocity_router_seed2_10_to_15.npz",
+      "sha256": "d5503d4b26f3e7208718a5059de7e2e3efdfe0395dc0c528e54ad0823395a36b"
+    },
+    {
+      "arm": "shuffled_velocity_router",
+      "seed": 2,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_source_mass_calibration_v1/shuffled_velocity_router_seed2_15_to_20.npz",
+      "sha256": "67ea72644f697e0dc587c46fa563e964fe86d5c4887d4001cbec149d27f09dc2"
+    }
+  ],
+  "variants": [
+    "S_student",
+    "S_student_kinetic_mass_calibrated",
+    "teacher_cohort_average"
+  ],
+  "target_read_for_calibration": false,
+  "model_retrained": false
+}

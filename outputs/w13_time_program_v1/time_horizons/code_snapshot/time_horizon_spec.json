@@ -1,0 +1,185 @@
+{
+  "reference_root": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1",
+  "models": [
+    {
+      "name": "b1_endpoint36k",
+      "kind": "endpoint",
+      "checkpoints": [
+        {
+          "arm": "static_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/static_router/seed0/model_step36000.pt",
+          "sha256": "8efa918c8ae045a4c738e4d9e4885bde981ce80fd9513e42a781375be964d69a"
+        },
+        {
+          "arm": "static_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/static_router/seed1/model_step36000.pt",
+          "sha256": "e77d30467cda0cb00fbde83eaf6527cd8b53ea6037ef8fc7389bed3835092698"
+        },
+        {
+          "arm": "static_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/static_router/seed2/model_step36000.pt",
+          "sha256": "ad2d0c4270fa0ec3f1d0485a7df2cc64a0850fdd4f65c9998b5553bb0be3fb6f"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/velocity_router/seed0/model_step36000.pt",
+          "sha256": "aff329f0c602afdb37b11e26caee4feccf3309b803deae43fd034733847e4dc8"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/velocity_router/seed1/model_step36000.pt",
+          "sha256": "89ea358742675792147fea7291c3f17af23e935611f399dc7281605079e114a5"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/velocity_router/seed2/model_step36000.pt",
+          "sha256": "851f7355dc5ad76c7e481f93915b73498ae236b8e512b59c4b3f17c6e4694c0a"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed0/model_step36000.pt",
+          "sha256": "b045e387559219f88a32881bd6584ec63a909a235ab689f3ea93f3ea139fdcb7"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed1/model_step36000.pt",
+          "sha256": "67786ab1d630a73f168f84c8d917a95740a5fe120171dcf676e5b115c48d1cf1"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed2/model_step36000.pt",
+          "sha256": "10a94dec7279c5e4d1198a702e01cbe7d46de7c7ad2e35059e748a66f57a1ad3"
+        }
+      ]
+    },
+    {
+      "name": "endpoint_time_40k",
+      "kind": "endpoint_time",
+      "checkpoints": [
+        {
+          "arm": "velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/endpoint_time/velocity_router/seed0/model_step4000.pt",
+          "sha256": "c6e63c971ddcbef3a3e4a996617e959df9c17052d4812e3e79c1bfc5ca57e4c1"
+        },
+        {
+          "arm": "static_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/endpoint_time/static_router/seed0/model_step4000.pt",
+          "sha256": "95230ec3de0222586bdc4a71159bee563c2ab21cb66316f6e740009f74b04f6b"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/endpoint_time/shuffled_velocity_router/seed0/model_step4000.pt",
+          "sha256": "90cb7d74275f24aeb0f5e5d78f36ba378da26615736f9d979c37d2dd5b88cde3"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/endpoint_time/velocity_router/seed1/model_step4000.pt",
+          "sha256": "ee7f2bec731e5d93fc70f6bfaae4131a7349b63a01059eea434037b4c8634da0"
+        },
+        {
+          "arm": "static_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/endpoint_time/static_router/seed1/model_step4000.pt",
+          "sha256": "cd51b3cf312bba7166dd638e9fae9185dc4785c809dac1a540b059fccfa20997"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/endpoint_time/shuffled_velocity_router/seed1/model_step4000.pt",
+          "sha256": "fd904bf86fb22682904c2ef509590cc7d0c01068aa2fa42773689c48558909bf"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/endpoint_time/velocity_router/seed2/model_step4000.pt",
+          "sha256": "85799bafbef2c99b420fc8f8ab19c70a702aa9ebd060d38f01065ac375996e9b"
+        },
+        {
+          "arm": "static_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/endpoint_time/static_router/seed2/model_step4000.pt",
+          "sha256": "1e8786b9f2623b7b7e99f0d7789aa4950d999089c99ad59d6e20362ef8431f17"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/endpoint_time/shuffled_velocity_router/seed2/model_step4000.pt",
+          "sha256": "ac392db92e99be2a78ed4ee8dd076b9439ddab0fb8c3956fd4f2a57b0cddf7a5"
+        }
+      ]
+    },
+    {
+      "name": "ode_40k",
+      "kind": "ode",
+      "checkpoints": [
+        {
+          "arm": "velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/velocity_router/seed0/model_step4000.pt",
+          "sha256": "308b30d10636f87b199abc061a18136836b808f06bcad9183ac5afb288496f52"
+        },
+        {
+          "arm": "static_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/static_router/seed0/model_step4000.pt",
+          "sha256": "d90e05252bf3e93202041fdb81ee580a980054aa5208583c8664d44faa2503b8"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/shuffled_velocity_router/seed0/model_step4000.pt",
+          "sha256": "2dbe2d62a1d7b29c49b4a20afdd3cb0e372d01c930aa08dc081f71c218d695e8"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/velocity_router/seed1/model_step4000.pt",
+          "sha256": "e6bbcd19b50f430eb29801b5fdfb5c9c961438233fe3061e2e19bf064f6b2f15"
+        },
+        {
+          "arm": "static_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/static_router/seed1/model_step4000.pt",
+          "sha256": "2fc3b43c33900dc772e4b6e6935732a412732517946742cea94c3ac188ca8909"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/shuffled_velocity_router/seed1/model_step4000.pt",
+          "sha256": "548c8a9eba9ae90be3c4976bee46c5c3cfeabaca3f1139e2942d71b5c9919d0f"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/velocity_router/seed2/model_step4000.pt",
+          "sha256": "58101ac833967d29c672363aae06eb950bfaba1dedb328cd1aeed4f163bf6c44"
+        },
+        {
+          "arm": "static_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/static_router/seed2/model_step4000.pt",
+          "sha256": "4c13e2bcd0442eb795d33655c5c4e02bc84acd6de98e15c4703e916004b4a536"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/shuffled_velocity_router/seed2/model_step4000.pt",
+          "sha256": "d6818ec61b7e93d170f88796d6fdef648ac5ae3ed57b7a75838c6a06bcf87692"
+        }
+      ]
+    }
+  ]
+}

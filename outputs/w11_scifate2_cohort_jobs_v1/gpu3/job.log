@@ -1,0 +1,10 @@
+{"status": "COHORT_CHECKPOINT", "arm": "static_router", "seed": 2, "step": 1000, "training_seconds": 8.47139771655202, "peak_allocated_bytes": 212776960}
+{"status": "COHORT_CHECKPOINT", "arm": "static_router", "seed": 2, "step": 4000, "training_seconds": 28.652043342590332, "peak_allocated_bytes": 212776960}
+{"status": "COHORT_CHECKPOINT", "arm": "static_router", "seed": 2, "step": 12000, "training_seconds": 83.49102940037847, "peak_allocated_bytes": 212776960}
+{"status": "COHORT_CHECKPOINT", "arm": "velocity_router", "seed": 2, "step": 1000, "training_seconds": 6.816390331834555, "peak_allocated_bytes": 213719040}
+{"status": "COHORT_CHECKPOINT", "arm": "velocity_router", "seed": 2, "step": 4000, "training_seconds": 27.32706080749631, "peak_allocated_bytes": 213719040}
+{"status": "COHORT_CHECKPOINT", "arm": "velocity_router", "seed": 2, "step": 12000, "training_seconds": 81.60667022317648, "peak_allocated_bytes": 213719040}
+{"status": "COHORT_CHECKPOINT", "arm": "shuffled_velocity_router", "seed": 2, "step": 1000, "training_seconds": 6.777089070528746, "peak_allocated_bytes": 213719040}
+{"status": "COHORT_CHECKPOINT", "arm": "shuffled_velocity_router", "seed": 2, "step": 4000, "training_seconds": 26.91631196066737, "peak_allocated_bytes": 213719040}
+{"status": "COHORT_CHECKPOINT", "arm": "shuffled_velocity_router", "seed": 2, "step": 12000, "training_seconds": 81.93512804433703, "peak_allocated_bytes": 213719040}
+{"status": "SCALING_CASE_EVALUATED", "setting": "cohort_full_center_V", "experts": 8, "hidden": 128, "arm": "shuffled_velocity_router", "step": 12000, "worker": 2, "energy_distance": 0.6181492518431883, "mean_mse": 0.13660101281984072, "absolute_log_variance_error": 0.17446187926460857, "covariance_relative_error": 0.46807942597567126}

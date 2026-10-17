@@ -1,0 +1,320 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_bridge.py",
+    "worker",
+    "--root",
+    "outputs/w10_scifate2_recipe_bridge_v1",
+    "--worker",
+    "0"
+  ],
+  "data_hashes": {
+    "outputs/w10_scifate2_recipe_bridge_v1/study_manifest.json": "d732496645ea09e72a22681130dfa551297d56ad1b7ef78ab180c5f269aa74c4",
+    "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/static_router/seed0/step1000_5_to_10.npz": "7c1b7e59f381188707def56c1fca7fb2f4197ce0d8e116c66cfb0c1a29e765c5",
+    "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/static_router/seed0/step1000_10_to_15.npz": "b718d268d20a71da2f103d6b0a68f0737b6db137223da41167d637fd619dfd8b",
+    "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/static_router/seed0/step1000_15_to_20.npz": "910777e529214cab42164af0ec108f2c48176741eb88dea8373067689189c9a9",
+    "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/static_router/seed1/step1000_5_to_10.npz": "8ee19719c9b2fff45ef36965c3b1dda5a2c3a66fc38c3cf8085c5f0709f33ab2",
+    "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/static_router/seed1/step1000_10_to_15.npz": "7d5608d14218be232ee90c5dd0fd075c2d9596458b479fb30231cf51a565fbe9",
+    "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/static_router/seed1/step1000_15_to_20.npz": "a4492d7f2b95e6f8e408948229dc9818aae28f7191573d971a81356c430c3a07",
+    "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/static_router/seed2/step1000_5_to_10.npz": "61be8614e422720bdc103dc72df16a5760602c9a5f983836ffdc8cb47383a22d",
+    "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/static_router/seed2/step1000_10_to_15.npz": "c36786bde4e57b1dfd1341ecd5cdb9e02f98923fa2907bbd78281bf4bd32b345",
+    "/home/yuchang/wangjiaxuan/outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/static_router/seed2/step1000_15_to_20.npz": "05646850f365f170ce19bbed74584b75395a48dd653b0ec4cd056010badec9d7",
+    "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_5_to_10.npz": "f43696a55804bd29a5ed1f590eea659d45b4c018074e786d77ce15645c38aef9",
+    "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_10_to_15.npz": "e0fd4afcd47511ff298d5341058c228ae3f671c45e79397ceffcf99dc92796c8",
+    "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_15_to_20.npz": "ec57738ec3828e82197b4cba9b135eb0e8e7cdf75369f476f30ca76882f40504",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "9a72408fb79c9165e689862e779839a0eae3ddc2e5413b7e2fb6088be2d08575",
+  "runtime_seconds": 0.250671599060297,
+  "status": "SCALING_CASE_EVALUATED",
+  "case": {
+    "setting": "b0_w8_exact",
+    "experts": 8,
+    "hidden": 128,
+    "arm": "static_router",
+    "step": 1000,
+    "worker": 0
+  },
+  "metrics": {
+    "energy_distance": 0.6177071407310812,
+    "mean_mse": 0.13660101268851046,
+    "absolute_log_variance_error": 0.17450475341171565,
+    "covariance_relative_error": 0.5260084442888493
+  },
+  "intervals": [
+    {
+      "source_hour": 5,
+      "target_hour": 10,
+      "energy_distance": 1.1142640159773407,
+      "mean_mse": 0.2283677836698879,
+      "variance_ratio": 1.3860936516580873,
+      "absolute_log_variance_error": 0.3264894682238592,
+      "covariance_relative_error": 0.9941534425533924,
+      "mean_anchor_error": 4.334195177399319e-08
+    },
+    {
+      "source_hour": 10,
+      "target_hour": 15,
+      "energy_distance": 0.3820387556628262,
+      "mean_mse": 0.09242457495975274,
+      "variance_ratio": 0.9381126660772225,
+      "absolute_log_variance_error": 0.06388522410018845,
+      "covariance_relative_error": 0.2578071517752572,
+      "mean_anchor_error": 3.0882678250400915e-08
+    },
+    {
+      "source_hour": 15,
+      "target_hour": 20,
+      "energy_distance": 0.3568186505530768,
+      "mean_mse": 0.08901067943589068,
+      "variance_ratio": 0.8753429138009091,
+      "absolute_log_variance_error": 0.13313956791109927,
+      "covariance_relative_error": 0.3260647385378984,
+      "mean_anchor_error": 4.127706445682755e-08
+    }
+  ],
+  "parameters": 76248,
+  "routing": [
+    {
+      "seed": 0,
+      "source_hour": 5,
+      "target_hour": 10,
+      "active_modes": 8,
+      "effective_modes": 7.58974059392106,
+      "route_entropy": 1.9667279093431584,
+      "routing_information": 0.060069504131317286,
+      "usage": [
+        0.1451811220889862,
+        0.15153643759652632,
+        0.1937024120316498,
+        0.06748802236466024,
+        0.12317781745358886,
+        0.13088285881487438,
+        0.12098639371314608,
+        0.06704493593656818
+      ]
+    },
+    {
+      "seed": 1,
+      "source_hour": 5,
+      "target_hour": 10,
+      "active_modes": 8,
+      "effective_modes": 7.8604966333922,
+      "route_entropy": 2.0060627454887157,
+      "routing_information": 0.055787043866266206,
+      "usage": [
+        0.11094038654335137,
+        0.15457407532920733,
+        0.1120002055734053,
+        0.1393034777732921,
+        0.11141139503067707,
+        0.0858366198082415,
+        0.159407854672574,
+        0.1265259852692511
+      ]
+    },
+    {
+      "seed": 2,
+      "source_hour": 5,
+      "target_hour": 10,
+      "active_modes": 8,
+      "effective_modes": 7.665319977279619,
+      "route_entropy": 1.9704902343742945,
+      "routing_information": 0.06621602232013402,
+      "usage": [
+        0.07137310259318119,
+        0.15735737663558935,
+        0.09022058868834817,
+        0.10721831350500723,
+        0.11172343794766867,
+        0.1884504454587781,
+        0.11722996039622903,
+        0.1564267747751991
+      ]
+    },
+    {
+      "seed": 0,
+      "source_hour": 10,
+      "target_hour": 15,
+      "active_modes": 8,
+      "effective_modes": 7.367208863912077,
+      "route_entropy": 1.943062128922056,
+      "routing_information": 0.053976789661117186,
+      "usage": [
+        0.18802663317604512,
+        0.1372073907410454,
+        0.20551757483006544,
+        0.06178732528844691,
+        0.12966307928474036,
+        0.09814897079995476,
+        0.12300724866216682,
+        0.056641777217534627
+      ]
+    },
+    {
+      "seed": 1,
+      "source_hour": 10,
+      "target_hour": 15,
+      "active_modes": 8,
+      "effective_modes": 7.729572166624988,
+      "route_entropy": 2.0029799680289426,
+      "routing_information": 0.042073545900902065,
+      "usage": [
+        0.139651951129744,
+        0.20031228189203942,
+        0.14619596052792852,
+        0.11338804213838156,
+        0.0864147737283926,
+        0.10666346151453711,
+        0.1081493046581164,
+        0.09922422441086173
+      ]
+    },
+    {
+      "seed": 2,
+      "source_hour": 10,
+      "target_hour": 15,
+      "active_modes": 8,
+      "effective_modes": 7.358981635099378,
+      "route_entropy": 1.9380652009516575,
+      "routing_information": 0.05785635741955586,
+      "usage": [
+        0.05319388931295731,
+        0.1517826692197924,
+        0.08487643570520888,
+        0.10676175978761183,
+        0.07938639219725908,
+        0.215431910082231,
+        0.1327215419987125,
+        0.17584540169622567
+      ]
+    },
+    {
+      "seed": 0,
+      "source_hour": 15,
+      "target_hour": 20,
+      "active_modes": 8,
+      "effective_modes": 7.540882447365287,
+      "route_entropy": 1.9655305563853402,
+      "routing_information": 0.05480865424599646,
+      "usage": [
+        0.1665101698404651,
+        0.14427466043781234,
+        0.17440920316411393,
+        0.06755327544486446,
+        0.16171984778820234,
+        0.10073413861546616,
+        0.12263744866883224,
+        0.06216125604024321
+      ]
+    },
+    {
+      "seed": 1,
+      "source_hour": 15,
+      "target_hour": 20,
+      "active_modes": 8,
+      "effective_modes": 7.733460618273942,
+      "route_entropy": 2.0011010271261593,
+      "routing_information": 0.044455422002104505,
+      "usage": [
+        0.14935300905713123,
+        0.19761513929332578,
+        0.14002559566123313,
+        0.11814758600711252,
+        0.09078375201781262,
+        0.10400073406729161,
+        0.09463525322888061,
+        0.10543893066721167
+      ]
+    },
+    {
+      "seed": 2,
+      "source_hour": 15,
+      "target_hour": 20,
+      "active_modes": 8,
+      "effective_modes": 7.353374155101636,
+      "route_entropy": 1.9341119493579324,
+      "routing_information": 0.061047327248316074,
+      "usage": [
+        0.053421492061044,
+        0.19092815476973504,
+        0.08356232936004353,
+        0.10287254558101751,
+        0.08326600424465232,
+        0.18923775291152076,
+        0.11615983783062991,
+        0.1805518832413578
+      ]
+    }
+  ],
+  "seed_intervals": [
+    {
+      "seed": 0,
+      "source_hour": 5,
+      "target_hour": 10,
+      "energy_distance": 1.105863350600906
+    },
+    {
+      "seed": 1,
+      "source_hour": 5,
+      "target_hour": 10,
+      "energy_distance": 1.1136162676284034
+    },
+    {
+      "seed": 2,
+      "source_hour": 5,
+      "target_hour": 10,
+      "energy_distance": 1.1252527627483673
+    },
+    {
+      "seed": 0,
+      "source_hour": 10,
+      "target_hour": 15,
+      "energy_distance": 0.37631586459644595
+    },
+    {
+      "seed": 1,
+      "source_hour": 10,
+      "target_hour": 15,
+      "energy_distance": 0.3921873187337148
+    },
+    {
+      "seed": 2,
+      "source_hour": 10,
+      "target_hour": 15,
+      "energy_distance": 0.38026942093574867
+    },
+    {
+      "seed": 0,
+      "source_hour": 15,
+      "target_hour": 20,
+      "energy_distance": 0.35421772713281996
+    },
+    {
+      "seed": 1,
+      "source_hour": 15,
+      "target_hour": 20,
+      "energy_distance": 0.3585185638147159
+    },
+    {
+      "seed": 2,
+      "source_hour": 15,
+      "target_hour": 20,
+      "energy_distance": 0.3594569210374505
+    }
+  ],
+  "average_training_seconds": 6.208263259381056,
+  "maximum_peak_allocated_bytes": 140374528,
+  "mean_anchor_max_error": 4.334195177399319e-08
+}

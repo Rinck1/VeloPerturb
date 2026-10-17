@@ -1,0 +1,85 @@
+{
+  "git_commit": "58f1954bd3cb54f83e1979a8d896efb28da8d0c3",
+  "seed": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py",
+    "predict-development",
+    "--output",
+    "outputs/w4_development_predictions_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "29f10bc0424db28f6636cdc6824027c371d1e25fa55b78538cbc8bbfba1119e8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "data/renge/processed_release_v1/day4/day4.h5ad": "449d3a3f21f9c76aeb6af25cc820ce3f151614f5f1b1e84fa70932888ac6a89e",
+    "data/renge/processed_release_v1/day5/day5.h5ad": "389dc67a5c6df74dad19f0a25b78c55a9a26c232fd5a4fb078e83ef04623ee94",
+    "data/renge/conditions/esm2_3b_v1/conditions.npz": "951d4ecafdec552de1e1532c9dd79f686fdc065af9c8822c2a54a2142996155e"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "f468cbde76af881f8af701a24d587c43a61e2749d35d6d4eda3f33644377dc7d",
+  "runtime_seconds": 32.31526166200638,
+  "status": "PREDICTIONS_FROZEN",
+  "kind": "development",
+  "source_day": 4,
+  "target_day": 5,
+  "target_path": "/home/yuchang/wangjiaxuan/data/renge/processed_release_v1/day5/day5.h5ad",
+  "source_path": "/home/yuchang/wangjiaxuan/data/renge/processed_release_v1/day4/day4.h5ad",
+  "training_TFs": [
+    "ETS2",
+    "FOXH1",
+    "ID1",
+    "JARID2",
+    "MYC",
+    "MYCN",
+    "NR5A2",
+    "RUNX1T1",
+    "SOX2",
+    "VENTX",
+    "ZIC2",
+    "ZNF398",
+    "ZNF649",
+    "ZNF90"
+  ],
+  "controls": [
+    "AAVS1",
+    "CTRL"
+  ],
+  "heldout_TFs": [
+    "LIN28A",
+    "NANOG",
+    "POU5F1",
+    "ZIC3"
+  ],
+  "training_source_cells": 3141,
+  "development_source_cells": 1133,
+  "training_target_cells": 2775,
+  "heldout_future_expression_read": false,
+  "source_transform_fit_uses_target": false,
+  "training_targets_used_for_response_ridge": true,
+  "prediction_sha256": "f8ea8c8c2d2aa810e5ee2bb99905c4bf40f2ef86ba2febd00a3a6e20965485a5",
+  "transform_sha256": {
+    "0": "6b7985770406586dc1662b6f8842220ecec6d906929a57b8d554a84dc987902e",
+    "1": "c91303f9bcccdcaaab61e17517f1f4920d57b88a263797c8e2ce046a036fda6c",
+    "2": "3311b38d3457810062d81eb629acbb5e0e4a2ed4a753f03ffd19140e3c1411b8",
+    "3": "e08aa2400d34655fd27e1cefe78b35f44c18efef74de5864c812d705a5e3e99a"
+  },
+  "arm_status": {
+    "static": "implemented",
+    "vel_pool": "implemented",
+    "vel_mean": "implemented",
+    "vel_pool_Uswap": "implemented",
+    "pseudo_S": "implemented",
+    "direct_U_pool": "implemented",
+    "learned_head": "pending",
+    "empirical_disp": "pending_previous_timepoint",
+    "cluster_velocity": "pending_secondary"
+  },
+  "control_embedding": "zero_empty_perturbation",
+  "kinetic_estimator": "analytic_two_tail_OLS_no_JVP"
+}

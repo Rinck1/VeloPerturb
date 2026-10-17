@@ -1,0 +1,318 @@
+{
+  "git_commit": "d77f92f8a5b585775c730a3657035d7a2031bf91",
+  "seed": 1,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py",
+    "worker",
+    "--root",
+    "outputs/w7_scifate2_router_scaling_v1",
+    "--worker",
+    "1",
+    "--device",
+    "cuda"
+  ],
+  "data_hashes": {
+    "outputs/w7_scifate2_router_scaling_v1/study_manifest.json": "728932083759dec32e40c8838aa7e4c4c68f8b0f92303160abcec08431248797",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/normalization.npz": "8083197f8b75f616a2eae262b6f28f16b7868aa9a3e319b09885c3e9c512744d",
+    "outputs/w7_scifate2_router_scaling_v1/source_samples.json": "5db0323c40ff72d507a5b492f95681bba30f317ec7a4da20de3635621c4fa46f",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D3.npz": "0a85b2c2932a991ddd87a0696a1d8d2771541f51decde8a26b71a30d7e3ac9da",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D4.npz": "8a05788ca727bf8160d47847b207bfbbd9d745cafe7d1696df7fcb89164fae3b",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D5.npz": "952a6720cf8c0ad142b0f92f926fd0517ee09b7cc7e76e868a3e69781be94396",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D6.npz": "24179d44fa5d25b043585497e9c2dd299463ba98790444519d7411c68ef7aba2",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D7.npz": "da85685a1fd3eeaf0d33610b51144977a5051e709a9950ed32f10c4c3e389c5a",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D3.npz": "a1cd44bb84b778942a0354a65f6cf7ab4b6bae63ca9eee9c2e0830c049f8e2a8",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D4.npz": "05c8bba98e65ea8913d7598d556b7daa9a3ab826d11aad0a977b1bc568356486",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D5.npz": "e4fac0eaf1b45b77c297805c5343af74860812fb6fa55752d99036bf58c5a235",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D6.npz": "026b8c17fcff827c5329f33e3aaa9468bbf1f7f339d54bcd08c0cfa631a7171b",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D7.npz": "758038d8dc646dcc5eb74d5e75fcfac43408d43771df543cacee546ca0fba1c7",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D3.npz": "249311856ffc90cf1172d0efa58c5bb7fb4c0f63d52560eccf1329a0aab96a89",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D4.npz": "7c12b2b37ec461b54c7d239cb0eeab8a2b14aae97cefbdbdc87d173d6eef452e",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D5.npz": "2c95c134e9d54cf720b1e915eca55a3c9c87af00fa9be1e1456b3a006570e9a8",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D6.npz": "53e37599a248a92a943941a108f870d37d7ff9bf191efaf1d56a2cc34f886553",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D7.npz": "4d85a1b0f909bbfab2f989ecc50a5ea4d1effd4fa92261ad3ee27fda86c00a68",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_05_to_10.npz": "c7cae378339b82d36c8d902d05966b9b7ba6fc137b82c770d7883db31472bf00",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_10_to_15.npz": "e7dffc30fea0f76d533de602311d61de9b4b12100650dd76dfb1139858dd587c",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_15_to_20.npz": "69adff506492b80274f7f38605ea3da404c609c63e014abe1f93143a61b7fecc",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "b5498b6fc4ddb19970da56ea4ac592b784c7bab7500aeb14e15c62c831f54228",
+  "runtime_seconds": 15.469602212309837,
+  "history": [
+    {
+      "step": 1,
+      "loss": 0.13641206920146942,
+      "energy": 0.1364298313856125,
+      "route_entropy": 1.3638432025909424,
+      "mode_usage": [
+        0.22359733283519745,
+        0.27939867973327637,
+        0.1977194845676422,
+        0.29928451776504517
+      ]
+    },
+    {
+      "step": 200,
+      "loss": 0.07811941206455231,
+      "energy": 0.07806513458490372,
+      "route_entropy": 1.3654696941375732,
+      "mode_usage": [
+        0.29931217432022095,
+        0.22339433431625366,
+        0.24838244915008545,
+        0.22891104221343994
+      ]
+    },
+    {
+      "step": 400,
+      "loss": 0.12466652691364288,
+      "energy": 0.1245739534497261,
+      "route_entropy": 1.3223626613616943,
+      "mode_usage": [
+        0.3687700629234314,
+        0.19704052805900574,
+        0.22495126724243164,
+        0.20923815667629242
+      ]
+    },
+    {
+      "step": 600,
+      "loss": 0.10516555607318878,
+      "energy": 0.10511613637208939,
+      "route_entropy": 1.3303735256195068,
+      "mode_usage": [
+        0.3488633334636688,
+        0.2080094963312149,
+        0.22548839449882507,
+        0.2176387906074524
+      ]
+    },
+    {
+      "step": 800,
+      "loss": 0.07976087927818298,
+      "energy": 0.07974669337272644,
+      "route_entropy": 1.319223403930664,
+      "mode_usage": [
+        0.3129568099975586,
+        0.210100919008255,
+        0.258379191160202,
+        0.218563050031662
+      ]
+    },
+    {
+      "step": 1000,
+      "loss": 0.05699192360043526,
+      "energy": 0.056930750608444214,
+      "route_entropy": 1.3178093433380127,
+      "mode_usage": [
+        0.3295871913433075,
+        0.20419588685035706,
+        0.23168741166591644,
+        0.23452948033809662
+      ]
+    },
+    {
+      "step": 1200,
+      "loss": 0.21521858870983124,
+      "energy": 0.215176060795784,
+      "route_entropy": 1.328202486038208,
+      "mode_usage": [
+        0.29735028743743896,
+        0.22020646929740906,
+        0.2716277241706848,
+        0.21081556379795074
+      ]
+    },
+    {
+      "step": 1400,
+      "loss": 0.1126176118850708,
+      "energy": 0.11258077621459961,
+      "route_entropy": 1.3271465301513672,
+      "mode_usage": [
+        0.2657427191734314,
+        0.23643717169761658,
+        0.26660895347595215,
+        0.23121114075183868
+      ]
+    },
+    {
+      "step": 1600,
+      "loss": 0.10892460495233536,
+      "energy": 0.10877785086631775,
+      "route_entropy": 1.3339321613311768,
+      "mode_usage": [
+        0.3067691922187805,
+        0.21346107125282288,
+        0.21513880789279938,
+        0.26463091373443604
+      ]
+    },
+    {
+      "step": 1800,
+      "loss": 0.13295669853687286,
+      "energy": 0.13285347819328308,
+      "route_entropy": 1.3421339988708496,
+      "mode_usage": [
+        0.243012934923172,
+        0.24831196665763855,
+        0.25210776925086975,
+        0.2565672993659973
+      ]
+    },
+    {
+      "step": 2000,
+      "loss": 0.09818107634782791,
+      "energy": 0.09815563261508942,
+      "route_entropy": 1.314117670059204,
+      "mode_usage": [
+        0.23535707592964172,
+        0.2560361623764038,
+        0.2940565049648285,
+        0.21455024182796478
+      ]
+    },
+    {
+      "step": 2200,
+      "loss": 0.06223396211862564,
+      "energy": 0.06206713616847992,
+      "route_entropy": 1.3341906070709229,
+      "mode_usage": [
+        0.27324193716049194,
+        0.19316639006137848,
+        0.22675655782222748,
+        0.3068351447582245
+      ]
+    },
+    {
+      "step": 2400,
+      "loss": 0.21187938749790192,
+      "energy": 0.2117382287979126,
+      "route_entropy": 1.3265771865844727,
+      "mode_usage": [
+        0.19827520847320557,
+        0.24488934874534607,
+        0.272853285074234,
+        0.28398218750953674
+      ]
+    },
+    {
+      "step": 2600,
+      "loss": 0.11422678828239441,
+      "energy": 0.11410912126302719,
+      "route_entropy": 1.3403596878051758,
+      "mode_usage": [
+        0.2300531268119812,
+        0.23960371315479279,
+        0.2936161160469055,
+        0.2367270141839981
+      ]
+    },
+    {
+      "step": 2800,
+      "loss": 0.0597611740231514,
+      "energy": 0.059567324817180634,
+      "route_entropy": 1.3031346797943115,
+      "mode_usage": [
+        0.24985383450984955,
+        0.16604706645011902,
+        0.232946515083313,
+        0.35115259885787964
+      ]
+    },
+    {
+      "step": 3000,
+      "loss": 0.08018796890974045,
+      "energy": 0.07998433709144592,
+      "route_entropy": 1.3175569772720337,
+      "mode_usage": [
+        0.22180452942848206,
+        0.1865409016609192,
+        0.3081634044647217,
+        0.28349119424819946
+      ]
+    },
+    {
+      "step": 3200,
+      "loss": 0.13261516392230988,
+      "energy": 0.13250213861465454,
+      "route_entropy": 1.322065830230713,
+      "mode_usage": [
+        0.21706829965114594,
+        0.2336980700492859,
+        0.3144852817058563,
+        0.23474831879138947
+      ]
+    },
+    {
+      "step": 3400,
+      "loss": 0.07519174367189407,
+      "energy": 0.07493318617343903,
+      "route_entropy": 1.3017889261245728,
+      "mode_usage": [
+        0.2403734028339386,
+        0.1527048647403717,
+        0.24827882647514343,
+        0.3586428761482239
+      ]
+    },
+    {
+      "step": 3600,
+      "loss": 0.11801746487617493,
+      "energy": 0.11777704954147339,
+      "route_entropy": 1.305189609527588,
+      "mode_usage": [
+        0.18404148519039154,
+        0.18991732597351074,
+        0.321135938167572,
+        0.3049052357673645
+      ]
+    },
+    {
+      "step": 3800,
+      "loss": 0.08056256175041199,
+      "energy": 0.08042563498020172,
+      "route_entropy": 1.3044136762619019,
+      "mode_usage": [
+        0.21336472034454346,
+        0.2179192304611206,
+        0.35241439938545227,
+        0.21630164980888367
+      ]
+    },
+    {
+      "step": 4000,
+      "loss": 0.10864760726690292,
+      "energy": 0.1083580031991005,
+      "route_entropy": 1.2922685146331787,
+      "mode_usage": [
+        0.2114252746105194,
+        0.14477747678756714,
+        0.27186131477355957,
+        0.37193599343299866
+      ]
+    }
+  ],
+  "parameters": 125068,
+  "arm": "static_router",
+  "modes": 4,
+  "preserved_mean": true,
+  "velocity_consumers": [],
+  "checkpoint_timing": [
+    {
+      "step": 1000,
+      "training_seconds": 3.715787209570408,
+      "peak_allocated_bytes": 124304896
+    },
+    {
+      "step": 4000,
+      "training_seconds": 14.92480145022273,
+      "peak_allocated_bytes": 124304896
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_frozen_horizons.py",
+    "--spec",
+    "outputs/w13_time_program_v1/ode_refinement_spec.json",
+    "--output",
+    "outputs/w13_time_program_v1/ode_refinement"
+  ],
+  "data_hashes": {
+    "outputs/w13_time_program_v1/ode_refinement_spec.json": "d76255cb92165f0178edf28845f219bb8a1fed4cc8516a4fa9c728b285bc7aa7",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/source_samples.json": "9ed86405aba7aca6d4dc1ee2a7d9474b6b4e5ba66a297c817f78fc97ea3826e6",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_pack_v1/source_pack.npz": "f83322cd68223bb859fce70ea0f31751ebbfec559aaf60236c1f1e4c47c5a599",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_frozen_horizons.py": "8de443b931565806ac491b4c38c6297a6f39235dcdb3345d94cba74a3b3364fa",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_time_model.py": "e8d667eb15ee80f94808c0170ef757e8d30ea0e9e95dd395acc0d9a6fe5e9de6",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_horizons.py": "b65a084649c80f7da5881c5f1e618ede29edf8e0ffceb244339c02930e87a0e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "931c5aa8971a8ace656def8d191a2313705056dd3b871afafd58e58c237bb89c",
+  "runtime_seconds": 5.422128405421972,
+  "predictions": [
+    {
+      "model": "ode_40k_step3h",
+      "arm": "static_router",
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_static_router_5_to_10.npz",
+      "sha256": "ccf8a8f685903c0c2137c6b364d2aa2b50b52829ebcb2ecc29e639401ded2420"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "static_router",
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_static_router_10_to_15.npz",
+      "sha256": "87eaae4147e75cb361b9ae38114d2d580cf952c6bd5332f2995a7f8519d78923"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "static_router",
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_static_router_15_to_20.npz",
+      "sha256": "e76f60e9de0dc91a2cf3253db64a4a7ed9f366de7b08928288d430763db4aafe"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "static_router",
+      "source_hour": 5,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_static_router_5_to_15.npz",
+      "sha256": "a789de122b4a50703d82bb4b05cdc982da7601f0184b4537e99b8a750a9a7eba"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "static_router",
+      "source_hour": 10,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_static_router_10_to_20.npz",
+      "sha256": "5aa4452170257c433be46ccf0b88d97cf62381b2ac5bfc390e6aba70a7c9ef51"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "static_router",
+      "source_hour": 5,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_static_router_5_to_20.npz",
+      "sha256": "9bd74bf3da4a0b2d40022d1b642763222dec24ca5d7ddc17eec03fd8ced1381c"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "velocity_router",
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_velocity_router_5_to_10.npz",
+      "sha256": "094f6f61a0452aca246253ed8ab4fdde9f6272d54869e435c34937e06dcd9360"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "velocity_router",
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_velocity_router_10_to_15.npz",
+      "sha256": "2c7e7185ca93fae0d5d1d756f8168d3d160ddde767407d72fb3bc68ea32ad368"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "velocity_router",
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_velocity_router_15_to_20.npz",
+      "sha256": "fc4c2f83c12956b6bc7882d2c501413df8b8e404eb84640e783d01cb4127cba5"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "velocity_router",
+      "source_hour": 5,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_velocity_router_5_to_15.npz",
+      "sha256": "ec4c14853f12019f02630d6b4bd0a69ff6829dc74a5a6440badf689094288af6"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "velocity_router",
+      "source_hour": 10,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_velocity_router_10_to_20.npz",
+      "sha256": "df23ba023836487e8a2a98a1176ff7adbd1b0ad1ed953507e33caaafda1e141f"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "velocity_router",
+      "source_hour": 5,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_velocity_router_5_to_20.npz",
+      "sha256": "d0cde544bda213ad34e86ef678a7ed19543bc29e616cdf5e232c0684cd214098"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_shuffled_velocity_router_5_to_10.npz",
+      "sha256": "f9821f5b6a513b42e3977a2bddfd2643e1279aa94083b2ab9aaaa6ff3d5b43c2"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_shuffled_velocity_router_10_to_15.npz",
+      "sha256": "070c8f1f925595bea8d84c52de23bec80b3104b80af5829ac431355b3be54f49"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_shuffled_velocity_router_15_to_20.npz",
+      "sha256": "5272618f42302c86cf2c354c7b56d1d1916f5e48cefec572667c1d878981405a"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 5,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_shuffled_velocity_router_5_to_15.npz",
+      "sha256": "13a29fcfc0be346c65565468894f682441b2b2aa2148967a8765c8f881a87827"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 10,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_shuffled_velocity_router_10_to_20.npz",
+      "sha256": "163709d28d3874e54c4a775258c0e572e8f71cfc0e7e7224c925c6f5c3ec41f5"
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "shuffled_velocity_router",
+      "source_hour": 5,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/ode_40k_step3h_shuffled_velocity_router_5_to_20.npz",
+      "sha256": "8038af08d37d8a396d45e387e13c3e933103f500c5a8f474b000fbd55e6b8190"
+    }
+  ],
+  "all_predictions_ready_before_evaluation": true,
+  "source_only_predictions": true,
+  "optimizer_steps": 0,
+  "mean_models": [
+    {
+      "seed": 0,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed0/analytic_task.pt",
+      "sha256": "bb9ca8fe86c49f97afcc0637ac492590c2294b7cfe2260530cc0b48088750ee8"
+    },
+    {
+      "seed": 1,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed1/analytic_task.pt",
+      "sha256": "1ecaf7c9eb45d027cf7c66fe9e03b104c50f0085ff14c055db435c0bf1422b41"
+    },
+    {
+      "seed": 2,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed2/analytic_task.pt",
+      "sha256": "25045424ae9ad5382d03168b0687fc71f31a8b6c62264e1592ede2f5684169f1"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "git_commit": "aad70286dcf44debd6b6410e84d653f573a32569",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_scifate2.py",
+    "train",
+    "--pack",
+    "outputs/w5_joint_kinetics_scifate2_pack_v1",
+    "--output",
+    "outputs/w5_joint_kinetics_scifate2_v1/seed0",
+    "--seed",
+    "0",
+    "--device",
+    "cuda"
+  ],
+  "data_hashes": {
+    "outputs/w5_joint_kinetics_scifate2_pack_v1/manifest.json": "8271d3b6cb41c5657a34a065a6ec5ef62377b2fd3c6ee47acd8bab04e533317e",
+    "outputs/w5_joint_kinetics_scifate2_pack_v1/training_pack.npz": "29ecc6b3adaf9208a7d52ae912b59a9a6fa8e6a4e4e29937e8c4a5800bcdf305",
+    "outputs/w5_joint_kinetics_scifate2_pack_v1/source_pack.npz": "f83322cd68223bb859fce70ea0f31751ebbfec559aaf60236c1f1e4c47c5a599",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_scifate2.py": "ff2c51a90ffa46df93794e8812c55970d43ed3a538a5f4595187dcad3a83aafe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_kinetics.py": "8d79fcdfff498a183482dce199cf1987bc2f47b5bd503cdd04708bdf278566bf",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_kinetic_head.py": "0d7365a05c78f55b81c058808a741f2fac3c0641d79b74f61288a41ca82cf79a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_repair.py": "b0eaeaf6ad5ea00b83beb0e65136ca6af6e93b4c90035c6774d585aa6d97d525"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "1bc4e9eec70d9f82701759459d6287ba77d19cddee78a4e3430a9d8557857ceb",
+  "runtime_seconds": 9.102802000939846,
+  "status": "PREDICTIONS_READY",
+  "prediction_sha256": "c14184090e23e773cc1421997c5eefcee4de829485bf1bd5b8c7986466d0a542",
+  "r4_used_for_fitting": false
+}

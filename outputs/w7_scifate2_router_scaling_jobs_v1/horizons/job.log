@@ -1,0 +1,12 @@
+{"status": "HORIZON_PREDICTIONS_READY", "start": 5, "stop": 10}
+{"status": "HORIZON_PREDICTIONS_READY", "start": 10, "stop": 15}
+{"status": "HORIZON_PREDICTIONS_READY", "start": 15, "stop": 20}
+{"status": "HORIZON_PREDICTIONS_READY", "start": 5, "stop": 15}
+{"status": "HORIZON_PREDICTIONS_READY", "start": 10, "stop": 20}
+{"status": "HORIZON_PREDICTIONS_READY", "start": 5, "stop": 20}
+{"status": "HORIZON_EVALUATED", "start": 5, "stop": 10}
+{"status": "HORIZON_EVALUATED", "start": 10, "stop": 15}
+{"status": "HORIZON_EVALUATED", "start": 15, "stop": 20}
+{"status": "HORIZON_EVALUATED", "start": 5, "stop": 15}
+{"status": "HORIZON_EVALUATED", "start": 10, "stop": 20}
+{"status": "HORIZON_EVALUATED", "start": 5, "stop": 20}

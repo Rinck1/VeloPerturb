@@ -1,0 +1,29 @@
+{
+  "git_commit": "42f3958c9fa4fe683d5b059dcd4129abb92ecb65",
+  "seed": 20261017,
+  "command": [
+    "scripts/phase0/w5_scntseq_repair.py",
+    "evaluate",
+    "--predictions",
+    "outputs/w5_scntseq_repair_predictions_v2",
+    "--output",
+    "outputs/w5_scntseq_repair_evaluation_v2"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/configs/w5_scntseq_repair_v2.json": "b49d83c4d2954ac7b7043fdddf64bdbc81aebf10723f2590bc524c2113d28a27",
+    "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_geo_labeling_dynamo_su_exact.h5ad": "208cc0b266d5a6d5bfbb18834f9f153402a7a3c93aaa9c9e4c27e29c96cefbd1",
+    "/home/yuchang/wangjiaxuan/outputs/w5_scntseq_predictions_v1/source_transform.npz": "0191a128e13c188bdd67cce62326e9a3b9d9c54f239169b824a48b3cc3139b4b",
+    "outputs/w5_scntseq_repair_predictions_v2/prediction_manifest.json": "d617030bf4431ebdfe9ecdca99561b5050974190b7c7b76584c4db3ecfc49efb",
+    "outputs/w5_scntseq_repair_predictions_v2/predictions.npz": "2ba86b959399e5e62247d1e0902b91533d3749796939235ea067e73ff3fc1688",
+    "outputs/w5_scntseq_repair_predictions_v2/calibration.json": "f21c743cf71cbf8c04f7aa8a6a4c52102f9427708fcf3603571de2160eeb73ba",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_repair.py": "b0eaeaf6ad5ea00b83beb0e65136ca6af6e93b4c90035c6774d585aa6d97d525",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_minutes.py": "4f2ee06232d6ba90d95339c18a7b7a092c3093068b7900ffbf45e2e343d4a807",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 1.5818481855094433,
+  "status": "complete"
+}

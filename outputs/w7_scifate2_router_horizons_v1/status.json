@@ -1,0 +1,46 @@
+{
+  "git_commit": "d77f92f8a5b585775c730a3657035d7a2031bf91",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_horizons.py",
+    "--output",
+    "outputs/w7_scifate2_router_horizons_v1",
+    "--device",
+    "cpu"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "outputs/w7_scifate2_router_scaling_v1/study_manifest.json": "728932083759dec32e40c8838aa7e4c4c68f8b0f92303160abcec08431248797",
+    "outputs/w7_scifate2_router_scaling_v1/source_samples.json": "5db0323c40ff72d507a5b492f95681bba30f317ec7a4da20de3635621c4fa46f",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_pack_v1/source_pack.npz": "f83322cd68223bb859fce70ea0f31751ebbfec559aaf60236c1f1e4c47c5a599",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_v1/seed0/k1.pt": "60a7db41f6c47cedccdddd4d2d8ee19cb7d7129a3def08253d7cb0ab83faedd4",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_v1/seed0/static_router.pt": "06525d5ca7f794a7fe03131041b6c62c8267e38020afef83b2f2e4101c6d86f8",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_v1/seed0/velocity_router.pt": "ee985ccb0e090fcfd6db981e280c4e025a8ea78c4798ea9304847118a5f16a06",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_v1/seed1/k1.pt": "0e7983ed5b234b374a474eb5ef2ecba33a734da36c6756cbcf6595f6cca83053",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_v1/seed1/static_router.pt": "e3c13266fd7c74edb268128af7b1619ac6df6435247f1dee3c722d97a9029433",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_v1/seed1/velocity_router.pt": "5f784da3f15a72e0cd6a8bbeb1c443b18971b30f4d572196398f1e4c6f47fedb",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_v1/seed2/k1.pt": "0401b39c289aab04184d0383c6c1ffdfdb60bd36ec7a1641d84969ca537258bc",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_v1/seed2/static_router.pt": "0f26c81d1fe239e26c3d38c84e5428385416fa2df3f929418807aa7511a1a2a1",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_v1/seed2/velocity_router.pt": "8ed3dbdf0204e05a7c0e02d5b1c1ca3f45cf838ff9db1259cd605ca3dee3ee5a",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed0/static_task.pt": "02206eeeabead7ab7d5dc79dd1f7660f41173ea62773fca760c0eece4749bf28",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed0/analytic_task.pt": "bb9ca8fe86c49f97afcc0637ac492590c2294b7cfe2260530cc0b48088750ee8",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed1/static_task.pt": "133c18f9b34309e9c5a35c8c22b825f4f724ccebdafe2032c3b5f703e02e9695",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed1/analytic_task.pt": "1ecaf7c9eb45d027cf7c66fe9e03b104c50f0085ff14c055db435c0bf1422b41",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed2/static_task.pt": "c66b71051325660e2a659a7329a21c5c8e8ba15b452bd3685bc46d9c72dc366d",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed2/analytic_task.pt": "25045424ae9ad5382d03168b0687fc71f31a8b6c62264e1592ede2f5684169f1",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_horizons.py": "b65a084649c80f7da5881c5f1e618ede29edf8e0ffceb244339c02930e87a0e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_repair.py": "b0eaeaf6ad5ea00b83beb0e65136ca6af6e93b4c90035c6774d585aa6d97d525"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "f3fb570ddeefc1ddddaf8f0909334fdea013dab89cc4ed33728e84757ce5d419",
+  "runtime_seconds": 2.463041264563799,
+  "status": "complete"
+}

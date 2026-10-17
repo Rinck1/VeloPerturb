@@ -1,0 +1,30 @@
+{"stage": "download", "bytes": 67108864, "total": 1306780035}
+{"stage": "download", "bytes": 134217728, "total": 1306780035}
+{"stage": "download", "bytes": 201326592, "total": 1306780035}
+{"stage": "download", "bytes": 268435456, "total": 1306780035}
+{"stage": "download", "bytes": 335544320, "total": 1306780035}
+{"stage": "download", "bytes": 402653184, "total": 1306780035}
+{"stage": "download", "bytes": 469762048, "total": 1306780035}
+{"stage": "download", "bytes": 536870912, "total": 1306780035}
+{"stage": "download", "bytes": 603979776, "total": 1306780035}
+{"stage": "download", "bytes": 671088640, "total": 1306780035}
+{"stage": "download", "bytes": 738197504, "total": 1306780035}
+{"stage": "download", "bytes": 805306368, "total": 1306780035}
+{"stage": "download", "bytes": 872415232, "total": 1306780035}
+{"stage": "download", "bytes": 939524096, "total": 1306780035}
+{"stage": "download", "bytes": 1006632960, "total": 1306780035}
+{"stage": "download", "bytes": 1073741824, "total": 1306780035}
+{"stage": "download", "bytes": 1140850688, "total": 1306780035}
+{"stage": "download", "bytes": 1207959552, "total": 1306780035}
+{"stage": "download", "bytes": 1275068416, "total": 1306780035}
+Traceback (most recent call last):
+  File "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scifate2_technical.py", line 125, in <module>
+    if int(response.headers['Content-Length']) != config['expected_bytes']:
+                                                                 ^^^^^^^^^^^
+  File "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scifate2_technical.py", line 107, in acquire
+    or config['expected_bytes'] > config['maximum_download_bytes']
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scifate2_technical.py", line 33, in inspect_schema
+    # Same compatible reader as w4_shorttime in the pinned AnnData environment.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'anndata.io'

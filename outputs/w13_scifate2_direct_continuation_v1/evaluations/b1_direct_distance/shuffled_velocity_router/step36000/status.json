@@ -1,0 +1,41 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_bridge.py",
+    "worker",
+    "--root",
+    "outputs/w13_scifate2_direct_continuation_v1",
+    "--worker",
+    "2"
+  ],
+  "data_hashes": {
+    "outputs/w13_scifate2_direct_continuation_v1/study_manifest.json": "806b7938b85e07fcf0f0d7b1ad1fae2f62d970ce6344ee097b2ae7d762e361ca",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed0/step36000_5_to_10.npz": "48e95897560352d21edad1df8cebac663edd3f7c98487f8f91648a7594a9be9f",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed0/step36000_10_to_15.npz": "969842a5d9d060c866b7d7ea81145c5c48c3e967131452478443fd968b2d073e",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed0/step36000_15_to_20.npz": "9ab063405001f3fe80adfe622cf763e8ad0a355a4ea37bb032e5fc9efcb99706",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed1/step36000_5_to_10.npz": "f840fd40de9a12420014cd53e62e223f6680efdddea57f44988ddae11a13e5e1",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed1/step36000_10_to_15.npz": "bff8544a6693a60a703e7a4c2d5002b52100aff0bef5a1dd076a0c5f3363908c",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed1/step36000_15_to_20.npz": "6bd1b97e51bf292028966cd5be1f61c4a6cc2957864c36aa19b50a1e5a0420a6",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed2/step36000_5_to_10.npz": "b41f2e7db765451d8dbd5ba060ce4c9c74fa52f5c07e348b82c68f2801945964",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed2/step36000_10_to_15.npz": "3de995c881fff30394565a1098bd48d2470776650b218abaffef80c4cf1957b2",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/training/b1_direct_distance/shuffled_velocity_router/seed2/step36000_15_to_20.npz": "b371b5accef928c943bce9437597975ff798c4f9e1ba80e8aba59116f21d5310",
+    "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_5_to_10.npz": "f43696a55804bd29a5ed1f590eea659d45b4c018074e786d77ce15645c38aef9",
+    "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_10_to_15.npz": "e0fd4afcd47511ff298d5341058c228ae3f671c45e79397ceffcf99dc92796c8",
+    "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_15_to_20.npz": "ec57738ec3828e82197b4cba9b135eb0e8e7cdf75369f476f30ca76882f40504",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "931c5aa8971a8ace656def8d191a2313705056dd3b871afafd58e58c237bb89c",
+  "runtime_seconds": 0.21693843230605125,
+  "status": "complete"
+}

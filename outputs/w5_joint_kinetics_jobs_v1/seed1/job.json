@@ -1,0 +1,31 @@
+{
+  "physical_gpu": 1,
+  "gpu_uuid": "GPU-33353490-974f-6708-8f1c-6b766e2c6968",
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv-gpu/bin/python",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_renge.py",
+    "train",
+    "--pack",
+    "outputs/w5_joint_kinetics_renge_pack_v1",
+    "--output",
+    "outputs/w5_joint_kinetics_renge_v1/seed1",
+    "--seed",
+    "1",
+    "--device",
+    "cuda"
+  ],
+  "cwd": "/home/yuchang/wangjiaxuan",
+  "allowed_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "reserved_gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "started_utc": "2026-10-17T08:19:03.889225+00:00"
+}

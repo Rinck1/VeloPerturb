@@ -1,0 +1,24 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w10_plot_bridge.py",
+    "--root",
+    "outputs/w10_scifate2_recipe_bridge_v1"
+  ],
+  "data_hashes": {
+    "outputs/w10_scifate2_recipe_bridge_v1/study_manifest.json": "d732496645ea09e72a22681130dfa551297d56ad1b7ef78ab180c5f269aa74c4",
+    "outputs/w10_scifate2_recipe_bridge_v1/report/grid.csv": "056ca2195c97ad326535b7f2fafa169b7a55b14e2ecc2727870d3390a0a448ff",
+    "outputs/w10_scifate2_recipe_bridge_v1/report/comparisons.csv": "95844c28d330980672cfda1e051eb855377102d694b8e88b88e461393969773f",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_plot_bridge.py": "1bbd81abd6283b6ec9306ba38245ae8b241102ee673300ac61c5a514cbabf88c",
+    "outputs/w10_scifate2_recipe_bridge_v1_continuation/report/comparisons.csv": "15b8b7f8b6f183ca037587789ad169a7cb9d24cdfa6d45e159c379a4874b48e0"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "9a72408fb79c9165e689862e779839a0eae3ddc2e5413b7e2fb6088be2d08575",
+  "runtime_seconds": 0.23864584043622017,
+  "status": "complete"
+}

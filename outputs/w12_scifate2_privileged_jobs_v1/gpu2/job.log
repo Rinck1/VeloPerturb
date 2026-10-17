@@ -1,0 +1,4 @@
+{"status": "STUDENT_READY", "teacher_arm": "static_router", "seed": 1, "seconds": 6.833606477826834}
+{"status": "STUDENT_READY", "teacher_arm": "velocity_router", "seed": 1, "seconds": 6.8461387157440186}
+{"status": "STUDENT_READY", "teacher_arm": "shuffled_velocity_router", "seed": 1, "seconds": 6.915619656443596}
+{"status": "SCALING_CASE_EVALUATED", "setting": "privileged_S_student", "experts": 8, "hidden": 128, "arm": "velocity_router", "step": 4000, "worker": 1, "energy_distance": 0.620290907847116, "mean_mse": 0.13660101277998138, "absolute_log_variance_error": 0.21261856646190228, "covariance_relative_error": 0.52240736087046}

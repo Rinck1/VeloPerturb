@@ -1,0 +1,69 @@
+{
+  "reference_root": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1",
+  "models": [
+    {
+      "name": "ode_40k_step3h",
+      "kind": "ode",
+      "checkpoints": [
+        {
+          "arm": "velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/velocity_router/seed0/model_step4000.pt",
+          "sha256": "308b30d10636f87b199abc061a18136836b808f06bcad9183ac5afb288496f52"
+        },
+        {
+          "arm": "static_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/static_router/seed0/model_step4000.pt",
+          "sha256": "d90e05252bf3e93202041fdb81ee580a980054aa5208583c8664d44faa2503b8"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/shuffled_velocity_router/seed0/model_step4000.pt",
+          "sha256": "2dbe2d62a1d7b29c49b4a20afdd3cb0e372d01c930aa08dc081f71c218d695e8"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/velocity_router/seed1/model_step4000.pt",
+          "sha256": "e6bbcd19b50f430eb29801b5fdfb5c9c961438233fe3061e2e19bf064f6b2f15"
+        },
+        {
+          "arm": "static_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/static_router/seed1/model_step4000.pt",
+          "sha256": "2fc3b43c33900dc772e4b6e6935732a412732517946742cea94c3ac188ca8909"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/shuffled_velocity_router/seed1/model_step4000.pt",
+          "sha256": "548c8a9eba9ae90be3c4976bee46c5c3cfeabaca3f1139e2942d71b5c9919d0f"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/velocity_router/seed2/model_step4000.pt",
+          "sha256": "58101ac833967d29c672363aae06eb950bfaba1dedb328cd1aeed4f163bf6c44"
+        },
+        {
+          "arm": "static_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/static_router/seed2/model_step4000.pt",
+          "sha256": "4c13e2bcd0442eb795d33655c5c4e02bc84acd6de98e15c4703e916004b4a536"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/shuffled_velocity_router/seed2/model_step4000.pt",
+          "sha256": "d6818ec61b7e93d170f88796d6fdef648ac5ae3ed57b7a75838c6a06bcf87692"
+        }
+      ],
+      "rk4_step_hours": 3.0
+    }
+  ],
+  "reason": "planned source-only step-halving diagnostic exceeded 1% movement for several controls",
+  "additional_training": false,
+  "original_6h_results_retained": true
+}

@@ -1,0 +1,384 @@
+{
+  "git_commit": "c43f4edbe9feac74b892b2c2daa6469017b502c0",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py",
+    "aggregate",
+    "--root",
+    "outputs/w7_scifate2_router_scaling_v1",
+    "--wait"
+  ],
+  "data_hashes": {
+    "outputs/w7_scifate2_router_scaling_v1/study_manifest.json": "728932083759dec32e40c8838aa7e4c4c68f8b0f92303160abcec08431248797",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 0.019011639058589935,
+  "status": "SCIFATE2_ROUTER_SCALING_COMPLETE",
+  "training_jobs": 51,
+  "cases": 36,
+  "best_observed_development_configuration": {
+    "setting": "k32_w128",
+    "experts": 32,
+    "hidden": 128,
+    "arm": "velocity_router",
+    "step": 4000,
+    "energy_distance": 0.61332636846514,
+    "mean_mse": 0.1366010121934552,
+    "absolute_log_variance_error": 0.1813756467367106,
+    "covariance_relative_error": 0.5252781169365964,
+    "parameters": 216480,
+    "training_seconds": 40.970336654533945,
+    "peak_allocated_bytes": 256736256,
+    "mean_active_modes": 21.333333333333332,
+    "mean_effective_modes": 18.89802077219848,
+    "mean_routing_information": 0.31340097340842005
+  },
+  "velocity_comparisons": [
+    {
+      "setting": "k2_w128",
+      "experts": 2,
+      "hidden": 128,
+      "step": 1000,
+      "velocity_energy": 0.6179458411634933,
+      "static_energy": 0.6196928628728742,
+      "relative_velocity_gain": 0.0028191735197364842
+    },
+    {
+      "setting": "k2_w128",
+      "experts": 2,
+      "hidden": 128,
+      "step": 4000,
+      "velocity_energy": 0.6190469716775743,
+      "static_energy": 0.6196797399137784,
+      "relative_velocity_gain": 0.0010211213881096137
+    },
+    {
+      "setting": "k4_w128",
+      "experts": 4,
+      "hidden": 128,
+      "step": 1000,
+      "velocity_energy": 0.6171594262618759,
+      "static_energy": 0.6182630449068505,
+      "relative_velocity_gain": 0.0017850309088760508
+    },
+    {
+      "setting": "k4_w128",
+      "experts": 4,
+      "hidden": 128,
+      "step": 4000,
+      "velocity_energy": 0.6162837534842266,
+      "static_energy": 0.6234815575006678,
+      "relative_velocity_gain": 0.011544533963915193
+    },
+    {
+      "setting": "k4_w128",
+      "experts": 4,
+      "hidden": 128,
+      "step": 12000,
+      "velocity_energy": 0.6134332669055448,
+      "static_energy": 0.6220837219854793,
+      "relative_velocity_gain": 0.013905612338360629
+    },
+    {
+      "setting": "k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "step": 1000,
+      "velocity_energy": 0.6192304960364764,
+      "static_energy": 0.6177071407310812,
+      "relative_velocity_gain": -0.002466144884762489
+    },
+    {
+      "setting": "k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "step": 4000,
+      "velocity_energy": 0.6151835790422897,
+      "static_energy": 0.6233260978109042,
+      "relative_velocity_gain": 0.013063015967421654
+    },
+    {
+      "setting": "k16_w128",
+      "experts": 16,
+      "hidden": 128,
+      "step": 1000,
+      "velocity_energy": 0.617224323378356,
+      "static_energy": 0.6168653106231184,
+      "relative_velocity_gain": -0.0005819953708774417
+    },
+    {
+      "setting": "k16_w128",
+      "experts": 16,
+      "hidden": 128,
+      "step": 4000,
+      "velocity_energy": 0.6194007329911949,
+      "static_energy": 0.6225030434559375,
+      "relative_velocity_gain": 0.004983606903380844
+    },
+    {
+      "setting": "k32_w128",
+      "experts": 32,
+      "hidden": 128,
+      "step": 1000,
+      "velocity_energy": 0.6150240238834227,
+      "static_energy": 0.6160124413241466,
+      "relative_velocity_gain": 0.0016045413605595416
+    },
+    {
+      "setting": "k32_w128",
+      "experts": 32,
+      "hidden": 128,
+      "step": 4000,
+      "velocity_energy": 0.61332636846514,
+      "static_energy": 0.6200597118728002,
+      "relative_velocity_gain": 0.010859185460256882
+    },
+    {
+      "setting": "k4_w64",
+      "experts": 4,
+      "hidden": 64,
+      "step": 1000,
+      "velocity_energy": 0.6168805048271905,
+      "static_energy": 0.6192042910601264,
+      "relative_velocity_gain": 0.0037528587357775756
+    },
+    {
+      "setting": "k4_w64",
+      "experts": 4,
+      "hidden": 64,
+      "step": 4000,
+      "velocity_energy": 0.6153844988760676,
+      "static_energy": 0.6233591139427469,
+      "relative_velocity_gain": 0.012792970999076059
+    },
+    {
+      "setting": "k4_w256",
+      "experts": 4,
+      "hidden": 256,
+      "step": 1000,
+      "velocity_energy": 0.6166924643472017,
+      "static_energy": 0.6179572444283975,
+      "relative_velocity_gain": 0.002046711309883098
+    },
+    {
+      "setting": "k4_w256",
+      "experts": 4,
+      "hidden": 256,
+      "step": 4000,
+      "velocity_energy": 0.6157840538467626,
+      "static_energy": 0.6193416580660589,
+      "relative_velocity_gain": 0.005744170722191022
+    },
+    {
+      "setting": "k4_w512",
+      "experts": 4,
+      "hidden": 512,
+      "step": 1000,
+      "velocity_energy": 0.6163606063743625,
+      "static_energy": 0.6174501552029484,
+      "relative_velocity_gain": 0.0017645939828581092
+    },
+    {
+      "setting": "k4_w512",
+      "experts": 4,
+      "hidden": 512,
+      "step": 4000,
+      "velocity_energy": 0.6142072859783951,
+      "static_energy": 0.6202700741815258,
+      "relative_velocity_gain": 0.009774432872859062
+    }
+  ],
+  "K_doubling_curve": [
+    {
+      "from_K": 1,
+      "to_K": 2,
+      "relative_improvement": 0.00769268061993178
+    },
+    {
+      "from_K": 2,
+      "to_K": 4,
+      "relative_improvement": 0.004463664826369396
+    },
+    {
+      "from_K": 4,
+      "to_K": 8,
+      "relative_improvement": 0.0017851751497860446
+    },
+    {
+      "from_K": 8,
+      "to_K": 16,
+      "relative_improvement": -0.006855114623622427
+    },
+    {
+      "from_K": 16,
+      "to_K": 32,
+      "relative_improvement": 0.009806841036045788
+    }
+  ],
+  "practical_K_saturation_candidate": 16,
+  "saturation_rule": {
+    "relative_improvement_threshold": 0.002,
+    "consecutive_doublings": 2
+  },
+  "no_saturation_means_tested_range_only": true,
+  "global_mean_frozen": true,
+  "scope": "same_series_development",
+  "mean_anchor_max_error": 6.779486986600494e-08,
+  "frozen_evaluation_summaries": [
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k1_w128/k1/step1000/summary.json",
+      "sha256": "f2c82cb6ac1410d097b5bdd3bb43fe6a6bcac77491c9680bd61c34cb625f10fb"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k1_w128/k1/step4000/summary.json",
+      "sha256": "af4b5496e9f7d42b6ce6921c94a932e7ee739bbbaca5889fbfb8eba3f511100b"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k2_w128/static_router/step1000/summary.json",
+      "sha256": "34b4f37a37c912cf3f347fabb5046c184e56701e9cda445a13788a594e398373"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k2_w128/static_router/step4000/summary.json",
+      "sha256": "8678e1ad0a172355cd6a2771c39bd1bd3eadcd2c1f95940365368b02e76bd644"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k2_w128/velocity_router/step1000/summary.json",
+      "sha256": "6d2fab1ee3695cd625bc1b50dc41ac6efbe9326ef1fd60ade15a90bd6721a34c"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k2_w128/velocity_router/step4000/summary.json",
+      "sha256": "e65af6c16c80a2a68d81efec8547aa08c2e61a637329f4f9223822f19d23460c"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w128/static_router/step1000/summary.json",
+      "sha256": "d40f856a29b24eb10c0d9590b3511e6f1ac78e25485e9e0388d42e195aea3857"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w128/static_router/step4000/summary.json",
+      "sha256": "bdda60d1905d42993d91f3b7d0810689a38b2aaf8ae8184167c47b06d6f0e698"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w128/static_router/step12000/summary.json",
+      "sha256": "3a652b842431579cfa4703829b3edffd07e24a8f17b92c853dd88c601b6a01ae"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w128/velocity_router/step1000/summary.json",
+      "sha256": "eedc8852d5f57d51639b4e74713472710903ba6d01b1d4460eb80d3f7f3e5d7a"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w128/velocity_router/step4000/summary.json",
+      "sha256": "aec1f6856fee98358cc577b5caefe7045ca8a380e0036555ad389fbe3b66cd80"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w128/velocity_router/step12000/summary.json",
+      "sha256": "73d49afc77d65ae2222dad129e8f5d1660a3d83170f6306d45b7648bfe46cd6c"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k8_w128/static_router/step1000/summary.json",
+      "sha256": "913de70b8b6336ea56b874d778bc887518416dcadd5348efdf205d65ac4c0ec6"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k8_w128/static_router/step4000/summary.json",
+      "sha256": "b3325159090dddc938cace5be38c54c352530cd3a34fe343f80df6b364d629f5"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k8_w128/velocity_router/step1000/summary.json",
+      "sha256": "98ab116798c098fbd7af337ca94042bc1ef174895cbaab994a39be7362db12fb"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k8_w128/velocity_router/step4000/summary.json",
+      "sha256": "1e7c0d4cd2a85570f94d3251d15cfb791e0e83e5032296aaed68fe4e3a57c982"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k16_w128/static_router/step1000/summary.json",
+      "sha256": "ac9cf740e415b2fa1129a9747892881779bddd63ac22db9435a308c27c96dc79"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k16_w128/static_router/step4000/summary.json",
+      "sha256": "a2e59a03ccc7872202f0236cb5487b1272448a684f91f9756bb0ecfd776e9164"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k16_w128/velocity_router/step1000/summary.json",
+      "sha256": "3cbec43b6825f3c7d85235ba2e2764e200cb4301b8d2b925b926057f7b9d4b17"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k16_w128/velocity_router/step4000/summary.json",
+      "sha256": "50070b3a44776a0ca82dbe36cf7402c48f0bfbe52dd3e1c7bde816e7e96848a9"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k32_w128/static_router/step1000/summary.json",
+      "sha256": "fee2221134658c7f5c03d55c8cf8fc38f51e0b9895a960fabea7f9f65bb7235d"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k32_w128/static_router/step4000/summary.json",
+      "sha256": "2d292f9793418e49d5dccb8140eedc1c824a55c0660fb4cab0bee73544aa8ac7"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k32_w128/velocity_router/step1000/summary.json",
+      "sha256": "c86baf631de7fffcfc3be6a49e6a713ce474752aecd9389d0b9b65899fb4718c"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k32_w128/velocity_router/step4000/summary.json",
+      "sha256": "a3a46e653be85da332788223195af8571de8ccdef07613f7a3aecf748fefcaf6"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w64/static_router/step1000/summary.json",
+      "sha256": "fa572da9105669cc45b287e673d21da54a91d03ef3a9ba5f9a7e11a4e5ce87de"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w64/static_router/step4000/summary.json",
+      "sha256": "cb1cc50a3080b88c3a2aab4b66766aa91975549daadc9ff3440a40065e26ca34"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w64/velocity_router/step1000/summary.json",
+      "sha256": "df2aebb27bb548a575234ee3382f68a49c394f9f00c6a7788bf10a5822d672cc"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w64/velocity_router/step4000/summary.json",
+      "sha256": "95de35b713feb67d1bb148ea1e1762b58f3ccb2ff7c50081c1036662bb455561"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w256/static_router/step1000/summary.json",
+      "sha256": "0ea7619f8547dbb965243d70692707ffedf3c963892a9e69beb03f1df89d3428"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w256/static_router/step4000/summary.json",
+      "sha256": "dc8f2d0054e020e6e7708884715c68823f61044c1373ec8cdd50ca312eb6ad59"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w256/velocity_router/step1000/summary.json",
+      "sha256": "98b60febe798a19d0264eb98bef532915d940e099d09f3e8ae796b4c2d0e659f"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w256/velocity_router/step4000/summary.json",
+      "sha256": "cb200bca39bdb4bfd2f77ac12e179aa7880198f1b043e5803423a1d9ba8e0eda"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w512/static_router/step1000/summary.json",
+      "sha256": "939997891c899eae56576f8af1b9b560a90980d80c98558956bb40c081cb2d33"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w512/static_router/step4000/summary.json",
+      "sha256": "bd719cffb7f12ec116fba0e7d49fd6ee7d33e086d758fa2262bc1ef2b6700874"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w512/velocity_router/step1000/summary.json",
+      "sha256": "0e20f30b17ec81052c24d9b7e8af7b7daa3ea19d88e583d80104ca8200e19e1d"
+    },
+    {
+      "path": "outputs/w7_scifate2_router_scaling_v1/evaluations/k4_w512/velocity_router/step4000/summary.json",
+      "sha256": "a24e888ea38b214ac972ddf9a008fcb6869ae61c26c0c2c7eda747190453c65c"
+    }
+  ]
+}

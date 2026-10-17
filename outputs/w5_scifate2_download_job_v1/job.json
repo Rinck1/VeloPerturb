@@ -1,0 +1,24 @@
+{
+  "physical_gpu": null,
+  "gpu_uuid": null,
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv-gpu/bin/python",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scifate2_technical.py",
+    "--output",
+    "outputs/w5_scifate2_technical_v1"
+  ],
+  "cwd": "/home/yuchang/wangjiaxuan",
+  "allowed_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "reserved_gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "started_utc": "2026-10-17T08:09:34.857094+00:00"
+}

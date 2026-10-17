@@ -1,0 +1,40 @@
+{
+  "git_commit": "fded18395eabe5d39a9580155cf3ba87a4435eac",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w9_large_training.py",
+    "prepare",
+    "--output",
+    "outputs/w9_scifate2_large_audited_v1",
+    "--audit-xml",
+    "outputs/w9_large_audit_v1/pytest.xml"
+  ],
+  "data_hashes": {
+    "configs/w9_scifate2_large_audited_v1.json": "c49b7395a3133dcfe300375a3f1ebf8a614f2a712df72a52b286da00863d23c3",
+    "outputs/w9_large_audit_v1/pytest.xml": "ba5f63f721bfe034dce846e2d5864ce634d259a506eb8aa716654450bb8a5d60",
+    "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/study_manifest.json": "728932083759dec32e40c8838aa7e4c4c68f8b0f92303160abcec08431248797",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/normalization.npz": "8083197f8b75f616a2eae262b6f28f16b7868aa9a3e319b09885c3e9c512744d",
+    "/home/yuchang/wangjiaxuan/PLANS/w9_large_model_mathematical_audit.md": "473a89d84c0a36008ee5d8ea4dfdff97042b83366075f83f9ede0b0ce4e713bf",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_large_training.py": "e6a202aba9814ad3ec2a69fc0f157cb3717ded33bc9a49703bf08d69b1dc5cb4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_population_router.py": "5e819854c7ca33da551d9b6da9f9e627ee1cd8407c9297c4f270abdbe5634cb2",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 0.007300969213247299,
+  "status": "complete",
+  "jobs": 12,
+  "cases": 12,
+  "parameters": {
+    "small_k8_w128": 76248,
+    "large_k8_w1216": 18516952
+  }
+}

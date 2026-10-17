@@ -1,0 +1,1 @@
+{"status": "TRAINING_ONLY_TIME_SMOKE_PASSED", "timing": [{"dynamics": "endpoint_time", "steps": 25, "seconds": 1.3912159353494644}, {"dynamics": "ode", "steps": 25, "seconds": 1.1548289768397808}], "solver_relative_difference": 0.004275971379591361, "r4_targets_read": false, "weights_discarded_after_smoke": true, "parameters": 76760}

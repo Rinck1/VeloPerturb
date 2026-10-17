@@ -1,0 +1,43 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_large_training.py",
+    "worker",
+    "--root",
+    "outputs/w9_scifate2_large_audited_v1",
+    "--worker",
+    "1",
+    "--device",
+    "cuda"
+  ],
+  "data_hashes": {
+    "outputs/w9_scifate2_large_audited_v1/study_manifest.json": "86d9641f5f95de5cc1f03c5a9405252b0cab35b3a35a5a201e60a47fdcb23244",
+    "/home/yuchang/wangjiaxuan/outputs/w9_scifate2_large_audited_v1/training/small_k8_w128/static_router/seed0/step4000_5_to_10.npz": "dc2b0242d3ba27eae057c20b90b4858dd388ae309b2ce4072e7d4087ca57d046",
+    "/home/yuchang/wangjiaxuan/outputs/w9_scifate2_large_audited_v1/training/small_k8_w128/static_router/seed0/step4000_10_to_15.npz": "840b63bf578257846247b5aebb41ea19a99e349706f5e84a19ba2c9b19a22252",
+    "/home/yuchang/wangjiaxuan/outputs/w9_scifate2_large_audited_v1/training/small_k8_w128/static_router/seed0/step4000_15_to_20.npz": "af6815c8096eb6bd83c4e9c417dc67e10b7a45d14c85f30e61bfbf01988a1c40",
+    "/home/yuchang/wangjiaxuan/outputs/w9_scifate2_large_audited_v1/training/small_k8_w128/static_router/seed1/step4000_5_to_10.npz": "a07eaedda39d955fec08538bbec2a9acff5f414d6cb07844f0bd09360e700700",
+    "/home/yuchang/wangjiaxuan/outputs/w9_scifate2_large_audited_v1/training/small_k8_w128/static_router/seed1/step4000_10_to_15.npz": "94d2e160612edae9140abd386c35d1de8e76b2c6b565e738cc525f2d50943d05",
+    "/home/yuchang/wangjiaxuan/outputs/w9_scifate2_large_audited_v1/training/small_k8_w128/static_router/seed1/step4000_15_to_20.npz": "73aeb23a5f99e84c794238e237ffc5be0f304e5d532db90bdb142b8788143d81",
+    "/home/yuchang/wangjiaxuan/outputs/w9_scifate2_large_audited_v1/training/small_k8_w128/static_router/seed2/step4000_5_to_10.npz": "b5f561b63f0a278113bc6eafc162a55db696a74c1d7978f2e8656bf0d3ba4d6f",
+    "/home/yuchang/wangjiaxuan/outputs/w9_scifate2_large_audited_v1/training/small_k8_w128/static_router/seed2/step4000_10_to_15.npz": "de2f1bbda2ec7a96d2bfe2d5c3c7b86abab923b43e1b316ec84dfdb3b8f4c9f5",
+    "/home/yuchang/wangjiaxuan/outputs/w9_scifate2_large_audited_v1/training/small_k8_w128/static_router/seed2/step4000_15_to_20.npz": "f9200d9b9c1fca701b67d726d166f5dfc91823234075d7b3ad2411b5e20830b2",
+    "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_5_to_10.npz": "f43696a55804bd29a5ed1f590eea659d45b4c018074e786d77ce15645c38aef9",
+    "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_10_to_15.npz": "e0fd4afcd47511ff298d5341058c228ae3f671c45e79397ceffcf99dc92796c8",
+    "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_15_to_20.npz": "ec57738ec3828e82197b4cba9b135eb0e8e7cdf75369f476f30ca76882f40504",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 0.2524406984448433,
+  "status": "complete"
+}

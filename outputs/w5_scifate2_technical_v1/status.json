@@ -1,0 +1,21 @@
+{
+  "git_commit": "37be54a3ce74ee65347301bfa0de55225c4067bb",
+  "seed": null,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scifate2_technical.py",
+    "--output",
+    "outputs/w5_scifate2_technical_v1"
+  ],
+  "data_hashes": {
+    "configs/w5_scifate2_technical_v1.json": "c24b6276fdf26db8e5782a6da08d7e5c6f14e910274c4624764e6c3dfa33609c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scifate2_technical.py": "00cf0f34a455a169ed7155c4ddad26aaf0ba28b5f38c3f24057f58b4d2d9094f",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 452.6368655152619,
+  "status": "failed",
+  "error_type": "ModuleNotFoundError",
+  "error": "No module named 'anndata.io'",
+  "partial_files_retained": true
+}

@@ -1,0 +1,35 @@
+{
+  "git_commit": "aad70286dcf44debd6b6410e84d653f573a32569",
+  "seed": 1,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_renge.py",
+    "train",
+    "--pack",
+    "outputs/w5_joint_kinetics_renge_pack_v1",
+    "--output",
+    "outputs/w5_joint_kinetics_renge_v1/seed1",
+    "--seed",
+    "1",
+    "--device",
+    "cuda"
+  ],
+  "data_hashes": {
+    "outputs/w5_joint_kinetics_renge_pack_v1/manifest.json": "ec8a9cebe4a16abe27b92d4e8ce47ddcb0f6d0d560c475c7bc4ac565a8cc1869",
+    "outputs/w5_joint_kinetics_renge_pack_v1/training_pack.npz": "749dfaef2df085a505bfbf954766d3d897d5c550f2f2f9215f8c731c9631568c",
+    "outputs/w5_joint_kinetics_renge_pack_v1/source_pack.npz": "d16c91f78f8bdba2cb2f0a6122ea7348a2e2ba5cde9d86ce577e0214cc09421c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_renge.py": "15f5528e83a5e13d47549f32623bb1c71c292183cd79638dd600aafbab24913e",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_kinetics.py": "8d79fcdfff498a183482dce199cf1987bc2f47b5bd503cdd04708bdf278566bf",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_kinetic_head.py": "0d7365a05c78f55b81c058808a741f2fac3c0641d79b74f61288a41ca82cf79a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "10840d04fdf8f03628d4161c6bf4c241a2a321671cc33f5148ae08fd940ee14f",
+  "runtime_seconds": 9.336445100605488,
+  "status": "PREDICTIONS_READY",
+  "pack": "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_renge_pack_v1",
+  "heldout_target_expression_read": false,
+  "prediction_sha256": "b290b11858e0dde562ce2a59a31a948488ef6642b1b374bf9084062cbd69d753"
+}

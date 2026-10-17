@@ -1,0 +1,31 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_bridge.py",
+    "advance",
+    "--root",
+    "outputs/w10_scifate2_recipe_bridge_v1",
+    "--job-root",
+    "outputs/w10_scifate2_recipe_bridge_jobs_v1"
+  ],
+  "data_hashes": {
+    "outputs/w10_scifate2_recipe_bridge_v1/study_manifest.json": "d732496645ea09e72a22681130dfa551297d56ad1b7ef78ab180c5f269aa74c4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_bridge.py": "e2e8fc4c311422e9a2cac012a5bf210edbbefca2187e882b26942d08ce5b737b",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_large_training.py": "e6a202aba9814ad3ec2a69fc0f157cb3717ded33bc9a49703bf08d69b1dc5cb4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_population_router.py": "5e819854c7ca33da551d9b6da9f9e627ee1cd8407c9297c4f270abdbe5634cb2",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "9a72408fb79c9165e689862e779839a0eae3ddc2e5413b7e2fb6088be2d08575",
+  "runtime_seconds": 0.019222769886255264,
+  "status": "complete"
+}

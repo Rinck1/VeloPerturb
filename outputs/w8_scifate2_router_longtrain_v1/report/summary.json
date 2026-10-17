@@ -1,0 +1,152 @@
+{
+  "git_commit": "9c6f71247dbceaf3f39c5922a99aea862220a77c",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py",
+    "aggregate",
+    "--root",
+    "outputs/w8_scifate2_router_longtrain_v1",
+    "--wait"
+  ],
+  "data_hashes": {
+    "outputs/w8_scifate2_router_longtrain_v1/study_manifest.json": "334f0d70b68ec530752f4b55a8548bb85bbd0df8bbb5256b5b61f11eceb759c6",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "502349a5ddec97f8a35bf99f4bd9531abe196802c786ea15ecfc6fb67800def4",
+  "runtime_seconds": 0.010360922664403915,
+  "status": "SCIFATE2_ROUTER_SCALING_COMPLETE",
+  "training_jobs": 12,
+  "cases": 10,
+  "best_observed_development_configuration": {
+    "setting": "k8_w128",
+    "experts": 8,
+    "hidden": 128,
+    "arm": "velocity_router",
+    "step": 12000,
+    "energy_distance": 0.603696253335657,
+    "mean_mse": 0.1366010123767574,
+    "absolute_log_variance_error": 0.16139554437460343,
+    "covariance_relative_error": 0.5152115264271028,
+    "parameters": 76248,
+    "training_seconds": 57.75713041052222,
+    "peak_allocated_bytes": 140374016,
+    "mean_active_modes": 8.0,
+    "mean_effective_modes": 6.214537083646539,
+    "mean_routing_information": 0.15720459818140617
+  },
+  "velocity_comparisons": [
+    {
+      "setting": "k4_w128",
+      "experts": 4,
+      "hidden": 128,
+      "step": 12000,
+      "velocity_energy": 0.6134332669055448,
+      "static_energy": 0.6220837219854793,
+      "relative_velocity_gain": 0.013905612338360629
+    },
+    {
+      "setting": "k4_w128",
+      "experts": 4,
+      "hidden": 128,
+      "step": 24000,
+      "velocity_energy": 0.6096677772413847,
+      "static_energy": 0.6191097591985381,
+      "relative_velocity_gain": 0.015250901503113812
+    },
+    {
+      "setting": "k4_w128",
+      "experts": 4,
+      "hidden": 128,
+      "step": 36000,
+      "velocity_energy": 0.6062113186201431,
+      "static_energy": 0.6173207076201237,
+      "relative_velocity_gain": 0.017996138575699483
+    },
+    {
+      "setting": "k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "step": 4000,
+      "velocity_energy": 0.6151835790422897,
+      "static_energy": 0.6233260978109042,
+      "relative_velocity_gain": 0.013063015967421654
+    },
+    {
+      "setting": "k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "step": 12000,
+      "velocity_energy": 0.603696253335657,
+      "static_energy": 0.6226403988642044,
+      "relative_velocity_gain": 0.030425500117089332
+    }
+  ],
+  "K_doubling_curve": [
+    {
+      "from_K": 4,
+      "to_K": 8,
+      "relative_improvement": 0.01587297933645826
+    }
+  ],
+  "practical_K_saturation_candidate": null,
+  "saturation_rule": {
+    "relative_improvement_threshold": 0.002,
+    "consecutive_doublings": 2
+  },
+  "no_saturation_means_tested_range_only": true,
+  "global_mean_frozen": true,
+  "scope": "same_series_development",
+  "mean_anchor_max_error": 5.870663434979964e-08,
+  "frozen_evaluation_summaries": [
+    {
+      "path": "outputs/w8_scifate2_router_longtrain_v1/evaluations/k4_w128/static_router/step12000/summary.json",
+      "sha256": "27a7a390f2efa27abf2d4ba9733d81a53a017aae06ca77ea7b03a1e710521c49"
+    },
+    {
+      "path": "outputs/w8_scifate2_router_longtrain_v1/evaluations/k4_w128/static_router/step24000/summary.json",
+      "sha256": "15ab0264b81d5311afa8841bed3ff6d733637909de5834971aaac1b99053bfc7"
+    },
+    {
+      "path": "outputs/w8_scifate2_router_longtrain_v1/evaluations/k4_w128/static_router/step36000/summary.json",
+      "sha256": "34c02de37be3719eb24c68c623aeeb44e12bbbfe1adbc0c4bc3f2ff169ec4872"
+    },
+    {
+      "path": "outputs/w8_scifate2_router_longtrain_v1/evaluations/k4_w128/velocity_router/step12000/summary.json",
+      "sha256": "fbd4dd27b3f55e498adb8b5f553d53e94e5e1800eed43bcee70eeb740710372b"
+    },
+    {
+      "path": "outputs/w8_scifate2_router_longtrain_v1/evaluations/k4_w128/velocity_router/step24000/summary.json",
+      "sha256": "00329a8ea45417cf6b3b82945984e8d50323e9265f26d5c524c48ad630a28600"
+    },
+    {
+      "path": "outputs/w8_scifate2_router_longtrain_v1/evaluations/k4_w128/velocity_router/step36000/summary.json",
+      "sha256": "c06a092eb026005e02eca766adf96b0b9d56656c80d24ba42f0e69d296a0293c"
+    },
+    {
+      "path": "outputs/w8_scifate2_router_longtrain_v1/evaluations/k8_w128/static_router/step4000/summary.json",
+      "sha256": "5048e7ab2016dcd7dffb320c9120d12bad49302985576a6bc475ac238c8c4b24"
+    },
+    {
+      "path": "outputs/w8_scifate2_router_longtrain_v1/evaluations/k8_w128/static_router/step12000/summary.json",
+      "sha256": "5d4652c3f09d99c34d4e249f3d3f322090807832c0770efda416d7ff5dcb1d12"
+    },
+    {
+      "path": "outputs/w8_scifate2_router_longtrain_v1/evaluations/k8_w128/velocity_router/step4000/summary.json",
+      "sha256": "b16134e00c016ef53e45e770687cd81c2d6329d7aba071ff1d52bc4f2f155462"
+    },
+    {
+      "path": "outputs/w8_scifate2_router_longtrain_v1/evaluations/k8_w128/velocity_router/step12000/summary.json",
+      "sha256": "a0257529df050d52a52f4777c693d0c7090fe8929d6449f83efff5eaa573b4c8"
+    }
+  ]
+}

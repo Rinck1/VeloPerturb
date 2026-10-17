@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scifate2_technical.py", line 174, in <module>
+    if args.inspect_only:inspect_existing(args.config,args.output)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scifate2_technical.py", line 78, in inspect_existing
+    run.json('summary.json',result)
+  File "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py", line 45, in json
+    temporary.write_text(json.dumps(payload, indent=2, allow_nan=False)+'\n')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yuchang/miniconda3/envs/scdfm/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/home/yuchang/miniconda3/envs/scdfm/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/home/yuchang/miniconda3/envs/scdfm/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/yuchang/miniconda3/envs/scdfm/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/home/yuchang/miniconda3/envs/scdfm/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/home/yuchang/miniconda3/envs/scdfm/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/home/yuchang/miniconda3/envs/scdfm/lib/python3.11/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/home/yuchang/miniconda3/envs/scdfm/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/home/yuchang/miniconda3/envs/scdfm/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable

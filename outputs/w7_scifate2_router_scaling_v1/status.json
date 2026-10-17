@@ -1,0 +1,33 @@
+{
+  "git_commit": "386324c03769c63e2f2f76b215bc2fb896901f4b",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w7_router_scaling.py",
+    "prepare",
+    "--output",
+    "outputs/w7_scifate2_router_scaling_v1"
+  ],
+  "data_hashes": {
+    "configs/w7_scifate2_router_scaling_v1.json": "501763511f53202e44bf919eaa45cdd3c712e25324baf5809f38036a3e0e4b67",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_evaluation_v1/evaluation_samples.json": "d939a98e57a67d4ef4112465d92c9278a28a702e94a10e7e19310f2a7ecc889f",
+    "/home/yuchang/wangjiaxuan/data/scifate2/raw/GSE236512_processed_data_splicing.h5ad": "4269f26b5d53d436c692210d965233ed66f2d3d4a6ff0e1c0a6713b108816944",
+    "outputs/w5_joint_kinetics_scifate2_pack_v1/source_transform.npz": "c00899873aedca6f0bf1423f7ddf8ca52774a9e81134c7edf214c1e23eb10099",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e28086915e0f2a03a869a990bb442652b2d4965944837c4195944a9292f82846",
+  "runtime_seconds": 8.853864461183548,
+  "status": "complete",
+  "jobs": 51,
+  "evaluation_cases": 36
+}

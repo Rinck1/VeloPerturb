@@ -1,0 +1,96 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_time_program.py",
+    "--continuation",
+    "outputs/w13_scifate2_direct_continuation_v1",
+    "--output",
+    "outputs/w13_time_program_v1",
+    "--job-root",
+    "outputs/w13_time_jobs_v1",
+    "--audit-xml",
+    "outputs/w13_time_verification_v1/pytest.xml"
+  ],
+  "data_hashes": {
+    "outputs/w13_scifate2_direct_continuation_v1/study_manifest.json": "806b7938b85e07fcf0f0d7b1ad1fae2f62d970ce6344ee097b2ae7d762e361ca",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_bridge.py": "e2e8fc4c311422e9a2cac012a5bf210edbbefca2187e882b26942d08ce5b737b",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_large_training.py": "e6a202aba9814ad3ec2a69fc0f157cb3717ded33bc9a49703bf08d69b1dc5cb4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_population_router.py": "5e819854c7ca33da551d9b6da9f9e627ee1cd8407c9297c4f270abdbe5634cb2",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "931c5aa8971a8ace656def8d191a2313705056dd3b871afafd58e58c237bb89c",
+  "runtime_seconds": 0.0086183100938797,
+  "status": "RECIPE_BRIDGE_COMPLETE",
+  "training_jobs": 9,
+  "cases": 6,
+  "comparisons": [
+    {
+      "setting": "b1_direct_distance",
+      "step": 24000,
+      "real_energy": 0.5985121789990254,
+      "static_energy": 0.6213237732194964,
+      "shuffled_energy": 0.6234878592330743,
+      "gain_vs_static": 0.03671450410189325,
+      "gain_vs_shuffled": 0.040058005724073475
+    },
+    {
+      "setting": "b1_direct_distance",
+      "step": 36000,
+      "real_energy": 0.5956826428918612,
+      "static_energy": 0.6213871121615883,
+      "shuffled_energy": 0.6244450393766469,
+      "gain_vs_static": 0.04136627356224076,
+      "gain_vs_shuffled": 0.046060733404973075
+    }
+  ],
+  "selected_for_continuation": {
+    "setting": "b1_direct_distance",
+    "step": 36000,
+    "real_energy": 0.5956826428918612,
+    "static_energy": 0.6213871121615883,
+    "shuffled_energy": 0.6244450393766469,
+    "gain_vs_static": 0.04136627356224076,
+    "gain_vs_shuffled": 0.046060733404973075
+  },
+  "velocity_pairing_advantage_at_final_step": true,
+  "scope": "same_series_development",
+  "global_mean_frozen": true,
+  "mean_anchor_max_error": 6.775358268338764e-08,
+  "frozen_evaluation_summaries": [
+    {
+      "path": "outputs/w13_scifate2_direct_continuation_v1/evaluations/b1_direct_distance/static_router/step24000/summary.json",
+      "sha256": "a829afb81ad39707ba1e7364041b3ab174b27cbc5310364f144ed2a6980478b2"
+    },
+    {
+      "path": "outputs/w13_scifate2_direct_continuation_v1/evaluations/b1_direct_distance/static_router/step36000/summary.json",
+      "sha256": "a6bfb511282e04acb4aca436a23f5880ba56e093621921575716efd0574891b8"
+    },
+    {
+      "path": "outputs/w13_scifate2_direct_continuation_v1/evaluations/b1_direct_distance/velocity_router/step24000/summary.json",
+      "sha256": "9b986de81e5711772b64477eecc677dcc95ca8bf42a2caa92366255018636d64"
+    },
+    {
+      "path": "outputs/w13_scifate2_direct_continuation_v1/evaluations/b1_direct_distance/velocity_router/step36000/summary.json",
+      "sha256": "9bd515b3e39eac887094ea8b6236e2659dfe5464a038d325e992d5d1435bd7b3"
+    },
+    {
+      "path": "outputs/w13_scifate2_direct_continuation_v1/evaluations/b1_direct_distance/shuffled_velocity_router/step24000/summary.json",
+      "sha256": "8fd4b6cc0eeadee5161fcbed13bb92839c808965849519a3a1256f09a4786f8e"
+    },
+    {
+      "path": "outputs/w13_scifate2_direct_continuation_v1/evaluations/b1_direct_distance/shuffled_velocity_router/step36000/summary.json",
+      "sha256": "24396dc0a05d286a5722cdbed3a80f143a64628545121538cb6d4858528da08d"
+    }
+  ],
+  "interpretation": "Descriptive development comparisons, not independent confirmation or fate inference"
+}

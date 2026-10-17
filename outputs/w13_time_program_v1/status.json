@@ -1,0 +1,30 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_time_program.py",
+    "--continuation",
+    "outputs/w13_scifate2_direct_continuation_v1",
+    "--output",
+    "outputs/w13_time_program_v1",
+    "--job-root",
+    "outputs/w13_time_jobs_v1",
+    "--audit-xml",
+    "outputs/w13_time_verification_v1/pytest.xml"
+  ],
+  "data_hashes": {
+    "configs/w13_scifate2_time_v1.json": "f5b310040c4a1a30a212cfd1ffb426e4dfbcd3e8dfcb3028a74b7b69a860db9b",
+    "outputs/w13_time_verification_v1/pytest.xml": "164318974f71e47880ddca662a796b06c0304edf10a313add794e514223f123f",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_time_program.py": "4721aa1e219ceb8279225068b023ef2ce51e50d00b15e5f9ac7087a3304e5906",
+    "/home/yuchang/wangjiaxuan/PLANS/w13_time_dynamics.md": "6f98e980e1bac85a9e7be16077ad07876f0d033dcbf2e8b8548591d9704a3210"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "7353558f79f3db81eb8ce6373c7bc964fbc07b783e884a30611655d39b813b1e",
+  "runtime_seconds": 791.8577818572521,
+  "status": "complete",
+  "report": "outputs/w13_time_program_v1/RESULTS.md"
+}

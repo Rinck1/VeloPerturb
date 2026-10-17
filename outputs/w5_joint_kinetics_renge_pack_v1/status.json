@@ -1,0 +1,34 @@
+{
+  "git_commit": "aad70286dcf44debd6b6410e84d653f573a32569",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w5_joint_renge.py",
+    "prepare",
+    "--output",
+    "outputs/w5_joint_kinetics_renge_pack_v1"
+  ],
+  "data_hashes": {
+    "configs/w5_joint_kinetics_renge_v1.json": "5f154514b9e2ca070d1cc4eb88f590c5381b21264d5a7a9c31c80b24e4f905e7",
+    "/home/yuchang/wangjiaxuan/outputs/w4_development_predictions_v1/prediction_manifest.json": "52022690ce9ca8f97c2b9311583df28906e484d063a406710e5a9d7888fe6013",
+    "/home/yuchang/wangjiaxuan/outputs/w4_development_predictions_v1/predictions.npz": "f8ea8c8c2d2aa810e5ee2bb99905c4bf40f2ef86ba2febd00a3a6e20965485a5",
+    "/home/yuchang/wangjiaxuan/data/renge/processed_release_v1/day4/day4.h5ad": "449d3a3f21f9c76aeb6af25cc820ce3f151614f5f1b1e84fa70932888ac6a89e",
+    "/home/yuchang/wangjiaxuan/data/renge/processed_release_v1/day5/day5.h5ad": "389dc67a5c6df74dad19f0a25b78c55a9a26c232fd5a4fb078e83ef04623ee94",
+    "/home/yuchang/wangjiaxuan/outputs/w4_development_predictions_v1/transform_seed0.npz": "6b7985770406586dc1662b6f8842220ecec6d906929a57b8d554a84dc987902e",
+    "/home/yuchang/wangjiaxuan/data/renge/conditions/esm2_3b_v1/conditions.npz": "951d4ecafdec552de1e1532c9dd79f686fdc065af9c8822c2a54a2142996155e",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_renge.py": "15f5528e83a5e13d47549f32623bb1c71c292183cd79638dd600aafbab24913e",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_kinetics.py": "8d79fcdfff498a183482dce199cf1987bc2f47b5bd503cdd04708bdf278566bf",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_kinetic_head.py": "0d7365a05c78f55b81c058808a741f2fac3c0641d79b74f61288a41ca82cf79a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 8.911776710301638,
+  "status": "complete"
+}

@@ -1,0 +1,12 @@
+{"status": "COHORT_CHECKPOINT", "arm": "static_router", "seed": 0, "step": 1000, "training_seconds": 8.770412720739841, "peak_allocated_bytes": 212776960}
+{"status": "COHORT_CHECKPOINT", "arm": "static_router", "seed": 0, "step": 4000, "training_seconds": 28.657423116266727, "peak_allocated_bytes": 212776960}
+{"status": "COHORT_CHECKPOINT", "arm": "static_router", "seed": 0, "step": 12000, "training_seconds": 82.6347608268261, "peak_allocated_bytes": 212776960}
+{"status": "COHORT_CHECKPOINT", "arm": "velocity_router", "seed": 0, "step": 1000, "training_seconds": 6.854957591742277, "peak_allocated_bytes": 213719040}
+{"status": "COHORT_CHECKPOINT", "arm": "velocity_router", "seed": 0, "step": 4000, "training_seconds": 27.3159862421453, "peak_allocated_bytes": 213719040}
+{"status": "COHORT_CHECKPOINT", "arm": "velocity_router", "seed": 0, "step": 12000, "training_seconds": 82.04546327143908, "peak_allocated_bytes": 213719040}
+{"status": "COHORT_CHECKPOINT", "arm": "shuffled_velocity_router", "seed": 0, "step": 1000, "training_seconds": 6.76947807520628, "peak_allocated_bytes": 213719040}
+{"status": "COHORT_CHECKPOINT", "arm": "shuffled_velocity_router", "seed": 0, "step": 4000, "training_seconds": 26.764254171401262, "peak_allocated_bytes": 213719040}
+{"status": "COHORT_CHECKPOINT", "arm": "shuffled_velocity_router", "seed": 0, "step": 12000, "training_seconds": 81.87031435966492, "peak_allocated_bytes": 213719040}
+{"status": "SCALING_CASE_EVALUATED", "setting": "cohort_full_center_V", "experts": 8, "hidden": 128, "arm": "static_router", "step": 1000, "worker": 0, "energy_distance": 0.6115326849608197, "mean_mse": 0.13660101249147008, "absolute_log_variance_error": 0.18565496248523647, "covariance_relative_error": 0.5307160955165512}
+{"status": "SCALING_CASE_EVALUATED", "setting": "cohort_full_center_V", "experts": 8, "hidden": 128, "arm": "velocity_router", "step": 1000, "worker": 0, "energy_distance": 0.6140086467022824, "mean_mse": 0.13660101214803078, "absolute_log_variance_error": 0.1820792889605678, "covariance_relative_error": 0.5378193506618311}
+{"status": "SCALING_CASE_EVALUATED", "setting": "cohort_full_center_V", "experts": 8, "hidden": 128, "arm": "shuffled_velocity_router", "step": 1000, "worker": 0, "energy_distance": 0.614148221574449, "mean_mse": 0.13660101232625102, "absolute_log_variance_error": 0.18018920131430602, "covariance_relative_error": 0.5354641249670403}

@@ -1,0 +1,32 @@
+{
+  "physical_gpu": 3,
+  "gpu_uuid": "GPU-eceea469-bff2-dd5d-7861-ef284d1fb340",
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv-gpu/bin/python",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py",
+    "evaluate",
+    "--pack",
+    "outputs/w6_local_router_scifate2_pack_v1",
+    "--training-root",
+    "outputs/w6_local_router_scifate2_v1",
+    "--output",
+    "outputs/w6_local_router_scifate2_evaluation_v1",
+    "--wait",
+    "--device",
+    "cuda"
+  ],
+  "cwd": "/home/yuchang/wangjiaxuan",
+  "allowed_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "reserved_gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "started_utc": "2026-10-17T08:34:39.912186+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_frozen_horizons.py",
+    "--spec",
+    "outputs/w13_time_program_v1/ode_refinement_spec.json",
+    "--output",
+    "outputs/w13_time_program_v1/ode_refinement"
+  ],
+  "data_hashes": {
+    "outputs/w13_time_program_v1/ode_refinement_spec.json": "d76255cb92165f0178edf28845f219bb8a1fed4cc8516a4fa9c728b285bc7aa7",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/source_samples.json": "9ed86405aba7aca6d4dc1ee2a7d9474b6b4e5ba66a297c817f78fc97ea3826e6",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_pack_v1/source_pack.npz": "f83322cd68223bb859fce70ea0f31751ebbfec559aaf60236c1f1e4c47c5a599",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_frozen_horizons.py": "8de443b931565806ac491b4c38c6297a6f39235dcdb3345d94cba74a3b3364fa",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_time_model.py": "e8d667eb15ee80f94808c0170ef757e8d30ea0e9e95dd395acc0d9a6fe5e9de6",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_horizons.py": "b65a084649c80f7da5881c5f1e618ede29edf8e0ffceb244339c02930e87a0e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "931c5aa8971a8ace656def8d191a2313705056dd3b871afafd58e58c237bb89c",
+  "runtime_seconds": 6.330286804586649,
+  "status": "complete"
+}

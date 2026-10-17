@@ -1,0 +1,891 @@
+{
+  "git_commit": "fded18395eabe5d39a9580155cf3ba87a4435eac",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w9_large_training.py",
+    "prepare",
+    "--output",
+    "outputs/w9_scifate2_large_audited_v1",
+    "--audit-xml",
+    "outputs/w9_large_audit_v1/pytest.xml"
+  ],
+  "data_hashes": {
+    "configs/w9_scifate2_large_audited_v1.json": "c49b7395a3133dcfe300375a3f1ebf8a614f2a712df72a52b286da00863d23c3",
+    "outputs/w9_large_audit_v1/pytest.xml": "ba5f63f721bfe034dce846e2d5864ce634d259a506eb8aa716654450bb8a5d60",
+    "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/study_manifest.json": "728932083759dec32e40c8838aa7e4c4c68f8b0f92303160abcec08431248797",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/normalization.npz": "8083197f8b75f616a2eae262b6f28f16b7868aa9a3e319b09885c3e9c512744d",
+    "/home/yuchang/wangjiaxuan/PLANS/w9_large_model_mathematical_audit.md": "473a89d84c0a36008ee5d8ea4dfdff97042b83366075f83f9ede0b0ce4e713bf",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_large_training.py": "e6a202aba9814ad3ec2a69fc0f157cb3717ded33bc9a49703bf08d69b1dc5cb4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_population_router.py": "5e819854c7ca33da551d9b6da9f9e627ee1cd8407c9297c4f270abdbe5634cb2",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 0.0066864341497421265,
+  "status": "AUDITED_CAPACITY_DESIGN_READY",
+  "config": {
+    "kind": "audited_population_centered_capacity_comparison",
+    "reuse_study": "outputs/w7_scifate2_router_scaling_v1",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "workers": 4,
+    "arms": [
+      "static_router",
+      "velocity_router"
+    ],
+    "steps": 12000,
+    "checkpoint_steps": [
+      1000,
+      4000,
+      12000
+    ],
+    "source_batch": 64,
+    "target_batch": 64,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "residual_regularization": 0.001,
+    "routing_regularization": 0.002,
+    "baseline_width": 128,
+    "baseline_experts": 8,
+    "energy_block_size": 1024,
+    "saturation_relative_improvement": 0.002,
+    "saturation_consecutive_doublings": 2,
+    "models": [
+      {
+        "name": "small",
+        "architecture": "small",
+        "hidden": 128,
+        "expert_rank": 32,
+        "router_hidden": 64,
+        "residual_blocks": 0
+      },
+      {
+        "name": "large",
+        "architecture": "residual_large",
+        "hidden": 1216,
+        "expert_rank": 64,
+        "router_hidden": 256,
+        "residual_blocks": 6
+      }
+    ],
+    "gfg_jvp_enabled": false,
+    "trainable_mean_predictor": false,
+    "centering": "full_source_differentiable",
+    "training_loss": "independent_source_draw_U_statistic",
+    "r4_used_for_optimizer": false
+  },
+  "pack": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1",
+  "pack_manifest_sha256": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+  "jobs": [
+    {
+      "setting": "small_k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "arm": "static_router",
+      "seed": 0,
+      "config": {
+        "kind": "scifate2_mean_preserving_local_router",
+        "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+        "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "arms": [
+          "k1",
+          "static_router",
+          "velocity_router"
+        ],
+        "neighbors": 64,
+        "experts": 8,
+        "hidden": 128,
+        "expert_rank": 32,
+        "router_hidden": 64,
+        "maximum_state_correction": 2.0,
+        "calibration_hours": 24,
+        "steps": 12000,
+        "source_batch": 64,
+        "target_batch": 64,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "residual_regularization": 0.001,
+        "routing_regularization": 0.002,
+        "evaluation_source_cells": 512,
+        "evaluation_target_cells": 512,
+        "evaluation_seed": 20261017,
+        "preserve_global_mean": true,
+        "velocity_consumers": [
+          "router"
+        ],
+        "gfg_jvp_enabled": false,
+        "checkpoint_steps": [
+          1000,
+          4000,
+          12000
+        ],
+        "log_interval": 200,
+        "name": "small",
+        "architecture": "small",
+        "residual_blocks": 0
+      },
+      "cost": 914976000,
+      "expected_parameters": 76248,
+      "worker": 2
+    },
+    {
+      "setting": "small_k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "arm": "static_router",
+      "seed": 1,
+      "config": {
+        "kind": "scifate2_mean_preserving_local_router",
+        "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+        "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "arms": [
+          "k1",
+          "static_router",
+          "velocity_router"
+        ],
+        "neighbors": 64,
+        "experts": 8,
+        "hidden": 128,
+        "expert_rank": 32,
+        "router_hidden": 64,
+        "maximum_state_correction": 2.0,
+        "calibration_hours": 24,
+        "steps": 12000,
+        "source_batch": 64,
+        "target_batch": 64,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "residual_regularization": 0.001,
+        "routing_regularization": 0.002,
+        "evaluation_source_cells": 512,
+        "evaluation_target_cells": 512,
+        "evaluation_seed": 20261017,
+        "preserve_global_mean": true,
+        "velocity_consumers": [
+          "router"
+        ],
+        "gfg_jvp_enabled": false,
+        "checkpoint_steps": [
+          1000,
+          4000,
+          12000
+        ],
+        "log_interval": 200,
+        "name": "small",
+        "architecture": "small",
+        "residual_blocks": 0
+      },
+      "cost": 914976000,
+      "expected_parameters": 76248,
+      "worker": 3
+    },
+    {
+      "setting": "small_k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "arm": "static_router",
+      "seed": 2,
+      "config": {
+        "kind": "scifate2_mean_preserving_local_router",
+        "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+        "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "arms": [
+          "k1",
+          "static_router",
+          "velocity_router"
+        ],
+        "neighbors": 64,
+        "experts": 8,
+        "hidden": 128,
+        "expert_rank": 32,
+        "router_hidden": 64,
+        "maximum_state_correction": 2.0,
+        "calibration_hours": 24,
+        "steps": 12000,
+        "source_batch": 64,
+        "target_batch": 64,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "residual_regularization": 0.001,
+        "routing_regularization": 0.002,
+        "evaluation_source_cells": 512,
+        "evaluation_target_cells": 512,
+        "evaluation_seed": 20261017,
+        "preserve_global_mean": true,
+        "velocity_consumers": [
+          "router"
+        ],
+        "gfg_jvp_enabled": false,
+        "checkpoint_steps": [
+          1000,
+          4000,
+          12000
+        ],
+        "log_interval": 200,
+        "name": "small",
+        "architecture": "small",
+        "residual_blocks": 0
+      },
+      "cost": 914976000,
+      "expected_parameters": 76248,
+      "worker": 2
+    },
+    {
+      "setting": "small_k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "arm": "velocity_router",
+      "seed": 0,
+      "config": {
+        "kind": "scifate2_mean_preserving_local_router",
+        "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+        "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "arms": [
+          "k1",
+          "static_router",
+          "velocity_router"
+        ],
+        "neighbors": 64,
+        "experts": 8,
+        "hidden": 128,
+        "expert_rank": 32,
+        "router_hidden": 64,
+        "maximum_state_correction": 2.0,
+        "calibration_hours": 24,
+        "steps": 12000,
+        "source_batch": 64,
+        "target_batch": 64,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "residual_regularization": 0.001,
+        "routing_regularization": 0.002,
+        "evaluation_source_cells": 512,
+        "evaluation_target_cells": 512,
+        "evaluation_seed": 20261017,
+        "preserve_global_mean": true,
+        "velocity_consumers": [
+          "router"
+        ],
+        "gfg_jvp_enabled": false,
+        "checkpoint_steps": [
+          1000,
+          4000,
+          12000
+        ],
+        "log_interval": 200,
+        "name": "small",
+        "architecture": "small",
+        "residual_blocks": 0
+      },
+      "cost": 914976000,
+      "expected_parameters": 76248,
+      "worker": 3
+    },
+    {
+      "setting": "small_k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "arm": "velocity_router",
+      "seed": 1,
+      "config": {
+        "kind": "scifate2_mean_preserving_local_router",
+        "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+        "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "arms": [
+          "k1",
+          "static_router",
+          "velocity_router"
+        ],
+        "neighbors": 64,
+        "experts": 8,
+        "hidden": 128,
+        "expert_rank": 32,
+        "router_hidden": 64,
+        "maximum_state_correction": 2.0,
+        "calibration_hours": 24,
+        "steps": 12000,
+        "source_batch": 64,
+        "target_batch": 64,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "residual_regularization": 0.001,
+        "routing_regularization": 0.002,
+        "evaluation_source_cells": 512,
+        "evaluation_target_cells": 512,
+        "evaluation_seed": 20261017,
+        "preserve_global_mean": true,
+        "velocity_consumers": [
+          "router"
+        ],
+        "gfg_jvp_enabled": false,
+        "checkpoint_steps": [
+          1000,
+          4000,
+          12000
+        ],
+        "log_interval": 200,
+        "name": "small",
+        "architecture": "small",
+        "residual_blocks": 0
+      },
+      "cost": 914976000,
+      "expected_parameters": 76248,
+      "worker": 2
+    },
+    {
+      "setting": "small_k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "arm": "velocity_router",
+      "seed": 2,
+      "config": {
+        "kind": "scifate2_mean_preserving_local_router",
+        "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+        "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "arms": [
+          "k1",
+          "static_router",
+          "velocity_router"
+        ],
+        "neighbors": 64,
+        "experts": 8,
+        "hidden": 128,
+        "expert_rank": 32,
+        "router_hidden": 64,
+        "maximum_state_correction": 2.0,
+        "calibration_hours": 24,
+        "steps": 12000,
+        "source_batch": 64,
+        "target_batch": 64,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "residual_regularization": 0.001,
+        "routing_regularization": 0.002,
+        "evaluation_source_cells": 512,
+        "evaluation_target_cells": 512,
+        "evaluation_seed": 20261017,
+        "preserve_global_mean": true,
+        "velocity_consumers": [
+          "router"
+        ],
+        "gfg_jvp_enabled": false,
+        "checkpoint_steps": [
+          1000,
+          4000,
+          12000
+        ],
+        "log_interval": 200,
+        "name": "small",
+        "architecture": "small",
+        "residual_blocks": 0
+      },
+      "cost": 914976000,
+      "expected_parameters": 76248,
+      "worker": 3
+    },
+    {
+      "setting": "large_k8_w1216",
+      "experts": 8,
+      "hidden": 1216,
+      "arm": "static_router",
+      "seed": 0,
+      "config": {
+        "kind": "scifate2_mean_preserving_local_router",
+        "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+        "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "arms": [
+          "k1",
+          "static_router",
+          "velocity_router"
+        ],
+        "neighbors": 64,
+        "experts": 8,
+        "hidden": 1216,
+        "expert_rank": 64,
+        "router_hidden": 256,
+        "maximum_state_correction": 2.0,
+        "calibration_hours": 24,
+        "steps": 12000,
+        "source_batch": 64,
+        "target_batch": 64,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "residual_regularization": 0.001,
+        "routing_regularization": 0.002,
+        "evaluation_source_cells": 512,
+        "evaluation_target_cells": 512,
+        "evaluation_seed": 20261017,
+        "preserve_global_mean": true,
+        "velocity_consumers": [
+          "router"
+        ],
+        "gfg_jvp_enabled": false,
+        "checkpoint_steps": [
+          1000,
+          4000,
+          12000
+        ],
+        "log_interval": 200,
+        "name": "large",
+        "architecture": "residual_large",
+        "residual_blocks": 6
+      },
+      "cost": 222203424000,
+      "expected_parameters": 18516952,
+      "worker": 0
+    },
+    {
+      "setting": "large_k8_w1216",
+      "experts": 8,
+      "hidden": 1216,
+      "arm": "static_router",
+      "seed": 1,
+      "config": {
+        "kind": "scifate2_mean_preserving_local_router",
+        "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+        "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "arms": [
+          "k1",
+          "static_router",
+          "velocity_router"
+        ],
+        "neighbors": 64,
+        "experts": 8,
+        "hidden": 1216,
+        "expert_rank": 64,
+        "router_hidden": 256,
+        "maximum_state_correction": 2.0,
+        "calibration_hours": 24,
+        "steps": 12000,
+        "source_batch": 64,
+        "target_batch": 64,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "residual_regularization": 0.001,
+        "routing_regularization": 0.002,
+        "evaluation_source_cells": 512,
+        "evaluation_target_cells": 512,
+        "evaluation_seed": 20261017,
+        "preserve_global_mean": true,
+        "velocity_consumers": [
+          "router"
+        ],
+        "gfg_jvp_enabled": false,
+        "checkpoint_steps": [
+          1000,
+          4000,
+          12000
+        ],
+        "log_interval": 200,
+        "name": "large",
+        "architecture": "residual_large",
+        "residual_blocks": 6
+      },
+      "cost": 222203424000,
+      "expected_parameters": 18516952,
+      "worker": 1
+    },
+    {
+      "setting": "large_k8_w1216",
+      "experts": 8,
+      "hidden": 1216,
+      "arm": "static_router",
+      "seed": 2,
+      "config": {
+        "kind": "scifate2_mean_preserving_local_router",
+        "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+        "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "arms": [
+          "k1",
+          "static_router",
+          "velocity_router"
+        ],
+        "neighbors": 64,
+        "experts": 8,
+        "hidden": 1216,
+        "expert_rank": 64,
+        "router_hidden": 256,
+        "maximum_state_correction": 2.0,
+        "calibration_hours": 24,
+        "steps": 12000,
+        "source_batch": 64,
+        "target_batch": 64,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "residual_regularization": 0.001,
+        "routing_regularization": 0.002,
+        "evaluation_source_cells": 512,
+        "evaluation_target_cells": 512,
+        "evaluation_seed": 20261017,
+        "preserve_global_mean": true,
+        "velocity_consumers": [
+          "router"
+        ],
+        "gfg_jvp_enabled": false,
+        "checkpoint_steps": [
+          1000,
+          4000,
+          12000
+        ],
+        "log_interval": 200,
+        "name": "large",
+        "architecture": "residual_large",
+        "residual_blocks": 6
+      },
+      "cost": 222203424000,
+      "expected_parameters": 18516952,
+      "worker": 2
+    },
+    {
+      "setting": "large_k8_w1216",
+      "experts": 8,
+      "hidden": 1216,
+      "arm": "velocity_router",
+      "seed": 0,
+      "config": {
+        "kind": "scifate2_mean_preserving_local_router",
+        "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+        "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "arms": [
+          "k1",
+          "static_router",
+          "velocity_router"
+        ],
+        "neighbors": 64,
+        "experts": 8,
+        "hidden": 1216,
+        "expert_rank": 64,
+        "router_hidden": 256,
+        "maximum_state_correction": 2.0,
+        "calibration_hours": 24,
+        "steps": 12000,
+        "source_batch": 64,
+        "target_batch": 64,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "residual_regularization": 0.001,
+        "routing_regularization": 0.002,
+        "evaluation_source_cells": 512,
+        "evaluation_target_cells": 512,
+        "evaluation_seed": 20261017,
+        "preserve_global_mean": true,
+        "velocity_consumers": [
+          "router"
+        ],
+        "gfg_jvp_enabled": false,
+        "checkpoint_steps": [
+          1000,
+          4000,
+          12000
+        ],
+        "log_interval": 200,
+        "name": "large",
+        "architecture": "residual_large",
+        "residual_blocks": 6
+      },
+      "cost": 222203424000,
+      "expected_parameters": 18516952,
+      "worker": 3
+    },
+    {
+      "setting": "large_k8_w1216",
+      "experts": 8,
+      "hidden": 1216,
+      "arm": "velocity_router",
+      "seed": 1,
+      "config": {
+        "kind": "scifate2_mean_preserving_local_router",
+        "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+        "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "arms": [
+          "k1",
+          "static_router",
+          "velocity_router"
+        ],
+        "neighbors": 64,
+        "experts": 8,
+        "hidden": 1216,
+        "expert_rank": 64,
+        "router_hidden": 256,
+        "maximum_state_correction": 2.0,
+        "calibration_hours": 24,
+        "steps": 12000,
+        "source_batch": 64,
+        "target_batch": 64,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "residual_regularization": 0.001,
+        "routing_regularization": 0.002,
+        "evaluation_source_cells": 512,
+        "evaluation_target_cells": 512,
+        "evaluation_seed": 20261017,
+        "preserve_global_mean": true,
+        "velocity_consumers": [
+          "router"
+        ],
+        "gfg_jvp_enabled": false,
+        "checkpoint_steps": [
+          1000,
+          4000,
+          12000
+        ],
+        "log_interval": 200,
+        "name": "large",
+        "architecture": "residual_large",
+        "residual_blocks": 6
+      },
+      "cost": 222203424000,
+      "expected_parameters": 18516952,
+      "worker": 0
+    },
+    {
+      "setting": "large_k8_w1216",
+      "experts": 8,
+      "hidden": 1216,
+      "arm": "velocity_router",
+      "seed": 2,
+      "config": {
+        "kind": "scifate2_mean_preserving_local_router",
+        "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+        "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "arms": [
+          "k1",
+          "static_router",
+          "velocity_router"
+        ],
+        "neighbors": 64,
+        "experts": 8,
+        "hidden": 1216,
+        "expert_rank": 64,
+        "router_hidden": 256,
+        "maximum_state_correction": 2.0,
+        "calibration_hours": 24,
+        "steps": 12000,
+        "source_batch": 64,
+        "target_batch": 64,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "residual_regularization": 0.001,
+        "routing_regularization": 0.002,
+        "evaluation_source_cells": 512,
+        "evaluation_target_cells": 512,
+        "evaluation_seed": 20261017,
+        "preserve_global_mean": true,
+        "velocity_consumers": [
+          "router"
+        ],
+        "gfg_jvp_enabled": false,
+        "checkpoint_steps": [
+          1000,
+          4000,
+          12000
+        ],
+        "log_interval": 200,
+        "name": "large",
+        "architecture": "residual_large",
+        "residual_blocks": 6
+      },
+      "cost": 222203424000,
+      "expected_parameters": 18516952,
+      "worker": 1
+    }
+  ],
+  "cases": [
+    {
+      "setting": "small_k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "arm": "static_router",
+      "step": 1000,
+      "worker": 0
+    },
+    {
+      "setting": "small_k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "arm": "static_router",
+      "step": 4000,
+      "worker": 1
+    },
+    {
+      "setting": "small_k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "arm": "static_router",
+      "step": 12000,
+      "worker": 2
+    },
+    {
+      "setting": "small_k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "arm": "velocity_router",
+      "step": 1000,
+      "worker": 3
+    },
+    {
+      "setting": "small_k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "arm": "velocity_router",
+      "step": 4000,
+      "worker": 0
+    },
+    {
+      "setting": "small_k8_w128",
+      "experts": 8,
+      "hidden": 128,
+      "arm": "velocity_router",
+      "step": 12000,
+      "worker": 1
+    },
+    {
+      "setting": "large_k8_w1216",
+      "experts": 8,
+      "hidden": 1216,
+      "arm": "static_router",
+      "step": 1000,
+      "worker": 2
+    },
+    {
+      "setting": "large_k8_w1216",
+      "experts": 8,
+      "hidden": 1216,
+      "arm": "static_router",
+      "step": 4000,
+      "worker": 3
+    },
+    {
+      "setting": "large_k8_w1216",
+      "experts": 8,
+      "hidden": 1216,
+      "arm": "static_router",
+      "step": 12000,
+      "worker": 0
+    },
+    {
+      "setting": "large_k8_w1216",
+      "experts": 8,
+      "hidden": 1216,
+      "arm": "velocity_router",
+      "step": 1000,
+      "worker": 1
+    },
+    {
+      "setting": "large_k8_w1216",
+      "experts": 8,
+      "hidden": 1216,
+      "arm": "velocity_router",
+      "step": 4000,
+      "worker": 2
+    },
+    {
+      "setting": "large_k8_w1216",
+      "experts": 8,
+      "hidden": 1216,
+      "arm": "velocity_router",
+      "step": 12000,
+      "worker": 3
+    }
+  ],
+  "evaluation_caches": [
+    {
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_5_to_10.npz",
+      "sha256": "f43696a55804bd29a5ed1f590eea659d45b4c018074e786d77ce15645c38aef9"
+    },
+    {
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_10_to_15.npz",
+      "sha256": "e0fd4afcd47511ff298d5341058c228ae3f671c45e79397ceffcf99dc92796c8"
+    },
+    {
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_15_to_20.npz",
+      "sha256": "ec57738ec3828e82197b4cba9b135eb0e8e7cdf75369f476f30ca76882f40504"
+    }
+  ],
+  "parameter_counts": {
+    "small_k8_w128": 76248,
+    "large_k8_w1216": 18516952
+  },
+  "audit_xml_sha256": "ba5f63f721bfe034dce846e2d5864ce634d259a506eb8aa716654450bb8a5d60",
+  "r4_used_for_optimizer": false,
+  "population_centering": "full_source_differentiable",
+  "training_energy": "source_draw_U_statistic",
+  "scope": "same_series_development"
+}

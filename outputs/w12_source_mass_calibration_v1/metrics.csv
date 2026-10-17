@@ -1,0 +1,10 @@
+teacher_arm,variant,energy_distance
+static_router,S_student,0.6213824126988486
+static_router,S_student_kinetic_mass_calibrated,0.6213720675688906
+static_router,teacher_cohort_average,0.6171715956149745
+velocity_router,S_student,0.6202909086555403
+velocity_router,S_student_kinetic_mass_calibrated,0.6067869162879477
+velocity_router,teacher_cohort_average,0.6041499922970074
+shuffled_velocity_router,S_student,0.6183721720776086
+shuffled_velocity_router,S_student_kinetic_mass_calibrated,0.6257288497962877
+shuffled_velocity_router,teacher_cohort_average,0.6206540711564005

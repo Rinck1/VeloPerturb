@@ -1,0 +1,35 @@
+{
+  "status": "ADVANTAGE_EXPANDED",
+  "initial_selection": {
+    "setting": "b0_w8_exact",
+    "step": 12000,
+    "real_energy": 0.603696253341837,
+    "static_energy": 0.622640398870244,
+    "shuffled_energy": 0.6235275262722387,
+    "gain_vs_static": 0.03042550011656886,
+    "gain_vs_shuffled": 0.0318049678559712
+  },
+  "improved_checkpoints": [
+    {
+      "setting": "b0_w8_exact",
+      "step": 24000,
+      "real_energy": 0.5991594495453807,
+      "static_energy": 0.6217747537997672,
+      "shuffled_energy": 0.6219561797832635,
+      "gain_vs_static": 0.036372181591775354,
+      "gain_vs_shuffled": 0.0366532739425901
+    },
+    {
+      "setting": "b0_w8_exact",
+      "step": 36000,
+      "real_energy": 0.5981194481007677,
+      "static_energy": 0.620541240363376,
+      "shuffled_energy": 0.6228279209928894,
+      "gain_vs_static": 0.036132638419774654,
+      "gain_vs_shuffled": 0.039671427788164015
+    }
+  ],
+  "continuation": "outputs/w10_scifate2_recipe_bridge_v1_continuation",
+  "report": "outputs/w10_scifate2_recipe_bridge_v1_continuation/report/RESULTS.md",
+  "all_checkpoints_reported": true
+}

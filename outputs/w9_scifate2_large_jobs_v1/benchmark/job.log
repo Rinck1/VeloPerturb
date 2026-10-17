@@ -1,0 +1,1 @@
+{"status": "AUDITED_GPU_BENCHMARK_COMPLETE", "parameters": 18516952, "seconds_per_step": 0.020277144759893416, "estimated_12000_step_training_seconds": 243.32573711872098, "maximum_training_source_cells": 4549, "peak_allocated_bytes": 1135161856, "gradient_finite": true, "mean_anchor_max_error": 2.0664047042373568e-06, "fitted_model_discarded": true}

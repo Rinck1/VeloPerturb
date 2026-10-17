@@ -1,0 +1,26 @@
+{
+  "physical_gpu": null,
+  "gpu_uuid": null,
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv-gpu/bin/python",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_large_training.py",
+    "aggregate",
+    "--root",
+    "outputs/w9_scifate2_large_audited_v1",
+    "--wait"
+  ],
+  "cwd": "/home/yuchang/wangjiaxuan",
+  "allowed_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "reserved_gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "started_utc": "2026-10-17T09:09:52.525449+00:00"
+}

@@ -1,0 +1,85 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w12_cohort_calibration.py",
+    "--root",
+    "outputs/w12_scifate2_privileged_router_v1",
+    "--output",
+    "outputs/w12_source_mass_calibration_v1"
+  ],
+  "data_hashes": {
+    "outputs/w12_scifate2_privileged_router_v1/study_manifest.json": "7f3c5ac616470ef7f6e0a6fd4451a662b169bf613c373f262f3856cbb2914823",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/normalization.npz": "8083197f8b75f616a2eae262b6f28f16b7868aa9a3e319b09885c3e9c512744d",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w12_cohort_calibration.py": "cda5535a7669efa8302a1b13338d8883a75db135f02042d3b5aaf3c419e49bb2",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/static_router/seed0/model_step4000.pt": "6c18d03c32c9c7caae0bf52cf67e8533584dee59a5cc95227635004b3573568e",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/static_router/seed1/model_step4000.pt": "3ce34eb0fded2726055d98ac2c5a50bbb376ce52e3ed88a918730afba8290518",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/static_router/seed2/model_step4000.pt": "b78bad1e68b8a1b16be8138c229945fb59d786aadd2a96b2cbb26c2a2ea500a4",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/velocity_router/seed0/model_step4000.pt": "3e9509bc2fb835ba1a755514c9710fcad7206ceb53261a33c99b150e94b02d54",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/velocity_router/seed1/model_step4000.pt": "cd2b6cfef84fe0e1bad71c5970c6b4fa94c7d276800a3dd5958de478f7f702b3",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/velocity_router/seed2/model_step4000.pt": "f01d75cc717cc7f28b15f6551d3f5dd7c4efd51c15979490c5c22170e65f4390",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/shuffled_velocity_router/seed0/model_step4000.pt": "528362d35bccace2f4373fa1e1987a30c6b8dbda903be982899ce6d903420744",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/shuffled_velocity_router/seed1/model_step4000.pt": "a61060d1f6c781d1f9350954aa0759c8c4be6e3635c56871a8082073d6f2e84d",
+    "outputs/w12_scifate2_privileged_router_v1/training/privileged_S_student/shuffled_velocity_router/seed2/model_step4000.pt": "c69eb9b29714aa814c8c4f3dd8fd6dfe7fa51dff78cc14fb67f1ad1d6fb40786"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "9a72408fb79c9165e689862e779839a0eae3ddc2e5413b7e2fb6088be2d08575",
+  "runtime_seconds": 7.000146683305502,
+  "status": "SOURCE_MASS_CALIBRATION_COMPLETE",
+  "metrics": [
+    {
+      "teacher_arm": "static_router",
+      "variant": "S_student",
+      "energy_distance": 0.6213824126988486
+    },
+    {
+      "teacher_arm": "static_router",
+      "variant": "S_student_kinetic_mass_calibrated",
+      "energy_distance": 0.6213720675688906
+    },
+    {
+      "teacher_arm": "static_router",
+      "variant": "teacher_cohort_average",
+      "energy_distance": 0.6171715956149745
+    },
+    {
+      "teacher_arm": "velocity_router",
+      "variant": "S_student",
+      "energy_distance": 0.6202909086555403
+    },
+    {
+      "teacher_arm": "velocity_router",
+      "variant": "S_student_kinetic_mass_calibrated",
+      "energy_distance": 0.6067869162879477
+    },
+    {
+      "teacher_arm": "velocity_router",
+      "variant": "teacher_cohort_average",
+      "energy_distance": 0.6041499922970074
+    },
+    {
+      "teacher_arm": "shuffled_velocity_router",
+      "variant": "S_student",
+      "energy_distance": 0.6183721720776086
+    },
+    {
+      "teacher_arm": "shuffled_velocity_router",
+      "variant": "S_student_kinetic_mass_calibrated",
+      "energy_distance": 0.6257288497962877
+    },
+    {
+      "teacher_arm": "shuffled_velocity_router",
+      "variant": "teacher_cohort_average",
+      "energy_distance": 0.6206540711564005
+    }
+  ],
+  "scope": "same_series_development",
+  "target_read_for_calibration": false,
+  "learned_parameters_added": 0,
+  "qualification": "Teacher kinetic router is still needed to infer cohort masses; not U-free deployment"
+}

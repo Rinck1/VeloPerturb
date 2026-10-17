@@ -1,0 +1,60 @@
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "static_router", "start": 5, "stop": 10}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "static_router", "start": 10, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "static_router", "start": 15, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "static_router", "start": 5, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "static_router", "start": 10, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "static_router", "start": 5, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "velocity_router", "start": 5, "stop": 10}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "velocity_router", "start": 10, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "velocity_router", "start": 15, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "velocity_router", "start": 5, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "velocity_router", "start": 10, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "velocity_router", "start": 5, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "shuffled_velocity_router", "start": 5, "stop": 10}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "shuffled_velocity_router", "start": 10, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "shuffled_velocity_router", "start": 15, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "shuffled_velocity_router", "start": 5, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "shuffled_velocity_router", "start": 10, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "b1_endpoint36k", "arm": "shuffled_velocity_router", "start": 5, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "static_router", "start": 5, "stop": 10}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "static_router", "start": 10, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "static_router", "start": 15, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "static_router", "start": 5, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "static_router", "start": 10, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "static_router", "start": 5, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "velocity_router", "start": 5, "stop": 10}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "velocity_router", "start": 10, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "velocity_router", "start": 15, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "velocity_router", "start": 5, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "velocity_router", "start": 10, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "velocity_router", "start": 5, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "shuffled_velocity_router", "start": 5, "stop": 10}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "shuffled_velocity_router", "start": 10, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "shuffled_velocity_router", "start": 15, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "shuffled_velocity_router", "start": 5, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "shuffled_velocity_router", "start": 10, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "endpoint_time_40k", "arm": "shuffled_velocity_router", "start": 5, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "static_router", "start": 5, "stop": 10}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "static_router", "start": 10, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "static_router", "start": 15, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "static_router", "start": 5, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "static_router", "start": 10, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "static_router", "start": 5, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "velocity_router", "start": 5, "stop": 10}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "velocity_router", "start": 10, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "velocity_router", "start": 15, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "velocity_router", "start": 5, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "velocity_router", "start": 10, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "velocity_router", "start": 5, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "shuffled_velocity_router", "start": 5, "stop": 10}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "shuffled_velocity_router", "start": 10, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "shuffled_velocity_router", "start": 15, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "shuffled_velocity_router", "start": 5, "stop": 15}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "shuffled_velocity_router", "start": 10, "stop": 20}
+{"status": "TIME_PREDICTIONS_FROZEN", "model": "ode_40k", "arm": "shuffled_velocity_router", "start": 5, "stop": 20}
+{"status": "TIME_WINDOW_EVALUATED", "start": 5, "stop": 10}
+{"status": "TIME_WINDOW_EVALUATED", "start": 10, "stop": 15}
+{"status": "TIME_WINDOW_EVALUATED", "start": 15, "stop": 20}
+{"status": "TIME_WINDOW_EVALUATED", "start": 5, "stop": 15}
+{"status": "TIME_WINDOW_EVALUATED", "start": 10, "stop": 20}
+{"status": "TIME_WINDOW_EVALUATED", "start": 5, "stop": 20}

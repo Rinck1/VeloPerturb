@@ -1,0 +1,27 @@
+{
+  "physical_gpu": 2,
+  "gpu_uuid": "GPU-b4179f9f-ece1-d433-a1da-b41325c25223",
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv-gpu/bin/python",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w12_privileged_router.py",
+    "worker",
+    "--root",
+    "outputs/w12_scifate2_privileged_router_v1",
+    "--worker",
+    "1"
+  ],
+  "cwd": "/home/yuchang/wangjiaxuan",
+  "allowed_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "reserved_gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "started_utc": "2026-10-17T10:10:20.671778+00:00"
+}

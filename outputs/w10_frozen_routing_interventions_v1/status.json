@@ -1,0 +1,31 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w10_route_interventions.py",
+    "--root",
+    "outputs/w10_scifate2_recipe_bridge_v1",
+    "--output",
+    "outputs/w10_frozen_routing_interventions_v1"
+  ],
+  "data_hashes": {
+    "outputs/w10_scifate2_recipe_bridge_v1/study_manifest.json": "d732496645ea09e72a22681130dfa551297d56ad1b7ef78ab180c5f269aa74c4",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/normalization.npz": "8083197f8b75f616a2eae262b6f28f16b7868aa9a3e319b09885c3e9c512744d",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_route_interventions.py": "9765a98aa1c3ac68a586bd65ea2ded84f2e501bbfac06c0ab3cdd17b673719f5",
+    "outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/velocity_router/seed0/model_step12000.pt": "0f1499c246c1d55ba36a2c2cb988e4b43a2ffaaf667ae65b6bff2d2eebd6237a",
+    "outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/velocity_router/seed1/model_step12000.pt": "eeb27fa9fe8c02fc031121117e7125f48eb7674e96b3046fec20000cc01a5f44",
+    "outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/velocity_router/seed2/model_step12000.pt": "ce64e336739a404143eaf8878360a221a1a9a342f54449582b51a77e2659c3d3",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_05_to_10.npz": "c7cae378339b82d36c8d902d05966b9b7ba6fc137b82c770d7883db31472bf00",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_10_to_15.npz": "e7dffc30fea0f76d533de602311d61de9b4b12100650dd76dfb1139858dd587c",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_15_to_20.npz": "69adff506492b80274f7f38605ea3da404c609c63e014abe1f93143a61b7fecc"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "9a72408fb79c9165e689862e779839a0eae3ddc2e5413b7e2fb6088be2d08575",
+  "runtime_seconds": 3.585558243095875,
+  "status": "complete"
+}

@@ -1,0 +1,3 @@
+# Experiment records and frozen code snapshots are byte-exact provenance.
+# Preserve original CSV line endings and historical snapshot formatting.
+outputs/** -text -whitespace

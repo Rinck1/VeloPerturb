@@ -1,0 +1,219 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_frozen_horizons.py",
+    "--spec",
+    "outputs/w13_time_program_v1/ode_refinement_spec.json",
+    "--output",
+    "outputs/w13_time_program_v1/ode_refinement"
+  ],
+  "data_hashes": {
+    "outputs/w13_time_program_v1/ode_refinement_spec.json": "d76255cb92165f0178edf28845f219bb8a1fed4cc8516a4fa9c728b285bc7aa7",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/source_samples.json": "9ed86405aba7aca6d4dc1ee2a7d9474b6b4e5ba66a297c817f78fc97ea3826e6",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_pack_v1/source_pack.npz": "f83322cd68223bb859fce70ea0f31751ebbfec559aaf60236c1f1e4c47c5a599",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_frozen_horizons.py": "8de443b931565806ac491b4c38c6297a6f39235dcdb3345d94cba74a3b3364fa",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_time_model.py": "e8d667eb15ee80f94808c0170ef757e8d30ea0e9e95dd395acc0d9a6fe5e9de6",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_horizons.py": "b65a084649c80f7da5881c5f1e618ede29edf8e0ffceb244339c02930e87a0e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "931c5aa8971a8ace656def8d191a2313705056dd3b871afafd58e58c237bb89c",
+  "runtime_seconds": 6.32993895187974,
+  "status": "FROZEN_TIME_HORIZONS_COMPLETE",
+  "horizon_summary": [
+    {
+      "model": "ode_40k_step3h",
+      "horizon_hours": 5,
+      "windows": 3,
+      "real_energy": 0.58950417173402,
+      "static_energy": 0.6122970946784333,
+      "shuffled_energy": 0.6180581157465573,
+      "gain_vs_static": 0.037225267182402155,
+      "gain_vs_shuffled": 0.04619944837719148
+    },
+    {
+      "model": "ode_40k_step3h",
+      "horizon_hours": 10,
+      "windows": 2,
+      "real_energy": 1.0270316598504134,
+      "static_energy": 1.096768359627589,
+      "shuffled_energy": 1.1093255659135615,
+      "gain_vs_static": 0.06358379977414275,
+      "gain_vs_shuffled": 0.07418372801619932
+    },
+    {
+      "model": "ode_40k_step3h",
+      "horizon_hours": 15,
+      "windows": 1,
+      "real_energy": 1.0078334305557366,
+      "static_energy": 1.0327724035248433,
+      "shuffled_energy": 1.0239387541549334,
+      "gain_vs_static": 0.024147598138747894,
+      "gain_vs_shuffled": 0.015728795822840702
+    }
+  ],
+  "windows_by_horizon": {
+    "5": 3,
+    "10": 2,
+    "15": 1
+  },
+  "scope": "same_series_development",
+  "individual_fates": false,
+  "independent_series": false,
+  "solver_convergence": [
+    {
+      "model": "ode_40k_step3h",
+      "arm": "static_router",
+      "seed": 0,
+      "coarse_step_hours": 3.0,
+      "fine_step_hours": 1.5,
+      "endpoint_weighted_rms_difference": 0.0058247302658855915,
+      "relative_to_movement": 0.0037627094829962827
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "static_router",
+      "seed": 1,
+      "coarse_step_hours": 3.0,
+      "fine_step_hours": 1.5,
+      "endpoint_weighted_rms_difference": 0.006671019364148378,
+      "relative_to_movement": 0.004273450928377962
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "static_router",
+      "seed": 2,
+      "coarse_step_hours": 3.0,
+      "fine_step_hours": 1.5,
+      "endpoint_weighted_rms_difference": 0.0026672573294490576,
+      "relative_to_movement": 0.0017466059717238067
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "velocity_router",
+      "seed": 0,
+      "coarse_step_hours": 3.0,
+      "fine_step_hours": 1.5,
+      "endpoint_weighted_rms_difference": 0.003158407984301448,
+      "relative_to_movement": 0.002006362323380775
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "velocity_router",
+      "seed": 1,
+      "coarse_step_hours": 3.0,
+      "fine_step_hours": 1.5,
+      "endpoint_weighted_rms_difference": 0.00248551438562572,
+      "relative_to_movement": 0.0016263473706475038
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "velocity_router",
+      "seed": 2,
+      "coarse_step_hours": 3.0,
+      "fine_step_hours": 1.5,
+      "endpoint_weighted_rms_difference": 0.0014452276518568397,
+      "relative_to_movement": 0.0009432993436665389
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "shuffled_velocity_router",
+      "seed": 0,
+      "coarse_step_hours": 3.0,
+      "fine_step_hours": 1.5,
+      "endpoint_weighted_rms_difference": 0.005796127486974001,
+      "relative_to_movement": 0.004122375944813858
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "shuffled_velocity_router",
+      "seed": 1,
+      "coarse_step_hours": 3.0,
+      "fine_step_hours": 1.5,
+      "endpoint_weighted_rms_difference": 0.0046552312560379505,
+      "relative_to_movement": 0.003243653336399712
+    },
+    {
+      "model": "ode_40k_step3h",
+      "arm": "shuffled_velocity_router",
+      "seed": 2,
+      "coarse_step_hours": 3.0,
+      "fine_step_hours": 1.5,
+      "endpoint_weighted_rms_difference": 0.0032989834435284138,
+      "relative_to_movement": 0.002137174464927913
+    }
+  ],
+  "models": [
+    {
+      "name": "ode_40k_step3h",
+      "kind": "ode",
+      "checkpoints": [
+        {
+          "arm": "velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/velocity_router/seed0/model_step4000.pt",
+          "sha256": "308b30d10636f87b199abc061a18136836b808f06bcad9183ac5afb288496f52"
+        },
+        {
+          "arm": "static_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/static_router/seed0/model_step4000.pt",
+          "sha256": "d90e05252bf3e93202041fdb81ee580a980054aa5208583c8664d44faa2503b8"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 0,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/shuffled_velocity_router/seed0/model_step4000.pt",
+          "sha256": "2dbe2d62a1d7b29c49b4a20afdd3cb0e372d01c930aa08dc081f71c218d695e8"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/velocity_router/seed1/model_step4000.pt",
+          "sha256": "e6bbcd19b50f430eb29801b5fdfb5c9c961438233fe3061e2e19bf064f6b2f15"
+        },
+        {
+          "arm": "static_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/static_router/seed1/model_step4000.pt",
+          "sha256": "2fc3b43c33900dc772e4b6e6935732a412732517946742cea94c3ac188ca8909"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 1,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/shuffled_velocity_router/seed1/model_step4000.pt",
+          "sha256": "548c8a9eba9ae90be3c4976bee46c5c3cfeabaca3f1139e2942d71b5c9919d0f"
+        },
+        {
+          "arm": "velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/velocity_router/seed2/model_step4000.pt",
+          "sha256": "58101ac833967d29c672363aae06eb950bfaba1dedb328cd1aeed4f163bf6c44"
+        },
+        {
+          "arm": "static_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/static_router/seed2/model_step4000.pt",
+          "sha256": "4c13e2bcd0442eb795d33655c5c4e02bc84acd6de98e15c4703e916004b4a536"
+        },
+        {
+          "arm": "shuffled_velocity_router",
+          "seed": 2,
+          "path": "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/time_training/training/ode/shuffled_velocity_router/seed2/model_step4000.pt",
+          "sha256": "d6818ec61b7e93d170f88796d6fdef648ac5ae3ed57b7a75838c6a06bcf87692"
+        }
+      ],
+      "rk4_step_hours": 3.0
+    }
+  ]
+}

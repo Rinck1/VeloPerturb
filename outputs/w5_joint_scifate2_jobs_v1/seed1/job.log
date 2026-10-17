@@ -1,0 +1,3 @@
+{"status": "ARM_TRAINED", "arm": "static_task", "seed": 1, "head_task_gradient": 0.0}
+{"status": "ARM_TRAINED", "arm": "analytic_task", "seed": 1, "head_task_gradient": 0.0}
+{"status": "ARM_TRAINED", "arm": "velocity_joint", "seed": 1, "head_task_gradient": 2.9438013370963745e-05}

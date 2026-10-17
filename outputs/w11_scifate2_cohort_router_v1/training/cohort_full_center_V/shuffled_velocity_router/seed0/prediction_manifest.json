@@ -1,0 +1,191 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w11_cohort_router.py",
+    "worker",
+    "--root",
+    "outputs/w11_scifate2_cohort_router_v1",
+    "--worker",
+    "0"
+  ],
+  "data_hashes": {
+    "outputs/w11_scifate2_cohort_router_v1/study_manifest.json": "fb3b1654846eac7bee15e5e0e494e863e52df728950283032bbc70e78c1f6f82",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/normalization.npz": "8083197f8b75f616a2eae262b6f28f16b7868aa9a3e319b09885c3e9c512744d",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D3.npz": "0a85b2c2932a991ddd87a0696a1d8d2771541f51decde8a26b71a30d7e3ac9da",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D4.npz": "8a05788ca727bf8160d47847b207bfbbd9d745cafe7d1696df7fcb89164fae3b",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D5.npz": "952a6720cf8c0ad142b0f92f926fd0517ee09b7cc7e76e868a3e69781be94396",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D6.npz": "24179d44fa5d25b043585497e9c2dd299463ba98790444519d7411c68ef7aba2",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D7.npz": "da85685a1fd3eeaf0d33610b51144977a5051e709a9950ed32f10c4c3e389c5a",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D3.npz": "a1cd44bb84b778942a0354a65f6cf7ab4b6bae63ca9eee9c2e0830c049f8e2a8",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D4.npz": "05c8bba98e65ea8913d7598d556b7daa9a3ab826d11aad0a977b1bc568356486",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D5.npz": "e4fac0eaf1b45b77c297805c5343af74860812fb6fa55752d99036bf58c5a235",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D6.npz": "026b8c17fcff827c5329f33e3aaa9468bbf1f7f339d54bcd08c0cfa631a7171b",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D7.npz": "758038d8dc646dcc5eb74d5e75fcfac43408d43771df543cacee546ca0fba1c7",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D3.npz": "249311856ffc90cf1172d0efa58c5bb7fb4c0f63d52560eccf1329a0aab96a89",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D4.npz": "7c12b2b37ec461b54c7d239cb0eeab8a2b14aae97cefbdbdc87d173d6eef452e",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D5.npz": "2c95c134e9d54cf720b1e915eca55a3c9c87af00fa9be1e1456b3a006570e9a8",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D6.npz": "53e37599a248a92a943941a108f870d37d7ff9bf191efaf1d56a2cc34f886553",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D7.npz": "4d85a1b0f909bbfab2f989ecc50a5ea4d1effd4fa92261ad3ee27fda86c00a68",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_05_to_10.npz": "c7cae378339b82d36c8d902d05966b9b7ba6fc137b82c770d7883db31472bf00",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_10_to_15.npz": "e7dffc30fea0f76d533de602311d61de9b4b12100650dd76dfb1139858dd587c",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_15_to_20.npz": "69adff506492b80274f7f38605ea3da404c609c63e014abe1f93143a61b7fecc",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w11_cohort_router.py": "b4f7a21e5ccffa6f0dec658c0b91d40cae0d146cc8c1964856a69644fcfeed61",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_bridge.py": "e2e8fc4c311422e9a2cac012a5bf210edbbefca2187e882b26942d08ce5b737b",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_population_router.py": "5e819854c7ca33da551d9b6da9f9e627ee1cd8407c9297c4f270abdbe5634cb2",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_large_training.py": "e6a202aba9814ad3ec2a69fc0f157cb3717ded33bc9a49703bf08d69b1dc5cb4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "9a72408fb79c9165e689862e779839a0eae3ddc2e5413b7e2fb6088be2d08575",
+  "runtime_seconds": 82.72856393828988,
+  "status": "COHORT_PREDICTIONS_READY",
+  "job": {
+    "setting": "cohort_full_center_V",
+    "experts": 8,
+    "hidden": 128,
+    "arm": "shuffled_velocity_router",
+    "seed": 0,
+    "worker": 0,
+    "config": {
+      "kind": "scifate2_mean_preserving_local_router",
+      "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+      "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "arms": [
+        "k1",
+        "static_router",
+        "velocity_router"
+      ],
+      "neighbors": 64,
+      "experts": 8,
+      "hidden": 128,
+      "expert_rank": 32,
+      "router_hidden": 64,
+      "maximum_state_correction": 2.0,
+      "calibration_hours": 24,
+      "steps": 12000,
+      "source_batch": 64,
+      "target_batch": 64,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001,
+      "residual_regularization": 0.001,
+      "routing_regularization": 0.0,
+      "evaluation_source_cells": 512,
+      "evaluation_target_cells": 512,
+      "evaluation_seed": 20261017,
+      "preserve_global_mean": true,
+      "velocity_consumers": [
+        "router"
+      ],
+      "gfg_jvp_enabled": false,
+      "checkpoint_steps": [
+        1000,
+        4000,
+        12000
+      ],
+      "log_interval": 300,
+      "shuffle_seed_offset": 100000,
+      "centering": "full_source",
+      "estimator": "V",
+      "distance_kernel": "direct",
+      "regularization_scope": "batch",
+      "routing_scope": "cohort"
+    },
+    "expected_parameters": 76248
+  },
+  "artifacts": [
+    {
+      "step": 1000,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w11_scifate2_cohort_router_v1/training/cohort_full_center_V/shuffled_velocity_router/seed0/step1000_5_to_10.npz",
+      "sha256": "88567bd2dad8ebe4bc85cd042ff0b77d4d0a01a6adc195e6295c9dc4d61baca7"
+    },
+    {
+      "step": 1000,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w11_scifate2_cohort_router_v1/training/cohort_full_center_V/shuffled_velocity_router/seed0/step1000_10_to_15.npz",
+      "sha256": "65445d6d6e6b76197920f39722179f100ea4adc9fc7b1d38197fbe7769305112"
+    },
+    {
+      "step": 1000,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w11_scifate2_cohort_router_v1/training/cohort_full_center_V/shuffled_velocity_router/seed0/step1000_15_to_20.npz",
+      "sha256": "14096ca7977fbe15508a85ff1e3a48adc9f7e0ca26db931c51d0ec5fb8657660"
+    },
+    {
+      "step": 4000,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w11_scifate2_cohort_router_v1/training/cohort_full_center_V/shuffled_velocity_router/seed0/step4000_5_to_10.npz",
+      "sha256": "d45badbbf71daa9ff18f15bc12cf28e89929b9f8065311f1e78574faa6812aa4"
+    },
+    {
+      "step": 4000,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w11_scifate2_cohort_router_v1/training/cohort_full_center_V/shuffled_velocity_router/seed0/step4000_10_to_15.npz",
+      "sha256": "c9e621bb810659b919e8486eb812ecd104de1ee4e195c611b1d8a5b06ca05384"
+    },
+    {
+      "step": 4000,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w11_scifate2_cohort_router_v1/training/cohort_full_center_V/shuffled_velocity_router/seed0/step4000_15_to_20.npz",
+      "sha256": "28820f5760a53f037a374e43f675f8c56338606a8f8eaee697a5a4a3c7c8acc1"
+    },
+    {
+      "step": 12000,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w11_scifate2_cohort_router_v1/training/cohort_full_center_V/shuffled_velocity_router/seed0/step12000_5_to_10.npz",
+      "sha256": "1d4777ba7060a382b2081ca8b5454c06773dffc642b2e01b18e55394de19151c"
+    },
+    {
+      "step": 12000,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w11_scifate2_cohort_router_v1/training/cohort_full_center_V/shuffled_velocity_router/seed0/step12000_10_to_15.npz",
+      "sha256": "bb3855fd56e7cb1309df435a42ad271c55a6b1e27c8df77725c41b734673ec3d"
+    },
+    {
+      "step": 12000,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w11_scifate2_cohort_router_v1/training/cohort_full_center_V/shuffled_velocity_router/seed0/step12000_15_to_20.npz",
+      "sha256": "ff322d97181457c9ae30c999ef6634928b6d138b4649b4ad6f7150735602993f"
+    }
+  ],
+  "parameters": 76248,
+  "checkpoint_timing": [
+    {
+      "step": 1000,
+      "training_seconds": 6.76947807520628,
+      "peak_allocated_bytes": 213719040
+    },
+    {
+      "step": 4000,
+      "training_seconds": 26.764254171401262,
+      "peak_allocated_bytes": 213719040
+    },
+    {
+      "step": 12000,
+      "training_seconds": 81.87031435966492,
+      "peak_allocated_bytes": 213719040
+    }
+  ],
+  "global_mean_frozen": true,
+  "r4_used_for_optimizer": false
+}

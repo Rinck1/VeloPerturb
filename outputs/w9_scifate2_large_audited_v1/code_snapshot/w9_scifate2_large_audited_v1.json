@@ -1,0 +1,29 @@
+{
+  "kind": "audited_population_centered_capacity_comparison",
+  "reuse_study": "outputs/w7_scifate2_router_scaling_v1",
+  "seeds": [0, 1, 2],
+  "workers": 4,
+  "arms": ["static_router", "velocity_router"],
+  "steps": 12000,
+  "checkpoint_steps": [1000, 4000, 12000],
+  "source_batch": 64,
+  "target_batch": 64,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "residual_regularization": 0.001,
+  "routing_regularization": 0.002,
+  "baseline_width": 128,
+  "baseline_experts": 8,
+  "energy_block_size": 1024,
+  "saturation_relative_improvement": 0.002,
+  "saturation_consecutive_doublings": 2,
+  "models": [
+    {"name": "small", "architecture": "small", "hidden": 128, "expert_rank": 32, "router_hidden": 64, "residual_blocks": 0},
+    {"name": "large", "architecture": "residual_large", "hidden": 1216, "expert_rank": 64, "router_hidden": 256, "residual_blocks": 6}
+  ],
+  "gfg_jvp_enabled": false,
+  "trainable_mean_predictor": false,
+  "centering": "full_source_differentiable",
+  "training_loss": "independent_source_draw_U_statistic",
+  "r4_used_for_optimizer": false
+}

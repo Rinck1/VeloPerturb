@@ -2,9 +2,21 @@
 
 > 用途：把本项目的背景、方法、全部实验数据、当前状态和下一步完整移交给新 agent。
 > 2026-09-21 代码审计更正：**真实 velocity 增量尚未建立，不能宣称状态外信息为零。** 分布训练、静态对照、验证折标准化及 R² 定义存在已确认 bug。旧 RENGE +0.022 和“99% 冗余”的机制归因待重算。详见 `outputs/veloroute_bug_audit_20260921/RESULTS.md`；该更正优先于下文历史解读。
-> 当前执行状态更新：2026-10-17。优先读下方 W4 节与 `docs/w4_results.md`；未更新的后续章节保留为 2026-09-21 历史归档，不能直接当作当前进度或主张。
+> 当前执行状态更新：2026-10-17。优先读下方“当前主线”最新W13条目与 `docs/w13_time_results.md`；W4原正式判决仍见 `docs/w4_results.md`。未更新的9月章节为历史归档，不能直接当作当前进度或主张。
 
-## 当前主线：W4/W5 短时群体预测（2026-10-17）
+## 当前主线：短时群体预测与模式配比路由（2026-10-17）
+
+- **最新完成W13：1/2/4全部结束，按用户要求未做3，共27次正式训练。** 精确距离b1保留Adam/RNG续训36k，5h energy=0.595683，相对static/shuffled改善4.137%/4.606%；三个seed各自平均也均正。冻结六窗中，b1在5/10/15h分别vs static改善4.137%/6.836%/2.247%，15h尚未消失，但早期05→10h仍−0.626%。新真正小ODE与匹配端点时间版从同一b1/36k初始化、Adam同等重置，各追加4000步，三臂三seed；参数同为76,760，ODE每步计算更多。固定6h主实验完成后，仅对冻结ODE权重作3h推理复算，无重训：5/10/15h energy=0.589504/1.027032/1.007833，相对同参数/更新数端点时间版改善1.226%/2.821%/0.027%；相对自身ODE static改善3.723%/6.358%/2.415%，shuffled改善4.620%/7.418%/1.573%。**ODE改善短时绝对拟合，但static也改善，未扩大velocity-vs-static差距；15h未胜旧b1端点。** 3h对1.5h源侧差异最大0.427%位移，推荐3h推理；训练仍6h，原预定结果全部保留。完整人读报告 `docs/w13_time_results.md`，机器结果 `outputs/w13_time_program_v1/final_report/`，原实验根 `outputs/w13_time_program_v1/`，精确续训根 `outputs/w13_scifate2_direct_continuation_v1/`；ODE权重 `time_training/training/ode/velocity_router/seed{0,1,2}/model_step4000.pt`。本轮没有CellFlow/scDFM或direct-U，没有恢复GFG/JVP；GPU1–3作业已结束，GPU0其他项目与4–7未动。当前为同系列开发，非独立复制或未见扰动验证。
+
+- **最新完成：W10–W12已扩大优势并完成机制定位。** 共54次六配方桥接、9次Adam/RNG长续训、9次群体路由、9次S-only学生蒸馏，81个训练作业全部结束，33项相关测试通过。小K8/76,248参数，真实动力学energy在12k/24k/36k为0.603696/0.599159/0.598119；36k matched static=0.620541、shuffled-v=0.622828，分别改善3.613%/3.967%。对本轮最优静态配置/检查点0.611533仍改善2.193%。36k后两窗口vs static为+8.258%/+10.549%，早期05→10h为−0.805%；24k→36k仅再改善0.174%，长训收益放缓。全报告 `docs/w10_recipe_bridge_results.md`。均值分支仍冻结、MSE约0.136601，本轮不是重训GFG或新ODE。
+
+- **velocity身份的当前证据：训练局部专家分工，部署主要校准群体混合权重。** 在36k最佳模型上，冻结后把逐细胞q替为群体平均q，energy=0.598618，保留97.8%的matched-static收益；均匀权重=0.612425、argmax单专家=0.655852。不能再把主要收益说成逐细胞确定命运。注意训练时打乱v与训练后打乱q是不同干预，后者保留已学成的专家与群体模式质量；按q随机采样不同于argmax。当前速度源是解析邻域U−γS上下文，不是原GFG/JVP，也不是已标定物理小时率。
+
+- **简化边界与修复：** W11从头群体路由12k real=0.615538、static=0.614923，未胜静态；W12 S-only学生real=0.620291、static=0.621382、shuffled=0.618372，也未保留优势。但仅用源侧老师群体模式质量做KL投影校准，无重训/无未来目标，将real学生恢复至0.606787，找回87.7%蒸馏损失。直接用b1真实老师群体平均q为0.604150。校准仍需动力学老师给出源侧群体权重，不能宣称整条模型无需U。结果根 `outputs/w11_scifate2_cohort_router_v1/`、`outputs/w12_scifate2_privileged_router_v1/`、`outputs/w12_source_mass_calibration_v1/`、`outputs/w12_best36k_routing_interventions_v1/`。
+
+- **W9退化已局部定位，不能再解读为velocity完全无信息。** W10直接距离b1仍vs static/shuffle改善2.657%/3.123%；全源中心化后的b2为1.010%/1.366%；U-statistic的b3为1.747%/2.846%；全源正则b4为1.582%/3.103%；仅最后降LR到1e−4的b5变为−0.089%/+1.509%。原/新GPU静态检查点分别与W8/W9逐参数一致。最大相邻绝对energy退化在中心化，最终相对符号在低LR下翻转；这不是完整交互分解或数学方法普遍失效的证明。
+
+- **执行状态：全部本轮作业结束，自动控制器状态ADVANTAGE_EXPANDED。** 根 `outputs/w10_scifate2_recipe_bridge_v1/` 与 `_continuation/`；最佳模型 `training/b0_w8_exact/velocity_router/seed{0,1,2}/model_step36000.pt`。曲线在主根 `report/figures/bridge_and_continuation.png`。只用GPU1–3，GPU0其他项目与4–7未动。下一步优先将精确距离b1做同预算续训及冻结10/15h预测，不优先加18M；当前sci-FATE2是同系列开发和分化短时预测，尚非未见遗传扰动泛化。以下W9“开训中”等条目为历史，以本组已完成记录为准。
 
 - **W8长训已全部完成。** K4 velocity能量12000/24000/36000步为0.613433/0.609668/0.606211；K8/12000更好，为0.603696，相对同预算static改善3.043%、相对全局平移4.953%，与W7网格最优static相比仍低1.999%。因此新容量实验统一K8，不再把K4推荐视为最终结论。见 `docs/w8_router_longtrain_results.md`、`outputs/w8_scifate2_router_longtrain_v1/report/`。旧W8 GPU作业全部正常结束。
 
@@ -49,13 +61,13 @@
 |---|---|
 | 项目名 | VeloRoute |
 | 仓库 | `/home/yuchang/wangjiaxuan` |
-| 核心问题 | 群体 U/S 动力学特征是否提高短时状态均值预测？ |
-| 方法 | source-only PCA50＋解析群体/邻域动力学；冻结群体均值预测＋零均值局部专家，velocity进入router，未配对分布能量损失 |
-| 主要数据 | RENGE 时间序列；sci-fate / scNT-seq 外部模态调研；MeRLin/Kang 等为历史机制与边界数据 |
+| 核心问题 | 群体 U/S 动力学特征是否提高短时状态分布预测？ |
+| 方法 | source-only PCA50＋解析群体/邻域动力学；冻结均值＋零均值专家，velocity进入固定源路由；端点与真正群体耦合RK4 ODE均已完成 |
+| 主要数据 | 当前阳性主场为sci-FATE2；RENGE原正式判决保留，scNT-seq为其他短时探索；MeRLin/Kang为历史机制与边界数据 |
 | 核心设计 | static / vel_pool / vel_pool_Uswap 为 H1 三臂，另有 vel_mean / direct_U_pool / pseudo_S |
-| 当前观察 | 原RENGE H1未通过；scNT修复有探索改善；sci-FATE2均值MSE相对static降11.615%；新增局部velocity router能量距离相对静态router降1.154%，三个区间均改善，均值收益保留 |
+| 当前观察 | 原RENGE H1未通过；sci-FATE2冻结均值MSE相对static降11.615%；b1端点36k的5h energy=0.595683；新小ODE=0.589504，相对自身static/shuffled改善3.723%/4.620%，相对匹配端点时间版再改善1.226% |
 | 机制线索 | 原生 GFG 输出方向对 U 较不敏感；直接 U 与解析速度的下游贡献需分开验证 |
-| 下一步 | 局部群体/router已完成一轮真实训练；保留解析均值底座，扩大到RENGE多TF扰动与局部结构适配，不追加归因网格作为停工门 |
+| 下一步 | 1/2/4已全部完成、3按要求未做；小ODE作为5/10h工作候选，固定b1端点参考；15h无ODE增量，不将同系列开发结果直接称为扰动泛化 |
 
 ---
 

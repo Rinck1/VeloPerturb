@@ -1,0 +1,114 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": 0,
+  "command": [
+    "scripts/phase0/w10_objective_probe.py",
+    "--root",
+    "outputs/w10_scifate2_recipe_bridge_v1",
+    "--output",
+    "outputs/w10_objective_probe_v1"
+  ],
+  "data_hashes": {
+    "outputs/w10_scifate2_recipe_bridge_v1/study_manifest.json": "d732496645ea09e72a22681130dfa551297d56ad1b7ef78ab180c5f269aa74c4",
+    "outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/velocity_router/seed0/model_step12000.pt": "0f1499c246c1d55ba36a2c2cb988e4b43a2ffaaf667ae65b6bff2d2eebd6237a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_objective_probe.py": "ed1a9685f56c63f965935f65fe68058ef98c11a2c59ee0aee76beaf7d7cca241"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "9a72408fb79c9165e689862e779839a0eae3ddc2e5413b7e2fb6088be2d08575",
+  "runtime_seconds": 0.5483661107718945,
+  "status": "TRAINING_OBJECTIVE_PROBE_COMPLETE",
+  "finite_batch_identity": {
+    "exact_energy": 0.5622222222222224,
+    "expected_V": 1.3804444444444441,
+    "expected_U": 0.5622222222222222,
+    "observed_V_bias": 0.8182222222222217,
+    "predicted_V_bias": 0.8182222222222222,
+    "identity_error": 4.440892098500626e-16,
+    "U_expectation_error": 2.220446049250313e-16,
+    "qualification": "Fixed full-population candidate distribution; not an identity for random batch-centered cross distances"
+  },
+  "precision": [
+    {
+      "state": "initial",
+      "training_group": 0,
+      "kernel": "heuristic",
+      "energy": 0.15396803617477417,
+      "reference_fp64_energy": 0.15397776119677434,
+      "energy_absolute_error": 9.725022000167671e-06,
+      "gradient_relative_error": 0.05825443626019105,
+      "gradient_cosine": 0.998826711456016
+    },
+    {
+      "state": "initial",
+      "training_group": 0,
+      "kernel": "direct",
+      "energy": 0.15397761762142181,
+      "reference_fp64_energy": 0.15397776119677434,
+      "energy_absolute_error": 1.435753525236283e-07,
+      "gradient_relative_error": 1.0938753090110588e-05,
+      "gradient_cosine": 0.9999999999408978
+    },
+    {
+      "state": "initial",
+      "training_group": 14,
+      "kernel": "heuristic",
+      "energy": 0.10416785627603531,
+      "reference_fp64_energy": 0.10418001074940002,
+      "energy_absolute_error": 1.2154473364708873e-05,
+      "gradient_relative_error": 0.25557818056202675,
+      "gradient_cosine": 0.9915912241918334
+    },
+    {
+      "state": "initial",
+      "training_group": 14,
+      "kernel": "direct",
+      "energy": 0.1041799932718277,
+      "reference_fp64_energy": 0.10418001074940002,
+      "energy_absolute_error": 1.747757231995717e-08,
+      "gradient_relative_error": 2.1690837721912107e-05,
+      "gradient_cosine": 0.9999999997743242
+    },
+    {
+      "state": "trained_12000",
+      "training_group": 0,
+      "kernel": "heuristic",
+      "energy": 0.0843573585152626,
+      "reference_fp64_energy": 0.08436916893240608,
+      "energy_absolute_error": 1.1810417143473528e-05,
+      "gradient_relative_error": 2.0095918227998994e-05,
+      "gradient_cosine": 0.9999999998022944
+    },
+    {
+      "state": "trained_12000",
+      "training_group": 0,
+      "kernel": "direct",
+      "energy": 0.08436908572912216,
+      "reference_fp64_energy": 0.08436916893240608,
+      "energy_absolute_error": 8.320328391542287e-08,
+      "gradient_relative_error": 1.1529451670134387e-06,
+      "gradient_cosine": 0.9999999999993849
+    },
+    {
+      "state": "trained_12000",
+      "training_group": 14,
+      "kernel": "heuristic",
+      "energy": 0.08075174689292908,
+      "reference_fp64_energy": 0.08076528776972997,
+      "energy_absolute_error": 1.3540876800888224e-05,
+      "gradient_relative_error": 7.00299020898833e-05,
+      "gradient_cosine": 0.9999999975522609
+    },
+    {
+      "state": "trained_12000",
+      "training_group": 14,
+      "kernel": "direct",
+      "energy": 0.080765500664711,
+      "reference_fp64_energy": 0.08076528776972997,
+      "energy_absolute_error": 2.1289498103316262e-07,
+      "gradient_relative_error": 3.5584247566454303e-06,
+      "gradient_cosine": 0.9999999999938279
+    }
+  ],
+  "optimizer_or_predictions_changed": false,
+  "heldout_targets_read": false
+}

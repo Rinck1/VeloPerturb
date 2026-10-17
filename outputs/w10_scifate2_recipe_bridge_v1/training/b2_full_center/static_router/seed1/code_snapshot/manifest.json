@@ -1,0 +1,269 @@
+{
+  "git_commit": "299d0387878cb666996be13308c3be9b956b4190",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w6_router_scifate2.py",
+    "prepare",
+    "--output",
+    "outputs/w6_local_router_scifate2_pack_v1"
+  ],
+  "data_hashes": {
+    "configs/w6_local_router_scifate2_v1.json": "e4881ace3a116d6e6598dd7dcea58d2a288ab25ce7bc840e7a396981b295a0fd",
+    "/home/yuchang/wangjiaxuan/data/scifate2/raw/GSE236512_processed_data_splicing.h5ad": "4269f26b5d53d436c692210d965233ed66f2d3d4a6ff0e1c0a6713b108816944",
+    "outputs/w5_joint_kinetics_scifate2_pack_v1/source_transform.npz": "c00899873aedca6f0bf1423f7ddf8ca52774a9e81134c7edf214c1e23eb10099",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_pack_v1/manifest.json": "8271d3b6cb41c5657a34a065a6ec5ef62377b2fd3c6ee47acd8bab04e533317e",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_pack_v1/training_pack.npz": "29ecc6b3adaf9208a7d52ae912b59a9a6fa8e6a4e4e29937e8c4a5800bcdf305",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_pack_v1/source_pack.npz": "f83322cd68223bb859fce70ea0f31751ebbfec559aaf60236c1f1e4c47c5a599",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed0/analytic_task.pt": "bb9ca8fe86c49f97afcc0637ac492590c2294b7cfe2260530cc0b48088750ee8",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed1/analytic_task.pt": "1ecaf7c9eb45d027cf7c66fe9e03b104c50f0085ff14c055db435c0bf1422b41",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_v1/seed2/analytic_task.pt": "25045424ae9ad5382d03168b0687fc71f31a8b6c62264e1592ede2f5684169f1",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "c50cf35ed29e3f8ba927807dca4f66ea74e6ec47bf31a060e2ad769798c8fb60",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 52.226616233587265,
+  "status": "LOCAL_ROUTER_PACK_READY",
+  "config": {
+    "kind": "scifate2_mean_preserving_local_router",
+    "global_pack": "outputs/w5_joint_kinetics_scifate2_pack_v1",
+    "global_training": "outputs/w5_joint_kinetics_scifate2_v1",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "arms": [
+      "k1",
+      "static_router",
+      "velocity_router"
+    ],
+    "neighbors": 64,
+    "experts": 4,
+    "hidden": 128,
+    "expert_rank": 32,
+    "router_hidden": 64,
+    "maximum_state_correction": 2.0,
+    "calibration_hours": 24,
+    "steps": 4000,
+    "source_batch": 64,
+    "target_batch": 64,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "residual_regularization": 0.001,
+    "routing_regularization": 0.002,
+    "evaluation_source_cells": 512,
+    "evaluation_target_cells": 512,
+    "evaluation_seed": 20261017,
+    "preserve_global_mean": true,
+    "velocity_consumers": [
+      "router"
+    ],
+    "gfg_jvp_enabled": false
+  },
+  "base_config": {
+    "kind": "scifate2_coarse_to_fine_task_training",
+    "data_path": "data/scifate2/raw/GSE236512_processed_data_splicing.h5ad",
+    "data_sha256": "4269f26b5d53d436c692210d965233ed66f2d3d4a6ff0e1c0a6713b108816944",
+    "training_replicates": [
+      "r1",
+      "r2",
+      "r3"
+    ],
+    "training_days": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "prediction_replicate": "r4",
+    "prediction_intervals_hours": [
+      [
+        5,
+        10
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        15,
+        20
+      ]
+    ],
+    "baseline_geometry_day": 3,
+    "calibration_hours": 24,
+    "time_kernel": "decay",
+    "minimum_spliced": 500,
+    "minimum_unspliced": 20,
+    "n_hvg": 2000,
+    "dimensions": 50,
+    "clusters": 8,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "arms": [
+      "static_task",
+      "analytic_task",
+      "velocity_joint"
+    ],
+    "hidden": 64,
+    "maximum_relative_correction": 0.5,
+    "steps": 2000,
+    "batch_size": 64,
+    "learning_rate_readout": 0.0001,
+    "learning_rate_head": 0.0005,
+    "head_anchor_weight": 0.1,
+    "training_partitions_per_condition": 16,
+    "head_condition_input": false,
+    "head_task_supervision": true,
+    "router_enabled": false,
+    "gfg_jvp_enabled": false
+  },
+  "data_path": "/home/yuchang/wangjiaxuan/data/scifate2/raw/GSE236512_processed_data_splicing.h5ad",
+  "transform_path": "outputs/w5_joint_kinetics_scifate2_pack_v1/source_transform.npz",
+  "training_groups": [
+    {
+      "rep": "r1",
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D3.npz",
+      "sha256": "0a85b2c2932a991ddd87a0696a1d8d2771541f51decde8a26b71a30d7e3ac9da"
+    },
+    {
+      "rep": "r1",
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D4.npz",
+      "sha256": "8a05788ca727bf8160d47847b207bfbbd9d745cafe7d1696df7fcb89164fae3b"
+    },
+    {
+      "rep": "r1",
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D5.npz",
+      "sha256": "952a6720cf8c0ad142b0f92f926fd0517ee09b7cc7e76e868a3e69781be94396"
+    },
+    {
+      "rep": "r1",
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D6.npz",
+      "sha256": "24179d44fa5d25b043585497e9c2dd299463ba98790444519d7411c68ef7aba2"
+    },
+    {
+      "rep": "r1",
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r1_D7.npz",
+      "sha256": "da85685a1fd3eeaf0d33610b51144977a5051e709a9950ed32f10c4c3e389c5a"
+    },
+    {
+      "rep": "r2",
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D3.npz",
+      "sha256": "a1cd44bb84b778942a0354a65f6cf7ab4b6bae63ca9eee9c2e0830c049f8e2a8"
+    },
+    {
+      "rep": "r2",
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D4.npz",
+      "sha256": "05c8bba98e65ea8913d7598d556b7daa9a3ab826d11aad0a977b1bc568356486"
+    },
+    {
+      "rep": "r2",
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D5.npz",
+      "sha256": "e4fac0eaf1b45b77c297805c5343af74860812fb6fa55752d99036bf58c5a235"
+    },
+    {
+      "rep": "r2",
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D6.npz",
+      "sha256": "026b8c17fcff827c5329f33e3aaa9468bbf1f7f339d54bcd08c0cfa631a7171b"
+    },
+    {
+      "rep": "r2",
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r2_D7.npz",
+      "sha256": "758038d8dc646dcc5eb74d5e75fcfac43408d43771df543cacee546ca0fba1c7"
+    },
+    {
+      "rep": "r3",
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D3.npz",
+      "sha256": "249311856ffc90cf1172d0efa58c5bb7fb4c0f63d52560eccf1329a0aab96a89"
+    },
+    {
+      "rep": "r3",
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D4.npz",
+      "sha256": "7c12b2b37ec461b54c7d239cb0eeab8a2b14aae97cefbdbdc87d173d6eef452e"
+    },
+    {
+      "rep": "r3",
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D5.npz",
+      "sha256": "2c95c134e9d54cf720b1e915eca55a3c9c87af00fa9be1e1456b3a006570e9a8"
+    },
+    {
+      "rep": "r3",
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D6.npz",
+      "sha256": "53e37599a248a92a943941a108f870d37d7ff9bf191efaf1d56a2cc34f886553"
+    },
+    {
+      "rep": "r3",
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/train_r3_D7.npz",
+      "sha256": "4d85a1b0f909bbfab2f989ecc50a5ea4d1effd4fa92261ad3ee27fda86c00a68"
+    }
+  ],
+  "prediction_groups": [
+    {
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_05_to_10.npz",
+      "sha256": "c7cae378339b82d36c8d902d05966b9b7ba6fc137b82c770d7883db31472bf00"
+    },
+    {
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_10_to_15.npz",
+      "sha256": "e7dffc30fea0f76d533de602311d61de9b4b12100650dd76dfb1139858dd587c"
+    },
+    {
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_15_to_20.npz",
+      "sha256": "69adff506492b80274f7f38605ea3da404c609c63e014abe1f93143a61b7fecc"
+    }
+  ],
+  "normalization_sha256": "8083197f8b75f616a2eae262b6f28f16b7868aa9a3e319b09885c3e9c512744d",
+  "r4_used_for_fitting": false,
+  "future_target_used_for_origin_features": false,
+  "dynamics": "within_source_knn_count_pooling_minus_source_baseline_global_field",
+  "teacher_or_OT_labels": false,
+  "global_mean_frozen": true
+}

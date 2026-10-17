@@ -1,0 +1,22 @@
+{
+  "git_commit": "aad70286dcf44debd6b6410e84d653f573a32569",
+  "seed": null,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scifate2_technical.py",
+    "--inspect-only",
+    "--after-job",
+    "outputs/w5_scifate2_download_job_v1",
+    "--output",
+    "outputs/w5_scifate2_technical_v2"
+  ],
+  "data_hashes": {
+    "configs/w5_scifate2_technical_v1.json": "c24b6276fdf26db8e5782a6da08d7e5c6f14e910274c4624764e6c3dfa33609c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scifate2_technical.py": "74e183c455db3ea39b9ccc591a74bccf1eb3c2e1e66c30ec99691e1d16045714",
+    "/home/yuchang/wangjiaxuan/data/scifate2/raw/GSE236512_processed_data_splicing.h5ad.gz": "3da41a79d674427fefd08720e0b647a3c8c443b3031fcc08b6df8fd8275f1a2f",
+    "/home/yuchang/wangjiaxuan/data/scifate2/raw/GSE236512_processed_data_splicing.h5ad": "4269f26b5d53d436c692210d965233ed66f2d3d4a6ff0e1c0a6713b108816944"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 4.742369398474693,
+  "status": "running"
+}

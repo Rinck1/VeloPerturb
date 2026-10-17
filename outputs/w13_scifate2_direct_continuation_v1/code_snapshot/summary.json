@@ -1,0 +1,429 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_bridge.py",
+    "advance",
+    "--root",
+    "outputs/w10_scifate2_recipe_bridge_v1",
+    "--job-root",
+    "outputs/w10_scifate2_recipe_bridge_jobs_v1"
+  ],
+  "data_hashes": {
+    "outputs/w10_scifate2_recipe_bridge_v1/study_manifest.json": "d732496645ea09e72a22681130dfa551297d56ad1b7ef78ab180c5f269aa74c4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_bridge.py": "e2e8fc4c311422e9a2cac012a5bf210edbbefca2187e882b26942d08ce5b737b",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_large_training.py": "e6a202aba9814ad3ec2a69fc0f157cb3717ded33bc9a49703bf08d69b1dc5cb4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_population_router.py": "5e819854c7ca33da551d9b6da9f9e627ee1cd8407c9297c4f270abdbe5634cb2",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "9a72408fb79c9165e689862e779839a0eae3ddc2e5413b7e2fb6088be2d08575",
+  "runtime_seconds": 0.018748153001070023,
+  "status": "RECIPE_BRIDGE_COMPLETE",
+  "training_jobs": 54,
+  "cases": 54,
+  "comparisons": [
+    {
+      "setting": "b0_w8_exact",
+      "step": 1000,
+      "real_energy": 0.6192304960364764,
+      "static_energy": 0.6177071407310812,
+      "shuffled_energy": 0.6187412503777269,
+      "gain_vs_static": -0.002466144884762489,
+      "gain_vs_shuffled": -0.0007907112358369606
+    },
+    {
+      "setting": "b0_w8_exact",
+      "step": 4000,
+      "real_energy": 0.6151835790422897,
+      "static_energy": 0.6233260978109042,
+      "shuffled_energy": 0.6244308061693905,
+      "gain_vs_static": 0.013063015967421654,
+      "gain_vs_shuffled": 0.014809050155338288
+    },
+    {
+      "setting": "b0_w8_exact",
+      "step": 12000,
+      "real_energy": 0.603696253341837,
+      "static_energy": 0.622640398870244,
+      "shuffled_energy": 0.6235275262722387,
+      "gain_vs_static": 0.03042550011656886,
+      "gain_vs_shuffled": 0.0318049678559712
+    },
+    {
+      "setting": "b1_direct_distance",
+      "step": 1000,
+      "real_energy": 0.6191067943867014,
+      "static_energy": 0.617692203882879,
+      "shuffled_energy": 0.618756383134284,
+      "gain_vs_static": -0.0022901219975419718,
+      "gain_vs_shuffled": -0.0005663153738184601
+    },
+    {
+      "setting": "b1_direct_distance",
+      "step": 4000,
+      "real_energy": 0.6164744822233915,
+      "static_energy": 0.6231500761387488,
+      "shuffled_energy": 0.625219275976774,
+      "gain_vs_static": 0.010712658428482569,
+      "gain_vs_shuffled": 0.013986762867668312
+    },
+    {
+      "setting": "b1_direct_distance",
+      "step": 12000,
+      "real_energy": 0.6048957700611061,
+      "static_energy": 0.6214048656883181,
+      "shuffled_energy": 0.6243961176306728,
+      "gain_vs_static": 0.026567374249516384,
+      "gain_vs_shuffled": 0.03123073161242995
+    },
+    {
+      "setting": "b2_full_center",
+      "step": 1000,
+      "real_energy": 0.6147085275123919,
+      "static_energy": 0.6123915694510936,
+      "shuffled_energy": 0.6139237674337336,
+      "gain_vs_static": -0.0037834584551434958,
+      "gain_vs_shuffled": -0.0012782695837607605
+    },
+    {
+      "setting": "b2_full_center",
+      "step": 4000,
+      "real_energy": 0.6147247099054697,
+      "static_energy": 0.6171849115839733,
+      "shuffled_energy": 0.6218755365960753,
+      "gain_vs_static": 0.0039861662725837466,
+      "gain_vs_shuffled": 0.011498806866960365
+    },
+    {
+      "setting": "b2_full_center",
+      "step": 12000,
+      "real_energy": 0.616761542321095,
+      "static_energy": 0.6230546856032522,
+      "shuffled_energy": 0.6253046595136134,
+      "gain_vs_static": 0.010100466985596968,
+      "gain_vs_shuffled": 0.013662327735033175
+    },
+    {
+      "setting": "b3_source_U",
+      "step": 1000,
+      "real_energy": 0.6188694297673898,
+      "static_energy": 0.6228127965083624,
+      "shuffled_energy": 0.6252455463040825,
+      "gain_vs_static": 0.006331544186439442,
+      "gain_vs_shuffled": 0.010197780015200109
+    },
+    {
+      "setting": "b3_source_U",
+      "step": 4000,
+      "real_energy": 0.615612011342261,
+      "static_energy": 0.6194473501611023,
+      "shuffled_energy": 0.6284517061060478,
+      "gain_vs_static": 0.006191549318669054,
+      "gain_vs_shuffled": 0.02043067850566105
+    },
+    {
+      "setting": "b3_source_U",
+      "step": 12000,
+      "real_energy": 0.6191383379191766,
+      "static_energy": 0.6301475380564406,
+      "shuffled_energy": 0.6372768907828524,
+      "gain_vs_static": 0.017470829404840016,
+      "gain_vs_shuffled": 0.02846259314596178
+    },
+    {
+      "setting": "b4_full_regularization",
+      "step": 1000,
+      "real_energy": 0.6198524356543711,
+      "static_energy": 0.6230012547389343,
+      "shuffled_energy": 0.6254758437305975,
+      "gain_vs_static": 0.005054274065439457,
+      "gain_vs_shuffled": 0.008990607922899296
+    },
+    {
+      "setting": "b4_full_regularization",
+      "step": 4000,
+      "real_energy": 0.6170937750424942,
+      "static_energy": 0.6180610470668194,
+      "shuffled_energy": 0.6288996349538429,
+      "gain_vs_static": 0.001565010493568053,
+      "gain_vs_shuffled": 0.018772247995048064
+    },
+    {
+      "setting": "b4_full_regularization",
+      "step": 12000,
+      "real_energy": 0.6189002479959752,
+      "static_energy": 0.6288479133815658,
+      "shuffled_energy": 0.6387187499327099,
+      "gain_vs_static": 0.015818873170935666,
+      "gain_vs_shuffled": 0.031028526935873768
+    },
+    {
+      "setting": "b5_w9_exact",
+      "step": 1000,
+      "real_energy": 0.6269850737918077,
+      "static_energy": 0.6290703559211354,
+      "shuffled_energy": 0.6291417729717068,
+      "gain_vs_static": 0.003314863130490786,
+      "gain_vs_shuffled": 0.0034280018789916156
+    },
+    {
+      "setting": "b5_w9_exact",
+      "step": 4000,
+      "real_energy": 0.6210221411383898,
+      "static_energy": 0.6201804626397447,
+      "shuffled_energy": 0.6255505713735907,
+      "gain_vs_static": -0.0013571509412964033,
+      "gain_vs_shuffled": 0.007239111340362592
+    },
+    {
+      "setting": "b5_w9_exact",
+      "step": 12000,
+      "real_energy": 0.6210742134745187,
+      "static_energy": 0.6205250081418333,
+      "shuffled_energy": 0.630592132722659,
+      "gain_vs_static": -0.0008850655903942517,
+      "gain_vs_shuffled": 0.015093621937599333
+    }
+  ],
+  "selected_for_continuation": {
+    "setting": "b0_w8_exact",
+    "step": 12000,
+    "real_energy": 0.603696253341837,
+    "static_energy": 0.622640398870244,
+    "shuffled_energy": 0.6235275262722387,
+    "gain_vs_static": 0.03042550011656886,
+    "gain_vs_shuffled": 0.0318049678559712
+  },
+  "velocity_pairing_advantage_at_final_step": true,
+  "scope": "same_series_development",
+  "global_mean_frozen": true,
+  "mean_anchor_max_error": 6.498977234960443e-08,
+  "frozen_evaluation_summaries": [
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b0_w8_exact/static_router/step1000/summary.json",
+      "sha256": "1baacb54d2de5f4a90a09590236a8fb20a0363b6b0a01c7ec492c090b3db29e2"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b0_w8_exact/static_router/step4000/summary.json",
+      "sha256": "5e3e99542c3e18954b2d41f4e3a4ee610a95770d30cf8371c9f9d6910b691b0d"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b0_w8_exact/static_router/step12000/summary.json",
+      "sha256": "b19e9d315e0248afa98f3a9959ee781e61791fd152e887278db98ed858dcfa0a"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b0_w8_exact/velocity_router/step1000/summary.json",
+      "sha256": "b637ef62605f4bc5061c8b1e09fdc81ee20e3c89c395abf8910e5dbcf8f71501"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b0_w8_exact/velocity_router/step4000/summary.json",
+      "sha256": "eaaaf058154b64b74f86ed2593507c2a9fd6a83c6bf45be544ff4cbe80d18ed2"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b0_w8_exact/velocity_router/step12000/summary.json",
+      "sha256": "d660e23b645bb6d5556d9ec3a29eae1f686707d00b27ce903cc2a32dd1819a1e"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b0_w8_exact/shuffled_velocity_router/step1000/summary.json",
+      "sha256": "c4798f770bc58668325f188ac2bc1df522db093c11f504f01aed233a6a2e1f0c"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b0_w8_exact/shuffled_velocity_router/step4000/summary.json",
+      "sha256": "9db9a53472dda297ae4f4dfba4d3964515ab3ecf29b5e0f7a2d9e188a8548a44"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b0_w8_exact/shuffled_velocity_router/step12000/summary.json",
+      "sha256": "27066e5df1fbcad4d5bdc3e1ddc3d82afb63e72e30ad9c355a567ba69088cf0a"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b1_direct_distance/static_router/step1000/summary.json",
+      "sha256": "d63aaf2a80d4a71b1614cab21ace34450f003d27786607f7f25b5d5e2f9f8966"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b1_direct_distance/static_router/step4000/summary.json",
+      "sha256": "9c42c4fdc618d8a734ecf65a61c6ed873dc609de3236c48e2dfab6714e6d2ac4"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b1_direct_distance/static_router/step12000/summary.json",
+      "sha256": "2c853889c9be0f64579dd8baac741d0f7809e12ebe67f46c6d7f2b5f68172293"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b1_direct_distance/velocity_router/step1000/summary.json",
+      "sha256": "fa2544714cecaba10df3c831137d6d8ed1289dbc4a14f62f7e7609caeeb58d71"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b1_direct_distance/velocity_router/step4000/summary.json",
+      "sha256": "d7f484aaa5fdfc53c9bf59f27e415a74df6063ea3cf1cec8bc9f26034f365c6f"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b1_direct_distance/velocity_router/step12000/summary.json",
+      "sha256": "89cf76909ebc1f2b71f5cc457a85d6c6fce62d552eabf9bc33d6cad562dcb984"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b1_direct_distance/shuffled_velocity_router/step1000/summary.json",
+      "sha256": "1102b80064dfdd6b00724e5d64c11de0ff7d69b7b1d87574ba9ae8f2ef020a22"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b1_direct_distance/shuffled_velocity_router/step4000/summary.json",
+      "sha256": "f24f3fabeda2d0c6deabafa5c4060616ea322d1899862798cd014a0f6a603453"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b1_direct_distance/shuffled_velocity_router/step12000/summary.json",
+      "sha256": "c8e230db6fccff662fa9738c65808bac65894a5bbd3a1b938f22537e23a8f378"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b2_full_center/static_router/step1000/summary.json",
+      "sha256": "0e71ec753341edbf8d01c4d50841301592a8df28269768419008e0d517362a9f"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b2_full_center/static_router/step4000/summary.json",
+      "sha256": "b95ddaf35a87214486d78ea0fc965cf069d2a7ca55c8ef3f603399d522c2f642"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b2_full_center/static_router/step12000/summary.json",
+      "sha256": "13ec47ec95c090b9843dbb42c461d194414585cba19748597bb6b9e392346604"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b2_full_center/velocity_router/step1000/summary.json",
+      "sha256": "39827fab26855a348f56b81785126849179b57f0d82bb8f4febb0393dd6cd2a2"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b2_full_center/velocity_router/step4000/summary.json",
+      "sha256": "aacf75ae919d8c40f3c31a25ad0e876f47ee08dedb0803cb3983604ffd2e930a"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b2_full_center/velocity_router/step12000/summary.json",
+      "sha256": "28b044ba7fe4e216aa0606a5ca18769063470cc1d818390af7391fb79a16273c"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b2_full_center/shuffled_velocity_router/step1000/summary.json",
+      "sha256": "0db2ee1e99ae89f4db17e90a8bbbc5a97942835743a5f237ea89e4c9b89de658"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b2_full_center/shuffled_velocity_router/step4000/summary.json",
+      "sha256": "7187912f006a1ae0a3cc45a91c944321aaf34a9302d8c5a049600832cbe07e5b"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b2_full_center/shuffled_velocity_router/step12000/summary.json",
+      "sha256": "370b1a7e6be7fa109b95abe708753f794221c7c34fdc6448910f28716bbaaf52"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b3_source_U/static_router/step1000/summary.json",
+      "sha256": "7c1fdcaa6a80449988e329d485714272eb1b7415ddc2fcd872a5f60accb1693b"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b3_source_U/static_router/step4000/summary.json",
+      "sha256": "55cfd2ba20a3b799bb9891038533bbe80c317c124c539798f71b8e818ee26a6b"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b3_source_U/static_router/step12000/summary.json",
+      "sha256": "55168a58b5814899a4c5f082bbc696178a62e407ab9a4c794b4b72431ed3db5d"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b3_source_U/velocity_router/step1000/summary.json",
+      "sha256": "633a8a5a5499f6967aac5745756a604e3fa77bd808e6408ee3c59773b9030920"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b3_source_U/velocity_router/step4000/summary.json",
+      "sha256": "f918726819f1aeb537bdd5e4d2f8971abf32738d60966e2c86a172e8a0662798"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b3_source_U/velocity_router/step12000/summary.json",
+      "sha256": "1d7f863cea2eb8c3e09ebab6a73f88496e0dd3194da37c16ad52692609cbcb32"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b3_source_U/shuffled_velocity_router/step1000/summary.json",
+      "sha256": "3effb12d105441579502d3aadc539219b05736e9b57c0da38a3d923a14792aad"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b3_source_U/shuffled_velocity_router/step4000/summary.json",
+      "sha256": "d2d1d07dfcfab789c1c07d6a7bf28f7b51619dac2b108e1dc2e54577bbafd9c7"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b3_source_U/shuffled_velocity_router/step12000/summary.json",
+      "sha256": "8cce4ebd6418f89b5723b5022239a81838285d55c7aaa7385192aa22af5fab02"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b4_full_regularization/static_router/step1000/summary.json",
+      "sha256": "2f1abf4b83fc108602316c71a104c450a9a22e9f4540dc0e48cc84c0e62dde5f"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b4_full_regularization/static_router/step4000/summary.json",
+      "sha256": "ffb78a1f2fbb7ab6774a42f29aa961df3168f70497b88fafbfac4caa25fa749a"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b4_full_regularization/static_router/step12000/summary.json",
+      "sha256": "2de6b0d01b36410e49421ca85be4c04fecade227aef5a94531a44c3e4a7aa049"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b4_full_regularization/velocity_router/step1000/summary.json",
+      "sha256": "f62b06671cfe778ee33e9e1eb773aaba509e9159beb8366ffb08ee609454e926"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b4_full_regularization/velocity_router/step4000/summary.json",
+      "sha256": "e3501845dbde971bd35fe6ee04e4d2b08866185ec3c9f0a082db86b2299e6777"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b4_full_regularization/velocity_router/step12000/summary.json",
+      "sha256": "0c57aa144e5606772bb44ebbfd74a4cd8c7e7ba3e7b9a3007b0122b3666f8c1a"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b4_full_regularization/shuffled_velocity_router/step1000/summary.json",
+      "sha256": "9a76258b5d9837ac896241aff2221c1df073d4bab30481bc5c3de84bcbc317de"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b4_full_regularization/shuffled_velocity_router/step4000/summary.json",
+      "sha256": "a4ff715233f4f758e82f0cca9edc398c2a93b746af54a7af1db976e9ca82a9c5"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b4_full_regularization/shuffled_velocity_router/step12000/summary.json",
+      "sha256": "0674fc8222e37289baf956f03b06767d833f7125470dfdc44592e1d02bf3757f"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b5_w9_exact/static_router/step1000/summary.json",
+      "sha256": "e7ac4fac6dd4161fa13d7b9611d09857eaaba1fa345847931340a44e1d1be8db"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b5_w9_exact/static_router/step4000/summary.json",
+      "sha256": "55c22f425e0941781161ff29b777106c00c5227f75f377ccaa635796a378c5a3"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b5_w9_exact/static_router/step12000/summary.json",
+      "sha256": "9ddeca39ee935a793fb96373b09a37f0273ad36bc11eee87bb51a0a7bdc90a46"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b5_w9_exact/velocity_router/step1000/summary.json",
+      "sha256": "510e431392f1ebf66b52e602ea3f7ec096bd94e561b4aa67782389021255409b"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b5_w9_exact/velocity_router/step4000/summary.json",
+      "sha256": "6761fbbcf8a3f740d5290da77b5f37763c4c0fb8b322fd28abd9c8ec2aeff58b"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b5_w9_exact/velocity_router/step12000/summary.json",
+      "sha256": "a0475a26bbc56923bc4ac15030d5e15ae957316564ab3704cdbd462a5f243de2"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b5_w9_exact/shuffled_velocity_router/step1000/summary.json",
+      "sha256": "1b3a7733c76c266280b43d5dc7cd4bc7d6766e7d6a4face9966abf490e176ff7"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b5_w9_exact/shuffled_velocity_router/step4000/summary.json",
+      "sha256": "5ac1810f60a43c0606c27b419b74a7758ad152d5e6ed83af19ff3e66dcd911f8"
+    },
+    {
+      "path": "outputs/w10_scifate2_recipe_bridge_v1/evaluations/b5_w9_exact/shuffled_velocity_router/step12000/summary.json",
+      "sha256": "46ee48be6d1bad3d59790d9e962300f444ae946629ad459170b4bb72acc1163c"
+    }
+  ],
+  "interpretation": "Descriptive development comparisons, not independent confirmation or fate inference"
+}

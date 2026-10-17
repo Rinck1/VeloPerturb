@@ -1,0 +1,8 @@
+{"status": "RECIPE_CHECKPOINT", "setting": "b0_w8_exact", "arm": "static_router", "seed": 0, "step": 24000, "training_seconds": 116.16339187696576, "peak_allocated_bytes": 140374528}
+{"status": "RECIPE_CHECKPOINT", "setting": "b0_w8_exact", "arm": "static_router", "seed": 0, "step": 36000, "training_seconds": 173.9050225391984, "peak_allocated_bytes": 140374528}
+{"status": "RECIPE_CHECKPOINT", "setting": "b0_w8_exact", "arm": "velocity_router", "seed": 0, "step": 24000, "training_seconds": 115.46800585091114, "peak_allocated_bytes": 140374528}
+{"status": "RECIPE_CHECKPOINT", "setting": "b0_w8_exact", "arm": "velocity_router", "seed": 0, "step": 36000, "training_seconds": 171.87979635596275, "peak_allocated_bytes": 140374528}
+{"status": "RECIPE_CHECKPOINT", "setting": "b0_w8_exact", "arm": "shuffled_velocity_router", "seed": 0, "step": 24000, "training_seconds": 114.21693399176002, "peak_allocated_bytes": 141316608}
+{"status": "RECIPE_CHECKPOINT", "setting": "b0_w8_exact", "arm": "shuffled_velocity_router", "seed": 0, "step": 36000, "training_seconds": 170.6560524329543, "peak_allocated_bytes": 141316608}
+{"status": "SCALING_CASE_EVALUATED", "setting": "b0_w8_exact", "experts": 8, "hidden": 128, "arm": "static_router", "step": 24000, "worker": 0, "energy_distance": 0.6217747537997672, "mean_mse": 0.13660101205615022, "absolute_log_variance_error": 0.22162426218538614, "covariance_relative_error": 0.524727524329764}
+{"status": "SCALING_CASE_EVALUATED", "setting": "b0_w8_exact", "experts": 8, "hidden": 128, "arm": "velocity_router", "step": 36000, "worker": 0, "energy_distance": 0.5981194481007677, "mean_mse": 0.13660101259601773, "absolute_log_variance_error": 0.1698823293444396, "covariance_relative_error": 0.5141505964195128}

@@ -1,0 +1,41 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_time_training.py",
+    "--root",
+    "outputs/w13_time_program_v1/time_training",
+    "--benchmark-output",
+    "outputs/w13_time_program_v1/training_only_smoke"
+  ],
+  "data_hashes": {
+    "outputs/w13_time_program_v1/time_training/study_manifest.json": "9c0ae0b6a75cfef7faeb145f0c688a3b62df18b1a981cc09a9d7e40183cc8bad",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_time_training.py": "f3828e374cccb8ade10e6c0df28af63b5bf378fc17b827cc0a0d44c036ae83e6",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_time_model.py": "e8d667eb15ee80f94808c0170ef757e8d30ea0e9e95dd395acc0d9a6fe5e9de6",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_large_training.py": "e6a202aba9814ad3ec2a69fc0f157cb3717ded33bc9a49703bf08d69b1dc5cb4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_population_router.py": "5e819854c7ca33da551d9b6da9f9e627ee1cd8407c9297c4f270abdbe5634cb2",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "931c5aa8971a8ace656def8d191a2313705056dd3b871afafd58e58c237bb89c",
+  "runtime_seconds": 3.113091006875038,
+  "status": "TRAINING_ONLY_TIME_SMOKE_PASSED",
+  "timing": [
+    {
+      "dynamics": "endpoint_time",
+      "steps": 25,
+      "seconds": 1.3912159353494644
+    },
+    {
+      "dynamics": "ode",
+      "steps": 25,
+      "seconds": 1.1548289768397808
+    }
+  ],
+  "solver_relative_difference": 0.004275971379591361,
+  "r4_targets_read": false,
+  "weights_discarded_after_smoke": true,
+  "parameters": 76760
+}

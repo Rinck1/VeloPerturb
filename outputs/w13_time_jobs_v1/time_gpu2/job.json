@@ -1,0 +1,26 @@
+{
+  "physical_gpu": 2,
+  "gpu_uuid": "GPU-b4179f9f-ece1-d433-a1da-b41325c25223",
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv-gpu/bin/python",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_time_training.py",
+    "--root",
+    "outputs/w13_time_program_v1/time_training",
+    "--worker",
+    "1"
+  ],
+  "cwd": "/home/yuchang/wangjiaxuan",
+  "allowed_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "reserved_gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "started_utc": "2026-10-17T10:33:10.748018+00:00"
+}

@@ -1,0 +1,111 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w10_route_interventions.py",
+    "--root",
+    "outputs/w10_scifate2_recipe_bridge_v1_continuation",
+    "--recipe",
+    "b0_w8_exact",
+    "--step",
+    "36000",
+    "--output",
+    "outputs/w12_best36k_routing_interventions_v1"
+  ],
+  "data_hashes": {
+    "outputs/w10_scifate2_recipe_bridge_v1_continuation/study_manifest.json": "93a3c6c6566f10eae9c463bb6ca2ec60ee59df1f9538e044577871d2f41a18ad",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/normalization.npz": "8083197f8b75f616a2eae262b6f28f16b7868aa9a3e319b09885c3e9c512744d",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_route_interventions.py": "9765a98aa1c3ac68a586bd65ea2ded84f2e501bbfac06c0ab3cdd17b673719f5",
+    "outputs/w10_scifate2_recipe_bridge_v1_continuation/training/b0_w8_exact/velocity_router/seed0/model_step36000.pt": "cd780399a221daa2950f2ac9bf2ec230060f6cae23a1836c0d529eaad47fbb66",
+    "outputs/w10_scifate2_recipe_bridge_v1_continuation/training/b0_w8_exact/velocity_router/seed1/model_step36000.pt": "39e306aac523acc11b2b365aa6611134be527860d142a9feaa8e9cd10080506e",
+    "outputs/w10_scifate2_recipe_bridge_v1_continuation/training/b0_w8_exact/velocity_router/seed2/model_step36000.pt": "31b4f6f95816b9b391fc08be317f1623f4ef4d6cc2a0a57aba49c379942b9b61",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_05_to_10.npz": "c7cae378339b82d36c8d902d05966b9b7ba6fc137b82c770d7883db31472bf00",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_10_to_15.npz": "e7dffc30fea0f76d533de602311d61de9b4b12100650dd76dfb1139858dd587c",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/source_15_to_20.npz": "69adff506492b80274f7f38605ea3da404c609c63e014abe1f93143a61b7fecc"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "9a72408fb79c9165e689862e779839a0eae3ddc2e5413b7e2fb6088be2d08575",
+  "runtime_seconds": 1.4880106672644615,
+  "status": "FROZEN_ROUTING_INTERVENTIONS",
+  "artifacts": [
+    {
+      "seed": 0,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_best36k_routing_interventions_v1/seed0_5_to_10.npz",
+      "sha256": "b8167a151bb1814268feaf4ae9ce3f353e8253e66d06daeb1e6db42699e651a2"
+    },
+    {
+      "seed": 0,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_best36k_routing_interventions_v1/seed0_10_to_15.npz",
+      "sha256": "0e30cfc20f5d0c0a232ddc481d42dff221b1d462a7f6a738ebf4009b3c4cf465"
+    },
+    {
+      "seed": 0,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_best36k_routing_interventions_v1/seed0_15_to_20.npz",
+      "sha256": "7cc4977f00b85fe98aa8385eeb1aa13c2ebb6c408bbf3eb01aa87b85fda30e6f"
+    },
+    {
+      "seed": 1,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_best36k_routing_interventions_v1/seed1_5_to_10.npz",
+      "sha256": "1e6a6c294c34f8f3e89334be54aedb36052ab6293e86cd8d484dd25675de8752"
+    },
+    {
+      "seed": 1,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_best36k_routing_interventions_v1/seed1_10_to_15.npz",
+      "sha256": "1770a2db6196b273f3d9c04cd4eb98fd6743cc7bc1a1f304fdfc03e79a54075b"
+    },
+    {
+      "seed": 1,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_best36k_routing_interventions_v1/seed1_15_to_20.npz",
+      "sha256": "9f296c4fa6b8ae50c444013258f5c28cbe485cc66604c53190d1ab6ed57ad25e"
+    },
+    {
+      "seed": 2,
+      "source_hour": 5,
+      "target_hour": 10,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_best36k_routing_interventions_v1/seed2_5_to_10.npz",
+      "sha256": "08028fc1fbbbe4efb65a3cef42851329fb1f0ba3e2b3bbed1127459e29797444"
+    },
+    {
+      "seed": 2,
+      "source_hour": 10,
+      "target_hour": 15,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_best36k_routing_interventions_v1/seed2_10_to_15.npz",
+      "sha256": "8048924c63aef13cfec267ca7268a51a6a3fbe941e57e734a5fc5d4d1c241620"
+    },
+    {
+      "seed": 2,
+      "source_hour": 15,
+      "target_hour": 20,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w12_best36k_routing_interventions_v1/seed2_15_to_20.npz",
+      "sha256": "c63ce38bb0c00d353f0e47e180fb7f286ba691dfc089476203fc64d0a8e6d734"
+    }
+  ],
+  "variants": [
+    "learned",
+    "cohort_average",
+    "permuted_assignment",
+    "uniform",
+    "hard_argmax"
+  ],
+  "recipe": "b0_w8_exact",
+  "step": 36000,
+  "future_targets_read": false,
+  "model_retrained": false
+}

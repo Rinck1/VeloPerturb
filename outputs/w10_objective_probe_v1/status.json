@@ -1,0 +1,20 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": 0,
+  "command": [
+    "scripts/phase0/w10_objective_probe.py",
+    "--root",
+    "outputs/w10_scifate2_recipe_bridge_v1",
+    "--output",
+    "outputs/w10_objective_probe_v1"
+  ],
+  "data_hashes": {
+    "outputs/w10_scifate2_recipe_bridge_v1/study_manifest.json": "d732496645ea09e72a22681130dfa551297d56ad1b7ef78ab180c5f269aa74c4",
+    "outputs/w10_scifate2_recipe_bridge_v1/training/b0_w8_exact/velocity_router/seed0/model_step12000.pt": "0f1499c246c1d55ba36a2c2cb988e4b43a2ffaaf667ae65b6bff2d2eebd6237a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_objective_probe.py": "ed1a9685f56c63f965935f65fe68058ef98c11a2c59ee0aee76beaf7d7cca241"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "9a72408fb79c9165e689862e779839a0eae3ddc2e5413b7e2fb6088be2d08575",
+  "runtime_seconds": 0.5485906563699245,
+  "status": "complete"
+}

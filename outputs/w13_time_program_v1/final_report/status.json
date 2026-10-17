@@ -1,0 +1,23 @@
+{
+  "git_commit": "08db9cbce857a4578941ad39b89ff36c0714a3bb",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w13_finalize_results.py",
+    "--root",
+    "outputs/w13_time_program_v1"
+  ],
+  "data_hashes": {
+    "outputs/w13_time_program_v1/summary.json": "8da316d5d48f819913a4bd884303622318aa122e7caec671cb49af1b76c11958",
+    "outputs/w13_time_program_v1/ode_refinement/horizon_summary.csv": "704ad83e4719abdf491a0ba4d051ce3d63540bef26152e0a820826460a2950a9",
+    "outputs/w13_time_program_v1/ode_refinement/solver_convergence.csv": "241fb27b96e2d8909ca9df0ae686d832da3ae5f2b6fcb86cabf028854c17d0ea",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w13_finalize_results.py": "bf62042f3a7d5139e7701198a851ba5deb2b15a2a2ccea442fe44095368c7891"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "931c5aa8971a8ace656def8d191a2313705056dd3b871afafd58e58c237bb89c",
+  "runtime_seconds": 0.009105924516916275,
+  "status": "complete"
+}

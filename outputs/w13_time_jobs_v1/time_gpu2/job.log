@@ -1,0 +1,12 @@
+{"status": "TIME_MODEL_CHECKPOINT", "dynamics": "endpoint_time", "arm": "velocity_router", "seed": 1, "step": 1000, "elapsed_seconds": 8.649599991738796}
+{"status": "TIME_MODEL_CHECKPOINT", "dynamics": "endpoint_time", "arm": "velocity_router", "seed": 1, "step": 4000, "elapsed_seconds": 24.651519291102886}
+{"status": "TIME_MODEL_CHECKPOINT", "dynamics": "ode", "arm": "velocity_router", "seed": 1, "step": 1000, "elapsed_seconds": 41.954038478434086}
+{"status": "TIME_MODEL_CHECKPOINT", "dynamics": "ode", "arm": "velocity_router", "seed": 1, "step": 4000, "elapsed_seconds": 165.4071480706334}
+{"status": "TIME_MODEL_CHECKPOINT", "dynamics": "endpoint_time", "arm": "static_router", "seed": 1, "step": 1000, "elapsed_seconds": 5.208675991743803}
+{"status": "TIME_MODEL_CHECKPOINT", "dynamics": "endpoint_time", "arm": "static_router", "seed": 1, "step": 4000, "elapsed_seconds": 21.624454759061337}
+{"status": "TIME_MODEL_CHECKPOINT", "dynamics": "ode", "arm": "static_router", "seed": 1, "step": 1000, "elapsed_seconds": 41.12837095558643}
+{"status": "TIME_MODEL_CHECKPOINT", "dynamics": "ode", "arm": "static_router", "seed": 1, "step": 4000, "elapsed_seconds": 165.1800507195294}
+{"status": "TIME_MODEL_CHECKPOINT", "dynamics": "endpoint_time", "arm": "shuffled_velocity_router", "seed": 1, "step": 1000, "elapsed_seconds": 5.609258878976107}
+{"status": "TIME_MODEL_CHECKPOINT", "dynamics": "endpoint_time", "arm": "shuffled_velocity_router", "seed": 1, "step": 4000, "elapsed_seconds": 21.741128016263247}
+{"status": "TIME_MODEL_CHECKPOINT", "dynamics": "ode", "arm": "shuffled_velocity_router", "seed": 1, "step": 1000, "elapsed_seconds": 41.63048232346773}
+{"status": "TIME_MODEL_CHECKPOINT", "dynamics": "ode", "arm": "shuffled_velocity_router", "seed": 1, "step": 4000, "elapsed_seconds": 164.1981541439891}
