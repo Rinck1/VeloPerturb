@@ -54,6 +54,33 @@ The small, hash-verified evidence bundle is retained separately from large matri
 
 `scripts/phase0/w4_renge_data.py` exposes `audit`, `acquire`, `process`, and the serial `day23` pipeline. It uses `configs/w4_renge_day23_runs.csv` and `configs/w4_renge_day23_preprocess.yaml`; the latter inherits the historical preprocessing config and checks that chemistry values are unchanged. All output directories are exclusive, so old data and interrupted attempts are preserved.
 
-The serial day2/day3 job is `outputs/w4_renge_day23_job_v1/`. It waits for a passed day4 same-input reproduction, quantifies cached day3, acquires and validates day2, then quantifies day2. Quantification and extraction never run concurrently in this job (at most eight CPU threads; zero GPUs). Its records are `/data/yuchang/veloroute_w4/renge/day23_pipeline_v1/`; final count files are `/data/yuchang/veloroute_w4/renge/processed_release_v2/day2/day2.h5ad` and `day3/day3.h5ad`. These are expected output paths until the corresponding completed summary exists.
+The serial day2/day3 job is `outputs/w4_renge_day23_job_v1/`. It waits for a passed day4 same-input reproduction, quantifies cached day3, acquires and validates day2, then quantifies day2. Quantification and extraction never run concurrently in this job (at most eight CPU threads; zero GPUs). Its records are `/data/yuchang/veloroute_w4/renge/day23_pipeline_v1/`; final count files are `/data/yuchang/veloroute_w4/renge/processed_release_v2/day2/day2.h5ad` and `day3/day3.h5ad`.
+
+## Day3 count reconstruction completed
+
+At 2026-10-17 11:00 CST, day3 count reconstruction and technical QC are complete. All mapping/permit-list/collation/USA commands returned exit 0; the serial pipeline has moved to day2 raw acquisition. Day2 remains incomplete at this snapshot.
+
+| Technical item | Day3 value |
+|---|---:|
+| Published-cohort cells reconstructed | 6,091 |
+| ENSG genes | 60,668 |
+| Conservative guide-assigned cells | 4,200 (68.95%) |
+| Technical-QC passing cells | 5,726 |
+| Passing both guide and technical QC | 4,153 |
+| Median S UMI / cell | 12,163 |
+| Median U UMI / cell | 921 |
+| Median U/(S+U) | 0.068915 |
+
+The completed file is `/data/yuchang/veloroute_w4/renge/processed_release_v2/day3/day3.h5ad`, SHA256 `3bf623c7dc09cbb03ec76c5cdb42a379b45cb28f9f9b83b8ca26507cf5b718a9`. The small summary/config/provenance/condition-cell-count evidence bundle is [`outputs/w4_renge_day3_technical_evidence_v1/`](../outputs/w4_renge_day3_technical_evidence_v1/). Only technical counts have been computed; short-time prediction, U increment, and any effect comparisons remain unrun and sealed pending protocol freeze.
+
+## Day2 acquisition recovery
+
+The initial day23 queue stopped after downloading and validating `SRR21518313`, before extracting any reads. The launcher had called `Path.resolve()` on `fasterq-dump`, resolving this SRA Toolkit symlink to the multicall binary `sratools.3.4.1`. Dispatch depends on the invocation basename, so the process immediately reported `unrecognized tool .../sratools.3.4.1` (exit 1). This was a command-construction error, not a chemistry or input-file failure; the empty FASTQ/scratch directories and downloaded SRA were preserved.
+
+The command now preserves the `fasterq-dump` symlink name. `fasterq-dump --version` returned 3.4.1. Recovery reuses only existing **empty** extraction directories; any nonempty partial output is rejected and retained for explicit recovery. The day2-only queue `outputs/w4_renge_day2_job_v2/` runs in `/data/yuchang/veloroute_w4/renge/day2_pipeline_v2/`, leaving completed day3/day4 results intact. Its first extraction succeeded at 11:01:56 CST: **2,529,832 spots and 7,589,496 reads written**, with the expected index/barcode/cDNA FASTQs. The queue then continued compression and subsequent run acquisition. Tests in `tests/test_w4_renge_data.py` exercise symlink-name preservation, empty-directory reuse, and nonempty partial preservation.
+
+The four command/recovery regression tests passed. Both day2 guide runs then completed download, extraction, compression, and gzip integrity checks; the queue proceeded to the two larger GEX SRA files.
+
+A separate CPU queue, `outputs/w4_renge_cohort_wait_job_v1/`, waits for the day2 stage's **completed** provenance. It verifies the final H5AD hash, exports the small day2 evidence bundle to `outputs/w4_renge_day2_technical_evidence_v2/`, then invokes `w4_cohort_qc.py --output outputs/w4_cohort_qc_v1`. This uses only metadata and the fixed 50-cell eligibility threshold. It does not freeze the protocol or authorize/read response effects. If day2 fails, the waiter stops explicitly instead of using partial counts.
 
 Public sources: [GEO GSE213069](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE213069), [ENA PRJNA879051](https://www.ebi.ac.uk/ena/browser/view/PRJNA879051), [NCBI SRA public cloud data](https://www.ncbi.nlm.nih.gov/sra/docs/sra-cloud/). GEO's browser page returned a browser challenge in this session; live ENA metadata and NCBI-hosted SRA object headers were accessible.

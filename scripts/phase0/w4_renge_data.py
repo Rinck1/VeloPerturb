@@ -107,6 +107,23 @@ def audit(config, output):
     return result
 
 
+def prepare_extraction_directories(fastq, scratch):
+    """Reuse empty failed-at-start directories, preserving every partial file."""
+    directories = [Path(fastq), Path(scratch)]
+    for directory in directories:
+        if directory.exists() and (not directory.is_dir() or any(directory.iterdir())):
+            raise ValueError(f'Nonempty interrupted extraction preserved: {directory}')
+    for directory in directories:
+        directory.mkdir(parents=True, exist_ok=True)
+
+
+def extraction_command(config, sra, fastq, scratch):
+    # SRA Toolkit dispatches by argv[0]; Path.resolve() destroys the tool name.
+    return [str(ROOT/config['sra_bin']/'fasterq-dump'), str(sra),
+            '--split-files', '--include-technical', '--threads', str(config['extract_threads']),
+            '--outdir', str(fastq), '--temp', str(scratch)]
+
+
 def acquire(config, output, day):
     start = time.monotonic(); rows = rows_for_day(config, day)
     sizes = [remote_info(r['source_url'])[0] for r in rows]
@@ -131,10 +148,12 @@ def acquire(config, output, day):
             fastq = raw/'fastq'/acc; scratch = raw/'scratch'/acc
             gz = [fastq/f'{acc}_{i}.fastq.gz' for i in (1, 2, 3)]
             if not all(p.exists() for p in gz):
-                fastq.mkdir(parents=True, exist_ok=False); scratch.mkdir(parents=True, exist_ok=False)
-                run_command([str((ROOT/config['sra_bin']/'fasterq-dump').resolve()), str(sra),
-                             '--split-files', '--include-technical', '--threads', str(config['extract_threads']),
-                             '--outdir', str(fastq), '--temp', str(scratch)], run.directory/f'extract_{acc}',
+                # An argv[0] dispatch failure may leave only empty directories.
+                # Reuse those safely; never replace partial FASTQs or scratch data.
+                prepare_extraction_directories(fastq, scratch)
+                # SRA Toolkit uses the symlink name to dispatch its multicall
+                # executable. Resolving it changes argv[0] to sratools and fails.
+                run_command(extraction_command(config, sra, fastq, scratch), run.directory/f'extract_{acc}',
                             timeout_seconds=config['timeout_seconds'])
                 for i in (1, 2, 3):
                     run_command(['/usr/bin/pigz', '-p', str(config['threads']), '-k', str(fastq/f'{acc}_{i}.fastq')],
@@ -250,7 +269,7 @@ def process(config, output, day, prerequisite):
     return result
 
 
-def day23_pipeline(config, output, prerequisite):
+def day23_pipeline(config, output, prerequisite, *, include_day3=True):
     """Run serially so download/extraction/quantification stay within eight CPUs."""
     start = time.monotonic()
     if not prerequisite:
@@ -266,14 +285,21 @@ def day23_pipeline(config, output, prerequisite):
                 raise TimeoutError('Day4 reproduction never completed')
             save_json(run.directory/'status.json', stamp(config, start, status='waiting_for_day4_reproduction'))
             time.sleep(15)
-        for name, operation in [
-            ('day3_quantification', lambda: process(config, run.directory/'day3', 3, path)),
+        operations = ([('day3_quantification', lambda: process(config, run.directory/'day3', 3, path))]
+                      if include_day3 else [])
+        operations += [
             ('day2_raw_acquisition', lambda: acquire(config, run.directory/'day2_raw', 2)),
             ('day2_quantification', lambda: process(config, run.directory/'day2', 2, path)),
-        ]:
+        ]
+        for name, operation in operations:
             save_json(run.directory/'status.json', stamp(config, start, status='running', stage=name))
-            operation()
-        result = stamp(config, start, status='DAY23_TECHNICAL_COUNTS_COMPLETE',
+            try:
+                operation()
+            except Exception as error:
+                save_json(run.directory/'status.json', stamp(config, start, status='failed', stage=name,
+                          error=f'{type(error).__name__}: {error}'))
+                raise
+        result = stamp(config, start, status='DAY23_TECHNICAL_COUNTS_COMPLETE' if include_day3 else 'DAY2_TECHNICAL_COUNTS_COMPLETE',
                        processed_root=config['processed_output'], replication_effects_read=False)
         save_json(run.directory/'summary.json', result)
         save_json(run.directory/'status.json', result)
@@ -284,7 +310,7 @@ def day23_pipeline(config, output, prerequisite):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--config', default='configs/w4_renge_day23_preprocess.yaml')
-    p.add_argument('--mode', choices=['audit', 'acquire', 'process', 'day23'], required=True)
+    p.add_argument('--mode', choices=['audit', 'acquire', 'process', 'day23', 'day2'], required=True)
     p.add_argument('--day', type=int, choices=[2,3,4])
     p.add_argument('--output', required=True)
     p.add_argument('--reproduction-summary')
@@ -301,7 +327,7 @@ def main():
             p.error('Processing requires a day')
         result = process(config, args.output, args.day, args.reproduction_summary)
     else:
-        result = day23_pipeline(config, args.output, args.reproduction_summary)
+        result = day23_pipeline(config, args.output, args.reproduction_summary, include_day3=args.mode == 'day23')
     print(json.dumps(result, ensure_ascii=False), flush=True)
 
 

@@ -1,0 +1,34 @@
+{
+  "git_commit": "58f1954bd3cb54f83e1979a8d896efb28da8d0c3",
+  "seed": null,
+  "argv": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_renge_data.py",
+    "--mode",
+    "day23",
+    "--output",
+    "/data/yuchang/veloroute_w4/renge/day23_pipeline_v1",
+    "--reproduction-summary",
+    "/data/yuchang/veloroute_w4/renge/day4_reproduction_v1/summary.json"
+  ],
+  "elapsed_seconds": 309.5180645734072,
+  "script_sha256": "62bd03b9c6dbd77424ccc59d5564ce5657fab9d63e684991051ffc7b35171a5e",
+  "status": "COUNTS_TECHNICAL_QC_COMPLETE",
+  "day": 3,
+  "h5ad": "/data/yuchang/veloroute_w4/renge/processed_release_v2/day3/day3.h5ad",
+  "h5ad_sha256": "3bf623c7dc09cbb03ec76c5cdb42a379b45cb28f9f9b83b8ca26507cf5b718a9",
+  "qc": {
+    "cells": 6091,
+    "genes": 60668,
+    "assigned_cells": 4200,
+    "assigned_fraction": 0.6895419471351174,
+    "technical_pass_cells": 5726,
+    "jointly_pass_cells": 4153,
+    "median_spliced_umi": 12163.0,
+    "median_unspliced_umi": 921.0,
+    "median_U_fraction": 0.06891504186427777
+  },
+  "same_input_reproduction": null,
+  "replication_effects_read": false,
+  "guide_semantics": "published_feature_UMI_dominance_computational_labels",
+  "formal_ready": false
+}

@@ -1,0 +1,44 @@
+{
+  "status": "TECHNICAL_EVIDENCE_EXPORTED",
+  "original_root": "/data/yuchang/veloroute_w4/renge/day23_pipeline_v1/day3",
+  "created_utc": "2026-10-17T03:00:36.158652+00:00",
+  "seed": null,
+  "argv": [
+    "scripts/phase0/w4_renge_data_export.py",
+    "--source",
+    "/data/yuchang/veloroute_w4/renge/day23_pipeline_v1/day3",
+    "--output",
+    "outputs/w4_renge_day3_technical_evidence_v1"
+  ],
+  "git_commit": "7b04c0dd2d94683881aaf8c171b4c7a8f1aa218c",
+  "elapsed_seconds": 0.0032608769834041595,
+  "files": [
+    {
+      "name": "summary.json",
+      "original_path": "/data/yuchang/veloroute_w4/renge/day23_pipeline_v1/day3/summary.json",
+      "original_sha256": "4c4d45651b69401eb247d8e26df36ac4bddd927ccc7af3c8ece56342db6aaa96",
+      "size_bytes": 1197
+    },
+    {
+      "name": "provenance.json",
+      "original_path": "/data/yuchang/veloroute_w4/renge/day23_pipeline_v1/day3/provenance.json",
+      "original_sha256": "c788bc092f877a73a51251630f5c193e6e8a1192f919b8d0a8fd418fededfc3c",
+      "size_bytes": 20476
+    },
+    {
+      "name": "config.yaml",
+      "original_path": "/data/yuchang/veloroute_w4/renge/day23_pipeline_v1/day3/config.yaml",
+      "original_sha256": "23b578656d16b8ba1bf93740b646a13cada6fc6f875967775e397efc111bbcaf",
+      "size_bytes": 3091
+    },
+    {
+      "name": "condition_cell_counts.csv",
+      "original_path": "/data/yuchang/veloroute_w4/renge/day23_pipeline_v1/day3/condition_cell_counts.csv",
+      "original_sha256": "1fdfcff616c9e0b6bb2f7135bcf6f22417bfce77c4c1ab6e98f41afd1d7416ad",
+      "size_bytes": 526
+    }
+  ],
+  "large_original_artifacts_not_copied": true,
+  "original_provenance_paths_refer_to_original_root": true,
+  "replication_effects_read": false
+}
