@@ -6,6 +6,10 @@
 
 ## 当前主线：W4/W5 短时群体预测（2026-10-17）
 
+- **W8长训已全部完成。** K4 velocity能量12000/24000/36000步为0.613433/0.609668/0.606211；K8/12000更好，为0.603696，相对同预算static改善3.043%、相对全局平移4.953%，与W7网格最优static相比仍低1.999%。因此新容量实验统一K8，不再把K4推荐视为最终结论。见 `docs/w8_router_longtrain_results.md`、`outputs/w8_scifate2_router_longtrain_v1/report/`。旧W8 GPU作业全部正常结束。
+
+- **W9严格审计已通过17项CPU测试，GPU实测后正式四卡开训。** 约18.52M实际可训练的短时残差容量版，不恢复旧GFG/JVP/EM/ODE。修正原mini-batch中心化与推理不同、训练经验V-statistic有限batch偏差：改完整源群体可微中心化＋源抽样U-statistic；小K8/76,248参数按相同新目标一起跑。小/大×static/velocity×3seed共12次训练，12000步，保存1000/4000/12000。审计详见 `PLANS/w9_large_model_mathematical_audit.md`，代码 `scripts/phase0/w9_population_router.py`、`w9_large_training.py`。实际GPU状态以新产物为准。
+
 - **W7预测视野先完成**：冻结W6 K4/4000步模型，不重训，六个5/10/15h窗口的velocity router均优于静态router；固定05h起点分别改善1.039%/1.136%/0.818%，15h仍为正，尚未观察到消失边界。该旧4000步配置的10/15h起点仍未超过全局平移。见 `docs/w7_router_horizon_results.md`、`outputs/w7_scifate2_router_horizons_v1/`。容量扩展也已完成，与本组预测分开报告。
 
 - **W7容量扩展全部完成：9配置、51次训练、36组检查点评估。** K=1/2/4/8/16/32，宽64/128/256/512，1000/4000步及基准K4延长至12000步。数值最好K32/4000能量0.613326，但推荐K4/宽128/12000步，0.613433，差仅0.0174%、参数少75.6%。推荐项相对同预算static改善1.391%、相对全局平移改善3.420%，三段均略胜全局平移；对静态第一段不胜，后两段改善3.362%/5.513%。若static也网格择优，推荐项仍改善0.419%。均值不变，K收益非单调，训练至12000步尚未饱和。8项必要测试通过，四卡、汇总、绘图均结束。详见 `docs/w7_router_scaling_results.md`；新产物根 `outputs/w7_scifate2_router_scaling_v1/`。若继续，优先K4/24000–36000步，不全面加大K。
