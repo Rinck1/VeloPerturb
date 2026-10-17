@@ -1,0 +1,7 @@
+dataset,role,filename,expected_bytes,url
+scifate,total_cell_annotation,GSM3770930_A549_cell_annotate.txt.gz,120091,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3770nnn/GSM3770930/suppl/GSM3770930_A549_cell_annotate.txt.gz
+scifate,new_cell_annotation,GSM3770930_A549_cell_annotate_newly_synthesised.txt.gz,111858,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3770nnn/GSM3770930/suppl/GSM3770930_A549_cell_annotate_newly_synthesised.txt.gz
+scifate,total_gene_annotation,GSM3770930_A549_gene_annotate.txt.gz,407274,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3770nnn/GSM3770930/suppl/GSM3770930_A549_gene_annotate.txt.gz
+scifate,new_gene_annotation,GSM3770930_A549_gene_annotate_newly_synthesised.txt.gz,407292,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3770nnn/GSM3770930/suppl/GSM3770930_A549_gene_annotate_newly_synthesised.txt.gz
+scifate,total_counts,GSM3770930_A549_gene_count.txt.gz,156651589,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3770nnn/GSM3770930/suppl/GSM3770930_A549_gene_count.txt.gz
+scifate,new_counts,GSM3770930_A549_gene_count_newly_synthesised.txt.gz,72017800,https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3770nnn/GSM3770930/suppl/GSM3770930_A549_gene_count_newly_synthesised.txt.gz

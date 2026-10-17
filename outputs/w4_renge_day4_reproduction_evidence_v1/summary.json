@@ -1,0 +1,50 @@
+{
+  "git_commit": "58f1954bd3cb54f83e1979a8d896efb28da8d0c3",
+  "seed": null,
+  "argv": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_renge_data.py",
+    "--mode",
+    "process",
+    "--day",
+    "4",
+    "--output",
+    "/data/yuchang/veloroute_w4/renge/day4_reproduction_v1"
+  ],
+  "elapsed_seconds": 345.6306215710938,
+  "script_sha256": "9eebaed2d93455ced62b8f6f6918f04afad22dab7c73f74c09d550e5158b35a3",
+  "status": "SAME_INPUT_DAY4_REPRODUCTION_PASSED",
+  "day": 4,
+  "h5ad": "/data/yuchang/veloroute_w4/renge/day4_reproduction_v1/import/day4.h5ad",
+  "h5ad_sha256": "e7dbbb130b6802030725432c3cae8025a12143db3f673317f5ddf22a6f4a5237",
+  "qc": {
+    "cells": 7582,
+    "genes": 60668,
+    "assigned_cells": 5244,
+    "assigned_fraction": 0.691638090213664,
+    "technical_pass_cells": 7122,
+    "jointly_pass_cells": 5190,
+    "median_spliced_umi": 11001.5,
+    "median_unspliced_umi": 675.0,
+    "median_U_fraction": 0.055954068388477315
+  },
+  "same_input_reproduction": {
+    "spliced": {
+      "total_count_correlation": 1.0,
+      "maximum_total_count_difference": 0.0,
+      "matrix_disagreement_entries": 0
+    },
+    "unspliced": {
+      "total_count_correlation": 1.0,
+      "maximum_total_count_difference": 0.0,
+      "matrix_disagreement_entries": 0
+    },
+    "ambiguous": {
+      "total_count_correlation": 1.0,
+      "maximum_total_count_difference": 0.0,
+      "matrix_disagreement_entries": 0
+    }
+  },
+  "replication_effects_read": false,
+  "guide_semantics": "published_feature_UMI_dominance_computational_labels",
+  "formal_ready": false
+}

@@ -1,0 +1,59 @@
+{
+  "git_commit": "58f1954bd3cb54f83e1979a8d896efb28da8d0c3",
+  "seed": null,
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv/bin/python",
+    "scripts/phase0/w4_external_data_scifate.py",
+    "--output",
+    "outputs/w4_external_scifate_qc_v1"
+  ],
+  "parameters": {
+    "manifest": "configs/w4_external_data_scifate_files.csv",
+    "data_root": "/data/yuchang/veloroute_w4/scifate",
+    "output": "outputs/w4_external_scifate_qc_v1",
+    "skip_build": false
+  },
+  "biological_analysis_performed": false,
+  "preregistration_status": "DRAFT_SEALED",
+  "data_hashes": {
+    "configs/w4_external_data_scifate_files.csv": "dc028464da1944d4ddc6e7513f8f8f5df003aea6f2f25abe73604168bcd5817f",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_external_data_scifate.py": "8de91cbf5a6ec7938e769649bc183a25864ba38dd4dcefa164b9c0749347ad05",
+    "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_cell_annotate.txt.gz": "0e7106cf674d97e26194eddce15a979f5b1dcb08c7b5397b99e3b4e9eeb9fa3c",
+    "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_cell_annotate_newly_synthesised.txt.gz": "a92e6051178bee69b48fbc61b87e7310966a90966220bfeaa2139daf44e1acde",
+    "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_gene_annotate.txt.gz": "b235c3ec0e9161b910450aaa03dd00dcefab8780671fdb40ef447eb5ffb721a2",
+    "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_gene_annotate_newly_synthesised.txt.gz": "44373044b4bcffd52b89e991615d2d24a6032faa4100be3b572c67c249661956",
+    "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_gene_count.txt.gz": "fdd930575daf6cb669978adc6bda99df1faf065d595cd2a0b5e0e1c29b90df89",
+    "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_gene_count_newly_synthesised.txt.gz": "9237a48f0b3de878be45b66a636ee3958459b99bb80d69b5ae0c4540ee6c5b33",
+    "outputs/w4_external_scifate_qc_v1/scifate_raw_runs.tsv": "0958f66f69b01eea7950dd510cd28ce9e524dac5dbbaf21f269b226f1c2f51f3"
+  },
+  "status": "TOTAL_NEW_READY_US_MISSING",
+  "cells": 7404,
+  "genes": 43167,
+  "total_new_barcode_overlap_fraction": 1.0,
+  "total_new_gene_overlap_fraction": 1.0,
+  "same_cell_order": true,
+  "same_gene_order": true,
+  "available_gene_layers": [
+    "total",
+    "new"
+  ],
+  "missing_gene_layers": [
+    "spliced",
+    "unspliced"
+  ],
+  "population_filter": "None; raw GEO cells retained. Published 6680-cell subset not assumed.",
+  "new_semantics": "Detected labeled RNA over preceding 2h; not unspliced RNA or net velocity.",
+  "annotation_semantics": "all_exon/all_intron are cell-level UMI totals, not gene-wise S/U.",
+  "response_columns_or_effects_computed": false,
+  "raw_run_count": 190,
+  "raw_fastq_compressed_bytes": 116281104216,
+  "raw_download_requires_approval": true,
+  "raw_fastq_downloaded": false,
+  "raw_manifest_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRX5848248&result=read_run&fields=run_accession,fastq_ftp,fastq_bytes,fastq_md5,library_name&format=tsv",
+  "new_count_exceeds_total_entries": 0,
+  "total_matrix_nnz": 50057931,
+  "new_matrix_nnz": 23539135,
+  "processed_path": "/data/yuchang/veloroute_w4/scifate/processed/scifate_total_new_only.h5ad",
+  "processed_sha256": "c989ff506e97b8e3c3501557de1943078c941d19df9d168716243aca47231660",
+  "runtime_seconds": 114.49588250368834
+}

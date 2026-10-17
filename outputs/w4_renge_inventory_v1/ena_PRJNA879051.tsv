@@ -1,0 +1,17 @@
+run_accession	experiment_accession	sample_accession	experiment_title	read_count	base_count
+SRR21518302	SRX17520779	SAMN30788979	Illumina NovaSeq 6000 sequencing: GSM6571150: cDNA library from gRNA of hiPSC at day5 after transduction Homo sapiens RNA-Seq	2053064	186828824
+SRR21518303	SRX17520778	SAMN30788980	Illumina NovaSeq 6000 sequencing: GSM6571149: cDNA library from mRNA of hiPSC at day5 after transduction Homo sapiens RNA-Seq	107894520	9818401320
+SRR21518308	SRX17520776	SAMN30788982	Illumina NovaSeq 6000 sequencing: GSM6571147: cDNA library from mRNA of hiPSC at day4 after transduction Homo sapiens RNA-Seq	90700533	8253748503
+SRR21518310	SRX17520775	SAMN30788983	Illumina NovaSeq 6000 sequencing: GSM6571146: cDNA library from gRNA of hiPSC at day3 after transduction Homo sapiens RNA-Seq	2638666	240118606
+SRR21518313	SRX17520773	SAMN30788985	Illumina NovaSeq 6000 sequencing: GSM6571144: cDNA library from gRNA of hiPSC at day2 after transduction Homo sapiens RNA-Seq	2529832	230214712
+SRR21518304	SRX17520778	SAMN30788980	Illumina NovaSeq 6000 sequencing: GSM6571149: cDNA library from mRNA of hiPSC at day5 after transduction Homo sapiens RNA-Seq	98488723	8962473793
+SRR21518306	SRX17520777	SAMN30788981	Illumina NovaSeq 6000 sequencing: GSM6571148: cDNA library from gRNA of hiPSC at day4 after transduction Homo sapiens RNA-Seq	2201925	200375175
+SRR21518309	SRX17520775	SAMN30788983	Illumina NovaSeq 6000 sequencing: GSM6571146: cDNA library from gRNA of hiPSC at day3 after transduction Homo sapiens RNA-Seq	2763365	251466215
+SRR21518314	SRX17520773	SAMN30788985	Illumina NovaSeq 6000 sequencing: GSM6571144: cDNA library from gRNA of hiPSC at day2 after transduction Homo sapiens RNA-Seq	2405705	218919155
+SRR21518301	SRX17520779	SAMN30788979	Illumina NovaSeq 6000 sequencing: GSM6571150: cDNA library from gRNA of hiPSC at day5 after transduction Homo sapiens RNA-Seq	2106614	191701874
+SRR21518305	SRX17520777	SAMN30788981	Illumina NovaSeq 6000 sequencing: GSM6571148: cDNA library from gRNA of hiPSC at day4 after transduction Homo sapiens RNA-Seq	2325824	211649984
+SRR21518307	SRX17520776	SAMN30788982	Illumina NovaSeq 6000 sequencing: GSM6571147: cDNA library from mRNA of hiPSC at day4 after transduction Homo sapiens RNA-Seq	99612486	9064736226
+SRR21518312	SRX17520774	SAMN30788984	Illumina NovaSeq 6000 sequencing: GSM6571145: cDNA library from mRNA of hiPSC at day3 after transduction Homo sapiens RNA-Seq	85596896	7789317536
+SRR21518316	SRX17520772	SAMN30788986	Illumina NovaSeq 6000 sequencing: GSM6571143: cDNA library from mRNA of hiPSC at day2 after transduction Homo sapiens RNA-Seq	74699724	6797674884
+SRR21518311	SRX17520774	SAMN30788984	Illumina NovaSeq 6000 sequencing: GSM6571145: cDNA library from mRNA of hiPSC at day3 after transduction Homo sapiens RNA-Seq	93901527	8545038957
+SRR21518315	SRX17520772	SAMN30788986	Illumina NovaSeq 6000 sequencing: GSM6571143: cDNA library from mRNA of hiPSC at day2 after transduction Homo sapiens RNA-Seq	81889584	7451952144

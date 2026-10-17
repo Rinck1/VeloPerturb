@@ -1,0 +1,9 @@
+day,geo_sample,library_type,run_accession,experiment_accession,sample_accession,raw_cache_root,source_url,sra_bytes
+2,GSM6571144,gRNA,SRR21518313,SRX17520773,SAMN30788985,/data/yuchang/veloroute_w4/renge/raw,https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21518313/SRR21518313,103620372
+2,GSM6571144,gRNA,SRR21518314,SRX17520773,SAMN30788985,/data/yuchang/veloroute_w4/renge/raw,https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21518314/SRR21518314,100197194
+2,GSM6571143,mRNA,SRR21518315,SRX17520772,SAMN30788986,/data/yuchang/veloroute_w4/renge/raw,https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21518315/SRR21518315,3517096842
+2,GSM6571143,mRNA,SRR21518316,SRX17520772,SAMN30788986,/data/yuchang/veloroute_w4/renge/raw,https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21518316/SRR21518316,3268032800
+3,GSM6571146,gRNA,SRR21518309,SRX17520775,SAMN30788983,/data/yuchang/veloroute_timeanchors_20260914/raw,https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21518309/SRR21518309,113661791
+3,GSM6571146,gRNA,SRR21518310,SRX17520775,SAMN30788983,/data/yuchang/veloroute_timeanchors_20260914/raw,https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21518310/SRR21518310,110400902
+3,GSM6571145,mRNA,SRR21518311,SRX17520774,SAMN30788984,/data/yuchang/veloroute_timeanchors_20260914/raw,https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21518311/SRR21518311,4019250880
+3,GSM6571145,mRNA,SRR21518312,SRX17520774,SAMN30788984,/data/yuchang/veloroute_timeanchors_20260914/raw,https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21518312/SRR21518312,3730652908

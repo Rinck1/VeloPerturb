@@ -1,0 +1,72 @@
+af_home: tools/af-home
+ambiguous_policy: retain_separate_S_U_A_and_expression_S_plus_A
+argv:
+- scripts/phase0/w4_renge_data.py
+- --mode
+- audit
+- --output
+- outputs/w4_renge_inventory_v1
+barcode_read_index: 2
+base_config: configs/renge_preprocess.yaml
+cdna_read_index: 3
+cell_selection: published_observed_barcode_cohort_not_de_novo_empty_drop_calling
+condition_reservation: outputs/veloroute_condition_reservation_20260912/condition_split.csv
+data_root: /data/yuchang/veloroute_w4/renge
+day4_minimum_total_count_correlation: 0.999
+day4_reproduction: both_original_GEX_runs_joint_UMI_resolution
+days:
+- 2
+- 3
+download_limit_bytes: 50000000000
+expected_orientation: rc
+extract_threads: 8
+geometry: 1{b[16]u[10]x:}2{r:}
+git_commit: 58f1954bd3cb54f83e1979a8d896efb28da8d0c3
+guide_call:
+  formal_validation_approved: false
+  method: conservative_published_feature_umi_dominance_v1
+  minimum_top_fraction: 0.8
+  minimum_top_runner_ratio: 5.0
+  minimum_top_umi: 3
+guide_manifest: outputs/veloroute_phase0/renge_structural_20260912/guide_manifest.csv
+guide_source: published_CRISPR_Guide_Capture_UMI_matrix_same_as_day4_day5
+historical_day4_raw_hashes: outputs/veloroute_preprocessing_stream_20260912/completed_raw_runs.json
+historical_index_hashes: outputs/veloroute_preprocessing_stream_20260912/index_files.json
+historical_run_manifest: outputs/veloroute_phase0/renge_structural_20260912/run_manifest.csv
+index_output: data/renge/reference/gencode32/splici_r91
+layout_audit_records: 1000000
+minimum_barcode_match: 0.5
+minimum_barcode_offset_ratio: 20
+minimum_free_gib_before_extract: 160
+processed_output: /data/yuchang/veloroute_w4/renge/processed_release_v2
+published_root: /data/dataset/perturbation_v1/renge_2023
+qc:
+  formal_validation_approved: false
+  maximum_mito_fraction: 0.2
+  minimum_detected_genes: 200
+  minimum_expression_umi: 500
+  minimum_unspliced_umi: 20
+quant_bin: tools/rna-quant/bin
+quant_output: data/renge/quant
+raw_root: data/renge/raw
+read_length: 91
+reference_download_jobs:
+- outputs/veloroute_preprocess_setup/fetch_reference_fasta/status.json
+- outputs/veloroute_preprocess_setup/fetch_reference_annotation/status.json
+- outputs/veloroute_preprocess_setup/fetch_reference_checksums/status.json
+reference_fasta: GRCh38.primary_assembly.genome.fa.gz
+reference_gtf: gencode.v32.primary_assembly.annotation.gtf.gz
+reference_release: GENCODE_v32_primary_assembly_GRCh38
+reference_root: data/renge/reference/gencode32
+replication_effects_sealed: true
+run_manifest: configs/w4_renge_day23_runs.csv
+script_sha256: 9eebaed2d93455ced62b8f6f6918f04afad22dab7c73f74c09d550e5158b35a3
+seed: null
+sources:
+  orientation: https://simpleaf.readthedocs.io/en/latest/chemistry-command.html
+  reference: https://www.gencodegenes.org/human/release_32.html
+  usa_layout: https://combine-lab.github.io/alevin-fry-tutorials/2021/improving-txome-specificity/
+sra_bin: tools/sratoolkit.3.4.1-ubuntu64/bin
+threads: 8
+timeout_seconds: 21600
+version: 1

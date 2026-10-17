@@ -1,0 +1,24 @@
+version: 1
+base_config: configs/renge_preprocess.yaml
+days: [2, 3]
+run_manifest: configs/w4_renge_day23_runs.csv
+historical_run_manifest: outputs/veloroute_phase0/renge_structural_20260912/run_manifest.csv
+historical_index_hashes: outputs/veloroute_preprocessing_stream_20260912/index_files.json
+historical_day4_raw_hashes: outputs/veloroute_preprocessing_stream_20260912/completed_raw_runs.json
+published_root: /data/dataset/perturbation_v1/renge_2023
+data_root: /data/yuchang/veloroute_w4/renge
+processed_output: /data/yuchang/veloroute_w4/renge/processed_release_v2
+threads: 8
+extract_threads: 8
+download_limit_bytes: 50000000000
+minimum_free_gib_before_extract: 160
+timeout_seconds: 21600
+geometry: '1{b[16]u[10]x:}2{r:}'
+expected_orientation: rc
+read_length: 91
+barcode_read_index: 2
+cdna_read_index: 3
+guide_source: published_CRISPR_Guide_Capture_UMI_matrix_same_as_day4_day5
+replication_effects_sealed: true
+day4_reproduction: both_original_GEX_runs_joint_UMI_resolution
+day4_minimum_total_count_correlation: 0.999

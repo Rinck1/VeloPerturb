@@ -1,0 +1,91 @@
+{
+  "git_commit": "58f1954bd3cb54f83e1979a8d896efb28da8d0c3",
+  "seed": null,
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv/bin/python",
+    "scripts/phase0/w4_external_data_scifate.py",
+    "--output",
+    "outputs/w4_external_scifate_qc_v1"
+  ],
+  "parameters": {
+    "manifest": "configs/w4_external_data_scifate_files.csv",
+    "data_root": "/data/yuchang/veloroute_w4/scifate",
+    "output": "outputs/w4_external_scifate_qc_v1",
+    "skip_build": false
+  },
+  "biological_analysis_performed": false,
+  "preregistration_status": "DRAFT_SEALED",
+  "data_hashes": {
+    "configs/w4_external_data_scifate_files.csv": "dc028464da1944d4ddc6e7513f8f8f5df003aea6f2f25abe73604168bcd5817f",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_external_data_scifate.py": "8de91cbf5a6ec7938e769649bc183a25864ba38dd4dcefa164b9c0749347ad05",
+    "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_cell_annotate.txt.gz": "0e7106cf674d97e26194eddce15a979f5b1dcb08c7b5397b99e3b4e9eeb9fa3c",
+    "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_cell_annotate_newly_synthesised.txt.gz": "a92e6051178bee69b48fbc61b87e7310966a90966220bfeaa2139daf44e1acde",
+    "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_gene_annotate.txt.gz": "b235c3ec0e9161b910450aaa03dd00dcefab8780671fdb40ef447eb5ffb721a2",
+    "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_gene_annotate_newly_synthesised.txt.gz": "44373044b4bcffd52b89e991615d2d24a6032faa4100be3b572c67c249661956",
+    "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_gene_count.txt.gz": "fdd930575daf6cb669978adc6bda99df1faf065d595cd2a0b5e0e1c29b90df89",
+    "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_gene_count_newly_synthesised.txt.gz": "9237a48f0b3de878be45b66a636ee3958459b99bb80d69b5ae0c4540ee6c5b33"
+  },
+  "files": [
+    {
+      "dataset": "scifate",
+      "role": "total_cell_annotation",
+      "filename": "GSM3770930_A549_cell_annotate.txt.gz",
+      "expected_bytes": "120091",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3770nnn/GSM3770930/suppl/GSM3770930_A549_cell_annotate.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_cell_annotate.txt.gz",
+      "bytes": 120091,
+      "sha256": "0e7106cf674d97e26194eddce15a979f5b1dcb08c7b5397b99e3b4e9eeb9fa3c"
+    },
+    {
+      "dataset": "scifate",
+      "role": "new_cell_annotation",
+      "filename": "GSM3770930_A549_cell_annotate_newly_synthesised.txt.gz",
+      "expected_bytes": "111858",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3770nnn/GSM3770930/suppl/GSM3770930_A549_cell_annotate_newly_synthesised.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_cell_annotate_newly_synthesised.txt.gz",
+      "bytes": 111858,
+      "sha256": "a92e6051178bee69b48fbc61b87e7310966a90966220bfeaa2139daf44e1acde"
+    },
+    {
+      "dataset": "scifate",
+      "role": "total_gene_annotation",
+      "filename": "GSM3770930_A549_gene_annotate.txt.gz",
+      "expected_bytes": "407274",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3770nnn/GSM3770930/suppl/GSM3770930_A549_gene_annotate.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_gene_annotate.txt.gz",
+      "bytes": 407274,
+      "sha256": "b235c3ec0e9161b910450aaa03dd00dcefab8780671fdb40ef447eb5ffb721a2"
+    },
+    {
+      "dataset": "scifate",
+      "role": "new_gene_annotation",
+      "filename": "GSM3770930_A549_gene_annotate_newly_synthesised.txt.gz",
+      "expected_bytes": "407292",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3770nnn/GSM3770930/suppl/GSM3770930_A549_gene_annotate_newly_synthesised.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_gene_annotate_newly_synthesised.txt.gz",
+      "bytes": 407292,
+      "sha256": "44373044b4bcffd52b89e991615d2d24a6032faa4100be3b572c67c249661956"
+    },
+    {
+      "dataset": "scifate",
+      "role": "total_counts",
+      "filename": "GSM3770930_A549_gene_count.txt.gz",
+      "expected_bytes": "156651589",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3770nnn/GSM3770930/suppl/GSM3770930_A549_gene_count.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_gene_count.txt.gz",
+      "bytes": 156651589,
+      "sha256": "fdd930575daf6cb669978adc6bda99df1faf065d595cd2a0b5e0e1c29b90df89"
+    },
+    {
+      "dataset": "scifate",
+      "role": "new_counts",
+      "filename": "GSM3770930_A549_gene_count_newly_synthesised.txt.gz",
+      "expected_bytes": "72017800",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3770nnn/GSM3770930/suppl/GSM3770930_A549_gene_count_newly_synthesised.txt.gz",
+      "path": "/data/yuchang/veloroute_w4/scifate/raw/GSM3770930_A549_gene_count_newly_synthesised.txt.gz",
+      "bytes": 72017800,
+      "sha256": "9237a48f0b3de878be45b66a636ee3958459b99bb80d69b5ae0c4540ee6c5b33"
+    }
+  ],
+  "runtime_seconds": 86.2232260927558
+}
