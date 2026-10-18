@@ -49,9 +49,10 @@ def compile_report(output):
     tests = ET.parse(junit).getroot().find('testsuite').attrib
     if any(int(tests[key]) for key in ('failures', 'errors', 'skipped')):
         raise ValueError('The reported test suite did not fully pass')
-    inputs += [junit, Path('README.md'), Path('docs/veloroute_full_runbook_20260914.md'),
-               Path('docs/veloroute_execution_plan_v1.1.md'),
-               Path('docs/veloroute_full_scope_amendment_20260913.md')]
+    inputs += [junit, Path('docs/history/handoffs/README_before_organization_20261017.md'),
+               Path('docs/history/legacy_architecture/veloroute_full_runbook_20260914.md'),
+               Path('docs/history/legacy_architecture/veloroute_execution_plan_v1.1.md'),
+               Path('docs/history/legacy_architecture/veloroute_full_scope_amendment_20260913.md')]
     config = dict(report_date='2026-09-14', scope='completed_exploratory_development_only',
                   confirmation='sealed_not_opened', metric='energy_V_statistic_not_square_rooted',
                   no_new_model_selection=True)

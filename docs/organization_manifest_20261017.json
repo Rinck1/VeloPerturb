@@ -1,0 +1,502 @@
+{
+  "status": "DOCUMENT_ORGANIZATION_COMPLETE",
+  "records": [
+    {
+      "original_path": "docs/merlin_day0_day21_results_20260929.md",
+      "path": "docs/history/explorations/merlin_day0_day21_results_20260929.md",
+      "status": "historical_exploration",
+      "original_sha256": "56c72c22c183075b0e299e59727451a94d6885ef91a332420491fce56bc0cb21",
+      "organized_sha256": "b99bd4af1dd1c128489e824795acbe2612f19316cb219c82e5ef9dad1750c96b",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/research_archive_20261017.md",
+      "path": "docs/history/record_exports/research_archive_20261017.md",
+      "status": "publication_inventory",
+      "original_sha256": "ce0c23512c4696176b259c76ccf7ac8f1d48e3f1a6c3ee7e5d83ad745d91527b",
+      "organized_sha256": "1eeca659e45957612697bec0bfb3717d0aac35c03174107b134952dfbb7904fb",
+      "compatibility_alias": true
+    },
+    {
+      "original_path": "docs/velocity_code_review_20261014.md",
+      "path": "docs/corrections/audits/velocity_code_review_20261014.md",
+      "status": "correction_audit",
+      "original_sha256": "be33a4b2c78621eeacdc68211066972cb27865f5ffdec98788d1feaaf15e160c",
+      "organized_sha256": "77f38da32a5fee377caa1de75d84f90f36a691b9a8e2d62f610e7e15aefbcd5c",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/velocity_empowerment_investigation_20260923.md",
+      "path": "docs/history/explorations/velocity_empowerment_investigation_20260923.md",
+      "status": "historical_exploration",
+      "original_sha256": "0043726c4cdd2efd107361963484a4aeed747e37be28c7d632c19c89caab60ca",
+      "organized_sha256": "ce067b028f4f219980286f2399c041b396376d45047a2c6f95f818a251e5f47d",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/velocity_failure_mechanism_report_20260929.md",
+      "path": "docs/history/explorations/velocity_failure_mechanism_report_20260929.md",
+      "status": "historical_exploration",
+      "original_sha256": "287ef72b7ce26163ed0aa6c0a4a77cb44120ae2c746d54579364d41c7f30ad84",
+      "organized_sha256": "1dd204b83658662c495fe71b0f0102484222b742e7b9c4cdfe4e27b80e80472d",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/velocity_gfg_innovation_results_20260929.md",
+      "path": "docs/history/explorations/velocity_gfg_innovation_results_20260929.md",
+      "status": "historical_exploration",
+      "original_sha256": "c078cfff49d06aa275335fd1bf0c50af5afb1d8641f2f3080d6b27db7d0f00e2",
+      "organized_sha256": "886713cdadbc8270882de931cc51f5cf7d4d6abbc99eab289fe70374bbd079a5",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/velocity_steps123_results_20260923.md",
+      "path": "docs/history/explorations/velocity_steps123_results_20260923.md",
+      "status": "historical_exploration",
+      "original_sha256": "6ce9172c097881d5ff9f968cecfe42b98f7fc48ea07d62d76a3ac4ab7e084893",
+      "organized_sha256": "dc6d3ad5d2efdd7c667934708bc8df67110e07f30c24bd89ea42b9b8299716ac",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/veloroute_execution_plan_v1.1.md",
+      "path": "docs/history/legacy_architecture/veloroute_execution_plan_v1.1.md",
+      "status": "superseded_architecture",
+      "original_sha256": "d6aa7377c784d88e904fe2098509135af9ee79176449ea32389cb32cd08534cc",
+      "organized_sha256": "7e271954d79ccf25ea133a8e8e8316b6bfdb6808348cbcb81969c5a17b52d73f",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/veloroute_experiment_ledger_20260914.md",
+      "path": "docs/history/experiment_ledgers/veloroute_experiment_ledger_20260914.md",
+      "status": "historical_ledger",
+      "original_sha256": "f3c004c39d4721ed3e3c20c4e53d923383a885fb9929c7fa7530053848c2be27",
+      "organized_sha256": "b6df00cae8feda93049f6493fbb9f1093267022fc0e00681301b6e62fe46451d",
+      "compatibility_alias": true
+    },
+    {
+      "original_path": "docs/veloroute_full_runbook_20260914.md",
+      "path": "docs/history/legacy_architecture/veloroute_full_runbook_20260914.md",
+      "status": "superseded_architecture",
+      "original_sha256": "7a774898aca4ed3ef3a837c117a57e26b0bbeb3b2ec6285746c594f25a21219e",
+      "organized_sha256": "9ecb33864fd0c865691febe39bc073c21a8693555156bc48ffa9585fe46103d1",
+      "compatibility_alias": true
+    },
+    {
+      "original_path": "docs/veloroute_full_scope_amendment_20260913.md",
+      "path": "docs/history/legacy_architecture/veloroute_full_scope_amendment_20260913.md",
+      "status": "superseded_architecture",
+      "original_sha256": "bdf5afd75cc3fd03931a120dbe13592b966082cfbd4a1ad3ff79c22993b5312b",
+      "organized_sha256": "c4a02951a64142a1ee52e1f3d2ec9cc759300ccac12bf85d55b6bfbeea708a3b",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/veloroute_gfg_joint_execution_20260914.md",
+      "path": "docs/history/legacy_architecture/veloroute_gfg_joint_execution_20260914.md",
+      "status": "superseded_architecture",
+      "original_sha256": "74f8f7ef340ef2a6b623b1e8193106d554b63ec5c520040c6035b8f8415ca7f8",
+      "organized_sha256": "f7993266ca4646c3c6701b021cf21b33b0a2509e14adc25119b6cb1246261aca",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/veloroute_gfg_joint_prerequisites_20260914.md",
+      "path": "docs/history/legacy_architecture/veloroute_gfg_joint_prerequisites_20260914.md",
+      "status": "superseded_architecture",
+      "original_sha256": "ae31806d19ff46a14f277a2230b258603a974850c03da3f172d36e21b2df825d",
+      "organized_sha256": "05c5d335080ed16bb5b5bcca21e64b11643c0ca887de6dbff23276c2cab7b071",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/veloroute_kang_execution_20260914.md",
+      "path": "docs/history/legacy_architecture/veloroute_kang_execution_20260914.md",
+      "status": "superseded_architecture",
+      "original_sha256": "a5406ff1563be9b5473290cbbc869b19e777fea0ad520278d5c451f22f1db623",
+      "organized_sha256": "aeaaaa06f1af3bbae334a1a9fa9d1b15fe8fa969c6ba3693617e7e9140ba3d26",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/veloroute_pipeline_runbook_20260912.md",
+      "path": "docs/history/legacy_architecture/veloroute_pipeline_runbook_20260912.md",
+      "status": "superseded_architecture",
+      "original_sha256": "b8f605d89e46563990fd9a58263769bcd30f55057562ec1d3a86c934a651d971",
+      "organized_sha256": "93fffb324bfd1e5d14e0694dea1dc8974876146c54542ce8e56c00a5f49ea8b5",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/veloroute_scope_amendment_20260912.md",
+      "path": "docs/history/legacy_architecture/veloroute_scope_amendment_20260912.md",
+      "status": "superseded_architecture",
+      "original_sha256": "2e9ad6c0895641661d80cfda7019665cbae2f104c9b1f2b55b484d12a07b966c",
+      "organized_sha256": "83ef050144369a27a11a926a0f6962ec36732b7e58c5413f794aff6cf152c81c",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w10_recipe_bridge_results.md",
+      "path": "docs/evidence/mainline/w10_recipe_bridge_results.md",
+      "status": "supporting_milestone",
+      "original_sha256": "051f9794ca6daf6fe6be914eec1cc9d275c7e42909eb002bd1515113744cd871",
+      "organized_sha256": "cf3a2d9b0077f467b23d7f215f52c526d91d4599558a59cc5711b2fffae81a4b",
+      "compatibility_alias": true
+    },
+    {
+      "original_path": "docs/w13_project_position_and_next_steps.md",
+      "path": "docs/current/w13_project_position_and_next_steps.md",
+      "status": "current",
+      "original_sha256": "2efb3ddf243478a59eb344496811bcdb7b5248018e22e81fe24d11b8a04eb9a3",
+      "organized_sha256": "233ac20f399dfb64f7efc0e7d0c249392dee1bacb5cbc087bb7a4fd7e74a88be",
+      "compatibility_alias": true
+    },
+    {
+      "original_path": "docs/w13_time_model.md",
+      "path": "docs/current/w13_time_model.md",
+      "status": "current",
+      "original_sha256": "fe4d2d2e2de8a14185b699b76cfca21f32eaa1002941dbd62862fdcc7d98e99b",
+      "organized_sha256": "adc579a9e195e2abf408e3e811ef6c871abdd1c45f5f612daf5753f5ed00c903",
+      "compatibility_alias": true
+    },
+    {
+      "original_path": "docs/w13_time_results.md",
+      "path": "docs/current/w13_time_results.md",
+      "status": "current",
+      "original_sha256": "73f943c75ac570fdd72cead8ef1de67d1ba2c417425cbeb6734d757fb0b10060",
+      "organized_sha256": "d63fc0c49fe44606d83e4ee1f37bfd406bece79f1d9a728c4a674b9547e0ac71",
+      "compatibility_alias": true
+    },
+    {
+      "original_path": "docs/w1_results_20261009.md",
+      "path": "docs/history/superseded_claims/w1_results_20261009.md",
+      "status": "historical_with_retracted_inferences",
+      "original_sha256": "3f4ca82cd98430778cb178a8276bc0a3dcc51402388d4dbdee19d7c73b1ce711",
+      "organized_sha256": "736419d70aee2e94a6ff73ef4eb7b2f8e7801efd13ffce5fd8b95cc029fdbe8c",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w2_gfg_v2_results.md",
+      "path": "docs/history/superseded_claims/w2_gfg_v2_results.md",
+      "status": "historical_with_retracted_inferences",
+      "original_sha256": "ff671d8849c092884b5b0472013bd108f969886b8cc72c9634a7c1767ee9fd62",
+      "organized_sha256": "667241c307e70bd8779286cd5be9c01d2cc0a871d5715a2e47507d7993441b56",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w2_results_20261010.md",
+      "path": "docs/history/superseded_claims/w2_results_20261010.md",
+      "status": "historical_with_retracted_inferences",
+      "original_sha256": "c83a0a40abb6a651e9a7a85adc63fdbc04dee452b295d7c91ebab95e2cdca935",
+      "organized_sha256": "0950cdb679b6c7bd578af34d3655033e0e5ba75e63159912791b9d22fd701357",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w3_results.md",
+      "path": "docs/evidence/boundaries/w3_results.md",
+      "status": "valid_boundary_or_mixed_result",
+      "original_sha256": "8de0e0c4167fb61a421b28f071071345f139af66dcf833e564c72b3ee501c082",
+      "organized_sha256": "563165d0f46ac49afaf2fcf901b6f99178d8a099207f9a46d1b425866569af84",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w4_external_data_audit.md",
+      "path": "docs/evidence/data_audits/w4_external_data_audit.md",
+      "status": "data_provenance",
+      "original_sha256": "e4e7bc8bad6d1333cd08e1c1c1b77a10f716a2b5d352d38f62bfc3ad12cd03bf",
+      "organized_sha256": "f0b6dde1f59f556b2c713940aff093d066ae0be1d9352a2ed816e8400b1dd75c",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w4_renge_data_audit.md",
+      "path": "docs/evidence/data_audits/w4_renge_data_audit.md",
+      "status": "data_provenance",
+      "original_sha256": "ee1bbb6ac7cffccba8bc2129505fc91e7249fa911c85b99aa325d6d0b86ec195",
+      "organized_sha256": "0332c2d74776fb742a7ccce04535db28ee8779eb7707779acf5255779b3466f5",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w4_results.md",
+      "path": "docs/evidence/boundaries/w4_results.md",
+      "status": "valid_boundary_or_mixed_result",
+      "original_sha256": "85f7d0dd23d53989681bd5666de15b01c677be522c3fb1a77f5a8157608b94bd",
+      "organized_sha256": "fc7fd147de3244f93f3a0dbc0dc97a360827291d1e1ecc267c1761081fe750b0",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w5_joint_kinetics_results.md",
+      "path": "docs/evidence/mainline/w5_joint_kinetics_results.md",
+      "status": "supporting_milestone",
+      "original_sha256": "5280042c901198f5e4276b8738a874bbe3fe02eba5fd35da37af6bb9d063d962",
+      "organized_sha256": "b45e93a82aefd95eb661aca8da76b690bb908981f651d3082e32fdf05bf9de9e",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w5_scifate2_data_audit.md",
+      "path": "docs/evidence/data_audits/w5_scifate2_data_audit.md",
+      "status": "data_provenance",
+      "original_sha256": "80ec2bfa662bde75ba153f91ecbd8bfe9c57bfdc459c2255ea69dc9ea2e9af96",
+      "organized_sha256": "559c107baf16064f4f07e774b5e00e5ee9b79df5f77b736dc3dedc4eefcd9b86",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w5_scntseq_U_attribution_results.md",
+      "path": "docs/evidence/boundaries/w5_scntseq_U_attribution_results.md",
+      "status": "valid_boundary_or_mixed_result",
+      "original_sha256": "027885592415dcf10b4162f64034d53e703040d58b00019175ac47e52f9677ef",
+      "organized_sha256": "ea580f9842100ea2ba358b75f1d16010389e728d3f23590d28132dc4fbcec042",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w5_scntseq_repair_results.md",
+      "path": "docs/evidence/boundaries/w5_scntseq_repair_results.md",
+      "status": "valid_boundary_or_mixed_result",
+      "original_sha256": "0004ea26f2d003fc2798cb058fbfd9eb5438ba4df9fbb0650b44ca09462d8650",
+      "organized_sha256": "a9494a78fca512d6a3b654c37c1d227651a52fa7983ba7e0ccb5c3a963585bf4",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w5_scntseq_results.md",
+      "path": "docs/evidence/boundaries/w5_scntseq_results.md",
+      "status": "valid_boundary_or_mixed_result",
+      "original_sha256": "05e4a86973930a4a8c0350f0a598a7153e5989a9286d51b5610950fe1fb59d81",
+      "organized_sha256": "a10d4f2fbd0b81bc66c474f7ebb2503e1d50237a428b9414c874507a455fedc1",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w6_local_router_results.md",
+      "path": "docs/evidence/mainline/w6_local_router_results.md",
+      "status": "supporting_milestone",
+      "original_sha256": "c42b309d89370c43d7da5114d63d0e5a16ff07afe5ce0effb846cf31c4a371cb",
+      "organized_sha256": "a5f8d3dc5a9f36f66f92504cc182ba616ddfa36e1fb73a89a804f901bfdb58ce",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w7_router_horizon_results.md",
+      "path": "docs/evidence/mainline/w7_router_horizon_results.md",
+      "status": "supporting_milestone",
+      "original_sha256": "f987613cb08165ca4645a2f6e9dd3f83de5aee0a91bf7d20e85dea6426817bea",
+      "organized_sha256": "c3e35886ef9a53c04d787162373d7500082449964a51025ced48405312cb8763",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w7_router_scaling_results.md",
+      "path": "docs/evidence/mainline/w7_router_scaling_results.md",
+      "status": "supporting_milestone",
+      "original_sha256": "fde0d058c9ad9a2c2411159405cf15b9b07a4a6ac8466683f4ed77d53194fcf2",
+      "organized_sha256": "d8c004ce8fa62e745fdd6ab58ce4e064c7a57d8e39a64476326ed30ad4cefe51",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w8_router_longtrain_results.md",
+      "path": "docs/evidence/mainline/w8_router_longtrain_results.md",
+      "status": "supporting_milestone",
+      "original_sha256": "55de486f0620bff379143283f340469248983a4270c5b0eff9b6d9042cfded8c",
+      "organized_sha256": "6a08c534ff39cfb4b88a4ff7fbb71f4782b4b31bf7dd76a6c8c6f43ab09be089",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "docs/w9_large_model_audit.md",
+      "path": "docs/evidence/mainline/w9_large_model_audit.md",
+      "status": "supporting_milestone",
+      "original_sha256": "52529dfa8cf341f4e94e18d6b5d71f6dbe2d8738d3fd8773852c484b0736b49d",
+      "organized_sha256": "0a74fe47c17508627ef1f20a8bafc1da9dff6d3fdda5828f494f781a76b753a3",
+      "compatibility_alias": true
+    },
+    {
+      "original_path": "PLANS/paper_outline_20261017.md",
+      "path": "PLANS/history/superseded_paper/paper_outline_20261017.md",
+      "status": "superseded_or_completed_plan",
+      "original_sha256": "132539e846cbc187e8130442ba2bca68280713d700e900369d7936a40cdc93a9",
+      "organized_sha256": "9581284b6ea60e2064d33908a6ca836163aced16acc60e82c0fc5fc871d1e773",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "PLANS/veloroute_4week_20261012.md",
+      "path": "PLANS/history/early_exploration/veloroute_4week_20261012.md",
+      "status": "superseded_or_completed_plan",
+      "original_sha256": "45beffc66e9e19100ec0a4afb2488320eb9dc1cd7cbf42c6b11523750b89bee9",
+      "organized_sha256": "770c5d160b3286283d38e8eadea30768d1786f18f16cc2b20b8782aa3d2254e0",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "PLANS/w2_phase0_agent_tasks_20261010.md",
+      "path": "PLANS/history/early_exploration/w2_phase0_agent_tasks_20261010.md",
+      "status": "superseded_or_completed_plan",
+      "original_sha256": "7ec2d07eeca06a77b3af55782b423da3b80d5f8460c4c5636e728f4e71b2fedb",
+      "organized_sha256": "5d4ad26ac52930b18be0334bcaad29419748536efd420417d9adff7c4dfa7748",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "PLANS/w3_execution_amendment_20261014.md",
+      "path": "PLANS/history/early_exploration/w3_execution_amendment_20261014.md",
+      "status": "superseded_or_completed_plan",
+      "original_sha256": "eba40bed260824e72d4f3452a215745036e56e8e01976387ff8ceb93e9986068",
+      "organized_sha256": "a2067de995a98d58909e0bd71bb0d574ef67e38beaf5173143d0f74740dc094c",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "PLANS/w3_no_jvp_short_horizon_results_20261014.md",
+      "path": "PLANS/history/early_exploration/w3_no_jvp_short_horizon_results_20261014.md",
+      "status": "superseded_or_completed_plan",
+      "original_sha256": "4510c17c8d991bd3a11379c5d2262ce1424ad275045d069514f716b667162682",
+      "organized_sha256": "b8252476cfbe4a948426c391fa9bfdde16a2ae9d086c5044efb009eaca3555e1",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "PLANS/w3_tasks_20261012.md",
+      "path": "PLANS/history/early_exploration/w3_tasks_20261012.md",
+      "status": "superseded_or_completed_plan",
+      "original_sha256": "fe0bf42a40c284d733cc9bc8448f16693751463901f429981436503ed7f5bc40",
+      "organized_sha256": "a785fe70594f0e787041c72e89182669f96c7dbac4cbe26ab8c42865bbb3f1b3",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "PLANS/w4_shorttime_tasks_20261015.md",
+      "path": "PLANS/history/completed_milestones/w4_shorttime_tasks_20261015.md",
+      "status": "superseded_or_completed_plan",
+      "original_sha256": "1dd7845207deb2908a351b14ee41c20e87351272fc1972ba2334c62c73a01687",
+      "organized_sha256": "d4bb55a99588ff530ee367b96fe3714f9296fc500494442c68ed60cef5e801fe",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "PLANS/w5_joint_kinetics_expansion.md",
+      "path": "PLANS/history/completed_milestones/w5_joint_kinetics_expansion.md",
+      "status": "superseded_or_completed_plan",
+      "original_sha256": "07759b2856171148be4cf8d3959de9d2d91c28243a489f852cab6293e927a4b9",
+      "organized_sha256": "80f5e52f1f676464e5cd0b17203ee0a2c06d9e4bd9d4b6b5993ff1c2a72e3d46",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "PLANS/w5_w8_roadmap_20261017.md",
+      "path": "PLANS/history/completed_milestones/w5_w8_roadmap_20261017.md",
+      "status": "superseded_or_completed_plan",
+      "original_sha256": "c958b456b2e6223d53274808c63f099565fe1c82b76cb2ce62cf31f18424fd8f",
+      "organized_sha256": "1d02293f20dc9188cd853ed78f8a0eae99332f0cfbded91e6fb9726b1b322da3",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "PLANS/w6_local_router_expansion.md",
+      "path": "PLANS/history/completed_milestones/w6_local_router_expansion.md",
+      "status": "superseded_or_completed_plan",
+      "original_sha256": "bc8c0b8acd61bfec49de70e62f7be56fd4ae2d52187aa328a983c0f8dcf08df1",
+      "organized_sha256": "168fa256a87e0fc0a73f07bc5a5f8d4936c87955f126c7e07a760f79ecba0cd1",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "PLANS/w7_scifate2_router_scaling.md",
+      "path": "PLANS/history/completed_milestones/w7_scifate2_router_scaling.md",
+      "status": "superseded_or_completed_plan",
+      "original_sha256": "0b30176890c54ed03103f1bfb85261eab5489922029c53fe6db0b3f834ebd989",
+      "organized_sha256": "dd2af9e748307f9dc5053a646366ba6fce9006566301eb061116195a95745888",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "PLANS/w8_scifate2_router_longtrain.md",
+      "path": "PLANS/history/completed_milestones/w8_scifate2_router_longtrain.md",
+      "status": "superseded_or_completed_plan",
+      "original_sha256": "5c60627d1597badaa44a43e70a9cbd0004699180bdde90aa61bc9d14a11cf1e3",
+      "organized_sha256": "cad039797cd4b24fbef080d5776c202339b5ebd28e9c265ed671fb9224bea0a0",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "HANDOFF.md",
+      "path": "docs/history/handoffs/HANDOFF_before_organization_20261017.md",
+      "status": "byte_exact_front_page_snapshot",
+      "original_sha256": "ed1403d0015d783c12d983fe91ff3a3ec6612b3532a11d1282bda10982d2ff93",
+      "organized_sha256": "ed1403d0015d783c12d983fe91ff3a3ec6612b3532a11d1282bda10982d2ff93",
+      "compatibility_alias": false
+    },
+    {
+      "original_path": "README.md",
+      "path": "docs/history/handoffs/README_before_organization_20261017.md",
+      "status": "byte_exact_front_page_snapshot",
+      "original_sha256": "1577805dcde7f058634eefceebe1bbb90d2cf5b76b3708b2b9066ce92379483d",
+      "organized_sha256": "1577805dcde7f058634eefceebe1bbb90d2cf5b76b3708b2b9066ce92379483d",
+      "compatibility_alias": false
+    }
+  ],
+  "protected_sha256": {
+    "PLANS/w10_recipe_bridge.md": "783e3856e6f17b4f45fe2a81d99ae530fa8dfa6253878ff9593dd8ae03fbf7ff",
+    "PLANS/w11_cohort_router.md": "26a985ec0f29f108583aab05d8634b787cdd3a08954ec6f9e9545a1f6664d96c",
+    "PLANS/w12_privileged_router.md": "8976eeef283b2a16ff39a1c9950e2f516831252d03a4d1350af802558d0a53de",
+    "PLANS/w13_time_dynamics.md": "6f98e980e1bac85a9e7be16077ad07876f0d033dcbf2e8b8548591d9704a3210",
+    "PLANS/w4_shorttime_prereg.md": "839028b6776642d37f53e4206871284fb8563dfc2e49a8eb9236180e45bad326",
+    "PLANS/w5_prereg_addendum.md": "1ac7eddcd9896d9bae9756ddc52204100bd32d46cc587c0a327cab0e54539c7d",
+    "PLANS/w5_scntseq_U_attribution_v1.md": "a3b7d4f3b6e73d153f0f40a26ccc5b2eb01fa13515daa28045de73a2f26012a5",
+    "PLANS/w5_scntseq_repair_v2.md": "3e002fed57970953b1343788c9bd5f154103a4f07a7419cf93b11aaa4d3861fe",
+    "PLANS/w9_large_model_mathematical_audit.md": "473a89d84c0a36008ee5d8ea4dfdff97042b83366075f83f9ede0b0ce4e713bf",
+    "docs/research_archive_20261017.json": "de3d5fbefbfcb5ed8fab6a848e7613abc629eb84600d221cef5acf375e8748f4",
+    "scripts/phase0/w10_recipe_bridge.py": "e2e8fc4c311422e9a2cac012a5bf210edbbefca2187e882b26942d08ce5b737b",
+    "scripts/phase0/w3_6a_source_screen.py": "861b0656517477f9f30f1dd6fcb9e3d36870b549400a3b57d47564d1ac107917",
+    "scripts/phase0/w13_frozen_horizons.py": "8de443b931565806ac491b4c38c6297a6f39235dcdb3345d94cba74a3b3364fa",
+    "scripts/phase0/w4_renge_data_wait_qc.py": "e83adc8e8ecc66c59be484358e3734c232997977a75a611fa409462bffef7382",
+    "scripts/phase0/w5_scntseq_minutes.py": "4f2ee06232d6ba90d95339c18a7b7a092c3093068b7900ffbf45e2e343d4a807",
+    "scripts/phase0/w3_7_native_prepare.py": "35e3bcbe3c3f1c96eb34e8a9f1ca4522dbb9eac6f54ed638c4709ad1f4d33f02",
+    "scripts/phase0/w4_renge_data_export.py": "a8909109151b1d6af1b8f7d304523700b49c4e7d37f27c77fdd9a33a79c3c1f9",
+    "scripts/phase0/w4_cohort_qc.py": "88845047e0513f84257e608da40bf7a448c7a73f4cafd8881ef9545fe9adcd96",
+    "scripts/phase0/w3_shorttime_gfgv2.py": "ec438dc1cab100cbbac2a9007ac4e1327da2a265a55f785e46354358f7a7fe75",
+    "scripts/phase0/w13_plot_results.py": "fc3d90249373a775c18f57204ccb685dcc3eb57f0d83a5da088611478e7da29c",
+    "scripts/phase0/w2_gfg_v2_meclin.py": "a310255bf6f4db389fbcc79aeb262e1d6fcef2f36a5ee4ec18be3a22e60cc4c3",
+    "scripts/phase0/w9_large_training.py": "e6a202aba9814ad3ec2a69fc0f157cb3717ded33bc9a49703bf08d69b1dc5cb4",
+    "scripts/phase0/w5_joint_renge.py": "15f5528e83a5e13d47549f32623bb1c71c292183cd79638dd600aafbab24913e",
+    "scripts/phase0/w3_6b_author_mapping_audit.py": "043e82994bab1212559282a79189aa0b1ae386ddb517016b7ba44974ed06a1b9",
+    "scripts/phase0/w3_6b_join_cohort.py": "fee1e40eb285bce801139ee1e23fb3cf57e148db8a3996c6a853b5d61a7a8a87",
+    "scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+    "scripts/phase0/w10_objective_probe.py": "ed1a9685f56c63f965935f65fe68058ef98c11a2c59ee0aee76beaf7d7cca241",
+    "scripts/phase0/w4_external_data_scifate.py": "8de91cbf5a6ec7938e769649bc183a25864ba38dd4dcefa164b9c0749347ad05",
+    "scripts/phase0/w2_gfg_v2_downstream.py": "8ead0406d8acfe2be6f55deabde67bb40c236edda329489adf1526a3b063b35a",
+    "scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "scripts/phase0/w3_6b_fetch_author_metadata.py": "18109be3f665a9125d48435f79e28b589bfafb18a4f3ac83235c0a7a35e06bc9",
+    "scripts/phase0/w3_shorttime_population.py": "75ffcfd4dd24d7ef78346ae95a18f99d4164f666ae5582e8f3ffd5b16c92431e",
+    "scripts/phase0/w12_privileged_router.py": "6acf0bbbf3a8295a21d5e63f52c2189dec895910d70f1aa71d0099992189d585",
+    "scripts/phase0/w7_router_horizons.py": "b65a084649c80f7da5881c5f1e618ede29edf8e0ffceb244339c02930e87a0e3",
+    "scripts/phase0/w5_scntseq_direction_audit.py": "a9d6cc89680d1c5ce036727df78d6980597fafa69558bb481e99bb57cd6f423b",
+    "scripts/phase0/w3_gfg_v2_control.py": "ba8dd4d25ca97ac6ad6a04df5683c55791b21387197f465e6221b06cb958ed9b",
+    "scripts/phase0/w3_shorttime_evaluate.py": "60f13d6927e9df6ca5a83c6b399824406131cbcf81f018be73aadd41a7aeefe7",
+    "scripts/phase0/w3_7_short_horizon_no_jvp.py": "dccd897d4f15821995265acdfd4ebc048cd627ae0d9daeb35ad9dd7bb4c6984d",
+    "scripts/phase0/w4_learned_head.py": "d5b8b13f4081ce563fdeacd6c5ef25e5847cc906c59828a8ae76bb2e02ac299c",
+    "scripts/phase0/w3_7_short_horizon_evaluate.py": "1a7a4fc3dae244f68cbf9962cc84802b53326b8b1106d8a1dfad910cd7b4a2a3",
+    "scripts/phase0/w3_preflight.py": "a741dd76b531a36effb69eb635ea1174995ecdba70606e56d66e72021d0fc0f9",
+    "scripts/phase0/w9_population_router.py": "5e819854c7ca33da551d9b6da9f9e627ee1cd8407c9297c4f270abdbe5634cb2",
+    "scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "scripts/phase0/w3_6c_deltaU_identifiability.py": "91b68e26bd31b2474da23338ba59e5529a78c0bcc4f1fe5d3b5b98259ddc2872",
+    "scripts/phase0/w4_make_lock.py": "d33f93796d5c33b7dc92cc7eeb7a62c7a68e4d32d328d118545b4e7709c4765e",
+    "scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "scripts/phase0/w13_time_training.py": "f3828e374cccb8ade10e6c0df28af63b5bf378fc17b827cc0a0d44c036ae83e6",
+    "scripts/phase0/w5_scifate2_technical.py": "629ddc7a25bdd73cd9f0a167efe5bc3220082d2f392473d128bc6040d7d78d3f",
+    "scripts/phase0/w3_7_short_horizon_train_cv.py": "ec9b4a05fe562ac71f4eef4b6e67002fd203e145e07f0ce43973d259096abb59",
+    "scripts/phase0/w3_6b_label_inventory.py": "171918b054aa2ebfadb7138762681175f482b87970bc629afa0371123bb7e3ca",
+    "scripts/phase0/w4_kinetic_head.py": "0d7365a05c78f55b81c058808a741f2fac3c0641d79b74f61288a41ca82cf79a",
+    "scripts/phase0/w4_h7_report.py": "fc323bbfe0965f00ddac20d4ea4b15694223fbe4a40b9157018a5c676e0f2f3a",
+    "scripts/phase0/w2_shuffle_scale_audit.py": "25c1f2bb43c8d291466998701db55c65ae8d34101130c8d24d06494889e4ebcf",
+    "scripts/phase0/w3_7_foundation_audit.py": "92468878f7ea4469b43314cd224db2fa561149f60e89612de6f41cb84a0efda4",
+    "scripts/phase0/w2_gfg_v2.py": "be41477c659f6bd767d8db2f751b739982196f1a8ef5cddae64cd91648646b02",
+    "scripts/phase0/w4_external_data_scntseq.py": "eddf3802febda03b5d397e432655dba3a1e8311e09fef0eedd32b5f4a05d1f3e",
+    "scripts/phase0/w4_native_gfg_audit.py": "cd8373d14d04f7e4b49363b217b62f5c4d42d332c0d1cc8352eb6d360865b866",
+    "scripts/phase0/w10_route_interventions.py": "9765a98aa1c3ac68a586bd65ea2ded84f2e501bbfac06c0ab3cdd17b673719f5",
+    "scripts/phase0/w2_leadlag_power.py": "10a862ce7fe991f0f6a9676b22c951e9f1281c1be047d76064791581c76acebe",
+    "scripts/phase0/w6_router_scifate2.py": "082e924f5591e59f6d810ca0b419537aebc1d2e707b8eac4eefdc23f25235f8c",
+    "scripts/phase0/w7_scaling_plots.py": "7a53363916099ab9aaf9511fc01bda5e1ad4d399555a05400cc48a0ab1c49bab",
+    "scripts/phase0/w12_cohort_calibration.py": "cda5535a7669efa8302a1b13338d8883a75db135f02042d3b5aaf3c419e49bb2",
+    "scripts/phase0/w11_cohort_router.py": "b4f7a21e5ccffa6f0dec658c0b91d40cae0d146cc8c1964856a69644fcfeed61",
+    "scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "scripts/phase0/w4_replication.py": "762e575ac6c654fc292581a6308243fc5b10bc164b8663ee63da6901f1d15cdd",
+    "scripts/phase0/w4_wait_calibration.py": "8ab8f641eecc908a96dc1430384df0ea07a5c39820703d8fa5f53295876e7890",
+    "scripts/phase0/w10_plot_bridge.py": "1bbd81abd6283b6ec9306ba38245ae8b241102ee673300ac61c5a514cbabf88c",
+    "scripts/phase0/w13_time_program.py": "4721aa1e219ceb8279225068b023ef2ce51e50d00b15e5f9ac7087a3304e5906",
+    "scripts/phase0/w4_run_replication.py": "67d43ad0500a342ad80af83910b6359e27a44dfa4b26e4688a78fd7f2e12dad6",
+    "scripts/phase0/w5_scntseq_U_attribution.py": "d6aa41f978f2329a3282dcc645e245ae6ebc58f62eb6a5e41c2ff06039da3c68",
+    "scripts/phase0/w5_scntseq_repair_mechanism.py": "971dc7a61b8d2e77f72aca0be7fd91d9fecfe35236eec973516b252e1800dd69",
+    "scripts/phase0/w2_deltaU_reliability.py": "614a06bdfa737d51b7cee952f0d4f9d689c95f6062e936d8212c06a504283062",
+    "scripts/phase0/w4_h1_calibration.py": "10d902dc8503ec3378b7491ac4d9f9397d0bc49caeed585fc9e17d139e23b3b4",
+    "scripts/phase0/w5_joint_kinetics.py": "8d79fcdfff498a183482dce199cf1987bc2f47b5bd503cdd04708bdf278566bf",
+    "scripts/phase0/w13_time_model.py": "e8d667eb15ee80f94808c0170ef757e8d30ea0e9e95dd395acc0d9a6fe5e9de6",
+    "scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "scripts/phase0/w5_joint_scifate2.py": "ff2c51a90ffa46df93794e8812c55970d43ed3a538a5f4595187dcad3a83aafe",
+    "scripts/phase0/w13_finalize_results.py": "bf62042f3a7d5139e7701198a851ba5deb2b15a2a2ccea442fe44095368c7891",
+    "scripts/phase0/w4_external_data_dynamo.py": "27146e80acc52599288f0cdd84bfb303a7e7f6ec1c7d08fc740e47b96663e444",
+    "scripts/phase0/w4_external_data_scntseq_align.py": "3957aba4fa6a95399f28bae09eb1c1f8e5feaf10e715bf17344ba929be01cf63",
+    "scripts/phase0/w5_scntseq_repair.py": "b0eaeaf6ad5ea00b83beb0e65136ca6af6e93b4c90035c6774d585aa6d97d525",
+    "scripts/phase0/w4_renge_data.py": "955445704dfea953888c9fb8758b4ca519e82abfc48541c34485acdef9c8b3b7",
+    "scripts/phase0/w3_validation.py": "95f6621340dc02f5fa5c75500c930fbe0a9a5cdebf790fbf40bf9b05ec301929",
+    "scripts/phase0/w3_7_native_train.py": "9e7bf883e05008f380a3e484810183538536922d808c76c3f09b8be82ba4f4d1",
+    "scripts/phase0/w4_synthetic.py": "616e69e274a8cb0831663d224ca27c79a114e386c634248f54c6bd9b6091331c"
+  },
+  "note": "Only document placement/navigation/status changed; outputs and scientific training code preserved"
+}

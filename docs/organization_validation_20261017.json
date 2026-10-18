@@ -1,0 +1,25 @@
+{
+  "status": "DOCUMENT_ORGANIZATION_VERIFIED",
+  "moved_documents": 51,
+  "categories": {
+    "historical_exploration": 5,
+    "publication_inventory": 1,
+    "correction_audit": 1,
+    "superseded_architecture": 8,
+    "historical_ledger": 1,
+    "supporting_milestone": 7,
+    "current": 3,
+    "historical_with_retracted_inferences": 3,
+    "valid_boundary_or_mixed_result": 5,
+    "data_provenance": 3,
+    "superseded_or_completed_plan": 12,
+    "byte_exact_front_page_snapshot": 2
+  },
+  "compatibility_aliases": 8,
+  "protected_files": 86,
+  "archive_records_verified": 4881,
+  "current_navigation_valid": true,
+  "errors": [],
+  "training_launched": false,
+  "scientific_results_changed": false
+}

@@ -25,7 +25,7 @@ def main():
               raw/"layout_SRR21518305/layout.json", raw/"validate_SRR21518305/status.json",
               root/"veloroute_condition_reservation_20260912/condition_split.csv",
               Path("configs/veloroute_core.yaml"), Path("configs/veloroute_g1.draft.yaml"),
-              Path("docs/veloroute_scope_amendment_20260912.md")]
+              Path("docs/history/legacy_architecture/veloroute_scope_amendment_20260912.md")]
     decision = json.loads((synthetic/"decision.json").read_text())
     summary = json.loads((smoke/"summary.json").read_text())
     layout = json.loads((raw/"layout_SRR21518305/layout.json").read_text())

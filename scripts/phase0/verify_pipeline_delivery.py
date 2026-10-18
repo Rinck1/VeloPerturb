@@ -144,7 +144,7 @@ def main():
             '- ESM2 使用 GENCODE v32 每 TF 最长蛋白；超过 1022 aa 的蛋白分窗并按长度合并，不冒称 canonical UniProt 全长上下文编码。',
             '- 中断/失败记录保留：下载长连接中断改为可校验分段续传；首次 USA 导入不兼容 -U/-A 后明确修复并补回归测试。最终数据 release 不覆盖旧产物。',
             '- 原始 SRA、失败/部分下载和量化产物均保留；FASTQ 仅做无损压缩，可从 .gz 或 SRA 恢复。', '',
-            '操作顺序与下一轮命令见 `docs/veloroute_pipeline_runbook_20260912.md`。',
+            '历史操作顺序与命令见 `docs/history/legacy_architecture/veloroute_pipeline_runbook_20260912.md`；当前状态见 `docs/current/STATUS.md`。',
         ]
         (run.directory / 'RESULTS.md').write_text('\n'.join(report) + '\n')
     print(json.dumps(result, ensure_ascii=False))

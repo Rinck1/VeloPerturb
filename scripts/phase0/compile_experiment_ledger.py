@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 from veloroute.artifacts import Run, save_csv, save_json, sha256
 
 ROOT = Path(__file__).resolve().parents[2]
-DOC = ROOT/'docs/veloroute_experiment_ledger_20260914.md'
+DOC = ROOT/'docs/history/experiment_ledgers/veloroute_experiment_ledger_20260914.md'
 EVIDENCE = {
     'legacy': 'outputs/veloroute_research_progress_20260914',
     'parity': 'outputs/veloroute_gfg_reference_parity_20260914',
