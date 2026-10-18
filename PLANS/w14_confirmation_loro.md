@@ -1,7 +1,9 @@
 # W14 确认实验：sci-FATE2 留一重复（LORO）
 
 日期：2026-10-17　|　规格：Claude　|　负责人：Rinck　|　执行：服务器 agent
-状态：**草案**。按第 2 节完成 W14-0 后改为"已冻结"，写入冻结提交号。冻结后不得修改本文件第 3–6 节；任何偏离写入第 9 节。
+状态：**已冻结，含2026-10-18执行澄清**。与 `PLANS/w14_execution_amendment_20261018.md` 和
+`configs/w14_loro_v1.json` 一并冻结；冻结提交号由 `outputs/w14_loro_v1/study_manifest.json`
+的 `freeze_commit` 唯一记录，避免自引用哈希。原草案与澄清冲突时，以澄清为准。
 
 ---
 

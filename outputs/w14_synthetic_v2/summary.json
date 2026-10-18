@@ -1,0 +1,50 @@
+{
+  "git_commit": "88bd6e20c8a91f72b18cecd2a3fda08e251ddc62",
+  "seed": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_synthetic.py",
+    "--output",
+    "outputs/w14_synthetic_v2"
+  ],
+  "data_hashes": {
+    "configs/w14_loro_v1.json": "f17ae335c3c9874e4305ec4e64527b4eb23b6a265179cfe4c793f1298be07087",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_synthetic.py": "26d2ef8f377de5340b4c6f01e94d7da8710752583c6c833b448ca32fb53c553e",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_model.py": "f655de47d1942721a86867289731f3c43e7a494af13ecd687748292dd628174f"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "618d70e44ccccc0cb199fdc3a055515d3b8d2a60b205d8e0582c6ccc4f824fee",
+  "runtime_seconds": 72.70429588481784,
+  "status": "W14_SYNTHETIC_IMPLEMENTATION_CHECK_PASSED",
+  "repetitions_per_scenario": 20,
+  "threshold": 0.02,
+  "positive_mean_gain": 0.7073035439413946,
+  "positive_median_gain": 0.7610871897522093,
+  "null_mean_gain": -0.19391032146142897,
+  "null_median_gain": -0.14729579697713602,
+  "positive_fraction_over_threshold": 1.0,
+  "null_fraction_over_threshold": 0.25,
+  "biological_data_read": false,
+  "formal_false_positive_control_claim": false,
+  "interpretation": "Positive median gain and no positive average null gain required; individual null gains occur and are not significance evidence"
+}
