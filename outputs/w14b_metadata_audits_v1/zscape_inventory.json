@@ -1,0 +1,2068 @@
+{
+  "git_commit": "abb3500c006c3cc66adb8faef2588f9f8ccff416",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_metadata_audits.py",
+    "--output",
+    "outputs/w14b_metadata_audits_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_metadata_audits.py": "f6994fc303661868c3c16f3d9829cb0c3cc792e46d42e77595049c2ec42f5543",
+    "/data/yuchang/veloroute_ucheck_20260915/merlin_suppl.xlsx": "f11c225d1ae5e7b9a84160095a0dea1986d04cd480644abf229069681b2307fb"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 4.318948108702898,
+  "GEO": "GSE202639",
+  "BioProject": "PRJNA836866",
+  "runs": [
+    {
+      "run_accession": "SRR19155608",
+      "experiment_accession": "SRX15222303",
+      "sample_accession": "SAMN28175806",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "PAIRED",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/008/SRR19155608/SRR19155608_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/008/SRR19155608/SRR19155608_2.fastq.gz",
+      "fastq_bytes": "2777352961;5324704675"
+    },
+    {
+      "run_accession": "SRR19155630",
+      "experiment_accession": "SRX15222306",
+      "sample_accession": "SAMN28175809",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/030/SRR19155630/SRR19155630.fastq.gz",
+      "fastq_bytes": "3709856119"
+    },
+    {
+      "run_accession": "SRR19155631",
+      "experiment_accession": "SRX15222306",
+      "sample_accession": "SAMN28175809",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/031/SRR19155631/SRR19155631.fastq.gz",
+      "fastq_bytes": "2919495314"
+    },
+    {
+      "run_accession": "SRR19155635",
+      "experiment_accession": "SRX15222306",
+      "sample_accession": "SAMN28175809",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/035/SRR19155635/SRR19155635.fastq.gz",
+      "fastq_bytes": "2987080951"
+    },
+    {
+      "run_accession": "SRR19155639",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/039/SRR19155639/SRR19155639.fastq.gz",
+      "fastq_bytes": "4661104428"
+    },
+    {
+      "run_accession": "SRR19155642",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/042/SRR19155642/SRR19155642.fastq.gz",
+      "fastq_bytes": "5105858699"
+    },
+    {
+      "run_accession": "SRR19155643",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/043/SRR19155643/SRR19155643.fastq.gz",
+      "fastq_bytes": "5129229211"
+    },
+    {
+      "run_accession": "SRR19155647",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/047/SRR19155647/SRR19155647.fastq.gz",
+      "fastq_bytes": "5501732109"
+    },
+    {
+      "run_accession": "SRR19155651",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/051/SRR19155651/SRR19155651.fastq.gz",
+      "fastq_bytes": "8042704383"
+    },
+    {
+      "run_accession": "SRR19155653",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/053/SRR19155653/SRR19155653.fastq.gz",
+      "fastq_bytes": "5287038196"
+    },
+    {
+      "run_accession": "SRR19155659",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/059/SRR19155659/SRR19155659.fastq.gz",
+      "fastq_bytes": "6428731131"
+    },
+    {
+      "run_accession": "SRR19155664",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/064/SRR19155664/SRR19155664.fastq.gz",
+      "fastq_bytes": "5225906411"
+    },
+    {
+      "run_accession": "SRR19155665",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/065/SRR19155665/SRR19155665.fastq.gz",
+      "fastq_bytes": "5252145971"
+    },
+    {
+      "run_accession": "SRR19155669",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/069/SRR19155669/SRR19155669.fastq.gz",
+      "fastq_bytes": "5498802574"
+    },
+    {
+      "run_accession": "SRR19155671",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/071/SRR19155671/SRR19155671.fastq.gz",
+      "fastq_bytes": "6521777138"
+    },
+    {
+      "run_accession": "SRR19155681",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/081/SRR19155681/SRR19155681.fastq.gz",
+      "fastq_bytes": "5851502630"
+    },
+    {
+      "run_accession": "SRR19155683",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/083/SRR19155683/SRR19155683.fastq.gz",
+      "fastq_bytes": "5846823665"
+    },
+    {
+      "run_accession": "SRR19155686",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/086/SRR19155686/SRR19155686.fastq.gz",
+      "fastq_bytes": "5701162624"
+    },
+    {
+      "run_accession": "SRR19155693",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/093/SRR19155693/SRR19155693.fastq.gz",
+      "fastq_bytes": "5398673044"
+    },
+    {
+      "run_accession": "SRR19155699",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/099/SRR19155699/SRR19155699.fastq.gz",
+      "fastq_bytes": "6118384782"
+    },
+    {
+      "run_accession": "SRR19155711",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/011/SRR19155711/SRR19155711.fastq.gz",
+      "fastq_bytes": "5438988714"
+    },
+    {
+      "run_accession": "SRR19155715",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/015/SRR19155715/SRR19155715.fastq.gz",
+      "fastq_bytes": "5356517015"
+    },
+    {
+      "run_accession": "SRR19155717",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/017/SRR19155717/SRR19155717.fastq.gz",
+      "fastq_bytes": "5278457457"
+    },
+    {
+      "run_accession": "SRR19155724",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/024/SRR19155724/SRR19155724.fastq.gz",
+      "fastq_bytes": "4703730140"
+    },
+    {
+      "run_accession": "SRR19155734",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/034/SRR19155734/SRR19155734.fastq.gz",
+      "fastq_bytes": "4003837923"
+    },
+    {
+      "run_accession": "SRR19155738",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/038/SRR19155738/SRR19155738.fastq.gz",
+      "fastq_bytes": "4419238918"
+    },
+    {
+      "run_accession": "SRR19155739",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/039/SRR19155739/SRR19155739.fastq.gz",
+      "fastq_bytes": "4452741927"
+    },
+    {
+      "run_accession": "SRR19155740",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/040/SRR19155740/SRR19155740.fastq.gz",
+      "fastq_bytes": "4738553510"
+    },
+    {
+      "run_accession": "SRR19155746",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/046/SRR19155746/SRR19155746.fastq.gz",
+      "fastq_bytes": "7172287302"
+    },
+    {
+      "run_accession": "SRR19155754",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/054/SRR19155754/SRR19155754.fastq.gz",
+      "fastq_bytes": "4819526942"
+    },
+    {
+      "run_accession": "SRR19155756",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/056/SRR19155756/SRR19155756.fastq.gz",
+      "fastq_bytes": "5562557033"
+    },
+    {
+      "run_accession": "SRR19155757",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/057/SRR19155757/SRR19155757.fastq.gz",
+      "fastq_bytes": "5603775613"
+    },
+    {
+      "run_accession": "SRR19155763",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/063/SRR19155763/SRR19155763.fastq.gz",
+      "fastq_bytes": "5245089479"
+    },
+    {
+      "run_accession": "SRR19155764",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/064/SRR19155764/SRR19155764.fastq.gz",
+      "fastq_bytes": "5066846122"
+    },
+    {
+      "run_accession": "SRR19155776",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/076/SRR19155776/SRR19155776.fastq.gz",
+      "fastq_bytes": "5141952224"
+    },
+    {
+      "run_accession": "SRR19155786",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/086/SRR19155786/SRR19155786.fastq.gz",
+      "fastq_bytes": "4416252511"
+    },
+    {
+      "run_accession": "SRR19155790",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/090/SRR19155790/SRR19155790.fastq.gz",
+      "fastq_bytes": "4756404191"
+    },
+    {
+      "run_accession": "SRR19155792",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/092/SRR19155792/SRR19155792.fastq.gz",
+      "fastq_bytes": "4628842275"
+    },
+    {
+      "run_accession": "SRR19155795",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/095/SRR19155795/SRR19155795.fastq.gz",
+      "fastq_bytes": "5331714763"
+    },
+    {
+      "run_accession": "SRR19155796",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/096/SRR19155796/SRR19155796.fastq.gz",
+      "fastq_bytes": "5370516449"
+    },
+    {
+      "run_accession": "SRR19155805",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/005/SRR19155805/SRR19155805.fastq.gz",
+      "fastq_bytes": "4052084091"
+    },
+    {
+      "run_accession": "SRR19155806",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/006/SRR19155806/SRR19155806.fastq.gz",
+      "fastq_bytes": "4765859345"
+    },
+    {
+      "run_accession": "SRR19155808",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/008/SRR19155808/SRR19155808.fastq.gz",
+      "fastq_bytes": "4700830674"
+    },
+    {
+      "run_accession": "SRR19155815",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/015/SRR19155815/SRR19155815.fastq.gz",
+      "fastq_bytes": "5039934464"
+    },
+    {
+      "run_accession": "SRR19155816",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/016/SRR19155816/SRR19155816.fastq.gz",
+      "fastq_bytes": "5150392864"
+    },
+    {
+      "run_accession": "SRR19155819",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/019/SRR19155819/SRR19155819.fastq.gz",
+      "fastq_bytes": "5295827737"
+    },
+    {
+      "run_accession": "SRR19155820",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/020/SRR19155820/SRR19155820.fastq.gz",
+      "fastq_bytes": "4057115047"
+    },
+    {
+      "run_accession": "SRR19155607",
+      "experiment_accession": "SRX15222302",
+      "sample_accession": "SAMN28175805",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "PAIRED",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/007/SRR19155607/SRR19155607_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/007/SRR19155607/SRR19155607_2.fastq.gz",
+      "fastq_bytes": "4411463458;8271757485"
+    },
+    {
+      "run_accession": "SRR19155615",
+      "experiment_accession": "SRX15222304",
+      "sample_accession": "SAMN28175807",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/015/SRR19155615/SRR19155615.fastq.gz",
+      "fastq_bytes": "5789389609"
+    },
+    {
+      "run_accession": "SRR19155616",
+      "experiment_accession": "SRX15222304",
+      "sample_accession": "SAMN28175807",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/016/SRR19155616/SRR19155616.fastq.gz",
+      "fastq_bytes": "4924071341"
+    },
+    {
+      "run_accession": "SRR19155617",
+      "experiment_accession": "SRX15222304",
+      "sample_accession": "SAMN28175807",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/017/SRR19155617/SRR19155617.fastq.gz",
+      "fastq_bytes": "4601936390"
+    },
+    {
+      "run_accession": "SRR19155624",
+      "experiment_accession": "SRX15222305",
+      "sample_accession": "SAMN28175808",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/024/SRR19155624/SRR19155624.fastq.gz",
+      "fastq_bytes": "60892733241"
+    },
+    {
+      "run_accession": "SRR19155625",
+      "experiment_accession": "SRX15222306",
+      "sample_accession": "SAMN28175809",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/025/SRR19155625/SRR19155625.fastq.gz",
+      "fastq_bytes": "3877468833"
+    },
+    {
+      "run_accession": "SRR19155626",
+      "experiment_accession": "SRX15222306",
+      "sample_accession": "SAMN28175809",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/026/SRR19155626/SRR19155626.fastq.gz",
+      "fastq_bytes": "3312419756"
+    },
+    {
+      "run_accession": "SRR19155638",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/038/SRR19155638/SRR19155638.fastq.gz",
+      "fastq_bytes": "4638944846"
+    },
+    {
+      "run_accession": "SRR19155644",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/044/SRR19155644/SRR19155644.fastq.gz",
+      "fastq_bytes": "5491452393"
+    },
+    {
+      "run_accession": "SRR19155646",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/046/SRR19155646/SRR19155646.fastq.gz",
+      "fastq_bytes": "5418056385"
+    },
+    {
+      "run_accession": "SRR19155649",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/049/SRR19155649/SRR19155649.fastq.gz",
+      "fastq_bytes": "8162898379"
+    },
+    {
+      "run_accession": "SRR19155663",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/063/SRR19155663/SRR19155663.fastq.gz",
+      "fastq_bytes": "5252740892"
+    },
+    {
+      "run_accession": "SRR19155666",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/066/SRR19155666/SRR19155666.fastq.gz",
+      "fastq_bytes": "5849081279"
+    },
+    {
+      "run_accession": "SRR19155667",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/067/SRR19155667/SRR19155667.fastq.gz",
+      "fastq_bytes": "5790603119"
+    },
+    {
+      "run_accession": "SRR19155668",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/068/SRR19155668/SRR19155668.fastq.gz",
+      "fastq_bytes": "5762379840"
+    },
+    {
+      "run_accession": "SRR19155679",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/079/SRR19155679/SRR19155679.fastq.gz",
+      "fastq_bytes": "5908365879"
+    },
+    {
+      "run_accession": "SRR19155680",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/080/SRR19155680/SRR19155680.fastq.gz",
+      "fastq_bytes": "5927463226"
+    },
+    {
+      "run_accession": "SRR19155689",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/089/SRR19155689/SRR19155689.fastq.gz",
+      "fastq_bytes": "5138986130"
+    },
+    {
+      "run_accession": "SRR19155696",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/096/SRR19155696/SRR19155696.fastq.gz",
+      "fastq_bytes": "5346232860"
+    },
+    {
+      "run_accession": "SRR19155704",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/004/SRR19155704/SRR19155704.fastq.gz",
+      "fastq_bytes": "5207088106"
+    },
+    {
+      "run_accession": "SRR19155705",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/005/SRR19155705/SRR19155705.fastq.gz",
+      "fastq_bytes": "5231491903"
+    },
+    {
+      "run_accession": "SRR19155707",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/007/SRR19155707/SRR19155707.fastq.gz",
+      "fastq_bytes": "4679842726"
+    },
+    {
+      "run_accession": "SRR19155709",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/009/SRR19155709/SRR19155709.fastq.gz",
+      "fastq_bytes": "5684494971"
+    },
+    {
+      "run_accession": "SRR19155712",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/012/SRR19155712/SRR19155712.fastq.gz",
+      "fastq_bytes": "5410080293"
+    },
+    {
+      "run_accession": "SRR19155714",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/014/SRR19155714/SRR19155714.fastq.gz",
+      "fastq_bytes": "5440433779"
+    },
+    {
+      "run_accession": "SRR19155718",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/018/SRR19155718/SRR19155718.fastq.gz",
+      "fastq_bytes": "5304741240"
+    },
+    {
+      "run_accession": "SRR19155719",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/019/SRR19155719/SRR19155719.fastq.gz",
+      "fastq_bytes": "5802052044"
+    },
+    {
+      "run_accession": "SRR19155720",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/020/SRR19155720/SRR19155720.fastq.gz",
+      "fastq_bytes": "5744395906"
+    },
+    {
+      "run_accession": "SRR19155721",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/021/SRR19155721/SRR19155721.fastq.gz",
+      "fastq_bytes": "5713909690"
+    },
+    {
+      "run_accession": "SRR19155723",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/023/SRR19155723/SRR19155723.fastq.gz",
+      "fastq_bytes": "6098514419"
+    },
+    {
+      "run_accession": "SRR19155727",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/027/SRR19155727/SRR19155727.fastq.gz",
+      "fastq_bytes": "6039261446"
+    },
+    {
+      "run_accession": "SRR19155731",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/031/SRR19155731/SRR19155731.fastq.gz",
+      "fastq_bytes": "4998582814"
+    },
+    {
+      "run_accession": "SRR19155744",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/044/SRR19155744/SRR19155744.fastq.gz",
+      "fastq_bytes": "4712807221"
+    },
+    {
+      "run_accession": "SRR19155751",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/051/SRR19155751/SRR19155751.fastq.gz",
+      "fastq_bytes": "4502879940"
+    },
+    {
+      "run_accession": "SRR19155759",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/059/SRR19155759/SRR19155759.fastq.gz",
+      "fastq_bytes": "4784162798"
+    },
+    {
+      "run_accession": "SRR19155760",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/060/SRR19155760/SRR19155760.fastq.gz",
+      "fastq_bytes": "4623024930"
+    },
+    {
+      "run_accession": "SRR19155762",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/062/SRR19155762/SRR19155762.fastq.gz",
+      "fastq_bytes": "5135793291"
+    },
+    {
+      "run_accession": "SRR19155766",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/066/SRR19155766/SRR19155766.fastq.gz",
+      "fastq_bytes": "5106222490"
+    },
+    {
+      "run_accession": "SRR19155773",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/073/SRR19155773/SRR19155773.fastq.gz",
+      "fastq_bytes": "4698359839"
+    },
+    {
+      "run_accession": "SRR19155778",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/078/SRR19155778/SRR19155778.fastq.gz",
+      "fastq_bytes": "4950312887"
+    },
+    {
+      "run_accession": "SRR19155779",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/079/SRR19155779/SRR19155779.fastq.gz",
+      "fastq_bytes": "4972961440"
+    },
+    {
+      "run_accession": "SRR19155784",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/084/SRR19155784/SRR19155784.fastq.gz",
+      "fastq_bytes": "4476068798"
+    },
+    {
+      "run_accession": "SRR19155785",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/085/SRR19155785/SRR19155785.fastq.gz",
+      "fastq_bytes": "4571533372"
+    },
+    {
+      "run_accession": "SRR19155788",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/088/SRR19155788/SRR19155788.fastq.gz",
+      "fastq_bytes": "4450845799"
+    },
+    {
+      "run_accession": "SRR19155814",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/014/SRR19155814/SRR19155814.fastq.gz",
+      "fastq_bytes": "4596046620"
+    },
+    {
+      "run_accession": "SRR19155817",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/017/SRR19155817/SRR19155817.fastq.gz",
+      "fastq_bytes": "4970294281"
+    },
+    {
+      "run_accession": "SRR19155821",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/021/SRR19155821/SRR19155821.fastq.gz",
+      "fastq_bytes": "5407841509"
+    },
+    {
+      "run_accession": "SRR19155824",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/024/SRR19155824/SRR19155824.fastq.gz",
+      "fastq_bytes": "4358576459"
+    },
+    {
+      "run_accession": "SRR19155826",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/026/SRR19155826/SRR19155826.fastq.gz",
+      "fastq_bytes": "4298362368"
+    },
+    {
+      "run_accession": "SRR19155606",
+      "experiment_accession": "SRX15222301",
+      "sample_accession": "SAMN28175804",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "PAIRED",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/006/SRR19155606/SRR19155606_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/006/SRR19155606/SRR19155606_2.fastq.gz",
+      "fastq_bytes": "2989452594;5095387495"
+    },
+    {
+      "run_accession": "SRR19155609",
+      "experiment_accession": "SRX15222304",
+      "sample_accession": "SAMN28175807",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/009/SRR19155609/SRR19155609.fastq.gz",
+      "fastq_bytes": "6298386382"
+    },
+    {
+      "run_accession": "SRR19155611",
+      "experiment_accession": "SRX15222304",
+      "sample_accession": "SAMN28175807",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/011/SRR19155611/SRR19155611.fastq.gz",
+      "fastq_bytes": "5405856052"
+    },
+    {
+      "run_accession": "SRR19155612",
+      "experiment_accession": "SRX15222304",
+      "sample_accession": "SAMN28175807",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/012/SRR19155612/SRR19155612.fastq.gz",
+      "fastq_bytes": "5068517597"
+    },
+    {
+      "run_accession": "SRR19155614",
+      "experiment_accession": "SRX15222304",
+      "sample_accession": "SAMN28175807",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/014/SRR19155614/SRR19155614.fastq.gz",
+      "fastq_bytes": "6148643370"
+    },
+    {
+      "run_accession": "SRR19155621",
+      "experiment_accession": "SRX15222305",
+      "sample_accession": "SAMN28175808",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/021/SRR19155621/SRR19155621.fastq.gz",
+      "fastq_bytes": "66136486979"
+    },
+    {
+      "run_accession": "SRR19155623",
+      "experiment_accession": "SRX15222305",
+      "sample_accession": "SAMN28175808",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/023/SRR19155623/SRR19155623.fastq.gz",
+      "fastq_bytes": "64790885714"
+    },
+    {
+      "run_accession": "SRR19155627",
+      "experiment_accession": "SRX15222306",
+      "sample_accession": "SAMN28175809",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/027/SRR19155627/SRR19155627.fastq.gz",
+      "fastq_bytes": "2740081504"
+    },
+    {
+      "run_accession": "SRR19155632",
+      "experiment_accession": "SRX15222306",
+      "sample_accession": "SAMN28175809",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/032/SRR19155632/SRR19155632.fastq.gz",
+      "fastq_bytes": "2384279274"
+    },
+    {
+      "run_accession": "SRR19155634",
+      "experiment_accession": "SRX15222306",
+      "sample_accession": "SAMN28175809",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/034/SRR19155634/SRR19155634.fastq.gz",
+      "fastq_bytes": "2309829567"
+    },
+    {
+      "run_accession": "SRR19155640",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/040/SRR19155640/SRR19155640.fastq.gz",
+      "fastq_bytes": "5178429655"
+    },
+    {
+      "run_accession": "SRR19155650",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/050/SRR19155650/SRR19155650.fastq.gz",
+      "fastq_bytes": "8082735876"
+    },
+    {
+      "run_accession": "SRR19155654",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/054/SRR19155654/SRR19155654.fastq.gz",
+      "fastq_bytes": "5238662021"
+    },
+    {
+      "run_accession": "SRR19155658",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/058/SRR19155658/SRR19155658.fastq.gz",
+      "fastq_bytes": "5475910877"
+    },
+    {
+      "run_accession": "SRR19155670",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/070/SRR19155670/SRR19155670.fastq.gz",
+      "fastq_bytes": "5786655236"
+    },
+    {
+      "run_accession": "SRR19155673",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/073/SRR19155673/SRR19155673.fastq.gz",
+      "fastq_bytes": "6429855817"
+    },
+    {
+      "run_accession": "SRR19155676",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/076/SRR19155676/SRR19155676.fastq.gz",
+      "fastq_bytes": "5405814311"
+    },
+    {
+      "run_accession": "SRR19155678",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/078/SRR19155678/SRR19155678.fastq.gz",
+      "fastq_bytes": "5399531917"
+    },
+    {
+      "run_accession": "SRR19155684",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/084/SRR19155684/SRR19155684.fastq.gz",
+      "fastq_bytes": "5786301919"
+    },
+    {
+      "run_accession": "SRR19155685",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/085/SRR19155685/SRR19155685.fastq.gz",
+      "fastq_bytes": "5732201814"
+    },
+    {
+      "run_accession": "SRR19155691",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/091/SRR19155691/SRR19155691.fastq.gz",
+      "fastq_bytes": "5869878768"
+    },
+    {
+      "run_accession": "SRR19155695",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/095/SRR19155695/SRR19155695.fastq.gz",
+      "fastq_bytes": "5321037402"
+    },
+    {
+      "run_accession": "SRR19155700",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/000/SRR19155700/SRR19155700.fastq.gz",
+      "fastq_bytes": "6147527858"
+    },
+    {
+      "run_accession": "SRR19155703",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/003/SRR19155703/SRR19155703.fastq.gz",
+      "fastq_bytes": "5233563316"
+    },
+    {
+      "run_accession": "SRR19155713",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/013/SRR19155713/SRR19155713.fastq.gz",
+      "fastq_bytes": "5867393090"
+    },
+    {
+      "run_accession": "SRR19155726",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/026/SRR19155726/SRR19155726.fastq.gz",
+      "fastq_bytes": "6009379971"
+    },
+    {
+      "run_accession": "SRR19155733",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/033/SRR19155733/SRR19155733.fastq.gz",
+      "fastq_bytes": "4140570714"
+    },
+    {
+      "run_accession": "SRR19155736",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/036/SRR19155736/SRR19155736.fastq.gz",
+      "fastq_bytes": "4478479400"
+    },
+    {
+      "run_accession": "SRR19155737",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/037/SRR19155737/SRR19155737.fastq.gz",
+      "fastq_bytes": "4571351942"
+    },
+    {
+      "run_accession": "SRR19155743",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/043/SRR19155743/SRR19155743.fastq.gz",
+      "fastq_bytes": "4986116603"
+    },
+    {
+      "run_accession": "SRR19155747",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/047/SRR19155747/SRR19155747.fastq.gz",
+      "fastq_bytes": "6920679962"
+    },
+    {
+      "run_accession": "SRR19155750",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/050/SRR19155750/SRR19155750.fastq.gz",
+      "fastq_bytes": "4659250698"
+    },
+    {
+      "run_accession": "SRR19155752",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/052/SRR19155752/SRR19155752.fastq.gz",
+      "fastq_bytes": "4536161848"
+    },
+    {
+      "run_accession": "SRR19155765",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/065/SRR19155765/SRR19155765.fastq.gz",
+      "fastq_bytes": "4855538825"
+    },
+    {
+      "run_accession": "SRR19155767",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/067/SRR19155767/SRR19155767.fastq.gz",
+      "fastq_bytes": "5639093268"
+    },
+    {
+      "run_accession": "SRR19155768",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/068/SRR19155768/SRR19155768.fastq.gz",
+      "fastq_bytes": "5759272748"
+    },
+    {
+      "run_accession": "SRR19155769",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/069/SRR19155769/SRR19155769.fastq.gz",
+      "fastq_bytes": "5565733511"
+    },
+    {
+      "run_accession": "SRR19155770",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/070/SRR19155770/SRR19155770.fastq.gz",
+      "fastq_bytes": "5607388974"
+    },
+    {
+      "run_accession": "SRR19155771",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/071/SRR19155771/SRR19155771.fastq.gz",
+      "fastq_bytes": "4760201230"
+    },
+    {
+      "run_accession": "SRR19155775",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/075/SRR19155775/SRR19155775.fastq.gz",
+      "fastq_bytes": "4995872927"
+    },
+    {
+      "run_accession": "SRR19155780",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/080/SRR19155780/SRR19155780.fastq.gz",
+      "fastq_bytes": "4983849985"
+    },
+    {
+      "run_accession": "SRR19155782",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/082/SRR19155782/SRR19155782.fastq.gz",
+      "fastq_bytes": "4913996173"
+    },
+    {
+      "run_accession": "SRR19155787",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/087/SRR19155787/SRR19155787.fastq.gz",
+      "fastq_bytes": "5252794214"
+    },
+    {
+      "run_accession": "SRR19155793",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/093/SRR19155793/SRR19155793.fastq.gz",
+      "fastq_bytes": "5405173391"
+    },
+    {
+      "run_accession": "SRR19155797",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/097/SRR19155797/SRR19155797.fastq.gz",
+      "fastq_bytes": "4577739348"
+    },
+    {
+      "run_accession": "SRR19155798",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/098/SRR19155798/SRR19155798.fastq.gz",
+      "fastq_bytes": "5072058042"
+    },
+    {
+      "run_accession": "SRR19155800",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/000/SRR19155800/SRR19155800.fastq.gz",
+      "fastq_bytes": "4517967155"
+    },
+    {
+      "run_accession": "SRR19155810",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/010/SRR19155810/SRR19155810.fastq.gz",
+      "fastq_bytes": "4736351479"
+    },
+    {
+      "run_accession": "SRR19155827",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/027/SRR19155827/SRR19155827.fastq.gz",
+      "fastq_bytes": "4330689623"
+    },
+    {
+      "run_accession": "SRR19155610",
+      "experiment_accession": "SRX15222304",
+      "sample_accession": "SAMN28175807",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/010/SRR19155610/SRR19155610.fastq.gz",
+      "fastq_bytes": "5198011682"
+    },
+    {
+      "run_accession": "SRR19155618",
+      "experiment_accession": "SRX15222304",
+      "sample_accession": "SAMN28175807",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/018/SRR19155618/SRR19155618.fastq.gz",
+      "fastq_bytes": "4785158174"
+    },
+    {
+      "run_accession": "SRR19155622",
+      "experiment_accession": "SRX15222305",
+      "sample_accession": "SAMN28175808",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/022/SRR19155622/SRR19155622.fastq.gz",
+      "fastq_bytes": "62477480892"
+    },
+    {
+      "run_accession": "SRR19155628",
+      "experiment_accession": "SRX15222306",
+      "sample_accession": "SAMN28175809",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/028/SRR19155628/SRR19155628.fastq.gz",
+      "fastq_bytes": "1892783172"
+    },
+    {
+      "run_accession": "SRR19155637",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/037/SRR19155637/SRR19155637.fastq.gz",
+      "fastq_bytes": "4663397671"
+    },
+    {
+      "run_accession": "SRR19155648",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/048/SRR19155648/SRR19155648.fastq.gz",
+      "fastq_bytes": "5440967634"
+    },
+    {
+      "run_accession": "SRR19155652",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/052/SRR19155652/SRR19155652.fastq.gz",
+      "fastq_bytes": "8079088159"
+    },
+    {
+      "run_accession": "SRR19155656",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/056/SRR19155656/SRR19155656.fastq.gz",
+      "fastq_bytes": "5235282508"
+    },
+    {
+      "run_accession": "SRR19155657",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/057/SRR19155657/SRR19155657.fastq.gz",
+      "fastq_bytes": "6491061467"
+    },
+    {
+      "run_accession": "SRR19155661",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/061/SRR19155661/SRR19155661.fastq.gz",
+      "fastq_bytes": "6428158491"
+    },
+    {
+      "run_accession": "SRR19155682",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/082/SRR19155682/SRR19155682.fastq.gz",
+      "fastq_bytes": "5822410318"
+    },
+    {
+      "run_accession": "SRR19155688",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/088/SRR19155688/SRR19155688.fastq.gz",
+      "fastq_bytes": "5185615317"
+    },
+    {
+      "run_accession": "SRR19155692",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/092/SRR19155692/SRR19155692.fastq.gz",
+      "fastq_bytes": "5138093921"
+    },
+    {
+      "run_accession": "SRR19155697",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/097/SRR19155697/SRR19155697.fastq.gz",
+      "fastq_bytes": "6206116921"
+    },
+    {
+      "run_accession": "SRR19155702",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/002/SRR19155702/SRR19155702.fastq.gz",
+      "fastq_bytes": "5841403967"
+    },
+    {
+      "run_accession": "SRR19155706",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/006/SRR19155706/SRR19155706.fastq.gz",
+      "fastq_bytes": "4725028804"
+    },
+    {
+      "run_accession": "SRR19155710",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/010/SRR19155710/SRR19155710.fastq.gz",
+      "fastq_bytes": "5491136160"
+    },
+    {
+      "run_accession": "SRR19155725",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/025/SRR19155725/SRR19155725.fastq.gz",
+      "fastq_bytes": "6040049733"
+    },
+    {
+      "run_accession": "SRR19155729",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/029/SRR19155729/SRR19155729.fastq.gz",
+      "fastq_bytes": "4999507869"
+    },
+    {
+      "run_accession": "SRR19155730",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/030/SRR19155730/SRR19155730.fastq.gz",
+      "fastq_bytes": "4975263429"
+    },
+    {
+      "run_accession": "SRR19155732",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/032/SRR19155732/SRR19155732.fastq.gz",
+      "fastq_bytes": "4883225929"
+    },
+    {
+      "run_accession": "SRR19155735",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/035/SRR19155735/SRR19155735.fastq.gz",
+      "fastq_bytes": "4032666076"
+    },
+    {
+      "run_accession": "SRR19155745",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/045/SRR19155745/SRR19155745.fastq.gz",
+      "fastq_bytes": "7025177526"
+    },
+    {
+      "run_accession": "SRR19155755",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/055/SRR19155755/SRR19155755.fastq.gz",
+      "fastq_bytes": "5758655172"
+    },
+    {
+      "run_accession": "SRR19155772",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/072/SRR19155772/SRR19155772.fastq.gz",
+      "fastq_bytes": "4863712008"
+    },
+    {
+      "run_accession": "SRR19155783",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/083/SRR19155783/SRR19155783.fastq.gz",
+      "fastq_bytes": "4950466328"
+    },
+    {
+      "run_accession": "SRR19155789",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/089/SRR19155789/SRR19155789.fastq.gz",
+      "fastq_bytes": "4657453658"
+    },
+    {
+      "run_accession": "SRR19155799",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/099/SRR19155799/SRR19155799.fastq.gz",
+      "fastq_bytes": "4672361988"
+    },
+    {
+      "run_accession": "SRR19155802",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/002/SRR19155802/SRR19155802.fastq.gz",
+      "fastq_bytes": "4078497032"
+    },
+    {
+      "run_accession": "SRR19155803",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/003/SRR19155803/SRR19155803.fastq.gz",
+      "fastq_bytes": "4165140566"
+    },
+    {
+      "run_accession": "SRR19155818",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/018/SRR19155818/SRR19155818.fastq.gz",
+      "fastq_bytes": "5006256305"
+    },
+    {
+      "run_accession": "SRR19155823",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/023/SRR19155823/SRR19155823.fastq.gz",
+      "fastq_bytes": "5256908360"
+    },
+    {
+      "run_accession": "SRR19155825",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/025/SRR19155825/SRR19155825.fastq.gz",
+      "fastq_bytes": "4449276090"
+    },
+    {
+      "run_accession": "SRR19155613",
+      "experiment_accession": "SRX15222304",
+      "sample_accession": "SAMN28175807",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/013/SRR19155613/SRR19155613.fastq.gz",
+      "fastq_bytes": "5932531338"
+    },
+    {
+      "run_accession": "SRR19155619",
+      "experiment_accession": "SRX15222304",
+      "sample_accession": "SAMN28175807",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/019/SRR19155619/SRR19155619.fastq.gz",
+      "fastq_bytes": "4489198989"
+    },
+    {
+      "run_accession": "SRR19155620",
+      "experiment_accession": "SRX15222304",
+      "sample_accession": "SAMN28175807",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/020/SRR19155620/SRR19155620.fastq.gz",
+      "fastq_bytes": "5560548693"
+    },
+    {
+      "run_accession": "SRR19155629",
+      "experiment_accession": "SRX15222306",
+      "sample_accession": "SAMN28175809",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/029/SRR19155629/SRR19155629.fastq.gz",
+      "fastq_bytes": "3250222775"
+    },
+    {
+      "run_accession": "SRR19155633",
+      "experiment_accession": "SRX15222306",
+      "sample_accession": "SAMN28175809",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/033/SRR19155633/SRR19155633.fastq.gz",
+      "fastq_bytes": "2870492866"
+    },
+    {
+      "run_accession": "SRR19155636",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/036/SRR19155636/SRR19155636.fastq.gz",
+      "fastq_bytes": "5553662027"
+    },
+    {
+      "run_accession": "SRR19155641",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/041/SRR19155641/SRR19155641.fastq.gz",
+      "fastq_bytes": "5132081863"
+    },
+    {
+      "run_accession": "SRR19155645",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/045/SRR19155645/SRR19155645.fastq.gz",
+      "fastq_bytes": "5444030775"
+    },
+    {
+      "run_accession": "SRR19155655",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/055/SRR19155655/SRR19155655.fastq.gz",
+      "fastq_bytes": "5213075154"
+    },
+    {
+      "run_accession": "SRR19155660",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/060/SRR19155660/SRR19155660.fastq.gz",
+      "fastq_bytes": "6398277328"
+    },
+    {
+      "run_accession": "SRR19155662",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/062/SRR19155662/SRR19155662.fastq.gz",
+      "fastq_bytes": "5302330843"
+    },
+    {
+      "run_accession": "SRR19155672",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/072/SRR19155672/SRR19155672.fastq.gz",
+      "fastq_bytes": "6460856165"
+    },
+    {
+      "run_accession": "SRR19155674",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/074/SRR19155674/SRR19155674.fastq.gz",
+      "fastq_bytes": "6459686335"
+    },
+    {
+      "run_accession": "SRR19155675",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/075/SRR19155675/SRR19155675.fastq.gz",
+      "fastq_bytes": "5461557058"
+    },
+    {
+      "run_accession": "SRR19155677",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/077/SRR19155677/SRR19155677.fastq.gz",
+      "fastq_bytes": "5377060668"
+    },
+    {
+      "run_accession": "SRR19155687",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/087/SRR19155687/SRR19155687.fastq.gz",
+      "fastq_bytes": "5731176067"
+    },
+    {
+      "run_accession": "SRR19155690",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/090/SRR19155690/SRR19155690.fastq.gz",
+      "fastq_bytes": "5112880638"
+    },
+    {
+      "run_accession": "SRR19155694",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/094/SRR19155694/SRR19155694.fastq.gz",
+      "fastq_bytes": "5346680301"
+    },
+    {
+      "run_accession": "SRR19155698",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/098/SRR19155698/SRR19155698.fastq.gz",
+      "fastq_bytes": "6148683319"
+    },
+    {
+      "run_accession": "SRR19155701",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/001/SRR19155701/SRR19155701.fastq.gz",
+      "fastq_bytes": "5281083971"
+    },
+    {
+      "run_accession": "SRR19155708",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/008/SRR19155708/SRR19155708.fastq.gz",
+      "fastq_bytes": "4655784360"
+    },
+    {
+      "run_accession": "SRR19155716",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/016/SRR19155716/SRR19155716.fastq.gz",
+      "fastq_bytes": "5306004540"
+    },
+    {
+      "run_accession": "SRR19155722",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/022/SRR19155722/SRR19155722.fastq.gz",
+      "fastq_bytes": "5743756468"
+    },
+    {
+      "run_accession": "SRR19155728",
+      "experiment_accession": "SRX15222307",
+      "sample_accession": "SAMN28175810",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/028/SRR19155728/SRR19155728.fastq.gz",
+      "fastq_bytes": "5048057879"
+    },
+    {
+      "run_accession": "SRR19155741",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/041/SRR19155741/SRR19155741.fastq.gz",
+      "fastq_bytes": "4835332856"
+    },
+    {
+      "run_accession": "SRR19155742",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/042/SRR19155742/SRR19155742.fastq.gz",
+      "fastq_bytes": "4677320213"
+    },
+    {
+      "run_accession": "SRR19155748",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/048/SRR19155748/SRR19155748.fastq.gz",
+      "fastq_bytes": "6973931186"
+    },
+    {
+      "run_accession": "SRR19155749",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/049/SRR19155749/SRR19155749.fastq.gz",
+      "fastq_bytes": "4565527952"
+    },
+    {
+      "run_accession": "SRR19155753",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/053/SRR19155753/SRR19155753.fastq.gz",
+      "fastq_bytes": "5639169238"
+    },
+    {
+      "run_accession": "SRR19155758",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/058/SRR19155758/SRR19155758.fastq.gz",
+      "fastq_bytes": "4685100262"
+    },
+    {
+      "run_accession": "SRR19155761",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/061/SRR19155761/SRR19155761.fastq.gz",
+      "fastq_bytes": "4659149815"
+    },
+    {
+      "run_accession": "SRR19155774",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/074/SRR19155774/SRR19155774.fastq.gz",
+      "fastq_bytes": "4735866824"
+    },
+    {
+      "run_accession": "SRR19155777",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/077/SRR19155777/SRR19155777.fastq.gz",
+      "fastq_bytes": "5125904343"
+    },
+    {
+      "run_accession": "SRR19155781",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/081/SRR19155781/SRR19155781.fastq.gz",
+      "fastq_bytes": "5093505732"
+    },
+    {
+      "run_accession": "SRR19155791",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/091/SRR19155791/SRR19155791.fastq.gz",
+      "fastq_bytes": "5681822776"
+    },
+    {
+      "run_accession": "SRR19155794",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/094/SRR19155794/SRR19155794.fastq.gz",
+      "fastq_bytes": "5519939535"
+    },
+    {
+      "run_accession": "SRR19155801",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/001/SRR19155801/SRR19155801.fastq.gz",
+      "fastq_bytes": "4551136469"
+    },
+    {
+      "run_accession": "SRR19155804",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/004/SRR19155804/SRR19155804.fastq.gz",
+      "fastq_bytes": "4022455346"
+    },
+    {
+      "run_accession": "SRR19155807",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/007/SRR19155807/SRR19155807.fastq.gz",
+      "fastq_bytes": "4867141545"
+    },
+    {
+      "run_accession": "SRR19155809",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/009/SRR19155809/SRR19155809.fastq.gz",
+      "fastq_bytes": "5111542886"
+    },
+    {
+      "run_accession": "SRR19155811",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/011/SRR19155811/SRR19155811.fastq.gz",
+      "fastq_bytes": "4625587347"
+    },
+    {
+      "run_accession": "SRR19155812",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/012/SRR19155812/SRR19155812.fastq.gz",
+      "fastq_bytes": "4725924736"
+    },
+    {
+      "run_accession": "SRR19155813",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/013/SRR19155813/SRR19155813.fastq.gz",
+      "fastq_bytes": "4560454881"
+    },
+    {
+      "run_accession": "SRR19155822",
+      "experiment_accession": "SRX15222308",
+      "sample_accession": "SAMN28175811",
+      "library_strategy": "RNA-Seq",
+      "library_layout": "SINGLE",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/022/SRR19155822/SRR19155822.fastq.gz",
+      "fastq_bytes": "5217053497"
+    }
+  ],
+  "fastq_bytes_all_runs": 1394267790088,
+  "supplementary": [
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_reference_cds.RDS.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_reference_cell_metadata.csv.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_reference_expt1_hashTable.txt.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_reference_expt2_hashTable.txt.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_reference_expt3_hashTable.txt.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_reference_gene_metadata.csv.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_reference_raw_counts.RDS.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_full_cds.RDS.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_full_cell_metadata.csv.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_full_gene_metadata.csv.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_full_raw_counts.RDS.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_full_run1_hashTable.txt.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_full_run2_hashTable.txt.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_pilot_cds.RDS.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_pilot_cell_metadata.csv.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_pilot_gene_metadata.csv.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_pilot_hashTable.txt.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_pilot_raw_counts.RDS.gz"
+  ],
+  "downloads": [
+    {
+      "path": "/data/yuchang/veloroute_w4/zscape_metadata/GSE202639_family.soft.gz",
+      "bytes": 4125,
+      "sha256": "99dad741ff75b0aa6ea38855e764e8f9275e1e82dfce9d6d1d18d228d8ec1007",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/soft/GSE202639_family.soft.gz",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/zscape_metadata/PRJNA836866_runs.tsv",
+      "bytes": 30566,
+      "sha256": "284c637fad39dcf90cefe8c2872181c1d2e610f76a1c6bea6972295e1807eec7",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJNA836866&result=read_run&fields=run_accession%2Cexperiment_accession%2Csample_accession%2Clibrary_strategy%2Clibrary_layout%2Cfastq_ftp%2Cfastq_bytes&format=tsv&download=false",
+      "reused": false
+    }
+  ],
+  "raw_reads_downloaded": false,
+  "expression_matrix_read": false,
+  "published_perturbation_hpf": [
+    18,
+    24,
+    36,
+    48,
+    72
+  ],
+  "minimum_nominal_interval_hours": 6,
+  "S_U_layers_not_established": true,
+  "source": "https://www.nature.com/articles/s41586-023-06720-2",
+  "technical_caution": "sci-RNA-seq3 combinatorial barcodes require author demultiplexing, not a drop-in 10x chemistry"
+}

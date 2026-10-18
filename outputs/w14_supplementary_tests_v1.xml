@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.350" timestamp="2026-10-18T10:56:09.719038+08:00" hostname="h20-rs8hxs5x-0000"><testcase classname="tests.test_w14_supplementary" name="test_cell_kernels_equal_full_mixture_energy_and_reweighted_samples" time="0.005" /></testsuite></testsuites>

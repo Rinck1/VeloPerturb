@@ -1,0 +1,6 @@
+sample,after_filter_cells,barcode_known_cells,unique_barcodes,source
+CTRL (in vitro),11889,7375,4013,original_local_supplement_Table4_not_new_cell_QC
+BRAFi/MEKi (in vitro),16086,5031,958,original_local_supplement_Table4_not_new_cell_QC
+Day 0 (in vivo),8069,4055,1127,original_local_supplement_Table4_not_new_cell_QC
+Day 21 (in vivo),3613,2054,581,original_local_supplement_Table4_not_new_cell_QC
+Endpoint (in vivo),6758,2565,261,original_local_supplement_Table4_not_new_cell_QC

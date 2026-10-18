@@ -1,0 +1,164 @@
+# Traxler technical acquisition
+
+{
+  "status": "TRAXLER_METADATA_AND_COUNTS_ACQUIRED",
+  "correct_bioproject": "PRJNA1099196",
+  "samples": 27,
+  "runs": 54,
+  "downloads": [
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_family.soft.gz",
+      "bytes": 8195,
+      "sha256": "d3425444e17ca9647b1739d7896153161587f0c511d50e201b9a2bdeaa63685c",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/soft/GSE263761_family.soft.gz",
+      "reused": true
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/PRJNA1099196_runs.tsv",
+      "bytes": 11132,
+      "sha256": "ce55359b928dc5b631a14bf705fc41408c432beefca06af2be720e1cd7cc4ff8",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJNA1099196&result=read_run&fields=run_accession%2Cexperiment_accession%2Csample_accession%2Cstudy_accession%2Clibrary_name%2Clibrary_strategy%2Clibrary_source%2Clibrary_layout%2Cfastq_ftp%2Cfastq_bytes%2Cfastq_md5%2Csubmitted_ftp%2Csubmitted_bytes%2Csubmitted_md5&format=tsv&download=false",
+      "reused": true
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_A1_filtered_feature_bc_matrix.h5",
+      "bytes": 62985736,
+      "sha256": "215efbc1d7416913cfa083fce9e9c93271bbbc153b82ddf4d671ab94d7e2c403",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_A1_filtered_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_A1_raw_feature_bc_matrix.h5",
+      "bytes": 124193635,
+      "sha256": "a4ad22d4e348749bd35d2c8bf41d035d06c89d9d5fd53e9e65cd9fa77ee13dac",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_A1_raw_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_A2_filtered_feature_bc_matrix.h5",
+      "bytes": 38022611,
+      "sha256": "7440ac529e37af6d5a675f9e5ff101c89461d95238786a68e6b2991364fd95a4",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_A2_filtered_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_A2_raw_feature_bc_matrix.h5",
+      "bytes": 107065869,
+      "sha256": "c2bb4326dc1f88aa2604e1be8a8bb1c10292bd0bb5ebac55be2f6f1fe55630f5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_A2_raw_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_A3_filtered_feature_bc_matrix.h5",
+      "bytes": 46389262,
+      "sha256": "3b60b8e43c3df43ae63dd56fb13e84a5d43d0b5d89f490101ddbf5cb7ff6a0d2",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_A3_filtered_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_A3_raw_feature_bc_matrix.h5",
+      "bytes": 98318649,
+      "sha256": "6ae5ebb1aeb3a73a00fd96e24a6a2d5d04d9d13a35136e7983dfdc3a57d63a12",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_A3_raw_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_B1_filtered_feature_bc_matrix.h5",
+      "bytes": 45407851,
+      "sha256": "ad4a3530edfc532f556628b351d0f7851ca2bc9de7a2a6967b4348e88a6e8a55",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_B1_filtered_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_B1_raw_feature_bc_matrix.h5",
+      "bytes": 108557256,
+      "sha256": "5327a4f8cfbb27f23aad063430be77e9fbffa19b76f6daa7c013d3e136ea2cdb",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_B1_raw_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_B2_filtered_feature_bc_matrix.h5",
+      "bytes": 35012885,
+      "sha256": "8b693c85968dda3092023b59c5177a5d8a27712657e851c6447de95815f02e7e",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_B2_filtered_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_B2_raw_feature_bc_matrix.h5",
+      "bytes": 103072071,
+      "sha256": "af31bc9f628e1785aae56f1c585e6b917026b8e3c83c505352bf3c81cf01c782",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_B2_raw_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_B3_filtered_feature_bc_matrix.h5",
+      "bytes": 52164996,
+      "sha256": "94f417de48ebc1e65936efbd0c64fb4eeb8e839630b8b7c9358465edfd9aba58",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_B3_filtered_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_B3_raw_feature_bc_matrix.h5",
+      "bytes": 116547322,
+      "sha256": "9c1fa1c6b437567e47e6e7e2a93ce9285780ed09b9c84eec52dfe8643e0c5991",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_B3_raw_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_C1_filtered_feature_bc_matrix.h5",
+      "bytes": 27316693,
+      "sha256": "1c1b771a1aee3a0a75384d79a1faca1c9d0242fc1ebcdd39014363d9c69bb0fe",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_C1_filtered_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_C1_raw_feature_bc_matrix.h5",
+      "bytes": 86040003,
+      "sha256": "5ae0f1a364cdd36c3d63ab587fb791e6ad95b4d4ee6db0976724162e6980ecdf",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_C1_raw_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_C2_filtered_feature_bc_matrix.h5",
+      "bytes": 29041218,
+      "sha256": "ee6e8d2e67c95adb7eab7d24487f8adf40728c4227b8b35ddcd85311012bd888",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_C2_filtered_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_C2_raw_feature_bc_matrix.h5",
+      "bytes": 90350582,
+      "sha256": "af446544dc937ea2183a6cca36b2ba10ff6d63df2effc4d5825b99d904e21600",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_C2_raw_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_C3_filtered_feature_bc_matrix.h5",
+      "bytes": 27956122,
+      "sha256": "017c90ad4fe6804544b1eed87b65912063509313f632d22bf14f419f50547edc",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_C3_filtered_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_C3_raw_feature_bc_matrix.h5",
+      "bytes": 97319186,
+      "sha256": "0ad8f4124126b1b20abec43e574d3153f82362c6f98a5e97a4dc4f941370291d",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_C3_raw_feature_bc_matrix.h5",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_feature_reference.csv.gz",
+      "bytes": 10431,
+      "sha256": "5bca32372160afaa1ca91cb17aec15b91b988b87b905a5942434a18c540af0b9",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_feature_reference.csv.gz",
+      "reused": false
+    }
+  ],
+  "total_all_library_fastq_bytes": 171842043717,
+  "gex_runs": 18,
+  "gex_fastq_bytes": 151304308989,
+  "raw_download_started": false,
+  "biological_effects_read": false,
+  "prediction_models_trained": false,
+  "next": "Map libraries and hashing labels; inspect count-file headers only; freeze W15 before biological analysis"
+}

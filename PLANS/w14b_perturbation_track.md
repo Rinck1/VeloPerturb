@@ -3,6 +3,11 @@
 日期：2026-10-17　|　规格：Claude　|　负责人：Rinck　|　执行：服务器 agent
 与 `PLANS/w14_confirmation_loro.md`（W14 主任务）并行，但 **W14 优先**：GPU 先给 W14，本文件任务以 CPU 为主。
 
+2026-10-18执行登记：W14已启动，B3的32折/576作业已按独立协议准备并排队。
+用户已明确批准“直接下载”；KO150的18个GEX SRA共143.1GB，下载上限180GB，不再重复请求50GB批准。
+正确BioProject、9个GEX与27个GSM的对应、技术读段布局及进度见
+`docs/evidence/data_audits/w14b_traxler_audit.md`。新数据仅做技术处理，不提前训练W15。
+
 ---
 
 ## 0. 目的
@@ -25,7 +30,7 @@
 ## W14-B1 Traxler 2025 巨噬细胞 CROP-seq：核实、下载、封存（最高优先级）
 
 **数据**：Traxler et al., *Cell Systems* 2025，"Integrated time-series analysis and high-content CRISPR screening delineate the dynamics of macrophage immune regulation"。
-- GEO SuperSeries GSE263763；KO150 子系列 **GSE263761**；SRA BioProject **PRJNA1099184**。
+- GEO SuperSeries GSE263763；KO150 子系列 **GSE263761**；SRA BioProject **PRJNA1099196**（10月18日来源核实更正，原草案写作PRJNA1099184）。
 - 已核实（GEO 页面）：135 个转录因子与染色质调控因子，每个 4 条 gRNA，约 10% 非靶向 gRNA；李斯特菌感染，时间点 0、6、24 小时；CROP-seq + CITE-seq；GSE263761 含 9 个样本（CROPseq_KO150 A1–A3、B1–B3、C1–C3）的 filtered/raw h5 矩阵。
 - 代码：https://github.com/epigen/macrophage-regulation ；项目页：https://medical-epigenomics.org/papers/traxler2025/
 

@@ -1,0 +1,79 @@
+{
+  "git_commit": "abb3500c006c3cc66adb8faef2588f9f8ccff416",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_metadata_audits.py",
+    "--output",
+    "outputs/w14b_metadata_audits_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_metadata_audits.py": "f6994fc303661868c3c16f3d9829cb0c3cc792e46d42e77595049c2ec42f5543",
+    "/data/yuchang/veloroute_ucheck_20260915/merlin_suppl.xlsx": "f11c225d1ae5e7b9a84160095a0dea1986d04cd480644abf229069681b2307fb"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 0.12790091708302498,
+  "in_vivo_scRNA_days": [
+    0,
+    21,
+    91
+  ],
+  "in_vivo_scRNA_intervals_hours": [
+    504,
+    1680
+  ],
+  "endpoint_day_91_source": "2026_published_methods",
+  "bulk_days": [
+    0,
+    21,
+    57,
+    91
+  ],
+  "in_vitro_treatment_days": 7,
+  "in_vitro_hours": 168,
+  "hour_scale_intervals_found": false,
+  "day57_not_available_as_matched_scRNA_timepoint": true,
+  "original_table_sha256": "f11c225d1ae5e7b9a84160095a0dea1986d04cd480644abf229069681b2307fb",
+  "counts": [
+    {
+      "sample": "CTRL (in vitro)",
+      "after_filter_cells": 11889,
+      "barcode_known_cells": 7375,
+      "unique_barcodes": 4013,
+      "source": "original_local_supplement_Table4_not_new_cell_QC"
+    },
+    {
+      "sample": "BRAFi/MEKi (in vitro)",
+      "after_filter_cells": 16086,
+      "barcode_known_cells": 5031,
+      "unique_barcodes": 958,
+      "source": "original_local_supplement_Table4_not_new_cell_QC"
+    },
+    {
+      "sample": "Day 0 (in vivo)",
+      "after_filter_cells": 8069,
+      "barcode_known_cells": 4055,
+      "unique_barcodes": 1127,
+      "source": "original_local_supplement_Table4_not_new_cell_QC"
+    },
+    {
+      "sample": "Day 21 (in vivo)",
+      "after_filter_cells": 3613,
+      "barcode_known_cells": 2054,
+      "unique_barcodes": 581,
+      "source": "original_local_supplement_Table4_not_new_cell_QC"
+    },
+    {
+      "sample": "Endpoint (in vivo)",
+      "after_filter_cells": 6758,
+      "barcode_known_cells": 2565,
+      "unique_barcodes": 261,
+      "source": "original_local_supplement_Table4_not_new_cell_QC"
+    }
+  ],
+  "sources": [
+    "https://link.springer.com/article/10.1186/s12943-026-02622-9"
+  ],
+  "decision": "TIME_SCALE_NOT_SUITABLE_FOR_CURRENT_HOUR_FORECAST_NO_NEW_MERLIN_TRAINING",
+  "scope": "Published main MeRLin experiment; no claim that every conceivable MeRLin-derived study lacks shorter times"
+}

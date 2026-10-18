@@ -1,0 +1,23 @@
+{
+  "git_commit": "abb3500c006c3cc66adb8faef2588f9f8ccff416",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_metadata_audits.py",
+    "--output",
+    "outputs/w14b_metadata_audits_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_metadata_audits.py": "f6994fc303661868c3c16f3d9829cb0c3cc792e46d42e77595049c2ec42f5543",
+    "/data/yuchang/veloroute_ucheck_20260915/merlin_suppl.xlsx": "f11c225d1ae5e7b9a84160095a0dea1986d04cd480644abf229069681b2307fb"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 4.320320557802916,
+  "status": "W14B_SAMPLING_AND_INVENTORY_COMPLETE",
+  "merlin_hour_scale": false,
+  "zscape_GEO": "GSE202639",
+  "zscape_fastq_bytes": 1394267790088,
+  "zscape_runs": 222,
+  "zscape_cell_count_table": "PENDING_AUTHOR_METADATA_ONLY_NOT_DOWNLOADED",
+  "expression_matrices_read": false
+}

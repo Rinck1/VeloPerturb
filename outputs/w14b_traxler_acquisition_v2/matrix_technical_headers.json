@@ -1,0 +1,254 @@
+{
+  "git_commit": "88bd6e20c8a91f72b18cecd2a3fda08e251ddc62",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_data_download.py",
+    "--output",
+    "outputs/w14b_traxler_acquisition_v2",
+    "--download-counts"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_data_download.py": "f5032728b257e0ce60fb53d8d16585e973f5e981c7b24e24578daafc3f3f1ce4",
+    "/home/yuchang/wangjiaxuan/PLANS/w14b_perturbation_track.md": "f292c13fe2a942ee1aeaf1a4d1b45c2ad79e78bd4288368882cab8fc81a61c6a"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 127.95604065060616,
+  "headers": [
+    {
+      "file": "GSE263761_CROPseq_KO150_A1_filtered_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        13140
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_A1_raw_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        737280
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_A2_filtered_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        8516
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_A2_raw_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        737280
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_A3_filtered_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        8972
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_A3_raw_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        737280
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_B1_filtered_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        8337
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_B1_raw_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        737280
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_B2_filtered_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        6103
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_B2_raw_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        737280
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_B3_filtered_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        11525
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_B3_raw_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        737280
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_C1_filtered_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        5409
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_C1_raw_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        737280
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_C2_filtered_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        7587
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_C2_raw_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        737280
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_C3_filtered_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        6755
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    },
+    {
+      "file": "GSE263761_CROPseq_KO150_C3_raw_feature_bc_matrix.h5",
+      "matrix_shape": [
+        31667,
+        737280
+      ],
+      "feature_types": [
+        "Antibody Capture",
+        "CRISPR Guide Capture",
+        "Custom",
+        "Gene Expression"
+      ]
+    }
+  ],
+  "expression_values_read": false
+}

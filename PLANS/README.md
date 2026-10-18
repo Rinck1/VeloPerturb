@@ -22,3 +22,9 @@
 | [W5总量/组成归因](w5_scntseq_U_attribution_v1.md) | 已完成归因 |
 
 不把计划中的设想当结果；不根据旧计划自动恢复GFG/JVP/EM或未授权实验。
+
+## 2026-10-18新增执行队列
+
+- [W14原始计划](w14_confirmation_loro.md)与[执行澄清](w14_execution_amendment_20261018.md)一并冻结。
+- [W14-B新数据与扰动路线](w14b_perturbation_track.md)。
+- [RENGE一次性探索协议](w14b_renge_router_protocol.md)，只在W14评估释放资源后训练。

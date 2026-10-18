@@ -1,0 +1,169 @@
+{
+  "git_commit": "abb3500c006c3cc66adb8faef2588f9f8ccff416",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_raw_download.py",
+    "--output",
+    "outputs/w14b_traxler_raw_v1"
+  ],
+  "data_hashes": {
+    "outputs/w14b_traxler_acquisition_v1/sample_metadata.json": "462ec067fcef04a871d14739998f804151b03637920902a8de3717a37d3adc9c",
+    "outputs/w14b_traxler_acquisition_v1/run_inventory.json": "3bf9994d712d94ea7039eadce3ba8eaf0553eccd5864ab5099694b11e9149d6c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_raw_download.py": "c53b37c1e522f9b46667d1b3032b6e382454221314810d1402a29263ae6b630f",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_data_download.py": "f5032728b257e0ce60fb53d8d16585e973f5e981c7b24e24578daafc3f3f1ce4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 7.522425428032875,
+  "objects": [
+    {
+      "accession": "SRR28625710",
+      "sample": "GSM8198147",
+      "title": "CROPseq_KO150_C1_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625710/SRR28625710",
+      "bytes": 8900395206,
+      "etag": "\"9ca82e1c0711ba9abb843168fd7f5ed1-1062\""
+    },
+    {
+      "accession": "SRR28625688",
+      "sample": "GSM8198150",
+      "title": "CROPseq_KO150_C2_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625688/SRR28625688",
+      "bytes": 6878349533,
+      "etag": "\"b20053ccf375f00112afeaa16636e7c2-820\""
+    },
+    {
+      "accession": "SRR28625696",
+      "sample": "GSM8198141",
+      "title": "CROPseq_KO150_B2_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625696/SRR28625696",
+      "bytes": 8843493865,
+      "etag": "\"4af1dbe7339db2d7546a1b906d43cfd3-1055\""
+    },
+    {
+      "accession": "SRR28625707",
+      "sample": "GSM8198138",
+      "title": "CROPseq_KO150_B1_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625707/SRR28625707",
+      "bytes": 7634759581,
+      "etag": "\"08e7dcabe10e754b7f2daee1c850fdf0-911\""
+    },
+    {
+      "accession": "SRR28625733",
+      "sample": "GSM8198132",
+      "title": "CROPseq_KO150_A2_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625733/SRR28625733",
+      "bytes": 8252786233,
+      "etag": "\"ad9e1d0073bd362efd659ebf97d9fea6-984\""
+    },
+    {
+      "accession": "SRR28625689",
+      "sample": "GSM8198150",
+      "title": "CROPseq_KO150_C2_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625689/SRR28625689",
+      "bytes": 6890661384,
+      "etag": "\"3f10e8eb209fe28ecf6850d6f960708b-822\""
+    },
+    {
+      "accession": "SRR28625697",
+      "sample": "GSM8198141",
+      "title": "CROPseq_KO150_B2_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625697/SRR28625697",
+      "bytes": 8849051652,
+      "etag": "\"b186e453ac880084e3b0446f07f83739-1055\""
+    },
+    {
+      "accession": "SRR28625726",
+      "sample": "GSM8198153",
+      "title": "CROPseq_KO150_C3_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625726/SRR28625726",
+      "bytes": 8946936743,
+      "etag": "\"0e868fc8145b4f6e78b1a64edaf55044-1067\""
+    },
+    {
+      "accession": "SRR28625735",
+      "sample": "GSM8198129",
+      "title": "CROPseq_KO150_A1_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625735/SRR28625735",
+      "bytes": 7992919957,
+      "etag": "\"20dc49de3f0b52f0417f4a37db8b479b-953\""
+    },
+    {
+      "accession": "SRR28625716",
+      "sample": "GSM8198144",
+      "title": "CROPseq_KO150_B3_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625716/SRR28625716",
+      "bytes": 6833047098,
+      "etag": "\"c78cc6a0ed59c6f496fe8d4de2b8eeba-815\""
+    },
+    {
+      "accession": "SRR28625720",
+      "sample": "GSM8198135",
+      "title": "CROPseq_KO150_A3_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625720/SRR28625720",
+      "bytes": 7231206448,
+      "etag": "\"e4410b139a48bcfa450d613b2679b2d3-863\""
+    },
+    {
+      "accession": "SRR28625721",
+      "sample": "GSM8198135",
+      "title": "CROPseq_KO150_A3_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625721/SRR28625721",
+      "bytes": 7232403043,
+      "etag": "\"70d8129c1cba170cb16b307df52e9711-863\""
+    },
+    {
+      "accession": "SRR28625727",
+      "sample": "GSM8198153",
+      "title": "CROPseq_KO150_C3_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625727/SRR28625727",
+      "bytes": 8957447330,
+      "etag": "\"d66bbb8d6a7420dcf80b696195294e52-1068\""
+    },
+    {
+      "accession": "SRR28625734",
+      "sample": "GSM8198129",
+      "title": "CROPseq_KO150_A1_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625734/SRR28625734",
+      "bytes": 7989629603,
+      "etag": "\"f2a09ece12b209fa9a502c13c6e88456-953\""
+    },
+    {
+      "accession": "SRR28625706",
+      "sample": "GSM8198138",
+      "title": "CROPseq_KO150_B1_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625706/SRR28625706",
+      "bytes": 7627188588,
+      "etag": "\"744a9e3f706e5aa28b0d0275cf7ec612-910\""
+    },
+    {
+      "accession": "SRR28625711",
+      "sample": "GSM8198147",
+      "title": "CROPseq_KO150_C1_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625711/SRR28625711",
+      "bytes": 8907124399,
+      "etag": "\"46d5971ff6aa3ba2b16b7e99dc42093f-1062\""
+    },
+    {
+      "accession": "SRR28625717",
+      "sample": "GSM8198144",
+      "title": "CROPseq_KO150_B3_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625717/SRR28625717",
+      "bytes": 6837182470,
+      "etag": "\"d29d3c91507d6d7816b7e3f792a0561d-816\""
+    },
+    {
+      "accession": "SRR28625732",
+      "sample": "GSM8198132",
+      "title": "CROPseq_KO150_A2_GEX",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625732/SRR28625732",
+      "bytes": 8250979870,
+      "etag": "\"ff93060c02a710cc6c68f65d8e4addcf-984\""
+    }
+  ],
+  "total_bytes": 143055563003,
+  "user_approved_max_bytes": 180000000000,
+  "source": "NCBI_public_SRA_AWS",
+  "technical_reads_retained": true,
+  "ena_fastq_not_used": true
+}

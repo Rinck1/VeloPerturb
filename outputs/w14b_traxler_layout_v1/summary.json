@@ -1,0 +1,30 @@
+{
+  "git_commit": "abb3500c006c3cc66adb8faef2588f9f8ccff416",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/tools/sratoolkit.3.4.1-ubuntu64/bin/vdb-dump",
+    "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625696.sra",
+    "-T",
+    "SEQUENCE",
+    "-R",
+    "1-10",
+    "-C",
+    "READ_START,READ_LEN,READ_TYPE",
+    "-f",
+    "json"
+  ],
+  "data_hashes": {
+    "outputs/w14b_traxler_raw_v1/download_manifest.json": "d9e6d7de7736d1bb20be85b9d71b0cf21a79817360c1c889fa4b43cf54ef8e26",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_layout_audit.py": "33bb75566348b7561d4338879feec15b88dce916155a91468c254dfd01733780"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 879.7231689691544,
+  "status": "TRAXLER_SRA_LAYOUT_OBSERVED",
+  "run": "SRR28625696",
+  "sra_sha256": "e55ed99a6dfda8460078e3ce2e6a884d5fc4c796ffa1ed926c604c26536b9449",
+  "rows": 10,
+  "biological_expression_read": false,
+  "barcode_layout_approved": false,
+  "next": "Review read-length/type table before configuring 10x5prime-v2 extraction; do not assume R1 cycles"
+}

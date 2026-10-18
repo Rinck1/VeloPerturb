@@ -1,0 +1,1046 @@
+{
+  "git_commit": "88bd6e20c8a91f72b18cecd2a3fda08e251ddc62",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_data_download.py",
+    "--output",
+    "outputs/w14b_traxler_acquisition_v2",
+    "--download-counts"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_data_download.py": "f5032728b257e0ce60fb53d8d16585e973f5e981c7b24e24578daafc3f3f1ce4",
+    "/home/yuchang/wangjiaxuan/PLANS/w14b_perturbation_track.md": "f292c13fe2a942ee1aeaf1a4d1b45c2ad79e78bd4288368882cab8fc81a61c6a"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 0.007785666733980179,
+  "samples": [
+    {
+      "accession": "GSM8198127",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: untreated",
+        "library type: ADT_HTO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929684",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223653"
+      ],
+      "title": [
+        "CROPseq_KO150_A1_ADT_HTO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198128",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: untreated",
+        "library type: GDO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929683",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223654"
+      ],
+      "title": [
+        "CROPseq_KO150_A1_GDO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198129",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: untreated",
+        "library type: mRNA"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929682",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223655"
+      ],
+      "title": [
+        "CROPseq_KO150_A1_GEX"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "transcriptomic"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198130",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: untreated",
+        "library type: ADT_HTO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929681",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223656"
+      ],
+      "title": [
+        "CROPseq_KO150_A2_ADT_HTO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198131",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: untreated",
+        "library type: GDO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929680",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223657"
+      ],
+      "title": [
+        "CROPseq_KO150_A2_GDO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198132",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: untreated",
+        "library type: mRNA"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929679",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223658"
+      ],
+      "title": [
+        "CROPseq_KO150_A2_GEX"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "transcriptomic"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198133",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: untreated",
+        "library type: ADT_HTO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929678",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223660"
+      ],
+      "title": [
+        "CROPseq_KO150_A3_ADT_HTO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198134",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: untreated",
+        "library type: GDO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929677",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223661"
+      ],
+      "title": [
+        "CROPseq_KO150_A3_GDO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198135",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: untreated",
+        "library type: mRNA"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929676",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223662"
+      ],
+      "title": [
+        "CROPseq_KO150_A3_GEX"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "transcriptomic"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198136",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 6h",
+        "library type: ADT_HTO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929675",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223663"
+      ],
+      "title": [
+        "CROPseq_KO150_B1_ADT_HTO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198137",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 6h",
+        "library type: GDO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929674",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223669"
+      ],
+      "title": [
+        "CROPseq_KO150_B1_GDO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198138",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 6h",
+        "library type: mRNA"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929673",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223670"
+      ],
+      "title": [
+        "CROPseq_KO150_B1_GEX"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "transcriptomic"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198139",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 6h",
+        "library type: ADT_HTO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929672",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223671"
+      ],
+      "title": [
+        "CROPseq_KO150_B2_ADT_HTO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198140",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 6h",
+        "library type: GDO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929671",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223672"
+      ],
+      "title": [
+        "CROPseq_KO150_B2_GDO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198141",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 6h",
+        "library type: mRNA"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929670",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223673"
+      ],
+      "title": [
+        "CROPseq_KO150_B2_GEX"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "transcriptomic"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198142",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 6h",
+        "library type: ADT_HTO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929669",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223664"
+      ],
+      "title": [
+        "CROPseq_KO150_B3_ADT_HTO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198143",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 6h",
+        "library type: GDO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929668",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223665"
+      ],
+      "title": [
+        "CROPseq_KO150_B3_GDO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198144",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 6h",
+        "library type: mRNA"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929667",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223666"
+      ],
+      "title": [
+        "CROPseq_KO150_B3_GEX"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "transcriptomic"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198145",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 24h",
+        "library type: ADT_HTO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929666",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223667"
+      ],
+      "title": [
+        "CROPseq_KO150_C1_ADT_HTO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198146",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 24h",
+        "library type: GDO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929665",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223668"
+      ],
+      "title": [
+        "CROPseq_KO150_C1_GDO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198147",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 24h",
+        "library type: mRNA"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929664",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223674"
+      ],
+      "title": [
+        "CROPseq_KO150_C1_GEX"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "transcriptomic"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198148",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 24h",
+        "library type: ADT_HTO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929663",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223675"
+      ],
+      "title": [
+        "CROPseq_KO150_C2_ADT_HTO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198149",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 24h",
+        "library type: GDO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929662",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223676"
+      ],
+      "title": [
+        "CROPseq_KO150_C2_GDO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198150",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 24h",
+        "library type: mRNA"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929661",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223677"
+      ],
+      "title": [
+        "CROPseq_KO150_C2_GEX"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "transcriptomic"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198151",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 24h",
+        "library type: ADT_HTO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929660",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223678"
+      ],
+      "title": [
+        "CROPseq_KO150_C3_ADT_HTO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198152",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 24h",
+        "library type: GDO"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929659",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223679"
+      ],
+      "title": [
+        "CROPseq_KO150_C3_GDO"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "other"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    },
+    {
+      "accession": "GSM8198153",
+      "characteristics": [
+        "cell line: RAW264.7-Cas9",
+        "treatment: Listeria 24h",
+        "library type: mRNA"
+      ],
+      "supplementary": [
+        "NONE"
+      ],
+      "relations": [
+        "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN40929658",
+        "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX24223659"
+      ],
+      "title": [
+        "CROPseq_KO150_C3_GEX"
+      ],
+      "source_name_ch1": [
+        "RAW264.7-Cas9"
+      ],
+      "data_processing": [
+        "Raw basecalls from the sequencer were demultiplexed and converted to FASTQ format using the 10x Genomics' Cell Ranger (3.0.2) command \u201cmkfastq\u201d.",
+        "FASTQ files were then aligned to the mouse reference genome assembly GRCm38 (mm10), and count matrices were generated for each sample based on genome annotation v93 using the Cell Ranger command \u201ccount\u201d.",
+        "Assembly: mm10",
+        "Supplementary files format and content: raw and filtered feature barcode matrices: .h5 archives of CellRanger output",
+        "Supplementary files format and content: feature_reference.csv: comma-separated feature reference file for ADT, HTO, GDO quantification and annotation",
+        "Library strategy: CROP-seq"
+      ],
+      "library_selection": [
+        "other"
+      ],
+      "library_source": [
+        "transcriptomic"
+      ],
+      "library_strategy": [
+        "OTHER"
+      ]
+    }
+  ],
+  "expression_read": false
+}

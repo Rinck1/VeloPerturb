@@ -1,0 +1,33 @@
+{
+  "git_commit": "0492617a98bdd4514915867ca69704e238396554",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_zscape_counts.py",
+    "--output",
+    "outputs/w14b_zscape_counts_v2"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_zscape_counts.py": "1679db04f0747def61889e9bdf84469cf592b3bdb4a1c16da55b5f2539a1945d"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "14b4f2f4a745ab833aa8ffd80253d2fdc5e8bd5e80df05d37ac07a85a5c61d0f",
+  "runtime_seconds": 131.5715129300952,
+  "status": "ZSCAPE_TECHNICAL_COHORT_COUNTS_COMPLETE",
+  "metadata": {
+    "path": "/data/yuchang/veloroute_w4/zscape_metadata/GSE202639_zperturb_full_cell_metadata.csv.gz",
+    "bytes": 318094480,
+    "sha256": "44b0e10caceef3b84597bebce0b2384ca430eb1c891f5e3484f69d4ee3c17e32",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_full_cell_metadata.csv.gz",
+    "reused": false
+  },
+  "total_cells": 2687135,
+  "groups": 98,
+  "expression_matrices_downloaded": false,
+  "raw_reads_downloaded": false,
+  "biological_effects_computed": false,
+  "columns_used": [
+    "timepoint",
+    "gene_target",
+    "embryo"
+  ]
+}

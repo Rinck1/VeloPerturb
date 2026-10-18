@@ -1,0 +1,37 @@
+{
+  "git_commit": "0492617a98bdd4514915867ca69704e238396554",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_reference_download.py",
+    "--output",
+    "outputs/w14b_traxler_reference_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_reference_download.py": "d71ce70615da64325701b9c641c2dc5d26d6cb32ddb0132eb3a8ad5073481c98",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_data_download.py": "f5032728b257e0ce60fb53d8d16585e973f5e981c7b24e24578daafc3f3f1ce4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 619.4511416517198,
+  "status": "MOUSE_REFERENCE_DOWNLOADED",
+  "assembly": "GRCm38/mm10",
+  "annotation": "Ensembl93",
+  "files": [
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/reference_ensembl93/Mus_musculus.GRCm38.dna.primary_assembly.fa.gz",
+      "bytes": 805987240,
+      "sha256": "f2375d07f5441d23959bfa4c4926b1575fe443f5f03b07209bc0e0a6fdcedb86",
+      "url": "https://ftp.ensembl.org/pub/release-93/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.primary_assembly.fa.gz",
+      "reused": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/reference_ensembl93/Mus_musculus.GRCm38.93.gtf.gz",
+      "bytes": 29193889,
+      "sha256": "d88c3e541b2916e5fe4662cdc9ec2007a7b074d6e5ccf59f643229cf9b88d1dd",
+      "url": "https://ftp.ensembl.org/pub/release-93/gtf/mus_musculus/Mus_musculus.GRCm38.93.gtf.gz",
+      "reused": false
+    }
+  ],
+  "index_built": false,
+  "reason": "Wait for read-layout audit before choosing index rlen and chemistry"
+}

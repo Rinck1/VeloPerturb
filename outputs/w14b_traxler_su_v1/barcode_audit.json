@@ -1,0 +1,25 @@
+{
+  "git_commit": "0492617a98bdd4514915867ca69704e238396554",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_traxler_su.py",
+    "--output",
+    "outputs/w14b_traxler_su_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_traxler_su.py": "f510d01fe8fbe184af3944c1fb5f78c785895f5f2c5a79df617786d155a378cb",
+    "/home/yuchang/wangjiaxuan/PLANS/w14b_perturbation_track.md": "f292c13fe2a942ee1aeaf1a4d1b45c2ad79e78bd4288368882cab8fc81a61c6a"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "9991857d761bf9af4368c31e724a4428c5e41715b276b28e6eafd2adcaa95b3e",
+  "runtime_seconds": 2.42001935467124,
+  "rows": 10000,
+  "exact_whitelist_fraction_by_offset": {
+    "0": 0.8969,
+    "1": 0.0009,
+    "2": 0.0004
+  },
+  "approved_offset": 0,
+  "barcode_bases": 16,
+  "UMI_bases": 10
+}
