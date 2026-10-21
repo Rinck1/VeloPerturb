@@ -26,7 +26,7 @@ Traxler18个GEX SRA共143.1GB及9份S/U/A矩阵已完成，76,344细胞；
 支持群体配比定位；见[机制报告](docs/current/w15_l1_routing_results.md)。
 
 用户确认三条模型线：[L1小模型、L2 CellFlow插件、L3 CellFlow＋双流router专家](PLANS/w15a_cellflow_kinetic_plugin.md)。
-L2官方GPU、15项软件测试及120次合成通过，GPU0已启动四候选static开发选型，含约960万参数配置。
+L2官方GPU、15项软件测试及120次合成通过，四static候选已完成，含约960万参数配置，选中128×2。
 L3接入官方隐藏骨干的31项CPU回归通过，50维K8四臂短训练跑通；仍待正式合成和配置冻结。
 L3正式主干继承L2冻结配置，不是两模型输出后期集成。
 用户10月21日新授权最多六卡，允许物理GPU0–5，6–7保留；不停止其他项目进程。
