@@ -1,0 +1,33 @@
+# W14 supplementary scores and routing retention
+
+{
+  "git_commit": "153ffdc99580ebc41ae2e6638a787ffd1dff5a93",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_supplementary_metrics.py",
+    "--output",
+    "outputs/w14_supplementary_v2"
+  ],
+  "data_hashes": {
+    "outputs/w14_loro_v1/study_manifest.json": "773768fed4c33a2ac0fad0ee40fb48b4337f70f0e08ff4dfe22e58fed7f94920",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_supplementary_metrics.py": "27a1cc29f80bc34a66b3ebec98a26694064cfc7818bfae09cfe9e2eb2cc0b5b0"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "ebe3643445d6cf65cc372239bbaadadb8db5b2317eae3313590ed343fcbd7d57",
+  "runtime_seconds": 534.4812041297555,
+  "status": "W14_SUPPLEMENTARY_METRICS_COMPLETE",
+  "per_seed_rows": 405,
+  "interval_rows": 135,
+  "bootstrap_repetitions": 1000,
+  "primary_P1_P2_changed": false,
+  "formal_significance_claim": false,
+  "uncertainty": "Cell reweighting of frozen predictions; no refitting/reforecasting; not between-replicate uncertainty",
+  "overall_retained_gain_fraction": 1.502236156502292,
+  "primary_metrics_sha256": "c6a99c0727eeb9ce4172a2d8e0ddae9f8dd137f77ec469b22418fbc79537f618",
+  "recovery": "Finish saved descriptive calculations without refitting or rescoring predictions",
+  "original_summary_sha256": "f2118c22ef2399b9d7116729c69b8a14ffafd324129b36313a9f8b900cd81c10"
+}

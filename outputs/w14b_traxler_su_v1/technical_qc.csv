@@ -1,0 +1,10 @@
+library,time_hours,cells,genes,barcode_retained_fraction,author_total_vs_spliced_total_correlation,median_S,median_U,path,sha256,guide_calls_provisional,HTO_demultiplexing_complete
+C2,24,7587,54232,1.0,0.9988112191333124,2513.0,832.0,/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/C2.h5ad,a2046dc1d0c12a38f73309539bb257794f22bd3b0a63e4a27da42ad516bde228,True,False
+B2,6,6103,54232,1.0,0.9992099874816937,16904.0,1085.0,/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/B2.h5ad,97378b055fdb3ba78f07b1496718927674e14a487c82bc04eb1b0f6dbd0f3edc,True,False
+A1,0,13140,54232,1.0,0.9984620363634221,7623.5,541.0,/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/A1.h5ad,3051872d321b2f3bec0e7a990958f47cd0dc81d5740e534c52d771c62c19e136,True,False
+A2,0,8516,54232,1.0,0.9991029262423231,2993.0,904.0,/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/A2.h5ad,0e11dc24a0827fb37ac1ef42ce71fcf504d4a804db056ca8fc5c7091e8aecd43,True,False
+A3,0,8972,54232,1.0,0.9988254166036434,9919.5,927.0,/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/A3.h5ad,4b6691937e23883a086a0b5a1f270c6d01538bf6d42a3d70373cad9d50b9aad7,True,False
+B1,6,8337,54232,1.0,0.9984951040920704,12284.0,800.0,/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/B1.h5ad,85646dc3c7efc93157297f2472a54e5996497552dc3a720b8dc9bf6cd63e7da0,True,False
+B3,6,11525,54232,1.0,0.998462242752396,8165.0,534.0,/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/B3.h5ad,3d26a6fbd5a76858d0d4f2022874c7ee633439dc9c401c7ed0e143ea0a1f7617,True,False
+C1,24,5409,54232,1.0,0.999003360126058,4686.0,1579.0,/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/C1.h5ad,9205035b90efda78a52a4196661afa36e1f5935dfdbe2112ca7b6c8b9318ec03,True,False
+C3,24,6755,54232,1.0,0.9986531474590608,2544.0,1205.0,/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/C3.h5ad,8fba7387195cfa7df58eb85327e0699d143535988a5a25e44d88ba3e717c4a5c,True,False

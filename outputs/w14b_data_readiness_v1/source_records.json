@@ -1,0 +1,491 @@
+{
+  "git_commit": "0492617a98bdd4514915867ca69704e238396554",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_publish_data.py",
+    "--output",
+    "outputs/w14b_data_readiness_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_publish_data.py": "a689ac119917483c342c65f4384b29074c57687294b84fa687449b507ac15655"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "14b4f2f4a745ab833aa8ffd80253d2fdc5e8bd5e80df05d37ac07a85a5c61d0f",
+  "runtime_seconds": 8120.247851707041,
+  "counts": {
+    "path": "/home/yuchang/wangjiaxuan/outputs/w14b_traxler_acquisition_v2/summary.json",
+    "sha256": "a687b91cc3d1af7686ce09453f51cd774c2b0da5d918c3fc961a25e363c8fcfb",
+    "summary": {
+      "git_commit": "88bd6e20c8a91f72b18cecd2a3fda08e251ddc62",
+      "seed": 0,
+      "command": [
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_data_download.py",
+        "--output",
+        "outputs/w14b_traxler_acquisition_v2",
+        "--download-counts"
+      ],
+      "data_hashes": {
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_data_download.py": "f5032728b257e0ce60fb53d8d16585e973f5e981c7b24e24578daafc3f3f1ce4",
+        "/home/yuchang/wangjiaxuan/PLANS/w14b_perturbation_track.md": "f292c13fe2a942ee1aeaf1a4d1b45c2ad79e78bd4288368882cab8fc81a61c6a"
+      },
+      "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+      "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runtime_seconds": 127.9563127309084,
+      "status": "TRAXLER_METADATA_AND_COUNTS_ACQUIRED",
+      "correct_bioproject": "PRJNA1099196",
+      "samples": 27,
+      "runs": 54,
+      "downloads": [
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_family.soft.gz",
+          "bytes": 8195,
+          "sha256": "d3425444e17ca9647b1739d7896153161587f0c511d50e201b9a2bdeaa63685c",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/soft/GSE263761_family.soft.gz",
+          "reused": true
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/PRJNA1099196_runs.tsv",
+          "bytes": 11132,
+          "sha256": "ce55359b928dc5b631a14bf705fc41408c432beefca06af2be720e1cd7cc4ff8",
+          "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJNA1099196&result=read_run&fields=run_accession%2Cexperiment_accession%2Csample_accession%2Cstudy_accession%2Clibrary_name%2Clibrary_strategy%2Clibrary_source%2Clibrary_layout%2Cfastq_ftp%2Cfastq_bytes%2Cfastq_md5%2Csubmitted_ftp%2Csubmitted_bytes%2Csubmitted_md5&format=tsv&download=false",
+          "reused": true
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_A1_filtered_feature_bc_matrix.h5",
+          "bytes": 62985736,
+          "sha256": "215efbc1d7416913cfa083fce9e9c93271bbbc153b82ddf4d671ab94d7e2c403",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_A1_filtered_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_A1_raw_feature_bc_matrix.h5",
+          "bytes": 124193635,
+          "sha256": "a4ad22d4e348749bd35d2c8bf41d035d06c89d9d5fd53e9e65cd9fa77ee13dac",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_A1_raw_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_A2_filtered_feature_bc_matrix.h5",
+          "bytes": 38022611,
+          "sha256": "7440ac529e37af6d5a675f9e5ff101c89461d95238786a68e6b2991364fd95a4",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_A2_filtered_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_A2_raw_feature_bc_matrix.h5",
+          "bytes": 107065869,
+          "sha256": "c2bb4326dc1f88aa2604e1be8a8bb1c10292bd0bb5ebac55be2f6f1fe55630f5",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_A2_raw_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_A3_filtered_feature_bc_matrix.h5",
+          "bytes": 46389262,
+          "sha256": "3b60b8e43c3df43ae63dd56fb13e84a5d43d0b5d89f490101ddbf5cb7ff6a0d2",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_A3_filtered_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_A3_raw_feature_bc_matrix.h5",
+          "bytes": 98318649,
+          "sha256": "6ae5ebb1aeb3a73a00fd96e24a6a2d5d04d9d13a35136e7983dfdc3a57d63a12",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_A3_raw_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_B1_filtered_feature_bc_matrix.h5",
+          "bytes": 45407851,
+          "sha256": "ad4a3530edfc532f556628b351d0f7851ca2bc9de7a2a6967b4348e88a6e8a55",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_B1_filtered_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_B1_raw_feature_bc_matrix.h5",
+          "bytes": 108557256,
+          "sha256": "5327a4f8cfbb27f23aad063430be77e9fbffa19b76f6daa7c013d3e136ea2cdb",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_B1_raw_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_B2_filtered_feature_bc_matrix.h5",
+          "bytes": 35012885,
+          "sha256": "8b693c85968dda3092023b59c5177a5d8a27712657e851c6447de95815f02e7e",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_B2_filtered_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_B2_raw_feature_bc_matrix.h5",
+          "bytes": 103072071,
+          "sha256": "af31bc9f628e1785aae56f1c585e6b917026b8e3c83c505352bf3c81cf01c782",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_B2_raw_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_B3_filtered_feature_bc_matrix.h5",
+          "bytes": 52164996,
+          "sha256": "94f417de48ebc1e65936efbd0c64fb4eeb8e839630b8b7c9358465edfd9aba58",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_B3_filtered_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_B3_raw_feature_bc_matrix.h5",
+          "bytes": 116547322,
+          "sha256": "9c1fa1c6b437567e47e6e7e2a93ce9285780ed09b9c84eec52dfe8643e0c5991",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_B3_raw_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_C1_filtered_feature_bc_matrix.h5",
+          "bytes": 27316693,
+          "sha256": "1c1b771a1aee3a0a75384d79a1faca1c9d0242fc1ebcdd39014363d9c69bb0fe",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_C1_filtered_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_C1_raw_feature_bc_matrix.h5",
+          "bytes": 86040003,
+          "sha256": "5ae0f1a364cdd36c3d63ab587fb791e6ad95b4d4ee6db0976724162e6980ecdf",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_C1_raw_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_C2_filtered_feature_bc_matrix.h5",
+          "bytes": 29041218,
+          "sha256": "ee6e8d2e67c95adb7eab7d24487f8adf40728c4227b8b35ddcd85311012bd888",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_C2_filtered_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_C2_raw_feature_bc_matrix.h5",
+          "bytes": 90350582,
+          "sha256": "af446544dc937ea2183a6cca36b2ba10ff6d63df2effc4d5825b99d904e21600",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_C2_raw_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_C3_filtered_feature_bc_matrix.h5",
+          "bytes": 27956122,
+          "sha256": "017c90ad4fe6804544b1eed87b65912063509313f632d22bf14f419f50547edc",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_C3_filtered_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_CROPseq_KO150_C3_raw_feature_bc_matrix.h5",
+          "bytes": 97319186,
+          "sha256": "0ad8f4124126b1b20abec43e574d3153f82362c6f98a5e97a4dc4f941370291d",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_CROPseq_KO150_C3_raw_feature_bc_matrix.h5",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/GSE263761_feature_reference.csv.gz",
+          "bytes": 10431,
+          "sha256": "5bca32372160afaa1ca91cb17aec15b91b988b87b905a5942434a18c540af0b9",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE263nnn/GSE263761/suppl/GSE263761_feature_reference.csv.gz",
+          "reused": false
+        }
+      ],
+      "total_all_library_fastq_bytes": 171842043717,
+      "gex_runs": 18,
+      "gex_fastq_bytes": 151304308989,
+      "raw_download_started": false,
+      "biological_effects_read": false,
+      "prediction_models_trained": false,
+      "next": "Map libraries and hashing labels; inspect count-file headers only; freeze W15 before biological analysis"
+    }
+  },
+  "raw": {
+    "path": "/home/yuchang/wangjiaxuan/outputs/w14b_traxler_raw_v1/summary.json",
+    "sha256": "5e92247e5df3c5c94bdf9798d0912b4df4daf01a1ceb43a52f223f16cf838a42",
+    "summary": {
+      "git_commit": "abb3500c006c3cc66adb8faef2588f9f8ccff416",
+      "seed": 0,
+      "command": [
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_raw_download.py",
+        "--output",
+        "outputs/w14b_traxler_raw_v1"
+      ],
+      "data_hashes": {
+        "outputs/w14b_traxler_acquisition_v1/sample_metadata.json": "462ec067fcef04a871d14739998f804151b03637920902a8de3717a37d3adc9c",
+        "outputs/w14b_traxler_acquisition_v1/run_inventory.json": "3bf9994d712d94ea7039eadce3ba8eaf0553eccd5864ab5099694b11e9149d6c",
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_raw_download.py": "c53b37c1e522f9b46667d1b3032b6e382454221314810d1402a29263ae6b630f",
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_data_download.py": "f5032728b257e0ce60fb53d8d16585e973f5e981c7b24e24578daafc3f3f1ce4"
+      },
+      "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+      "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runtime_seconds": 8947.87465455383,
+      "status": "TRAXLER_GEX_SRA_DOWNLOADED",
+      "runs": 18,
+      "total_bytes": 143055563003,
+      "objects": [
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625710.sra",
+          "bytes": 8900395206,
+          "sha256": "5b224c9520bdafc847125d5f742b8ce41f1612a4814f3df7c92ddb44c1544051",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625710/SRR28625710",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625688.sra",
+          "bytes": 6878349533,
+          "sha256": "e98afcbd909256ce92a049d5f137d4fbcf42a64c278bc1c6b3581196158f8e51",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625688/SRR28625688",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625696.sra",
+          "bytes": 8843493865,
+          "sha256": "e55ed99a6dfda8460078e3ce2e6a884d5fc4c796ffa1ed926c604c26536b9449",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625696/SRR28625696",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625707.sra",
+          "bytes": 7634759581,
+          "sha256": "b120667902eb8a655aca6eb2403a51ee4efbb368215f3aeb70919d110f683211",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625707/SRR28625707",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625733.sra",
+          "bytes": 8252786233,
+          "sha256": "3b226c039ea2d69ff70d6b9e03323736abc5d70167f8f16310a5ae89b948c653",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625733/SRR28625733",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625689.sra",
+          "bytes": 6890661384,
+          "sha256": "7d279d60fe04a7b0e8dc066b4a6f18bcb56007824b11302a4ab2b6e5e29796aa",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625689/SRR28625689",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625697.sra",
+          "bytes": 8849051652,
+          "sha256": "35c3e870daeedfb151d511abe24aa7e0f37dab01f98299bd7e4234139afe11d8",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625697/SRR28625697",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625726.sra",
+          "bytes": 8946936743,
+          "sha256": "21fe4723aa2957ca80c095896bb9ba681b16bdb06560e25f498b85fbc07c6ea1",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625726/SRR28625726",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625735.sra",
+          "bytes": 7992919957,
+          "sha256": "e375fb15c1126a4e4561b645bd24d141c3eef2c3ee20a641b48308f99bbc7553",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625735/SRR28625735",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625716.sra",
+          "bytes": 6833047098,
+          "sha256": "2a6e6198c412c15def51b0225ec15557902ef0f8858640d8c6b0cee7e4d5337e",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625716/SRR28625716",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625720.sra",
+          "bytes": 7231206448,
+          "sha256": "31f4fab4070946505641b9f4dc0ffc1b95a5ca2467868f3428ee0b76dc99c829",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625720/SRR28625720",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625721.sra",
+          "bytes": 7232403043,
+          "sha256": "7f93303bc4134f87b29055cb855f0ea169de496de06d393d52d48ae5eba9de47",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625721/SRR28625721",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625727.sra",
+          "bytes": 8957447330,
+          "sha256": "1f055f477650d5835a02cec965dacaa0fac9c619b26b337efaf023d3dfa5b9df",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625727/SRR28625727",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625734.sra",
+          "bytes": 7989629603,
+          "sha256": "02c9d8bcfc593da9e16b787629e822839a64ff9a4df0bf3e0a11098b1c8a0bbc",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625734/SRR28625734",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625706.sra",
+          "bytes": 7627188588,
+          "sha256": "ae2047d5611dd2245ffb11289213e1e5e15fa5c26e8e8e2dba633d225ea9ee6f",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625706/SRR28625706",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625711.sra",
+          "bytes": 8907124399,
+          "sha256": "5f59ea6b3f0acbd3933c87f07b395c1dc15833cd53d66802eaf0712ab8d9503b",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625711/SRR28625711",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625717.sra",
+          "bytes": 6837182470,
+          "sha256": "174ff34125e62b651337c830c7848333f4a768e1c3e6c9f5c2e3fdeb4297332f",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625717/SRR28625717",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625732.sra",
+          "bytes": 8250979870,
+          "sha256": "df7ca62472921111619ce82ca06669ed2c4838a2146fa027bf0a8c62fb5bdbf8",
+          "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28625732/SRR28625732",
+          "reused": false
+        }
+      ],
+      "technical_reads_retained": true,
+      "biological_effects_read": false,
+      "next": "Validate SRA read layout, then extract using fasterq-dump --include-technical; no W15 model before protocol"
+    }
+  },
+  "layout": {
+    "path": "/home/yuchang/wangjiaxuan/outputs/w14b_traxler_layout_v1/summary.json",
+    "sha256": "e806ff62fbb74da7f67e6594005870d32990f6cfe0d3c4d73735332c8ce7b6ea",
+    "summary": {
+      "git_commit": "abb3500c006c3cc66adb8faef2588f9f8ccff416",
+      "seed": 0,
+      "command": [
+        "/home/yuchang/wangjiaxuan/tools/sratoolkit.3.4.1-ubuntu64/bin/vdb-dump",
+        "/data/yuchang/veloroute_w4/traxler2025/sra/SRR28625696.sra",
+        "-T",
+        "SEQUENCE",
+        "-R",
+        "1-10",
+        "-C",
+        "READ_START,READ_LEN,READ_TYPE",
+        "-f",
+        "json"
+      ],
+      "data_hashes": {
+        "outputs/w14b_traxler_raw_v1/download_manifest.json": "d9e6d7de7736d1bb20be85b9d71b0cf21a79817360c1c889fa4b43cf54ef8e26",
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_layout_audit.py": "33bb75566348b7561d4338879feec15b88dce916155a91468c254dfd01733780"
+      },
+      "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+      "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runtime_seconds": 879.7231689691544,
+      "status": "TRAXLER_SRA_LAYOUT_OBSERVED",
+      "run": "SRR28625696",
+      "sra_sha256": "e55ed99a6dfda8460078e3ce2e6a884d5fc4c796ffa1ed926c604c26536b9449",
+      "rows": 10,
+      "biological_expression_read": false,
+      "barcode_layout_approved": false,
+      "next": "Review read-length/type table before configuring 10x5prime-v2 extraction; do not assume R1 cycles"
+    }
+  },
+  "reference": {
+    "path": "/home/yuchang/wangjiaxuan/outputs/w14b_traxler_reference_v1/summary.json",
+    "sha256": "133443c731e91f0ac9415fe16975e3efa4134d126ec102268d3136c818b2c824",
+    "summary": {
+      "git_commit": "0492617a98bdd4514915867ca69704e238396554",
+      "seed": 0,
+      "command": [
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_reference_download.py",
+        "--output",
+        "outputs/w14b_traxler_reference_v1"
+      ],
+      "data_hashes": {
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_reference_download.py": "d71ce70615da64325701b9c641c2dc5d26d6cb32ddb0132eb3a8ad5073481c98",
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_data_download.py": "f5032728b257e0ce60fb53d8d16585e973f5e981c7b24e24578daafc3f3f1ce4"
+      },
+      "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+      "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runtime_seconds": 619.4511416517198,
+      "status": "MOUSE_REFERENCE_DOWNLOADED",
+      "assembly": "GRCm38/mm10",
+      "annotation": "Ensembl93",
+      "files": [
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/reference_ensembl93/Mus_musculus.GRCm38.dna.primary_assembly.fa.gz",
+          "bytes": 805987240,
+          "sha256": "f2375d07f5441d23959bfa4c4926b1575fe443f5f03b07209bc0e0a6fdcedb86",
+          "url": "https://ftp.ensembl.org/pub/release-93/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.primary_assembly.fa.gz",
+          "reused": false
+        },
+        {
+          "path": "/data/yuchang/veloroute_w4/traxler2025/reference_ensembl93/Mus_musculus.GRCm38.93.gtf.gz",
+          "bytes": 29193889,
+          "sha256": "d88c3e541b2916e5fe4662cdc9ec2007a7b074d6e5ccf59f643229cf9b88d1dd",
+          "url": "https://ftp.ensembl.org/pub/release-93/gtf/mus_musculus/Mus_musculus.GRCm38.93.gtf.gz",
+          "reused": false
+        }
+      ],
+      "index_built": false,
+      "reason": "Wait for read-layout audit before choosing index rlen and chemistry"
+    }
+  },
+  "metadata": {
+    "path": "/home/yuchang/wangjiaxuan/outputs/w14b_metadata_audits_v1/summary.json",
+    "sha256": "419db5bb2fd4c16e874708678f3eaf74da7a6fcb55aeccc1269c0da8d149964f",
+    "summary": {
+      "git_commit": "abb3500c006c3cc66adb8faef2588f9f8ccff416",
+      "seed": 0,
+      "command": [
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_metadata_audits.py",
+        "--output",
+        "outputs/w14b_metadata_audits_v1"
+      ],
+      "data_hashes": {
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_metadata_audits.py": "f6994fc303661868c3c16f3d9829cb0c3cc792e46d42e77595049c2ec42f5543",
+        "/data/yuchang/veloroute_ucheck_20260915/merlin_suppl.xlsx": "f11c225d1ae5e7b9a84160095a0dea1986d04cd480644abf229069681b2307fb"
+      },
+      "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+      "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runtime_seconds": 4.320320557802916,
+      "status": "W14B_SAMPLING_AND_INVENTORY_COMPLETE",
+      "merlin_hour_scale": false,
+      "zscape_GEO": "GSE202639",
+      "zscape_fastq_bytes": 1394267790088,
+      "zscape_runs": 222,
+      "zscape_cell_count_table": "PENDING_AUTHOR_METADATA_ONLY_NOT_DOWNLOADED",
+      "expression_matrices_read": false
+    }
+  },
+  "zscape_counts": {
+    "path": "/home/yuchang/wangjiaxuan/outputs/w14b_zscape_counts_v2/summary.json",
+    "sha256": "4245de3a3e9f2b510cde076fd3feb39ca73859f7920201c742dfb798970c925c",
+    "summary": {
+      "git_commit": "0492617a98bdd4514915867ca69704e238396554",
+      "seed": 0,
+      "command": [
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_zscape_counts.py",
+        "--output",
+        "outputs/w14b_zscape_counts_v2"
+      ],
+      "data_hashes": {
+        "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_zscape_counts.py": "1679db04f0747def61889e9bdf84469cf592b3bdb4a1c16da55b5f2539a1945d"
+      },
+      "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+      "worktree_diff_sha256": "14b4f2f4a745ab833aa8ffd80253d2fdc5e8bd5e80df05d37ac07a85a5c61d0f",
+      "runtime_seconds": 131.5715129300952,
+      "status": "ZSCAPE_TECHNICAL_COHORT_COUNTS_COMPLETE",
+      "metadata": {
+        "path": "/data/yuchang/veloroute_w4/zscape_metadata/GSE202639_zperturb_full_cell_metadata.csv.gz",
+        "bytes": 318094480,
+        "sha256": "44b0e10caceef3b84597bebce0b2384ca430eb1c891f5e3484f69d4ee3c17e32",
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202639/suppl/GSE202639_zperturb_full_cell_metadata.csv.gz",
+        "reused": false
+      },
+      "total_cells": 2687135,
+      "groups": 98,
+      "expression_matrices_downloaded": false,
+      "raw_reads_downloaded": false,
+      "biological_effects_computed": false,
+      "columns_used": [
+        "timepoint",
+        "gene_target",
+        "embryo"
+      ]
+    }
+  }
+}

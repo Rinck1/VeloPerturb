@@ -1,0 +1,22 @@
+{
+  "git_commit": "0492617a98bdd4514915867ca69704e238396554",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_publish_data.py",
+    "--output",
+    "outputs/w14b_data_readiness_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_publish_data.py": "a689ac119917483c342c65f4384b29074c57687294b84fa687449b507ac15655"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "14b4f2f4a745ab833aa8ffd80253d2fdc5e8bd5e80df05d37ac07a85a5c61d0f",
+  "runtime_seconds": 8120.248601704836,
+  "status": "W14B_TECHNICAL_ACQUISITION_COMPLETE",
+  "SRA_bytes": 143055563003,
+  "SRA_runs": 18,
+  "S_U_quantification_complete": false,
+  "biological_effects_read": false,
+  "models_trained_on_new_data": false,
+  "next": "Confirm observed barcode layout, build mouse USA index and quantify before W15 registration"
+}
