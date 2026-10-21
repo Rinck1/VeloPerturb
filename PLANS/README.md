@@ -33,10 +33,12 @@
 
 - [短时群体预测基线复现实验方案](current/short_time_baseline_protocol_20261018.md)：
   CellFlow、CellOT及源侧U/velocity扩展，包含数据集绝对路径、冻结模型入口、
-  时间适配、共享均值结构评价和首轮24次拟合预算。当前为设计落盘，未启动新增基线训练。
+  时间适配、共享均值结构评价和首轮24次拟合预算。这是10月18日的设计，不表示其24次网格已执行；
+  10月21日CellFlow实际开发执行采用下方W15-A六臂×三seed，18模型已经完成。
 
 ## 2026-10-21三线衔接
 
 - [W15-A CellFlow三条模型线](w15a_cellflow_kinetic_plugin.md)：L1小模型保留，L2条件插件与L3双流router专家并行开发。
+- [CellFlow固定开发结果](../docs/current/w15a_l2_results.md)：群体kin胜static，但未胜S摘要；不改原计划的科学门槛。
 - [W15-B群体分支可行性](w15b_population_branching.md)：先做作者注释与冻结预测分析，不越过门槛训练分支原型。
 - W14已完成，RENGE恢复训练；六卡新资源授权及实时状态见[当前状态](../docs/current/STATUS.md)。

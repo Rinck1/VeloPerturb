@@ -1,0 +1,24 @@
+{
+  "git_commit": "2a2089ba195fa2fbafbe5c18fdc0506e11bf4f10",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_l2_token_intervention.py",
+    "--grid",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1",
+    "--output",
+    "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1",
+    "--approved"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_l2_token_intervention.py": "86eeb7f33fa6d4bde8a16962ecb4fa3d8e9ff461d7b2f87249a40b078e626ca6",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/study_manifest.json": "d5e3e65f320cacc9046e1bf64dc8f7c9b6a97eb4a9b2cc3b65a348bb2c74fd44"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 152.3406903669238,
+  "status": "complete"
+}

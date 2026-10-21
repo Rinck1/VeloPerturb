@@ -39,11 +39,16 @@ OT只使用S状态，动力学输入随OT源索引同步重排；动力学编码
 共用源ID/目标缓存评分，以及模拟完整18次训练、30份预测清单后再评分的顺序。
 模型部署参数为307,496，既定损失保持不变。
 
-CellFlow的18模型已完成并释放GPU0；L3真实管线仍等待完整合成判决。
+CellFlow的18模型与后续冻结token干预均已完成并释放GPU0；L3真实管线仍等待完整合成判决。
 条件控制器只拥有物理GPU0，CPU另做最终评分；合成失败则记录原因，不自动改架构重试。
 预测清单全部冻结后才评分。真实大型输出留在`/data/yuchang/veloroute_w15a/l3_registered_real_pipeline_v1/`。
 
 [CPU接线证据与待启动命令](../../outputs/w15a_l3_real_pipeline_20261021_v1/RESULTS.md)
+
+12:06已按上述命令启动CPU控制器PID195386，实时状态在
+`/data/yuchang/veloroute_w15a/l3_registered_real_pipeline_v1/status.json`。
+历史CPU证据包中的“未启动”描述属于启动前快照；实际启动回执见
+[执行记录](../../outputs/w15a_execution_20261021_v1/RESULTS.md)。
 
 ## 专家分工的数学检查
 

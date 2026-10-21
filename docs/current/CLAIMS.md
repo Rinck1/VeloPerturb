@@ -11,6 +11,7 @@
 | 小ODE比参数/更新数匹配的端点时间版在5/10h拟合更好 | [W13主结果及冻结权重步长复算](w13_time_results.md) | ODE计算量更多；15h无实质额外收益 |
 | 部分数据与建模方式未建立动力学增量 | [有效边界结果](../evidence/boundaries/README.md) | 特定任务/协议下的结果，不推出信息论上的普遍无效 |
 | CellFlow加入群体上下文可改善同系列短时预测，但动力学构造未优于S摘要 | [固定18模型、216窗口的L2结果](w15a_l2_results.md) | kin对static改善不等于velocity特异性；模式比例TV未改善，局部kin输单置换shuffle |
+| CellFlow会响应群体token，但实际动态值相对固定早期参考并无稳定推理收益 | [冻结权重输入干预](w15a_l2_token_intervention.md) | 72次新推理、原Energy复现误差0；不能只拿训练均值遮蔽变差当作实时动力学信息证据 |
 
 ## 尚不能写成已成立结论
 

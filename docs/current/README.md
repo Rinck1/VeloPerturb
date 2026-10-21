@@ -7,6 +7,7 @@
 - [W13模型定义](w13_time_model.md)
 - [W13结果](w13_time_results.md)
 - [CellFlow插件固定开发结果](w15a_l2_results.md)
+- [CellFlow冻结输入干预](w15a_l2_token_intervention.md)
 - [最终小ODE路由机制](w15_l1_routing_results.md)
 - [最近定位与讨论记录](w13_project_position_and_next_steps.md)
 

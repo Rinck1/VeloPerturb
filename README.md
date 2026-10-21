@@ -2,8 +2,9 @@
 
 **当前主线：RNA动力学上下文引导的短时群体分布预测。**
 
-2026-10-18：W14跨重复验证已启动；RENGE探索迁移在其后自动排队，Traxler原始数据下载并行。
-实时执行状态和边界见 [当前状态](docs/current/STATUS.md)。以下结果仍为已完成的W13，不混作W14新成绩。
+2026-10-21：W14跨重复验证完成，RENGE迁移网格运行中；CellFlow插件的18模型/216窗口已完成。
+CellFlow群体kin胜本线static，但未胜S表达摘要；L3合并模型等待完整合成判决后接续训练。
+实时状态与结果边界见 [当前状态](docs/current/STATUS.md)。下表仍为W13，不混作新线成绩。
 
 源侧S/U经解析邻域动力学估计进入soft router，校准混合响应模式配比；
 零均值专家与小型群体耦合ODE预测分布，保留独立的冻结均值分支。
@@ -14,6 +15,8 @@
 - [当前状态：唯一最新入口](docs/current/STATUS.md)
 - [当前方法与数学定义](docs/current/w13_time_model.md)
 - [最新实验结果](docs/current/w13_time_results.md)
+- [CellFlow固定开发比较](docs/current/w15a_l2_results.md)
+- [最终小ODE的路由机制](docs/current/w15_l1_routing_results.md)
 - [完整研究导航与目录分类](docs/README.md)
 - [错误、撤回主张与正确替代表述](docs/corrections/CLAIMS.md)
 - [交接入口](HANDOFF.md)

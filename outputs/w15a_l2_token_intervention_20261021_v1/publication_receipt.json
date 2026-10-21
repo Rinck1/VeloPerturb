@@ -1,0 +1,122 @@
+{
+  "status": "SMALL_TOKEN_INTERVENTION_PUBLICATION_PACKAGE_VERIFIED",
+  "source_directory": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1",
+  "records": [
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/RESULTS.md",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/RESULTS.md",
+      "sha256": "d74260db2e9b35984e3719f21896a31ab5f29f59fb08a87fc3aa76f346065319",
+      "bytes": 2110
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/endpoint_changes.csv",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/endpoint_changes.csv",
+      "sha256": "f34d7f723244c42f253d9696617e8bb45cc84b6824a5c31f01a311f09a84e428",
+      "bytes": 8492
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/evaluation/frozen_grid.json",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/evaluation/frozen_grid.json",
+      "sha256": "06b37997d1dc069b6dcc34e39ff2761c5a4bd2fc89899a77385300f3e4a0985f",
+      "bytes": 40361
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/evaluation/metrics.csv",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/evaluation/metrics.csv",
+      "sha256": "9ff60bd972ffac87d82ac88768885a6369fdb9d12b942ade850a56dd1aa0394c",
+      "bytes": 6576
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/evaluation/status.json",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/evaluation/status.json",
+      "sha256": "6dd0524f481bade35e21ae8482a02453c6eb65b64f5076f7b61a64fa097176bc",
+      "bytes": 1303
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/evaluation/summary.json",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/evaluation/summary.json",
+      "sha256": "bcbd1ab28d7a41de9126ec82cae21252c0e03455d341d057ff967daaf86665c2",
+      "bytes": 19894
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/horizon_comparisons.csv",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/horizon_comparisons.csv",
+      "sha256": "6ecfaad15cf7657c704d2092f31a0342dd1cf75653c93718d07dd22a815cd900",
+      "bytes": 1649
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/intervention_protocol.json",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/intervention_protocol.json",
+      "sha256": "c99f478ed3b1c8f80a4f120e9e023d6507a40576caf9547898c3138e233415ca",
+      "bytes": 1644
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/launcher/job.json",
+      "source": "outputs/w15a_cellflow_jobs_20261021/l2_token_intervention_v1/job.json",
+      "sha256": "a177e8081e2349a7dd5f17b169065fc41efc68dee535939ad8a833792700807b",
+      "bytes": 618
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/launcher/launcher.json",
+      "source": "outputs/w15a_cellflow_jobs_20261021/l2_token_intervention_v1/launcher.json",
+      "sha256": "da877a720b69afcdd2f10cab5bac9c2e05e5cfbf842327581a848b6ff8205428",
+      "bytes": 61
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/launcher/status.json",
+      "source": "outputs/w15a_cellflow_jobs_20261021/l2_token_intervention_v1/status.json",
+      "sha256": "9e1331b8095e3054bd4249eddd3454c18415f0fa63232abf2d8310a80129cadd",
+      "bytes": 120
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/provenance.json",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/provenance.json",
+      "sha256": "7049ba82237bc49cb1bdad957a0681ed3cfa0e37d8e63377b54081c9bdaed0ee",
+      "bytes": 9628
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/status.json",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/status.json",
+      "sha256": "e76e5f6f42ca6c47b42b19fe1e0dddd0012378bf642e15ab7d65ae5ee1fee34a",
+      "bytes": 962
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/summary.json",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/summary.json",
+      "sha256": "5b67027029af7bf4a098843772747d20ab9ae0ded972957e7b49a01ab0fb0c7f",
+      "bytes": 8249
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/token_audit.csv",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/token_audit.csv",
+      "sha256": "6f43923ff1682d08378a0b6c8703221a99c52a1505147b4dd69f72d37105734a",
+      "bytes": 16959
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/whole_intervention_frozen.json",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/whole_intervention_frozen.json",
+      "sha256": "b295d9a4f5bf82f85bc1fd11d9065f02d4ee460c269fa8516a005ea7a43dcd7f",
+      "bytes": 39976
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/window_comparisons.csv",
+      "source": "/data/yuchang/veloroute_w15a/cellflow_frozen_token_intervention_v1/window_comparisons.csv",
+      "sha256": "c89ef0d1724ff5340b89f6f2dcbbd6f4759fba87a6262c60d43f99d08d01db9d",
+      "bytes": 5282
+    },
+    {
+      "path": "outputs/w15a_l2_token_intervention_20261021_v1/mechanistic_decomposition.csv",
+      "sha256": "e58dedf2ae751939b1fdc9cdf0e4ac3436b9841f3d0cc427d9d2a08c724ce915",
+      "bytes": 1272
+    },
+    {
+      "path": "docs/current/w15a_l2_token_intervention.md",
+      "sha256": "ece5006100abaf44b7382dcb4f70f1d4413f05e755600ac1490b965b3a1b3f75",
+      "bytes": 4922
+    }
+  ],
+  "verified_scientific_artifact_count": 36,
+  "no_NPZ_weights_or_matrices": true,
+  "original_scores_and_report_unchanged": true,
+  "derived_decomposition": "verified_exact_error_difference_identity_not_biological_causality"
+}
