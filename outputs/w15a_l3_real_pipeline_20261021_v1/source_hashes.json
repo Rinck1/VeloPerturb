@@ -1,0 +1,11 @@
+{
+  "scripts/phase0/w15a_cellflow_moe_real_train.py": "8398dc257a73056bf6bc3cf85886b8f0e0f28809f43ee2aef40ca1974a498981",
+  "scripts/phase0/w15a_cellflow_moe_real_predict.py": "0a41ea71bd623f7badba000baab98ea3f9df59c548661bb81f54609e48a55dcd",
+  "scripts/phase0/w15a_cellflow_moe_real_grid.py": "6de10d6065fc43b4d78b3fb5707754fdb37257603a76e630dee9675b1426afdd",
+  "tests/test_w15a_moe_real.py": "acef90b6779eb1c8f939673c13c55fbf0668d6f48667bd8a5d70bb29d311175d",
+  "tests/test_w15a_moe_real_grid.py": "ddb7eaa91c9f4fdb2d0cb5ca3bedf6faf03c0ce0fc60831c75e3c65ea909c54b",
+  "configs/w15a_cellflow_selected_20261021_v1.json": "6ba3dc12bf2bb200a205c4181a8a4bf3b31a510aba4cfa10ace7a76da870845b",
+  "configs/w15a_l2_freeze_20261021_v1.json": "65ff00f8f3b1fa3a86c28782c5701dcef4d8c70ed7e89aac15a64d8cc7b985a2",
+  "/data/yuchang/veloroute_w15a/l3_source_sidecar_v1/manifest.json": "1733feefc60e5bc8976cc06d0a1eb9348c9b0c2a5b4fb9723864a31ba63802ac",
+  "/data/yuchang/veloroute_w15a/l3_source_sidecar_v1/normalizer.npz": "77d15f758ce670806c6a0683a6902f834e34ff255dfd1e656bd8b92b1a94bcea"
+}

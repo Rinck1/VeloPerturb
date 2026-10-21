@@ -1,0 +1,13 @@
+comparison,horizon_hours,decay_relative_gain,linear_relative_gain,clock_direction_pattern,difference_percentage_points,primary_clock,clock_selected_from_results
+group_kin_vs_static,5,0.15866345381649385,0.130755900022334,both_positive,2.790755379415985,decay,False
+group_kin_vs_static,10,0.32529323796035065,0.2947064113630531,both_positive,3.0586826597297554,decay,False
+group_kin_vs_static,15,0.45469369456755354,0.44131323954715224,both_positive,1.3380455020401305,decay,False
+group_kin_vs_S_summary,5,-0.03762002935053903,-0.025029071169788124,neither_positive,-1.2590958180750904,decay,False
+group_kin_vs_S_summary,10,-0.07939069977622275,-0.04584612070860045,neither_positive,-3.3544579067622293,decay,False
+group_kin_vs_S_summary,15,-0.025719024837789716,-0.06238118309890323,neither_positive,3.666215826111352,decay,False
+group_kin_vs_direct_U,5,-0.043286636900522736,-0.06645631353492935,neither_positive,2.316967663440662,decay,False
+group_kin_vs_direct_U,10,-0.06810813069822609,-0.12379625787175458,neither_positive,5.5688127173528486,decay,False
+group_kin_vs_direct_U,15,0.0154230507537165,-0.051981135258851424,decay_only_positive,6.740418601256792,decay,False
+local_cell_vs_single_shuffle,5,-0.15176092049487172,-0.04640943807470559,neither_positive,-10.535148242016612,decay,False
+local_cell_vs_single_shuffle,10,-0.2772490717831196,-0.04501392613484025,neither_positive,-23.223514564827934,decay,False
+local_cell_vs_single_shuffle,15,-0.2949299594996846,-0.04152550070301616,neither_positive,-25.340445879666845,decay,False

@@ -1,0 +1,19 @@
+{
+  "status": "L3_SOURCE_SIDECAR_VALIDATED",
+  "source_directory": "/data/yuchang/veloroute_w15a/l3_source_sidecar_v1",
+  "source_manifest_sha256": "1733feefc60e5bc8976cc06d0a1eb9348c9b0c2a5b4fb9723864a31ba63802ac",
+  "training_cohorts": 15,
+  "development_source_cohorts": 3,
+  "training_source_cells": 44222,
+  "development_source_cells": 13636,
+  "cohorts_with_bitwise_original_state_kinetics_and_ids": 18,
+  "maximum_reconstruction_difference": 9.516568582057516e-7,
+  "neighbors": 64,
+  "normalizer_sha256": "77d15f758ce670806c6a0683a6902f834e34ff255dfd1e656bd8b92b1a94bcea",
+  "normalizer_fitted_sources": 15,
+  "source_only": true,
+  "target_arrays_read": false,
+  "parent_pack_modified": false,
+  "current_source_U_intervention_reference_frozen": true,
+  "unit_tests": 7
+}

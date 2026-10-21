@@ -1,0 +1,23 @@
+{
+  "git_commit": "5525b80b039575cd637ffe1ee661a62d51b93d9f",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15_l1_common_alignment.py",
+    "reproduce",
+    "--output",
+    "outputs/w15_l1_common_alignment_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15_l1_common_alignment.py": "01fa1b35e678bab1fa3c7c1bba07208c0b31b7c5960baf2731531d64bfc811a6",
+    "/home/yuchang/wangjiaxuan/outputs/w15_l1_routing_20261021_v1/frozen_predictions.json": "dbc1dfa1c4d2d44d7972ce6b3910825103ddcd145ceb5eedfc84895627225f71",
+    "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/metrics.csv": "f09994de4ef486b4df98aacd31ec5513af3b91540049ff2ef6359cbb157f9eb0"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 48.96465229988098,
+  "status": "complete"
+}

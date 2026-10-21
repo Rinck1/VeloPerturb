@@ -1,0 +1,694 @@
+{
+  "git_commit": "5525b80b039575cd637ffe1ee661a62d51b93d9f",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_l2_reporter.py",
+    "--grid",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1",
+    "--output",
+    "outputs/w15a_l2_report_v1",
+    "--report",
+    "docs/current/w15a_l2_results.md",
+    "--l1-alignment",
+    "outputs/w15_l1_common_alignment_v1",
+    "--wait",
+    "--timeout-seconds",
+    "14400",
+    "--training-job-status",
+    "outputs/w15a_cellflow_jobs_20261021/registered_l2_grid/status.json"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_l2_reporter.py": "ce89abf761bf526d738c97e7acf0c43e70fa0bedec5a9f090585fec11990aab4",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/study_manifest.json": "d5e3e65f320cacc9046e1bf64dc8f7c9b6a97eb4a9b2cc3b65a348bb2c74fd44",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/summary.json": "a5fed189634b62ecf18f7551227916be68212387fea48ba7d7fd15944f2bc832",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/evaluation/metrics.csv": "95061f9648559316402d0add30acacd89d121ab04321aef7c7b2b7e09dce80a6"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 7.371871113777161,
+  "artifacts": [
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_Ssum/seed0/common_predict/prediction_manifest.json",
+      "sha256": "e2209323e7f015d81708bded9e873f3b9299e322915cbcac0a9654d49622a255",
+      "bytes": 5623
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_Ssum/seed0/common_predict/predictions.npz",
+      "sha256": "62c87b4c57fce0f7a61155475b715a363aa0536be8f4139c751d1546adb24113",
+      "bytes": 1199248
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_Ssum/seed0/train/model.msgpack",
+      "sha256": "b2604cddfc9b1e6a82b2f74420c3c2db2dd03465b980e20a244d15314daf35b1",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_Ssum/seed0/train/summary.json",
+      "sha256": "eec47917eeb8432edc1c9e523b654b00ac688f34882f04bbc017716f95945edd",
+      "bytes": 7212
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_Ssum/seed1/common_predict/prediction_manifest.json",
+      "sha256": "9b9d1370841a22f6ff86561f4daf70b4279b848fd80b6e5a6165c248bb371c2f",
+      "bytes": 5623
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_Ssum/seed1/common_predict/predictions.npz",
+      "sha256": "12a0dde229e94d8dfe87f024453fc61a17779320ef02879d20787d6317990581",
+      "bytes": 1199321
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_Ssum/seed1/train/model.msgpack",
+      "sha256": "d49d5de1dab356f9b4a13727f686e182581447fcb5ff697ade7ee448de5bd8d3",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_Ssum/seed1/train/summary.json",
+      "sha256": "2cec60583bffc344dfa57b37e0c6c171dc0207da9d9b39da218a2cfcbe3f20ab",
+      "bytes": 7204
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_Ssum/seed2/common_predict/prediction_manifest.json",
+      "sha256": "5d9380926a7097c1e2336c88cd47b5eb48164438277b1e3754d24911592604db",
+      "bytes": 5623
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_Ssum/seed2/common_predict/predictions.npz",
+      "sha256": "62b10c80e0ce94d1f8047a76959774b3d99890092f8237562438bab71daeee34",
+      "bytes": 1199399
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_Ssum/seed2/train/model.msgpack",
+      "sha256": "a703141962aea761241f7bdee995f3dec865031fdf675c75dadadd7740416be1",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_Ssum/seed2/train/summary.json",
+      "sha256": "d733341e8cf4252da3f98d5fbdc9d827221c3a063872b8e2037d34dcfd0c1bbe",
+      "bytes": 7212
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_directU/seed0/common_predict/prediction_manifest.json",
+      "sha256": "9a36bd2c1903275e0a581bcc5d0b811af90db9e0d132444e01663e259e27806c",
+      "bytes": 5629
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_directU/seed0/common_predict/predictions.npz",
+      "sha256": "b1ce63a32d5ee3accaafbe6943ac6dbef332d47753d16dbda0227ce81c6c8c30",
+      "bytes": 1199277
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_directU/seed0/train/model.msgpack",
+      "sha256": "9c8fdc69e409997adaa00f8ecb7c84a5e9795004a0c0c069b6fa50a64f36ea60",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_directU/seed0/train/summary.json",
+      "sha256": "c32dd7d295cdd73a3f551df7880da5d3ebb7f43aab0ef484ae065ad98884c579",
+      "bytes": 7217
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_directU/seed1/common_predict/prediction_manifest.json",
+      "sha256": "21929dd78d3309e42eec1631c3e29d4e1f148eb278266a9963b3d331789c6975",
+      "bytes": 5629
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_directU/seed1/common_predict/predictions.npz",
+      "sha256": "0c82bea0415968d8278e690d9b4fafbe56a09f443912a719c0e8500e99385c57",
+      "bytes": 1199359
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_directU/seed1/train/model.msgpack",
+      "sha256": "01ee7b0887730c4f5b5bb91c31ad1588d81fca8be35b8e5f1278d828407b5e85",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_directU/seed1/train/summary.json",
+      "sha256": "4e909846034fc98251341696c53259364c8bef1dbdaf94c2ac8629f4f765962a",
+      "bytes": 7210
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_directU/seed2/common_predict/prediction_manifest.json",
+      "sha256": "0b6b137d12503d3d317a1a4fa542e9653515420f3390316ec39acd58e43c30ef",
+      "bytes": 5629
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_directU/seed2/common_predict/predictions.npz",
+      "sha256": "957365af4c1b4bf71d0f5445d87ce4fda90c5f9b97cccba10ebdbc658476869b",
+      "bytes": 1199530
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_directU/seed2/train/model.msgpack",
+      "sha256": "aac638ec497c6ef658b72b01d2b84dba15cc5e8bf9eb283463a884511e970f03",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_directU/seed2/train/summary.json",
+      "sha256": "88a58e93c80eb5a2783c6bddc946c4d253ebfb9d557ce5add0226e4de736f100",
+      "bytes": 7212
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin/seed0/common_predict/prediction_manifest.json",
+      "sha256": "8395e7c9db0d7d6c54bc664caf5e339bab25dbe4268e4390dfc63e06b6be5000",
+      "bytes": 5621
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin/seed0/common_predict/predictions.npz",
+      "sha256": "26d1a166234cd70927fc6bf2c9fbc519d3afaebfef59e237d5ccc55c3206caad",
+      "bytes": 1199217
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin/seed0/train/model.msgpack",
+      "sha256": "ab3d3d17c4824e42b0b15a2776df197fa92e5b401297b11840bd8a20954ff3ee",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin/seed0/train/summary.json",
+      "sha256": "639b2260829ed765ab401f0388ad3f26408bf54879c38ec4061e65acf80ec8cf",
+      "bytes": 7206
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin/seed1/common_predict/prediction_manifest.json",
+      "sha256": "549508a35f4a3595c16cc8bb391d97c68d972f2eb36a1ba9bd46f9225fb80751",
+      "bytes": 5621
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin/seed1/common_predict/predictions.npz",
+      "sha256": "ed0f9f0f8066d9c840f07149a8d0c62f88922f6e9604e0c5c03fb30b4d2424ff",
+      "bytes": 1199223
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin/seed1/train/model.msgpack",
+      "sha256": "8be799e0613707a3a882843439933c0f374762d662c326eaa3c62e5905ccf8c1",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin/seed1/train/summary.json",
+      "sha256": "469d36bef750b9c2c34213c7a1989b4a1fd451cb18e4511e67f9a721f4c71494",
+      "bytes": 7209
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin/seed2/common_predict/prediction_manifest.json",
+      "sha256": "66103abfd4fd69a0534f15d9f6fc45f82fd4818f4cdf3b10a40d98868ae5b4cb",
+      "bytes": 5621
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin/seed2/common_predict/predictions.npz",
+      "sha256": "adb0ae534e029d6e7ac6202ac10be3d4833e3dd592ba03048c04b62b2e24ab7b",
+      "bytes": 1199312
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin/seed2/train/model.msgpack",
+      "sha256": "b5b303c1c044de2757c11f05beb11405c11f41585d174c0d9ab362f1945f1ae2",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin/seed2/train/summary.json",
+      "sha256": "b1c042f703277503208b1b3c2d348587669f01a0ff2ea88c6ec69ef002dbe87a",
+      "bytes": 7203
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell/seed0/common_predict/prediction_manifest.json",
+      "sha256": "dd5ea1538ce7996a618c484ba0fbfcfd98ada476c5a24b1099f1b69cab78420e",
+      "bytes": 5631
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell/seed0/common_predict/predictions.npz",
+      "sha256": "a9983cdcd25af126a2806ebfd777e00c95282634542f09cce1720f1516010a72",
+      "bytes": 1199235
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell/seed0/train/model.msgpack",
+      "sha256": "526dce8bdbb9ddb524cc4a6cfda01fecf0dc39ff66bbc81277004e7ebcb2c0c0",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell/seed0/train/summary.json",
+      "sha256": "37732df88dac9f630ffbfca5bf629a4f8915e13b0e049c9368545cb73b37aca3",
+      "bytes": 7211
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell/seed1/common_predict/prediction_manifest.json",
+      "sha256": "7a8696fe00f26389da1892bae249e0fb6637fb4a8dde1d3d3e6dc06af85bb2d0",
+      "bytes": 5631
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell/seed1/common_predict/predictions.npz",
+      "sha256": "693e0baa1a13014a16a9a7755369087cac8d85463a4f0b25ee21aa92b20f0385",
+      "bytes": 1199261
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell/seed1/train/model.msgpack",
+      "sha256": "dbac7ff3c6f9f4f9fc3c2063d8bf25ba34c605ee87d42fec49bdaa8af8e030c5",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell/seed1/train/summary.json",
+      "sha256": "b8124b2ad58617bda045bf0c933fdbf6ec2a028bca72aea563ddb3f6001d1081",
+      "bytes": 7214
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell/seed2/common_predict/prediction_manifest.json",
+      "sha256": "f9c03feb7cca9571144dadeae279cff343874c0174426265cf00b272775f4656",
+      "bytes": 5631
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell/seed2/common_predict/predictions.npz",
+      "sha256": "f727c746bf9edb57cf3918fd6eef77e43402ffb69a3d4fe23b51036b93500ee1",
+      "bytes": 1199751
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell/seed2/train/model.msgpack",
+      "sha256": "e73d015e9f03b79ef9ff5fed4b0207daec69d8b3fc30d17ac504a7e7e9ee4aa7",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell/seed2/train/summary.json",
+      "sha256": "720ca787dd8cb039d3d2647107358c081dd9c839560e43c7c3f7e2ef97dd3eb4",
+      "bytes": 7211
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell_shuf/seed0/common_predict/prediction_manifest.json",
+      "sha256": "311ecba18a7d6680c51ea54195e10400c8f7e9868060df3866a144d66040b065",
+      "bytes": 5641
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell_shuf/seed0/common_predict/predictions.npz",
+      "sha256": "35ac1a498dfd4c7c54351a19c40f8b2d158dd6474e059b37947283410ae42c47",
+      "bytes": 1199197
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell_shuf/seed0/train/model.msgpack",
+      "sha256": "1d27f58486ba0206dc2adb89bd5905d6f6744a8ddc69c732f99fe06abf08e61d",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell_shuf/seed0/train/summary.json",
+      "sha256": "9edbb1377462d193f834ca4335d2074c9f0e3dd16a88dae1928213e0b971398e",
+      "bytes": 7212
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell_shuf/seed1/common_predict/prediction_manifest.json",
+      "sha256": "573e8a06cfa9b2b973aa91d5818793b86eb597d3d7cdafb5191e728fe6386609",
+      "bytes": 5641
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell_shuf/seed1/common_predict/predictions.npz",
+      "sha256": "8bfa1e59c45a6b23488fd901d6945459f96cf5e8076a9127ab7b7a88f4b1fe77",
+      "bytes": 1199045
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell_shuf/seed1/train/model.msgpack",
+      "sha256": "47b87b42dc764dad5fa1b07306edfda615eeca9670f83f6df703c3f480c67144",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell_shuf/seed1/train/summary.json",
+      "sha256": "17afee51992f2c3ba805184c4ce40e0249cf855a63b814a249f41f0c67920e57",
+      "bytes": 7221
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell_shuf/seed2/common_predict/prediction_manifest.json",
+      "sha256": "ad634489cff40104a421a2bc7011eed0da982e68a323cc32968e1901e0bedf92",
+      "bytes": 5641
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell_shuf/seed2/common_predict/predictions.npz",
+      "sha256": "bd7cfa4feaa7198415aeaa283943c19010e36cc4669264f7957c738a3c469c77",
+      "bytes": 1199146
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell_shuf/seed2/train/model.msgpack",
+      "sha256": "ab8d8ae0afe695356a806e0b25e9854b0e1f794b36e2f0f054d1292090b32d39",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_kin_cell_shuf/seed2/train/summary.json",
+      "sha256": "3d04a999fc89366239c8f8583699306fbcc550e25e8a686dcd770297243a3bf9",
+      "bytes": 7217
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_static/seed0/common_predict/prediction_manifest.json",
+      "sha256": "10e5068718315d118ab73a62b783632981ccfb80f8634b55e38f275e4ddef73d",
+      "bytes": 5624
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_static/seed0/common_predict/predictions.npz",
+      "sha256": "28ea063519866e25f7d6f9c89fd0c0120d26d3be35085ce4b95e89c5d313d1fb",
+      "bytes": 1199036
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_static/seed1/common_predict/prediction_manifest.json",
+      "sha256": "3eb7fff57401fe46d75f0df15a3366380a9c32a1c6c53a0b07faaa5255126fc3",
+      "bytes": 5627
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_static/seed1/common_predict/predictions.npz",
+      "sha256": "2e063aa42a114f00e106bf9a11e60e9c5d7679b682721e1a967a1b7c9d765a47",
+      "bytes": 1199114
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_static/seed1/train/model.msgpack",
+      "sha256": "1cb04e3686902544042495835e44fd284bd1481bcca9e564bd70f73756bef319",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_static/seed1/train/summary.json",
+      "sha256": "9fb5a8c26e84a859557af66fa49ce203a7a7b7b525ad00b6d756507f59b857c5",
+      "bytes": 7212
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_static/seed2/common_predict/prediction_manifest.json",
+      "sha256": "93ab740acbf147c104257370b2afe94d5307df96d384f9d0ebfab1f20e1494ce",
+      "bytes": 5627
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_static/seed2/common_predict/predictions.npz",
+      "sha256": "d35ee57aa89b535efc23525182af926f169775764c6a19eb0b8feb11a26b9df5",
+      "bytes": 1199144
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_static/seed2/train/model.msgpack",
+      "sha256": "47d44358415d385e6b73b8f33651961b1aa5396e449501ac9f1341d2cbab3233",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/cf_static/seed2/train/summary.json",
+      "sha256": "16de3d2cdfaf8f285a7df5192d9447223f27d579e8e5cfe2a7e3dc0e79e5e59a",
+      "bytes": 7215
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/completed_models.json",
+      "sha256": "e6eb2d308ae927dd34fc2853d53e6c476e04f44df2bee4cf6c7df16f7e257a39",
+      "bytes": 11208
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/evaluation/frozen_grid.json",
+      "sha256": "b19b809b41618d1946844675675382b99f88907197be63f1b8a3c457f56e0d30",
+      "bytes": 78770
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/evaluation/metrics.csv",
+      "sha256": "95061f9648559316402d0add30acacd89d121ab04321aef7c7b2b7e09dce80a6",
+      "bytes": 12241
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/evaluation/status.json",
+      "sha256": "b3d02d580e87f55dce307d4efcb1086bc975a9c17d507a2b042036ccd7f12526",
+      "bytes": 1451
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/evaluation/summary.json",
+      "sha256": "4b1f89413b1e80101ee48b990a225eda0817f6a0b87841c8ff41de51217d2a5f",
+      "bytes": 36420
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/status.json",
+      "sha256": "154f397b564cf29a687b51faa6b1ee4fa2c891d968e924f12df9f9dfe2fe578e",
+      "bytes": 1678
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/study_manifest.json",
+      "sha256": "d5e3e65f320cacc9046e1bf64dc8f7c9b6a97eb4a9b2cc3b65a348bb2c74fd44",
+      "bytes": 4957
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/summary.json",
+      "sha256": "a5fed189634b62ecf18f7551227916be68212387fea48ba7d7fd15944f2bc832",
+      "bytes": 2486
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/whole_grid_frozen.json",
+      "sha256": "646314f6cda83cb65a0b57ce096002038fa04f69f1545bb0b8e4d2b157925f4f",
+      "bytes": 78685
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/manifest.json",
+      "sha256": "dfb954c62072c9ae288aa1e3ce0e3b4f006c595fdde7595c57378478e6088ac1",
+      "bytes": 15438
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/source_05h.npz",
+      "sha256": "207819d1152da86a2e7b651fec51bdddb6e46a7dccfe2949a84fc1955de73432",
+      "bytes": 1773997
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/source_10h.npz",
+      "sha256": "6c4415a31b907d8ee7ac781c429332a2b1d0f4757aa6b5ca93e57437b34d44d7",
+      "bytes": 1595581
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/source_15h.npz",
+      "sha256": "3a3bbffac476c0f1eafa50fbcaab78e987b272897b12aef39fa5c1c4ca85f642",
+      "bytes": 1796675
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/token_normalizer.npz",
+      "sha256": "143c7375d1c187b9a21593f7233be112af3172d6a8aa0eaad7c96b177968bdbf",
+      "bytes": 5329
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r1_D3.npz",
+      "sha256": "31ae1367f74f23b9f3998cfb2894e7ce9e6c03a9c06c6f155558ef28c1e3f41b",
+      "bytes": 1670946
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r1_D4.npz",
+      "sha256": "fe40ad1c180c02a06c63369b65c775da433d246ddf9afeb43b4f25cec95bcaf7",
+      "bytes": 1691528
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r1_D5.npz",
+      "sha256": "1eb6ff2444e4d3c0241e322481a19fa6a073184bd19f5ac9da786c336865b166",
+      "bytes": 1997599
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r1_D6.npz",
+      "sha256": "6752e9c879b59fbf20fd534e3aa0920b1347d48b26cd58fd4ba60a7e58ea82da",
+      "bytes": 1386345
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r1_D7.npz",
+      "sha256": "0694c084d90d847b5c8d4de684d9b6d102ca06d20cfe66717c9a11b9a9756a67",
+      "bytes": 1391213
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r2_D3.npz",
+      "sha256": "e0b60f8952c41c2271c6436c1aa84712af72a62af22e3c720b678bbef5f1e6b1",
+      "bytes": 1261813
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r2_D4.npz",
+      "sha256": "1e83f72f825581d38f8ac147a4e17ac5632d75f8b1d155a5646d8c2e6d8460e1",
+      "bytes": 1633365
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r2_D5.npz",
+      "sha256": "cdfc8e59fa9ad26a07df5be4cf898f8e0c2d9ad4fe8217034c0adf01f8bdd793",
+      "bytes": 1912840
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r2_D6.npz",
+      "sha256": "2840389d6112d6e8a699ef3a960e453a5b3230c91b2d3c19424e93494a87752b",
+      "bytes": 1616231
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r2_D7.npz",
+      "sha256": "4d89d92b49d9a694c91eb8b675934b207adea4d8fc04e817ca116c02f5d05716",
+      "bytes": 2101442
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r3_D3.npz",
+      "sha256": "ab8e1f73bbaeaf1ffee46b33b4b1d12cf2a9e05d95dd692509225abe38e161b3",
+      "bytes": 943646
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r3_D4.npz",
+      "sha256": "d8ff227031df3b386be48f2d6e1c86e67d9390dade9394a28b60764ab73d9029",
+      "bytes": 1613705
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r3_D5.npz",
+      "sha256": "a7b14e6fa57a96d0eacbe20b3e9427bd2c13e38604c8da448fa3d199efccbdee",
+      "bytes": 1777052
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r3_D6.npz",
+      "sha256": "cf4d3c891229815efc2b7af4f4487e2ceba11ff2aced49c1a631d9342a26a3f7",
+      "bytes": 1831867
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r3_D7.npz",
+      "sha256": "207546699b5950198b4ac7426dc1c3345917b67617a2dc5814c735582d3d994e",
+      "bytes": 2159715
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/training_target_mode_centers.npy",
+      "sha256": "eb1b7efb09f2936b6972393fa9b8c4a9ffd16487e186b6b0a66d01536c53dce5",
+      "bytes": 1728
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_static_grid_v1/static_w128d2_seed0/train/model.msgpack",
+      "sha256": "f877b6b2bcfe590d5fdb9e0324b11edf377a4f8e6768d4b6d99e739cc6999909",
+      "bytes": 1456357
+    },
+    {
+      "path": "/data/yuchang/veloroute_w15a/cellflow_static_grid_v1/static_w128d2_seed0/train/summary.json",
+      "sha256": "956d0cb401af4553f8e2427cc355b0533702265cc3336fde93021f5e18487f24",
+      "bytes": 7284
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/configs/w15a_cellflow_selected_20261021_v1.json",
+      "sha256": "6ba3dc12bf2bb200a205c4181a8a4bf3b31a510aba4cfa10ace7a76da870845b",
+      "bytes": 2658
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/configs/w15a_l2_freeze_20261021_v1.json",
+      "sha256": "65ff00f8f3b1fa3a86c28782c5701dcef4d8c70ed7e89aac15a64d8cc7b985a2",
+      "bytes": 4196
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/data/scifate2/raw/GSE236512_processed_data_splicing.h5ad",
+      "sha256": "4269f26b5d53d436c692210d965233ed66f2d3d4a6ff0e1c0a6713b108816944",
+      "bytes": 4505323176
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/source_samples.json",
+      "sha256": "9ed86405aba7aca6d4dc1ee2a7d9474b6b4e5ba66a297c817f78fc97ea3826e6",
+      "bytes": 17333
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1/study_manifest.json",
+      "sha256": "806b7938b85e07fcf0f0d7b1ad1fae2f62d970ce6344ee097b2ae7d762e361ca",
+      "bytes": 24721
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_pack_v1/source_transform.npz",
+      "sha256": "c00899873aedca6f0bf1423f7ddf8ca52774a9e81134c7edf214c1e23eb10099",
+      "bytes": 3498807
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_10_to_15.npz",
+      "sha256": "e0fd4afcd47511ff298d5341058c228ae3f671c45e79397ceffcf99dc92796c8",
+      "bytes": 384211
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_15_to_20.npz",
+      "sha256": "ec57738ec3828e82197b4cba9b135eb0e8e7cdf75369f476f30ca76882f40504",
+      "bytes": 383530
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w7_scifate2_router_scaling_v1/evaluation_5_to_10.npz",
+      "sha256": "f43696a55804bd29a5ed1f590eea659d45b4c018074e786d77ce15645c38aef9",
+      "bytes": 384711
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_common_evaluation.py",
+      "sha256": "2a4f99f0a6d933fd641df1b597266408f9ac6fa7519249d81a6b321250fb082c",
+      "bytes": 16674
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_registered_grid.py",
+      "sha256": "c7eb628e6fbe3e4f94276b95f8a5522bbb452ed7a817433b7bae7ee4e970756c",
+      "bytes": 7803
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_l2_reporter.py",
+      "sha256": "ce89abf761bf526d738c97e7acf0c43e70fa0bedec5a9f090585fec11990aab4",
+      "bytes": 25194
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/scripts/phase0/w15_l1_common_alignment.py",
+      "sha256": "01fa1b35e678bab1fa3c7c1bba07208c0b31b7c5960baf2731531d64bfc811a6",
+      "bytes": 15246
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w15_l1_common_alignment_v1/RESULTS.md",
+      "sha256": "7a37e9ed231956f264dc37c12e81e9c5caf7e5ba1ced2dd8e640202edfae7753",
+      "bytes": 9658
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w15_l1_common_alignment_v1/code_snapshot/frozen_predictions.json",
+      "sha256": "dbc1dfa1c4d2d44d7972ce6b3910825103ddcd145ceb5eedfc84895627225f71",
+      "bytes": 15307
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w15_l1_common_alignment_v1/frozen_grid.json",
+      "sha256": "01809b553c725ca2313ae6c500b49f88d9c58e98484d8ad8b9d65c92ee79f4e1",
+      "bytes": 15790
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w15_l1_common_alignment_v1/metrics.csv",
+      "sha256": "77725367d4645fad1e2e401377dd707875ebc36e957a510edb7313e858fd8847",
+      "bytes": 2371
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w15_l1_common_alignment_v1/status.json",
+      "sha256": "6184ccf78bc502f83ab74258388dbf45cc68369d9a514ba385b256510f50fa36",
+      "bytes": 1003
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w15_l1_common_alignment_v1/summary.json",
+      "sha256": "7de32d24d3370d90cbb2c568f5687e84d1df07e793b88b9caf48f866cbe4317f",
+      "bytes": 10581
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w15a_l2_report_v1/l1_common_comparison/RESULTS.md",
+      "sha256": "e63c009f4b5eb7578569b3af0f0daf27df78b05c3c1ef99fc0e235d67441d95e",
+      "bytes": 6922
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w15a_l2_report_v1/l1_common_comparison/comparison_inputs.json",
+      "sha256": "bac5b5ce2a18caf64c7e2148e8bd579b5366d0bf50c4615cb9cbfc379ee6739c",
+      "bytes": 1483
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w15a_l2_report_v1/l1_common_comparison/horizon_summary.csv",
+      "sha256": "5b17a141b5724f590ef8ad13f24c74676663bff7de3a1214cb255d7e99b8a84f",
+      "bytes": 2166
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w15a_l2_report_v1/l1_common_comparison/paired_decay_metrics.csv",
+      "sha256": "c3a435742d2b1938af59063da92572522e0d4db83aaa632447269d85f68334d5",
+      "bytes": 6136
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w15a_l2_report_v1/l1_common_comparison/status.json",
+      "sha256": "9c1518945e5d130cfde3b872c50267057b8d9f87d0d87019f5653715bae16342",
+      "bytes": 1011
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w15a_l2_report_v1/l1_common_comparison/summary.json",
+      "sha256": "70767877ae6c810728fefaaf169b624f4cf48897c72262fb8cc13326d80f73f6",
+      "bytes": 7867
+    }
+  ],
+  "reference_hashes": {
+    "study_manifest": "806b7938b85e07fcf0f0d7b1ad1fae2f62d970ce6344ee097b2ae7d762e361ca",
+    "source_samples": "9ed86405aba7aca6d4dc1ee2a7d9474b6b4e5ba66a297c817f78fc97ea3826e6",
+    "source_pack_manifest": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74"
+  },
+  "scientific_freeze_commit": "a0cde23036737c06a5d2dc7747bc1f1379083573",
+  "upstream_declarations": [
+    {
+      "path": "/home/yuchang/wangjiaxuan/data/scifate2/raw/GSE236512_processed_data_splicing.h5ad",
+      "expected_sha256": "4269f26b5d53d436c692210d965233ed66f2d3d4a6ff0e1c0a6713b108816944",
+      "present": true,
+      "verified": true
+    },
+    {
+      "path": "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_pack_v1/source_transform.npz",
+      "expected_sha256": "c00899873aedca6f0bf1423f7ddf8ca52774a9e81134c7edf214c1e23eb10099",
+      "present": true,
+      "verified": true
+    }
+  ],
+  "no_training": true,
+  "no_frozen_weight_intervention_executed": true,
+  "Traxler_read": false,
+  "L1_alignment_directory": "/home/yuchang/wangjiaxuan/outputs/w15_l1_common_alignment_v1"
+}

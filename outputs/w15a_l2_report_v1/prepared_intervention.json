@@ -1,0 +1,48 @@
+{
+  "git_commit": "5525b80b039575cd637ffe1ee661a62d51b93d9f",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_l2_reporter.py",
+    "--grid",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1",
+    "--output",
+    "outputs/w15a_l2_report_v1",
+    "--report",
+    "docs/current/w15a_l2_results.md",
+    "--l1-alignment",
+    "outputs/w15_l1_common_alignment_v1",
+    "--wait",
+    "--timeout-seconds",
+    "14400",
+    "--training-job-status",
+    "outputs/w15a_cellflow_jobs_20261021/registered_l2_grid/status.json"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_l2_reporter.py": "ce89abf761bf526d738c97e7acf0c43e70fa0bedec5a9f090585fec11990aab4",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/study_manifest.json": "d5e3e65f320cacc9046e1bf64dc8f7c9b6a97eb4a9b2cc3b65a348bb2c74fd44",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/summary.json": "a5fed189634b62ecf18f7551227916be68212387fea48ba7d7fd15944f2bc832",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1/evaluation/metrics.csv": "95061f9648559316402d0add30acacd89d121ab04321aef7c7b2b7e09dce80a6"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 10.509895894676447,
+  "status": "PREPARED_NOT_RUN",
+  "method": "population_token_mask",
+  "change": "standardized_population_token_to_zero_equals_training_mean_not_raw_U_zero",
+  "weights": "frozen_cf_kin_only",
+  "source_context": "complete_source_then_original_W13_terminal_IDs",
+  "unchanged": [
+    "source_state",
+    "cell_token",
+    "bio_time",
+    "bio_delta",
+    "perturbation",
+    "model_weights"
+  ],
+  "new_predictions_executed": false,
+  "new_ablation_training": false
+}

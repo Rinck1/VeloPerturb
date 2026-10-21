@@ -1,0 +1,34 @@
+{
+  "status": "PREPARED_COMMAND_NOT_LAUNCHED_REQUIRES_ROOT_REVIEW",
+  "cwd": "/home/yuchang/wangjiaxuan",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "JAX_PLATFORMS": "cpu",
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "TMPDIR": "/data/yuchang/veloroute_w15a/runtime/tmp",
+    "PYTHONPATH": "src"
+  },
+  "command_argv": [
+    ".venv-gpu/bin/python", "scripts/phase0/launch_gpu_job.py", "--cpu",
+    "--script", "scripts/phase0/w15a_cellflow_moe_real_grid.py",
+    "--output", "outputs/w15a_jobs_20261021/l3_real_controller_v1", "--", "program",
+    "--configuration", "configs/w15a_cellflow_selected_20261021_v1.json",
+    "--freeze", "configs/w15a_l2_freeze_20261021_v1.json",
+    "--sidecar", "/data/yuchang/veloroute_w15a/l3_source_sidecar_v1",
+    "--parent-pack", "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1",
+    "--synthetic", "/data/yuchang/veloroute_w15a/l3_population_frozen_plan_v1",
+    "--synthetic-job", "/home/yuchang/wangjiaxuan/outputs/w15a_jobs_20261021/l3_population_cpu_v1",
+    "--l2-grid", "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1",
+    "--l2-job", "/home/yuchang/wangjiaxuan/outputs/w15a_cellflow_jobs_20261021/registered_l2_grid",
+    "--reference", "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1",
+    "--output", "/data/yuchang/veloroute_w15a/l3_registered_real_pipeline_v1",
+    "--jobs-output", "/home/yuchang/wangjiaxuan/outputs/w15a_jobs_20261021/l3_real_children_v1",
+    "--deadline-hours", "24", "--approved"
+  ],
+  "physical_GPU_for_child_after_prerequisites": 0,
+  "launch_automatically_on_failed_synthetic_gate": false,
+  "scores_read_to_change_parameters": false,
+  "actual_controller_PID": null
+}

@@ -1,0 +1,31 @@
+{
+  "git_commit": "5525b80b039575cd637ffe1ee661a62d51b93d9f",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_l2_reporter.py",
+    "--grid",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1",
+    "--output",
+    "outputs/w15a_l2_report_v1",
+    "--report",
+    "docs/current/w15a_l2_results.md",
+    "--l1-alignment",
+    "outputs/w15_l1_common_alignment_v1",
+    "--wait",
+    "--timeout-seconds",
+    "14400",
+    "--training-job-status",
+    "outputs/w15a_cellflow_jobs_20261021/registered_l2_grid/status.json"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15_l1_common_alignment.py": "01fa1b35e678bab1fa3c7c1bba07208c0b31b7c5960baf2731531d64bfc811a6"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 0.00735863670706749,
+  "status": "complete"
+}
