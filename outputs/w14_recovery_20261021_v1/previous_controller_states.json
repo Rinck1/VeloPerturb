@@ -1,0 +1,58 @@
+{
+  "git_commit": "08d8e45f113b367f58c607d24aafd26fd9a4b16a",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_recover_execution.py",
+    "--output",
+    "outputs/w14_recovery_20261021_v1",
+    "--job-root",
+    "outputs/w14_recovery_jobs_20261021",
+    "--publish"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_recover_execution.py": "818b7a1547f8a68ff82b8f46228dc2907e64c867db651262bc6d11756c003bf2",
+    "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/evaluation/summary.json": "9c348df8a1402f6798f3e203790051c881053afd7010057327ad43a730507f9a"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "ebe3643445d6cf65cc372239bbaadadb8db5b2317eae3313590ed343fcbd7d57",
+  "runtime_seconds": 0.9003308229148388,
+  "outputs/w14_program_v1/status.json": {
+    "git_commit": "abb3500c006c3cc66adb8faef2588f9f8ccff416",
+    "seed": [
+      0,
+      1,
+      2
+    ],
+    "command": [
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w14_program.py",
+      "--root",
+      "outputs/w14_loro_v1",
+      "--output",
+      "outputs/w14_program_v1",
+      "--publish"
+    ],
+    "data_hashes": {
+      "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/study_manifest.json": "773768fed4c33a2ac0fad0ee40fb48b4337f70f0e08ff4dfe22e58fed7f94920",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w14_program.py": "4ff0c9cc4586254dc7c1c40de6a2f4263d3353ccc4a78a1d9f7c6ce55e948fa9"
+    },
+    "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+    "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime_seconds": 5191.162868373096,
+    "status": "failed",
+    "error": "CalledProcessError(1, ['git', 'add', '--', 'docs/current/w14_results.md', 'outputs/w14_loro_v1/evaluation/RESULTS.md', 'outputs/w14_loro_v1/evaluation/summary.json', 'outputs/w14_loro_v1/evaluation/metrics.csv', 'outputs/w14_loro_v1/evaluation/comparisons.csv', 'outputs/w14_loro_v1/evaluation/frozen_grid.json'])",
+    "automatic_retuning": false
+  },
+  "outputs/w14b_renge_router_v1/queue_status.json": {
+    "status": "waiting_for_W14_completion"
+  },
+  "outputs/w14_jobs_20261018/renge_controller/status.json": {
+    "status": "failed",
+    "exit_code": 1,
+    "physical_gpu": null,
+    "finished_utc": "2026-10-18T04:05:17.870115+00:00"
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "git_commit": "08d8e45f113b367f58c607d24aafd26fd9a4b16a",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_recover_execution.py",
+    "--output",
+    "outputs/w14_recovery_20261021_v1",
+    "--job-root",
+    "outputs/w14_recovery_jobs_20261021",
+    "--publish"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_recover_execution.py": "818b7a1547f8a68ff82b8f46228dc2907e64c867db651262bc6d11756c003bf2",
+    "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/evaluation/summary.json": "9c348df8a1402f6798f3e203790051c881053afd7010057327ad43a730507f9a"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "ebe3643445d6cf65cc372239bbaadadb8db5b2317eae3313590ed343fcbd7d57",
+  "runtime_seconds": 0.9008100479841232,
+  "status": "verified",
+  "primary_result": {
+    "git_commit": "153ffdc99580ebc41ae2e6638a787ffd1dff5a93",
+    "seed": [
+      0,
+      1,
+      2
+    ],
+    "command": [
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w14_loro.py",
+      "evaluate",
+      "--root",
+      "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1",
+      "--output",
+      "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/evaluation"
+    ],
+    "data_hashes": {
+      "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/study_manifest.json": "773768fed4c33a2ac0fad0ee40fb48b4337f70f0e08ff4dfe22e58fed7f94920",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w14_loro.py": "037d8ed658c1ee36a9ac7bcb8a9eec83c4dc3ed368368dea94efc4e87e2fface",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w14_model.py": "f655de47d1942721a86867289731f3c43e7a494af13ecd687748292dd628174f",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w14_data.py": "a04dac58c7a2798845539d2d7771fe1f1a8a6c1c0b1caa31afdbf0ce391635f7",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w4_kinetic_head.py": "0d7365a05c78f55b81c058808a741f2fac3c0641d79b74f61288a41ca82cf79a",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_kinetics.py": "8d79fcdfff498a183482dce199cf1987bc2f47b5bd503cdd04708bdf278566bf",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_scifate2.py": "ff2c51a90ffa46df93794e8812c55970d43ed3a538a5f4595187dcad3a83aafe",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_repair.py": "b0eaeaf6ad5ea00b83beb0e65136ca6af6e93b4c90035c6774d585aa6d97d525",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w9_population_router.py": "5e819854c7ca33da551d9b6da9f9e627ee1cd8407c9297c4f270abdbe5634cb2",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w14_program.py": "4ff0c9cc4586254dc7c1c40de6a2f4263d3353ccc4a78a1d9f7c6ce55e948fa9",
+      "/home/yuchang/wangjiaxuan/scripts/phase0/w14_synthetic.py": "26d2ef8f377de5340b4c6f01e94d7da8710752583c6c833b448ca32fb53c553e"
+    },
+    "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+    "worktree_diff_sha256": "ebe3643445d6cf65cc372239bbaadadb8db5b2317eae3313590ed343fcbd7d57",
+    "runtime_seconds": 372.3612426966429,
+    "status": "W14_GRID_EVALUATED",
+    "P1": true,
+    "P2": false,
+    "classification": "PARTIALLY_CONFIRMED",
+    "overall_gain_vs_static": 0.024957510318535908,
+    "global_energy": {
+      "static": 0.1610999712825949,
+      "real": 0.15655462309351548,
+      "direct_U": 0.15096932304809546,
+      "nonlinear_SU": 0.16473940130458525,
+      "shuffled_v_perm0": 0.15613556599256986,
+      "shuffled_v_perm1": 0.15661822366221503,
+      "shuffled_v_perm2": 0.15569062457604227,
+      "shuffled_v_perm3": 0.156906932661469,
+      "shuffled_v_perm4": 0.15650034373988167
+    },
+    "comparisons": [
+      {
+        "heldout": "r1",
+        "control": "static",
+        "mean_gain": -0.03775399472761398
+      },
+      {
+        "heldout": "r1",
+        "control": "direct_U",
+        "mean_gain": -0.21575950389807202
+      },
+      {
+        "heldout": "r1",
+        "control": "nonlinear_SU",
+        "mean_gain": -0.028155614174240083
+      },
+      {
+        "heldout": "r1",
+        "control": "shuffled_v_perm0",
+        "mean_gain": -0.18040209134511564
+      },
+      {
+        "heldout": "r1",
+        "control": "shuffled_v_perm1",
+        "mean_gain": -0.14392304030367326
+      },
+      {
+        "heldout": "r1",
+        "control": "shuffled_v_perm2",
+        "mean_gain": -0.1317292598565345
+      },
+      {
+        "heldout": "r1",
+        "control": "shuffled_v_perm3",
+        "mean_gain": -0.11369547682726651
+      },
+      {
+        "heldout": "r1",
+        "control": "shuffled_v_perm4",
+        "mean_gain": -0.17488207052771895
+      },
+      {
+        "heldout": "r2",
+        "control": "static",
+        "mean_gain": 0.019757412681428298
+      },
+      {
+        "heldout": "r2",
+        "control": "direct_U",
+        "mean_gain": -0.022178607695104956
+      },
+      {
+        "heldout": "r2",
+        "control": "nonlinear_SU",
+        "mean_gain": -0.03246626651506153
+      },
+      {
+        "heldout": "r2",
+        "control": "shuffled_v_perm0",
+        "mean_gain": 0.005603456961145792
+      },
+      {
+        "heldout": "r2",
+        "control": "shuffled_v_perm1",
+        "mean_gain": 0.007047669446667615
+      },
+      {
+        "heldout": "r2",
+        "control": "shuffled_v_perm2",
+        "mean_gain": -0.007650411708995964
+      },
+      {
+        "heldout": "r2",
+        "control": "shuffled_v_perm3",
+        "mean_gain": 0.006159225569807436
+      },
+      {
+        "heldout": "r2",
+        "control": "shuffled_v_perm4",
+        "mean_gain": 0.008066141854354725
+      },
+      {
+        "heldout": "r3",
+        "control": "static",
+        "mean_gain": 0.09286911300179342
+      },
+      {
+        "heldout": "r3",
+        "control": "direct_U",
+        "mean_gain": 0.015215120527440961
+      },
+      {
+        "heldout": "r3",
+        "control": "nonlinear_SU",
+        "mean_gain": 0.21344942774597095
+      },
+      {
+        "heldout": "r3",
+        "control": "shuffled_v_perm0",
+        "mean_gain": 0.12121570395372813
+      },
+      {
+        "heldout": "r3",
+        "control": "shuffled_v_perm1",
+        "mean_gain": 0.11312918364806519
+      },
+      {
+        "heldout": "r3",
+        "control": "shuffled_v_perm2",
+        "mean_gain": 0.10893742448418123
+      },
+      {
+        "heldout": "r3",
+        "control": "shuffled_v_perm3",
+        "mean_gain": 0.10691913893315655
+      },
+      {
+        "heldout": "r3",
+        "control": "shuffled_v_perm4",
+        "mean_gain": 0.11573527306136107
+      }
+    ],
+    "scope": "internal_fixed_recipe_cross_replicate_24h_not_new_short_horizon_replication",
+    "biological_significance_claim": false,
+    "independent_dataset": false,
+    "total_training_jobs": 81
+  },
+  "primary_summary_sha256": "9c348df8a1402f6798f3e203790051c881053afd7010057327ad43a730507f9a",
+  "frozen_predictions": 405,
+  "W14_manifest_sha256": "773768fed4c33a2ac0fad0ee40fb48b4337f70f0e08ff4dfe22e58fed7f94920",
+  "RENGE_manifest_sha256": "9114dfe50db987ca5bfcc5c4ad020e9ed057535387a746f56e25bc5b77e91f64",
+  "old_failed_records_preserved": true,
+  "publication_is_not_computation": true
+}

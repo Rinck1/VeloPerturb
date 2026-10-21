@@ -1,6 +1,6 @@
 # VeloRoute 交接入口
 
-更新：2026-10-18。请先读 [当前状态](docs/current/STATUS.md)，再读
+更新：2026-10-21。请先读 [当前状态](docs/current/STATUS.md)，再读
 [最新结果](docs/current/w13_time_results.md) 和 [方法定义](docs/current/w13_time_model.md)。
 
 当前是解析S/U动力学上下文＋soft router＋专家／小ODE的短时群体预测。
@@ -15,9 +15,14 @@ W13的1/2/4已完成，步骤3按要求未做；最新模型并非原版GFG/JVP�
 - [旧605行交接全文：仅作历史快照](docs/history/handoffs/HANDOFF_before_organization_20261017.md)
 - [研究记录发布索引](docs/history/record_exports/research_archive_20261017.md)
 
-W14固定端点的24h内部跨重复验证现已启动，direct-U/nonlinear-SU对照已纳入；其后排队一次RENGE探索迁移。
-Traxler发布矩阵已获取，18个GEX SRA共143.1GB下载并行。最终ODE机制干预、外部强基线仍未执行。
-W14失败不能直接否定此前5–15h开发结果；新数据暂只做技术准备，未解封其扰动效应。
+W14的81个训练及主评分已完成：24h平均vs static +2.496%，P1通过、P2未通过，direct-U更好。
+Git发布失败曾阻断RENGE；10月21日通过独立恢复控制器重新核验后，原576个作业已在GPU1–3开训。
+不修改冻结代码、不重训W14；旧失败日志保留，科学完成与发布状态分离。
+Traxler18个GEX SRA共143.1GB及9份S/U/A矩阵已完成，76,344细胞；HTO/最终guide QC仍在核对。
+新数据暂只做技术准备，未解封其扰动效应，最终ODE机制干预和外部强基线仍无正式结果。
 
-本轮仅使用物理GPU1–3，GPU0及4–7不动，不停止其他项目进程。
+用户确认三条模型线：[L1小模型、L2 CellFlow插件、L3 CellFlow＋双流router专家](PLANS/w15a_cellflow_kinetic_plugin.md)。
+L2环境/适配与L3结构测试多agent并行；L3正式主干继承L2冻结配置，不是两模型输出后期集成。
+用户10月21日新授权最多六卡，允许物理GPU0–5，6–7保留；不停止其他项目进程。
+实时恢复入口：`outputs/w14_recovery_20261021_v1/status.json`，不是原失败的W14发布控制器状态。
 原始数据、模型及优化器检查点留在原机。未跟踪的 `package-lock.json` 与本项目整理无关，未修改。

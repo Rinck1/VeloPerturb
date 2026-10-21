@@ -1,0 +1,33 @@
+{
+  "git_commit": "08d8e45f113b367f58c607d24aafd26fd9a4b16a",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_recover_execution.py",
+    "--output",
+    "outputs/w14_recovery_20261021_v1",
+    "--job-root",
+    "outputs/w14_recovery_jobs_20261021",
+    "--publish"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_recover_execution.py": "818b7a1547f8a68ff82b8f46228dc2907e64c867db651262bc6d11756c003bf2",
+    "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/evaluation/summary.json": "9c348df8a1402f6798f3e203790051c881053afd7010057327ad43a730507f9a"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "ebe3643445d6cf65cc372239bbaadadb8db5b2317eae3313590ed343fcbd7d57",
+  "runtime_seconds": 4.259291976690292,
+  "status": "published",
+  "commit": "56f6d84119f47b99225f456ae2fe8d911a5667c1",
+  "files": [
+    "docs/current/w14_results.md",
+    "outputs/w14_loro_v1/evaluation/RESULTS.md",
+    "outputs/w14_loro_v1/evaluation/comparisons.csv",
+    "outputs/w14_loro_v1/evaluation/frozen_grid.json",
+    "outputs/w14_loro_v1/evaluation/metrics.csv",
+    "outputs/w14_loro_v1/evaluation/summary.json"
+  ]
+}

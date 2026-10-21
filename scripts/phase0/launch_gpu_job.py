@@ -44,7 +44,7 @@ else:
     arguments = args.arguments[1:] if args.arguments[:1] == ['--'] else args.arguments
     job = dict(physical_gpu=args.gpu, gpu_uuid=None if args.cpu else gpu_uuids()[args.gpu],
         command=[sys.executable, str(script), *arguments], cwd=str(ROOT),
-        allowed_gpus=list(ALLOWED_PHYSICAL_GPUS), reserved_gpus=[4, 5, 6, 7],
+        allowed_gpus=list(ALLOWED_PHYSICAL_GPUS), reserved_gpus=[6, 7],
         started_utc=datetime.now(timezone.utc).isoformat())
     save_json(directory/'job.json', job)
     with (directory/'job.log').open('xb') as stream:

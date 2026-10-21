@@ -28,3 +28,15 @@
 - [W14原始计划](w14_confirmation_loro.md)与[执行澄清](w14_execution_amendment_20261018.md)一并冻结。
 - [W14-B新数据与扰动路线](w14b_perturbation_track.md)。
 - [RENGE一次性探索协议](w14b_renge_router_protocol.md)，只在W14评估释放资源后训练。
+
+## 2026-10-18新增基线设计
+
+- [短时群体预测基线复现实验方案](current/short_time_baseline_protocol_20261018.md)：
+  CellFlow、CellOT及源侧U/velocity扩展，包含数据集绝对路径、冻结模型入口、
+  时间适配、共享均值结构评价和首轮24次拟合预算。当前为设计落盘，未启动新增基线训练。
+
+## 2026-10-21三线衔接
+
+- [W15-A CellFlow三条模型线](w15a_cellflow_kinetic_plugin.md)：L1小模型保留，L2条件插件与L3双流router专家并行开发。
+- [W15-B群体分支可行性](w15b_population_branching.md)：先做作者注释与冻结预测分析，不越过门槛训练分支原型。
+- W14已完成，RENGE恢复训练；六卡新资源授权及实时状态见[当前状态](../docs/current/STATUS.md)。

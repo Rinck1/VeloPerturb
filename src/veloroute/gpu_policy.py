@@ -1,9 +1,9 @@
-"""User resource contract: this project may use physical GPUs 0-3 only."""
+"""User resource contract updated 2026-10-21: at most six GPUs, physical 0-5."""
 import os
 import subprocess
 from functools import lru_cache
 
-ALLOWED_PHYSICAL_GPUS = (0, 1, 2, 3)
+ALLOWED_PHYSICAL_GPUS = (0, 1, 2, 3, 4, 5)
 
 
 @lru_cache(maxsize=1)
@@ -19,8 +19,8 @@ def enforce_gpu_policy(device):
         return ()
     visible = os.environ.get('CUDA_VISIBLE_DEVICES', '')
     tokens = [x.strip() for x in visible.split(',') if x.strip()]
-    if not tokens or len(tokens) > 4 or len(set(tokens)) != len(tokens):
-        raise ValueError('Explicit CUDA_VISIBLE_DEVICES within physical GPUs 0-3 is required; reserve GPUs 4-7')
+    if not tokens or len(tokens) > len(ALLOWED_PHYSICAL_GPUS) or len(set(tokens)) != len(tokens):
+        raise ValueError('Explicit CUDA_VISIBLE_DEVICES within physical GPUs 0-5 is required; reserve GPUs 6-7')
     if all(x.isdigit() for x in tokens):
         if os.environ.get('CUDA_DEVICE_ORDER', 'PCI_BUS_ID') != 'PCI_BUS_ID':
             raise ValueError('Physical GPU indices require CUDA_DEVICE_ORDER=PCI_BUS_ID')
@@ -32,5 +32,5 @@ def enforce_gpu_policy(device):
             raise ValueError('Unknown CUDA GPU UUID; cannot verify resource reservation')
         indices = tuple(lookup[token] for token in tokens)
     if not set(indices) <= set(ALLOWED_PHYSICAL_GPUS):
-        raise ValueError('This project is restricted to physical GPUs 0-3; GPUs 4-7 are reserved')
+        raise ValueError('This project is restricted to physical GPUs 0-5; GPUs 6-7 are reserved')
     return indices
