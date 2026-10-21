@@ -1,0 +1,18 @@
+{
+  "kind": "CF1_ENGINEERING_GATE_NOT_STATISTICAL_DISCOVERY",
+  "registered_during_synthetic_execution_before_inspection_of_any_null_score": true,
+  "registration_date": "2026-10-21",
+  "repetitions_per_scenario": 20,
+  "real_arm": "cf_kin",
+  "controls": ["cf_static", "cf_Ssum"],
+  "gain_definition": "(control_energy - cf_kin_energy) / max(control_energy, 1e-12)",
+  "positive_gate": "median_paired_gain_greater_than_zero_for_both_controls",
+  "null_anomaly_gate": "pause_if_bootstrap_95pct_mean_gain_CI_lower_is_positive_for_both_controls",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20261021,
+  "bootstrap_method": "paired_repetition_percentile_equal_weight",
+  "confidence": 0.95,
+  "negative_null_gains": "retain_and_report",
+  "claim_limit": "not_FPR_calibration_not_biological_success_not_discovery_power",
+  "CF2_start_requires": "root_agent_review_after_full_CF1_results"
+}

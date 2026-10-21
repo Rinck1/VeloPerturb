@@ -1,0 +1,14 @@
+{
+  "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_moe.py": "5b00b38995c48033d887f2d8450267f8e4b6dc7ff8cc5d930cb69d54f29ca791",
+  "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_moe_official.py": "71b9f1b756e2b2c22a14dbbcc565bd44b6efb8c71b87c014e86a39832dd2b1f8",
+  "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_moe_sanity.py": "696a3367a96fa9ece5052312fd3f966e907b92d82bd946f17549102615cf1495",
+  "/home/yuchang/wangjiaxuan/tests/test_w15a_moe.py": "ff11cc4545853150efcdb6c19e2061bdb4ea361db6f1d4594260067fcb53fc6c",
+  "/home/yuchang/wangjiaxuan/tests/test_w15a_moe_official.py": "a72c29e31ae48ee69a3df48ec88b434328417f617912642d5007c06f5d59d401",
+  "/home/yuchang/wangjiaxuan/docs/evidence/w15a_l3_implementation.md": "af492c39fb51e7feb8601ea979ea5a0b938fb2300ca45c118241425abb482bd1",
+  "/home/yuchang/wangjiaxuan/PLANS/w15a_cellflow_kinetic_plugin.md": "22a63b999bd87c6fc2e2ccafeceecb77076010ded814e36cf1be20d8db57a315",
+  "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_adapter.py": "bfc60235729f7bea19d1a79ac8c5f38d14a07a1f43e2194a976bb1d31932338b",
+  "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_train.py": "1f58c5eab4e4a6e62d3235b02f576550258274c8b4d2f5d99f9377044bf85026",
+  "/data/yuchang/veloroute_kang_20260914/external/CellFlow/src/cellflow/networks/_velocity_field.py": "6105d731c08c7912c653ba44135b74f9dee5355b9f1510bb599f3892cb549d02",
+  "/data/yuchang/veloroute_kang_20260914/external/CellFlow/src/cellflow/networks/_set_encoders.py": "0c11e613f122d857c35bcffcbbc45fac8e7c357e89b0952deba16cc0c380e073",
+  "/data/yuchang/veloroute_kang_20260914/external/CellFlow/src/cellflow/networks/_utils.py": "ed44f10c85796c790d59fdd3bc711d603c3487ad8634637fd605ebd17252ab39"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "L3_OFFICIAL_HIDDEN_INTEGRATION_CPU_VERIFIED",
+  "tests": 31,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "runtime_seconds": 20.775,
+  "official_hidden_backbone_integrated": true,
+  "official_source_modified": false,
+  "synthetic_engineering_arms": 4,
+  "synthetic_steps_per_arm": 20,
+  "synthetic_dimensions": 50,
+  "synthetic_experts": 8,
+  "engineering_parameters_per_arm": 87576,
+  "real_data_training_started": false,
+  "gpu_used": false,
+  "formal_L3_waiting_for": "L2_cf_static_selected_configuration_committed_and_freeze_record_bound",
+  "full_positive_null_gate_done": false,
+  "solver_integration_scope": "RK4_for_engineering_only_final_Tsit5_must_inherit_L2",
+  "versions": {
+    "jax": "0.6.2",
+    "jaxlib": "0.6.2",
+    "flax": "0.11.0",
+    "optax": "0.2.5",
+    "ott-jax": "0.5.1"
+  },
+  "source_hashes_file": "source_hashes.json",
+  "sanity_summary": "sanity_summary.json"
+}

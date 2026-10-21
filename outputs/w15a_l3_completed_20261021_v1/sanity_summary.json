@@ -1,0 +1,84 @@
+{
+  "status": "L3_OFFICIAL_CPU_ENGINEERING_SANITY_COMPLETE",
+  "runtime_seconds": 10.777259640395641,
+  "backend": [
+    "TFRT_CPU_0"
+  ],
+  "steps_per_arm": 20,
+  "experts": 8,
+  "dimensions": 50,
+  "backbone_engineering_config": {
+    "width": 16,
+    "depth": 1,
+    "condition_dim": 8,
+    "time_freqs": 8,
+    "time_width": 16,
+    "time_depth": 1,
+    "pooling": "mean",
+    "learning_rate": 0.001,
+    "ot_epsilon": 0.1,
+    "ot_max_iterations": 30
+  },
+  "official_source": {
+    "path": "/data/yuchang/veloroute_kang_20260914/external/CellFlow/src/cellflow/networks/_velocity_field.py",
+    "sha256": "6105d731c08c7912c653ba44135b74f9dee5355b9f1510bb599f3892cb549d02",
+    "override": "project HiddenFeatureField._combine_and_decode: remove only final output_layer",
+    "upstream_source_modified": false,
+    "original_output_layer_in_shared_backbone": false
+  },
+  "real_data_read": false,
+  "formal_L3_grid_started": false,
+  "L2_static_configuration_frozen": false,
+  "biological_velocity_advantage_tested": false,
+  "twenty_positive_twenty_null_gate_completed": false,
+  "conditional_time": 0.3,
+  "initial_parameter_sha256": "a6ae4452c92346c8a94d16df1c796ebf021ef3dc8c79bd6e36cce4423ddb9ee5",
+  "arms": [
+    {
+      "arm": "moe_static",
+      "initial_loss": 6.648695945739746,
+      "final_loss": 5.558788299560547,
+      "final_kinetic_gradient_norm": 0.006838217843323946,
+      "final_router_gradient_norm": 0.05185633897781372,
+      "parameters": 87576,
+      "synthetic_tensor_energy": 0.5462881624491338,
+      "model_sha256": "ee5834860c6d29ba009cf1833d36f8d87e61b40dbac57409d9c591e53df2a63f",
+      "prediction_sha256": "ca557a60b6940f4563294b1c94b393cf4e694665e9b83b0f508271300c408619"
+    },
+    {
+      "arm": "moe_kin",
+      "initial_loss": 6.64733362197876,
+      "final_loss": 5.55741024017334,
+      "final_kinetic_gradient_norm": 0.011343158781528473,
+      "final_router_gradient_norm": 0.05287450551986694,
+      "parameters": 87576,
+      "synthetic_tensor_energy": 0.5461648238818109,
+      "model_sha256": "dbfba9b67d1ccf6b7ba351f69ae3c425c8e938855722fe843bd7c08f8e7f0bd7",
+      "prediction_sha256": "c6f445e9cf2b45b9a0787f04a3268223a5cf837aa7f3677ebb16584458d90f80"
+    },
+    {
+      "arm": "moe_kin_shuf",
+      "initial_loss": 6.649287223815918,
+      "final_loss": 5.556685924530029,
+      "final_kinetic_gradient_norm": 0.011854926124215126,
+      "final_router_gradient_norm": 0.05283932387828827,
+      "parameters": 87576,
+      "synthetic_tensor_energy": 0.5460432106431932,
+      "model_sha256": "ce7e78adcf2790a4a714baa8fbd5e291f57f411574c457bb152ee7e47e90c773",
+      "prediction_sha256": "d82f4b7af89e592d7dace67041b9bde0a65f9fcd905075f2b500ae42d9ecf6ed"
+    },
+    {
+      "arm": "moe_directU",
+      "initial_loss": 6.647915363311768,
+      "final_loss": 5.557885646820068,
+      "final_kinetic_gradient_norm": 0.012129063718020916,
+      "final_router_gradient_norm": 0.053014375269412994,
+      "parameters": 87576,
+      "synthetic_tensor_energy": 0.5460693197078132,
+      "model_sha256": "1fa7aeeb2c129295304779f763e84a5c5a39686f1f44f3b474c8107dbea30131",
+      "prediction_sha256": "8349faf83a7c2d16c28ed2a2ca2b84f01b6efdf526fc2c911e373979a2f68b28"
+    }
+  ],
+  "full_summary_path": "/data/yuchang/veloroute_w15a/l3_official_cpu_sanity_v1/summary.json",
+  "full_summary_sha256": "8366837ca18a0b7783d7d7017f36902e05a69d597761210bb7098b833a11254d"
+}

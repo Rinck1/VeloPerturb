@@ -1,0 +1,395 @@
+{
+  "git_commit": "541126f254e7a73ac3ac80fa73018907ff0c8c6d",
+  "seed": 0,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_train.py",
+    "prepare",
+    "--config",
+    "configs/w15a_cellflow_development_v1.json",
+    "--output",
+    "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1"
+  ],
+  "data_hashes": {
+    "configs/w15a_cellflow_development_v1.json": "0050894b6f7d0beeb88c5ca7d9d810d44bfdd2045f4537a513da75fc855f188a",
+    "/home/yuchang/wangjiaxuan/outputs/w5_joint_kinetics_scifate2_pack_v1/source_transform.npz": "c00899873aedca6f0bf1423f7ddf8ca52774a9e81134c7edf214c1e23eb10099",
+    "/home/yuchang/wangjiaxuan/outputs/w6_local_router_scifate2_pack_v1/manifest.json": "eec00ef18e734a9e1e3f24da5406cf4d1fb8acce0dec761027de6d707adb8c74",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_train.py": "42fcaa33b7673b5c41ecac232c971b57b0bb45699e45d4bce0e2c0069775d2b8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_adapter.py": "bfc60235729f7bea19d1a79ac8c5f38d14a07a1f43e2194a976bb1d31932338b"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 67.88896135613322,
+  "status": "CELLFLOW_SOURCE_PACK_READY",
+  "config": {
+    "kind": "W15_A_CF2_DEVELOPMENT_NOT_CONFIRMATORY_FREEZE",
+    "data_path": "data/scifate2/raw/GSE236512_processed_data_splicing.h5ad",
+    "data_sha256": "4269f26b5d53d436c692210d965233ed66f2d3d4a6ff0e1c0a6713b108816944",
+    "original_cell_pack": "outputs/w6_local_router_scifate2_pack_v1",
+    "transform_path": "outputs/w5_joint_kinetics_scifate2_pack_v1/source_transform.npz",
+    "training_replicates": [
+      "r1",
+      "r2",
+      "r3"
+    ],
+    "training_days": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "development_intervals_hours": [
+      [
+        5,
+        10
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        15,
+        20
+      ],
+      [
+        5,
+        15
+      ],
+      [
+        10,
+        20
+      ],
+      [
+        5,
+        20
+      ]
+    ],
+    "selection_intervals_hours": [
+      [
+        5,
+        10
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        15,
+        20
+      ]
+    ],
+    "selection_arm": "cf_static",
+    "selection_metric": "equal_window_mean_energy_decay",
+    "maximum_static_configurations": 12,
+    "initial_static_configurations": [
+      {
+        "name": "static_w128d2",
+        "width": 128,
+        "depth": 2,
+        "steps": 5000
+      },
+      {
+        "name": "static_w256d3",
+        "width": 256,
+        "depth": 3,
+        "steps": 10000
+      },
+      {
+        "name": "static_w512d3",
+        "width": 512,
+        "depth": 3,
+        "steps": 10000
+      }
+    ],
+    "width": 128,
+    "depth": 2,
+    "condition_dim": 32,
+    "time_freqs": 64,
+    "time_width": 128,
+    "time_depth": 2,
+    "pooling": "mean",
+    "learning_rate": 0.0003,
+    "ot_epsilon": 0.1,
+    "ot_max_iterations": 200,
+    "ema": 1.0,
+    "batch_size": 128,
+    "steps": 5000,
+    "log_interval": 250,
+    "neighbors": 64,
+    "evaluation_source_cells": 512,
+    "evaluation_target_cells": 512,
+    "evaluation_seed": 0,
+    "source_geometry_fit_cohorts": [
+      "r1_D3",
+      "r2_D3",
+      "r3_D3"
+    ],
+    "biological_time_origin": "RA_SAG_start_D3_equals_0h",
+    "daily_time_rule": "24*(day_number-3)",
+    "r4_time_rule": "author_nominal_05_10_15_20_hours",
+    "time_origin_status": "implementation_inference_from_author_GEO_plus_notebook_approved_before_training",
+    "biological_fourier_frequencies_radians": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "biological_fourier_transform": "log1p(hours / 1hour)",
+    "time_kernel_primary": "decay",
+    "time_kernel_sensitivity": "linear",
+    "unseen_span_condition_hours": 24,
+    "mean_anchor": false,
+    "gfg_jvp": false,
+    "true_independent_confirmation": false,
+    "Traxler_effects_read": false
+  },
+  "training_groups": [
+    {
+      "replicate": "r1",
+      "label": "D3",
+      "time_hours": 0.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r1_D3.npz",
+      "sha256": "31ae1367f74f23b9f3998cfb2894e7ce9e6c03a9c06c6f155558ef28c1e3f41b",
+      "source_key": "r1|neural_tube_differentiation|0h",
+      "source_hash": "560a2f408476047823e78e24fd221274a698c01b7d0725c6f562c398b2118f75",
+      "original_pack_sha256": "0a85b2c2932a991ddd87a0696a1d8d2771541f51decde8a26b71a30d7e3ac9da"
+    },
+    {
+      "replicate": "r1",
+      "label": "D4",
+      "time_hours": 24.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r1_D4.npz",
+      "sha256": "fe40ad1c180c02a06c63369b65c775da433d246ddf9afeb43b4f25cec95bcaf7",
+      "source_key": "r1|neural_tube_differentiation|24h",
+      "source_hash": "ad33ca2c5437d6b3389c73988a743e973891900aab9ac6513cf0919e7e6e4222",
+      "original_pack_sha256": "8a05788ca727bf8160d47847b207bfbbd9d745cafe7d1696df7fcb89164fae3b"
+    },
+    {
+      "replicate": "r1",
+      "label": "D5",
+      "time_hours": 48.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r1_D5.npz",
+      "sha256": "1eb6ff2444e4d3c0241e322481a19fa6a073184bd19f5ac9da786c336865b166",
+      "source_key": "r1|neural_tube_differentiation|48h",
+      "source_hash": "d5d94e09dca5d9e6a8464d392cb2372a8b39a1228c630878f6cd1eb78a5b67b4",
+      "original_pack_sha256": "952a6720cf8c0ad142b0f92f926fd0517ee09b7cc7e76e868a3e69781be94396"
+    },
+    {
+      "replicate": "r1",
+      "label": "D6",
+      "time_hours": 72.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r1_D6.npz",
+      "sha256": "6752e9c879b59fbf20fd534e3aa0920b1347d48b26cd58fd4ba60a7e58ea82da",
+      "source_key": "r1|neural_tube_differentiation|72h",
+      "source_hash": "19c7f0777cd210998b66ab54f4bd7d963bed0282aeed878eefa50a867aba8657",
+      "original_pack_sha256": "24179d44fa5d25b043585497e9c2dd299463ba98790444519d7411c68ef7aba2"
+    },
+    {
+      "replicate": "r1",
+      "label": "D7",
+      "time_hours": 96.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r1_D7.npz",
+      "sha256": "0694c084d90d847b5c8d4de684d9b6d102ca06d20cfe66717c9a11b9a9756a67",
+      "source_key": "r1|neural_tube_differentiation|96h",
+      "source_hash": "816079ca390581184d6e09d312c33b27a00793b3ce1aef1d6f3f09c04321e8b2",
+      "original_pack_sha256": "da85685a1fd3eeaf0d33610b51144977a5051e709a9950ed32f10c4c3e389c5a"
+    },
+    {
+      "replicate": "r2",
+      "label": "D3",
+      "time_hours": 0.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r2_D3.npz",
+      "sha256": "e0b60f8952c41c2271c6436c1aa84712af72a62af22e3c720b678bbef5f1e6b1",
+      "source_key": "r2|neural_tube_differentiation|0h",
+      "source_hash": "47fa59e65b20feab856d29783405b642e457fc0272610c04e7bafe46173db8ab",
+      "original_pack_sha256": "a1cd44bb84b778942a0354a65f6cf7ab4b6bae63ca9eee9c2e0830c049f8e2a8"
+    },
+    {
+      "replicate": "r2",
+      "label": "D4",
+      "time_hours": 24.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r2_D4.npz",
+      "sha256": "1e83f72f825581d38f8ac147a4e17ac5632d75f8b1d155a5646d8c2e6d8460e1",
+      "source_key": "r2|neural_tube_differentiation|24h",
+      "source_hash": "2c18210d5f1f9b7d72a0d7f71612f1dfc92610770b76ac9feace1f052d45c3b5",
+      "original_pack_sha256": "05c8bba98e65ea8913d7598d556b7daa9a3ab826d11aad0a977b1bc568356486"
+    },
+    {
+      "replicate": "r2",
+      "label": "D5",
+      "time_hours": 48.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r2_D5.npz",
+      "sha256": "cdfc8e59fa9ad26a07df5be4cf898f8e0c2d9ad4fe8217034c0adf01f8bdd793",
+      "source_key": "r2|neural_tube_differentiation|48h",
+      "source_hash": "1df2b9214644752dbb53af32d80433eb8d00611c5ecfa01f907ad4cce9b1a06d",
+      "original_pack_sha256": "e4fac0eaf1b45b77c297805c5343af74860812fb6fa55752d99036bf58c5a235"
+    },
+    {
+      "replicate": "r2",
+      "label": "D6",
+      "time_hours": 72.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r2_D6.npz",
+      "sha256": "2840389d6112d6e8a699ef3a960e453a5b3230c91b2d3c19424e93494a87752b",
+      "source_key": "r2|neural_tube_differentiation|72h",
+      "source_hash": "f1a054852841929e37bb4d26ad9e381a784adb926e6b8d14846ff1b5937ecde8",
+      "original_pack_sha256": "026b8c17fcff827c5329f33e3aaa9468bbf1f7f339d54bcd08c0cfa631a7171b"
+    },
+    {
+      "replicate": "r2",
+      "label": "D7",
+      "time_hours": 96.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r2_D7.npz",
+      "sha256": "4d89d92b49d9a694c91eb8b675934b207adea4d8fc04e817ca116c02f5d05716",
+      "source_key": "r2|neural_tube_differentiation|96h",
+      "source_hash": "61d0c524ef4cbfaf3a287dd64ce2db1752eeb2a9aebbae4ed83e0c8c014cc7c8",
+      "original_pack_sha256": "758038d8dc646dcc5eb74d5e75fcfac43408d43771df543cacee546ca0fba1c7"
+    },
+    {
+      "replicate": "r3",
+      "label": "D3",
+      "time_hours": 0.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r3_D3.npz",
+      "sha256": "ab8e1f73bbaeaf1ffee46b33b4b1d12cf2a9e05d95dd692509225abe38e161b3",
+      "source_key": "r3|neural_tube_differentiation|0h",
+      "source_hash": "3f00d0a81728b432942f9f2a7df3e7d1ac76c968b5caae603110adc6c6ebd231",
+      "original_pack_sha256": "249311856ffc90cf1172d0efa58c5bb7fb4c0f63d52560eccf1329a0aab96a89"
+    },
+    {
+      "replicate": "r3",
+      "label": "D4",
+      "time_hours": 24.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r3_D4.npz",
+      "sha256": "d8ff227031df3b386be48f2d6e1c86e67d9390dade9394a28b60764ab73d9029",
+      "source_key": "r3|neural_tube_differentiation|24h",
+      "source_hash": "eb2723e57458bc90278affd974dccbd223b7dfcef0dc526bb16ee23d877a0de2",
+      "original_pack_sha256": "7c12b2b37ec461b54c7d239cb0eeab8a2b14aae97cefbdbdc87d173d6eef452e"
+    },
+    {
+      "replicate": "r3",
+      "label": "D5",
+      "time_hours": 48.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r3_D5.npz",
+      "sha256": "a7b14e6fa57a96d0eacbe20b3e9427bd2c13e38604c8da448fa3d199efccbdee",
+      "source_key": "r3|neural_tube_differentiation|48h",
+      "source_hash": "4aa5bf666291109b3b3a40e8374075dece038f5418e21e7780f8336b768f16f4",
+      "original_pack_sha256": "2c95c134e9d54cf720b1e915eca55a3c9c87af00fa9be1e1456b3a006570e9a8"
+    },
+    {
+      "replicate": "r3",
+      "label": "D6",
+      "time_hours": 72.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r3_D6.npz",
+      "sha256": "cf4d3c891229815efc2b7af4f4487e2ceba11ff2aced49c1a631d9342a26a3f7",
+      "source_key": "r3|neural_tube_differentiation|72h",
+      "source_hash": "7e46bba2ae3f78d5b541c6bbafd14540a6c363479140abb9886195d5381a30f4",
+      "original_pack_sha256": "53e37599a248a92a943941a108f870d37d7ff9bf191efaf1d56a2cc34f886553"
+    },
+    {
+      "replicate": "r3",
+      "label": "D7",
+      "time_hours": 96.0,
+      "delta_hours": 24.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/train_r3_D7.npz",
+      "sha256": "207546699b5950198b4ac7426dc1c3345917b67617a2dc5814c735582d3d994e",
+      "source_key": "r3|neural_tube_differentiation|96h",
+      "source_hash": "dc361150208f2026289ee40c34166d116f7aafc9c1e94a14cf2ef217019c738c",
+      "original_pack_sha256": "4d85a1b0f909bbfab2f989ecc50a5ea4d1effd4fa92261ad3ee27fda86c00a68"
+    }
+  ],
+  "development_sources": [
+    {
+      "replicate": "r4",
+      "label": "05h",
+      "time_hours": 5.0,
+      "stop_hours": 10.0,
+      "delta_hours": 5.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/source_05h.npz",
+      "sha256": "207819d1152da86a2e7b651fec51bdddb6e46a7dccfe2949a84fc1955de73432",
+      "source_key": "r4|neural_tube_differentiation|5h",
+      "source_hash": "0418526a009ebba4820c45b5d549f983af069f770b8b5e65de4ad151eded56c4",
+      "population_reference_is_self": true
+    },
+    {
+      "replicate": "r4",
+      "label": "10h",
+      "time_hours": 10.0,
+      "stop_hours": 15.0,
+      "delta_hours": 5.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/source_10h.npz",
+      "sha256": "6c4415a31b907d8ee7ac781c429332a2b1d0f4757aa6b5ca93e57437b34d44d7",
+      "source_key": "r4|neural_tube_differentiation|10h",
+      "source_hash": "03fdd3aae32c3c68ea0eca146f3e2133f2eb1ad00f9291d3e3df1aa7b5fecb55",
+      "population_reference_is_self": false
+    },
+    {
+      "replicate": "r4",
+      "label": "15h",
+      "time_hours": 15.0,
+      "stop_hours": 20.0,
+      "delta_hours": 5.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/source_15h.npz",
+      "sha256": "3a3bbffac476c0f1eafa50fbcaab78e987b272897b12aef39fa5c1c4ca85f642",
+      "source_key": "r4|neural_tube_differentiation|15h",
+      "source_hash": "d454523c507d180909a76a45da0acdba9eb3d8ff6f7c3b6f0efed3002aae9013",
+      "population_reference_is_self": false
+    },
+    {
+      "replicate": "r4",
+      "label": "05h",
+      "time_hours": 5.0,
+      "stop_hours": 15.0,
+      "delta_hours": 10.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/source_05h.npz",
+      "sha256": "207819d1152da86a2e7b651fec51bdddb6e46a7dccfe2949a84fc1955de73432",
+      "source_key": "r4|neural_tube_differentiation|5h",
+      "source_hash": "0418526a009ebba4820c45b5d549f983af069f770b8b5e65de4ad151eded56c4",
+      "population_reference_is_self": true
+    },
+    {
+      "replicate": "r4",
+      "label": "10h",
+      "time_hours": 10.0,
+      "stop_hours": 20.0,
+      "delta_hours": 10.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/source_10h.npz",
+      "sha256": "6c4415a31b907d8ee7ac781c429332a2b1d0f4757aa6b5ca93e57437b34d44d7",
+      "source_key": "r4|neural_tube_differentiation|10h",
+      "source_hash": "03fdd3aae32c3c68ea0eca146f3e2133f2eb1ad00f9291d3e3df1aa7b5fecb55",
+      "population_reference_is_self": false
+    },
+    {
+      "replicate": "r4",
+      "label": "05h",
+      "time_hours": 5.0,
+      "stop_hours": 20.0,
+      "delta_hours": 15.0,
+      "path": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1/source_05h.npz",
+      "sha256": "207819d1152da86a2e7b651fec51bdddb6e46a7dccfe2949a84fc1955de73432",
+      "source_key": "r4|neural_tube_differentiation|5h",
+      "source_hash": "0418526a009ebba4820c45b5d549f983af069f770b8b5e65de4ad151eded56c4",
+      "population_reference_is_self": true
+    }
+  ],
+  "token_normalizer_sha256": "143c7375d1c187b9a21593f7233be112af3172d6a8aa0eaad7c96b177968bdbf",
+  "training_target_centers_sha256": "eb1b7efb09f2936b6972393fa9b8c4a9ffd16487e186b6b0a66d01536c53dce5",
+  "source_transform_sha256": "c00899873aedca6f0bf1423f7ddf8ca52774a9e81134c7edf214c1e23eb10099",
+  "r4_targets_read": false,
+  "mean_anchor": false,
+  "biological_time_origin": "RA_SAG_start_D3",
+  "r4_time_policy": "author_nominal_05_10_15_20_hours_not_GEO_rounded_decimal_days"
+}

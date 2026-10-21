@@ -1,0 +1,131 @@
+{
+  "git_commit": "541126f254e7a73ac3ac80fa73018907ff0c8c6d",
+  "seed": 0,
+  "command": [
+    "scripts/phase0/w15a_cellflow_audit.py",
+    "audit",
+    "--output",
+    "outputs/w15a_cellflow_audit_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_audit.py": "eb8e95de038544ccf6e203ff6d7ad3d1095d63c49848084c60740b2e026f5d40",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_adapter.py": "bfc60235729f7bea19d1a79ac8c5f38d14a07a1f43e2194a976bb1d31932338b"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 2.276234205812216,
+  "status": "CELLFLOW_API_AUDIT_COMPLETE",
+  "cellflow_source": "/data/yuchang/veloroute_kang_20260914/external/CellFlow/src/cellflow/__init__.py",
+  "source_archive": {
+    "repository": "theislab/CellFlow",
+    "commit": null,
+    "archive_sha256": "2c8f7320295048b04a930f693d2918a53f15e1a22e000879c5436eae307abc25",
+    "source": "/data/yuchang/veloroute_kang_20260914/external/CellFlow",
+    "version_binding": "archive_content_SHA256",
+    "acquired_only_not_installed_or_run": true
+  },
+  "source_python_sha256": {
+    "src/cellflow/__init__.py": "40082c8d2fcb4e0b54581c2c82fceadc65ea02d542eb95ed1ecb39fa5034c23f",
+    "src/cellflow/_compat.py": "010894b05902b351680d6ae8c1b19bf7febbd223fad08d68a6aa5f4e2a8f5b5e",
+    "src/cellflow/_constants.py": "84b569d1ebfb5da7e2bbb3a0b0026a8c47fd0c1a043f9ad5741b505df73dc560",
+    "src/cellflow/_logging.py": "ffeb5d00431a467d91406b8871d3ee246941ff56ad548e4f178aaf8a5b7f9200",
+    "src/cellflow/_types.py": "482ec72525c784d8e00ebcb3d3d2f002edfdaa9d6977d5c613df9c13c834dd64",
+    "src/cellflow/data/__init__.py": "db26a46a961983b691d4852796715b922ff6dbc02effa8e3f15247cdc0534a9e",
+    "src/cellflow/data/_data.py": "51e92489bf4df8b43bda71c2142e4fc39d0479c489f6660bed01213080bcd207",
+    "src/cellflow/data/_dataloader.py": "b9b506b5f3015e40d7978a576662a293e19cd3f0824425523dc92bc8890e46e7",
+    "src/cellflow/data/_datamanager.py": "cf0ae0ee4fe699dc4c5b23a21247c3986e794a6ef4bb6c73eabb4543cc838eac",
+    "src/cellflow/data/_utils.py": "f1921afa9ac1657b18a05dcde5b9c6145b596da72b907e2660992ef923ae2f34",
+    "src/cellflow/datasets.py": "faac0b7e21f2df7627a75ce5186fb10a5e94b6c0cb196df1dd6ee7d84c3d120f",
+    "src/cellflow/external/__init__.py": "47b616e3a9dec32812a3fcd07d538ed716acc152d3b12d32a603d27e83efd8d5",
+    "src/cellflow/external/_scvi.py": "ce36bcb07d01b50a108cca28177267f1090ea4041e6f8c06ec3fb76290245a62",
+    "src/cellflow/external/_scvi_utils.py": "0d62b04212b2ce231aedf569fdec43fab20646fadbb868ca8ecde4de396e6289",
+    "src/cellflow/metrics/__init__.py": "f1c71fde489a17103066f113edd4fba5e1d0641d2338592ab7f14e7fdca2d859",
+    "src/cellflow/metrics/_metrics.py": "493980a4a63225f4993268ac20feed3853cce01c95e3876da2e5ef4a74a67577",
+    "src/cellflow/model/__init__.py": "d09122311591f833cd9280ea0ca3fa31b2d4ee0b9e8aaf4c825652e2015a6133",
+    "src/cellflow/model/_cellflow.py": "3c5b84b6d41d88ceac8b9f15c8a0a36c5bcdb32db2cf3270ad0588b462d2c766",
+    "src/cellflow/model/_utils.py": "e95f35f0171b5eec042f9416dacada43cc412b1a400311a2e1685e987258be7a",
+    "src/cellflow/networks/__init__.py": "447250d2d8f4258dc15ca36d20c38b93fd732d5333c5a1de7272b5b93229c4b9",
+    "src/cellflow/networks/_set_encoders.py": "0c11e613f122d857c35bcffcbbc45fac8e7c357e89b0952deba16cc0c380e073",
+    "src/cellflow/networks/_utils.py": "ed44f10c85796c790d59fdd3bc711d603c3487ad8634637fd605ebd17252ab39",
+    "src/cellflow/networks/_velocity_field.py": "6105d731c08c7912c653ba44135b74f9dee5355b9f1510bb599f3892cb549d02",
+    "src/cellflow/plotting/__init__.py": "60b49562fad1e1da2b417a501e2513027b5dadfd590ed89619adc900296eebd9",
+    "src/cellflow/plotting/_plotting.py": "c687ab059694af3f1bd5346bb888bb76886fa28635981307aaf3e9ce4ab63f42",
+    "src/cellflow/plotting/_utils.py": "dbd9d32859dd0257878acfb8dcb5f01af91588a049fa0fcfe85677437a5ccdd0",
+    "src/cellflow/preprocessing/__init__.py": "a504b971c85522f493d683e00bd8ce2dd1ae2117760ac277d42184b10bbfd7c2",
+    "src/cellflow/preprocessing/_gene_emb.py": "2a682fc71a7eb056bca813ddafd1314c4c1dd440c075567515e54c4dacb012ba",
+    "src/cellflow/preprocessing/_pca.py": "44e3ced255a445bfe7ffa147cb41f15e0e0fefefde7638942606d1d1a724546b",
+    "src/cellflow/preprocessing/_preprocessing.py": "997215f5446172ee3f1863e37f10bb60f22b01fcb4c82699096e29ba54fb1885",
+    "src/cellflow/preprocessing/_wknn.py": "0cf0aee6d9a391a5e7834a497976e4ff3f21bc779bab71f4e394c6be307b0713",
+    "src/cellflow/solvers/__init__.py": "b2232c69caab31ec8da25d37209e5515c1e4e50a90d767b57072d8add7ce5a58",
+    "src/cellflow/solvers/_base.py": "7c86da036e7e80a4f477eecb7a4b2bcda41569ad985db96ee670e6845f868ff8",
+    "src/cellflow/solvers/_genot.py": "b78350a5ebe72f2813f6e0efafdd1f9abba3cdde0ff442085a0ca080f5396714",
+    "src/cellflow/solvers/_otfm.py": "efa3b611860bb7add6e0ed4649ee78b5bd0113793bc53a2a662a812f740e4ffa",
+    "src/cellflow/solvers/_registry.py": "18ba49a77b60745768815be4a87cd74dc68b7829afd72b2739770c87853fab57",
+    "src/cellflow/solvers/utils.py": "b9e8f990767d5011e083f8efaaea7e14b660cb8852ef3fd3915784506f8adef1",
+    "src/cellflow/training/__init__.py": "3df70f4187d5adfdc0776b5e91753e5ff4d9d337dbf747543deb48f4732be9fd",
+    "src/cellflow/training/_callbacks.py": "84b26453a3e74ac6a71ca495bc0de2c75010c17f2be6c44a690e946ca7d93071",
+    "src/cellflow/training/_trainer.py": "cb67ed2c1e5a23a0bb0e2f84d6f734552dbe12e79eed5f965bc595a22c77c163",
+    "src/cellflow/training/_utils.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/cellflow/utils.py": "ca5f9a3001df309f7603fcb4749a243029da8cdb3b3a1a3ea592596ea0721443"
+  },
+  "versions": {
+    "jax": "0.6.2",
+    "jaxlib": "0.6.2",
+    "jax-cuda12-plugin": "0.6.2",
+    "jax-cuda12-pjrt": "0.6.2",
+    "flax": "0.11.0",
+    "ott-jax": "0.5.1",
+    "diffrax": "0.6.2",
+    "optimistix": "0.0.10",
+    "equinox": "0.13.0",
+    "optax": "0.2.5"
+  },
+  "devices": [
+    "cuda:0"
+  ],
+  "gpu_operation_sum": 16.0,
+  "cuda_visible_devices": "0",
+  "xla_python_client_preallocate": "false",
+  "ld_library_path": "/data/yuchang/veloroute_w15a/runtime/cuda_deps/nvidia/cudnn/lib",
+  "global_environment_modified": false,
+  "api": {
+    "arbitrary_source": "native_source_control_boolean_semantics_need_adapter",
+    "nonpooled_covariates": "native_ConditionEncoder_covariates_not_pooled",
+    "group_plugin_MLP": "native_per_input_layers_before_pool",
+    "per_cell_conditions": "field_native_but_OT_resampling_and_predict_vmap_need_wrapper",
+    "partial_tau": "wrapper_native_predict_hardcodes_t1_1",
+    "default_solver": "diffrax.Tsit5_PID_rtol1e-5_atol1e-5_adaptive_not_fixed_steps"
+  },
+  "biological_time": {
+    "origin": "D3_RA_SAG_start_equals_0h",
+    "daily": "24*(day_number-3)",
+    "hourly": "author_nominal_05_10_15_20h",
+    "distinction": "GEO_decimal_days_are_rounded_not_used_as_4.8h_intervals",
+    "origin_is_implementation_inference_from_combined_author_metadata": true,
+    "frequencies": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "evidence": {
+      "geo": {
+        "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7548960",
+        "path": "outputs/w15a_cellflow_audit_v1/geo.html",
+        "sha256": "7e62bfd94cac2c4c8a3ad98d7e3bc4604be152c6b8be9c94d50542d28d35a0b1"
+      },
+      "author_notebook": {
+        "url": "https://raw.githubusercontent.com/rorymaizels/Maizels2023aa/main/analysis/A0.0_making_adata_sets.ipynb",
+        "path": "outputs/w15a_cellflow_audit_v1/author_notebook.ipynb",
+        "sha256": "657c3c6fd89e2d0cd01461fd4e8735131a8ad72ffd9e6da06b9419c75d9d4c4c"
+      }
+    }
+  },
+  "known_mathematics": {
+    "L3_weighted_energy": "exact_energy_of_mixture_measure",
+    "fixed_one_expert_per_source_Vstatistic": "NOT_exact_same_expectation_due_within_source_diagonal",
+    "expected_sampled_minus_weighted": "sum_i E_k,l distance(candidate_i,k,candidate_i,l) / N^2"
+  },
+  "biological_training": false,
+  "Traxler_effects_read": false
+}

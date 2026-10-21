@@ -79,7 +79,7 @@ Traxler18个GEX SRA共143.1GB已完整下载，9个文库的S/U/A矩阵已生成
 |---|---|---|
 | L1 小模型 | 解析动力学上下文＋router＋专家／小ODE，检验最小实现与群体机制 | 最终ODE干预完成；RENGE迁移网格续排 |
 | L2 CellFlow插件 | 动力学群体token进入CellFlow条件编码器，与S摘要、direct-U、打乱等同结构对照 | 官方GPU与15项软件测试通过，120次合成完成；四候选static开发网格GPU0训练中 |
-| L3 合并模型 | CellFlow状态骨干＋K8专家＋独立动力学编码器＋固定源侧router | 已接官方隐藏骨干，基础22项/官方6项CPU测试通过，50维K8四臂短训练跑通；正式配置继承L2 |
+| L3 合并模型 | CellFlow状态骨干＋K8专家＋独立动力学编码器＋固定源侧router | 已接官方隐藏骨干，31项CPU回归通过，50维K8四臂短训练跑通；正式配置继承L2 |
 
 L2/L3没有L1的解析均值锚，分别报告本线的static对照。L3不是预测结果的后期加权集成；
 状态流只读S，解析动力学经可学习编码器进入router，q在轨迹上固定，没有原版GFG/JVP。
@@ -87,6 +87,9 @@ L2主配置只用cf_static选型，L3不另调主干；合成和结构测试完�
 
 多agent分别推进L2、L3和Traxler技术分样，主agent负责L1、恢复调度与交叉审核。
 [群体分支可行性计划](../../PLANS/w15b_population_branching.md)保留，尚未越过门槛训练BR-3。
+
+[CellFlow实现与合成证据](../evidence/w15a_cellflow_audit.md) ·
+[合并架构与数学检查](../evidence/w15a_l3_implementation.md)
 
 用户于10月21日将资源上限扩大为六卡：允许物理GPU0–5，GPU6–7保留。
 RENGE继续使用GPU1–3；GPU0优先CellFlow环境与运行测试，其余卡按前置完成情况调度。
