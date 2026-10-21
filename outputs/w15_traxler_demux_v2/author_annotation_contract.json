@@ -1,0 +1,51 @@
+{
+  "git_commit": "541126f254e7a73ac3ac80fa73018907ff0c8c6d",
+  "seed": 0,
+  "command": [
+    "scripts/phase0/w15_traxler_demux.py",
+    "--output",
+    "outputs/w15_traxler_demux_v2"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15_traxler_demux.py": "72b38611cafc65d0d9406634af140787480e4bdc8b6b4cfd18cb313221407378"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 5.110618531703949,
+  "worksheet": "single_cell_annotations",
+  "columns_read": [
+    "Cell barcode",
+    "Time point",
+    "Inferred knockout",
+    "RNA counts",
+    "Genes detected",
+    "Antibody counts",
+    "Antibodies detected",
+    "gRNA counts",
+    "gRNAs detected",
+    "Batch",
+    "Mitochondrial count (fraction)",
+    "Inferred gRNA"
+  ],
+  "author_rows": 28303,
+  "batches": {
+    "A1": 6719,
+    "B3": 5503,
+    "B1": 4023,
+    "A3": 3699,
+    "B2": 2052,
+    "A2": 1758,
+    "C2": 1747,
+    "C1": 1424,
+    "C3": 1378
+  },
+  "time_labels": {
+    "Untreated": 12176,
+    "Listeria 6h": 11578,
+    "Listeria 24h": 4549
+  },
+  "excluded_columns": "M:W (including every Mixscape field)",
+  "other_worksheets_read": false,
+  "cells_are_author_post_QC": true,
+  "exact_author_raw_QC_thresholds_available": false
+}

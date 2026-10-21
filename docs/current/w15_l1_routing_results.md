@@ -1,4 +1,42 @@
-# Frozen final L1 routing interventions
+# 最终小 ODE：动力学路由在起什么作用
+
+2026-10-21，冻结 W13 最终 ODE，不更新任何参数。六个开发窗口、三 seed，
+所有42份预测先冻结再评分；原 soft/static/shuffled 的18项 Energy 与原记录完全一致（差为0）。
+
+## 核心结果
+
+下表均为相对本线 static 的 Energy 改善，正值更好。
+
+| 预测视野 | 原逐细胞 soft 路由 | 群体平均后重新积分 | 均匀路由后重新积分 |
+|---|---:|---:|---:|
+| 5h | +3.723% | +3.735% | +1.094% |
+| 10h | +6.358% | +6.449% | −3.367% |
+| 15h | +2.415% | +1.569% | −33.348% |
+
+群体平均路由分别保留原收益的100.33%、101.43%、64.96%。只在终态改变权重、不重新积分，
+分别保留100.44%、102.15%、68.95%；两种干预方向一致。
+
+因此，5–10h的主要优势不依赖每颗细胞不同的q，而依赖源群体提供的非均匀专家配比。
+15h逐细胞权重仍有部分额外贡献，但只有一个重叠序列窗口，不能由此认定真实单细胞命运。
+均匀化明显损害长视野，说明训练所得专家并不是可以任意等权互换的分量；
+这也不等于这些专家已经对应生物学谱系。
+
+这支持后续 L2 优先检验动力学群体 token；L3 保留逐细胞 router，并继续与群体平均路由比较。
+本实验不单独证明 velocity 相对所有 U/S 表示的特异性，也不是独立数据复现。
+
+## 实验口径与记录
+
+重加权只改变终态q并做共同均值平移；重新积分则在每次 RK4 群体中心化中使用新q。
+全源群体积分后才抽样，三 seed 等权混合，沿用原均值锚、输入与模型哈希。
+
+[逐窗口指标](../../outputs/w15_l1_routing_20261021_v1/metrics.csv) ·
+[视野汇总](../../outputs/w15_l1_routing_20261021_v1/horizon_summary.csv) ·
+[原结果精确复现](../../outputs/w15_l1_routing_20261021_v1/reference_reproduction.json)
+
+<details>
+<summary>原始运行汇总</summary>
+
+```json
 
 {
   "status": "FROZEN_FINAL_L1_ROUTING_INTERVENTIONS_COMPLETE",
@@ -165,3 +203,6 @@
   "reweighting_and_reintegration_separate": true,
   "new_biological_replication": false
 }
+```
+
+</details>

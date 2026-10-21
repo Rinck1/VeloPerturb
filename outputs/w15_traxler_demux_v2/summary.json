@@ -1,0 +1,622 @@
+{
+  "git_commit": "541126f254e7a73ac3ac80fa73018907ff0c8c6d",
+  "seed": 0,
+  "command": [
+    "scripts/phase0/w15_traxler_demux.py",
+    "--output",
+    "outputs/w15_traxler_demux_v2"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15_traxler_demux.py": "72b38611cafc65d0d9406634af140787480e4bdc8b6b4cfd18cb313221407378"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 15.06679093465209,
+  "status": "TRAXLER_AUTHOR_TECHNICAL_METADATA_RECOVERED",
+  "input_cells": 76344,
+  "author_QC_retained": 28303,
+  "available_by_time": {
+    "0": {
+      "cells": 12176,
+      "targets": 136,
+      "targets_at_least_30_cells": 133,
+      "KO_targets_excluding_NonTargeting": 135,
+      "KO_targets_at_least_30_cells_excluding_NonTargeting": 132,
+      "NonTargeting_cells": 1289,
+      "resolved_source_cells": 10802,
+      "source_counts": {
+        "RAW264.7-b": 4131,
+        "RAW264.7-c": 3683,
+        "RAW264.7-a": 2988,
+        "UNRESOLVED": 1374
+      }
+    },
+    "6": {
+      "cells": 11578,
+      "targets": 136,
+      "targets_at_least_30_cells": 133,
+      "KO_targets_excluding_NonTargeting": 135,
+      "KO_targets_at_least_30_cells_excluding_NonTargeting": 132,
+      "NonTargeting_cells": 1223,
+      "resolved_source_cells": 9672,
+      "source_counts": {
+        "RAW264.7-a": 4567,
+        "RAW264.7-b": 3253,
+        "UNRESOLVED": 1906,
+        "RAW264.7-c": 1852
+      }
+    },
+    "24": {
+      "cells": 4549,
+      "targets": 136,
+      "targets_at_least_30_cells": 71,
+      "KO_targets_excluding_NonTargeting": 135,
+      "KO_targets_at_least_30_cells_excluding_NonTargeting": 70,
+      "NonTargeting_cells": 484,
+      "resolved_source_cells": 4366,
+      "source_counts": {
+        "RAW264.7-c": 1560,
+        "RAW264.7-a": 1447,
+        "RAW264.7-b": 1359,
+        "UNRESOLVED": 183
+      }
+    }
+  },
+  "libraries": [
+    {
+      "library": "A1",
+      "cells": 13140,
+      "author_retained": 6719,
+      "author_retained_resolved_source": 5525,
+      "provisional_nonzero_single_guide": 0,
+      "author_retained_without_raw_nonzero_single_guide": 6719,
+      "HTO_ids": [
+        "HTO-RAW264.7-a_untreated",
+        "HTO-RAW264.7-b_untreated",
+        "HTO-RAW264.7-c_untreated"
+      ],
+      "S_quantiles": {
+        "0.05": 704.0,
+        "0.25": 4975.75,
+        "0.5": 7623.5,
+        "0.75": 10534.5,
+        "0.95": 17251.149999999998
+      },
+      "U_quantiles": {
+        "0.05": 112.0,
+        "0.25": 370.0,
+        "0.5": 541.0,
+        "0.75": 796.0,
+        "0.95": 1425.0
+      },
+      "U_fraction_S_U_quantiles": {
+        "0.05": 0.03831498920233073,
+        "0.25": 0.05207087742318251,
+        "0.5": 0.06520656803930125,
+        "0.75": 0.08506454553573385,
+        "0.95": 0.36492238723229653
+      },
+      "author_RNA_quantiles": {
+        "0.05": 4874.5,
+        "0.25": 9023.5,
+        "0.5": 11311.0,
+        "0.75": 14222.5,
+        "0.95": 20776.3
+      },
+      "author_detected_gene_quantiles": {
+        "0.05": 1977.9,
+        "0.25": 2916.0,
+        "0.5": 3379.0,
+        "0.75": 3879.5,
+        "0.95": 4756.0
+      },
+      "author_mito_percent_quantiles": {
+        "0.05": 0.6287903148336547,
+        "0.25": 0.948603687923212,
+        "0.5": 1.19195430841818,
+        "0.75": 1.46115017206659,
+        "0.95": 2.130945409930914
+      }
+    },
+    {
+      "library": "A2",
+      "cells": 8516,
+      "author_retained": 1758,
+      "author_retained_resolved_source": 1691,
+      "provisional_nonzero_single_guide": 3,
+      "author_retained_without_raw_nonzero_single_guide": 1758,
+      "HTO_ids": [
+        "HTO-RAW264.7-a_untreated",
+        "HTO-RAW264.7-b_untreated",
+        "HTO-RAW264.7-c_untreated"
+      ],
+      "S_quantiles": {
+        "0.05": 454.0,
+        "0.25": 771.0,
+        "0.5": 2993.0,
+        "0.75": 17140.5,
+        "0.95": 30031.0
+      },
+      "U_quantiles": {
+        "0.05": 44.0,
+        "0.25": 101.0,
+        "0.5": 904.0,
+        "0.75": 1533.0,
+        "0.95": 2955.75
+      },
+      "U_fraction_S_U_quantiles": {
+        "0.05": 0.04276706502022525,
+        "0.25": 0.06329113924050633,
+        "0.5": 0.09044442587156155,
+        "0.75": 0.16163372425705774,
+        "0.95": 0.5361503895344859
+      },
+      "author_RNA_quantiles": {
+        "0.05": 5232.6,
+        "0.25": 18892.0,
+        "0.5": 25496.5,
+        "0.75": 33586.75,
+        "0.95": 49479.59999999999
+      },
+      "author_detected_gene_quantiles": {
+        "0.05": 2302.55,
+        "0.25": 4346.5,
+        "0.5": 5043.0,
+        "0.75": 5712.0,
+        "0.95": 6642.299999999999
+      },
+      "author_mito_percent_quantiles": {
+        "0.05": 0.6417437451354437,
+        "0.25": 0.974355967312589,
+        "0.5": 1.20828036790962,
+        "0.75": 1.536503124687955,
+        "0.95": 6.088656502556068
+      }
+    },
+    {
+      "library": "A3",
+      "cells": 8972,
+      "author_retained": 3699,
+      "author_retained_resolved_source": 3586,
+      "provisional_nonzero_single_guide": 1,
+      "author_retained_without_raw_nonzero_single_guide": 3699,
+      "HTO_ids": [
+        "HTO-RAW264.7-a_untreated",
+        "HTO-RAW264.7-b_untreated",
+        "HTO-RAW264.7-c_untreated"
+      ],
+      "S_quantiles": {
+        "0.05": 620.6500000000001,
+        "0.25": 2160.5,
+        "0.5": 9919.5,
+        "0.75": 14485.25,
+        "0.95": 23881.399999999987
+      },
+      "U_quantiles": {
+        "0.05": 105.0,
+        "0.25": 627.0,
+        "0.5": 927.0,
+        "0.75": 1354.0,
+        "0.95": 2483.449999999999
+      },
+      "U_fraction_S_U_quantiles": {
+        "0.05": 0.04339669332795633,
+        "0.25": 0.0593855826343599,
+        "0.5": 0.07815108985795313,
+        "0.75": 0.22736997724245653,
+        "0.95": 0.5282257116918252
+      },
+      "author_RNA_quantiles": {
+        "0.05": 6691.8,
+        "0.25": 13747.0,
+        "0.5": 17933.0,
+        "0.75": 22703.5,
+        "0.95": 35464.399999999994
+      },
+      "author_detected_gene_quantiles": {
+        "0.05": 2421.7,
+        "0.25": 3728.5,
+        "0.5": 4331.0,
+        "0.75": 4932.0,
+        "0.95": 5956.0999999999985
+      },
+      "author_mito_percent_quantiles": {
+        "0.05": 0.7122762027726295,
+        "0.25": 1.0567757346013549,
+        "0.5": 1.30425486422921,
+        "0.75": 1.62158192818816,
+        "0.95": 2.6889493214594036
+      }
+    },
+    {
+      "library": "B1",
+      "cells": 8337,
+      "author_retained": 4023,
+      "author_retained_resolved_source": 3543,
+      "provisional_nonzero_single_guide": 0,
+      "author_retained_without_raw_nonzero_single_guide": 4023,
+      "HTO_ids": [
+        "HTO-RAW264.7-a_LO28-6h",
+        "HTO-RAW264.7-b_LO28-6h",
+        "HTO-RAW264.7-c_LO28-6h"
+      ],
+      "S_quantiles": {
+        "0.05": 562.0,
+        "0.25": 5817.0,
+        "0.5": 12284.0,
+        "0.75": 17374.0,
+        "0.95": 28317.8
+      },
+      "U_quantiles": {
+        "0.05": 45.0,
+        "0.25": 509.0,
+        "0.5": 800.0,
+        "0.75": 1167.0,
+        "0.95": 2004.1999999999998
+      },
+      "U_fraction_S_U_quantiles": {
+        "0.05": 0.03449676473566718,
+        "0.25": 0.04764868334046443,
+        "0.5": 0.060570007030447244,
+        "0.75": 0.08035714285714286,
+        "0.95": 0.3661710168436055
+      },
+      "author_RNA_quantiles": {
+        "0.05": 8268.0,
+        "0.25": 14903.5,
+        "0.5": 19146.0,
+        "0.75": 24304.5,
+        "0.95": 34808.59999999999
+      },
+      "author_detected_gene_quantiles": {
+        "0.05": 2506.0,
+        "0.25": 3514.0,
+        "0.5": 4050.0,
+        "0.75": 4591.0,
+        "0.95": 5428.5999999999985
+      },
+      "author_mito_percent_quantiles": {
+        "0.05": 0.4295664282341065,
+        "0.25": 0.676385762034088,
+        "0.5": 0.855656195798805,
+        "0.75": 1.074842957555825,
+        "0.95": 1.627008367043352
+      }
+    },
+    {
+      "library": "B2",
+      "cells": 6103,
+      "author_retained": 2052,
+      "author_retained_resolved_source": 1851,
+      "provisional_nonzero_single_guide": 0,
+      "author_retained_without_raw_nonzero_single_guide": 2052,
+      "HTO_ids": [
+        "HTO-RAW264.7-a_LO28-6h",
+        "HTO-RAW264.7-b_LO28-6h",
+        "HTO-RAW264.7-c_LO28-6h"
+      ],
+      "S_quantiles": {
+        "0.05": 506.0,
+        "0.25": 1676.5,
+        "0.5": 16904.0,
+        "0.75": 25433.0,
+        "0.95": 40494.8
+      },
+      "U_quantiles": {
+        "0.05": 40.0,
+        "0.25": 542.5,
+        "0.5": 1085.0,
+        "0.75": 1606.0,
+        "0.95": 2754.8999999999996
+      },
+      "U_fraction_S_U_quantiles": {
+        "0.05": 0.032298797644318644,
+        "0.25": 0.04681224942716248,
+        "0.5": 0.06191369606003752,
+        "0.75": 0.09279579864227108,
+        "0.95": 0.45422885190046636
+      },
+      "author_RNA_quantiles": {
+        "0.05": 14741.75,
+        "0.25": 23868.0,
+        "0.5": 30453.0,
+        "0.75": 40145.75,
+        "0.95": 57687.09999999999
+      },
+      "author_detected_gene_quantiles": {
+        "0.05": 3511.3,
+        "0.25": 4525.0,
+        "0.5": 5087.5,
+        "0.75": 5709.25,
+        "0.95": 6544.099999999997
+      },
+      "author_mito_percent_quantiles": {
+        "0.05": 0.40899000522335505,
+        "0.25": 0.6216609036052358,
+        "0.5": 0.7924557636750958,
+        "0.75": 0.9934734766689963,
+        "0.95": 1.4380912750811103
+      }
+    },
+    {
+      "library": "B3",
+      "cells": 11525,
+      "author_retained": 5503,
+      "author_retained_resolved_source": 4278,
+      "provisional_nonzero_single_guide": 0,
+      "author_retained_without_raw_nonzero_single_guide": 5503,
+      "HTO_ids": [
+        "HTO-RAW264.7-a_LO28-6h",
+        "HTO-RAW264.7-b_LO28-6h",
+        "HTO-RAW264.7-c_LO28-6h"
+      ],
+      "S_quantiles": {
+        "0.05": 607.2,
+        "0.25": 4682.0,
+        "0.5": 8165.0,
+        "0.75": 11555.0,
+        "0.95": 18633.99999999999
+      },
+      "U_quantiles": {
+        "0.05": 57.0,
+        "0.25": 364.0,
+        "0.5": 534.0,
+        "0.75": 793.0,
+        "0.95": 1436.7999999999993
+      },
+      "U_fraction_S_U_quantiles": {
+        "0.05": 0.0356032763785206,
+        "0.25": 0.047581816151010835,
+        "0.5": 0.05942788074133763,
+        "0.75": 0.08176795580110498,
+        "0.95": 0.3612497430818961
+      },
+      "author_RNA_quantiles": {
+        "0.05": 5519.400000000001,
+        "0.25": 9590.5,
+        "0.5": 12279.0,
+        "0.75": 15641.5,
+        "0.95": 23592.0
+      },
+      "author_detected_gene_quantiles": {
+        "0.05": 1964.0,
+        "0.25": 2787.0,
+        "0.5": 3252.0,
+        "0.75": 3749.0,
+        "0.95": 4593.699999999999
+      },
+      "author_mito_percent_quantiles": {
+        "0.05": 0.4538573239041485,
+        "0.25": 0.7047991755151044,
+        "0.5": 0.8870999257493449,
+        "0.75": 1.110826962010145,
+        "0.95": 1.6434462238907326
+      }
+    },
+    {
+      "library": "C1",
+      "cells": 5409,
+      "author_retained": 1424,
+      "author_retained_resolved_source": 1385,
+      "provisional_nonzero_single_guide": 2,
+      "author_retained_without_raw_nonzero_single_guide": 1424,
+      "HTO_ids": [
+        "HTO-RAW264.7-a_LO28-24h",
+        "HTO-RAW264.7-b_LO28-24h",
+        "HTO-RAW264.7-c_LO28-24h"
+      ],
+      "S_quantiles": {
+        "0.05": 452.0,
+        "0.25": 985.0,
+        "0.5": 4686.0,
+        "0.75": 27586.0,
+        "0.95": 50402.99999999997
+      },
+      "U_quantiles": {
+        "0.05": 49.0,
+        "0.25": 183.0,
+        "0.5": 1579.0,
+        "0.75": 2716.0,
+        "0.95": 5012.799999999998
+      },
+      "U_fraction_S_U_quantiles": {
+        "0.05": 0.04310828265895656,
+        "0.25": 0.07161282138024357,
+        "0.5": 0.11194731890874883,
+        "0.75": 0.25019186492709133,
+        "0.95": 0.5207862569850225
+      },
+      "author_RNA_quantiles": {
+        "0.05": 7292.1,
+        "0.25": 26710.25,
+        "0.5": 39190.5,
+        "0.75": 51987.75,
+        "0.95": 74109.49999999999
+      },
+      "author_detected_gene_quantiles": {
+        "0.05": 2330.65,
+        "0.25": 4570.5,
+        "0.5": 5469.5,
+        "0.75": 6321.25,
+        "0.95": 7344.549999999999
+      },
+      "author_mito_percent_quantiles": {
+        "0.05": 0.25303960252615737,
+        "0.25": 0.4660805040903526,
+        "0.5": 0.631316704219238,
+        "0.75": 0.8673041413778382,
+        "0.95": 1.866004781403542
+      }
+    },
+    {
+      "library": "C2",
+      "cells": 7587,
+      "author_retained": 1747,
+      "author_retained_resolved_source": 1642,
+      "provisional_nonzero_single_guide": 1,
+      "author_retained_without_raw_nonzero_single_guide": 1747,
+      "HTO_ids": [
+        "HTO-RAW264.7-a_LO28-24h",
+        "HTO-RAW264.7-b_LO28-24h",
+        "HTO-RAW264.7-c_LO28-24h"
+      ],
+      "S_quantiles": {
+        "0.05": 445.0,
+        "0.25": 828.5,
+        "0.5": 2513.0,
+        "0.75": 13818.0,
+        "0.95": 31273.799999999996
+      },
+      "U_quantiles": {
+        "0.05": 51.0,
+        "0.25": 157.0,
+        "0.5": 832.0,
+        "0.75": 1558.0,
+        "0.95": 3164.8999999999987
+      },
+      "U_fraction_S_U_quantiles": {
+        "0.05": 0.04061898163478531,
+        "0.25": 0.07295880319153722,
+        "0.5": 0.11738011379030074,
+        "0.75": 0.28767583127554985,
+        "0.95": 0.5220784562136654
+      },
+      "author_RNA_quantiles": {
+        "0.05": 3482.6,
+        "0.25": 14534.5,
+        "0.5": 24204.0,
+        "0.75": 33717.0,
+        "0.95": 51813.399999999994
+      },
+      "author_detected_gene_quantiles": {
+        "0.05": 1518.9,
+        "0.25": 3215.5,
+        "0.5": 4253.0,
+        "0.75": 5102.0,
+        "0.95": 6288.7
+      },
+      "author_mito_percent_quantiles": {
+        "0.05": 0.19225357345044192,
+        "0.25": 0.39986784467536385,
+        "0.5": 0.587459537225752,
+        "0.75": 0.849077317078273,
+        "0.95": 3.488911758652116
+      }
+    },
+    {
+      "library": "C3",
+      "cells": 6755,
+      "author_retained": 1378,
+      "author_retained_resolved_source": 1339,
+      "provisional_nonzero_single_guide": 2,
+      "author_retained_without_raw_nonzero_single_guide": 1378,
+      "HTO_ids": [
+        "HTO-RAW264.7-a_LO28-24h",
+        "HTO-RAW264.7-b_LO28-24h",
+        "HTO-RAW264.7-c_LO28-24h"
+      ],
+      "S_quantiles": {
+        "0.05": 512.0,
+        "0.25": 841.0,
+        "0.5": 2544.0,
+        "0.75": 18025.0,
+        "0.95": 39612.69999999997
+      },
+      "U_quantiles": {
+        "0.05": 63.0,
+        "0.25": 136.0,
+        "0.5": 1205.0,
+        "0.75": 2413.5,
+        "0.95": 4708.599999999991
+      },
+      "U_fraction_S_U_quantiles": {
+        "0.05": 0.05063638985973296,
+        "0.25": 0.085232970499216,
+        "0.5": 0.13010590015128592,
+        "0.75": 0.29242711003735744,
+        "0.95": 0.5306663443147411
+      },
+      "author_RNA_quantiles": {
+        "0.05": 5429.700000000001,
+        "0.25": 22936.25,
+        "0.5": 33735.5,
+        "0.75": 44945.25,
+        "0.95": 65888.29999999997
+      },
+      "author_detected_gene_quantiles": {
+        "0.05": 2095.8,
+        "0.25": 4191.0,
+        "0.5": 5149.0,
+        "0.75": 5883.0,
+        "0.95": 6986.9
+      },
+      "author_mito_percent_quantiles": {
+        "0.05": 0.29421564836126396,
+        "0.25": 0.5085190931022991,
+        "0.5": 0.6730133815226484,
+        "0.75": 0.915854890978884,
+        "0.95": 2.519508490174547
+      }
+    }
+  ],
+  "input_matrices": [
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/A1.h5ad",
+      "sha256": "3051872d321b2f3bec0e7a990958f47cd0dc81d5740e534c52d771c62c19e136",
+      "original_modified": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/A2.h5ad",
+      "sha256": "0e11dc24a0827fb37ac1ef42ce71fcf504d4a804db056ca8fc5c7091e8aecd43",
+      "original_modified": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/A3.h5ad",
+      "sha256": "4b6691937e23883a086a0b5a1f270c6d01538bf6d42a3d70373cad9d50b9aad7",
+      "original_modified": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/B1.h5ad",
+      "sha256": "85646dc3c7efc93157297f2472a54e5996497552dc3a720b8dc9bf6cd63e7da0",
+      "original_modified": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/B2.h5ad",
+      "sha256": "97378b055fdb3ba78f07b1496718927674e14a487c82bc04eb1b0f6dbd0f3edc",
+      "original_modified": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/B3.h5ad",
+      "sha256": "3d26a6fbd5a76858d0d4f2022874c7ee633439dc9c401c7ed0e143ea0a1f7617",
+      "original_modified": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/C1.h5ad",
+      "sha256": "9205035b90efda78a52a4196661afa36e1f5935dfdbe2112ca7b6c8b9318ec03",
+      "original_modified": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/C2.h5ad",
+      "sha256": "a2046dc1d0c12a38f73309539bb257794f22bd3b0a63e4a27da42ad516bde228",
+      "original_modified": false
+    },
+    {
+      "path": "/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1/C3.h5ad",
+      "sha256": "8fba7387195cfa7df58eb85327e0699d143535988a5a25e44d88ba3e717c4a5c",
+      "original_modified": false
+    }
+  ],
+  "author_HTO_calls_recovered": false,
+  "source_tags": "a,b,c identity only from feature names",
+  "source_provenance": "three independent frozen-vial thaws, not three donors; exact author cell-to-HTO calls absent",
+  "source_annotation": "HTO top fraction >=0.90; otherwise unresolved; not exact author GMM",
+  "author_QC_retained_set_recovered": true,
+  "raw_QC_categories_available": false,
+  "exact_per_protospacer_thresholds_available": false,
+  "original_provisional_guide_calls_replaced_only_in_new_metadata": true,
+  "new_dataset_perturbation_effects_read": false,
+  "Mixscape_fields_read": false,
+  "trained_models": false,
+  "GPU_used": false,
+  "next": "Obtain exact author HTO/QC_categories or validate a frozen technical demux before W15 source-held-out training"
+}

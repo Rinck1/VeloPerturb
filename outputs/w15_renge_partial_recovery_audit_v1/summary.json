@@ -1,0 +1,96 @@
+{
+  "git_commit": "2f5fff78a5392acb7ee1349bb7b08f4d3b62dd44",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "scripts/phase0/w15_renge_partial_resume.py",
+    "audit",
+    "--root",
+    "outputs/w14b_renge_router_v1",
+    "--output",
+    "outputs/w15_renge_partial_recovery_audit_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15_renge_partial_resume.py": "10b9f98edf87519cde2479c2725a262834c6d8e833c63d6ad8d5cac5242bebbf",
+    "/home/yuchang/wangjiaxuan/outputs/w14b_renge_router_v1/study_manifest.json": "9114dfe50db987ca5bfcc5c4ad020e9ed057535387a746f56e25bc5b77e91f64"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "d3a829be033d960620aa84d769450e6c1ddbd9979c45f480f15fa67991c40520",
+  "runtime_seconds": 0.6201365776360035,
+  "status": "ORIGINAL_RENGE_PARTIAL_GRID_AUDITED",
+  "original_jobs": 576,
+  "original_jobs_sha256": "0d558c50e59d277cf79a0861af8664c784cb287cb44b033b08c108f952ff5819",
+  "workers": [
+    {
+      "worker": 0,
+      "valid_complete": 25,
+      "pending": 173,
+      "partial": [
+        {
+          "job": {
+            "fold": "day2_to_day3__ID1",
+            "worker": 0,
+            "seed": 1,
+            "arm": "real",
+            "shuffle_seed": 0,
+            "name": "real"
+          },
+          "path": "/home/yuchang/wangjiaxuan/outputs/w14b_renge_router_v1/training/day2_to_day3__ID1/seed1/real",
+          "last_step": 1,
+          "model_exists": false,
+          "live_original_pid": 3237857
+        }
+      ],
+      "live_original_pid": 3237857
+    },
+    {
+      "worker": 1,
+      "valid_complete": 13,
+      "pending": 185,
+      "partial": [
+        {
+          "job": {
+            "fold": "day2_to_day3__ETV4",
+            "worker": 1,
+            "seed": 2,
+            "arm": "real",
+            "shuffle_seed": 0,
+            "name": "real"
+          },
+          "path": "/home/yuchang/wangjiaxuan/outputs/w14b_renge_router_v1/training/day2_to_day3__ETV4/seed2/real",
+          "last_step": 9000,
+          "model_exists": false,
+          "live_original_pid": null
+        }
+      ],
+      "live_original_pid": null
+    },
+    {
+      "worker": 2,
+      "valid_complete": 13,
+      "pending": 167,
+      "partial": [
+        {
+          "job": {
+            "fold": "day2_to_day3__FOXH1",
+            "worker": 2,
+            "seed": 2,
+            "arm": "real",
+            "shuffle_seed": 0,
+            "name": "real"
+          },
+          "path": "/home/yuchang/wangjiaxuan/outputs/w14b_renge_router_v1/training/day2_to_day3__FOXH1/seed2/real",
+          "last_step": 9000,
+          "model_exists": false,
+          "live_original_pid": null
+        }
+      ],
+      "live_original_pid": null
+    }
+  ],
+  "files_modified": false,
+  "workers_started": false
+}

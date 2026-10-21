@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-21",
+  "reason": "Root filesystem exhaustion interrupted CellFlow synthetic and two RENGE workers",
+  "operation": "recoverable_move_with_original_path_symlink",
+  "source": "/home/yuchang/wangjiaxuan/outputs/w15b_branch_audit_v1/author_repository",
+  "destination": "/data/yuchang/veloroute_w15a/runtime/author_repository_branch_audit_v1",
+  "approximate_size": "1.4 GB",
+  "original_path_preserved_as_symlink": true,
+  "scientific_data_or_model_removed": false,
+  "owner_agent_confirmed_replaceable_author_repository": true,
+  "unrelated_files_or_caches_removed": false
+}
