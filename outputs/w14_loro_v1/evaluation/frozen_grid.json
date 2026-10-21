@@ -1,0 +1,5713 @@
+{
+  "git_commit": "153ffdc99580ebc41ae2e6638a787ffd1dff5a93",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_loro.py",
+    "evaluate",
+    "--root",
+    "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1",
+    "--output",
+    "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/evaluation"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/study_manifest.json": "773768fed4c33a2ac0fad0ee40fb48b4337f70f0e08ff4dfe22e58fed7f94920",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_loro.py": "037d8ed658c1ee36a9ac7bcb8a9eec83c4dc3ed368368dea94efc4e87e2fface",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_model.py": "f655de47d1942721a86867289731f3c43e7a494af13ecd687748292dd628174f",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_data.py": "a04dac58c7a2798845539d2d7771fe1f1a8a6c1c0b1caa31afdbf0ce391635f7",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_kinetic_head.py": "0d7365a05c78f55b81c058808a741f2fac3c0641d79b74f61288a41ca82cf79a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_kinetics.py": "8d79fcdfff498a183482dce199cf1987bc2f47b5bd503cdd04708bdf278566bf",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_joint_scifate2.py": "ff2c51a90ffa46df93794e8812c55970d43ed3a538a5f4595187dcad3a83aafe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_repair.py": "b0eaeaf6ad5ea00b83beb0e65136ca6af6e93b4c90035c6774d585aa6d97d525",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w7_router_scaling.py": "91d93a424bce8f2be3dac713f754fdfd0dc225af9a6f729b8efa7bac77dfdb89",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w9_population_router.py": "5e819854c7ca33da551d9b6da9f9e627ee1cd8407c9297c4f270abdbe5634cb2",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_program.py": "4ff0c9cc4586254dc7c1c40de6a2f4263d3353ccc4a78a1d9f7c6ce55e948fa9",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_synthetic.py": "26d2ef8f377de5340b4c6f01e94d7da8710752583c6c833b448ca32fb53c553e"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "ebe3643445d6cf65cc372239bbaadadb8db5b2317eae3313590ed343fcbd7d57",
+  "runtime_seconds": 0.007867187261581421,
+  "predictions": [
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/static/prediction_D3.npz",
+      "sha256": "58beac052aa3fad0737f74a871954705e4d2764359a81afc493f9e6a182ee170"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/static/prediction_D4.npz",
+      "sha256": "e45d91f9e96110b82d39a0af9165c7496c3a7f670ec6cd4959773d31799d674f"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/static/prediction_D5.npz",
+      "sha256": "fc8750ed2eb151f5d523ecbc5f12f6378b5cd9347d0ccb7d50a71099f3c6f426"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/static/prediction_D6.npz",
+      "sha256": "a7369f1d427ff29294cc7b94dd2dc833c48d62e2ec693d88470312319e762c19"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/static/prediction_D7.npz",
+      "sha256": "38c93f9712de6be86c5f985e8e3430f3735cef60fdf4b5f724acf7b7b23fb98d"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/real/prediction_D3.npz",
+      "sha256": "d1ac78df0cdb67acd74b2dbb5560d26c146eec08451227556baa3fc953ac9579"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/real/prediction_D4.npz",
+      "sha256": "35f2ec05de610535a3d08a9ddae01656548cc57094b251857411c07df43ec7e2"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/real/prediction_D5.npz",
+      "sha256": "173ab7885db9b9a2e132be446ac6b72266981a9582b02a1bec3630d77b5341a6"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/real/prediction_D6.npz",
+      "sha256": "2d76a7c9f2fee3bbb09eb7dbcce4538a50889e37498515552d65becca4ad15c2"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/real/prediction_D7.npz",
+      "sha256": "121343ab25e9892378eed6a4f03d8fe02791e668448251f698ca173881dac32d"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm0/prediction_D3.npz",
+      "sha256": "44198b5568cac61f586b6ce4e3b9dbff9b7e336dc416a925841149448bdd2d19"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm0/prediction_D4.npz",
+      "sha256": "05492f6995efe33d940a4491f5ce086f563e7ec942a4818c4dae1bb9d43d9f92"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm0/prediction_D5.npz",
+      "sha256": "ddbcc0e1cef218ec37e1bed5754f20cec9b7090cd8695bfad9b8f34986fe84c4"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm0/prediction_D6.npz",
+      "sha256": "4df68e52d3e54e62e32147763ea0ff77e1eb7828e686ee84c7a6fe57d9071ad6"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm0/prediction_D7.npz",
+      "sha256": "53af8f3c110c9a54f249d0de0f0c503df44b0ac1ac7cea76996aa48205a1eee7"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm1/prediction_D3.npz",
+      "sha256": "d3b6facd60b2aa4b0a3aa761c9702fde5390385239a4c2e51df5167ad5a0d646"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm1/prediction_D4.npz",
+      "sha256": "f791a0e65e1008a9dc1d7370154d273f33d89ca6811b424bd913feb39e086de9"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm1/prediction_D5.npz",
+      "sha256": "6266c518c74fe8e4d720285f690e9e239486a884cda2a55af464235547c1699d"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm1/prediction_D6.npz",
+      "sha256": "8a62e16516d4101ff0869dfd478af72eab9fcdfaa97a390b9f3b434e4f885c47"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm1/prediction_D7.npz",
+      "sha256": "8033cef7ffcda724580662fc4382c3e5e3d6ff0403c9392af3ee4dffa1694115"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm2/prediction_D3.npz",
+      "sha256": "9c065d4a52c22dd79ff001b5c6edd91719fdb60b9859d1a5adbb036d38b8408c"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm2/prediction_D4.npz",
+      "sha256": "1ea412d1eb7cb1432c635005c23ec5698a12fd2e909701d38af35ab36826e106"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm2/prediction_D5.npz",
+      "sha256": "e5b0232125de5700548333854c4043f57d099c2ff06d567e5f9eba087c5086cf"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm2/prediction_D6.npz",
+      "sha256": "fabd7377fe0390069aebdb20b4f261c56928913257d2e3e1c3246b15ef470f80"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm2/prediction_D7.npz",
+      "sha256": "cc63e4ac6fa112903f8369e21e8fa8bddda12e2b6b9d85c8d6e7e110418a8358"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm3/prediction_D3.npz",
+      "sha256": "bf4a58a613bbab31934f0b4778423238197e07d96056099b57187ade5f178963"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm3/prediction_D4.npz",
+      "sha256": "962f034452525a3ef0bee03fc23fbf5e80ba748b59e303f7a5427f431398a040"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm3/prediction_D5.npz",
+      "sha256": "54ba55caac22a265cc4c97fb007e6654c15c46613db8081e32cf41d5cc1ab740"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm3/prediction_D6.npz",
+      "sha256": "72a9cd0d12553209512205610239281d10edb48d6cde64bbef192e1ab6cc31a9"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm3/prediction_D7.npz",
+      "sha256": "4d7b77df0b2db8a3d80f8b1f2de7a2967ae600ddb63a44668f0a2d1303d31312"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm4/prediction_D3.npz",
+      "sha256": "060cfd6af26f2d08c2e649fa41c83b61fd669c2381d3a5f39ce23c6f91b1b654"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm4/prediction_D4.npz",
+      "sha256": "8faff2a95855bc95d66fa06ef777973046b797588f3aa23849a427b273b22c34"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm4/prediction_D5.npz",
+      "sha256": "5452fe2766f65647e9f22af5829dc769715bfdd2056c0529125f11cf312f188c"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm4/prediction_D6.npz",
+      "sha256": "f610b6ad27778b7ef3993409c66d80b45cb6256b2508be3dcbaf73639d3ca7e2"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/shuffled_v_perm4/prediction_D7.npz",
+      "sha256": "0121426b4caf4846aad278e89f4a23496c42bd597bb630b48f161e96ea9e4a37"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/direct_U/prediction_D3.npz",
+      "sha256": "bdb29c096cdd2cb9821fd57b879e8d4b0db07e52c7ef3fdadfe585d164dd4e6f"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/direct_U/prediction_D4.npz",
+      "sha256": "c5c467c32d3e9bac6b6f81572639f143621802572a19c99771fe6eade2333043"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/direct_U/prediction_D5.npz",
+      "sha256": "ea6dc8706019e7b9e0e1e3be24770903fff4ccfb402ba72414e08f9719df1153"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/direct_U/prediction_D6.npz",
+      "sha256": "b3750fd8ff5f92d4d4e9edc944e5fbc7ac49ab957b0b90512c487d424ae065fd"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/direct_U/prediction_D7.npz",
+      "sha256": "3604b28a84713d7cee9a7dd1a6188b6b2f6f250a63248f1a15fbc9c327fdf9ec"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/nonlinear_SU/prediction_D3.npz",
+      "sha256": "c87f4048ec0aad25f1444fcf5790524a31cca873491ab237fd33ebc606661b32"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/nonlinear_SU/prediction_D4.npz",
+      "sha256": "fdb971380783dd417f8a0e82a06eda3f659fb0f0745ad780d86ad139a06c571f"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/nonlinear_SU/prediction_D5.npz",
+      "sha256": "4b52d58390944348fc5003f6ff805082a5e66d36a74bbc74a672ed1c11fee768"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/nonlinear_SU/prediction_D6.npz",
+      "sha256": "cad3e6eeee78e4e19981562c5b4965f39c5ac4beac6be414842716692113bcf9"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed0/nonlinear_SU/prediction_D7.npz",
+      "sha256": "02fc8f99fd8e4d1c07a8cf2f1e05322e7de2185f7f6885ffd5d2cd52becdcdbb"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/static/prediction_D3.npz",
+      "sha256": "bba1642e6b50f8159442286173b4430386c1fa948c6546ad4b891d11907f84f2"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/static/prediction_D4.npz",
+      "sha256": "ceeb0a9576a24ff796f3c6cd2c3c36f2531aafcea506d04e3806695cc3d4d843"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/static/prediction_D5.npz",
+      "sha256": "d6befd761a2056277f3d4f41b00a81dc3dfda8d2f9919fa59db7e8d8209dd962"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/static/prediction_D6.npz",
+      "sha256": "7efd9847f7a68f3fe6cfa302a26cc0063961b156149fcb39935c4da56c6c8849"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/static/prediction_D7.npz",
+      "sha256": "074e78d0b6b221991a081f5daa57af2e24799fa099500fb069ec6c0855d1439e"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/real/prediction_D3.npz",
+      "sha256": "52e2eb5dadaa81157349a96fd384fbaec2072c84b8f6e2cca6b32102326122b6"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/real/prediction_D4.npz",
+      "sha256": "3a5594fb1ea9605e733dc8de53ab6ab87a1d883a5f5902b337f7adaaa834f5a5"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/real/prediction_D5.npz",
+      "sha256": "5370ae915d4dc518c222f389455b522a320af274b32c67da3e9df987251d2950"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/real/prediction_D6.npz",
+      "sha256": "ed24df8b29ff6148509ff38d78e364cc6f6dd0d9c94f1bae96abe1c9fb600730"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/real/prediction_D7.npz",
+      "sha256": "e492221050894fa481357222c6973f9c0ae4ae369aafeb8ad899fe7505573043"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm0/prediction_D3.npz",
+      "sha256": "548adc46c39b4ea5a7fefe486bf3536f569c80c189e9eee0fbd93d48ef08fa96"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm0/prediction_D4.npz",
+      "sha256": "88ec477e9720470e2b3783e9771c562c3e8b625843d076c37fb080f775d59b43"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm0/prediction_D5.npz",
+      "sha256": "425cf20835d3c393482219e5eceef93efe57d812bff4810b5b988bce6e2405fc"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm0/prediction_D6.npz",
+      "sha256": "8837d68ecaa20d398dbe6d3f1d0c2c49148bd075124f5d6aa9c0b45e8f6adeae"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm0/prediction_D7.npz",
+      "sha256": "3558c4c89bfe4e05bec7cba210dcd7c048a1e5c4883ba636f76c74e311da7ae1"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm1/prediction_D3.npz",
+      "sha256": "809f44fbb186c9b4af27606c8a7f9ff98d6b257cdb688532f94e9a49f8c1ca7c"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm1/prediction_D4.npz",
+      "sha256": "8581d41194e26954fb02095bd3d21b68c576b4cf8c38a5a22f666c4cf7530270"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm1/prediction_D5.npz",
+      "sha256": "d2f791f65b2858f3cd12d9054dfc0af84a924b6bc0ddb5d078c40298549dac88"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm1/prediction_D6.npz",
+      "sha256": "7ce78ccf99de108316de83ae6185d7402dd40d89067aed217661750b376c6786"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm1/prediction_D7.npz",
+      "sha256": "4eb87a8570450e81d1f203100aadb5a9f0878281cc74fc3c259188eaea2144c0"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm2/prediction_D3.npz",
+      "sha256": "72182be52ed632c0f121ad33f9fb2977c7ad3e2a2469c76c1f7a820a26826018"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm2/prediction_D4.npz",
+      "sha256": "9b3674bc431c83efe72d7b133b6c8b9e15c5817b5f77392e99e30cecbed76162"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm2/prediction_D5.npz",
+      "sha256": "bf55a91005f83c793316d71ee57ebaff7761690a2383b54aae88dfb9b9396825"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm2/prediction_D6.npz",
+      "sha256": "c9b76a5cd903396ca1aa839a92f4f7a4ce40d66c741dffcc50a416fb311c564c"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm2/prediction_D7.npz",
+      "sha256": "08c5e9fb55d6c2af5f70a825b45d43bb7d9480f0b7fde59735f7e8dea7c568a0"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm3/prediction_D3.npz",
+      "sha256": "ca62e60cc1e77cbcb22527ee2f10bc06205eae509ece89820866fdd41f6e13d8"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm3/prediction_D4.npz",
+      "sha256": "36e561b91a3e25739679f0c5e3b92390927f1cad10ba72189d8fcbb8558cd6c9"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm3/prediction_D5.npz",
+      "sha256": "1a74106467b8542855c12bd04594aa2ef035ef8cef2a1326c81bb47563301908"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm3/prediction_D6.npz",
+      "sha256": "6a6e567ba5d69d8eaf0f959f5bcc26e82f7dc1f3125af113f72a2faec034eff5"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm3/prediction_D7.npz",
+      "sha256": "83c1766936777a68617268763d5885845aa9a91fc3d0f1fa08df64f6ddeaad2c"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm4/prediction_D3.npz",
+      "sha256": "ee3193aad4188710232ca4614d6ec760a1bc1f52f24c990ddbd3e042640d8ee8"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm4/prediction_D4.npz",
+      "sha256": "cadb348819ef0179099d258c756720f2a90999c15872de59c09add1dd37ca5fa"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm4/prediction_D5.npz",
+      "sha256": "4cc744083383fa6b3de1fe8baa5c61c412e1d214d160a94c2694c8b7e7819401"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm4/prediction_D6.npz",
+      "sha256": "4c8f2090ffd29a2fe3aba0e896e90f737f6022484b89d52da3cffb5d98fda631"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/shuffled_v_perm4/prediction_D7.npz",
+      "sha256": "6c8f37aafb4eec125d3dd94a600c6432ef43e13cee647b3b10af64d7f5e0fd1a"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/direct_U/prediction_D3.npz",
+      "sha256": "fb48d58c55fb14c7385bfe3a30f6b6c6baf8d73e85525b54420c86cbea659a09"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/direct_U/prediction_D4.npz",
+      "sha256": "1f01e1868cb35878e90aaed59e2e4debd1f8b82e013ecea7cffc7f8c8dbeddb9"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/direct_U/prediction_D5.npz",
+      "sha256": "1833851a86839ec7194a5ffa2d11980370d3d81471706b0b58a89452c06e0696"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/direct_U/prediction_D6.npz",
+      "sha256": "611d9b210dd875902b149092d66c05b0fc53c14674626a7052d63b4a73f9f8dc"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/direct_U/prediction_D7.npz",
+      "sha256": "a591a8cc55c804d1477e94f3b17f3dd78a15c77fd2d29de53e7e5094086a939b"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/nonlinear_SU/prediction_D3.npz",
+      "sha256": "090469078b0eac4fcdaf3d699958a3b7b7965258e394e01607ced7837cc79fff"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/nonlinear_SU/prediction_D4.npz",
+      "sha256": "d29d57ac6fe6a8769278f906d6cd5c873b77ad9a373d4fb449e1af10ed66c23b"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/nonlinear_SU/prediction_D5.npz",
+      "sha256": "69b764f69c20b9b0fa7795d7e0f8230ec0730ecfce981d7ad6e284ef7f3b621a"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/nonlinear_SU/prediction_D6.npz",
+      "sha256": "19d658fcfc06cadd06d0c204c83607db68f9edcdf7cd9d8659d29f1665e91ebe"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed1/nonlinear_SU/prediction_D7.npz",
+      "sha256": "32870a9c35b76cff4628067ab6b628f97174c268b42ccd7bfb87df0a589d05a5"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/static/prediction_D3.npz",
+      "sha256": "5ac8bbef280510fc2658afa4a0350809304ad47548fbed265ee6c1e1aba86027"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/static/prediction_D4.npz",
+      "sha256": "ff9b586e8d8eba2f3397133b975367a37ca7b3360c652056c23db9617ff73322"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/static/prediction_D5.npz",
+      "sha256": "e4fc36af2bb0fc578b133f28c5c9d6181d9271e73e736d0f0c2473495030ed84"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/static/prediction_D6.npz",
+      "sha256": "2e8c609f133bf3e30109bad09328eaa5da71cb7169f1d576301f135ba5c579b6"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/static/prediction_D7.npz",
+      "sha256": "ad59e68fc9f9520d6846a933a559c46f4266c42937fa7e5e3da8fecb03ba3d73"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/real/prediction_D3.npz",
+      "sha256": "74ee245a0b5d29aaa0f50c82d1d5e5f5798fc711b81d0d8d9d33dfa2187c8748"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/real/prediction_D4.npz",
+      "sha256": "45cee52c9f59d69425cdc75f5af5ad3491e498fee8927246ef030c07b8cbe769"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/real/prediction_D5.npz",
+      "sha256": "e53f91e210ea794140763c2656ba5bbdfe54b47d9ce18dd5c909bb6a54c05bc9"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/real/prediction_D6.npz",
+      "sha256": "689811f3a3d8d2290a84424b07eeafb0521c981dc0548e62b5edc29901b6e2cb"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/real/prediction_D7.npz",
+      "sha256": "48b31ad715f206af9c33651256c4ed8bb34f54fe60231e9ecb586d8a105991f0"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm0/prediction_D3.npz",
+      "sha256": "8fb7bd6630dff9897be5160280d2631008e588d458031471b725516c9765f12d"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm0/prediction_D4.npz",
+      "sha256": "e1e12acc21755db8179002a2d8a6520625dbda01c28a3a7908cbc164516c1d76"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm0/prediction_D5.npz",
+      "sha256": "0e5c323423bab83ca87d51d0d56fc768f70c18c7e910de2a879c9b9105a2ff5c"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm0/prediction_D6.npz",
+      "sha256": "f5510561bf7702dd562ce5ef512ed5aa9a700424f83ab6986c1c3ba5423e0c2f"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm0/prediction_D7.npz",
+      "sha256": "2f9c284162dc4e05f187cb6ebc6c9396548393f6da8067c46a8d83119fefe2df"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm1/prediction_D3.npz",
+      "sha256": "f5d3dc2db99cbda21765ebeddfd7d1d133e6706b5eac2170e14b554681c2cfbb"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm1/prediction_D4.npz",
+      "sha256": "f524e8d894009efbb66a787f51a7adca0616aaece2cd24933bb8f79ee2d16c1d"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm1/prediction_D5.npz",
+      "sha256": "9e4c487c9f57948d6e8d8fd233248b60fe55b095c43957d44664f88215697703"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm1/prediction_D6.npz",
+      "sha256": "7f19800f6b97ae0b847c4d0d1c1c4784f686666c2d76acaa5eae69b0cd86093a"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm1/prediction_D7.npz",
+      "sha256": "61b0b0971bdfb8de8b5ffb761feecbf5215cc9b0182c21c353974c9730570fb4"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm2/prediction_D3.npz",
+      "sha256": "2f5480a176469de64961754cceb9d206cd599ac4d96d87edd8ca5c826ee3706a"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm2/prediction_D4.npz",
+      "sha256": "21130c88e635017f5de37a152ae785d766b367fcb5da4b1bcd049d35978c2649"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm2/prediction_D5.npz",
+      "sha256": "2668c6b1a467786c7372c439f85c74dea44827b03405d4ff8c20f7288f611869"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm2/prediction_D6.npz",
+      "sha256": "fd5d539b6b920d60e34a9dad2d0130b74e3561ec77d488cf261f862c4ce9bd38"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm2/prediction_D7.npz",
+      "sha256": "b02ab16cfce9b83296aedcc4c915267c0069b006abe6a03890a2cbb25f30ec8a"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm3/prediction_D3.npz",
+      "sha256": "3172aeb1879bbfa8be299e80ace9cfd1c02a4ef3dc82465d8b71f6075f0b0a96"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm3/prediction_D4.npz",
+      "sha256": "711c845a30855bea8d3389ae5c1d0eb8fa4f604b4f2e9b958b8f71da3508709e"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm3/prediction_D5.npz",
+      "sha256": "e992f60197153fd9b88541c977fa9174bcf8d8c1f3f12ab74fac7fa9e023471f"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm3/prediction_D6.npz",
+      "sha256": "edac952cd8893914211e9fd9f835268709eb2b0005fe83cf8823c16dd7b6f975"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm3/prediction_D7.npz",
+      "sha256": "64933895d19dadc8d2aa22d5152750bf34c8ca234b35236d80e5055ff7642f37"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm4/prediction_D3.npz",
+      "sha256": "210eed29c19b1c3b650c0fd46b9436cefa4766b4edd6cfe93ca3e5f980c71c4a"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm4/prediction_D4.npz",
+      "sha256": "4064249dbe22ebd4b0d68d63d26e9553a2f6b7ef4f012f6584ddfa9d0be7548b"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm4/prediction_D5.npz",
+      "sha256": "1a444d2a1dbb28d4b4e185912067ae5bfb44f53bc4c75c958a224b726743ee3d"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm4/prediction_D6.npz",
+      "sha256": "cecab7a61e5f34b3a50e417e221e16e17bc2038f2f102ab25a691cec5ceec76c"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/shuffled_v_perm4/prediction_D7.npz",
+      "sha256": "fcc347b27fd686ea8406dc1759033d2e3927265774ab35995b8c285a9c0be60f"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/direct_U/prediction_D3.npz",
+      "sha256": "bf4d0f5a1ba23648027bd3b02a8a616b1f61bf15a6784882554efe3f32eb6574"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/direct_U/prediction_D4.npz",
+      "sha256": "5c2622b3ad5d54e2730ef507850c7c9dcebfce96fee61e6a72cf5e7a23f21122"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/direct_U/prediction_D5.npz",
+      "sha256": "52bb37dc4da375bd21d34040128278fd93c7b365e77b40aba0ad3994417815ee"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/direct_U/prediction_D6.npz",
+      "sha256": "881fb4a3a398c840019966455a2de3828c190c9ccc69dcf422e207bd397f619a"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/direct_U/prediction_D7.npz",
+      "sha256": "1437d8faa472abaebb6de9cba11119ff03c57036e875c333384dadfa60b828ce"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/nonlinear_SU/prediction_D3.npz",
+      "sha256": "e3d5ebf5b02a1e55befd8dd72dfa56c15b6dafc5217c1977a09fc04ece588e8b"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/nonlinear_SU/prediction_D4.npz",
+      "sha256": "a52752723b911155e405686f50dc43cc464c2219cf530c9fe5adb38164069025"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/nonlinear_SU/prediction_D5.npz",
+      "sha256": "33144a94ff269ddcbebccfad065f7aad7cd78d460f21182feff090cefd14efc5"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/nonlinear_SU/prediction_D6.npz",
+      "sha256": "f865e0832c7abc5f05cc37029dc6d6440910db2dfc7a6485c1d6eb2c07ef6d6d"
+    },
+    {
+      "job": {
+        "heldout": "r1",
+        "worker": 0,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r1/seed2/nonlinear_SU/prediction_D7.npz",
+      "sha256": "5947c7e2028256d6a8d4917f9f6147b622ea7c8895c32ee0f6f43544c058d546"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/static/prediction_D3.npz",
+      "sha256": "22bed9bd8451b5afd46ba62f664a5bf3fce10670e1d7a23fccaec0b4c7b7a23a"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/static/prediction_D4.npz",
+      "sha256": "5bb468cb50c26308ff9b8b0a823c64986b01b63867d4443913d573e22539aee2"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/static/prediction_D5.npz",
+      "sha256": "fc3d52aeada0bef3f86d57e5b2a1978c6dc9e6048be7b7c0125b1fb1358edbe1"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/static/prediction_D6.npz",
+      "sha256": "fa1d4fee4ac303a9562a80e2fae79e70b1e37cc2ff0585793b05d298f03f0a31"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/static/prediction_D7.npz",
+      "sha256": "a1ca142ca15afb4d74beeb1afb8f344a1a1c7242b40a716b04b5f843875a1ca6"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/real/prediction_D3.npz",
+      "sha256": "f90cee8da4eaae3b3d77482d65f1bf415865dd25b86bf99e393e2ee000b31444"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/real/prediction_D4.npz",
+      "sha256": "81ff380e07068beed6a1806835ee1e7c7753ffc81814170642fef029e88b0531"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/real/prediction_D5.npz",
+      "sha256": "a703b14e0a9dcf3b6c2ee9f563a240672bcf8179222948d48f030e26fff3bfb9"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/real/prediction_D6.npz",
+      "sha256": "a6c6d41e795405d4f5447ab974ed71ee51ae2e6bdab976588a4f01fd1f3e66a3"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/real/prediction_D7.npz",
+      "sha256": "ade4451b350fbc6b5499b35f9e1bf09241de1046fa11b2dfc478ea25b3e59aa4"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm0/prediction_D3.npz",
+      "sha256": "6613f0af2716f2834cf7aa2049ad34ce36908f7df79f5676451fbc1f5d78360c"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm0/prediction_D4.npz",
+      "sha256": "49a0505cd851bd00936e6a4f2993a5b2a3549ab714466b9f29100c8b14ce7590"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm0/prediction_D5.npz",
+      "sha256": "3ddf7d5480258456c7af9712bc491b9f87161ef01a6547033d1c846c94b47333"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm0/prediction_D6.npz",
+      "sha256": "bd0e43c8f5621a20800954f8358284706c311f260cf28435eb6bca390c8b1f45"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm0/prediction_D7.npz",
+      "sha256": "bc08d42b15cbfda4b4f19e50ada39d716028c9cddb0305254fff6f091cc0efd1"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm1/prediction_D3.npz",
+      "sha256": "08a9aa2f8e53a19f9e3e4b4146e9ae5f7093e97f03e15cc0d0526796873e59b1"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm1/prediction_D4.npz",
+      "sha256": "a9103b93bf761f46bafc34cbb8220ad5397b6ef49d94bec0ee1c940f84553146"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm1/prediction_D5.npz",
+      "sha256": "dca576a4e6bf5c70a3f9017dec4b6103e39e02c6421b3938a26197d9eb130ca8"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm1/prediction_D6.npz",
+      "sha256": "68cafe4b92085af5215fadac1d7e64646983dbd917e10954005b4ef3b12f4ae2"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm1/prediction_D7.npz",
+      "sha256": "b6571610284612da501c1dd9bedea2be257d0c047af058ac2d4ca7f7a1468d85"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm2/prediction_D3.npz",
+      "sha256": "d8f5181cbb04663dc4077dcb123979394b845a47bc4144ce5442524267b8980d"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm2/prediction_D4.npz",
+      "sha256": "063b13e956280af7d4dee2b54939893a2ec4e841086a940b85e6e05c2e52e526"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm2/prediction_D5.npz",
+      "sha256": "701ad48d26f8a97e07568c91f9f1d5b82c83318d8cba0837238acc217f284c95"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm2/prediction_D6.npz",
+      "sha256": "743aa59bdca2420b63a02c5c855520adaf1716a9316a0dc5be17540679e18b21"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm2/prediction_D7.npz",
+      "sha256": "0fc8f9dbcae9d4083171b75ab423f9dbd5f5d199d90f4ebce229d8c4b98861d6"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm3/prediction_D3.npz",
+      "sha256": "631b546551857739c73033092a844994825f72ba28f3da2d725273281c3e904f"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm3/prediction_D4.npz",
+      "sha256": "6c0ca9c1d5c941526ddce3cacac12310cb10073559376b3903825ff3f12b4d5f"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm3/prediction_D5.npz",
+      "sha256": "dce4621ce9e72f2088fec9cffad0f818f5d73aadabc9310f3f8238d3ca2f0f75"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm3/prediction_D6.npz",
+      "sha256": "a5862ac65722e69ea7bba93cdc323ee90ef3f0d858e110a6d4dd9bbe0d5ad323"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm3/prediction_D7.npz",
+      "sha256": "822ce16530cf6b2cbf8e46ea646ebe31a133b52cfba32b0c8ddc8e7828779d64"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm4/prediction_D3.npz",
+      "sha256": "ec2255ea685ae953d61556d238f7d5fa7b5e104b1b504fbbb8772711712cfa31"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm4/prediction_D4.npz",
+      "sha256": "5f4ebfdfd784ea763d1f276cacde2192c076fb4c02f6c8861b647f1d7a420d1b"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm4/prediction_D5.npz",
+      "sha256": "d0a53282c61d0d56629ac383a0fa88388bddd8c90681eb8521b006b59420fb50"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm4/prediction_D6.npz",
+      "sha256": "ce30b22bf1cff11f913611dfc156e7eb936fdc96bfc24ef5a6370338bf9e7d7f"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/shuffled_v_perm4/prediction_D7.npz",
+      "sha256": "8924afdec47d7f385be19a6ae49bdda59949e5c9114f919e112c0b55824c838e"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/direct_U/prediction_D3.npz",
+      "sha256": "6c8a22c08ec1643b6d2123474a51ceaac492ad2ece52316b1dce80e529d19bbd"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/direct_U/prediction_D4.npz",
+      "sha256": "70f4c1356979aaa541201510aed8b2732658b95f08188896db45b354286edc6d"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/direct_U/prediction_D5.npz",
+      "sha256": "3c4ac1d407a0d15f4c332f3ae95ca21c20a587662f0656c86d4846b996607951"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/direct_U/prediction_D6.npz",
+      "sha256": "5cb7c37f28c908875702ca5731925fcca181fbbb88fa2dd14411290e47e4dec9"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/direct_U/prediction_D7.npz",
+      "sha256": "7f2103a59f1a20fe34e9a7f4d5efffcf4e7ccb0965bd0cce33649157f7920ce2"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/nonlinear_SU/prediction_D3.npz",
+      "sha256": "3ecb26b4c05c60ac115985b5c2b27663c85815bcec17158aa63db2d1de34de52"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/nonlinear_SU/prediction_D4.npz",
+      "sha256": "094cef8992f914983d5ab768d48c7976351c503df64c7dd3966098065ed8d0db"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/nonlinear_SU/prediction_D5.npz",
+      "sha256": "e899bbbf00909c1bb3ec771c9e71c91cb7bf8433f5e5f4e3c11b558139a962c8"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/nonlinear_SU/prediction_D6.npz",
+      "sha256": "c9c88742899d5704a784c809655dccf3784bbd60a0c30e1ad8f5c83a1f0fdf8f"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed0/nonlinear_SU/prediction_D7.npz",
+      "sha256": "a486caf2a4115c11f596fe89e2e37991189983c40735cd8dbbdad74144e73d38"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/static/prediction_D3.npz",
+      "sha256": "0e056216d75458c17492bf3d9307b08e438b892695e3d5fcb1074c5e8f019f6e"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/static/prediction_D4.npz",
+      "sha256": "f9ce3be852f693dc9dfea217ebbf8d56a601bfad2e2b467d3d8b3a69e16bbd74"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/static/prediction_D5.npz",
+      "sha256": "dc70133bd7e548be0f473c7ef4a13b40fba71217563f6fb84c6be5640f055838"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/static/prediction_D6.npz",
+      "sha256": "ec1fd190a6ad9d729ed689b19ccefd4e5d1728f40b4c0a1bc2ee5d3ff716ee4b"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/static/prediction_D7.npz",
+      "sha256": "d4aa69667ade03faaae1967168860984665df3dbfe84c14cb042745bafc9d6e1"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/real/prediction_D3.npz",
+      "sha256": "1a170b107c9ba8368f3c4880614437155ca66b253a7c655bd0adefcd86c3b743"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/real/prediction_D4.npz",
+      "sha256": "7667f99704646a09fc416bcf32cfe49105d40108202334ead44d327ae6e8a388"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/real/prediction_D5.npz",
+      "sha256": "39b7b0f231f98d0d368176082103dba3e4730084e4ebba900f866fb3bdf37ea7"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/real/prediction_D6.npz",
+      "sha256": "e24efe18d1c4eafaf030c69d998ca6988da447993f6572350ede8911fed92c7e"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/real/prediction_D7.npz",
+      "sha256": "b5aed441eb18dc8286f605a66228b3044e4b4143b3f0abbc9c29cc760082643f"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm0/prediction_D3.npz",
+      "sha256": "69cc7ed44c6ad42747224fcc67705e64613a6c831274588e6251915670a81f8e"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm0/prediction_D4.npz",
+      "sha256": "27956ca4bc9f6c01516e5a4d1dad014458db8f49228120016c8df022436b055f"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm0/prediction_D5.npz",
+      "sha256": "6956dc78a7d4998c7fa616bc0b60eecd84465f8d50f8101d6dfdfbd38f0753d6"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm0/prediction_D6.npz",
+      "sha256": "2ec57aef84ea4d94342aab1674c46e73987d7846db05ef504ab04db054dd682a"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm0/prediction_D7.npz",
+      "sha256": "276f7fbeb00391f41b7d2b389bc08eeb17fd566f370d196641d79af4793d88f2"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm1/prediction_D3.npz",
+      "sha256": "b9387e2939018a9a4159acad61526618cf3980d14b77dc0e0d5965e97d23d267"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm1/prediction_D4.npz",
+      "sha256": "8828924e2e545f5b71df2c71dc8d9f89a976c7993e5816f1df35393b3e470051"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm1/prediction_D5.npz",
+      "sha256": "79847447cf602657abb57950688f82221bc8e150a0705b00328f21c55ce676e7"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm1/prediction_D6.npz",
+      "sha256": "623e16498af20d272e4adc4111e85253d3ea9b6268a7206bad990e06e51d726c"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm1/prediction_D7.npz",
+      "sha256": "3abc7631aadcbad1ee650298aa3dae02461c29fefac1e8f87005de1552a7f335"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm2/prediction_D3.npz",
+      "sha256": "87dc20679bbe2eaac649cc060d1f9e0042f216ece7fae9c5576c454ff053c5d9"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm2/prediction_D4.npz",
+      "sha256": "50fc23df67d57996a30545d6c5408f595fe2fef1ab4fa58067e09a6dbabab147"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm2/prediction_D5.npz",
+      "sha256": "824c20eb1115b006f8682d83fff73c422af990872b89fb1887b6be58a2621593"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm2/prediction_D6.npz",
+      "sha256": "2dfcfad5f0b4df54d2a6a12c76102b7ea731e42358f828ddeb89ec410fc5fb5e"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm2/prediction_D7.npz",
+      "sha256": "25a46642da6184199840c0850c2329f822919fe02d49f159673e52eae5e438f6"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm3/prediction_D3.npz",
+      "sha256": "a5845a7e3af289fa3e8be99c002d5051ca728d2ce6e15a396c6ae76cf59207d3"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm3/prediction_D4.npz",
+      "sha256": "beca88ddb2814c5bc6f5458ee3391c2c6bf076d9c249af70a7deab70e95373b4"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm3/prediction_D5.npz",
+      "sha256": "7b4b048fad9690496b07077ea11a1ca183c6eace05ff5e9044f21a0fbf2ff822"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm3/prediction_D6.npz",
+      "sha256": "87bc240830a044997296557df74b16526e2d77a91499942e75990da42983030a"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm3/prediction_D7.npz",
+      "sha256": "e72f384305a31717a5726736f1b4cc91121c64647012b9d25578476e47d06822"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm4/prediction_D3.npz",
+      "sha256": "0fe2dc0d92b531503b6c35852f2b75a7795b6c9bd2652d073ca06cef54096cca"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm4/prediction_D4.npz",
+      "sha256": "cb217b43e7c0015711899e5a42d18828ad75ed91d1b0ba3618c51938e7a18c9e"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm4/prediction_D5.npz",
+      "sha256": "07d1e0eb9d2e52af1058cb2b1fc3fab3aae463fc1705bd170dbcf44a76a7bf54"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm4/prediction_D6.npz",
+      "sha256": "30491cdecb449e42c529892fe858c44a94a43233a0a859752b891479a3e94cdd"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/shuffled_v_perm4/prediction_D7.npz",
+      "sha256": "dc932b6bc56738a38af1ae5acf896edb61cad75b6bd32c676aed174e7651e022"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/direct_U/prediction_D3.npz",
+      "sha256": "e97313878a9fc5f6ba4f47a70e9ef946a3077caa7d1310abfc4b860f910ea03c"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/direct_U/prediction_D4.npz",
+      "sha256": "62b9945be7676e0770776d180c066501ebce920cddcd960542fb3dd351b5fe28"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/direct_U/prediction_D5.npz",
+      "sha256": "db695923794d961f01841d443b6f14a151fa840f9258a1e22e743fdaf2e23d6e"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/direct_U/prediction_D6.npz",
+      "sha256": "9157fe064751902cf000a425f2dac26dd3adc4112e432bea9e89ff34d9cd9b75"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/direct_U/prediction_D7.npz",
+      "sha256": "9a63b92884383a335b1234f15ab8df46a85a1c53a6bbda1493b9addb383841ec"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/nonlinear_SU/prediction_D3.npz",
+      "sha256": "6ebfe9408a5278fcd19f8fa4d64ff51a2402e9655ae14ac8fad0b1a79ff9dcb5"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/nonlinear_SU/prediction_D4.npz",
+      "sha256": "ddeac83202dc8bb7e5796ca954d71ad65b95a763d78e66562a496350db43d1a9"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/nonlinear_SU/prediction_D5.npz",
+      "sha256": "77c3015ebb44866ca15096d9c91f7644cf40644c655d84262e5e60e7eedbc80f"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/nonlinear_SU/prediction_D6.npz",
+      "sha256": "58ef8240c189c6bb0aca6f313a5a0c64cbf23af3c970c8a6c15648ee7a074ed8"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed1/nonlinear_SU/prediction_D7.npz",
+      "sha256": "29c6bd03060601c4ce5a805ee5b4bfa331288eef887b2e0991aa4eff90378bc1"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/static/prediction_D3.npz",
+      "sha256": "e70f53b91db828cf080645f04178d16516913f3619398b69c95bde5fecbd5cf6"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/static/prediction_D4.npz",
+      "sha256": "01ca77a782ad2f98a707f8f9e418932dc5e3c66aa6f82a118e711f057cb43c6c"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/static/prediction_D5.npz",
+      "sha256": "b6c7b35db2f80785de3d3999f32cc13d6d9e64aa1fa55f8d00213bd7cde4a603"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/static/prediction_D6.npz",
+      "sha256": "f63e7ed8c925fba77815df79605f09611b778e2e99d503d79034387766f623d4"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/static/prediction_D7.npz",
+      "sha256": "dcd61a00708fb3fa267b06fe54f14210b994ad2cb935a4b9007f3e6008e2aee1"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/real/prediction_D3.npz",
+      "sha256": "f27eb47b18b7dbb81e17245ed5a70a1693cc61c54ac9edc325be88ed70c7938f"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/real/prediction_D4.npz",
+      "sha256": "97782a076952e3ba2bb2fff0caa09446758f88a826cd56748d2dcabbdf2bf96d"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/real/prediction_D5.npz",
+      "sha256": "cc05863ad0aae8b351fbdda41c96114afc773737bd3c4f70de70f17be74a82fa"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/real/prediction_D6.npz",
+      "sha256": "8760f40a5ccd295b146ca83924eb11323c19b6c4dd3e1eaf8e75fe7184f55a88"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/real/prediction_D7.npz",
+      "sha256": "f7b3b12b49364fca0c5da29ed352f1c8746fcd35216c0494a6a4724e1c246b08"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm0/prediction_D3.npz",
+      "sha256": "a3040bf3fe513b1d8dbb314020db9a481b485e92cc4f63652fe9498af36e27c4"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm0/prediction_D4.npz",
+      "sha256": "a1db612a5c3ccb76a4f0862983afc9049e25a8598bca51a71e5521066f36333d"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm0/prediction_D5.npz",
+      "sha256": "4dc0087ea03b7c08323606603d66338894242b7863c9987aff958aea7dac2430"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm0/prediction_D6.npz",
+      "sha256": "01254d45079a6d35dc4c8bf8f72c9c96fdb082b3b050555d4b591c4c564315dd"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm0/prediction_D7.npz",
+      "sha256": "a59120656b1b8d76e6ada26daf5e465bbfd62b9488bc7c5b04deac3147c9a256"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm1/prediction_D3.npz",
+      "sha256": "f93970f54cbf59ceb0644a289ac0dd098f43adcf2d57bd26bd1a72a9faf05afc"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm1/prediction_D4.npz",
+      "sha256": "23e23a96cb077bdf495b95ac5fdbd62d2e61f19de399112eb8c3478a6843d5cd"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm1/prediction_D5.npz",
+      "sha256": "e38b76e75975f905775c3e9b87f5492842ca35e0500448c30e609d4895efede2"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm1/prediction_D6.npz",
+      "sha256": "6040be6ac3e5b8f242da8dd940a2f617b29be97e599254f3404753f450e4d7b4"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm1/prediction_D7.npz",
+      "sha256": "11172e91b328e249a9f334e96d868a5fcb37d87170373c3bbe23d4ec039b184d"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm2/prediction_D3.npz",
+      "sha256": "b63488a4bb782dc932c8468291600412a7c6b2b8e4a29eefb63fb1a02b0641b9"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm2/prediction_D4.npz",
+      "sha256": "7696de7f5fd94911a854dfe801c44c18a855bef941757572e2644103e4184fe6"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm2/prediction_D5.npz",
+      "sha256": "213a400685f3eadee3a8d634a0c46a426392b654ced1774b7468f3073edc0d7b"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm2/prediction_D6.npz",
+      "sha256": "686ebf2f7c38d59124fde9d483314bb74d1b5981a7cc6cc0e45c5b0ea337f348"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm2/prediction_D7.npz",
+      "sha256": "025c0e4b4828287659b7fc0913c733e91d67d4753cf38efc6db06b7987795082"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm3/prediction_D3.npz",
+      "sha256": "f00e024d7362fb7d1e57d5089698647ed2dddba81caa2986c2f16d3df4fa1aa0"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm3/prediction_D4.npz",
+      "sha256": "731d0c15f2cf3d2286d245820e4543e88299584b72213ee2a6ac9675889c5e17"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm3/prediction_D5.npz",
+      "sha256": "1b85db4d023f7ce0392c299b53319df60e35dfea645031bc46abf77835bffb0d"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm3/prediction_D6.npz",
+      "sha256": "c0fe77e69f5deda221e025ecaa44e43f1adf8ddd02a3b1bbc80ab9725aae6211"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm3/prediction_D7.npz",
+      "sha256": "35d0b9ea7af4cf465f3b9625966afabdfcd95a6893694c98b56f37e85cd73454"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm4/prediction_D3.npz",
+      "sha256": "2e77678338bbf2370e0412ccefd1465ef11af8c778db9610503e5792cda45002"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm4/prediction_D4.npz",
+      "sha256": "0e4e370056273d273fce40cd091151892942021563c2811f0c02a514a306aa7e"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm4/prediction_D5.npz",
+      "sha256": "09942ac11106d8e833abdf2df5eb311d5b9d6d57bed3f2d101ef45f2edd15f22"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm4/prediction_D6.npz",
+      "sha256": "7a553b5bee27f3c185b2d4d6224895c73141e1ad643ad76f8c8ae8249210473a"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/shuffled_v_perm4/prediction_D7.npz",
+      "sha256": "7f588ab864e6550131aff02bf2eae0589e1cf20b97e155b595e8b167b4ac2d13"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/direct_U/prediction_D3.npz",
+      "sha256": "ad1bc0a19a54a6ebd5d3ce53c41b673f99fc4e4dc8f4b49c3346069d80da5c37"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/direct_U/prediction_D4.npz",
+      "sha256": "656c476a8c6f2db65b1de8738cb381c201658c10b37e4ea6540bd742c7df11e7"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/direct_U/prediction_D5.npz",
+      "sha256": "b1783e34008b4d9f1ef71f4eb82a126c525563e1fddb6f1864dd12902860fb6e"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/direct_U/prediction_D6.npz",
+      "sha256": "70d1ed548f786ab5d8e9d12192f56c70e5613cae5d6402e528a0a063364f3086"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/direct_U/prediction_D7.npz",
+      "sha256": "33b2a4082bc218832f38a213c3ad55109fbdd815165db2c320a9d26fd6065c51"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/nonlinear_SU/prediction_D3.npz",
+      "sha256": "5e95cb94decc0b9d16aee83505d848ca1f58ebb7ed995e6a5a0c7490fc3da3df"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/nonlinear_SU/prediction_D4.npz",
+      "sha256": "4dee3b15dc815befedc72e57272eb58e4c571aa97dfc518308a68c121a3751ef"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/nonlinear_SU/prediction_D5.npz",
+      "sha256": "2153f3669f859e10f29b366c5956baeb425c0acf4e0e43966c7316c70785198f"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/nonlinear_SU/prediction_D6.npz",
+      "sha256": "2dad6181fe444e68362f064cb84c03fac4b685beee3f3bc0bc64f5d8aaddb832"
+    },
+    {
+      "job": {
+        "heldout": "r2",
+        "worker": 1,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r2/seed2/nonlinear_SU/prediction_D7.npz",
+      "sha256": "c84f7f6e82d587c83d02ac9adf93acd981c07971d4e6e25d2ab76c8406159a3a"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/static/prediction_D3.npz",
+      "sha256": "468b197888e1fd399518f3c45cf94d996efb7ca73d2f27f5fee93fff86fbd2df"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/static/prediction_D4.npz",
+      "sha256": "84bdb9e677c1e41f6cca3326f5b0cc1b22e8420eb2735f43d924ad3e6215c63c"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/static/prediction_D5.npz",
+      "sha256": "60561931fbd03cb609df2596de1b6ee63263d816b92a52ec8d86257f54b16147"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/static/prediction_D6.npz",
+      "sha256": "13cb77993aba9dd34cedaf4b213a2da7c0e94018ae9d9525f96aefa9d52eccd2"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/static/prediction_D7.npz",
+      "sha256": "1060bae25ee7f5e717ee077514981b0377b43b4a067eb46cef0cb119b402cf33"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/real/prediction_D3.npz",
+      "sha256": "0364c7c4ca1987ce8cb66d7f02db8770443aeb65dee7432fe154c5cc049aa36d"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/real/prediction_D4.npz",
+      "sha256": "f27539f2622c0fa7ae3d42f0e158170c770e33fa25ba7b603792edd6bf8ebbae"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/real/prediction_D5.npz",
+      "sha256": "cad2ace82105a7938b69bf36c96e517e5ec627494fb4ea58f4e4cfa4072bbfea"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/real/prediction_D6.npz",
+      "sha256": "066673ba253bd03c303d2994ecb22d8888e1bd2b39f11d5526c7c8489df02037"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/real/prediction_D7.npz",
+      "sha256": "6e69f7ed20ebde4a3b393386a419875979db1c7708583891dad579614b77ed39"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm0/prediction_D3.npz",
+      "sha256": "2b94a490f3279e79ffb367542a2eb7a7057dd6f274caddb7c04abaa26d3634cb"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm0/prediction_D4.npz",
+      "sha256": "3c2e5ba8c067ac27c0218d3c263ac4b943d20b7cb8c11106441c8c51670bf731"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm0/prediction_D5.npz",
+      "sha256": "5f5fc2dc0645710142cd8460b103d3c3f41ba9173d881188b280a14ad337bd22"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm0/prediction_D6.npz",
+      "sha256": "4549394cd1900cabc1e176ba8095d3b26ea03188ee692c2b7fcdbc163b8001f8"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm0/prediction_D7.npz",
+      "sha256": "0daa2d2b9d2ba435c4f4aee9ee7f53bc697c0af52d236f73a56c9e14e1ad8c22"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm1/prediction_D3.npz",
+      "sha256": "67906de8f28017096cf88470413b19d4d27b876856e02e138da9905aa3e52df4"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm1/prediction_D4.npz",
+      "sha256": "3d5dfa8444e9f75fcfc3017231c198842acd2a0c5cf330b79f821076ec92391e"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm1/prediction_D5.npz",
+      "sha256": "36b4dbdae1a0c91b22db06d6960a9ab8f989d153094aa3eb73df0e0a9d1ff7e1"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm1/prediction_D6.npz",
+      "sha256": "f6251c5f8868847aa54577a119b92d7cfe52cc81e472519f4ee575e5b0fdd0ba"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm1/prediction_D7.npz",
+      "sha256": "c11579afa0868f0057e12bdbbf5952be01c345e9cad571aee584ad00f40e4889"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm2/prediction_D3.npz",
+      "sha256": "e930fc210e3b88bb23d63f1ce8f25c432d9afb1f81c79c477d609bc077fb1bad"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm2/prediction_D4.npz",
+      "sha256": "21b1ea575caad8fdc3ce74a4b17d6ee0dfafcf2089a7c28b9389ce7936934c9d"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm2/prediction_D5.npz",
+      "sha256": "2afca0a831a8a1c6457080f8fbdf0f574d9b538823d970febe14b6b645f3e262"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm2/prediction_D6.npz",
+      "sha256": "f15d4df6a0bf9091e1561c023167c428097ea0793fe77dd2baaf057bd770e715"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm2/prediction_D7.npz",
+      "sha256": "c01d022a9a47dc84d0895af4d3d1774eb4b349f84d95bf4eaa6b67cbb16c8935"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm3/prediction_D3.npz",
+      "sha256": "12ec157868241c31fa839dc82248b3e1663352feab19bf06dda91c37514efd4e"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm3/prediction_D4.npz",
+      "sha256": "e5637bfd90bf04781d96779517f81c40e8d1d5efa1b86478d7ffd54bd836ab48"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm3/prediction_D5.npz",
+      "sha256": "2f9e7a268512db1fbc51313430e4c59b21c22e0d5a7764ec252d5a48fd822efb"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm3/prediction_D6.npz",
+      "sha256": "630b8e76627f3d37558b62619eb03244f3b750566aae03c620468f2d5ceb5bc3"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm3/prediction_D7.npz",
+      "sha256": "87bf7b1779509bcd09515999e170568a909968fa593063472be9ffebd02c2f10"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm4/prediction_D3.npz",
+      "sha256": "15b785d93518e2e20aed7401fb498368687ef0d9f6678e842b76ac4dba1241e5"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm4/prediction_D4.npz",
+      "sha256": "a2c1941cac9d89d8a6c09769cc8b45e9c6ad2e1fcc29c6a16df80cf965c5900f"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm4/prediction_D5.npz",
+      "sha256": "cbe6c9ebd5566f0b5520acb317d5ede8fb2dc3448339020005c544fb8b10c09b"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm4/prediction_D6.npz",
+      "sha256": "f656da9a203201d9121d2d6d1bc26546639c7d2abf5d4c6daa5448270173458d"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/shuffled_v_perm4/prediction_D7.npz",
+      "sha256": "ff2116d0a611f1e72c158ec15e17cb4ef5021ba3af48ac575578307ae57020cb"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/direct_U/prediction_D3.npz",
+      "sha256": "009912b6234ecabed121d6ab15c7e6a5a5c89d944711050e945be2a8883e4898"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/direct_U/prediction_D4.npz",
+      "sha256": "127f862f1a92357bd8b7944fb2fc6e2c3d54328afe8cea037f52dca9fbe1a41d"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/direct_U/prediction_D5.npz",
+      "sha256": "8cff1499d7406348fe6bd05da010e8219cdb6c1160a41ae3576f44df0078bf7e"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/direct_U/prediction_D6.npz",
+      "sha256": "7f5e3795b9d534fd5ad4db5b3b28782a895c118641f318939e4068aad3852f17"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/direct_U/prediction_D7.npz",
+      "sha256": "967ac103f7a83d530824988d7bfc766e1474584a43ad2ed60c3a68dfabbbf2ea"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/nonlinear_SU/prediction_D3.npz",
+      "sha256": "9a569d500d34ae89af8df7bfb029688717630377cd5a87ffba2bc6b025604c50"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/nonlinear_SU/prediction_D4.npz",
+      "sha256": "0a2ec50061352ab9b73bf8116a255e6f9fd3237021904c86e314dcf85d15b1da"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/nonlinear_SU/prediction_D5.npz",
+      "sha256": "299b619d21aacc112741d416a9afce23648d520cb7acf2a7b6280a7ae6e0fbbc"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/nonlinear_SU/prediction_D6.npz",
+      "sha256": "06f1f5e8878d8a309201822a798f1ab03c0038f600870857ee41eaa32954b7e8"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 0,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed0/nonlinear_SU/prediction_D7.npz",
+      "sha256": "c2edfef3d879a25adf59a61f0b9044a4446a84b6b178eb7473fc26d9f53ceada"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/static/prediction_D3.npz",
+      "sha256": "577d7fa78d78619b5950b878220fb2788ff4fdc79898e1322507be9a9c95a261"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/static/prediction_D4.npz",
+      "sha256": "19494ba73c1ea3354ffe6ba644697567d82cf540db162425d7488bcc46dbb469"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/static/prediction_D5.npz",
+      "sha256": "a7af35fc0620c522ba06b48295874befb0b267fa8ae195a9ea274c3fb6f6bcf5"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/static/prediction_D6.npz",
+      "sha256": "690cc419db4c74734ff2e2c79bed1d77382c0ea6ab6ce04280de11e8255d4a41"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/static/prediction_D7.npz",
+      "sha256": "8e92c50c3773e5688f6c76b29597d3e7a7a6daf9090f519099efdc2740f15ccf"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/real/prediction_D3.npz",
+      "sha256": "ea77fe1d87ddb200b5cd2cbb3661a63a4050ecc4a74bbd5bff6c0bdb64820ffe"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/real/prediction_D4.npz",
+      "sha256": "01b4cb0e1f8ea5b8e16906d7176de19eb40ecfffc43e2ff13dbe4071831eb330"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/real/prediction_D5.npz",
+      "sha256": "5a37945765a2bf560eed3813f03a8e6bb86600347460ada8f20aa216c00921d6"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/real/prediction_D6.npz",
+      "sha256": "b82d11c5ab0d46c6ee6484d700f802b3ec6c09be681428675e40bc543e25c15a"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/real/prediction_D7.npz",
+      "sha256": "d22690d4b29667063ded9adb40ebeabb07c871a7f6ce3e10dd98ed38b23d2aba"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm0/prediction_D3.npz",
+      "sha256": "8366fe366ea2d3c22f747147303d3718d1a43d4b5da032680b5b270cf88c4202"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm0/prediction_D4.npz",
+      "sha256": "1615fcc2c0af26681e61f57e579f28aea0b8a4cdfe04fa31b9016e906434c3f3"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm0/prediction_D5.npz",
+      "sha256": "3dbfc9ca839239bcfb930c40567e4f6926755f104bfb40525867430d81973e9d"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm0/prediction_D6.npz",
+      "sha256": "1b2cc733f49ff53d4bb3874ff79e42054c461aee90ee03ad93da6e9f85c4def9"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm0/prediction_D7.npz",
+      "sha256": "c75e5c57887a997abab4b5c8dd99a11f88d4b43048e8bd93fcd339331a9460de"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm1/prediction_D3.npz",
+      "sha256": "626c4f5f9393cbdfd498cade6a1ed2158af0bb31ece335370d591fd53a88d4d3"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm1/prediction_D4.npz",
+      "sha256": "d0a49c367543290650cab8554ecd99aefe1d158648013f99631406a92920e1ee"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm1/prediction_D5.npz",
+      "sha256": "47b09b811329d9248e65ca098478938337909e176e27b6feb177315166a064bc"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm1/prediction_D6.npz",
+      "sha256": "daca7a53c868a1cb4d3662049020a87f5ae43c68b8e1b33ad0322292cb529c53"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm1/prediction_D7.npz",
+      "sha256": "b5970aabe387df62953b00f803f930d50059d8c6a343d419553724c11f025e65"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm2/prediction_D3.npz",
+      "sha256": "70948234ab80ce99436b3ca2cb9b5b88a3d23f6bc18db08afa45f68e3aef7fae"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm2/prediction_D4.npz",
+      "sha256": "9d3f597d88dbd3c9d4f695b6f0f7a3f1ee8009c3e6b69bf5efbe701db06b2074"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm2/prediction_D5.npz",
+      "sha256": "3c9f25219b178cb3cfff0280e107f37063960374d702e2ac74d3a979150de001"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm2/prediction_D6.npz",
+      "sha256": "fae0e6c0b9f5d96e55ca847fb70af9a93c6dc5886e3e7be176f17f7367f6841f"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm2/prediction_D7.npz",
+      "sha256": "2d0f23105b90d3a9abe62dc4a6b1d2a14c2446ef6c8cbf01aae7a78d86b50d35"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm3/prediction_D3.npz",
+      "sha256": "b626fdc164dda3c36637fcd431f93d87d3103816fabcd3a36bf73c9224516479"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm3/prediction_D4.npz",
+      "sha256": "5c0b2b4e4ccbf42cef4025794ac2372a7049ca412a0abc39b74edd24cad6433e"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm3/prediction_D5.npz",
+      "sha256": "64d0cd5f0812c70464b40caeb8abd7904a66fc58d271f05de692514758ddf6da"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm3/prediction_D6.npz",
+      "sha256": "a1e6c6223579e410400490b61567fa5cc0ef6f645f6d7c0cd2756604ebbad6d3"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm3/prediction_D7.npz",
+      "sha256": "97dd1036c6f6151cc65710ab8725f47fb791efdcf20970419c6d163dc205e273"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm4/prediction_D3.npz",
+      "sha256": "4d905a902606a36bad28eb51bc923bf8c334a8f4257c99d45e3391bbb0370837"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm4/prediction_D4.npz",
+      "sha256": "7acb256266be0bd5fe120a063011089e1c7646cdf01cd6ca669de5eba1adc615"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm4/prediction_D5.npz",
+      "sha256": "636c5adc6ebeafff668250c6b39ac78a2c54430891cf8bc42d4c0e4910c9cc44"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm4/prediction_D6.npz",
+      "sha256": "64fd6024008fe35205f968692fcaa0e82d9c2588da30562bb4fcc861d52f6b5f"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/shuffled_v_perm4/prediction_D7.npz",
+      "sha256": "f359512896d09e70fb7877c5ac2a806ebd9f311bad25a3d5cc5fed1bf38e0c71"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/direct_U/prediction_D3.npz",
+      "sha256": "d43fed810371d26c452a77fa53d4d81dd9ef7ecad29a0ca25717b07760bbbbe2"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/direct_U/prediction_D4.npz",
+      "sha256": "1458f847d8aa7c72f54ca691560ca061739cdf31158ad36a05c3df2e52c4a3a4"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/direct_U/prediction_D5.npz",
+      "sha256": "bfb4f0485ad100a23949fc63a77cbf4cc61469d20d761cec5c063eeeb681333b"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/direct_U/prediction_D6.npz",
+      "sha256": "c088198e16639b30b69b62b365b540ee01cdb8826e18b69f3ae3c1145d5f940f"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/direct_U/prediction_D7.npz",
+      "sha256": "1e579f0abbe5f79cb883cca8dff7f7a341bc93b3bcbda7c9aa7e563b02b7f5ff"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/nonlinear_SU/prediction_D3.npz",
+      "sha256": "d80d865550aa7733f7ce5bd8717911b79fab12729e24d088714544e1bb68239c"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/nonlinear_SU/prediction_D4.npz",
+      "sha256": "da3157c4441649536a14ce70b3e6c38f57ff4357abf38640728820b0af916032"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/nonlinear_SU/prediction_D5.npz",
+      "sha256": "344fc14bdd4cf69bbf94326aebfeec2b70d3e7ac2e2fa6dbc112a1dcdc95b02f"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/nonlinear_SU/prediction_D6.npz",
+      "sha256": "7308178e025bfc70be632c29251ddc915641941365f26cfb3be0e4b3c1bc4168"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 1,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed1/nonlinear_SU/prediction_D7.npz",
+      "sha256": "46b8831462d7b9992568658827545e3a972a3b87b2b52d01bc413bfb5dac17d5"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/static/prediction_D3.npz",
+      "sha256": "05b1c386207734095ea106c9aa4697bcfa0cf48b4eefec6d4d2971c8adb5e452"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/static/prediction_D4.npz",
+      "sha256": "53b59f7aa32a382818fb0da99daf137d2263bdf7dcf4289e1fb805cec3e71c5b"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/static/prediction_D5.npz",
+      "sha256": "22ccca7a299ce1579941ca139efec6efa32a0a2d706951ef63f0060d4ed63374"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/static/prediction_D6.npz",
+      "sha256": "4b836e79e1088585ee357458f785c5b1b085971667e838f1e036950ab53cb48e"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "static",
+        "shuffle_seed": 0,
+        "name": "static"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/static/prediction_D7.npz",
+      "sha256": "a8cbc90e51510da474f7ffaa22c9e9a3430f2290cc42e17b66c4a7e08dd7b307"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/real/prediction_D3.npz",
+      "sha256": "ecf0064e8886b2e7d389bc2d27bbe7c29f75c01782a9300343040f7bd46e4201"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/real/prediction_D4.npz",
+      "sha256": "301b770cd4dcb77a3f0bec93f2ff9895f3a24317806a5d18ebfa02915aa01cb1"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/real/prediction_D5.npz",
+      "sha256": "a62a84e9d408d5382dff3024db422b6957413605ccac3fccde79db4844799f55"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/real/prediction_D6.npz",
+      "sha256": "1bdd39650d8fd725533cc5d3f946dd63676d8901826e0b405a3bdc9678930509"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "real",
+        "shuffle_seed": 0,
+        "name": "real"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/real/prediction_D7.npz",
+      "sha256": "c2abaa9d949fcddc68ccb6980b94de882257457f722be583b4d2b28751e8a280"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm0/prediction_D3.npz",
+      "sha256": "2987d0dac9515b6ef82818c0ff224b20cb5261672fd63b7c2011b4dc6041a944"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm0/prediction_D4.npz",
+      "sha256": "91589f45a78a79ad85ec39d1bf54f87a222111cce50a486bc55e3c415a648993"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm0/prediction_D5.npz",
+      "sha256": "0b9f1c6c359aebd91de27a4014a8b6a13479da3c494455beb95ba7c3dc17b53a"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm0/prediction_D6.npz",
+      "sha256": "9cb57e97bc1bf5808c1c098de66427c82deb6f52c17f7f7e21916acf4e6e090f"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 0,
+        "name": "shuffled_v_perm0"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm0/prediction_D7.npz",
+      "sha256": "06dec7f1bbc2c15ef0c47ef420bb85400efddd070618149824afd722df2674d2"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm1/prediction_D3.npz",
+      "sha256": "41a41ed7b7eaca2d51f451dc2f1cd9c76ac790207a544d7f4a9e05d718b89d23"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm1/prediction_D4.npz",
+      "sha256": "01218f76caa758e82223a5da750e71de752af917dd391aee6a3bb84fe0b7df64"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm1/prediction_D5.npz",
+      "sha256": "2fd2cd53adbb7ccd2cc22a7820e7c23db4d8eb81d143331f25b1a701e26507ea"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm1/prediction_D6.npz",
+      "sha256": "2fe8e6aaabb7c33ce4ae273fd93a976d388514e2dafaeba29b424594f89d3d53"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 1,
+        "name": "shuffled_v_perm1"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm1/prediction_D7.npz",
+      "sha256": "c2fa0e5a51e931f4806c319c21a040aca3acc4fcda8184be6b3731a02bbd13d3"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm2/prediction_D3.npz",
+      "sha256": "02ca1b6c2b600477bb6515ef841988a966e752294c7e747f381f88ce8ab924d1"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm2/prediction_D4.npz",
+      "sha256": "f78f9cf8ae3822239928e46f80987e07d6a9da43fad142294f6299ff5059da7b"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm2/prediction_D5.npz",
+      "sha256": "bdc64c14c889a9ae0cc11a7368629bf253e5768d3cf6cc5a6c73043e62844521"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm2/prediction_D6.npz",
+      "sha256": "e3fa9d93b6b4c8dd3ec0ce78e3a042045e651310c4a9adcf7cf5eaf455c1e993"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 2,
+        "name": "shuffled_v_perm2"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm2/prediction_D7.npz",
+      "sha256": "c5919853df25466ffe5cd90f46caacd1d48a6465acd22b7e0b5d511b3d3509b0"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm3/prediction_D3.npz",
+      "sha256": "05f3abd4ab4debbfedebc5f100102abf4528c4e7efbb6d39a370349a0f96952b"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm3/prediction_D4.npz",
+      "sha256": "be68907bdb78d4b4ff820b58a9d88b8030658c060ab2c0e2d9439dd565c8a494"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm3/prediction_D5.npz",
+      "sha256": "c26e63a746c391ced83c81eedbead9bbc4686e607a2da09beed37d007928ac17"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm3/prediction_D6.npz",
+      "sha256": "d8f960e36fcb10934ae78856717104eb2ceedada7a098d327890eaa31391ad85"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 3,
+        "name": "shuffled_v_perm3"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm3/prediction_D7.npz",
+      "sha256": "3cba083342c93baa6ac54269dedd4725f49dadb237cf597ca27c9eed37ef88c5"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm4/prediction_D3.npz",
+      "sha256": "0684e9f9304976f72d7f06bc0ed63dfcf8a7a1719219e0098d38cf08e0f01946"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm4/prediction_D4.npz",
+      "sha256": "f6ed73659d43d756b3ea40c70d9139bccb1c3c0461493af13d1a070071c912f9"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm4/prediction_D5.npz",
+      "sha256": "cb63f8bb5f1391b09249d628f833e569c9bac7ec0bf53faf28d69921c74183f8"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm4/prediction_D6.npz",
+      "sha256": "10d542c610b0b459254aad5bfc26e2767e87ca898ab45cd835ea41cb5c59176a"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "shuffled_v",
+        "shuffle_seed": 4,
+        "name": "shuffled_v_perm4"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/shuffled_v_perm4/prediction_D7.npz",
+      "sha256": "9cd1901c4c8e06af26cb44725b24fab9ae8eb5b8a1da6f00332178cc6731465e"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/direct_U/prediction_D3.npz",
+      "sha256": "be1ffdb3de59b7fc87da4d711dc67eb24aa9f43aea6223c6d16e075c53423802"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/direct_U/prediction_D4.npz",
+      "sha256": "428988b01870ce0b62df220ebdafadba47ecc1d580999693e31dc28de0862203"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/direct_U/prediction_D5.npz",
+      "sha256": "86183db5fad8aee0c3b0031576d2b86d98f9842542ee1743a2e7f1f171897550"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/direct_U/prediction_D6.npz",
+      "sha256": "5719592089bfa3d28ba45360e321829916b601c13ee9995e60b11abc44ef3cf2"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "direct_U",
+        "shuffle_seed": 0,
+        "name": "direct_U"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/direct_U/prediction_D7.npz",
+      "sha256": "65895a8b4091f59fa67223a3d52ff261c0017f74437a36a904c61eba6e973751"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 3,
+      "target_day": 4,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/nonlinear_SU/prediction_D3.npz",
+      "sha256": "29646105173030ee619b9ef40653839e7dd3edf9d23c25359db64e037a3ba292"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 4,
+      "target_day": 5,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/nonlinear_SU/prediction_D4.npz",
+      "sha256": "a0d3432fb27dee108826c57c73ddbeee6c9d665ae3714cbe03377ad8eccbb273"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 5,
+      "target_day": 6,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/nonlinear_SU/prediction_D5.npz",
+      "sha256": "40bf657a28755c21dc5724ed89e623c0c4acc8e4f931b005fbe0c4c175a0da6d"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 6,
+      "target_day": 7,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/nonlinear_SU/prediction_D6.npz",
+      "sha256": "3fb1349e988570c9b63190a5f2e88f245d86e5ff8d8456440fea61b94637ce84"
+    },
+    {
+      "job": {
+        "heldout": "r3",
+        "worker": 2,
+        "seed": 2,
+        "arm": "nonlinear_SU",
+        "shuffle_seed": 0,
+        "name": "nonlinear_SU"
+      },
+      "source_day": 7,
+      "target_day": 8,
+      "path": "/home/yuchang/wangjiaxuan/outputs/w14_loro_v1/training/r3/seed2/nonlinear_SU/prediction_D7.npz",
+      "sha256": "2c718cf1b6027112088073ae9397c68141ad20607d11ef3c33e5a8d6c179f105"
+    }
+  ],
+  "total": 405,
+  "targets_scored_before_freeze": false
+}
