@@ -1,0 +1,167 @@
+# Frozen final L1 routing interventions
+
+{
+  "status": "FROZEN_FINAL_L1_ROUTING_INTERVENTIONS_COMPLETE",
+  "optimizer_steps": 0,
+  "scope": "same_series_development",
+  "interventions": [
+    "soft",
+    "cohort_reweight",
+    "uniform_reweight",
+    "cohort_reintegrate",
+    "uniform_reintegrate",
+    "static",
+    "shuffled"
+  ],
+  "horizon_summary": [
+    {
+      "horizon_hours": 5,
+      "variant": "soft",
+      "energy": 0.58950417173402,
+      "gain_vs_static": 0.037225267182402155,
+      "retained_gain_fraction": 1.0
+    },
+    {
+      "horizon_hours": 5,
+      "variant": "cohort_reweight",
+      "energy": 0.5894029272423656,
+      "gain_vs_static": 0.03739061908842023,
+      "retained_gain_fraction": 1.0044419266410596
+    },
+    {
+      "horizon_hours": 5,
+      "variant": "uniform_reweight",
+      "energy": 0.6053317611859613,
+      "gain_vs_static": 0.011375741536271744,
+      "retained_gain_fraction": 0.3055919378773325
+    },
+    {
+      "horizon_hours": 5,
+      "variant": "cohort_reintegrate",
+      "energy": 0.58942898466572,
+      "gain_vs_static": 0.037348062258442005,
+      "retained_gain_fraction": 1.003298702342099
+    },
+    {
+      "horizon_hours": 5,
+      "variant": "uniform_reintegrate",
+      "energy": 0.6056003684109962,
+      "gain_vs_static": 0.010937053802213659,
+      "retained_gain_fraction": 0.29380726130513934
+    },
+    {
+      "horizon_hours": 5,
+      "variant": "static",
+      "energy": 0.6122970946784333,
+      "gain_vs_static": 0.0,
+      "retained_gain_fraction": 0.0
+    },
+    {
+      "horizon_hours": 5,
+      "variant": "shuffled",
+      "energy": 0.6180581157465573,
+      "gain_vs_static": -0.00940886559513987,
+      "retained_gain_fraction": -0.2527548170181519
+    },
+    {
+      "horizon_hours": 10,
+      "variant": "soft",
+      "energy": 1.0270316598504134,
+      "gain_vs_static": 0.06358379977414275,
+      "retained_gain_fraction": 1.0
+    },
+    {
+      "horizon_hours": 10,
+      "variant": "cohort_reweight",
+      "energy": 1.025533941142366,
+      "gain_vs_static": 0.06494937409519252,
+      "retained_gain_fraction": 1.0214767649291243
+    },
+    {
+      "horizon_hours": 10,
+      "variant": "uniform_reweight",
+      "energy": 1.130265051515848,
+      "gain_vs_static": -0.030541263881493697,
+      "retained_gain_fraction": -0.4803309017388063
+    },
+    {
+      "horizon_hours": 10,
+      "variant": "cohort_reintegrate",
+      "energy": 1.0260347456338623,
+      "gain_vs_static": 0.06449275580647174,
+      "retained_gain_fraction": 1.0142954028472302
+    },
+    {
+      "horizon_hours": 10,
+      "variant": "uniform_reintegrate",
+      "energy": 1.1336983678132517,
+      "gain_vs_static": -0.03367165715666931,
+      "retained_gain_fraction": -0.5295634623327806
+    },
+    {
+      "horizon_hours": 10,
+      "variant": "static",
+      "energy": 1.096768359627589,
+      "gain_vs_static": 0.0,
+      "retained_gain_fraction": 0.0
+    },
+    {
+      "horizon_hours": 10,
+      "variant": "shuffled",
+      "energy": 1.1093255659135615,
+      "gain_vs_static": -0.011449278396612694,
+      "retained_gain_fraction": -0.18006596707466208
+    },
+    {
+      "horizon_hours": 15,
+      "variant": "soft",
+      "energy": 1.0078334305557366,
+      "gain_vs_static": 0.024147598138747894,
+      "retained_gain_fraction": 1.0
+    },
+    {
+      "horizon_hours": 15,
+      "variant": "cohort_reweight",
+      "energy": 1.0155763545216399,
+      "gain_vs_static": 0.016650376156947533,
+      "retained_gain_fraction": 0.6895251470261088
+    },
+    {
+      "horizon_hours": 15,
+      "variant": "uniform_reweight",
+      "energy": 1.3697695991271939,
+      "gain_vs_static": -0.326303447354114,
+      "retained_gain_fraction": -13.51287384688246
+    },
+    {
+      "horizon_hours": 15,
+      "variant": "cohort_reintegrate",
+      "energy": 1.0165717691977267,
+      "gain_vs_static": 0.015686548431991354,
+      "retained_gain_fraction": 0.649611126616369
+    },
+    {
+      "horizon_hours": 15,
+      "variant": "uniform_reintegrate",
+      "energy": 1.3771803632532897,
+      "gain_vs_static": -0.33347904974318165,
+      "retained_gain_fraction": -13.810029793732243
+    },
+    {
+      "horizon_hours": 15,
+      "variant": "static",
+      "energy": 1.0327724035248433,
+      "gain_vs_static": 0.0,
+      "retained_gain_fraction": 0.0
+    },
+    {
+      "horizon_hours": 15,
+      "variant": "shuffled",
+      "energy": 1.0239387541549334,
+      "gain_vs_static": 0.008553335991318911,
+      "retained_gain_fraction": 0.35421063172299505
+    }
+  ],
+  "reweighting_and_reintegration_separate": true,
+  "new_biological_replication": false
+}

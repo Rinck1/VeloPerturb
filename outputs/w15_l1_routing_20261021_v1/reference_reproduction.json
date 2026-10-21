@@ -1,0 +1,28 @@
+{
+  "git_commit": "541126f254e7a73ac3ac80fa73018907ff0c8c6d",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15_l1_routing_interventions.py",
+    "--output",
+    "outputs/w15_l1_routing_20261021_v1",
+    "--prediction-root",
+    "/data/yuchang/veloroute_w15_l1/routing_20261021_v1",
+    "--publish"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15_l1_routing_interventions.py": "28066f543f0bf713ad95613862bcbe69d11a6d52828033b51527b2db848e35ee",
+    "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement_spec.json": "d76255cb92165f0178edf28845f219bb8a1fed4cc8516a4fa9c728b285bc7aa7",
+    "/home/yuchang/wangjiaxuan/outputs/w13_time_program_v1/ode_refinement/mean_models.json": "8c27389d174de7965ab314911c1f1d5aec47b25c45dc811674350fcd0abf2de1"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 14.561929564923048,
+  "checked": 18,
+  "reference_sha256": "f09994de4ef486b4df98aacd31ec5513af3b91540049ff2ef6359cbb157f9eb0",
+  "maximum_absolute_energy_difference": 0.0,
+  "tolerance": 1e-05
+}
