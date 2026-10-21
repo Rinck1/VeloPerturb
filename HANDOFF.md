@@ -3,6 +3,14 @@
 更新：2026-10-21。请先读 [当前状态](docs/current/STATUS.md)，再读
 [最新结果](docs/current/w13_time_results.md) 和 [方法定义](docs/current/w13_time_model.md)。
 
+最新执行覆盖下方较早的队列描述：原RENGE L1的576拟合已经完成；用户要求继续RENGE L2/L3。
+2026-10-21已完成32折共享源数据包，并启动独立L2 GPU2（672拟合）、L3 GPU3（576拟合），
+控制器PID3121968。31项数据/适配器/队列测试通过，训练完成后按各自全网格冻结并自动评分。
+配置与完整路径见[本轮执行协议](PLANS/w15c_renge_l2_l3_20261021.md)。
+实时控制器：`outputs/w15c_renge_jobs_20261021/controller/status.json`；
+训练状态：`/data/yuchang/veloroute_w15c_renge_20261021/l2_l3_transfer_v1/{L2,L3}/status.json`。
+本轮尚无性能结论。新数据Traxler继续保留为后续任务。
+
 当前是解析S/U动力学上下文＋soft router＋专家／小ODE的短时群体预测。
 W13的1/2/4已完成，步骤3按要求未做；最新模型并非原版GFG/JVP。
 已有同系列阳性，不将其说成逐细胞真实命运恢复或未见遗传扰动泛化。
