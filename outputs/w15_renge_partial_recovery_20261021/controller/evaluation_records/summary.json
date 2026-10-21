@@ -1,0 +1,44 @@
+{
+  "git_commit": "dd7f87aaa3fc49229db2ee46f4c89c2b84ee32ff",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_renge_router.py",
+    "evaluate",
+    "--root",
+    "/home/yuchang/wangjiaxuan/outputs/w14b_renge_router_v1",
+    "--output",
+    "/data/yuchang/veloroute_renge_recovery_20261021/evaluations/recovery_v1"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/outputs/w14b_renge_router_v1/study_manifest.json": "9114dfe50db987ca5bfcc5c4ad020e9ed057535387a746f56e25bc5b77e91f64",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14b_renge_router.py": "1e1262e5ccff1dd7e05f8ed0e8837d8fc26ea1b8d2c5e83f5e9f4a645d1d49b7",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_model.py": "f655de47d1942721a86867289731f3c43e7a494af13ecd687748292dd628174f",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_data.py": "a04dac58c7a2798845539d2d7771fe1f1a8a6c1c0b1caa31afdbf0ce391635f7",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w14_loro.py": "037d8ed658c1ee36a9ac7bcb8a9eec83c4dc3ed368368dea94efc4e87e2fface",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w6_local_router.py": "24c448c39ad7b9f888bb6f6500fda80b6a691bda1f62f74d64a8c2871f97749c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w10_recipe_model.py": "63fe43aa78b85a6def25a72bbb9a45ff98f288a89e88cabe38ca37bed03ae8fe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_arms.py": "97204e5dfe77e1ba12d5dc17bb5dbbe389c73fb7b010158bbdac1f5e6c15b7c8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_seconds": 48.3245694860816,
+  "status": "RENGE_EXPLORATORY_ROUTER_TRANSFER_COMPLETE",
+  "jobs": 576,
+  "gain_by_control": {
+    "static": 0.033864549050230376,
+    "direct_U": -0.008407517219605441,
+    "shuffled_v_perm0": 0.007315143348431252,
+    "shuffled_v_perm1": 0.009606609578063703,
+    "shuffled_v_perm2": 0.012670270772470203
+  },
+  "confirmatory": false,
+  "perturbation_fate_claim": false,
+  "fixed_recipe_no_tuning": true
+}
