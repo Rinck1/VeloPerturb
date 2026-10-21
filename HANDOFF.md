@@ -3,6 +3,46 @@
 更新：2026-10-21。请先读 [当前状态](docs/current/STATUS.md)，再读
 [最新结果](docs/current/w13_time_results.md) 和 [方法定义](docs/current/w13_time_model.md)。
 
+最新结果汇总：[Traxler完整分布与单细胞velocity](docs/current/w15k_traxler_results_20261021.md)。
+单细胞三套KO内打乱已完成，real vs三打乱+0.486%、vs S+U+0.401%、vs U程序+0.027%；群体三打乱为−0.079%。
+独立L2仍在训练，无最终L2/L3结论。40项集中回归通过。大规模CV已获用户要求，正在接入，不能称为已启动。
+
+最新执行：[Traxler参数匹配L2与单细胞三打乱](PLANS/w15k_traxler_l2_cell_20261021.md)。
+GPU0 PID753617跑12模型L2（CellFlow256×2，384,594参数，与L3 389,704差1.31%）；
+GPU7 PID753879跑6个额外单细胞打乱模型，真实模型复用。均5000步，15项相关测试通过，已实际更新。
+输出分别`/data/yuchang/veloroute_w15k_traxler_l2_20261021/matched_l2_v1/`和
+`/data/yuchang/veloroute_w15k_cell_shuffle_20261021/extra_shuffles_v1/`；训练后自动评分L2/L3及三打乱。
+本轮仍非GFG，测试目标保留；RENGE GPU2/3继续、GPU6保留。独立L2不再是“尚未启动”。
+
+最新资源授权：用户明确使用GPU7，现白名单0–5/7，GPU6仍保留，最多6卡可见。
+GPU7已启动独立额外打乱permutation1/2×三seed，共6拟合；GPU0原21拟合队列不重复、不停止。
+GPU7 PID509543；状态`/data/yuchang/veloroute_w15j_gpu7_20261021/shuffle_controls_v1/status.json`。
+GPU策略9项测试通过，共享launcher未改以保持RENGE哈希锁有效。以下GPU7保留/等待GPU0描述为历史。
+
+最新补充队列：[短时、单细胞/群体与冻结router机制](PLANS/w15i_router_followups_20261021.md)。
+用户要求必要实验直接排队，共21新拟合：0→6h四臂12个，6→24h单细胞程序三臂9个，复用3个父基线；
+另有父模型7种冻结干预，不重训/不重新积分。GPU0忙于其他项目，CPU等待器PID284893已运行，空闲后自动接续。
+状态`/data/yuchang/veloroute_w15i_router_followups_20261021/dispatcher_v1/status.json`。
+父四臂已12/12完成：velocity vs S+U配对平均Energy+0.149%、vs打乱+0.025%、vs U程序−0.102%，增益很小。
+保留测试集不读取，RENGE继续，GPU6/7不使用。以下父实验“训练中”描述为历史进度。
+
+最新执行：[Traxler四臂完整程序router](PLANS/w15h_traxler_program_router_20261021.md)。
+用户要求直接排队，GPU0已启动12模型（四臂×三seed、各5000步），K8独立专家ODE。
+共同S+U输入，比较零/velocity程序方向/打乱方向/U程序方向5维附加上下文；无硬cos约束。
+56训练KO、7验证KO；7测试KO保留，全部84份验证预测后自动评分。10项相关测试通过。
+作业PID34799；状态`/data/yuchang/veloroute_w15h_traxler_program_router_20261021/full_distribution_v1_retry/status.json`。
+首启cuDNN冲突于训练前失败，已复用RENGE兼容库重启，旧目录保留。
+RENGE GPU2/3不动，GPU6/7保留；本轮尚无性能结果。
+
+最新实验：[扰动后响应程序方向](docs/current/w15g_response_program_results.md)。
+6→24h probe在7验证KO上相对S+U有1.82–4.49%改善，但56训练KO内部CV不稳定且均输U程序方向。
+物理正方向直接修正几乎无收益，尚未建立方向突破口。
+0→6h神经网络小实验也已15/15完成，方向版相对direct-U平均Energy改善0.179%，幅度很小。
+
+最新补充：[方向小实验与Traxler扰动接入](docs/current/w15e_direction_results.md)。
+方向试验16/16完成，vs原router+1.121%，vs方向打乱约0，尚无正确方向独立增益。
+Traxler132个真实小鼠ESM已生成；0→6h五臂×三seed的开发比较已启动，13测试KO保留。
+
 最新执行覆盖下方较早的队列描述：原RENGE L1的576拟合已经完成；用户要求继续RENGE L2/L3。
 2026-10-21已完成32折共享源数据包，并启动独立L2 GPU2（672拟合）、L3 GPU3（576拟合），
 控制器PID3121968。31项数据/适配器/队列测试通过，训练完成后按各自全网格冻结并自动评分。

@@ -1,0 +1,28 @@
+{
+  "kind": "TRAXLER_MATCHED_SHORT_TIME_AND_ROUTING_FOLLOWUPS",
+  "base_configuration": "/home/yuchang/wangjiaxuan/configs/w15h_traxler_program_router_20261021_v1.json",
+  "parent": "/data/yuchang/veloroute_w15h_traxler_program_router_20261021/full_distribution_v1_retry",
+  "predecessor_job_status": "/home/yuchang/wangjiaxuan/outputs/w15h_program_router_jobs_20261021/router_gpu0_retry/status.json",
+  "maximum_hours": 8,
+  "gpu_wait_hours": 24,
+  "tasks": [
+    {
+      "name": "cohort_0to6",
+      "scope": "cohort",
+      "reuse_baseline": false,
+      "overrides": {
+        "fold": "/home/yuchang/wangjiaxuan/outputs/w15_traxler_fold_0to6_v1",
+        "split": "/home/yuchang/wangjiaxuan/outputs/w15_traxler_trainable_v1/split_0to6.json",
+        "source_hours": 0,
+        "target_hours": 6,
+        "selection": "all_106_training_and_13_validation_KOs_no_effect_filtering"
+      }
+    },
+    {
+      "name": "cell_6to24",
+      "scope": "cell",
+      "reuse_baseline": true,
+      "overrides": {}
+    }
+  ]
+}

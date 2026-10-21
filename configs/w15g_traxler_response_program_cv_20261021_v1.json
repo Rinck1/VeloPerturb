@@ -1,0 +1,14 @@
+{
+  "kind": "TRAINING_KO_RESPONSE_PROGRAM_DEVELOPMENT_CV",
+  "fold": "/home/yuchang/wangjiaxuan/outputs/w15_traxler_fold_6to24_v1",
+  "split": "/home/yuchang/wangjiaxuan/outputs/w15_traxler_trainable_v1/split_6to24.json",
+  "conditions": "/data/yuchang/veloroute_w15e_traxler_conditions_20261021/esm2_3b_v1/conditions.npz",
+  "programs": 5,
+  "protein_dimensions": 8,
+  "ridge_alphas": [1, 10, 100],
+  "shuffle_seeds": [0, 1, 2],
+  "source_hours": 6,
+  "target_hours": 24,
+  "cv_folds": 5,
+  "cv_seed": 0
+}

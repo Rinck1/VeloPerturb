@@ -1,0 +1,11 @@
+{
+  "kind": "GPU7_TWO_ADDITIONAL_FIXED_SHUFFLE_CONTROLS",
+  "base_configuration": "/home/yuchang/wangjiaxuan/configs/w15h_traxler_program_router_20261021_v1.json",
+  "parent": "/data/yuchang/veloroute_w15h_traxler_program_router_20261021/full_distribution_v1_retry",
+  "additional_shuffle_seeds": [1, 2],
+  "maximum_hours": 4,
+  "physical_gpu": 7,
+  "authorization": "user explicitly requested use of GPU7; GPU6 remains reserved",
+  "new_fits": 6,
+  "parent_models_and_GPU0_queue_unchanged": true
+}

@@ -2,6 +2,105 @@
 
 更新：2026-10-21。此页为最新状态入口。
 
+## 最新结果与发布
+
+Traxler单细胞velocity三套KO内打乱已全部完成：相对三套打乱均值Energy改善0.486%，
+相对S+U改善0.401%，相对U程序改善0.027%。群体版三套打乱后为−0.079%，没有稳定优势。
+[结果与机制汇总](w15k_traxler_results_20261021.md)。独立L2仍在训练，不能提前报告L2/L3胜负。
+最近新增实验/队列/GPU策略40项集中回归通过。用户要求大规模CV，当前正在接入，尚非已启动/已完成。
+
+## 最新执行：Traxler独立L2与单细胞三打乱已开训
+
+用户确认开始后，GPU0已启动原生CellFlow L2四臂×三seed，共12拟合；GPU7补训
+单细胞版within-KO permutation1/2各三seed，共6拟合。每拟合5000步，自动冻结和评分。
+两条任务已实际进入训练更新，不是仅排队。15项相关测试通过。
+
+L2给定与L3相同的源S50、U50、5维单细胞程序、ESM和真实生物时间；不含router/专家。
+L2宽度只按参数数目选择为256×2，共384,594参数；L3为389,704，差1.31%，未用预测分数选宽度。
+L2最终自动输出同口径`L2_L3_comparisons.csv`；GPU7复用真实velocity/S+U/U程序父模型，只新增打乱臂。
+
+- GPU0启动器PID753617，日志`outputs/w15k_traxler_jobs_20261021/l2_gpu0/`；
+  输出`/data/yuchang/veloroute_w15k_traxler_l2_20261021/matched_l2_v1/`。
+- GPU7启动器PID753879，日志`outputs/w15k_traxler_jobs_20261021/cell_shuffle_gpu7/`；
+  输出`/data/yuchang/veloroute_w15k_cell_shuffle_20261021/extra_shuffles_v1/`。
+
+本轮为Traxler 6→24h的18h early-response开发比较，7测试KO目标不读取；仍为解析S/U速度，未启动GFG重训。
+RENGE GPU2/3与共享冻结源码不变，GPU6保留。
+[固定配置、数学口径与完整路径](../../PLANS/w15k_traxler_l2_cell_20261021.md)。
+下方“Traxler独立L2尚未开跑/仅群体打乱”描述已由本段新执行覆盖；本轮尚无最终性能结果。
+
+## 最新资源更新：GPU7已授权并启动独立对照
+
+用户明确要求使用GPU7，白名单现允许物理0–5和7；GPU6仍保留，单进程最多可见6卡。
+GPU0原补充队列已实际运行，继续其短时/单细胞实验，不拆已开始的模型。
+GPU7独立补训6→24h的两套额外固定打乱（permutation1/2，各seed0/1/2，共6新拟合），
+复用父实验真实velocity/S+U/U程序模型，最终与原permutation0等权汇总，不挑选最佳打乱。
+这是在0.025%小差距下补充随机对照稳健性，不改变既有模型和实验预算。
+
+GPU7启动器PID509543，日志`outputs/w15j_gpu7_jobs_20261021/shuffle_controls/`；
+输出`/data/yuchang/veloroute_w15j_gpu7_20261021/shuffle_controls_v1/`。
+配置`configs/w15j_gpu7_shuffle_controls_20261021_v1.json`；GPU白名单9项测试通过。
+共享`launch_gpu_job.py`受RENGE哈希锁约束，未修改；新GPU7任务独立记录最新资源授权。
+下文GPU6/7均保留的描述为历史状态，现仅GPU6保留。
+
+## 最新：必要补充实验已进入后台队列
+
+父实验Traxler 6→24h四臂12/12完成，84份预测及评分已落盘。
+velocity程序版Energy=0.156835，S+U=0.157121，打乱=0.156879，U程序=0.156778。
+等KO/seed配对相对增益分别为+0.149%（vs S+U）、+0.025%（vs打乱）、−0.102%（vs U程序），增益很小。
+不扩参数；按用户“需要跑的直接排队”补充三个缺口：
+
+- 冻结父模型的velocity关闭/反向/跨KO打乱、群体/均匀q及U特征关闭；0训练、0额外ODE积分。
+- 0→6h同口径四臂×三seed，12个新训练；不是重复此前cos先验pilot。
+- 6→24h单细胞程序velocity/KO内部细胞打乱/U程序，三臂×三seed，9个新训练；复用父实验3个S+U基线。
+
+共21新拟合，保持K8、5000步；只用开发集，不读取测试目标。
+14项队列/特征/基线复用/实际OT与ODE相关测试通过。
+GPU0已被其他项目占用，CPU等待器PID284893已启动，GPU0空闲后自动接续，不抢占其他任务。
+等待器：`outputs/w15i_router_followup_jobs_20261021/controller/`；
+实时状态：`/data/yuchang/veloroute_w15i_router_followups_20261021/dispatcher_v1/status.json`。
+正式训练输出：`/data/yuchang/veloroute_w15i_router_followups_20261021/queue_v1/`。
+GPU2/3的RENGE继续，GPU6/7保留。[补充队列与数据完整路径](../../PLANS/w15i_router_followups_20261021.md)。
+
+## 最新执行：Traxler S+U 完整程序 router 已排队
+
+用户要求直接排队训练，GPU0已启动四臂×三seed，共12模型，每模型5000步。
+S+U为共同输入，额外5槽分别为零、群体velocity响应程序方向、跨KO打乱方向、U响应程序方向。
+K=8、官方CellFlow隐藏骨干、固定源侧q、各专家独立Tsit5 ODE；不使用硬方向cos约束或均值锚。
+这是6h→24h的18h early-response完整分布开发实验，不是重复ridge均值probe。
+56训练KO、7验证KO；7测试KO目标保留。全84份验证预测冻结后自动评分Energy、均值、方差和路由统计。
+10项相关CPU测试通过，含实际OT训练更新、相同初始参数、保存恢复及独立专家ODE。
+
+训练作业PID34799，日志`outputs/w15h_program_router_jobs_20261021/router_gpu0_retry/`；
+输出`/data/yuchang/veloroute_w15h_traxler_program_router_20261021/full_distribution_v1_retry/`。
+首启在训练前因系统cuDNN版本冲突失败，现复用RENGE兼容库重启；失败目录保留，模型配置不变。
+GPU2/3的RENGE L2/L3继续，其他任务不停止，GPU6/7不使用。
+[固定协议与完整路径](../../PLANS/w15h_traxler_program_router_20261021.md)。目前尚无本轮性能结果。
+
+## 最新：响应程序方向小实验已完成
+
+Traxler 6→24h的群体均值probe：56训练KO定义5条响应轴，7验证KO，7测试KO保留。
+三个固定正则下，加入velocity方向相对S+U改善3.91%/4.49%/1.82%，但均输U程序方向。
+追加56训练KO的5折开发CV后，增益为6.04%/1.37%/−0.81%；整体误差最低的配置方向略差。
+物理正方向修正几乎无收益，尚未建立稳定突破口，不据此扩大方向约束模型。
+见[完整结果、方法和路径](w15g_response_program_results.md)。
+
+此前Traxler 0→6h五臂×三seed已15/15完成：方向版相对static平均Energy改善0.867%，
+相对原router+0.086%、方向打乱+0.109%、direct-U+0.179%，均为小幅描述性变化。
+完整结果位于`/data/yuchang/veloroute_w15f_traxler_direction_20261021/pilot_v1/summary.json`。
+下方“已启动/训练中”是历史状态，以上最新完成记录为准。
+
+## 最新：方向小实验与 Traxler 开发接入
+
+RENGE ETS2两个24h区间的方向小实验16/16完成：方向版相对原router平均+1.121%，
+相对方向打乱−0.005%，相对direct-U−5.763%；正确方向增量尚未建立。
+组内速度方向非常一致（随机配对cos约0.99），冻结反向偏置检查也无跨区间一致优势。
+
+Traxler132/132真实小鼠ESM2-3B条件已生成，已启动0→6h五臂×三seed的15个短训练：
+106训练KO、13验证KO，13测试KO保留。生物时间增量6h；所有验证预测冻结后自动评分。
+Traxler训练目标已经用于拟合，现属开发数据，较早“未解封全部效应”的描述已过时。
+完整数值、配置及路径见[方向与扰动接入报告](w15e_direction_results.md)。
+
 ## 当前执行：RENGE L2/L3
 
 原RENGE L1的576次拟合及评分已完成，见[RENGE结果](w14b_renge_results.md)。

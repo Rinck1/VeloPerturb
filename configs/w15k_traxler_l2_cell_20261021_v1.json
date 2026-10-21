@@ -1,0 +1,14 @@
+{
+  "kind": "TRAXLER_MATCHED_L2_AND_L3_CELL_SHUFFLES",
+  "base_configuration": "/home/yuchang/wangjiaxuan/configs/w15h_traxler_program_router_20261021_v1.json",
+  "cell_parent": "/data/yuchang/veloroute_w15i_router_followups_20261021/queue_v1/cell_6to24",
+  "L2_width_candidates": [128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256],
+  "parameter_tolerance": 0.05,
+  "additional_shuffle_seeds": [1, 2],
+  "maximum_hours": 8,
+  "gpu_wait_hours": 12,
+  "lanes": {"l2": {"gpu": 0, "new_fits": 12}, "cell_shuffles": {"gpu": 7, "new_fits": 6}},
+  "selection": "parameter_count_only_no_outcome_selection",
+  "test_policy": "7_test_KO_targets_remain_unread",
+  "GFG_stage": "subsequent_separate_target_domain_no_JVP_estimator_not_part_of_this_grid"
+}
