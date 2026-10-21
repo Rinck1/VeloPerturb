@@ -1,0 +1,174 @@
+{
+  "git_commit": "a0cde23036737c06a5d2dc7747bc1f1379083573",
+  "seed": [
+    0,
+    1,
+    2
+  ],
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_registered_grid.py",
+    "--configuration",
+    "configs/w15a_cellflow_selected_20261021_v1.json",
+    "--freeze",
+    "configs/w15a_l2_freeze_20261021_v1.json",
+    "--pack",
+    "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1",
+    "--reference",
+    "outputs/w13_scifate2_direct_continuation_v1",
+    "--output",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1",
+    "--approved"
+  ],
+  "data_hashes": {
+    "configs/w15a_cellflow_selected_20261021_v1.json": "6ba3dc12bf2bb200a205c4181a8a4bf3b31a510aba4cfa10ace7a76da870845b",
+    "configs/w15a_l2_freeze_20261021_v1.json": "65ff00f8f3b1fa3a86c28782c5701dcef4d8c70ed7e89aac15a64d8cc7b985a2",
+    "outputs/w13_scifate2_direct_continuation_v1/study_manifest.json": "806b7938b85e07fcf0f0d7b1ad1fae2f62d970ce6344ee097b2ae7d762e361ca",
+    "outputs/w13_scifate2_direct_continuation_v1/source_samples.json": "9ed86405aba7aca6d4dc1ee2a7d9474b6b4e5ba66a297c817f78fc97ea3826e6",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_registered_grid.py": "c7eb628e6fbe3e4f94276b95f8a5522bbb452ed7a817433b7bae7ee4e970756c",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_common_evaluation.py": "2a4f99f0a6d933fd641df1b597266408f9ac6fa7519249d81a6b321250fb082c"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "b8317a7ce6a208335fc212aca75b3f831f47638bfabb7ce3309e5c822cdfb8b4",
+  "runtime_seconds": 0.006910163909196854,
+  "status": "REGISTERED_L2_GRID_BOUND",
+  "jobs": [
+    {
+      "arm": "cf_static",
+      "seed": 0,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": true
+    },
+    {
+      "arm": "cf_static",
+      "seed": 1,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_static",
+      "seed": 2,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_kin",
+      "seed": 0,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_kin",
+      "seed": 1,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_kin",
+      "seed": 2,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_Ssum",
+      "seed": 0,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_Ssum",
+      "seed": 1,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_Ssum",
+      "seed": 2,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_directU",
+      "seed": 0,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_directU",
+      "seed": 1,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_directU",
+      "seed": 2,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_kin_cell",
+      "seed": 0,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_kin_cell",
+      "seed": 1,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_kin_cell",
+      "seed": 2,
+      "local_shuffle_seed": null,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_kin_cell_shuf",
+      "seed": 0,
+      "local_shuffle_seed": 0,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_kin_cell_shuf",
+      "seed": 1,
+      "local_shuffle_seed": 0,
+      "reuse_static_seed0": false
+    },
+    {
+      "arm": "cf_kin_cell_shuf",
+      "seed": 2,
+      "local_shuffle_seed": 0,
+      "reuse_static_seed0": false
+    }
+  ],
+  "models": 18,
+  "new_trainings": 17,
+  "prediction_windows": 216,
+  "configuration_sha256": "6ba3dc12bf2bb200a205c4181a8a4bf3b31a510aba4cfa10ace7a76da870845b",
+  "freeze_commit": "a0cde23036737c06a5d2dc7747bc1f1379083573",
+  "reused_static0_training": "/data/yuchang/veloroute_w15a/cellflow_static_grid_v1/static_w128d2_seed0/train",
+  "reused_static0_model_sha256": "f877b6b2bcfe590d5fdb9e0324b11edf377a4f8e6768d4b6d99e739cc6999909",
+  "arms": [
+    "cf_static",
+    "cf_kin",
+    "cf_Ssum",
+    "cf_directU",
+    "cf_kin_cell",
+    "cf_kin_cell_shuf"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "local_shuffle_permutation_seeds": [
+    0
+  ],
+  "three_training_seeds_are_not_three_permutation_seeds": true,
+  "population_cf_kin_shuf": "NOT_RUN_SINGLE_CONDITION",
+  "population_CF_H3": "NOT_TESTED",
+  "no_plugin_HPO": true,
+  "Traxler_read": false,
+  "reference": "/home/yuchang/wangjiaxuan/outputs/w13_scifate2_direct_continuation_v1",
+  "pack": "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1"
+}

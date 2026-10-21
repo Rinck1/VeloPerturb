@@ -1,0 +1,23 @@
+{
+  "status": "FIXED_FULL_SYNTHETIC_GRID_LAUNCHED_NOT_COMPLETED",
+  "launcher_pid": 3895803,
+  "worker_pid": 3895804,
+  "job_directory": "/home/yuchang/wangjiaxuan/outputs/w15a_jobs_20261021/l3_population_cpu_v1",
+  "data_directory": "/data/yuchang/veloroute_w15a/l3_population_frozen_plan_v1",
+  "physical_gpu": null,
+  "backend": "cpu",
+  "expected_fits": 120,
+  "steps_per_fit": 5000,
+  "learning_rate": 0.0003,
+  "full_gate_passed": null,
+  "started_utc": "2026-10-21T03:35:59.638092+00:00",
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv-gpu/bin/python",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_moe_synthetic.py",
+    "run",
+    "--output",
+    "/data/yuchang/veloroute_w15a/l3_population_frozen_plan_v1",
+    "--acknowledge-full-run"
+  ],
+  "no_budget_or_model_changes_after_plan": true
+}

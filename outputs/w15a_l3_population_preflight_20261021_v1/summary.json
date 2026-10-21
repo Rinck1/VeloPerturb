@@ -1,0 +1,20 @@
+{
+  "status": "L3_POPULATION_SYNTHETIC_PREFLIGHT_COMPLETE",
+  "tests": 7,
+  "test_errors": 0,
+  "test_failures": 0,
+  "test_runtime_seconds": 37.157,
+  "full_grid_started": false,
+  "full_gate_passed": null,
+  "approved_execution": "CPU_only_120fits_5000steps_lr3e-4",
+  "total_updates": 600000,
+  "model_parameters": 307496,
+  "estimated_CPU_hours": [
+    2,
+    4
+  ],
+  "formal_plan": "/data/yuchang/veloroute_w15a/l3_population_frozen_plan_v1",
+  "l2_scientific_configuration_commit": "a0cde23036737c06a5d2dc7747bc1f1379083573",
+  "new_runner_sha256": "4b6468ad022651a55cd1bde97a1a71d5cfc7f2906f919d7f38c548b3b1d17618",
+  "no_core_changes_in_this_stage": true
+}

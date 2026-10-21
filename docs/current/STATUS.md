@@ -68,7 +68,7 @@ Traxler18个GEX SRA共143.1GB已完整下载，9个文库的S/U/A矩阵已生成
 
 [W14结果](w14_results.md) · [补充统计](w14_supplementary_results.md) ·
 [Traxler定量](w14b_su_results.md) ·
-[恢复控制器实时状态](../../outputs/w14_recovery_20261021_v1/status.json) ·
+[恢复控制器实时状态](../../outputs/w15_renge_partial_recovery_20261021/controller/status.json) ·
 [RENGE队列](../../outputs/w14b_renge_router_v1/queue_status.json)
 
 ## 三条模型线并行
@@ -78,8 +78,8 @@ Traxler18个GEX SRA共143.1GB已完整下载，9个文库的S/U/A矩阵已生成
 | 路线 | 结构和问题 | 当前执行 |
 |---|---|---|
 | L1 小模型 | 解析动力学上下文＋router＋专家／小ODE，检验最小实现与群体机制 | 最终ODE干预完成；RENGE迁移网格续排 |
-| L2 CellFlow插件 | 动力学群体token进入CellFlow条件编码器，与S摘要、direct-U、打乱等同结构对照 | 官方GPU与15项软件测试通过，120次合成完成；四static候选完成，选中128×2，待插件对比 |
-| L3 合并模型 | CellFlow状态骨干＋K8专家＋独立动力学编码器＋固定源侧router | 已接官方隐藏骨干，31项CPU回归通过，50维K8四臂短训练跑通；正式配置继承L2 |
+| L2 CellFlow插件 | 动力学群体token进入CellFlow条件编码器，与S摘要、direct-U、打乱等同结构对照 | 选中128×2已提交；GPU0固定六臂×三seed网格运行中，共18模型/216窗口 |
+| L3 合并模型 | CellFlow状态骨干＋K8专家＋独立动力学编码器＋固定源侧router | 官方骨干31项CPU回归通过；继承L2配置的120次固定合成已在CPU启动，尚未训练真实数据 |
 
 L2/L3没有L1的解析均值锚，分别报告本线的static对照。L3不是预测结果的后期加权集成；
 状态流只读S，解析动力学经可学习编码器进入router，q在轨迹上固定，没有原版GFG/JVP。
@@ -92,7 +92,7 @@ L2主配置只用cf_static选型，L3不另调主干；合成和结构测试完�
 [合并架构与数学检查](../evidence/w15a_l3_implementation.md)
 
 用户于10月21日将资源上限扩大为六卡：允许物理GPU0–5，GPU6–7保留。
-RENGE继续使用GPU1–3；GPU0优先CellFlow环境与运行测试，其余卡按前置完成情况调度。
+RENGE继续使用GPU1–3；GPU0运行CellFlow固定对照网格，L3合成在CPU并行；其余卡不干预其他项目作业。
 六卡是总上限，不表示所有卡或三条正式网格已经同时开训。
 
 CellFlow合成工程检验20正效应+20零效应、每次三臂全部完成。正效应平均改善92.65%，
@@ -100,11 +100,20 @@ CellFlow合成工程检验20正效应+20零效应、每次三臂全部完成。�
 四static候选为12.1万/43.4万/148.5万/959.5万参数，最后一个含官方默认宽度；
 均已完成，按static开发Energy选择128×2；四候选均值依次0.643698/0.673767/0.656273/0.685502。
 插件不另调参，仍无正式外部基线比较结论。[选型记录](w15a_static_selection.md)。
-跨线比较正统一到W13原源细胞ID与目标缓存；不直接横比不同抽样的历史分数。
+跨线比较已实现共用W13原源细胞ID与目标缓存的独立评价入口，8项CPU测试通过；
+后续网格使用该入口，不直接横比不同抽样的历史分数。注册网格连同共样本入口13项测试通过。
+L2网格为static/kin/Ssum/directU/kin_cell/kin_cell_shuf，各训练seed0/1/2；
+复用已完成static0，只新增17次训练，全216窗口冻结后统一评分。
+局部shuffle固定一个perm_seed0；三个训练seed不是三个置换，不声称完成本单条件数据不支持的群体CF-H3。
 
-## 后续尚未执行
+L3完整开发基座为307,496参数；固定20正+20零、每重复三臂、每臂5000更新，合计60万更新。
+CPU首个fit已完成5000步，预测/评分继续中；预计完整2–4小时，未完成前不判合成通过。
+[L2运行状态](../../outputs/w15a_cellflow_jobs_20261021/registered_l2_grid/status.json) ·
+[L3合成设计和命令](../evidence/w15a_l3_population_synthetic_design.md)
 
-1. L2选型配置提交冻结后继续各插件对照；L3完成同训练口径20+20合成后继承配置。
+## 后续未完成
+
+1. L2固定18模型网格完成后统一评分；L3固定20+20合成完成后再决定真实数据训练。
 2. 方法/现有结果初稿与机制图并行。旧Velocity Horizon提纲已移入历史，不再作为当前提纲。
 3. 外部强基线尚无正式结果；CellFlow新线已开始适配。直接U/非线性S+U对照已完成W14网格。
 4. 固定方案的独立动态系统或新生物重复复现尚未完成。

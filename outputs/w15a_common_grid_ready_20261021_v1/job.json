@@ -1,0 +1,33 @@
+{
+  "physical_gpu": 0,
+  "gpu_uuid": "GPU-c96165f0-a5fc-0771-f837-aab58991a8ab",
+  "command": [
+    "/home/yuchang/wangjiaxuan/.venv-gpu/bin/python",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_registered_grid.py",
+    "--configuration",
+    "configs/w15a_cellflow_selected_20261021_v1.json",
+    "--freeze",
+    "configs/w15a_l2_freeze_20261021_v1.json",
+    "--pack",
+    "/data/yuchang/veloroute_w15a/cellflow_source_pack_v1",
+    "--reference",
+    "outputs/w13_scifate2_direct_continuation_v1",
+    "--output",
+    "/data/yuchang/veloroute_w15a/cellflow_registered_l2_grid_v1",
+    "--approved"
+  ],
+  "cwd": "/home/yuchang/wangjiaxuan",
+  "allowed_gpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "reserved_gpus": [
+    6,
+    7
+  ],
+  "started_utc": "2026-10-21T03:35:47.177698+00:00"
+}

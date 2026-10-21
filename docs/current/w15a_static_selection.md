@@ -20,6 +20,7 @@
 每个候选均先冻结六窗口×两时钟的12份预测再评分；全部候选记录保留。
 
 - [选中科学配置](../../configs/w15a_cellflow_selected_20261021_v1.json)
+- [绑定科学配置提交号与官方隐藏骨干的冻结记录](../../configs/w15a_l2_freeze_20261021_v1.json)
 - [四候选完整记录](../../outputs/w15a_static_selection_20261021_v1/selection.json)
 - 全部模型/预测：`/data/yuchang/veloroute_w15a/cellflow_static_grid_v1/`
 - [适配、合成检验与实现差异](../evidence/w15a_cellflow_audit.md)

@@ -1,0 +1,20 @@
+{
+  "kind": "CPU_TIMING_ONLY_NOT_A_SCIENTIFIC_FIT",
+  "configuration_width": 128,
+  "configuration_depth": 2,
+  "steps_per_formal_fit": 5000,
+  "batch_size": 128,
+  "learning_rate": 0.0003,
+  "parameters": 307496,
+  "compiled_first_step_seconds": 1.3431118242442608,
+  "warmup_excluded_steps": 25,
+  "warm_steps_seconds": 0.1558285914361477,
+  "warm_seconds_per_step": 0.006233143657445908,
+  "nominal_120fit_update_hours": 1.0388572762409847,
+  "excludes": "Python cohort sampling, all endpoint solves, weighted scoring, I/O",
+  "target_scores_produced": false,
+  "gpu_used": false,
+  "backend": [
+    "TFRT_CPU_0"
+  ]
+}

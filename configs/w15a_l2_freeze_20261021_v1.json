@@ -1,0 +1,89 @@
+{
+  "status": "L2_STATIC_DEVELOPMENT_CONFIGURATION_FROZEN",
+  "winner": {
+    "candidate": "static_w128d2",
+    "selection_energy": 0.6436978160462772,
+    "parameters": 121138,
+    "directory": "/data/yuchang/veloroute_w15a/cellflow_static_grid_v1/static_w128d2_seed0",
+    "configuration_sha256": "6ba3dc12bf2bb200a205c4181a8a4bf3b31a510aba4cfa10ace7a76da870845b"
+  },
+  "candidates": [
+    {
+      "candidate": "static_w128d2",
+      "selection_energy": 0.6436978160462772,
+      "parameters": 121138,
+      "directory": "/data/yuchang/veloroute_w15a/cellflow_static_grid_v1/static_w128d2_seed0",
+      "configuration_sha256": "6ba3dc12bf2bb200a205c4181a8a4bf3b31a510aba4cfa10ace7a76da870845b"
+    },
+    {
+      "candidate": "static_w256d3",
+      "selection_energy": 0.6737670677429696,
+      "parameters": 433970,
+      "directory": "/data/yuchang/veloroute_w15a/cellflow_static_grid_v1/static_w256d3_seed0",
+      "configuration_sha256": "01c1838643fefc5c16ad6ed4c395adb8a52aff272a4009288f26422065b206a5"
+    },
+    {
+      "candidate": "static_w512d3",
+      "selection_energy": 0.6562734436441721,
+      "parameters": 1485106,
+      "directory": "/data/yuchang/veloroute_w15a/cellflow_static_grid_v1/static_w512d3_seed0",
+      "configuration_sha256": "e7eb1f5a04269ffdd9e5d1f3bb7ad1cfa7b3a33e181a99a2a03600ac6e7ec66f"
+    },
+    {
+      "candidate": "static_native_width1024d3",
+      "selection_energy": 0.6855020693657098,
+      "parameters": 9594930,
+      "directory": "/data/yuchang/veloroute_w15a/cellflow_static_grid_v1/static_native_width1024d3_seed0",
+      "configuration_sha256": "303af62869553c34ce9c66c347a28058869177099870595c7dbe1ba5ec0d2935"
+    }
+  ],
+  "selection_arm": "cf_static",
+  "selection_seed": 0,
+  "selection_metric": "equal_weight_05to10_10to15_15to20_decay_energy",
+  "all_plugin_arms_must_inherit_this_configuration": true,
+  "plugin_results_used": false,
+  "configuration_path": "/home/yuchang/wangjiaxuan/configs/w15a_cellflow_selected_20261021_v1.json",
+  "configuration_sha256": "6ba3dc12bf2bb200a205c4181a8a4bf3b31a510aba4cfa10ace7a76da870845b",
+  "source_pack_manifest_sha256": "dfb954c62072c9ae288aa1e3ce0e3b4f006c595fdde7595c57378478e6088ac1",
+  "backbone": {
+    "width": 128,
+    "depth": 2,
+    "condition_dim": 32,
+    "time_width": 128,
+    "time_depth": 2,
+    "time_freqs": 64,
+    "pooling": "mean"
+  },
+  "optimizer": {
+    "learning_rate": 0.0003,
+    "steps": 5000,
+    "batch_size": 128
+  },
+  "solver": {
+    "name": "official_OTFlowMatching",
+    "probability_path": "ConstantNoiseFlow_sigma0",
+    "matching": "official_balanced_Sinkhorn_mean_scale_cost",
+    "epsilon": 0.1,
+    "max_iterations": 200,
+    "prediction": "Tsit5_PID_rtol_atol_1e-5",
+    "primary_time": "decay_h(delta)/h(24)",
+    "sensitivity": "linear_delta/24"
+  },
+  "source_hashes": {
+    "w15a_cellflow_adapter.py": "bfc60235729f7bea19d1a79ac8c5f38d14a07a1f43e2194a976bb1d31932338b",
+    "w15a_cellflow_train.py": "1f58c5eab4e4a6e62d3235b02f576550258274c8b4d2f5d99f9377044bf85026",
+    "w15a_cellflow_predict.py": "6d07deb0b96767bce64443f4960d77bd0ef9561ca6e1f2681daae54a95797593",
+    "w15a_cellflow_evaluate.py": "476b7b07c10857b89b0312f6c9f7f5b5893ad28558f4a8b14b0d287c4006e97e"
+  },
+  "runtime_audit": "/home/yuchang/wangjiaxuan/outputs/w15a_cf1_completed_20261021_v1/environment_api_audit.json",
+  "freeze_commit": "a0cde23036737c06a5d2dc7747bc1f1379083573",
+  "CF3_status": "STATIC_BACKBONE_FROZEN_ONLY_FULL_PLUGIN_AND_L3_DESIGN_NOT_YET_CF3_FROZEN",
+  "Traxler_read": false,
+  "development_only": true,
+  "cf_static_frozen": true,
+  "official_backbone_adapter": "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_moe_official.py",
+  "official_backbone_adapter_sha256": "71b9f1b756e2b2c22a14dbbcc565bd44b6efb8c71b87c014e86a39832dd2b1f8",
+  "selection_record_path": "/home/yuchang/wangjiaxuan/outputs/w15a_static_selection_20261021_v1/selection.json",
+  "common_evaluation_policy": "For cross-line comparisons reuse original W13 source cell IDs and immutable target caches; original static selection retained with seed0",
+  "real_L3_training_prerequisite": "Complete registered 20-positive/20-null state-only OT synthetic before real-data training"
+}
