@@ -1,0 +1,243 @@
+{
+  "git_commit": "f3b7d0a0dfc9a33bc40837a6cd94397ac73df1f4",
+  "seed": 20261022,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w16a_traxler_graph_cv.py",
+    "--configuration",
+    "/home/yuchang/wangjiaxuan/configs/w16a_traxler_graph_cv_20261022_v1.json",
+    "--stage",
+    "dispatch"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/configs/w16a_traxler_graph_cv_20261022_v1.json": "a5fb5520cccd0e78c258c7dd3f7792616723f6b63184aec44d6f27f923ff0d9c",
+    "/home/yuchang/wangjiaxuan/PLANS/w16a_traxler_graph_cv_20261022.md": "6f48e3bf40e31a3375bc1975f2bc365523895d62609a526b4a45908ce0e43537",
+    "/home/yuchang/wangjiaxuan/configs/w15h_traxler_program_router_20261021_v1.json": "7296f2b07c1e3c168abd5fb8d6f1d5f71b6336f0c0c0f83fbaecdeaec31142b8",
+    "/data/yuchang/veloroute_w15e_traxler_conditions_20261021/esm2_3b_v1/conditions.npz": "30a06cdc1a4cbd092e7ad8b2835799ac6d9fa9d0208256115877e23ecd615324",
+    "/home/yuchang/wangjiaxuan/src/veloroute/latent.py": "7d1bd83e558cef31c5db6484052b50001c81184a1f0b053029d9143143de85ec",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w16a_traxler_graph_cv.py": "df3578e84c93dc9ab2b2f93d2a12dec86df4609925a9374216de714c14d8554e",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15o_velocity_neighborhood.py": "aa32c2525335a2badb7e03445db8c134c8b573b81cfcc53c2c78ce3e4bcfffe6",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15n_velocity_auxiliary.py": "53673f6895fa16facaada52e55c8852a7edc4a6c0515de1eb2ded8163ebbaebc",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15h_traxler_program_router.py": "b4e297807d75672d320d80e3996aaa991529c62f7f24a30cbeeb44f5ae2a6acb",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15i_program_router_followups.py": "dc91e973021c12fc7f1a3ad9e691ab5568919aa3e97f0add80fdf55972c09fdb",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_moe.py": "5b00b38995c48033d887f2d8450267f8e4b6dc7ff8cc5d930cb69d54f29ca791",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_moe_official.py": "71b9f1b756e2b2c22a14dbbcc565bd44b6efb8c71b87c014e86a39832dd2b1f8",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_moe_real_predict.py": "0a41ea71bd623f7badba000baab98ea3f9df59c548661bb81f54609e48a55dcd",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_train.py": "1f58c5eab4e4a6e62d3235b02f576550258274c8b4d2f5d99f9377044bf85026",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15a_cellflow_adapter.py": "bfc60235729f7bea19d1a79ac8c5f38d14a07a1f43e2194a976bb1d31932338b",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15c_renge_l3.py": "0f00cc7a1e975baedda6982f856953a0ce7d6551e3f175be87346aaf0a7c18f0",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w15g_response_program_probe.py": "3d5b692a9949f5f03462ff7d473b77070b89c9b55ceddd1271e5bfa5ca0a9649",
+    "/data/yuchang/veloroute_w16a_traxler_20261022/graph_cv_v1/prepare/summary.json": "07acdafcdf5923a1886853fe69ac6a63590863c05e3ddb019c18f68b874224e0"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "a26607dc7debbccd31cc6287674b81d06fc24d7ea04a39786c1c0c7c81a0a209",
+  "runtime_seconds": 17.315455064177513,
+  "status": "TRAXLER_FIXED_GRAPH_CV_COMPLETE",
+  "fits": 63,
+  "predictions": 1323,
+  "KOs": 63,
+  "comparisons": [
+    {
+      "control": "no_graph",
+      "energy_gain": -0.0036552050729830574,
+      "ci_low": -0.00965716145018601,
+      "ci_high": 0.0022190723118812204,
+      "winning_KOs": 27,
+      "KOs": 63,
+      "by_seed": {
+        "0": -0.017122614556826912,
+        "1": -0.0018271310164568336,
+        "2": 0.007984130354334571
+      },
+      "by_fold": {
+        "0": 0.0026300643902931894,
+        "2": -0.013111124147985619,
+        "1": -0.0004845554612567447
+      }
+    },
+    {
+      "control": "state_graph",
+      "energy_gain": 0.000485773289685078,
+      "ci_low": -0.003895752115452201,
+      "ci_high": 0.004882673681948573,
+      "winning_KOs": 32,
+      "KOs": 63,
+      "by_seed": {
+        "0": -0.009822127995356162,
+        "1": 0.0019882137023891906,
+        "2": 0.009291234162022204
+      },
+      "by_fold": {
+        "0": 0.005928157797511799,
+        "2": -0.0010094540681042793,
+        "1": -0.0034613838603522852
+      }
+    },
+    {
+      "control": "U_graph",
+      "energy_gain": 0.001058636523618416,
+      "ci_low": -0.002109511932665168,
+      "ci_high": 0.004240365516601009,
+      "winning_KOs": 34,
+      "KOs": 63,
+      "by_seed": {
+        "0": -0.00890856061237794,
+        "1": 0.006594057258723961,
+        "2": 0.005490412924509226
+      },
+      "by_fold": {
+        "0": 0.005033980156190975,
+        "2": -0.003384261772897291,
+        "1": 0.0015261911875615645
+      }
+    },
+    {
+      "control": "shuffle_mean",
+      "energy_gain": -0.0004899509271292661,
+      "ci_low": -0.003105390695818256,
+      "ci_high": 0.002010374671856057,
+      "winning_KOs": 34,
+      "KOs": 63,
+      "by_seed": {
+        "0": -0.006377636929164072,
+        "1": 0.0008143823249306994,
+        "2": 0.004093401822845575
+      },
+      "by_fold": {
+        "0": 0.0009231159155259363,
+        "2": -0.0013289735889229373,
+        "1": -0.0010639951079907963
+      }
+    },
+    {
+      "control": "shuffle0",
+      "energy_gain": -0.0024019047029858157,
+      "ci_low": -0.005675122608116378,
+      "ci_high": 0.0008753905942246655,
+      "winning_KOs": 28,
+      "KOs": 63,
+      "by_seed": {
+        "0": -0.010567126459200762,
+        "1": 0.0005225401595724302,
+        "2": 0.002838872190670886
+      },
+      "by_fold": {
+        "0": -0.000589408289298714,
+        "2": -0.004135774140227583,
+        "1": -0.002480531679431149
+      }
+    },
+    {
+      "control": "shuffle1",
+      "energy_gain": 0.0018045320783462533,
+      "ci_low": -0.0018783812375861143,
+      "ci_high": 0.0053657888551850545,
+      "winning_KOs": 36,
+      "KOs": 63,
+      "by_seed": {
+        "0": -0.0043559469644212055,
+        "1": 0.0035554576416382973,
+        "2": 0.006214085557821667
+      },
+      "by_fold": {
+        "0": 0.0023786724018127017,
+        "2": 0.003333687034412143,
+        "1": -0.00029876320118608625
+      }
+    },
+    {
+      "control": "shuffle2",
+      "energy_gain": -0.001465784747634665,
+      "ci_low": -0.004434802097672251,
+      "ci_high": 0.0014887646756459518,
+      "winning_KOs": 29,
+      "KOs": 63,
+      "by_seed": {
+        "0": -0.004773284734975329,
+        "1": -0.0019267970067619257,
+        "2": 0.0023027274988332595
+      },
+      "by_fold": {
+        "0": 0.0004530832781239891,
+        "2": -0.003979282850719579,
+        "1": -0.000871154670308405
+      }
+    }
+  ],
+  "relationship_candidate_supported": false,
+  "means": {
+    "no_graph": {
+      "energy": 0.1387447312356262,
+      "centered_energy": 0.058365236169577256,
+      "mean_mse": 0.2351358709400525,
+      "program_mean_mse": 1.0307245255570094,
+      "variance_ratio": 1.0772138026595128,
+      "log_variance_error": 0.11926496682001371,
+      "effective_experts": 6.580457658888691
+    },
+    "state_graph": {
+      "energy": 0.13927174216859223,
+      "centered_energy": 0.05831821187260543,
+      "mean_mse": 0.23688532660709374,
+      "program_mean_mse": 1.0454688403676347,
+      "variance_ratio": 1.07168195659457,
+      "log_variance_error": 0.11746889029468116,
+      "effective_experts": 6.266855427966614
+    },
+    "U_graph": {
+      "energy": 0.13937066128812234,
+      "centered_energy": 0.05841503804376089,
+      "mean_mse": 0.23717044515461447,
+      "program_mean_mse": 1.050207461710962,
+      "variance_ratio": 1.076819320699927,
+      "log_variance_error": 0.1190684018023592,
+      "effective_experts": 6.093660838006626
+    },
+    "velocity_graph": {
+      "energy": 0.13916075344004084,
+      "centered_energy": 0.05830669189133148,
+      "mean_mse": 0.23665606246110887,
+      "program_mean_mse": 1.0482712874213755,
+      "variance_ratio": 1.0726282732456134,
+      "log_variance_error": 0.11695634692087893,
+      "effective_experts": 6.106702600240607
+    },
+    "shuffle0": {
+      "energy": 0.1389155202134761,
+      "centered_energy": 0.05838863303231841,
+      "mean_mse": 0.2360063983610845,
+      "program_mean_mse": 1.0368083035163251,
+      "variance_ratio": 1.0738941721700577,
+      "log_variance_error": 0.11861509375627663,
+      "effective_experts": 6.0882550537482025
+    },
+    "shuffle1": {
+      "energy": 0.13943337413340662,
+      "centered_energy": 0.05835381843983117,
+      "mean_mse": 0.23739513110607516,
+      "program_mean_mse": 1.0472831449232505,
+      "variance_ratio": 1.0723730542107652,
+      "log_variance_error": 0.11795976572084622,
+      "effective_experts": 6.113257625787766
+    },
+    "shuffle2": {
+      "energy": 0.13902719994144236,
+      "centered_energy": 0.05829965744602559,
+      "mean_mse": 0.2362353870018679,
+      "program_mean_mse": 1.0438582488337447,
+      "variance_ratio": 1.0720547352214413,
+      "log_variance_error": 0.11709239862362826,
+      "effective_experts": 6.135934498088509
+    }
+  },
+  "test_targets_read": false,
+  "independent_confirmation": false,
+  "physical_direction_claim": false,
+  "GFG": false,
+  "JVP": false,
+  "source_hours": 6,
+  "target_hours": 24,
+  "parameters": 389704,
+  "aggregation": "KO_equal_after_seed_averaging",
+  "shuffle_scope": "within_training_KO_and_source_library_derangement"
+}

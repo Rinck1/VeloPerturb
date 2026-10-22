@@ -1,7 +1,86 @@
 # VeloRoute 交接入口
 
-更新：2026-10-21。请先读 [当前状态](docs/current/STATUS.md)，再读
-[最新结果](docs/current/w13_time_results.md) 和 [方法定义](docs/current/w13_time_model.md)。
+更新：2026-10-22。请先读 [当前状态](docs/current/STATUS.md)，再读
+[最新扰动执行](docs/current/w16_perturbation_execution_20261022.md) 和 [原短时方法定义](docs/current/w13_time_model.md)。
+
+最新完成：[W16A Traxler三折七臂](PLANS/w16a_traxler_graph_cv_20261022.md)，16:55核对63/63模型、1323预测已冻结评分。
+389,704参数/K8/5000步，固定W15O/P关系监督；不是新的GFG/EM或18M模型。总耗时约22分06秒，GPU0/2/3已释放。
+63开发KO重新三折、每折源侧重拟合预处理；原7测试KO不使用。
+真实v图vs无图−0.366%、vs U图+0.106%、vs三打乱均值−0.049%，95%区间均跨零。
+原小幅图优势未在本轮保持，不再标为训练中，不据此开启保留测试或原样扩容。
+历史控制器PID1298074已退出，日志`outputs/w16a_traxler_jobs_20261022/`；
+输出`/data/yuchang/veloroute_w16a_traxler_20261022/graph_cv_v1/`；
+[完整结果](docs/current/w16_perturbation_execution_20261022.md)及[小型数字副本](docs/evidence/mainline/w16_20261022/README.md)。
+W16B scNT-seq已完成：剪接v vs S历史校正+4.400%/+7.239%，但vs U驱动−0.127%/−1.565%。
+新标记参照的15min负合成估计占60.15%，工作假设失配，不能当速度真值或上限；不得据此蒸馏新GFG。
+CPU输出`/data/yuchang/veloroute_w16b_scntseq_20261022/label_reference_v1/`；W15M–W16B集中回归114/114通过。
+sci-FATE2只作分化辅助证据，不算扰动主实验；本轮不新增其训练。原小幅阳性未被W15X/Y/Z撤回。
+目前没有新增训练排队；GPU1他人任务不动，GPU6保留。
+
+最新完成：[W15X/Y/Z基因筛选与方差通量](docs/current/w15x_y_z_u_increment_20261022.md)。
+56训练KO嵌套筛选中，三家族外层所选基因标准化MSE vsS为−15.186%/−15.982%/−12.907%，均输三打乱。
+最终3/13/16候选不是验证阳性，不能据此直接重训GFG或router；全PCA均值误差几乎未变。
+6→24h与0→6h分别56/106训练KO，正向方差通量α均五折为0；放开反号也无留出收益。
+三项CPU实验全部完成，17项测试通过，无新GPU模型；开发/测试目标未读。
+数据、CSV、代码快照和下一阶段建议见报告；原样加K/λ/容量不接续。
+
+最新完成：[W15U/V/W扩大结果](docs/current/w15u_v_w_expansion_20261022.md)。
+21新下游模型＋3个209万参数目标域计数估计器、147新预测完成；含参考27模型/189预测形状分析完成。
+U对比监督 vs无图+0.714%、vsU+0.920%均三seed正，但vs打乱−0.039%，不能归为真实velocity增量。
+V重训估计器 vs无图+0.590%、vs同网络U+1.044%、vs打乱+0.084%，仅vsU三seed同向，原筛查未过。
+V无JVP/旧基础权重，不是原版GFG；先冻结后下游，不是联训。下游391,752参数/K8独立ODE/5000步。
+W训练KO内时间校准 vs均值约+24.5%，但vsS单项−0.560%；没有据此新增模型。
+去均值形状尚无稳定胜所有对照的结果；未扩大velocity特有优势。原7测试KO目标始终不读。
+GPU0/2已释放，当前这批研究无运行任务；不动GPU1他人任务，GPU6保留。
+随后训练条件内动态基因筛选已在W15X完成，未通过外层筛查，结果见上方；未据候选清单开训。
+完整输出、CSV、模型和计划路径见上述结果文档，日志`outputs/w15u_v_expansion_jobs_20261022/`。
+
+最新完成：[W15T条件路由四臂](docs/current/w15t_conditioned_velocity_router_20261022.md)。
+12/12模型、84新预测＋84旧参考评分完成，约9分25秒，GPU0已释放；26项联合回归通过。
+q(k|S,U,c) 新增2048参数至391,752；原始velocity/λ=0.1/K8独立ODE/5000步不变。
+无图加条件 +0.591%，真实图加条件相对旧真实图 +0.379%，两项均三个seed同向。
+但velocity vs有条件无图/打乱/U图仅 +0.487%/+0.536%/+0.692%，均有负seed；未扩大velocity特有收益，2%目标未过。
+条件接口可保留为候选，不把其收益归给velocity；随后估计器重训已在W15V完成，结果见上方。
+输出`/data/yuchang/veloroute_w15t_conditioned_router_20261022/four_arm_v1/`；有效启动日志`outputs/w15t_conditioned_router_jobs_20261022/gpu0_retry1/`。
+W15T本轮无GFG/JVP，原测试目标不读。首次导入错误无模型产物，旧日志保留；该轮已完成，新执行见上方。
+
+[W15R/S 72模型已全部完成，扩大未成功](docs/current/w15r_s_velocity_expansion_20261022.md)。
+计数矩去噪弱约束 vs无图 −1.267%，场平均弱约束 −0.355%，两者均弱于原始图和直接U；强约束约 −6.2%～−6.4%。
+技术重复性提高不能代替任务增益；不继续原样加大 λ 或平滑。原四卡已释放，GPU1他人任务不动、GPU6保留。
+
+最新完成：[W15O源侧velocity邻域关系监督](docs/current/w15o_velocity_neighborhood_20261022.md)。
+15模型/105预测完成，17项相关测试通过；velocity图vs无图+0.684%、vs打乱+0.620%、vsU图+1.288%。
+对U图6/7 KO改善，但对无图仅3/7，seed不一致，原稳定判据未过；平方余弦图不能证明方向。
+训练以源程序关系约束router JS，部署只给S/U；389,704参数、K8独立专家ODE，仍非GFG。
+[W15P补充已9/9完成](docs/current/w15p_velocity_graph_controls_20261022.md)，共24模型/168份不同预测。
+真实图vs三打乱均值+0.654%、vsS局部打乱+1.269%，均三seed同向、5/7 KO改善；
+但全局打乱2近乎持平，原vs无图/U图仍不稳定，原规则未通过。GPU0正常释放。
+[W15Q计数拆分已完成](docs/current/w15q_velocity_countsplit_20261022.md)：592源细胞×五重复，不看未来。
+velocity程序两半余弦0.505 vsU程序0.783，负余弦14.65% vs2.31%，为半深度技术敏感性而非准确率。
+后续去噪和条件路由扩大均已完成，未扩大velocity特有收益，见上方；未开始GFG重训。
+[角色认识与文献](docs/current/velocity_role_evidence_20261022.md)。
+父输出`/data/yuchang/veloroute_w15o_neighborhood_20261022/five_arm_v1/`；
+补充输出`/data/yuchang/veloroute_w15p_graph_controls_20261022/null_stability_v1/`。
+
+最新完成：[训练专用velocity辅助四臂](docs/current/w15n_velocity_auxiliary_20261022.md)。
+12/12模型、84份预测全部冻结后评分；27项测试通过，GPU0已释放。
+所有臂训练和预测都不给velocity输入，只用S/U；辅助头训练回归5维程序，部署丢弃。
+真实velocity vs无辅助+0.207%、vs打乱辅助−0.502%、vsU辅助−0.211%；三个seed均输打乱。
+vs无辅助的seed增益−1.252%、−1.274%、+3.146%，不能算velocity阳性，不原样扩大。
+无辅助q与终态精确复现父模型（差0）；训练390,029、部署389,704参数，仍非GFG。
+产物`/data/yuchang/veloroute_w15n_auxiliary_20261022/four_arm_v1/`。
+W15M冻结关闭输入的+0.793%不等同于本轮正式辅助损失有效，不能混报。
+
+最新完成：[velocity方向/幅度用途判别](docs/current/w15m_velocity_discrimination_20261022.md)。
+9/9新拟合及273组冻结干预完成，26项相关测试通过，GPU0已释放。
+无符号程序vs S+U +0.711%、vs原单位方向+0.307%（2/3 seed）；仅模长和加回模长均不如单位方向。
+冻结模型后关闭额外velocity槽+0.395%、反向+0.555%、源群体方向+0.845%；群体平均q却恶化21.970%。
+正向几何标量被拟合为0，反向验证无益。更支持程序上下文/训练辅助，不支持未来位移硬方向，仍非GFG。
+产物`/data/yuchang/veloroute_w15m_velocity_20261022/discrimination_v1/`，有RESULTS、CSV、模型及哈希。
+Traxler L2现12/12完成，参数匹配L3＋velocity vs L2＋velocity +32.681%，21/21配对改善；
+RENGE L2/L3现672/672及576/576完成，velocity vs各自static −1.163%/−6.747%。
+原Traxler720次重复CV仍未实现或启动，仅保留方案和配置；上方完成的是63模型固定三折，两者不同。
+以下“训练中”为历史状态，以本页顶部完成结果为准。
 
 最新结果汇总：[Traxler完整分布与单细胞velocity](docs/current/w15k_traxler_results_20261021.md)。
 单细胞三套KO内打乱已完成，real vs三打乱+0.486%、vs S+U+0.401%、vs U程序+0.027%；群体三打乱为−0.079%。

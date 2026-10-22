@@ -1,0 +1,23 @@
+{
+  "kind": "TRAXLER_VELOCITY_GRAPH_NULL_STABILITY",
+  "base_configuration": "/home/yuchang/wangjiaxuan/configs/w15o_velocity_neighborhood_20261022_v1.json",
+  "parent": "/data/yuchang/veloroute_w15o_neighborhood_20261022/five_arm_v1",
+  "output": "/data/yuchang/veloroute_w15p_graph_controls_20261022/null_stability_v1",
+  "arms": ["global_shuffle_1", "global_shuffle_2", "S_local_shuffle"],
+  "global_shuffle_seeds": [1, 2],
+  "local_shuffle_seed": 0,
+  "model_seeds": [0, 1, 2],
+  "steps": 5000,
+  "graph_weight_normalized": 0.1,
+  "maximum_hours": 2,
+  "gpu": 0,
+  "primary_controls": ["mean_three_global_shuffles", "S_local_shuffle"],
+  "null_averaging": "average_three_null_Energy_values_within_each_KO_and_model_seed_then_pair_against_real",
+  "local_control": "within_each_training_KO_pair_nearest_source_S_cells_by_fixed_random_greedy_bijection_then_permute_velocity_programs",
+  "changes_to_real_model": "none_reuse_completed_parent_real_and_all_four_controls",
+  "selection": "all_7_development_KOs_and_all_3_seeds_no_subgroup_or_weight_selection",
+  "test_policy": "original_7_test_KO_targets_not_read",
+  "scope": "development_followup_after_W15O_not_independent_confirmation",
+  "GFG": false,
+  "JVP": false
+}

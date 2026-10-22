@@ -1,0 +1,18 @@
+{
+  "kind": "TRAXLER_SOURCE_ONLY_COUNT_SPLIT_RELIABILITY",
+  "fold": "/home/yuchang/wangjiaxuan/outputs/w15_traxler_fold_6to24_v1",
+  "programs": "/data/yuchang/veloroute_w15o_neighborhood_20261022/five_arm_v1/training_programs.npz",
+  "raw_directory": "/data/yuchang/veloroute_w4/traxler2025/processed_usa_v1",
+  "output": "/data/yuchang/veloroute_w15q_countsplit_20261022/source_reliability_v1",
+  "role": "validation_source_only",
+  "seeds": [0, 1, 2, 3, 4],
+  "split_probability": 0.5,
+  "regimes": ["both_split", "U_only_split", "S_only_split"],
+  "modalities": ["S_state50", "U50", "velocity_arrow50", "velocity_program5", "U_program5"],
+  "formula": "complementary_binomial_half_counts_frozen_gamma_PCA_and_training_references",
+  "scope": "technical_half_depth_sensitivity_not_biological_truth_or_independent_replication",
+  "future_targets_read": false,
+  "GFG": false,
+  "JVP": false,
+  "gpu": null
+}

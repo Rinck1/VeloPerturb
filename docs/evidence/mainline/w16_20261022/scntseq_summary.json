@@ -1,0 +1,304 @@
+{
+  "git_commit": "f3b7d0a0dfc9a33bc40837a6cd94397ac73df1f4",
+  "seed": 20261022,
+  "command": [
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w16b_scntseq_label_reference.py",
+    "--configuration",
+    "/home/yuchang/wangjiaxuan/configs/w16b_scntseq_label_reference_20261022_v1.json"
+  ],
+  "data_hashes": {
+    "/home/yuchang/wangjiaxuan/configs/w16b_scntseq_label_reference_20261022_v1.json": "665b36aadb432fc4c1346d84437e15a3a5eb24cdcb3313c00bdb0dfd4cc81ea0",
+    "/home/yuchang/wangjiaxuan/PLANS/w16b_scntseq_label_reference_20261022.md": "4459feaa624162846a24af9c7d2b3ac8a05c7b10f2bc0c04f98b2ff64487cc39",
+    "/home/yuchang/wangjiaxuan/configs/w5_scntseq_repair_v2.json": "b49d83c4d2954ac7b7043fdddf64bdbc81aebf10723f2590bc524c2113d28a27",
+    "/data/yuchang/veloroute_w4/scntseq/processed/scntseq_geo_labeling_dynamo_su_exact.h5ad": "208cc0b266d5a6d5bfbb18834f9f153402a7a3c93aaa9c9e4c27e29c96cefbd1",
+    "/home/yuchang/wangjiaxuan/outputs/w5_scntseq_predictions_v1/source_transform.npz": "0191a128e13c188bdd67cce62326e9a3b9d9c54f239169b824a48b3cc3139b4b",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w16b_scntseq_label_reference.py": "4fbf0400172f8b561898031864e614e87115c2522b110c2c99b26640a67a0bbe",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_repair.py": "b0eaeaf6ad5ea00b83beb0e65136ca6af6e93b4c90035c6774d585aa6d97d525",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w5_scntseq_minutes.py": "4f2ee06232d6ba90d95339c18a7b7a092c3093068b7900ffbf45e2e343d4a807",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_streams.py": "528199aa2ed60994a501a7c6e570227a32a076f682165b826d3511c04d9534e3",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_shorttime.py": "eacae6a3611f9eff947d7e476b750099992c830869665e6a9e67ea58d19b4e6a",
+    "/home/yuchang/wangjiaxuan/scripts/phase0/w4_artifacts.py": "7c33b9a4ad0f0ffa67eb12d920dabbacf76f7137c97c6adebb0d442810154da4"
+  },
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "worktree_diff_sha256": "3691cbc5397b9d3402f4846816174c344994ef86331e6d2d2374890922152945",
+  "runtime_seconds": 5.3924334570765495,
+  "status": "SCNTSEQ_LABEL_REFERENCE_COMPLETE",
+  "arms": [
+    "identity",
+    "S_history",
+    "S_U_driver",
+    "S_velocity",
+    "S_reverse_velocity",
+    "S_label_reference"
+  ],
+  "fitted_readouts": 5,
+  "calibration_interval": [
+    15,
+    30
+  ],
+  "prediction_intervals": [
+    [
+      30,
+      60
+    ],
+    [
+      60,
+      120
+    ]
+  ],
+  "metrics": [
+    {
+      "source_minutes": 30,
+      "target_minutes": 60,
+      "arm": "identity",
+      "mse": 0.5791282710352269,
+      "gain_vs_identity": 0.0,
+      "gain_vs_S": -0.0395370190718034,
+      "gain_vs_U": -0.08876339806648814
+    },
+    {
+      "source_minutes": 30,
+      "target_minutes": 60,
+      "arm": "S_history",
+      "mse": 0.5571021141241581,
+      "gain_vs_identity": 0.038033295925435806,
+      "gain_vs_S": 0.0,
+      "gain_vs_U": -0.047354137555042364
+    },
+    {
+      "source_minutes": 30,
+      "target_minutes": 60,
+      "arm": "S_U_driver",
+      "mse": 0.5319137951034068,
+      "gain_vs_identity": 0.08152680208034291,
+      "gain_vs_S": 0.04521310973725323,
+      "gain_vs_U": 0.0
+    },
+    {
+      "source_minutes": 30,
+      "target_minutes": 60,
+      "arm": "S_velocity",
+      "mse": 0.5325883197976305,
+      "gain_vs_identity": 0.08036207791134664,
+      "gain_vs_S": 0.04400233584657387,
+      "gain_vs_U": -0.001268109044046728
+    },
+    {
+      "source_minutes": 30,
+      "target_minutes": 60,
+      "arm": "S_reverse_velocity",
+      "mse": 0.5553788520338823,
+      "gain_vs_identity": 0.041008909751359734,
+      "gain_vs_S": 0.003093260726509839,
+      "gain_vs_U": -0.04411439813459572
+    },
+    {
+      "source_minutes": 30,
+      "target_minutes": 60,
+      "arm": "S_label_reference",
+      "mse": 0.5600429028696329,
+      "gain_vs_identity": 0.032955338428700354,
+      "gain_vs_S": -0.005278724799129719,
+      "gain_vs_U": -0.05288283181442521
+    },
+    {
+      "source_minutes": 60,
+      "target_minutes": 120,
+      "arm": "identity",
+      "mse": 0.09413673424240092,
+      "gain_vs_identity": 0.0,
+      "gain_vs_S": -0.022941955387849156,
+      "gain_vs_U": -0.1200329818131518
+    },
+    {
+      "source_minutes": 60,
+      "target_minutes": 120,
+      "arm": "S_history",
+      "mse": 0.09202548956622754,
+      "gain_vs_identity": 0.022427426372546022,
+      "gain_vs_S": 0.0,
+      "gain_vs_U": -0.09491352457871427
+    },
+    {
+      "source_minutes": 60,
+      "target_minutes": 120,
+      "arm": "S_U_driver",
+      "mse": 0.08404818051876366,
+      "gain_vs_identity": 0.1071691492681206,
+      "gain_vs_S": 0.08668586372173426,
+      "gain_vs_U": 0.0
+    },
+    {
+      "source_minutes": 60,
+      "target_minutes": 120,
+      "arm": "S_velocity",
+      "mse": 0.08536329800028165,
+      "gain_vs_identity": 0.09319885922033133,
+      "gain_vs_S": 0.07239506790291328,
+      "gain_vs_U": -0.01564718561902012
+    },
+    {
+      "source_minutes": 60,
+      "target_minutes": 120,
+      "arm": "S_reverse_velocity",
+      "mse": 0.0908036303575589,
+      "gain_vs_identity": 0.035407048180143175,
+      "gain_vs_S": 0.013277399712058213,
+      "gain_vs_U": -0.08037592006274408
+    },
+    {
+      "source_minutes": 60,
+      "target_minutes": 120,
+      "arm": "S_label_reference",
+      "mse": 0.1604678352148846,
+      "gain_vs_identity": -0.7046250489387271,
+      "gain_vs_S": -0.7437324807644898,
+      "gain_vs_U": -0.9092362764362325
+    }
+  ],
+  "comparisons": {
+    "S_history": {
+      "mean_gain_vs_S": 0.0,
+      "mean_gain_vs_U": -0.07113383106687832,
+      "both_intervals_better_than_S_and_U": false
+    },
+    "S_U_driver": {
+      "mean_gain_vs_S": 0.06594948672949374,
+      "mean_gain_vs_U": 0.0,
+      "both_intervals_better_than_S_and_U": false
+    },
+    "S_velocity": {
+      "mean_gain_vs_S": 0.058198701874743575,
+      "mean_gain_vs_U": -0.008457647331533424,
+      "both_intervals_better_than_S_and_U": false
+    },
+    "S_reverse_velocity": {
+      "mean_gain_vs_S": 0.008185330219284026,
+      "mean_gain_vs_U": -0.0622451590986699,
+      "both_intervals_better_than_S_and_U": false
+    },
+    "S_label_reference": {
+      "mean_gain_vs_S": -0.3745056027818098,
+      "mean_gain_vs_U": -0.48105955412532886,
+      "both_intervals_better_than_S_and_U": false
+    }
+  },
+  "coefficients": {
+    "S_history": {
+      "coefficients": [
+        -0.004626579698160925,
+        -0.06939869547241377
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.12664089979200913
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "S_U_driver": {
+      "coefficients": [
+        -0.006693346472881205,
+        0.05171405145242505
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.2022088689807193
+      ],
+      "positive_columns": [
+        false,
+        false
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "S_velocity": {
+      "coefficients": [
+        -0.006506924093048317,
+        0.03850334725352834
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.2382078285425795
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "S_reverse_velocity": {
+      "coefficients": [
+        -0.006939869547324757,
+        7.416511027438209e-12
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.2382078285425795
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    },
+    "S_label_reference": {
+      "coefficients": [
+        0.0015628436913390934,
+        1.8378282934714658
+      ],
+      "source_column_norms": [
+        1.8996134968801373,
+        0.029968575868428347
+      ],
+      "positive_columns": [
+        false,
+        true
+      ],
+      "ridge": 1.0,
+      "parameter_count": 2
+    }
+  },
+  "reference_diagnostics": [
+    {
+      "minute": 0
+    },
+    {
+      "minute": 15,
+      "supported_genes": 1862,
+      "negative_synthesis_fraction": 0.6015037593984962,
+      "prestimulus_new_fraction": 1.0174963771096976
+    },
+    {
+      "minute": 30,
+      "supported_genes": 1862,
+      "negative_synthesis_fraction": 0.26584317937701396,
+      "prestimulus_new_fraction": 0.7965540932893949
+    },
+    {
+      "minute": 60,
+      "supported_genes": 1862,
+      "negative_synthesis_fraction": 0.2690655209452202,
+      "prestimulus_new_fraction": 0.6883232085148911
+    }
+  ],
+  "label_supported_genes": 1862,
+  "PCA_dimensions": 50,
+  "previous_results_overwritten": false,
+  "independent_confirmation": false,
+  "biological_significance_test": false,
+  "reference_is_ground_truth": false,
+  "new_RNA_is_velocity": false,
+  "labeling_model": "baseline_steady_fixed_decay_constant_effective_alpha_since_stimulus",
+  "cross_assay_mapping": "baseline_gene_specific_positive_ratio_fixed_before_forecast",
+  "GFG": false,
+  "JVP": false,
+  "router_trained": false,
+  "gpu_used": false
+}

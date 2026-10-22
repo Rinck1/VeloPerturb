@@ -4,6 +4,9 @@
 
 - [STATUS：最新状态和下一步](STATUS.md)
 - [CLAIMS：当前可引用主张](CLAIMS.md)
+- [W16：扰动63模型三折与KCl短时机制结果](w16_perturbation_execution_20261022.md)
+- [W16：机器可读数字和原始路径](../evidence/mainline/w16_20261022/README.md)
+- [velocity角色：机制判断与已测边界](velocity_role_evidence_20261022.md)
 - [W13模型定义](w13_time_model.md)
 - [W13结果](w13_time_results.md)
 - [CellFlow插件固定开发结果](w15a_l2_results.md)

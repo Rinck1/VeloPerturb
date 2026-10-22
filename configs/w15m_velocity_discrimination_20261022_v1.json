@@ -1,0 +1,22 @@
+{
+  "kind": "TRAXLER_VELOCITY_DIRECTION_MAGNITUDE_DISCRIMINATION",
+  "base_configuration": "/home/yuchang/wangjiaxuan/configs/w15h_traxler_program_router_20261021_v1.json",
+  "parent": "/data/yuchang/veloroute_w15i_router_followups_20261021/queue_v1/cell_6to24",
+  "output": "/data/yuchang/veloroute_w15m_velocity_20261022/discrimination_v1",
+  "new_variants": ["unsigned_direction", "magnitude_only", "direction_and_magnitude"],
+  "model_seeds": [0, 1, 2],
+  "shuffle_seeds": [0, 1, 2],
+  "steps": 5000,
+  "maximum_hours": 2,
+  "gpu": 0,
+  "frozen_interventions": ["original", "renormalize", "zero", "reverse", "unsigned", "U_direction", "cohort_direction", "shuffle0", "shuffle1", "shuffle2", "S_matched_shuffle", "cohort_q", "uniform_q"],
+  "direction_probe": "training_KO_response_centered_mean_shift_plus_one_global_scalar_on_5D_program_direction",
+  "direction_probe_variants": ["common_mean_shift", "positive_velocity", "positive_reverse", "signed_velocity", "signed_U"],
+  "magnitude_normalization": "log1p_projected_speed_training_cell_zscore_repeated_over_5_slots_divided_by_sqrt5",
+  "direction_and_magnitude_normalization": "raw_5D_projected_velocity_divided_by_training_cell_RMS_norm",
+  "test_policy": "7_original_test_KOs_excluded_no_test_target_reads",
+  "evaluation": "freeze_all_new_neural_predictions_intervention_weights_and_scalar_probe_predictions_before_scoring",
+  "scope": "existing_development_KOs_exploratory_mechanism_and_representation_comparison",
+  "GFG": false,
+  "JVP": false
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-22",
+  "copies": [
+    {
+      "source": "/data/yuchang/veloroute_w16a_traxler_20261022/graph_cv_v1/evaluation/summary.json",
+      "destination": "traxler_summary.json",
+      "source_sha256": "83b097ba1a6c4deaa9abd9ca4966dc33078987403f20c09bef6a0d7cd4a47fa4",
+      "copy_sha256": "83b097ba1a6c4deaa9abd9ca4966dc33078987403f20c09bef6a0d7cd4a47fa4",
+      "transform": "none; byte identical"
+    },
+    {
+      "source": "/data/yuchang/veloroute_w16a_traxler_20261022/graph_cv_v1/evaluation/comparisons.csv",
+      "destination": "traxler_comparisons.csv",
+      "source_sha256": "ed8647175fca1d4f9ed180d3846006d47187ad240c9814bc707c2e88f0a88518",
+      "copy_sha256": "beb8c65642b5e3b59fa60217171a20e97b55599207a6709151db5d00c0544acc",
+      "transform": "CRLF normalized to LF; verified with diff --strip-trailing-cr"
+    },
+    {
+      "source": "/data/yuchang/veloroute_w16a_traxler_20261022/graph_cv_v1/evaluation/metrics.csv",
+      "destination": "traxler_metrics.csv",
+      "source_sha256": "0ef0b51714f66f9fcf615710d6d05b5f5bf812927444260c52b082cdb5139d14",
+      "copy_sha256": "5d5da3924c42cacfc991920f212c3465c7f211f505f4ac130330c1f39a83837b",
+      "transform": "CRLF normalized to LF; verified with diff --strip-trailing-cr"
+    },
+    {
+      "source": "/data/yuchang/veloroute_w16b_scntseq_20261022/label_reference_v1/summary.json",
+      "destination": "scntseq_summary.json",
+      "source_sha256": "e78f32621794bb3c3816c34efd471c33ee62e496d581e62be758180c9fb561ce",
+      "copy_sha256": "e78f32621794bb3c3816c34efd471c33ee62e496d581e62be758180c9fb561ce",
+      "transform": "none; byte identical"
+    },
+    {
+      "source": "/data/yuchang/veloroute_w16b_scntseq_20261022/label_reference_v1/metrics.csv",
+      "destination": "scntseq_metrics.csv",
+      "source_sha256": "96484de97ad01a62c15758c4b4baed2b7cc83ee356b3b98d33c1dd234c7a9c48",
+      "copy_sha256": "f4d9ffcbc3606315e035ef48e104fc120c1c4edc7a22362c2d6c3f6568a38176",
+      "transform": "CRLF normalized to LF; verified with diff --strip-trailing-cr"
+    },
+    {
+      "source": "/data/yuchang/veloroute_w16b_scntseq_20261022/label_reference_v1/reference_diagnostics.csv",
+      "destination": "scntseq_reference_diagnostics.csv",
+      "source_sha256": "da8c752924051918b6f0f03bbe45f60d16e7bfbc0b791a792cf6f16e7d8ee668",
+      "copy_sha256": "684043ce6fcbdd1b4becc5863c25ae722ff7f001da74e8d4ee521b2425ccdaf9",
+      "transform": "CRLF normalized to LF; verified with diff --strip-trailing-cr"
+    }
+  ]
+}
